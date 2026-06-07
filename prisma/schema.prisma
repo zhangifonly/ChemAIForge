@@ -20,6 +20,8 @@ model User {
   role         String   @default("STUDENT")
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+
+  sessions ExperimentSession[]
 }
 
 // 化学实验模型 - 平台核心资源，可交互化学实验
@@ -39,6 +41,30 @@ model Experiment {
   objectives       String // JSON 字符串：实验目标 string[]
   estimatedMinutes Int
   createdAt        DateTime @default(now())
+
+  sessions ExperimentSession[]
+}
+
+// 实验会话模型 - 记录学生一次实验的进度、操作步骤与读数序列，用于复盘与报告生成
+// 注：SQLite 不支持原生 enum，status 以 String 存储，取值约束由应用层枚举保证
+//     （见 src/server/session/types.ts，IN_PROGRESS | COMPLETED）
+// 注：SQLite 不支持 Json 类型，steps/measurements 以 String 存储序列化后的 JSON 数组，
+//     读写时由应用层 JSON.parse / JSON.stringify 处理
+model ExperimentSession {
+  id           String    @id @default(cuid())
+  userId       String
+  experimentId String
+  status       String    @default("IN_PROGRESS")
+  steps        String    @default("[]") // JSON 字符串：操作步骤序列
+  measurements String    @default("[]") // JSON 字符串：pH/温度读数记录
+  startedAt    DateTime  @default(now())
+  completedAt  DateTime?
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  experiment Experiment @relation(fields: [experimentId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([experimentId])
 }
 
 // 健康检查占位模型 - 验证迁移链路是否通畅

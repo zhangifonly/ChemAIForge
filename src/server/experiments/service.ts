@@ -72,3 +72,11 @@ export async function getExperimentBySlug(
   const row = await prisma.experiment.findUnique({ where: { slug } });
   return row ? toDTO(row) : null;
 }
+
+// 按 id 查询实验详情，不存在返回 null（供会话创建校验实验归属）
+export async function getExperimentById(
+  id: string,
+): Promise<ExperimentDTO | null> {
+  const row = await prisma.experiment.findUnique({ where: { id } });
+  return row ? toDTO(row) : null;
+}

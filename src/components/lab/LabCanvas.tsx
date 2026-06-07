@@ -3,7 +3,7 @@
 // 实验画布交互组件：从试剂面板拖拽试剂到烧杯，点击混合触发反应引擎，
 // 并以 SVG 渲染变色/气泡/沉淀等视觉反馈与实时 pH/温度读数。
 // 反应判定一律委托 src/lib/chem/engine，本组件不含任何反应规则。
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
 import { Beaker } from "./Beaker";
@@ -11,15 +11,32 @@ import { Beaker } from "./Beaker";
 const DRAG_KEY = "application/x-reagent";
 
 export function LabCanvas({
+  experimentId,
   reagents,
   apparatus,
 }: {
+  experimentId: string;
   reagents: string[];
   apparatus: string[];
 }) {
-  const { contents, result, readings, addReagent, mix, reset } = useLabStore();
+  const {
+    contents,
+    result,
+    readings,
+    completed,
+    initSession,
+    addReagent,
+    mix,
+    reset,
+    complete,
+  } = useLabStore();
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
+
+  // 挂载时绑定实验并创建会话（未登录则静默无会话）
+  useEffect(() => {
+    initSession(experimentId);
+  }, [experimentId, initSession]);
 
   // 处理试剂放入容器：解析为引擎可识别的 Substance 后入容器
   const handleDrop = (e: React.DragEvent) => {
@@ -117,6 +134,14 @@ export function LabCanvas({
             className="rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground/5"
           >
             清空容器
+          </button>
+          <button
+            type="button"
+            onClick={complete}
+            disabled={completed || !result}
+            className="rounded-lg border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+          >
+            {completed ? "实验已完成" : "完成实验"}
           </button>
         </div>
       </section>

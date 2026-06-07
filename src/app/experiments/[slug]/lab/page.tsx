@@ -34,6 +34,7 @@ export default async function ExperimentLabPage({
       {/* 左：实验画布；右：AI 导师对话侧边栏 */}
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         <LabCanvas
+          experimentId={experiment.id}
           reagents={experiment.reagents}
           apparatus={experiment.apparatus}
         />

@@ -2,6 +2,12 @@
 // 反应计算委托给 src/lib/chem/engine，本 store 不含任何反应规则。
 import { create } from "zustand";
 import { react, type ReactionResult, type Substance } from "@/lib/chem/engine";
+import {
+  appendMeasurementRemote,
+  appendStepRemote,
+  completeSessionRemote,
+  createSessionRemote,
+} from "./sessionClient";
 
 // 容器内一种试剂的条目
 export interface ContainerItem extends Substance {
@@ -22,12 +28,20 @@ interface LabState {
   result: ReactionResult | null;
   // 实时读数
   readings: LabReadings;
+  // 当前实验会话 id（未建立 / 未登录则为 null，记录为旁路增强不阻塞交互）
+  sessionId: string | null;
+  // 会话是否已标记完成
+  completed: boolean;
+  // 绑定实验并创建会话（画布挂载时调用，幂等：已有会话则跳过）
+  initSession: (experimentId: string) => void;
   // 拖入一种试剂
   addReagent: (s: Substance) => void;
   // 触发混合：调用引擎计算并更新结果与读数
   mix: () => void;
   // 清空容器，恢复初始读数
   reset: () => void;
+  // 标记当前实验会话完成
+  complete: () => void;
 }
 
 // 初始读数：中性 pH、室温
@@ -54,25 +68,76 @@ export const useLabStore = create<LabState>((set, get) => ({
   contents: [],
   result: null,
   readings: INITIAL_READINGS,
+  sessionId: null,
+  completed: false,
+
+  initSession: (experimentId) => {
+    // 已绑定会话则不重复创建
+    if (get().sessionId) return;
+    void createSessionRemote(experimentId).then((id) => {
+      if (id) set({ sessionId: id, completed: false });
+    });
+  },
 
   addReagent: (s) =>
     set((state) => {
       // 同化学式只保留一条，避免重复拖入堆叠
       if (state.contents.some((c) => c.formula === s.formula)) return state;
       const item: ContainerItem = { ...s, key: `${s.formula}-${Date.now()}` };
+      // 旁路记录拖入步骤（失败静默忽略）
+      if (state.sessionId) {
+        appendStepRemote(state.sessionId, {
+          action: "add",
+          detail: { formula: s.formula, name: s.name },
+          at: new Date().toISOString(),
+        });
+      }
       // 拖入新试剂后清空旧结果，等待重新混合
       return { contents: [...state.contents, item], result: null };
     }),
 
   mix: () => {
-    const { contents, readings } = get();
+    const { contents, readings, sessionId } = get();
     const result = react(contents);
-    set({
-      result,
-      readings: result.reacted ? deriveReadings(readings, result) : readings,
-    });
+    const nextReadings = result.reacted
+      ? deriveReadings(readings, result)
+      : readings;
+    set({ result, readings: nextReadings });
+    // 旁路记录混合步骤与读数快照
+    if (sessionId) {
+      const at = new Date().toISOString();
+      appendStepRemote(sessionId, {
+        action: "mix",
+        detail: {
+          reacted: result.reacted,
+          equation: result.equation,
+          description: result.description,
+        },
+        at,
+      });
+      appendMeasurementRemote(sessionId, {
+        ph: nextReadings.ph,
+        temperature: nextReadings.temperature,
+        at,
+      });
+    }
   },
 
-  reset: () =>
-    set({ contents: [], result: null, readings: INITIAL_READINGS }),
+  reset: () => {
+    const { sessionId } = get();
+    if (sessionId) {
+      appendStepRemote(sessionId, {
+        action: "reset",
+        at: new Date().toISOString(),
+      });
+    }
+    set({ contents: [], result: null, readings: INITIAL_READINGS });
+  },
+
+  complete: () => {
+    const { sessionId, completed } = get();
+    if (!sessionId || completed) return;
+    completeSessionRemote(sessionId);
+    set({ completed: true });
+  },
 }));
