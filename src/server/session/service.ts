@@ -3,6 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import {
   SessionStatus,
+  type ExperimentReport,
   type SessionDTO,
   type SessionMeasurement,
   type SessionStep,
@@ -16,6 +17,7 @@ type SessionRow = {
   status: string;
   steps: string;
   measurements: string;
+  report: string | null;
   startedAt: Date;
   completedAt: Date | null;
 };
@@ -30,6 +32,16 @@ function parseArray<T>(value: string): T[] {
   }
 }
 
+// 安全解析报告 JSON 对象，缺失或异常时回退为 null
+function parseReport(value: string | null): ExperimentReport | null {
+  if (!value) return null;
+  try {
+    return JSON.parse(value) as ExperimentReport;
+  } catch {
+    return null;
+  }
+}
+
 // 将 DB 行映射为对外 DTO
 function toDTO(row: SessionRow): SessionDTO {
   return {
@@ -39,6 +51,7 @@ function toDTO(row: SessionRow): SessionDTO {
     status: row.status as SessionStatus,
     steps: parseArray<SessionStep>(row.steps),
     measurements: parseArray<SessionMeasurement>(row.measurements),
+    report: parseReport(row.report),
     startedAt: row.startedAt.toISOString(),
     completedAt: row.completedAt ? row.completedAt.toISOString() : null,
   };
@@ -89,6 +102,20 @@ export async function appendMeasurement(
   const row = await prisma.experimentSession.update({
     where: { id },
     data: { measurements: JSON.stringify(measurements) },
+  });
+  return toDTO(row);
+}
+
+// 持久化 AI 生成的结构化实验报告（序列化为 JSON 字符串存入 report 字段）
+export async function saveReport(
+  id: string,
+  report: ExperimentReport,
+): Promise<SessionDTO | null> {
+  const current = await prisma.experimentSession.findUnique({ where: { id } });
+  if (!current) return null;
+  const row = await prisma.experimentSession.update({
+    where: { id },
+    data: { report: JSON.stringify(report) },
   });
   return toDTO(row);
 }

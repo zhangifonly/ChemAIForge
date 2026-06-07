@@ -26,6 +26,20 @@ export interface SessionMeasurement {
   at: string;
 }
 
+// AI 实验报告：基于会话 steps/measurements 由 Claude 生成的结构化反馈
+export interface ExperimentReport {
+  // 实验结论概述
+  conclusion: string;
+  // 误差分析（读数波动、操作偏差等）
+  errorAnalysis: string;
+  // 改进建议清单
+  improvements: string[];
+  // 知识点掌握评估
+  knowledgeAssessment: string;
+  // 报告生成时间（ISO 字符串）
+  generatedAt: string;
+}
+
 // 对外会话 DTO（steps/measurements 已反序列化为数组）
 export interface SessionDTO {
   id: string;
@@ -34,6 +48,7 @@ export interface SessionDTO {
   status: SessionStatus;
   steps: SessionStep[];
   measurements: SessionMeasurement[];
+  report: ExperimentReport | null;
   startedAt: string;
   completedAt: string | null;
 }

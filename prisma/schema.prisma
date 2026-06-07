@@ -57,6 +57,7 @@ model ExperimentSession {
   status       String    @default("IN_PROGRESS")
   steps        String    @default("[]") // JSON 字符串：操作步骤序列
   measurements String    @default("[]") // JSON 字符串：pH/温度读数记录
+  report       String? // JSON 字符串：AI 生成的结构化实验报告（结论/误差/改进/掌握评估），未生成时为 null
   startedAt    DateTime  @default(now())
   completedAt  DateTime?
 
