@@ -74,6 +74,17 @@ export async function getSession(id: string): Promise<SessionDTO | null> {
   return row ? toDTO(row) : null;
 }
 
+// 列出指定用户的全部会话，按开始时间倒序（最新在前），供「我的会话」页使用
+export async function listSessionsByUser(
+  userId: string,
+): Promise<SessionDTO[]> {
+  const rows = await prisma.experimentSession.findMany({
+    where: { userId },
+    orderBy: { startedAt: "desc" },
+  });
+  return rows.map(toDTO);
+}
+
 // 向会话追加一条操作步骤（读写均在应用层序列化 JSON）
 export async function appendStep(
   id: string,

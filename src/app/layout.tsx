@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "ChemAIForge",
@@ -15,14 +15,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body>
-        <nav className="flex items-center gap-6 border-b border-foreground/10 px-8 py-4 text-sm">
-          <Link href="/" className="font-semibold">
-            ChemAIForge
-          </Link>
-          <Link href="/experiments" className="text-foreground/70 hover:text-foreground">
-            实验库
-          </Link>
-        </nav>
+        <Navbar />
         {children}
       </body>
     </html>
