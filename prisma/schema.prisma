@@ -10,13 +10,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// 用户模型 - 基础脚手架示例
+// 用户模型 - 支持学生/教师角色与认证会话
+// 注：SQLite 不支持原生 enum，role 以 String 存储，取值约束由应用层 UserRole 保证（STUDENT | TEACHER）
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String?
+  role         String   @default("STUDENT")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
 
 // 健康检查占位模型 - 验证迁移链路是否通畅
