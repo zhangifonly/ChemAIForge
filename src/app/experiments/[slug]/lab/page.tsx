@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getExperimentBySlug } from "@/server/experiments/service";
 import { LabCanvas } from "@/components/lab/LabCanvas";
+import { TutorChat } from "@/components/ai/TutorChat";
 
 // 实验工作台页：加载实验配置（试剂/仪器），挂载交互画布 LabCanvas。
 export default async function ExperimentLabPage({
@@ -13,7 +14,7 @@ export default async function ExperimentLabPage({
   if (!experiment) notFound();
 
   return (
-    <main className="mx-auto flex max-w-4xl flex-col gap-6 p-8">
+    <main className="mx-auto flex max-w-6xl flex-col gap-6 p-8">
       <Link
         href={`/experiments/${experiment.slug}`}
         className="text-sm text-foreground/60 hover:text-foreground"
@@ -30,10 +31,16 @@ export default async function ExperimentLabPage({
         </p>
       </header>
 
-      <LabCanvas
-        reagents={experiment.reagents}
-        apparatus={experiment.apparatus}
-      />
+      {/* 左：实验画布；右：AI 导师对话侧边栏 */}
+      <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
+        <LabCanvas
+          reagents={experiment.reagents}
+          apparatus={experiment.apparatus}
+        />
+        <div className="lg:h-[600px]">
+          <TutorChat experimentSlug={experiment.slug} />
+        </div>
+      </div>
     </main>
   );
 }
