@@ -1,0 +1,93 @@
+// 器皿几何：烧杯 / 锥形瓶 / 试管的立体 SVG 形状参数。Glassware 组件据此渲染，
+// 现象（液体/气泡/沉淀/蒸汽）按几何自适应位置。chooseVessel 由实验仪器选型。
+
+export type VesselKind = "beaker" | "flask" | "tube";
+
+export interface VesselGeom {
+  kind: VesselKind;
+  // 内壁裁剪路径（液体/沉淀/气泡都裁剪其中），同时用作玻璃高光叠层
+  innerClip: string;
+  // 杯身轮廓（描边）
+  outline: string;
+  // 杯口椭圆（描边）
+  rim: { cx: number; cy: number; rx: number; ry: number };
+  // 倾倒嘴（仅烧杯）
+  spout?: string;
+  // 桌面投影椭圆
+  shadow: { cx: number; cy: number; rx: number; ry: number };
+  // 加热火焰焰尖 y（贴器皿底中心），加热态在此升腾火焰
+  heatY: number;
+  // 液体矩形左右边界 + 液面可移动的上下范围
+  liquid: { left: number; right: number; topY: number; bottomY: number };
+  // 给定液面 y 处的液面椭圆半径（圆锥瓶随高度变化）
+  surfaceRxAt: (y: number) => number;
+  // 刻度 y 位置 + 刻度起始 x（试管无刻度）
+  ticks: number[];
+  tickX: number;
+  // 气泡 x 位置、沉淀堆中心 x 位置
+  bubbleXs: number[];
+  precipCx: number[];
+}
+
+export const VESSELS: Record<VesselKind, VesselGeom> = {
+  beaker: {
+    kind: "beaker",
+    innerClip: "M46 46 L46 178 A54 12 0 0 0 154 178 L154 46 Z",
+    outline: "M40 42 L40 178 A60 13 0 0 0 160 178 L160 42",
+    rim: { cx: 100, cy: 42, rx: 60, ry: 12 },
+    spout: "M40 42 q -10 -3 -14 4 q 8 -1 14 2",
+    shadow: { cx: 100, cy: 200, rx: 56, ry: 6 },
+    heatY: 191,
+    liquid: { left: 46, right: 154, topY: 58, bottomY: 178 },
+    surfaceRxAt: () => 54,
+    ticks: [120, 95, 70],
+    tickX: 47,
+    bubbleXs: [64, 82, 100, 118, 134],
+    precipCx: [70, 100, 130, 85, 115],
+  },
+  flask: {
+    kind: "flask",
+    innerClip: "M89 34 L89 78 L49 182 A51 7 0 0 0 151 182 L111 78 L111 34 Z",
+    outline: "M86 30 L86 78 L44 184 A56 8 0 0 0 156 184 L114 78 L114 30",
+    rim: { cx: 100, cy: 30, rx: 14, ry: 4 },
+    shadow: { cx: 100, cy: 190, rx: 54, ry: 6 },
+    heatY: 192,
+    liquid: { left: 44, right: 156, topY: 100, bottomY: 182 },
+    // 圆锥体：肩部 y78 半宽 11，底部 y182 半宽 51，线性插值
+    surfaceRxAt: (y) => {
+      const t = Math.max(0, Math.min(1, (y - 78) / (182 - 78)));
+      return 11 + t * (51 - 11);
+    },
+    ticks: [165, 150],
+    tickX: 70,
+    bubbleXs: [82, 95, 108, 118],
+    precipCx: [75, 100, 125, 88, 112],
+  },
+  tube: {
+    kind: "tube",
+    innerClip: "M84 30 L84 186 A16 16 0 0 0 116 186 L116 30 Z",
+    outline: "M80 28 L80 186 A20 20 0 0 0 120 186 L120 28",
+    rim: { cx: 100, cy: 28, rx: 20, ry: 5 },
+    shadow: { cx: 100, cy: 214, rx: 26, ry: 5 },
+    heatY: 206,
+    liquid: { left: 84, right: 116, topY: 46, bottomY: 184 },
+    surfaceRxAt: () => 16,
+    ticks: [],
+    tickX: 85,
+    bubbleXs: [92, 100, 108],
+    precipCx: [92, 100, 108],
+  },
+};
+
+// 由实验仪器列表选择器皿：含「试管」→ 试管，「锥形瓶/烧瓶」→ 锥形瓶，否则烧杯
+export function chooseVessel(apparatus: string[]): VesselKind {
+  const text = apparatus.join(" ");
+  if (/试管/.test(text)) return "tube";
+  if (/锥形瓶|烧瓶/.test(text)) return "flask";
+  return "beaker";
+}
+
+// 实验是否配有排水法集气装置（集气瓶/导管/水槽/排水）
+export function usesGasCollection(apparatus: string[]): boolean {
+  return /集气瓶|导管|水槽|排水/.test(apparatus.join(" "));
+}

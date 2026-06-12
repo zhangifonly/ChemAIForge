@@ -1,14 +1,55 @@
 "use client";
 
-// 实验画布交互组件：从试剂面板拖拽试剂到烧杯，点击混合触发反应引擎，
-// 并以 SVG 渲染变色/气泡/沉淀等视觉反馈与实时 pH/温度读数。
+// 实验画布交互组件：试剂面板以「彩色试剂瓶」呈现，支持点击即加 / 拖拽两种方式，
+// 容器内试剂以可移除标签显示，液面随试剂量上升；点击混合触发反应引擎，
+// 由 Glassware 按实验仪器以立体 SVG（烧杯/锥形瓶/试管）渲染变色/气泡/沉淀/蒸汽与读数。
 // 反应判定一律委托 src/lib/chem/engine，本组件不含任何反应规则。
 import { useEffect, useState } from "react";
+import type { SubstanceCategory } from "@/lib/chem/engine";
 import { useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
-import { Beaker } from "./Beaker";
+import { Glassware } from "./Glassware";
+import { GasCollection } from "./GasCollection";
+import { chooseVessel, usesGasCollection } from "./vesselGeom";
+import { ControlPanel } from "./ControlPanel";
+import { safetyNotes, operationHint } from "./safety";
 
 const DRAG_KEY = "application/x-reagent";
+
+// 试剂瓶液体配色：按物质类别给出直观的色彩提示（仅用于界面，与反应无关）
+const CATEGORY_COLOR: Record<SubstanceCategory, string> = {
+  acid: "#f29393",
+  base: "#94b8f0",
+  salt: "#c4d2e0",
+  carbonate: "#dcd4c2",
+  metal: "#b6bec9",
+  oxide: "#e0ad7e",
+  gas: "#d2e7ec",
+  water: "#a9d8f5",
+  indicator: "#e29bdb",
+  oxidizer: "#f1c25e",
+  reducer: "#a3d9aa",
+  organic: "#cadc97",
+  other: "#d3dae1",
+};
+
+// 溶质特征色：常见有色离子 / 物质的真实溶液色泽（仅用于可视化）。
+// 键为化学式，按容器内试剂匹配，混合前即呈现真实色彩。
+const SOLUTION_TINT: Record<string, { top: string; bottom: string }> = {
+  CuSO4: { top: "#7cc0ea", bottom: "#2f7fc7" }, // 硫酸铜·蓝
+  CuCl2: { top: "#7fcadf", bottom: "#2f9bbf" }, // 氯化铜·蓝绿
+  "Cu(NO3)2": { top: "#7cc0ea", bottom: "#2f7fc7" }, // 硝酸铜·蓝
+  FeCl3: { top: "#e0b56a", bottom: "#b9772c" }, // 氯化铁·黄棕
+  "Fe(NO3)3": { top: "#e0b56a", bottom: "#b9772c" },
+  FeCl2: { top: "#bfe0b6", bottom: "#7fbf86" }, // 氯化亚铁·浅绿
+  FeSO4: { top: "#bfe0b6", bottom: "#7fbf86" },
+  KMnO4: { top: "#c08fe0", bottom: "#7a2fb0" }, // 高锰酸钾·紫
+  K2Cr2O7: { top: "#f0b06a", bottom: "#d9722c" }, // 重铬酸钾·橙
+  K2CrO4: { top: "#f5d96a", bottom: "#e0b62c" }, // 铬酸钾·黄
+  I2: { top: "#c9a06a", bottom: "#8a5a2c" }, // 碘·棕
+  CoCl2: { top: "#f0a0b8", bottom: "#d95a82" }, // 氯化钴·粉红
+  NiSO4: { top: "#9fd9a8", bottom: "#4fae5e" }, // 硫酸镍·绿
+};
 
 export function LabCanvas({
   experimentId,
@@ -26,6 +67,8 @@ export function LabCanvas({
     completed,
     initSession,
     addReagent,
+    removeReagent,
+    setTemperature,
     mix,
     reset,
     complete,
@@ -38,30 +81,67 @@ export function LabCanvas({
     initSession(experimentId);
   }, [experimentId, initSession]);
 
-  // 处理试剂放入容器：解析为引擎可识别的 Substance 后入容器
+  // 解析标签并入容器（点击 / 拖拽共用）
+  const pour = (label: string) => addReagent(resolveSubstance(label));
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(false);
     const label = e.dataTransfer.getData(DRAG_KEY);
-    if (label) addReagent(resolveSubstance(label));
+    if (label) pour(label);
   };
 
+  // 液面比例：随容器内试剂数量增长，空杯为 0
+  const fill =
+    contents.length === 0 ? 0 : Math.min(0.82, 0.28 + contents.length * 0.16);
+
+  // 容器内首个具有特征色的溶质决定液体色泽（混合前即呈现真实色彩）
+  const tint = contents
+    .map((c) => SOLUTION_TINT[c.formula])
+    .find(Boolean);
+
+  // 按实验仪器选择器皿造型（试管 / 锥形瓶 / 烧杯）
+  const vessel = chooseVessel(apparatus);
+  // 产气类实验：显示排水法集气装置，反应产气时联动收集
+  const gasSetup = usesGasCollection(apparatus);
+  const collecting = Boolean(result?.reacted && result.producesGas);
+
+  // 安全提醒与操作提示（教学反馈）
+  const notes = safetyNotes(contents);
+  const hint = operationHint(contents, result);
+
   return (
-    <div className="grid gap-6 md:grid-cols-[220px_1fr]">
-      {/* 试剂面板 */}
+    <div className="grid gap-6 md:grid-cols-[240px_1fr]">
+      {/* —— 试剂面板 —— */}
       <aside className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold text-foreground/70">试剂面板</h2>
+        <h2 className="text-sm font-semibold text-foreground/70">试剂架</h2>
         <ul className="flex flex-col gap-2">
-          {reagents.map((label) => (
-            <li
-              key={label}
-              draggable
-              onDragStart={(e) => e.dataTransfer.setData(DRAG_KEY, label)}
-              className="cursor-grab rounded-lg border border-foreground/15 bg-foreground/5 px-3 py-2 text-sm transition-colors hover:bg-foreground/10 active:cursor-grabbing"
-            >
-              {label}
-            </li>
-          ))}
+          {reagents.map((label) => {
+            const color = CATEGORY_COLOR[resolveSubstance(label).category];
+            const inUse = contents.some(
+              (c) => c.formula === resolveSubstance(label).formula,
+            );
+            return (
+              <li key={label}>
+                <button
+                  type="button"
+                  draggable
+                  onDragStart={(e) => e.dataTransfer.setData(DRAG_KEY, label)}
+                  onClick={() => pour(label)}
+                  className={`group flex w-full cursor-grab items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm shadow-soft transition-all active:scale-[0.98] active:cursor-grabbing ${
+                    inUse
+                      ? "border-brand-400/50 bg-brand-500/8"
+                      : "border-foreground/15 bg-surface/70 hover:border-brand-400/50 hover:bg-brand-500/5"
+                  }`}
+                >
+                  <BottleIcon color={color} />
+                  <span className="flex-1">{label}</span>
+                  <span className="text-xs text-brand-600 opacity-0 transition-opacity group-hover:opacity-100 dark:text-brand-300">
+                    {inUse ? "已加" : "+ 加入"}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
         </ul>
 
         <h2 className="mt-2 text-sm font-semibold text-foreground/70">仪器</h2>
@@ -69,7 +149,7 @@ export function LabCanvas({
           {apparatus.map((label) => (
             <li
               key={label}
-              className="rounded-full border border-foreground/15 px-2.5 py-1 text-xs text-foreground/70"
+              className="rounded-full border border-foreground/15 bg-surface/50 px-2.5 py-1 text-xs text-foreground/70"
             >
               {label}
             </li>
@@ -77,7 +157,7 @@ export function LabCanvas({
         </ul>
       </aside>
 
-      {/* 画布主区 */}
+      {/* —— 画布主区 —— */}
       <section className="flex flex-col gap-4">
         <div
           onDragOver={(e) => {
@@ -86,16 +166,52 @@ export function LabCanvas({
           }}
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
-          className={`flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed p-6 transition-colors ${
-            dragOver ? "border-foreground/50 bg-foreground/5" : "border-foreground/15"
+          className={`relative flex flex-col items-center gap-3 overflow-hidden rounded-2xl border p-6 transition-all ${
+            dragOver
+              ? "border-brand-400 bg-brand-500/8 scale-[1.01]"
+              : "border-foreground/12 bg-gradient-to-b from-surface/30 to-brand-500/[0.04]"
           }`}
         >
-          <Beaker result={result} />
-          <p className="text-xs text-foreground/50">
-            {contents.length === 0
-              ? "将试剂拖拽到此处"
-              : `容器内：${contents.map((c) => c.name).join("、")}`}
-          </p>
+          {/* 实验台台面投影 */}
+          <div className="pointer-events-none absolute bottom-9 h-4 w-44 rounded-[100%] bg-foreground/10 blur-md" />
+          <div className="flex items-end justify-center gap-1">
+            <Glassware
+              kind={vessel}
+              result={result}
+              fill={fill}
+              tint={tint}
+              hot={readings.temperature >= 55}
+            />
+            {gasSetup && <GasCollection collecting={collecting} />}
+          </div>
+
+          {/* 容器内试剂标签（可移除） */}
+          <div className="flex min-h-[2rem] flex-wrap items-center justify-center gap-2">
+            {contents.length === 0 ? (
+              <p className="text-xs text-foreground/45">
+                点击左侧试剂瓶或拖拽至此加入容器
+              </p>
+            ) : (
+              contents.map((c) => (
+                <button
+                  key={c.key}
+                  type="button"
+                  onClick={() => removeReagent(c.formula)}
+                  title="点击移除"
+                  className="group flex items-center gap-1.5 rounded-full border border-foreground/15 bg-surface/80 px-3 py-1 text-xs shadow-soft transition-colors hover:border-rose-400/50 hover:bg-rose-500/5"
+                >
+                  <span
+                    className="h-2 w-2 rounded-full"
+                    style={{ background: CATEGORY_COLOR[c.category] }}
+                  />
+                  {c.name}
+                  <span className="text-foreground/30 transition-colors group-hover:text-rose-500">
+                    ×
+                  </span>
+                </button>
+              ))
+            )}
+          </div>
         </div>
 
         {/* 实时读数 */}
@@ -103,6 +219,43 @@ export function LabCanvas({
           <Reading label="pH" value={readings.ph.toFixed(1)} />
           <Reading label="温度" value={`${readings.temperature} ℃`} />
         </div>
+
+        {/* 操作参数：加热 / 冷却体系温度（借鉴 mathviz 参数面板） */}
+        <ControlPanel
+          title="操作参数"
+          params={[
+            {
+              key: "temperature",
+              label: "加热温度",
+              value: readings.temperature,
+              min: 0,
+              max: 100,
+              step: 1,
+              unit: "℃",
+            },
+          ]}
+          onChange={(_, v) => setTemperature(v)}
+        />
+
+        {/* 安全提醒：加入危险试剂时给出真实安全规范 */}
+        {notes.length > 0 && (
+          <ul className="flex flex-col gap-1.5 rounded-lg border border-amber-500/25 bg-amber-500/8 px-4 py-3 text-sm text-amber-700 dark:text-amber-300">
+            {notes.map((n) => (
+              <li key={n} className="flex gap-2">
+                <span aria-hidden>⚠️</span>
+                <span>{n}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* 操作提示：混合无反应时的引导 */}
+        {hint && (
+          <p className="flex gap-2 rounded-lg border border-sky-500/25 bg-sky-500/8 px-4 py-3 text-sm text-sky-700 dark:text-sky-300">
+            <span aria-hidden>💡</span>
+            <span>{hint}</span>
+          </p>
+        )}
 
         {/* 现象描述 */}
         {result && (
@@ -119,19 +272,19 @@ export function LabCanvas({
         )}
 
         {/* 操作按钮 */}
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           <button
             type="button"
             onClick={mix}
             disabled={contents.length < 2}
-            className="rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-soft"
           >
             混合反应
           </button>
           <button
             type="button"
             onClick={reset}
-            className="rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-foreground/5"
+            className="rounded-xl border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:border-brand-400/50 hover:bg-brand-500/5 active:scale-[0.98]"
           >
             清空容器
           </button>
@@ -139,7 +292,7 @@ export function LabCanvas({
             type="button"
             onClick={complete}
             disabled={completed || !result}
-            className="rounded-lg border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+            className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
           >
             {completed ? "实验已完成" : "完成实验"}
           </button>
@@ -149,12 +302,33 @@ export function LabCanvas({
   );
 }
 
+// 试剂瓶迷你图标：玻璃瓶内盛对应颜色液体
+function BottleIcon({ color }: { color: string }) {
+  return (
+    <svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true">
+      <path
+        d="M6 1 h6 v4 l3 6 v8 a2 2 0 0 1 -2 2 H5 a2 2 0 0 1 -2 -2 v-8 l3 -6 Z"
+        fill="rgba(255,255,255,0.5)"
+        stroke="currentColor"
+        strokeWidth="1"
+        className="text-foreground/40"
+      />
+      <path
+        d="M4 13 h10 v6 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 Z"
+        fill={color}
+      />
+    </svg>
+  );
+}
+
 // 单个读数卡片
 function Reading({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col gap-1 rounded-xl border border-foreground/15 px-4 py-3">
+    <div className="flex flex-col gap-1 rounded-xl border border-foreground/15 bg-surface/60 px-4 py-3 shadow-soft">
       <span className="text-xs text-foreground/50">{label}</span>
-      <span className="text-2xl font-semibold tabular-nums">{value}</span>
+      <span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-2xl font-semibold tabular-nums text-transparent">
+        {value}
+      </span>
     </div>
   );
 }

@@ -12,6 +12,13 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   [ExperimentCategory.ACID_BASE]: "酸碱反应",
   [ExperimentCategory.ORGANIC]: "有机化学",
   [ExperimentCategory.THERMODYNAMICS]: "热力学",
+  [ExperimentCategory.REDOX]: "氧化还原",
+  [ExperimentCategory.PRECIPITATION]: "沉淀复分解",
+  [ExperimentCategory.GAS]: "气体制备",
+  [ExperimentCategory.ELECTROCHEM]: "电化学",
+  [ExperimentCategory.METAL]: "金属活动性",
+  [ExperimentCategory.ANALYSIS]: "分析检验",
+  [ExperimentCategory.COORDINATION]: "配位显色",
 };
 
 export const DIFFICULTY_LABELS: Record<Difficulty, string> = {

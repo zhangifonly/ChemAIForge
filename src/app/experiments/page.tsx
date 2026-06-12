@@ -41,8 +41,8 @@ export default function ExperimentsPage() {
   }, [filters]);
 
   return (
-    <main className="mx-auto flex max-w-5xl flex-col gap-6 p-8">
-      <header className="flex flex-col gap-1">
+    <main id="main" className="mx-auto flex max-w-5xl flex-col gap-6 px-6 py-10 sm:py-12">
+      <header className="flex flex-col gap-1.5 animate-fade-up">
         <h1 className="text-3xl font-bold tracking-tight">实验库</h1>
         <p className="text-sm text-foreground/60">
           选择一个实验，进入虚拟实验室开始操作。
@@ -52,9 +52,19 @@ export default function ExperimentsPage() {
       <FilterBar filters={filters} onChange={setFilters} />
 
       {loading ? (
-        <p className="text-sm text-foreground/50">加载中…</p>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div
+              key={i}
+              className="h-40 animate-pulse rounded-2xl border border-foreground/10 bg-foreground/[0.04]"
+            />
+          ))}
+        </div>
       ) : experiments.length === 0 ? (
-        <p className="text-sm text-foreground/50">没有符合条件的实验。</p>
+        <div className="flex flex-col items-center gap-2 rounded-2xl border border-dashed border-foreground/15 py-16 text-center">
+          <span className="text-3xl">🔍</span>
+          <p className="text-sm text-foreground/50">没有符合条件的实验。</p>
+        </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {experiments.map((exp) => (

@@ -8,10 +8,15 @@ export type SubstanceCategory =
   | "acid" // 酸
   | "base" // 碱
   | "salt" // 盐
+  | "carbonate" // 碳酸盐 / 碳酸氢盐（产气复分解专用）
   | "metal" // 金属单质
   | "oxide" // 氧化物
   | "gas" // 气体
   | "water" // 水
+  | "indicator" // 酸碱指示剂
+  | "oxidizer" // 氧化剂
+  | "reducer" // 还原剂
+  | "organic" // 有机物
   | "other";
 
 /** 参与反应的物质 */

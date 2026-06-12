@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getCurrentSession } from "@/server/auth";
 import { getExperimentBySlug } from "@/server/experiments/service";
 import { streamTutorReply, type TutorMessage } from "@/server/ai/tutor";
 import { tutorRequestSchema } from "@/server/ai/validation";
@@ -18,13 +17,8 @@ function withLabState(
   ];
 }
 
-// POST /api/ai/tutor —— 校验登录与入参后，以 SSE 流式返回 AI 导师回复增量
+// POST /api/ai/tutor —— 校验入参后，以 SSE 流式返回 AI 导师回复增量
 export async function POST(request: Request) {
-  const session = await getCurrentSession();
-  if (!session) {
-    return NextResponse.json({ error: "请先登录" }, { status: 401 });
-  }
-
   let raw: unknown;
   try {
     raw = await request.json();

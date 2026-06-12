@@ -1,17 +1,14 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { getCurrentSession } from "@/server/auth";
+import { ensureGuestUserId } from "@/server/guest";
 import { listSessionsByUser } from "@/server/session";
 import { getExperimentById } from "@/server/experiments/service";
 import { SessionStatus } from "@/server/session/types";
 
-// 「我的会话」列表页：服务端校验登录态，列出当前用户历史会话
-// middleware 已拦截未登录访问，此处兜底再校验一次并补全实验标题
+// 「我的会话」列表页：平台已去登录，会话归属固定访客用户，直接列出其历史会话
 export default async function SessionsPage() {
-  const auth = await getCurrentSession();
-  if (!auth) redirect("/login?redirect=/sessions");
+  const userId = await ensureGuestUserId();
 
-  const sessions = await listSessionsByUser(auth.userId);
+  const sessions = await listSessionsByUser(userId);
 
   // 批量补全实验标题（去重查询，避免重复 DB 往返）
   const experimentIds = [...new Set(sessions.map((s) => s.experimentId))];
@@ -24,26 +21,32 @@ export default async function SessionsPage() {
   const titleMap = new Map(titleEntries);
 
   return (
-    <main className="mx-auto flex max-w-3xl flex-col gap-6 p-8">
+    <main id="main" className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-10 animate-fade-up">
       <header className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold tracking-tight">我的会话</h1>
         <p className="text-foreground/70">查看历史实验记录并进入对应报告</p>
       </header>
 
       {sessions.length === 0 ? (
-        <p className="text-sm text-foreground/50">
-          暂无实验会话，去{" "}
-          <Link href="/experiments" className="underline hover:text-foreground">
-            实验库
-          </Link>{" "}
-          开始一次实验吧。
-        </p>
+        <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-foreground/15 py-16 text-center">
+          <span className="text-3xl">🧫</span>
+          <p className="text-sm text-foreground/50">
+            暂无实验会话，去{" "}
+            <Link
+              href="/experiments"
+              className="font-medium text-brand-600 hover:underline dark:text-brand-300"
+            >
+              实验库
+            </Link>{" "}
+            开始一次实验吧。
+          </p>
+        </div>
       ) : (
         <ul className="flex flex-col gap-3">
           {sessions.map((s) => (
             <li
               key={s.id}
-              className="flex items-center justify-between rounded-lg border border-foreground/10 px-5 py-4"
+              className="flex items-center justify-between rounded-2xl border border-foreground/10 bg-surface/70 px-5 py-4 shadow-soft backdrop-blur transition-all hover:border-brand-400/40 hover:shadow-glow"
             >
               <div className="flex flex-col gap-1">
                 <span className="font-medium">
@@ -58,7 +61,7 @@ export default async function SessionsPage() {
                 <StatusBadge status={s.status} />
                 <Link
                   href={`/sessions/${s.id}/report`}
-                  className="text-sm text-foreground/70 underline hover:text-foreground"
+                  className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
                 >
                   查看报告
                 </Link>

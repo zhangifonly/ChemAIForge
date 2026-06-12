@@ -3,18 +3,99 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 浅色主题：极淡青灰背景，深石墨前景 */
+  --background: #f6f9f9;
+  --foreground: #0f1f24;
+  --surface: #ffffff;
+  /* 字体栈：Outfit 负责西文/数字，中文回退到系统优质黑体 */
+  --font-sans:
+    var(--font-outfit), "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", system-ui,
+    sans-serif;
+}
+
+.dark {
+  /* 深色主题：深海蓝黑背景，柔白前景 */
+  --background: #0a1418;
+  --foreground: #e6f1ef;
+  --surface: #10212699;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not(.light) {
+    --background: #0a1418;
+    --foreground: #e6f1ef;
+    --surface: #10212699;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: var(--font-sans);
+  /* 数据界面统一启用等宽数字，读数 / 时长对齐更稳 */
+  font-variant-numeric: tabular-nums;
+  /* 单一品牌色光晕（移除紫色 AI 渐变指纹），叠加细微噪点打破纯平 */
+  background-image:
+    radial-gradient(
+      58rem 30rem at 50% -12rem,
+      rgba(21, 156, 140, 0.16),
+      transparent 62%
+    ),
+    radial-gradient(
+      40rem 26rem at 92% 4rem,
+      rgba(21, 156, 140, 0.06),
+      transparent 58%
+    );
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 标题：收紧字距、平衡断行，强化显示层级 */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* 自定义滚动条，融入品牌色 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(21, 156, 140, 0.35) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(21, 156, 140, 0.35);
+  border-radius: 9999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 156, 140, 0.55);
+}
+
+/* 选中文本品牌色高亮 */
+::selection {
+  background: rgba(21, 156, 140, 0.25);
+}
+
+/* 全局细噪点叠层：打破纯平数字感，置于内容之下，不拦截指针事件 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

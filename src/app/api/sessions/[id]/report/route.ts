@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getCurrentSession } from "@/server/auth";
 import { getSession, saveReport } from "@/server/session";
 import { getExperimentById } from "@/server/experiments/service";
 import { generateReport } from "@/server/ai/report";
@@ -10,18 +9,9 @@ export async function POST(
   _request: Request,
   { params }: { params: { id: string } },
 ) {
-  const auth = await getCurrentSession();
-  if (!auth) {
-    return NextResponse.json({ error: "请先登录" }, { status: 401 });
-  }
-
-  // 校验会话存在且归属当前用户，避免越权生成他人会话报告
   const session = await getSession(params.id);
   if (!session) {
     return NextResponse.json({ error: "会话不存在" }, { status: 404 });
-  }
-  if (session.userId !== auth.userId) {
-    return NextResponse.json({ error: "无权访问该会话" }, { status: 403 });
   }
 
   const experiment = await getExperimentById(session.experimentId);

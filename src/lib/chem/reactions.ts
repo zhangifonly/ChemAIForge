@@ -1,46 +1,18 @@
-// 内置示例反应规则集
-// 每条规则通过 match 判断输入物质是否满足，satisfied 时返回反应结果
+// 内置反应规则集
+// 规则按 reactions 数组顺序匹配，命中第一条即返回 —— 特异性强的规则需排在前面。
+// 类型 Reaction 与匹配工具函数集中在 ./rules/helpers，扩展规则见 ./rules/*。
 
-import type { ReactionConditions, ReactionResult, Substance } from "./engine";
+import {
+  type Reaction,
+  findByCategory,
+  hasCategories,
+  hasFormula,
+} from "./rules/helpers";
+import { extendedReactions } from "./rules";
 
-/** 一条反应规则 */
-export interface Reaction {
-  /** 规则唯一标识 */
-  id: string;
-  /** 反应名称 */
-  name: string;
-  /** 判断给定输入是否触发该反应 */
-  match: (inputs: Substance[]) => boolean;
-  /** 生成反应结果（不含 reacted 字段，由引擎补全） */
-  build: (
-    inputs: Substance[],
-    conditions: ReactionConditions
-  ) => Omit<ReactionResult, "reacted">;
-}
+export type { Reaction } from "./rules/helpers";
 
-/** 工具：在输入中查找指定类别的物质 */
-function findByCategory(
-  inputs: Substance[],
-  category: Substance["category"]
-): Substance | undefined {
-  return inputs.find((s) => s.category === category);
-}
-
-/** 工具：判断输入是否同时包含两个指定类别 */
-function hasCategories(
-  inputs: Substance[],
-  a: Substance["category"],
-  b: Substance["category"]
-): boolean {
-  return Boolean(findByCategory(inputs, a)) && Boolean(findByCategory(inputs, b));
-}
-
-/** 工具：判断是否包含指定化学式 */
-function hasFormula(inputs: Substance[], formula: string): boolean {
-  return inputs.some((s) => s.formula === formula);
-}
-
-/** 规则 1：酸碱中和反应（酸 + 碱 → 盐 + 水，放热） */
+/** 基础规则 1：酸碱中和反应（酸 + 碱 → 盐 + 水，放热） */
 const acidBaseNeutralization: Reaction = {
   id: "acid-base-neutralization",
   name: "酸碱中和反应",
@@ -52,7 +24,7 @@ const acidBaseNeutralization: Reaction = {
     ],
     producesGas: false,
     producesPrecipitate: false,
-    colorChange: true, // 指示剂/酸碱变化
+    colorChange: true,
     thermal: "exothermic",
     phTrend: "neutral",
     equation: "酸 + 碱 → 盐 + 水",
@@ -60,7 +32,7 @@ const acidBaseNeutralization: Reaction = {
   }),
 };
 
-/** 规则 2：金属与酸反应（活泼金属 + 酸 → 盐 + 氢气，放热产气） */
+/** 基础规则 2：金属与酸反应（活泼金属 + 酸 → 盐 + 氢气，放热产气） */
 const metalAcid: Reaction = {
   id: "metal-acid",
   name: "金属与酸反应",
@@ -76,14 +48,14 @@ const metalAcid: Reaction = {
       producesPrecipitate: false,
       colorChange: false,
       thermal: "exothermic",
-      phTrend: "increase", // 酸被消耗，pH 上升
+      phTrend: "increase",
       equation: `${metal.formula} + 酸 → 盐 + H2↑`,
       description: "活泼金属与酸反应生成盐并放出氢气，伴有气泡。",
     };
   },
 };
 
-/** 规则 3：沉淀反应（如 NaCl + AgNO3 → AgCl↓ + NaNO3） */
+/** 基础规则 3：氯化银沉淀反应（AgNO3 + 可溶氯化物 → AgCl↓） */
 const precipitation: Reaction = {
   id: "precipitation-agcl",
   name: "氯化银沉淀反应",
@@ -97,7 +69,7 @@ const precipitation: Reaction = {
     ],
     producesGas: false,
     producesPrecipitate: true,
-    colorChange: true, // 出现白色沉淀
+    colorChange: true,
     thermal: "none",
     phTrend: "neutral",
     equation: "AgNO3 + NaCl → AgCl↓ + NaNO3",
@@ -105,9 +77,13 @@ const precipitation: Reaction = {
   }),
 };
 
-/** 内置反应规则集（按优先级排序） */
+/**
+ * 内置反应规则集（按优先级排序）。
+ * 扩展规则中特异性最强的优先；基础三条作为通用兜底排在其后。
+ */
 export const reactions: Reaction[] = [
   precipitation,
+  ...extendedReactions,
   metalAcid,
   acidBaseNeutralization,
 ];

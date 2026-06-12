@@ -5,6 +5,7 @@
 // 画布关键反应事件（沉淀/气体/变色）会自动触发一条情境提示询问。
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLabStore } from "@/components/lab/labStore";
+import { useTutorBus } from "./tutorBus";
 import { useTutorStream, type ChatMessage } from "./useTutorStream";
 import { buildLabState, contextualPrompt } from "./labContext";
 
@@ -52,14 +53,28 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
     });
   }, [submit]);
 
+  // 订阅讲解播放器投递的提示，自动发起一次带画布上下文的提问
+  useEffect(() => {
+    return useTutorBus.subscribe((state) => {
+      if (!state.pending) return;
+      const prompt = useTutorBus.getState().consume();
+      if (prompt) void submit(prompt);
+    });
+  }, [submit]);
+
   // 新消息或流式增量时滚到底部
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight });
   }, [messages]);
 
   return (
-    <div className="flex h-full flex-col gap-3 rounded-2xl border border-foreground/15 bg-foreground/[0.02] p-4">
-      <h2 className="text-sm font-semibold text-foreground/70">AI 实验导师</h2>
+    <div className="flex h-full flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/70 p-4 shadow-soft backdrop-blur-xl">
+      <h2 className="flex items-center gap-2 text-sm font-semibold text-foreground/70">
+        <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 text-xs text-white">
+          🤖
+        </span>
+        AI 实验导师
+      </h2>
 
       <div
         ref={scrollRef}
@@ -93,12 +108,12 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="输入你的问题…"
-          className="min-w-0 flex-1 rounded-lg border border-foreground/20 bg-background px-3 py-2 text-sm outline-none focus:border-foreground/40"
+          className="min-w-0 flex-1 rounded-xl border border-foreground/15 bg-background/60 px-3 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
         />
         <button
           type="submit"
           disabled={streaming || !input.trim()}
-          className="rounded-lg bg-foreground px-4 py-2 text-sm font-medium text-background transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+          className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-4 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-soft"
         >
           {streaming ? "回复中…" : "发送"}
         </button>
@@ -113,10 +128,10 @@ function Bubble({ role, content }: ChatMessage) {
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
-        className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3 py-2 text-sm ${
+        className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2 text-sm shadow-soft ${
           isUser
-            ? "bg-foreground text-background"
-            : "bg-foreground/8 text-foreground"
+            ? "bg-gradient-to-r from-brand-500 to-brand-600 text-white"
+            : "border border-foreground/10 bg-surface/80 text-foreground"
         }`}
       >
         {content || <span className="animate-pulse">▍</span>}

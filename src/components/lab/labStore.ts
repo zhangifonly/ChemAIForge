@@ -36,6 +36,10 @@ interface LabState {
   initSession: (experimentId: string) => void;
   // 拖入一种试剂
   addReagent: (s: Substance) => void;
+  // 从容器移除一种试剂（按化学式）
+  removeReagent: (formula: string) => void;
+  // 调节体系温度（加热 / 冷却）：直接设定温度读数，作为下次反应的基准
+  setTemperature: (t: number) => void;
   // 触发混合：调用引擎计算并更新结果与读数
   mix: () => void;
   // 清空容器，恢复初始读数
@@ -95,6 +99,21 @@ export const useLabStore = create<LabState>((set, get) => ({
       // 拖入新试剂后清空旧结果，等待重新混合
       return { contents: [...state.contents, item], result: null };
     }),
+
+  removeReagent: (formula) =>
+    set((state) => ({
+      contents: state.contents.filter((c) => c.formula !== formula),
+      // 容器变化后清空旧结果，等待重新混合
+      result: null,
+    })),
+
+  setTemperature: (t) =>
+    set((state) => ({
+      readings: {
+        ...state.readings,
+        temperature: Math.max(0, Math.min(100, Math.round(t))),
+      },
+    })),
 
   mix: () => {
     const { contents, readings, sessionId } = get();

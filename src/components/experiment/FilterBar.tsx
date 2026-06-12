@@ -27,14 +27,14 @@ export default function FilterBar({
   onChange: (next: ExperimentFilters) => void;
 }) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/60 p-3 shadow-soft backdrop-blur sm:flex-row sm:items-center">
       <input
         type="search"
         value={filters.q}
         onChange={(e) => onChange({ ...filters, q: e.target.value })}
         placeholder="搜索实验名称…"
         aria-label="搜索实验"
-        className="flex-1 rounded-lg border border-foreground/15 bg-transparent px-3 py-2 text-sm outline-none focus:border-foreground/40"
+        className="flex-1 rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       />
       <select
         value={filters.category}
@@ -45,7 +45,7 @@ export default function FilterBar({
           })
         }
         aria-label="按分类筛选"
-        className="rounded-lg border border-foreground/15 bg-transparent px-3 py-2 text-sm outline-none focus:border-foreground/40"
+        className="rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       >
         <option value="">全部分类</option>
         {CATEGORY_OPTIONS.map((c) => (
@@ -63,7 +63,7 @@ export default function FilterBar({
           })
         }
         aria-label="按难度筛选"
-        className="rounded-lg border border-foreground/15 bg-transparent px-3 py-2 text-sm outline-none focus:border-foreground/40"
+        className="rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       >
         <option value="">全部难度</option>
         {DIFFICULTY_OPTIONS.map((d) => (

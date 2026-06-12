@@ -1,16 +1,11 @@
 import { NextResponse } from "next/server";
-import { getCurrentSession } from "@/server/auth";
+import { ensureGuestUserId } from "@/server/guest";
 import { getExperimentById } from "@/server/experiments/service";
 import { createSession } from "@/server/session";
 import { createSessionSchema } from "@/server/session/validation";
 
-// POST /api/sessions —— 为当前登录用户创建一次实验会话，返回会话 id
+// POST /api/sessions —— 创建一次实验会话（归属访客用户），返回会话 id
 export async function POST(request: Request) {
-  const session = await getCurrentSession();
-  if (!session) {
-    return NextResponse.json({ error: "请先登录" }, { status: 401 });
-  }
-
   let raw: unknown;
   try {
     raw = await request.json();
@@ -31,6 +26,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "实验不存在" }, { status: 404 });
   }
 
-  const created = await createSession(session.userId, experiment.id);
+  const userId = await ensureGuestUserId();
+  const created = await createSession(userId, experiment.id);
   return NextResponse.json(created, { status: 201 });
 }
