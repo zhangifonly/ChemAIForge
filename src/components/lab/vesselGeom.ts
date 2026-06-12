@@ -91,3 +91,13 @@ export function chooseVessel(apparatus: string[]): VesselKind {
 export function usesGasCollection(apparatus: string[]): boolean {
   return /集气瓶|导管|水槽|排水/.test(apparatus.join(" "));
 }
+
+// 是否为真·电解实验（外加直流电源 / 电解槽；区别于原电池、腐蚀）
+export function isElectrolysisSetup(apparatus: string[]): boolean {
+  return /直流电源|电解槽/.test(apparatus.join(" "));
+}
+
+// 阳极是否惰性：无"铜/银/金属/活性电极"字样即视为惰性（碳/铂）
+export function isInertAnode(apparatus: string[]): boolean {
+  return !/铜电极|银电极|金属电极|活性电极/.test(apparatus.join(" "));
+}

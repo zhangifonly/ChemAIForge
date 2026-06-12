@@ -10,7 +10,14 @@ import { useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
 import { Glassware } from "./Glassware";
 import { GasCollection } from "./GasCollection";
-import { chooseVessel, usesGasCollection } from "./vesselGeom";
+import { ElectrolysisCell } from "./ElectrolysisCell";
+import {
+  chooseVessel,
+  usesGasCollection,
+  isElectrolysisSetup,
+  isInertAnode,
+} from "./vesselGeom";
+import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { ControlPanel } from "./ControlPanel";
 import { safetyNotes, operationHint } from "./safety";
 
@@ -75,6 +82,8 @@ export function LabCanvas({
   } = useLabStore();
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
+  // 电解实验：是否通电
+  const [powered, setPowered] = useState(false);
 
   // 挂载时绑定实验并创建会话（未登录则静默无会话）
   useEffect(() => {
@@ -108,6 +117,84 @@ export function LabCanvas({
   // 安全提醒与操作提示（教学反馈）
   const notes = safetyNotes(contents);
   const hint = operationHint(contents, result);
+
+  // 电解模式：外加直流电源实验，用电解槽替代混合台
+  const electrolyte = reagents
+    .map((r) => resolveSubstance(r).formula)
+    .find(isElectrolyte);
+  const electrolysisMode = isElectrolysisSetup(apparatus) && !!electrolyte;
+
+  if (electrolysisMode && electrolyte) {
+    const inert = isInertAnode(apparatus);
+    const er = electrolyze(electrolyte, { inertAnode: inert });
+    return (
+      <div className="grid gap-6 md:grid-cols-[240px_1fr]">
+        <aside className="flex flex-col gap-3">
+          <h2 className="text-sm font-semibold text-foreground/70">仪器</h2>
+          <ul className="flex flex-wrap gap-2">
+            {apparatus.map((label) => (
+              <li
+                key={label}
+                className="rounded-full border border-foreground/15 bg-surface/50 px-2.5 py-1 text-xs text-foreground/70"
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-xs text-foreground/45">
+            电解液：{resolveSubstance(reagents.find((r) => resolveSubstance(r).formula === electrolyte) ?? "") .name}（{electrolyte}）
+            ·阳极{inert ? "惰性（碳）" : "活性（金属，会溶解）"}
+          </p>
+        </aside>
+
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col items-center gap-3 rounded-2xl border border-foreground/12 bg-gradient-to-b from-surface/30 to-brand-500/[0.04] p-6">
+            <ElectrolysisCell
+              electrolyte={electrolyte}
+              inertAnode={inert}
+              powered={powered}
+            />
+            <p className="text-xs text-foreground/50">
+              {powered ? "电解进行中…" : "点击「通电」开始电解，观察两极现象"}
+            </p>
+          </div>
+
+          {er && (
+            <div className="flex flex-col gap-1.5 rounded-lg bg-foreground/[0.04] px-4 py-3 text-sm">
+              <span className="font-medium text-foreground/80">{er.overall}</span>
+              <span className="text-foreground/65">阴极（−）：{er.cathode.observation}</span>
+              <span className="text-foreground/65">阳极（＋）：{er.anode.observation}</span>
+              {er.colorFades && (
+                <span className="text-foreground/65">溶液：蓝色逐渐变浅（铜离子被消耗）</span>
+              )}
+            </div>
+          )}
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={() => setPowered((p) => !p)}
+              className={`rounded-xl px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all active:scale-[0.98] ${
+                powered
+                  ? "bg-gradient-to-r from-rose-500 to-rose-600"
+                  : "bg-gradient-to-r from-brand-500 to-brand-600 hover:shadow-glow"
+              }`}
+            >
+              {powered ? "断电" : "⚡ 通电"}
+            </button>
+            <button
+              type="button"
+              onClick={complete}
+              disabled={completed || !powered}
+              className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+            >
+              {completed ? "实验已完成" : "完成实验"}
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
 
   return (
     <div className="grid gap-6 md:grid-cols-[240px_1fr]">
