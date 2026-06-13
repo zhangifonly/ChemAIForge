@@ -3,6 +3,14 @@
 import type { ExperimentSeed } from "@/data/experiments";
 import type { ReactionExpectation } from "@/data/experiments/types";
 import type { LessonStep } from "./types";
+import { resolveSubstance } from "../reagents";
+import {
+  isElectrolysisSetup,
+  isGalvanicSetup,
+  isInertAnode,
+} from "../vesselGeom";
+import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
+import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 
 // 由探针预期现象生成「现象」步骤的口播
 function describePhenomena(e?: ReactionExpectation): string {
@@ -25,7 +33,74 @@ function pickReagents(exp: ExperimentSeed): string[] {
   return exp.reagents.slice(0, Math.min(3, exp.reagents.length));
 }
 
+// 结论步骤（实验目标），电化学与混合讲解共用
+function summaryStep(exp: ExperimentSeed): LessonStep | null {
+  if (!exp.objectives.length) return null;
+  return {
+    id: "summary",
+    phase: "结论",
+    title: "实验小结",
+    narration: `通过本实验，你将${exp.objectives.join("；")}。`,
+  };
+}
+
+// 电解实验讲解：依放电顺序描述两极现象
+function electrolysisLesson(exp: ExperimentSeed): LessonStep[] | null {
+  if (!isElectrolysisSetup(exp.apparatus)) return null;
+  const electrolyte = exp.reagents
+    .map((r) => resolveSubstance(r).formula)
+    .find(isElectrolyte);
+  if (!electrolyte) return null;
+  const er = electrolyze(electrolyte, { inertAnode: isInertAnode(exp.apparatus) });
+  if (!er) return null;
+  const steps: LessonStep[] = [
+    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "准备", title: "连接装置", narration: "将电极插入电解液，分别与直流电源的正、负极相连。" },
+    { id: "power", phase: "操作", title: "接通电源", narration: "接通直流电源，开始电解，注意观察两极变化。" },
+    {
+      id: "observe",
+      phase: "现象",
+      title: "两极现象",
+      narration: `${er.cathode.observation}；${er.anode.observation}${er.colorFades ? "；溶液蓝色逐渐变浅" : ""}。`,
+    },
+  ];
+  const s = summaryStep(exp);
+  if (s) steps.push(s);
+  return steps;
+}
+
+// 原电池 / 腐蚀讲解：依金属活动性描述正负极
+function galvanicLesson(exp: ExperimentSeed): LessonStep[] | null {
+  if (!isGalvanicSetup(exp.apparatus)) return null;
+  const metals = exp.reagents
+    .map((r) => resolveSubstance(r))
+    .filter((s) => isGalvanicMetal(s.formula));
+  if (metals.length === 0) return null;
+  const acid = exp.reagents.map((r) => resolveSubstance(r)).find((s) => s.category === "acid");
+  const electrolyte = acid ?? { formula: "NaCl", name: "食盐水" };
+  const gr = galvanicCell(metals.map((m) => m.formula), electrolyte);
+  if (!gr) return null;
+  const steps: LessonStep[] = [
+    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "准备", title: "连接电路", narration: "用导线将两电极经电流计相连，插入电解质溶液。" },
+    { id: "connect", phase: "操作", title: "接通电路", narration: "接通电路，观察电流计指针是否偏转。" },
+    {
+      id: "observe",
+      phase: "现象",
+      title: "两极现象",
+      narration: `${gr.negative.observation}；${gr.positive.observation}；${gr.electronFlow}。`,
+    },
+  ];
+  const s = summaryStep(exp);
+  if (s) steps.push(s);
+  return steps;
+}
+
 export function buildLesson(exp: ExperimentSeed): LessonStep[] {
+  // 电化学实验：生成模式对应的讲解（通电 / 接通电路 + 真实两极现象）
+  const electro = electrolysisLesson(exp) ?? galvanicLesson(exp);
+  if (electro) return electro;
+
   const steps: LessonStep[] = [];
   const reagents = pickReagents(exp);
 
