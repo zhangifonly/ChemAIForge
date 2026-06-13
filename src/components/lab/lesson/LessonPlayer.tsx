@@ -8,7 +8,7 @@ import { useTutorBus } from "@/components/ai/tutorBus";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { buildLesson } from "./buildLesson";
-import { audioSrc } from "./audioKey";
+import { audioSrc, type VoiceRole } from "./audioKey";
 
 const PHASE_STYLE: Record<string, string> = {
   原理: "bg-brand-500/12 text-brand-600 dark:text-brand-300",
@@ -29,9 +29,10 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
   const [playing, setPlaying] = useState(false);
   // 是否已介入实验台（介入后才重放动作，避免打断用户自由操作）
   const [engaged, setEngaged] = useState(false);
-  // 语音讲解：静音开关与倍速（借鉴 mathviz 的语音 + 速度）
+  // 语音讲解：静音开关、倍速、音色（晓晓女声 / 云希男声，借鉴 mathviz）
   const [muted, setMuted] = useState(false);
   const [rate, setRate] = useState(1);
+  const [voice, setVoice] = useState<VoiceRole>("xiaoxiao");
 
   // 确定性重放：从头执行到当前步，保证烧杯状态与讲解严格一致
   useEffect(() => {
@@ -94,7 +95,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
     };
 
     // 优先：预生成 mp3
-    const audio = new Audio(audioSrc(text));
+    const audio = new Audio(audioSrc(text, voice));
     audio.playbackRate = rate;
     audio.onended = advance;
     audio.onerror = () => {
@@ -119,7 +120,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       audio.pause();
       cleanup();
     };
-  }, [playing, index, muted, rate, steps]);
+  }, [playing, index, muted, rate, voice, steps]);
 
   // 卸载时停止朗读
   useEffect(() => {
@@ -218,8 +219,8 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
         </CtrlButton>
       </div>
 
-      {/* 语音：静音开关 + 倍速 */}
-      <div className="flex items-center justify-center gap-3 text-xs">
+      {/* 语音：静音开关 + 音色（晓晓♀/云希♂）+ 倍速 */}
+      <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
         <button
           type="button"
           onClick={() => setMuted((m) => !m)}
@@ -228,6 +229,26 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
         >
           {muted ? "🔇 已静音" : "🔊 语音讲解"}
         </button>
+        {/* 音色切换 */}
+        <div className="flex items-center gap-1 rounded-full bg-foreground/5 p-0.5">
+          {([
+            ["xiaoxiao", "晓晓♀"],
+            ["yunxi", "云希♂"],
+          ] as const).map(([v, label]) => (
+            <button
+              key={v}
+              type="button"
+              onClick={() => setVoice(v)}
+              className={`rounded-full px-2 py-0.5 transition-colors ${
+                voice === v
+                  ? "bg-brand-500 text-white"
+                  : "text-foreground/55 hover:text-foreground/80"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
         <div className="flex items-center gap-1 rounded-full bg-foreground/5 p-0.5">
           {[0.75, 1, 1.25, 1.5].map((s) => (
             <button

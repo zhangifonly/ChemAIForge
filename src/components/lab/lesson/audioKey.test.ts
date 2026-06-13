@@ -20,7 +20,8 @@ describe("audioKey", () => {
     expect(new Set(texts.map(audioKey)).size).toBe(texts.length);
   });
 
-  it("audioSrc 指向 public 下的 mp3 路径", () => {
-    expect(audioSrc("实验原理")).toBe(`/audio/lesson/${audioKey("实验原理")}.mp3`);
+  it("audioSrc 按音色指向 public 下的 mp3 路径", () => {
+    expect(audioSrc("实验原理")).toBe(`/audio/lesson/xiaoxiao/${audioKey("实验原理")}.mp3`);
+    expect(audioSrc("实验原理", "yunxi")).toBe(`/audio/lesson/yunxi/${audioKey("实验原理")}.mp3`);
   });
 });
