@@ -5,6 +5,7 @@ import { resolveSubstance } from "../reagents";
 import {
   isElectrolysisSetup,
   isGalvanicSetup,
+  usesConductivity,
 } from "../vesselGeom";
 import { buildLesson } from "./buildLesson";
 
@@ -14,7 +15,9 @@ describe("buildLesson 为每个实验生成合理讲解", () => {
     (_slug, exp) => {
       const steps = buildLesson(exp);
       const electrochem =
-        isElectrolysisSetup(exp.apparatus) || isGalvanicSetup(exp.apparatus);
+        isElectrolysisSetup(exp.apparatus) ||
+        isGalvanicSetup(exp.apparatus) ||
+        usesConductivity(exp.apparatus);
 
       // 至少包含 原理 + 准备 + 操作 + 现象 四步
       expect(steps.length).toBeGreaterThanOrEqual(4);

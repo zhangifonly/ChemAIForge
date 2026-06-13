@@ -8,9 +8,11 @@ import {
   isElectrolysisSetup,
   isGalvanicSetup,
   isInertAnode,
+  usesConductivity,
 } from "../vesselGeom";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
+import { conductivity } from "@/lib/chem/conductivity";
 
 // 由探针预期现象生成「现象」步骤的口播
 function describePhenomena(e?: ReactionExpectation): string {
@@ -96,9 +98,33 @@ function galvanicLesson(exp: ExperimentSeed): LessonStep[] | null {
   return steps;
 }
 
+// 导电性对比讲解：强 / 弱电解质灯泡亮度对比
+function conductivityLesson(exp: ExperimentSeed): LessonStep[] | null {
+  if (!usesConductivity(exp.apparatus)) return null;
+  const solutions = exp.reagents
+    .map((r) => resolveSubstance(r))
+    .filter((s) => s.category !== "metal" && s.category !== "other");
+  if (solutions.length === 0) return null;
+  const steps: LessonStep[] = [
+    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "准备", title: "连接装置", narration: "将相同浓度的溶液分别接入带灯泡的电极电路。" },
+    { id: "power", phase: "操作", title: "通电检测", narration: "接通电路，比较各溶液中灯泡的明暗。", action: { kind: "energize" } },
+    {
+      id: "observe",
+      phase: "现象",
+      title: "导电性对比",
+      narration: solutions.map((s) => conductivity(s).note).join(""),
+    },
+  ];
+  const s = summaryStep(exp);
+  if (s) steps.push(s);
+  return steps;
+}
+
 export function buildLesson(exp: ExperimentSeed): LessonStep[] {
   // 电化学实验：生成模式对应的讲解（通电 / 接通电路 + 真实两极现象）
-  const electro = electrolysisLesson(exp) ?? galvanicLesson(exp);
+  const electro =
+    electrolysisLesson(exp) ?? galvanicLesson(exp) ?? conductivityLesson(exp);
   if (electro) return electro;
 
   const steps: LessonStep[] = [];

@@ -106,3 +106,8 @@ export function isInertAnode(apparatus: string[]): boolean {
 export function isGalvanicSetup(apparatus: string[]): boolean {
   return /电流计|盐桥|原电池|导线|培养皿/.test(apparatus.join(" "));
 }
+
+// 是否为导电性对比装置（电导率仪 / 导电性）
+export function usesConductivity(apparatus: string[]): boolean {
+  return /电导率|导电性/.test(apparatus.join(" "));
+}
