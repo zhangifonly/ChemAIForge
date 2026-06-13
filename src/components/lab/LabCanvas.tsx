@@ -14,14 +14,8 @@ import { ElectrolysisCell } from "./ElectrolysisCell";
 import { GalvanicCell } from "./GalvanicCell";
 import { ConductivityTester } from "./ConductivityTester";
 import { ElectroLab } from "./ElectroLab";
-import {
-  chooseVessel,
-  usesGasCollection,
-  isElectrolysisSetup,
-  isInertAnode,
-  isGalvanicSetup,
-  usesConductivity,
-} from "./vesselGeom";
+import { resolveLabMode } from "./labMode";
+import { chooseVessel, usesGasCollection, isInertAnode } from "./vesselGeom";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { conductivity } from "@/lib/chem/conductivity";
@@ -125,8 +119,14 @@ export function LabCanvas({
   const notes = safetyNotes(contents);
   const hint = operationHint(contents, result);
 
+  // 实验台模式（导电性 / 电解 / 原电池 / 混合），决定操作界面形态
+  const mode = resolveLabMode(
+    apparatus,
+    reagents.map((r) => resolveSubstance(r)),
+  );
+
   // 导电性对比模式：电导率仪实验，并排比较强 / 弱电解质灯泡亮度
-  if (usesConductivity(apparatus)) {
+  if (mode === "conductivity") {
     const solutions = reagents
       .map((r) => resolveSubstance(r))
       .filter((s) => s.category !== "metal" && s.category !== "other");
@@ -153,9 +153,8 @@ export function LabCanvas({
   const electrolyte = reagents
     .map((r) => resolveSubstance(r).formula)
     .find(isElectrolyte);
-  const electrolysisMode = isElectrolysisSetup(apparatus) && !!electrolyte;
 
-  if (electrolysisMode && electrolyte) {
+  if (mode === "electrolysis" && electrolyte) {
     const inert = isInertAnode(apparatus);
     const er = electrolyze(electrolyte, { inertAnode: inert });
     const elyteName = resolveSubstance(
@@ -191,7 +190,7 @@ export function LabCanvas({
   const galvanicMetals = reagents
     .map((r) => resolveSubstance(r))
     .filter((s) => isGalvanicMetal(s.formula));
-  if (isGalvanicSetup(apparatus) && galvanicMetals.length >= 1) {
+  if (mode === "galvanic") {
     const acidR = reagents
       .map((r) => resolveSubstance(r))
       .find((s) => s.category === "acid");
