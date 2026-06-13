@@ -32,6 +32,8 @@ interface LabState {
   sessionId: string | null;
   // 会话是否已标记完成
   completed: boolean;
+  // 电化学装置是否通电 / 接通电路（电解、原电池实验用；讲解亦可驱动）
+  energized: boolean;
   // 绑定实验并创建会话（画布挂载时调用，幂等：已有会话则跳过）
   initSession: (experimentId: string) => void;
   // 拖入一种试剂
@@ -40,6 +42,8 @@ interface LabState {
   removeReagent: (formula: string) => void;
   // 调节体系温度（加热 / 冷却）：直接设定温度读数，作为下次反应的基准
   setTemperature: (t: number) => void;
+  // 设置电化学装置通电状态（手动按钮 / 讲解共用）
+  setEnergized: (on: boolean) => void;
   // 触发混合：调用引擎计算并更新结果与读数
   mix: () => void;
   // 清空容器，恢复初始读数
@@ -74,6 +78,9 @@ export const useLabStore = create<LabState>((set, get) => ({
   readings: INITIAL_READINGS,
   sessionId: null,
   completed: false,
+  energized: false,
+
+  setEnergized: (on) => set({ energized: on }),
 
   initSession: (experimentId) => {
     // 已绑定会话则不重复创建
@@ -150,7 +157,7 @@ export const useLabStore = create<LabState>((set, get) => ({
         at: new Date().toISOString(),
       });
     }
-    set({ contents: [], result: null, readings: INITIAL_READINGS });
+    set({ contents: [], result: null, readings: INITIAL_READINGS, energized: false });
   },
 
   complete: () => {

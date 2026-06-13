@@ -79,15 +79,14 @@ export function LabCanvas({
     addReagent,
     removeReagent,
     setTemperature,
+    energized,
+    setEnergized,
     mix,
     reset,
     complete,
   } = useLabStore();
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
-  // 电解实验：是否通电；原电池实验：是否接通电路
-  const [powered, setPowered] = useState(false);
-  const [connected, setConnected] = useState(false);
 
   // 挂载时绑定实验并创建会话（未登录则静默无会话）
   useEffect(() => {
@@ -156,10 +155,10 @@ export function LabCanvas({
             <ElectrolysisCell
               electrolyte={electrolyte}
               inertAnode={inert}
-              powered={powered}
+              powered={energized}
             />
             <p className="text-xs text-foreground/50">
-              {powered ? "电解进行中…" : "点击「通电」开始电解，观察两极现象"}
+              {energized ? "电解进行中…" : "点击「通电」开始电解，观察两极现象"}
             </p>
           </div>
 
@@ -177,19 +176,19 @@ export function LabCanvas({
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
-              onClick={() => setPowered((p) => !p)}
+              onClick={() => setEnergized(!energized)}
               className={`rounded-xl px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all active:scale-[0.98] ${
-                powered
+                energized
                   ? "bg-gradient-to-r from-rose-500 to-rose-600"
                   : "bg-gradient-to-r from-brand-500 to-brand-600 hover:shadow-glow"
               }`}
             >
-              {powered ? "断电" : "⚡ 通电"}
+              {energized ? "断电" : "⚡ 通电"}
             </button>
             <button
               type="button"
               onClick={complete}
-              disabled={completed || !powered}
+              disabled={completed || !energized}
               className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
             >
               {completed ? "实验已完成" : "完成实验"}
@@ -240,10 +239,10 @@ export function LabCanvas({
             <GalvanicCell
               metals={galvanicMetals.map((m) => m.formula)}
               electrolyte={electrolyte}
-              connected={connected}
+              connected={energized}
             />
             <p className="text-xs text-foreground/50">
-              {connected
+              {energized
                 ? "电路接通，电流计偏转，原电池放电中…"
                 : "点击「接通电路」，观察电流计偏转与两极现象"}
             </p>
@@ -260,19 +259,19 @@ export function LabCanvas({
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
-              onClick={() => setConnected((c) => !c)}
+              onClick={() => setEnergized(!energized)}
               className={`rounded-xl px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all active:scale-[0.98] ${
-                connected
+                energized
                   ? "bg-gradient-to-r from-rose-500 to-rose-600"
                   : "bg-gradient-to-r from-brand-500 to-brand-600 hover:shadow-glow"
               }`}
             >
-              {connected ? "断开电路" : "🔌 接通电路"}
+              {energized ? "断开电路" : "🔌 接通电路"}
             </button>
             <button
               type="button"
               onClick={complete}
-              disabled={completed || !connected}
+              disabled={completed || !energized}
               className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
             >
               {completed ? "实验已完成" : "完成实验"}

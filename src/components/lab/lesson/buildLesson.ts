@@ -56,7 +56,7 @@ function electrolysisLesson(exp: ExperimentSeed): LessonStep[] | null {
   const steps: LessonStep[] = [
     { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
     { id: "setup", phase: "准备", title: "连接装置", narration: "将电极插入电解液，分别与直流电源的正、负极相连。" },
-    { id: "power", phase: "操作", title: "接通电源", narration: "接通直流电源，开始电解，注意观察两极变化。" },
+    { id: "power", phase: "操作", title: "接通电源", narration: "接通直流电源，开始电解，注意观察两极变化。", action: { kind: "energize" } },
     {
       id: "observe",
       phase: "现象",
@@ -83,7 +83,7 @@ function galvanicLesson(exp: ExperimentSeed): LessonStep[] | null {
   const steps: LessonStep[] = [
     { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
     { id: "setup", phase: "准备", title: "连接电路", narration: "用导线将两电极经电流计相连，插入电解质溶液。" },
-    { id: "connect", phase: "操作", title: "接通电路", narration: "接通电路，观察电流计指针是否偏转。" },
+    { id: "connect", phase: "操作", title: "接通电路", narration: "接通电路，观察电流计指针是否偏转。", action: { kind: "energize" } },
     {
       id: "observe",
       phase: "现象",

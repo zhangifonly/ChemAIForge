@@ -23,7 +23,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
     return seed ? buildLesson(seed) : [];
   }, [experimentSlug]);
 
-  const { reset, addReagent, mix } = useLabStore();
+  const { reset, addReagent, mix, setEnergized } = useLabStore();
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   // 是否已介入实验台（介入后才重放动作，避免打断用户自由操作）
@@ -41,8 +41,9 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       if (!a) continue;
       if (a.kind === "add") addReagent(resolveSubstance(a.reagent));
       else if (a.kind === "mix") mix();
+      else if (a.kind === "energize") setEnergized(true);
     }
-  }, [index, engaged, steps, reset, addReagent, mix]);
+  }, [index, engaged, steps, reset, addReagent, mix, setEnergized]);
 
   // 自动播放 + 语音讲解：朗读当前步口播，读完即推进；无语音时按固定节奏推进。
   useEffect(() => {
