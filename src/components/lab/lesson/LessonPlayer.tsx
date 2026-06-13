@@ -8,6 +8,7 @@ import { useTutorBus } from "@/components/ai/tutorBus";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { buildLesson } from "./buildLesson";
+import { audioSrc } from "./audioKey";
 
 const PHASE_STYLE: Record<string, string> = {
   原理: "bg-brand-500/12 text-brand-600 dark:text-brand-300",
@@ -45,10 +46,10 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
     }
   }, [index, engaged, steps, reset, addReagent, mix, setEnergized]);
 
-  // 自动播放 + 语音讲解：朗读当前步口播，读完即推进；无语音时按固定节奏推进。
+  // 自动播放 + 语音讲解：优先播放预生成的高音质 mp3（edge-tts 晓晓），
+  // mp3 缺失 / 加载失败时回退浏览器 speechSynthesis；都不可用则按字数计时推进。
   useEffect(() => {
     if (!playing) return;
-    const last = index >= steps.length - 1;
     const advance = () =>
       setIndex((i) => {
         if (i >= steps.length - 1) {
@@ -58,34 +59,66 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
         return i + 1;
       });
 
-    const synth =
-      typeof window !== "undefined" ? window.speechSynthesis : null;
     const text = steps[index]?.narration ?? "";
+    if (muted || !text) {
+      if (index >= steps.length - 1) {
+        setPlaying(false);
+        return;
+      }
+      const t = window.setTimeout(advance, 4200);
+      return () => clearTimeout(t);
+    }
 
-    if (synth && !muted && text) {
+    let cancelled = false;
+    let cleanup = () => {};
+
+    // 回退：浏览器语音合成（音质较差，仅当 mp3 不可用时）
+    const speakFallback = () => {
+      const synth = typeof window !== "undefined" ? window.speechSynthesis : null;
+      if (!synth) {
+        const t = window.setTimeout(advance, Math.max(4000, text.length * 240));
+        cleanup = () => clearTimeout(t);
+        return;
+      }
       synth.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang = "zh-CN";
       u.rate = rate;
       u.onend = advance;
       synth.speak(u);
-      // 兜底：若 onend 异常未触发，按字数估算时长后推进
-      const fallback = window.setTimeout(
-        advance,
-        Math.max(4000, (text.length / rate) * 260),
-      );
-      return () => {
+      const fb = window.setTimeout(advance, Math.max(4000, (text.length / rate) * 260));
+      cleanup = () => {
         synth.cancel();
-        clearTimeout(fallback);
+        clearTimeout(fb);
       };
-    }
+    };
 
-    if (last) {
-      setPlaying(false);
-      return;
-    }
-    const t = window.setTimeout(advance, 4200);
-    return () => clearTimeout(t);
+    // 优先：预生成 mp3
+    const audio = new Audio(audioSrc(text));
+    audio.playbackRate = rate;
+    audio.onended = advance;
+    audio.onerror = () => {
+      if (!cancelled) speakFallback();
+    };
+    audio
+      .play()
+      .then(() => {
+        cleanup = () => {
+          audio.pause();
+          audio.src = "";
+        };
+      })
+      .catch(() => {
+        if (!cancelled) speakFallback();
+      });
+
+    return () => {
+      cancelled = true;
+      audio.onended = null;
+      audio.onerror = null;
+      audio.pause();
+      cleanup();
+    };
   }, [playing, index, muted, rate, steps]);
 
   // 卸载时停止朗读
