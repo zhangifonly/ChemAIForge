@@ -11,13 +11,16 @@ import { resolveSubstance } from "./reagents";
 import { Glassware } from "./Glassware";
 import { GasCollection } from "./GasCollection";
 import { ElectrolysisCell } from "./ElectrolysisCell";
+import { GalvanicCell } from "./GalvanicCell";
 import {
   chooseVessel,
   usesGasCollection,
   isElectrolysisSetup,
   isInertAnode,
+  isGalvanicSetup,
 } from "./vesselGeom";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
+import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { ControlPanel } from "./ControlPanel";
 import { safetyNotes, operationHint } from "./safety";
 
@@ -82,8 +85,9 @@ export function LabCanvas({
   } = useLabStore();
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
-  // 电解实验：是否通电
+  // 电解实验：是否通电；原电池实验：是否接通电路
   const [powered, setPowered] = useState(false);
+  const [connected, setConnected] = useState(false);
 
   // 挂载时绑定实验并创建会话（未登录则静默无会话）
   useEffect(() => {
@@ -186,6 +190,89 @@ export function LabCanvas({
               type="button"
               onClick={complete}
               disabled={completed || !powered}
+              className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+            >
+              {completed ? "实验已完成" : "完成实验"}
+            </button>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // 原电池 / 电化学腐蚀模式：两金属 + 电解液，「连接电路」自发放电
+  const galvanicMetals = reagents
+    .map((r) => resolveSubstance(r))
+    .filter((s) => isGalvanicMetal(s.formula));
+  if (isGalvanicSetup(apparatus) && galvanicMetals.length >= 1) {
+    const acidR = reagents
+      .map((r) => resolveSubstance(r))
+      .find((s) => s.category === "acid");
+    const saltR = reagents
+      .map((r) => resolveSubstance(r))
+      .find((s) => /食盐|盐水/.test(s.name) || s.formula === "NaCl");
+    const electrolyte = acidR ?? saltR ?? { formula: "NaCl", name: "食盐水" };
+    const gr = galvanicCell(
+      galvanicMetals.map((m) => m.formula),
+      electrolyte,
+    );
+    return (
+      <div className="grid gap-6 md:grid-cols-[240px_1fr]">
+        <aside className="flex flex-col gap-3">
+          <h2 className="text-sm font-semibold text-foreground/70">仪器</h2>
+          <ul className="flex flex-wrap gap-2">
+            {apparatus.map((label) => (
+              <li
+                key={label}
+                className="rounded-full border border-foreground/15 bg-surface/50 px-2.5 py-1 text-xs text-foreground/70"
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-xs text-foreground/45">
+            电解质：{electrolyte.name}
+          </p>
+        </aside>
+
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col items-center gap-3 rounded-2xl border border-foreground/12 bg-gradient-to-b from-surface/30 to-brand-500/[0.04] p-6">
+            <GalvanicCell
+              metals={galvanicMetals.map((m) => m.formula)}
+              electrolyte={electrolyte}
+              connected={connected}
+            />
+            <p className="text-xs text-foreground/50">
+              {connected
+                ? "电路接通，电流计偏转，原电池放电中…"
+                : "点击「接通电路」，观察电流计偏转与两极现象"}
+            </p>
+          </div>
+
+          {gr && (
+            <div className="flex flex-col gap-1.5 rounded-lg bg-foreground/[0.04] px-4 py-3 text-sm">
+              <span className="text-foreground/65">负极（−）：{gr.negative.observation}</span>
+              <span className="text-foreground/65">正极（＋）：{gr.positive.observation}</span>
+              <span className="text-foreground/65">{gr.electronFlow}；{gr.current}</span>
+            </div>
+          )}
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={() => setConnected((c) => !c)}
+              className={`rounded-xl px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all active:scale-[0.98] ${
+                connected
+                  ? "bg-gradient-to-r from-rose-500 to-rose-600"
+                  : "bg-gradient-to-r from-brand-500 to-brand-600 hover:shadow-glow"
+              }`}
+            >
+              {connected ? "断开电路" : "🔌 接通电路"}
+            </button>
+            <button
+              type="button"
+              onClick={complete}
+              disabled={completed || !connected}
               className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
             >
               {completed ? "实验已完成" : "完成实验"}

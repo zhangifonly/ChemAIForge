@@ -101,3 +101,8 @@ export function isElectrolysisSetup(apparatus: string[]): boolean {
 export function isInertAnode(apparatus: string[]): boolean {
   return !/铜电极|银电极|金属电极|活性电极/.test(apparatus.join(" "));
 }
+
+// 是否为原电池 / 电化学腐蚀装置（电流计/盐桥/原电池/导线/培养皿；电解已优先判定）
+export function isGalvanicSetup(apparatus: string[]): boolean {
+  return /电流计|盐桥|原电池|导线|培养皿/.test(apparatus.join(" "));
+}
