@@ -8,6 +8,7 @@ import { useLabStore } from "@/components/lab/labStore";
 import { useTutorBus } from "./tutorBus";
 import { useTutorStream, type ChatMessage } from "./useTutorStream";
 import { buildLabState, contextualPrompt } from "./labContext";
+import { TutorMarkdown } from "./TutorMarkdown";
 
 export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -122,19 +123,27 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
   );
 }
 
-// 单条对话气泡：用户右对齐、助手左对齐；空助手内容显示打字光标
+// 单条对话气泡：用户右对齐（纯文本）、助手左对齐（Markdown 富文本渲染）；
+// 空助手内容显示打字光标。
 function Bubble({ role, content }: ChatMessage) {
   const isUser = role === "user";
+  if (isUser) {
+    return (
+      <div className="flex justify-end">
+        <div className="max-w-[85%] whitespace-pre-wrap rounded-2xl bg-gradient-to-r from-brand-500 to-brand-600 px-3.5 py-2 text-sm text-white shadow-soft">
+          {content}
+        </div>
+      </div>
+    );
+  }
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
-      <div
-        className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2 text-sm shadow-soft ${
-          isUser
-            ? "bg-gradient-to-r from-brand-500 to-brand-600 text-white"
-            : "border border-foreground/10 bg-surface/80 text-foreground"
-        }`}
-      >
-        {content || <span className="animate-pulse">▍</span>}
+    <div className="flex justify-start">
+      <div className="max-w-[88%] rounded-2xl border border-foreground/10 bg-surface/80 px-3.5 py-2 text-sm text-foreground shadow-soft">
+        {content ? (
+          <TutorMarkdown content={content} />
+        ) : (
+          <span className="animate-pulse">▍</span>
+        )}
       </div>
     </div>
   );
