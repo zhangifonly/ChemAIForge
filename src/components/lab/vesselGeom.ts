@@ -87,9 +87,21 @@ export function chooseVessel(apparatus: string[]): VesselKind {
   return "beaker";
 }
 
-// 实验是否配有排水法集气装置（集气瓶/导管/水槽/排水）
+// 实验是否配有排水法集气装置（须有集气瓶/水槽/排水等明确特征；
+// 不能仅凭"导管"判定——很多导气→吸收/检验装置也有导管，那属于 usesGasDelivery）
 export function usesGasCollection(apparatus: string[]): boolean {
-  return /集气瓶|导管|水槽|排水/.test(apparatus.join(" "));
+  return /集气瓶|水槽|排水/.test(apparatus.join(" "));
+}
+
+// 是否为"导气 → 液体吸收 / 检验"装置：主容器加热/反应产气，经导管通入另一容器的
+// 吸收液（饱和碳酸钠、石灰水/氢氧化钙、溴水、硝酸银溶液等）。导管口在液面上方防倒吸。
+// 条件：有导管，且试剂/仪器中出现已知吸收液，且不是排水集气。
+const ABSORBENT = /饱和碳酸钠|碳酸钠溶液|石灰水|氢氧化钙|溴水|硝酸银|高锰酸钾溶液|品红/;
+export function usesGasDelivery(apparatus: string[], reagents: string[]): boolean {
+  const ap = apparatus.join(" ");
+  if (!/导管/.test(ap)) return false;
+  if (usesGasCollection(apparatus)) return false;
+  return ABSORBENT.test(ap) || ABSORBENT.test(reagents.join(" "));
 }
 
 // 是否为真·电解实验（外加直流电源 / 电解槽；区别于原电池、腐蚀）

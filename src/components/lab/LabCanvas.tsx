@@ -10,12 +10,18 @@ import { useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
 import { Glassware } from "./Glassware";
 import { GasCollection } from "./GasCollection";
+import { GasDelivery } from "./GasDelivery";
 import { ElectrolysisCell } from "./ElectrolysisCell";
 import { GalvanicCell } from "./GalvanicCell";
 import { ConductivityTester } from "./ConductivityTester";
 import { ElectroLab } from "./ElectroLab";
 import { resolveLabMode } from "./labMode";
-import { chooseVessel, usesGasCollection, isInertAnode } from "./vesselGeom";
+import {
+  chooseVessel,
+  usesGasCollection,
+  usesGasDelivery,
+  isInertAnode,
+} from "./vesselGeom";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { conductivity } from "@/lib/chem/conductivity";
@@ -114,6 +120,13 @@ export function LabCanvas({
   // 产气类实验：显示排水法集气装置，反应产气时联动收集
   const gasSetup = usesGasCollection(apparatus);
   const collecting = Boolean(result?.reacted && result.producesGas);
+  // 导气→吸收/检验类：主容器产气经导管通入接收瓶吸收液
+  const deliverySetup = usesGasDelivery(apparatus, reagents);
+  // 接收瓶吸收液名称（从仪器/试剂里识别）
+  const absorbentLabel =
+    [...apparatus, ...reagents].find((s) =>
+      /饱和碳酸钠|碳酸钠溶液|石灰水|氢氧化钙|溴水|硝酸银|高锰酸钾溶液|品红/.test(s),
+    ) ?? "吸收液";
 
   // 安全提醒与操作提示（教学反馈）
   const notes = safetyNotes(contents);
@@ -299,14 +312,23 @@ export function LabCanvas({
           {/* 实验台台面投影 */}
           <div className="pointer-events-none absolute bottom-9 h-4 w-44 rounded-[100%] bg-foreground/10 blur-md" />
           <div className="flex items-end justify-center gap-1">
-            <Glassware
-              kind={vessel}
-              result={result}
-              fill={fill}
-              tint={tint}
-              hot={readings.temperature >= 55}
-            />
+            {!deliverySetup && (
+              <Glassware
+                kind={vessel}
+                result={result}
+                fill={fill}
+                tint={tint}
+                hot={readings.temperature >= 55}
+              />
+            )}
             {gasSetup && <GasCollection collecting={collecting} />}
+            {deliverySetup && (
+              <GasDelivery
+                delivering={collecting}
+                hot={readings.temperature >= 55}
+                absorbentLabel={absorbentLabel}
+              />
+            )}
           </div>
 
           {/* 容器内试剂标签（可移除） */}
