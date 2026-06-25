@@ -85,20 +85,22 @@ export default function Lab3DCanvas({
       </aside>
 
       {/* 3D 画布 */}
-      <div className="relative h-[520px] overflow-hidden rounded-2xl bg-gradient-to-b from-[#1a2b38] via-[#223a48] to-[#33505f]">
+      <div className="relative h-[520px] overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6]">
         <Canvas
           shadows
-          camera={{ position: [3.2, 2.4, 4.6], fov: 38 }}
+          camera={{ position: [2.8, 2.0, 4.4], fov: 40 }}
           dpr={[1, 2]}
           gl={{ antialias: true, alpha: false }}
         >
-          <color attach="background" args={["#1c2e3a"]} />
-          <ambientLight intensity={0.75} />
+          <color attach="background" args={["#d3dce4"]} />
+          <ambientLight intensity={0.85} />
           <directionalLight
-            position={[4, 6, 3]}
-            intensity={1.8}
+            position={[4, 7, 4]}
+            intensity={2}
             castShadow
-            shadow-mapSize={[1024, 1024]}
+            shadow-mapSize={[2048, 2048]}
+            shadow-camera-near={0.5}
+            shadow-camera-far={20}
           />
           <Suspense fallback={null}>
             {Scene ? (
@@ -110,20 +112,20 @@ export default function Lab3DCanvas({
               <Lightformer intensity={1.2} position={[-3, 1, 1]} scale={[3, 3, 1]} color="#bcd8ff" />
               <Lightformer intensity={1} position={[3, 1, -1]} scale={[3, 3, 1]} color="#ffe6c4" />
             </Environment>
-            <ContactShadows position={[0, -1.25, 0]} opacity={0.5} scale={6} blur={2.4} far={3} />
+            <ContactShadows position={[0, -0.94, 0]} opacity={0.35} scale={10} blur={2.6} far={4} />
             <EffectComposer>
-              <Bloom luminanceThreshold={0.7} intensity={0.5} mipmapBlur radius={0.6} />
+              <Bloom luminanceThreshold={0.8} intensity={0.35} mipmapBlur radius={0.5} />
             </EffectComposer>
           </Suspense>
           <OrbitControls
             enablePan={false}
             autoRotate
             autoRotateSpeed={0.5}
-            target={[0, 0.3, 0]}
+            target={[0, 0.2, 0]}
             minDistance={3.5}
-            maxDistance={8}
-            minPolarAngle={Math.PI / 5}
-            maxPolarAngle={Math.PI / 2.1}
+            maxDistance={9}
+            minPolarAngle={Math.PI / 6}
+            maxPolarAngle={Math.PI / 2.2}
           />
         </Canvas>
         <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/30 px-3 py-1 text-xs text-white/70 backdrop-blur">
