@@ -77,7 +77,7 @@ export const acidBaseExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "导管", "集气瓶"],
     objectives: ["掌握 CO₂ 检验", "理解碱与酸性氧化物反应", "观察沉淀生成"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["氢氧化钙", "二氧化碳"], expect: { reacted: false } },
+    probe: { reagentKeys: ["氢氧化钙", "二氧化碳"], expect: { reacted: true, precipitate: true } },
   },
   {
     slug: "carbonate-acid-identify",

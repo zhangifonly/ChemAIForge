@@ -71,3 +71,29 @@ describe("react - 活泼金属与水（价态正确）", () => {
     expect(r.equation).toContain("Ca + 2H₂O → Ca(OH)₂ + H₂↑");
   });
 });
+
+describe("react - 酸性氧化物与碱", () => {
+  const CaOH2: Substance = { formula: "Ca(OH)2", name: "氢氧化钙", category: "base" };
+  const NaOHb: Substance = { formula: "NaOH", name: "氢氧化钠", category: "base" };
+  const CO2: Substance = { formula: "CO2", name: "二氧化碳", category: "gas" };
+  const SO2: Substance = { formula: "SO2", name: "二氧化硫", category: "reducer" };
+
+  it("CO₂ + 石灰水 → CaCO₃↓（变浑浊，CO₂ 检验）", () => {
+    const r = react([CO2, CaOH2]);
+    expect(r.reacted).toBe(true);
+    expect(r.producesPrecipitate).toBe(true);
+    expect(r.equation).toContain("CaCO₃↓");
+  });
+
+  it("SO₂ + 石灰水 → CaSO₃↓（变浑浊）", () => {
+    const r = react([SO2, CaOH2]);
+    expect(r.reacted).toBe(true);
+    expect(r.producesPrecipitate).toBe(true);
+  });
+
+  it("CO₂ + 可溶强碱 NaOH → 被吸收（无沉淀）", () => {
+    const r = react([CO2, NaOHb]);
+    expect(r.reacted).toBe(true);
+    expect(r.producesPrecipitate).toBe(false);
+  });
+});

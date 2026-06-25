@@ -105,4 +105,53 @@ export const gasRules: Reaction[] = [
       description: "硫化物与酸反应放出有臭鸡蛋气味的硫化氢气体。",
     }),
   },
+  {
+    id: "acidic-oxide-base",
+    name: "酸性氧化物与碱反应",
+    // CO₂ / SO₂ 等酸性氧化物通入碱液：与石灰水生成沉淀（变浑浊），与可溶强碱被吸收。
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["CO2", "SO2"]) && hasCategory(inputs, "base"),
+    build: (inputs) => {
+      const oxide = inputs.find((s) => ["CO2", "SO2"].includes(s.formula))!;
+      const lime = hasAnyFormula(inputs, ["Ca(OH)2", "Ba(OH)2"]);
+      const isCO2 = oxide.formula === "CO2";
+      // 石灰水 / 钡碱：生成难溶的碳酸钙(钡) / 亚硫酸钙(钡) → 变浑浊
+      if (lime) {
+        const base = inputs.find((s) =>
+          ["Ca(OH)2", "Ba(OH)2"].includes(s.formula),
+        )!;
+        const metal = base.formula.startsWith("Ca") ? "Ca" : "Ba";
+        const salt = isCO2 ? `${metal}CO₃` : `${metal}SO₃`;
+        return {
+          products: [
+            { formula: salt, name: isCO2 ? "碳酸盐沉淀" : "亚硫酸盐沉淀", category: "salt" },
+            { formula: "H2O", name: "水", category: "water" },
+          ],
+          producesGas: false,
+          producesPrecipitate: true,
+          colorChange: false,
+          thermal: "none",
+          phTrend: "decrease",
+          equation: `${oxide.formula} + ${base.formula} → ${salt}↓ + H₂O`,
+          description: isCO2
+            ? "二氧化碳通入澄清石灰水生成白色碳酸钙沉淀，石灰水变浑浊（CO₂ 的检验）。"
+            : "二氧化硫通入石灰水 / 钡碱生成白色亚硫酸盐沉淀，溶液变浑浊。",
+        };
+      }
+      // 可溶强碱（NaOH/KOH）：酸性氧化物被吸收生成盐和水，无明显沉淀
+      return {
+        products: [
+          { formula: isCO2 ? "CO₃²⁻盐" : "SO₃²⁻盐", name: "盐", category: "salt" },
+          { formula: "H2O", name: "水", category: "water" },
+        ],
+        producesGas: false,
+        producesPrecipitate: false,
+        colorChange: false,
+        thermal: "none",
+        phTrend: "decrease",
+        equation: `${oxide.formula} + 2NaOH → 盐 + H₂O`,
+        description: "酸性氧化物被可溶强碱吸收，生成相应的盐和水。",
+      };
+    },
+  },
 ];
