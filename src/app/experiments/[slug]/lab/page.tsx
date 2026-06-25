@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getExperimentBySlug } from "@/server/experiments/service";
-import { LabCanvas } from "@/components/lab/LabCanvas";
+import { LabWorkbench } from "@/components/lab/LabWorkbench";
 import { LessonPlayer } from "@/components/lab/lesson/LessonPlayer";
 import { TutorChat } from "@/components/ai/TutorChat";
 
@@ -38,8 +38,9 @@ export default async function ExperimentLabPage({
       {/* 左：实验画布；右：AI 导师对话侧边栏 */}
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         <div className="rounded-2xl border border-foreground/10 bg-surface/60 p-5 shadow-soft backdrop-blur">
-          <LabCanvas
+          <LabWorkbench
             experimentId={experiment.id}
+            slug={experiment.slug}
             reagents={experiment.reagents}
             apparatus={experiment.apparatus}
           />
