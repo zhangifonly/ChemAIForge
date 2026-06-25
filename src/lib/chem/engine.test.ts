@@ -46,3 +46,28 @@ describe("react - 无反应", () => {
     expect(react([NaCl, H2O]).reacted).toBe(false);
   });
 });
+
+describe("react - 活泼金属与水（价态正确）", () => {
+  const Na: Substance = { formula: "Na", name: "钠", category: "metal" };
+  const K: Substance = { formula: "K", name: "钾", category: "metal" };
+  const Ca: Substance = { formula: "Ca", name: "钙", category: "metal" };
+
+  it("钠 + 水 → NaOH（+1 价）放出氢气", () => {
+    const r = react([Na, H2O]);
+    expect(r.reacted).toBe(true);
+    expect(r.producesGas).toBe(true);
+    expect(r.products.some((p) => p.formula === "NaOH")).toBe(true);
+    expect(r.equation).toContain("2Na + 2H₂O → 2NaOH");
+  });
+
+  it("钾 + 水 → KOH（+1 价）", () => {
+    expect(react([K, H2O]).products.some((p) => p.formula === "KOH")).toBe(true);
+  });
+
+  it("钙 + 水 → Ca(OH)₂（+2 价，非 CaOH）配平正确", () => {
+    const r = react([Ca, H2O]);
+    expect(r.products.some((p) => p.formula === "Ca(OH)₂")).toBe(true);
+    expect(r.products.some((p) => p.formula === "CaOH")).toBe(false);
+    expect(r.equation).toContain("Ca + 2H₂O → Ca(OH)₂ + H₂↑");
+  });
+});

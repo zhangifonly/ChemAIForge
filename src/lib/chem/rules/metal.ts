@@ -29,9 +29,17 @@ export const metalRules: Reaction[] = [
       hasAnyFormula(inputs, ["Na", "K", "Ca"]) && hasCategory(inputs, "water"),
     build: (inputs) => {
       const metal = inputs.find((s) => ["Na", "K", "Ca"].includes(s.formula))!;
+      // 按金属价态生成对应碱与配平：Na/K 为 +1 价，Ca 为 +2 价
+      const isDivalent = metal.formula === "Ca";
+      const hydroxide = isDivalent
+        ? `${metal.formula}(OH)₂`
+        : `${metal.formula}OH`;
+      const equation = isDivalent
+        ? `${metal.formula} + 2H₂O → ${metal.formula}(OH)₂ + H₂↑`
+        : `2${metal.formula} + 2H₂O → 2${metal.formula}OH + H₂↑`;
       return {
         products: [
-          { formula: `${metal.formula}OH`, name: "可溶性碱", category: "base" },
+          { formula: hydroxide, name: "可溶性碱", category: "base" },
           { formula: "H2", name: "氢气", category: "gas" },
         ],
         producesGas: true,
@@ -39,7 +47,7 @@ export const metalRules: Reaction[] = [
         colorChange: false,
         thermal: "exothermic",
         phTrend: "increase",
-        equation: `2${metal.formula} + 2H₂O → 2${metal.formula}OH + H₂↑`,
+        equation,
         description: "活泼金属与水剧烈反应，放出氢气并生成对应的可溶性强碱。",
       };
     },
