@@ -2,7 +2,7 @@
 // 导气→吸收/检验类正确识别（修复乙酸乙酯等装置）。
 import { describe, it, expect } from "vitest";
 import { allExperiments } from "@/data/experiments";
-import { usesGasCollection, usesGasDelivery } from "./vesselGeom";
+import { usesGasCollection, usesGasDelivery, usesFlameTest } from "./vesselGeom";
 
 const exp = (slug: string) => allExperiments.find((e) => e.slug === slug)!;
 
@@ -45,5 +45,19 @@ describe("导气 / 集气装置判定", () => {
       const d = usesGasDelivery(e.apparatus, e.reagents);
       expect(c && d).toBe(false);
     }
+  });
+});
+
+describe("焰色反应装置判定", () => {
+  it("焰色反应 → 焰色装置（非集气/导气）", () => {
+    const e = exp("flame-test");
+    expect(usesFlameTest(e.apparatus)).toBe(true);
+    expect(usesGasCollection(e.apparatus)).toBe(false);
+    expect(usesGasDelivery(e.apparatus, e.reagents)).toBe(false);
+  });
+
+  it("仅 flame-test 用铂丝焰色装置", () => {
+    const flame = allExperiments.filter((e) => usesFlameTest(e.apparatus));
+    expect(flame.map((e) => e.slug)).toEqual(["flame-test"]);
   });
 });

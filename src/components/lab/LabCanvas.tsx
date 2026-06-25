@@ -11,6 +11,7 @@ import { resolveSubstance } from "./reagents";
 import { Glassware } from "./Glassware";
 import { GasCollection } from "./GasCollection";
 import { GasDelivery } from "./GasDelivery";
+import { FlameTest } from "./FlameTest";
 import { ElectrolysisCell } from "./ElectrolysisCell";
 import { GalvanicCell } from "./GalvanicCell";
 import { ConductivityTester } from "./ConductivityTester";
@@ -20,6 +21,7 @@ import {
   chooseVessel,
   usesGasCollection,
   usesGasDelivery,
+  usesFlameTest,
   isInertAnode,
 } from "./vesselGeom";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
@@ -122,6 +124,12 @@ export function LabCanvas({
   const collecting = Boolean(result?.reacted && result.producesGas);
   // 导气→吸收/检验类：主容器产气经导管通入接收瓶吸收液
   const deliverySetup = usesGasDelivery(apparatus, reagents);
+  // 焰色反应：铂丝蘸金属盐灼烧，火焰随所选金属离子变色
+  const flameSetup = usesFlameTest(apparatus);
+  // 焰色样品：取容器内首个含焰色金属的试剂（formula 优先，回退名称）
+  const flameSample = contents[0]
+    ? contents[0].formula + contents[0].name
+    : undefined;
   // 接收瓶吸收液名称（从仪器/试剂里识别）
   const absorbentLabel =
     [...apparatus, ...reagents].find((s) =>
@@ -312,7 +320,7 @@ export function LabCanvas({
           {/* 实验台台面投影 */}
           <div className="pointer-events-none absolute bottom-9 h-4 w-44 rounded-[100%] bg-foreground/10 blur-md" />
           <div className="flex items-end justify-center gap-1">
-            {!deliverySetup && (
+            {!deliverySetup && !flameSetup && (
               <Glassware
                 kind={vessel}
                 result={result}
@@ -321,6 +329,7 @@ export function LabCanvas({
                 hot={readings.temperature >= 55}
               />
             )}
+            {flameSetup && <FlameTest sample={flameSample} />}
             {gasSetup && <GasCollection collecting={collecting} />}
             {deliverySetup && (
               <GasDelivery
