@@ -111,6 +111,8 @@ REAGENT_RULES.push(
   { keywords: ["磷酸"], formula: "H3PO4", category: "acid" },
   { keywords: ["碳酸"], formula: "H2CO3", category: "acid" },
   // —— 气体 / 水（兜底）——
+  // 肥皂水：检验硬水的辅助试剂，须先于"水"匹配（否则"肥皂水"含"水"被当成 H₂O）
+  { keywords: ["肥皂水", "肥皂"], formula: "soap-solution", category: "other" },
   { keywords: ["二氧化碳"], formula: "CO2", category: "gas" },
   { keywords: ["氧气"], formula: "O2", category: "gas" },
   { keywords: ["氢气"], formula: "H2", category: "gas" },
