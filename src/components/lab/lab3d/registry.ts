@@ -3,6 +3,7 @@
 
 export const EXPERIMENTS_WITH_3D = new Set<string>([
   "iron-copper-sulfate", // 铁置换硫酸铜：铁钉表面析红铜、蓝液变浅
+  "h2-from-zinc", // 锌与稀硫酸制氢：锌粒冒氢气泡上升
 ]);
 
 export function has3D(slug: string): boolean {

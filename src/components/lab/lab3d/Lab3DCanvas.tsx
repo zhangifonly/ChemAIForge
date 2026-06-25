@@ -9,16 +9,7 @@ import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { IronCopperScene } from "./IronCopperScene";
-
-// 场景渲染器：接收派生状态 props（在 Canvas 外计算，规避 R3F 跨 reconciler 订阅失效）
-interface SceneProps {
-  hasFe: boolean;
-  hasLiquid: boolean;
-  reacted: boolean;
-}
-const SCENES: Record<string, (p: SceneProps) => JSX.Element> = {
-  "iron-copper-sulfate": IronCopperScene,
-};
+import { ZincAcidScene } from "./ZincAcidScene";
 
 export default function Lab3DCanvas({
   slug,
@@ -28,12 +19,32 @@ export default function Lab3DCanvas({
   reagents: string[];
 }) {
   const { contents, result, addReagent, mix, reset } = useLabStore();
-  const Scene = SCENES[slug];
-  // 在 Canvas 外计算派生状态，传入场景
-  const hasFe = contents.some((c) => c.formula === "Fe");
-  const hasCuSO4 = contents.some((c) => c.formula === "CuSO4");
-  const reacted = Boolean(result?.reacted && hasFe && hasCuSO4);
-  const hasLiquid = hasCuSO4 || contents.length > 0;
+  const has = (f: string) => contents.some((c) => c.formula === f);
+  const reactedNow = Boolean(result?.reacted);
+
+  // 各实验在 Canvas 外计算派生状态后构造场景（规避 R3F 跨 reconciler 订阅失效）
+  function renderScene() {
+    switch (slug) {
+      case "iron-copper-sulfate":
+        return (
+          <IronCopperScene
+            hasFe={has("Fe")}
+            hasLiquid={has("CuSO4") || contents.length > 0}
+            reacted={reactedNow && has("Fe") && has("CuSO4")}
+          />
+        );
+      case "h2-from-zinc":
+        return (
+          <ZincAcidScene
+            hasMetal={has("Zn")}
+            hasLiquid={has("H2SO4") || contents.length > 0}
+            reacted={reactedNow && has("Zn") && has("H2SO4")}
+          />
+        );
+      default:
+        return null;
+    }
+  }
 
   return (
     <div className="grid gap-4 md:grid-cols-[180px_1fr]">
@@ -103,9 +114,7 @@ export default function Lab3DCanvas({
             shadow-camera-far={20}
           />
           <Suspense fallback={null}>
-            {Scene ? (
-              <Scene hasFe={hasFe} hasLiquid={hasLiquid} reacted={reacted} />
-            ) : null}
+            {renderScene()}
             {/* 程序化环境光：自发光面光源构成反射环境，无需外网 HDR */}
             <Environment resolution={256}>
               <Lightformer intensity={2} position={[0, 3, 2]} scale={[4, 4, 1]} color="#ffffff" />
