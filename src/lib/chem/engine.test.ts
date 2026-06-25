@@ -97,3 +97,29 @@ describe("react - 酸性氧化物与碱", () => {
     expect(r.producesPrecipitate).toBe(false);
   });
 });
+
+describe("react - 指示剂变色（扩展）", () => {
+  const litmus: Substance = { formula: "litmus", name: "石蕊", category: "indicator" };
+  const phph: Substance = { formula: "phenolphthalein", name: "酚酞", category: "indicator" };
+  const CO2: Substance = { formula: "CO2", name: "二氧化碳", category: "gas" };
+  const Cl2: Substance = { formula: "Cl2", name: "氯水", category: "oxidizer" };
+  const Na: Substance = { formula: "Na", name: "钠", category: "metal" };
+
+  it("CO₂ + 石蕊 → 碳酸显酸性使石蕊变色", () => {
+    expect(react([CO2, litmus, H2O]).colorChange).toBe(true);
+  });
+
+  it("氯水 + 石蕊 → 变色（含漂白说明）", () => {
+    const r = react([Cl2, litmus]);
+    expect(r.colorChange).toBe(true);
+    expect(r.description).toContain("漂白");
+  });
+
+  it("钠 + 水 + 酚酞 → 生成碱使酚酞变红", () => {
+    expect(react([Na, H2O, phph]).colorChange).toBe(true);
+  });
+
+  it("钠 + 水（无指示剂）→ 不显色", () => {
+    expect(react([Na, H2O]).colorChange).toBe(false);
+  });
+});

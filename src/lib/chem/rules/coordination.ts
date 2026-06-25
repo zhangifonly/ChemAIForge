@@ -60,22 +60,29 @@ export const coordinationRules: Reaction[] = [
   {
     id: "indicator-acid-base",
     name: "指示剂酸碱变色",
+    // 指示剂遇酸/碱，或遇溶于水显酸性的气体(CO₂/SO₂)、氯水(含 HClO)时变色
     match: (inputs) =>
       hasCategory(inputs, "indicator") &&
-      (hasCategory(inputs, "acid") || hasCategory(inputs, "base")),
+      (hasCategory(inputs, "acid") ||
+        hasCategory(inputs, "base") ||
+        hasAnyFormula(inputs, ["CO2", "SO2", "Cl2"])),
     build: (inputs) => {
-      const acidic = hasCategory(inputs, "acid");
+      const basic = hasCategory(inputs, "base");
+      const acidic = !basic; // 酸 / 酸性氧化物 / 氯水 均显酸性
+      const bleach = hasAnyFormula(inputs, ["Cl2"]);
       return {
         products: inputs,
         producesGas: false,
         producesPrecipitate: false,
         colorChange: true,
         thermal: "none",
-        phTrend: acidic ? "decrease" : "increase",
+        phTrend: basic ? "increase" : "decrease",
         equation: "指示剂 + 酸/碱 → 变色",
-        description: acidic
-          ? "指示剂在酸性环境中显特征颜色（如石蕊变红、酚酞无色）。"
-          : "指示剂在碱性环境中显特征颜色（如石蕊变蓝、酚酞变红）。",
+        description: bleach
+          ? "氯水中的次氯酸先使石蕊变红，随后将其氧化褪色（漂白性）。"
+          : acidic
+            ? "指示剂在酸性环境中显特征颜色（如石蕊变红、酚酞无色）。"
+            : "指示剂在碱性环境中显特征颜色（如石蕊变蓝、酚酞变红）。",
       };
     },
   },

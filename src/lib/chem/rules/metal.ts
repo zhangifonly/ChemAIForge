@@ -37,6 +37,8 @@ export const metalRules: Reaction[] = [
       const equation = isDivalent
         ? `${metal.formula} + 2H₂O → ${metal.formula}(OH)₂ + H₂↑`
         : `2${metal.formula} + 2H₂O → 2${metal.formula}OH + H₂↑`;
+      // 生成强碱：若体系含指示剂（如酚酞），溶液显色（变红）
+      const hasIndicator = hasCategory(inputs, "indicator");
       return {
         products: [
           { formula: hydroxide, name: "可溶性碱", category: "base" },
@@ -44,11 +46,13 @@ export const metalRules: Reaction[] = [
         ],
         producesGas: true,
         producesPrecipitate: false,
-        colorChange: false,
+        colorChange: hasIndicator,
         thermal: "exothermic",
         phTrend: "increase",
         equation,
-        description: "活泼金属与水剧烈反应，放出氢气并生成对应的可溶性强碱。",
+        description: hasIndicator
+          ? "活泼金属与水剧烈反应放出氢气，生成的强碱使酚酞等指示剂变红。"
+          : "活泼金属与水剧烈反应，放出氢气并生成对应的可溶性强碱。",
       };
     },
   },
