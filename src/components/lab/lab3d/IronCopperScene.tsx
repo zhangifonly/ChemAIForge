@@ -141,13 +141,20 @@ function Liquid({ reacted }: { reacted: boolean }) {
   );
 }
 
-// 铁钉：金属钉身 + 钉帽；反应后表面渐显红铜层
+// 铁钉：金属钉身 + 钉帽；反应后表面渐显蓬松红铜层（明显加粗、完全覆盖）
 function IronNail({ reacted }: { reacted: boolean }) {
   const copperMat = useRef<MeshStandardMaterial>(null);
+  const copperMesh = useRef<Group>(null);
   useFrame((_, dt) => {
+    const k = Math.min(1, dt * 0.45);
     if (copperMat.current) {
-      const t = reacted ? 0.96 : 0;
-      copperMat.current.opacity = MathUtils.lerp(copperMat.current.opacity, t, Math.min(1, dt * 0.5));
+      copperMat.current.opacity = MathUtils.lerp(copperMat.current.opacity, reacted ? 1 : 0, k);
+    }
+    // 红铜层从细到粗"长出来"
+    if (copperMesh.current) {
+      const s = reacted ? 1 : 0.4;
+      copperMesh.current.scale.x = MathUtils.lerp(copperMesh.current.scale.x, s, k);
+      copperMesh.current.scale.z = MathUtils.lerp(copperMesh.current.scale.z, s, k);
     }
   });
   return (
@@ -160,47 +167,62 @@ function IronNail({ reacted }: { reacted: boolean }) {
         <cylinderGeometry args={[0.1, 0.1, 0.06, 32]} />
         <meshStandardMaterial color="#9aa3ad" metalness={0.85} roughness={0.35} />
       </mesh>
-      {/* 析出红铜层（渐显，金属铜质感） */}
-      <mesh>
-        <cylinderGeometry args={[0.07, 0.052, 1.0, 32]} />
-        <meshStandardMaterial
-          ref={copperMat}
-          color="#d2691e"
-          metalness={0.6}
-          roughness={0.45}
-          emissive="#b5471a"
-          emissiveIntensity={0.5}
-          transparent
-          opacity={0}
-        />
-      </mesh>
+      {/* 析出红铜层（蓬松疏松质感，明显加粗 + 完全覆盖钉身下段） */}
+      <group ref={copperMesh}>
+        <mesh>
+          <cylinderGeometry args={[0.11, 0.085, 1.05, 24]} />
+          <meshStandardMaterial
+            ref={copperMat}
+            color="#c0481f"
+            metalness={0.35}
+            roughness={0.75}
+            emissive="#7a2a10"
+            emissiveIntensity={0.35}
+            transparent
+            opacity={0}
+          />
+        </mesh>
+      </group>
     </group>
   );
 }
 
-// 析出的铜屑：少量悬浮/沉降的红铜颗粒点
+// 析出的铜屑：红铜颗粒缓缓下沉到液底并堆积（轻微旋转飘动）
 function CopperBits() {
   const pts = useRef<Points>(null);
-  const positions = useMemo(() => {
-    const arr = new Float32Array(60 * 3);
-    for (let i = 0; i < 60; i++) {
-      const r = Math.random() * 0.38;
+  const data = useMemo(() => {
+    const n = 70;
+    const arr = new Float32Array(n * 3);
+    const vy = new Float32Array(n); // 各颗粒下沉速度
+    const floor = new Float32Array(n); // 各颗粒堆积底高
+    for (let i = 0; i < n; i++) {
+      const r = Math.random() * 0.36;
       const a = Math.random() * Math.PI * 2;
       arr[i * 3] = Math.cos(a) * r;
-      arr[i * 3 + 1] = -0.5 + Math.random() * 1.3;
+      arr[i * 3 + 1] = -0.4 + Math.random() * 1.0; // 初始悬浮高度
       arr[i * 3 + 2] = Math.sin(a) * r;
+      vy[i] = 0.06 + Math.random() * 0.08;
+      floor[i] = -0.6 + Math.random() * 0.06; // 液底附近堆积
     }
-    return arr;
+    return { arr, vy, floor, n };
   }, []);
   useFrame((_, dt) => {
-    if (pts.current) pts.current.rotation.y += dt * 0.15;
+    if (!pts.current) return;
+    const pos = pts.current.geometry.attributes.position;
+    const a = pos.array as Float32Array;
+    for (let i = 0; i < data.n; i++) {
+      const yi = i * 3 + 1;
+      if (a[yi] > data.floor[i]) a[yi] -= data.vy[i] * dt; // 下沉
+    }
+    pos.needsUpdate = true;
+    pts.current.rotation.y += dt * 0.08;
   });
   return (
     <points ref={pts}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-position" args={[data.arr, 3]} />
       </bufferGeometry>
-      <pointsMaterial color="#c9682f" size={0.035} sizeAttenuation transparent opacity={0.85} />
+      <pointsMaterial color="#c0481f" size={0.04} sizeAttenuation transparent opacity={0.9} />
     </points>
   );
 }
