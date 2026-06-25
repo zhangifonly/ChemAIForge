@@ -74,4 +74,22 @@ export const redoxRules: Reaction[] = [
       description: "碘单质遇淀粉显特征蓝色，常用于碘的检验与碘量法终点判断。",
     }),
   },
+  {
+    id: "fe2-oxidized",
+    name: "亚铁离子被氧化",
+    // 氯水/溴水/过氧化氢等氧化剂把 Fe²⁺ 氧化为 Fe³⁺（浅绿→棕黄）
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["FeSO4", "FeCl2"]) &&
+      hasAnyFormula(inputs, ["Cl2", "Br2", "H2O2", "HNO3"]),
+    build: () => ({
+      products: [{ formula: "Fe³⁺", name: "铁(III)离子", category: "salt" }],
+      producesGas: false,
+      producesPrecipitate: false,
+      colorChange: true,
+      thermal: "none",
+      phTrend: "unknown",
+      equation: "2Fe²⁺ + Cl₂ → 2Fe³⁺ + 2Cl⁻",
+      description: "氯水等氧化剂把亚铁离子氧化为铁(III)离子，溶液由浅绿变为棕黄色。",
+    }),
+  },
 ];

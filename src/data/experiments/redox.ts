@@ -159,7 +159,7 @@ export const redoxExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "白瓷板"],
     objectives: ["理解价态转化", "用显色验证", "书写氧化还原方程式"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["氯化铁", "铁"], expect: { reacted: true } },
+    probe: { reagentKeys: ["硫酸亚铁", "氯水"], expect: { reacted: true, colorChange: true } },
   },
 ];
 
