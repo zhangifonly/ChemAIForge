@@ -1,7 +1,9 @@
 "use client";
 
 // 3D 实验台通用基础元件：实验室台面、木质试管架、玻璃试管、通用液柱。
-// 供各 3D 实验场景复用，统一观感与材质策略（玻璃用 meshPhysicalMaterial 保证跨设备通透）。
+// 供各 3D 实验场景复用，统一观感与材质策略。
+// 玻璃试管 / 试管架优先加载 public/models/lab 下的专业 glTF 模型，缺失则回退程序化几何。
+import { ModelOrFallback } from "./ModelOrFallback";
 
 // 实验室台面（大桌面）+ 背景墙
 export function LabBench() {
@@ -19,8 +21,14 @@ export function LabBench() {
   );
 }
 
-// 木质试管架：底座 + 立柱 + 带孔顶板 + 孔圈
+// 木质试管架：优先加载模型，缺失回退程序化几何
 export function TubeRack() {
+  return (
+    <ModelOrFallback url="/models/lab/tube-rack.glb" fallback={<ProceduralTubeRack />} />
+  );
+}
+
+function ProceduralTubeRack() {
   return (
     <group>
       <mesh position={[0, 0.05, 0]} castShadow receiveShadow>
@@ -45,8 +53,14 @@ export function TubeRack() {
   );
 }
 
-// 玻璃试管（管壁 + 圆底 + 管口圈）。半透明物理材质，跨设备稳定通透。
+// 玻璃试管：优先加载模型，缺失回退程序化几何
 export function GlassTube() {
+  return (
+    <ModelOrFallback url="/models/lab/test-tube.glb" fallback={<ProceduralGlassTube />} />
+  );
+}
+
+function ProceduralGlassTube() {
   const glass = (
     <meshPhysicalMaterial
       color="#eef7ff"
