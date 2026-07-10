@@ -121,7 +121,8 @@ export default function Lab3DCanvas({
               <Lightformer intensity={1.2} position={[-3, 1, 1]} scale={[3, 3, 1]} color="#bcd8ff" />
               <Lightformer intensity={1} position={[3, 1, -1]} scale={[3, 3, 1]} color="#ffe6c4" />
             </Environment>
-            <ContactShadows position={[0, -0.94, 0]} opacity={0.35} scale={10} blur={2.6} far={4} />
+            {/* 阴影平面须贴合台面（场景 group 位于 y=-1.0），略抬 0.005 避免 z-fighting */}
+            <ContactShadows position={[0, -0.995, 0]} opacity={0.35} scale={10} blur={2.6} far={4} />
             <EffectComposer>
               <Bloom luminanceThreshold={0.8} intensity={0.35} mipmapBlur radius={0.5} />
             </EffectComposer>

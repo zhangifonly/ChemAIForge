@@ -3,7 +3,7 @@
 // 模型加载容错包装：优先加载专业 glTF 模型，文件缺失/加载失败时回退到
 // 程序化几何（fallback），保证未放模型前应用照常可用、不崩溃。
 import { Component, Suspense, type ReactNode } from "react";
-import { GltfModel } from "./GltfModel";
+import { GltfModel, type FitOptions } from "./GltfModel";
 
 class ModelErrorBoundary extends Component<
   { fallback: ReactNode; children: ReactNode },
@@ -26,17 +26,19 @@ export function ModelOrFallback({
   url,
   scale,
   position,
+  fit,
   fallback,
 }: {
   url: string;
   scale?: number;
   position?: [number, number, number];
+  fit?: FitOptions;
   fallback: ReactNode;
 }) {
   return (
     <ModelErrorBoundary fallback={fallback}>
       <Suspense fallback={null}>
-        <GltfModel url={url} scale={scale} position={position} />
+        <GltfModel url={url} scale={scale} position={position} fit={fit} />
       </Suspense>
     </ModelErrorBoundary>
   );
