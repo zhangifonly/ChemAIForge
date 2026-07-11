@@ -100,7 +100,10 @@ export const redoxExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "通风橱", "导管"],
     objectives: ["认识硝酸氧化性", "观察气体与变色", "理解不产氢"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["铜", "硝酸"], expect: { reacted: true } },
+    probe: {
+      reagentKeys: ["铜", "硝酸"],
+      expect: { reacted: true, gas: true, colorChange: true },
+    },
   },
   {
     slug: "fe3-reduction-by-iron",
@@ -112,7 +115,10 @@ export const redoxExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["理解中间价态", "观察颜色变化", "书写离子方程式"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["氯化铁", "铁"], expect: { reacted: true } },
+    probe: {
+      reagentKeys: ["氯化铁", "铁"],
+      expect: { reacted: true, colorChange: true },
+    },
   },
   {
     slug: "kmno4-ethanol",
@@ -129,14 +135,20 @@ export const redoxExperiments: ExperimentSeed[] = [
   {
     slug: "iodine-clock",
     title: "碘钟反应",
-    description: "混合碘酸盐与还原剂体系，经一段诱导期后溶液骤然变蓝，认识反应速率与振荡现象。",
+    // 原描述有二处硬伤：试剂用的是碘化钾（碘化物）而非碘酸盐；碘钟是一次性变色的钟反应，
+    // 并非振荡反应（振荡是 BZ / Briggs-Rauscher 那一类）。
+    description:
+      "过氧化氢氧化碘化钾生成的碘，被硫代硫酸钠不断还原掉；硫代硫酸钠耗尽后碘骤增，遇淀粉使溶液突然变蓝，借此认识诱导期与反应速率。",
     category: C.REDOX,
     difficulty: D.HARD,
-    reagents: ["碘化钾", "过氧化氢", "硫酸", "淀粉"],
+    reagents: ["碘化钾", "过氧化氢", "硫酸", "淀粉", "硫代硫酸钠"],
     apparatus: ["烧杯", "秒表", "磁力搅拌器"],
     objectives: ["观察碘钟现象", "理解诱导期", "探究浓度影响"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["过氧化氢", "碘化钾"], expect: { reacted: true, gas: true } },
+    probe: {
+      reagentKeys: ["过氧化氢", "碘化钾", "硫代硫酸钠", "淀粉"],
+      expect: { reacted: true, colorChange: true, gas: false },
+    },
   },
   {
     slug: "chlorine-bleaching",

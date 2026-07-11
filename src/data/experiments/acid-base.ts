@@ -131,7 +131,7 @@ export const acidBaseExperiments: ExperimentSeed[] = [
     description: "用氢氧化铝、碳酸氢钠等胃药中和模拟胃酸的稀盐酸，联系医药中的酸碱中和。",
     category: C.ACID_BASE,
     difficulty: D.EASY,
-    reagents: ["盐酸", "碳酸氢钠", "甲基橙"],
+    reagents: ["盐酸", "碳酸氢钠", "氢氧化铝", "甲基橙"],
     apparatus: ["烧杯", "玻璃棒", "pH 计"],
     objectives: ["认识抗酸药原理", "观察中和过程", "联系医学应用"],
     estimatedMinutes: 25,
@@ -139,8 +139,11 @@ export const acidBaseExperiments: ExperimentSeed[] = [
   },
   {
     slug: "diprotic-acid-titration",
-    title: "二元酸的分步滴定",
-    description: "用氢氧化钠分步滴定硫酸，结合 pH 曲线认识多元强酸的中和特征。",
+    // 硫酸 Ka₂≈10⁻²，两级电离几乎同时被中和，滴定曲线只有一个突跃，无法"分步滴定"。
+    // 能分步滴定的是磷酸、碳酸这类各级 Ka 相差 10⁴ 以上的多元弱酸。
+    title: "二元强酸的滴定",
+    description:
+      "用氢氧化钠滴定硫酸，结合 pH 曲线认识二元强酸两级电离几乎同时被中和、只出现单一突跃的特征，并与磷酸的分步滴定作对比。",
     category: C.ACID_BASE,
     difficulty: D.HARD,
     reagents: ["硫酸", "氢氧化钠", "酚酞"],

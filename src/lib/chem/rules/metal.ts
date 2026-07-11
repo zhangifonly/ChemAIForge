@@ -6,6 +6,28 @@ import { hasAnyFormula, hasCategory, findByCategory } from "./helpers";
 
 export const metalRules: Reaction[] = [
   {
+    id: "copper-nitric-acid",
+    // 铜不活泼，与盐酸/稀硫酸不反应，但硝酸的强氧化性使其溶解：
+    // 必须排在通用「金属+酸」之前，否则只会报产气而漏掉溶液变蓝这一特征现象。
+    name: "铜与硝酸反应",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["Cu"]) && hasAnyFormula(inputs, ["HNO3"]),
+    build: () => ({
+      products: [
+        { formula: "Cu(NO3)2", name: "硝酸铜", category: "salt" },
+        { formula: "NO", name: "一氧化氮", category: "gas" },
+      ],
+      producesGas: true,
+      producesPrecipitate: false,
+      colorChange: true,
+      thermal: "exothermic",
+      phTrend: "increase",
+      equation: "3Cu + 8HNO₃(稀) → 3Cu(NO₃)₂ + 2NO↑ + 4H₂O",
+      description:
+        "铜溶于稀硝酸生成蓝色硝酸铜溶液，放出无色一氧化氮，遇空气变红棕色（须通风）。",
+    }),
+  },
+  {
     id: "iron-fe3-comproportionation",
     name: "铁与铁(III)盐归中反应",
     match: (inputs) =>

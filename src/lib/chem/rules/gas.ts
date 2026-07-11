@@ -32,7 +32,13 @@ export const gasRules: Reaction[] = [
     id: "ammonium-base",
     name: "铵盐与碱反应",
     match: (inputs) =>
-      hasAnyFormula(inputs, ["NH4Cl", "(NH4)2SO4", "NH4NO3", "(NH4)2CO3"]) &&
+      hasAnyFormula(inputs, [
+        "NH4Cl",
+        "(NH4)2SO4",
+        "NH4NO3",
+        "(NH4)2CO3",
+        "NH4HCO3",
+      ]) &&
       hasCategory(inputs, "base"),
     build: () => ({
       products: [

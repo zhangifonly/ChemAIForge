@@ -66,15 +66,21 @@ export const coordinationExperiments: ExperimentSeed[] = [
     estimatedMinutes: 20,
   },
   {
+    // slug 沿用历史命名（改动会导致线上链接与会话记录失效），内容以 title 为准
     slug: "diammine-silver-test",
     title: "硬水中钙镁离子的配位滴定",
-    description: "用 EDTA 配位滴定法测定水样硬度，以铬黑 T 为指示剂判断终点。",
+    description:
+      "在 pH≈10 的氨-氯化铵缓冲体系中，用 EDTA 标准溶液滴定水样中的钙镁离子，以铬黑 T 为指示剂，溶液由酒红色变为纯蓝色即为终点。",
     category: C.COORDINATION,
     difficulty: D.HARD,
-    reagents: ["氯化钙", "氢氧化钠", "氨水"],
-    apparatus: ["碱式滴定管", "锥形瓶", "缓冲溶液"],
+    reagents: ["氯化钙", "EDTA", "铬黑T", "氨水", "氯化铵"],
+    apparatus: ["酸式滴定管", "锥形瓶", "移液管", "洗耳球"],
     objectives: ["掌握配位滴定", "测定水硬度", "判断显色终点"],
     estimatedMinutes: 50,
+    probe: {
+      reagentKeys: ["EDTA", "氯化钙", "铬黑T"],
+      expect: { reacted: true, colorChange: true },
+    },
   },
   {
     slug: "cobalt-chloride-equilibrium",
@@ -82,10 +88,14 @@ export const coordinationExperiments: ExperimentSeed[] = [
     description: "观察氯化钴溶液在加水稀释与加热时粉红与蓝色间的转变，认识配位平衡移动。",
     category: C.COORDINATION,
     difficulty: D.HARD,
-    reagents: ["盐酸", "蒸馏水"],
+    reagents: ["氯化钴", "盐酸", "蒸馏水"],
     apparatus: ["试管", "水浴", "胶头滴管"],
     objectives: ["认识配位平衡", "观察颜色互变", "理解平衡移动"],
     estimatedMinutes: 30,
+    probe: {
+      reagentKeys: ["氯化钴", "盐酸"],
+      expect: { reacted: true, colorChange: true },
+    },
   },
   {
     slug: "prussian-blue",
@@ -93,11 +103,15 @@ export const coordinationExperiments: ExperimentSeed[] = [
     description: "亚铁离子与铁氰化钾反应生成蓝色沉淀，认识经典颜料普鲁士蓝并用于铁离子检验。",
     category: C.COORDINATION,
     difficulty: D.MEDIUM,
-    reagents: ["硫酸亚铁", "氢氧化钠"],
+    // 原试剂为 硫酸亚铁+氢氧化钠，生成的是 Fe(OH)₂（白→灰绿），并非蓝色沉淀
+    reagents: ["硫酸亚铁", "铁氰化钾"],
     apparatus: ["试管", "胶头滴管"],
     objectives: ["认识普鲁士蓝", "检验亚铁离子", "联系颜料历史"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["硫酸亚铁", "氢氧化钠"], expect: { reacted: true, precipitate: true } },
+    probe: {
+      reagentKeys: ["硫酸亚铁", "铁氰化钾"],
+      expect: { reacted: true, precipitate: true, colorChange: true },
+    },
   },
 ];
 

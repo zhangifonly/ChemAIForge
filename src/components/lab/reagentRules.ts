@@ -7,6 +7,14 @@ import type { ReagentRule } from "./reagents";
 // 2) 有机物中的"乙酸/甲酸"等弱酸单列，避免落入通用酸
 // 3) 指示剂、催化剂等辅助物质单列
 export const REAGENT_RULES: ReagentRule[] = [
+  // —— 子串陷阱最深的几条，必须最先匹配 ——
+  // "亚铁氰化钾" 含子串 "铁氰化钾"；"硫代硫酸钠" 含子串 "硫酸钠"/"硫酸"；
+  // "乙二胺四乙酸" 含子串 "乙酸"。任一被后面的通用规则先命中都会解析成错误物质。
+  { keywords: ["亚铁氰化钾", "黄血盐"], formula: "K4[Fe(CN)6]", category: "salt" },
+  { keywords: ["铁氰化钾", "赤血盐"], formula: "K3[Fe(CN)6]", category: "salt" },
+  { keywords: ["硫代硫酸钠", "海波"], formula: "Na2S2O3", category: "salt" },
+  { keywords: ["EDTA", "乙二胺四乙酸"], formula: "Na2EDTA", category: "salt" },
+  { keywords: ["铬黑T", "铬黑 T"], formula: "EBT", category: "indicator" },
   // —— 银盐 / 钡盐 / 特定盐（含"酸"字但属盐，须最先匹配）——
   { keywords: ["硝酸银"], formula: "AgNO3", category: "salt" },
   { keywords: ["氯化钡"], formula: "BaCl2", category: "salt" },
@@ -18,6 +26,7 @@ export const REAGENT_RULES: ReagentRule[] = [
   { keywords: ["氯化铵"], formula: "NH4Cl", category: "salt" },
   { keywords: ["硫酸铵"], formula: "(NH4)2SO4", category: "salt" },
   { keywords: ["硝酸铵"], formula: "NH4NO3", category: "salt" },
+  { keywords: ["碳酸氢铵"], formula: "NH4HCO3", category: "carbonate" },
   { keywords: ["碳酸铵"], formula: "(NH4)2CO3", category: "carbonate" },
   // —— 碳酸盐 / 碳酸氢盐 ——
   { keywords: ["碳酸钠", "纯碱", "苏打"], formula: "Na2CO3", category: "carbonate" },
@@ -45,6 +54,7 @@ REAGENT_RULES.push(
   { keywords: ["氯化镁"], formula: "MgCl2", category: "salt" },
   { keywords: ["硫酸镁"], formula: "MgSO4", category: "salt" },
   { keywords: ["硫酸锌"], formula: "ZnSO4", category: "salt" },
+  { keywords: ["氯化钴"], formula: "CoCl2", category: "salt" },
   { keywords: ["氯化钙"], formula: "CaCl2", category: "salt" },
   { keywords: ["氯化钠", "食盐"], formula: "NaCl", category: "salt" },
   { keywords: ["硝酸钾"], formula: "KNO3", category: "salt" },
@@ -64,6 +74,7 @@ REAGENT_RULES.push(
   { keywords: ["氢氧化钾"], formula: "KOH", category: "base" },
   { keywords: ["氢氧化钙", "熟石灰", "石灰水"], formula: "Ca(OH)2", category: "base" },
   { keywords: ["氢氧化钡"], formula: "Ba(OH)2", category: "base" },
+  { keywords: ["氢氧化铝"], formula: "Al(OH)3", category: "base" },
   { keywords: ["氨水"], formula: "NH3·H2O", category: "base" },
   { keywords: ["氧化铜"], formula: "CuO", category: "oxide" },
   { keywords: ["氧化铁", "铁锈"], formula: "Fe2O3", category: "oxide" },
@@ -90,6 +101,8 @@ REAGENT_RULES.push(
   { keywords: ["pH 试纸", "pH试纸", "广泛试纸"], formula: "ph-paper", category: "indicator" },
   { keywords: ["淀粉"], formula: "starch", category: "other" },
   { keywords: ["催化剂"], formula: "catalyst", category: "other" },
+  // 硫单质：只认"硫粉/硫黄/硫磺"，绝不可用裸"硫"——否则会吞掉硫酸/硫化钠等一大片
+  { keywords: ["硫粉", "硫黄", "硫磺"], formula: "S", category: "other" },
 );
 
 // —— 有机物（弱酸 / 醇 / 酚 / 酯 等，须先于通用酸匹配）——
@@ -104,6 +117,8 @@ REAGENT_RULES.push(
   { keywords: ["乙烯"], formula: "C2H4", category: "organic" },
   { keywords: ["乙酸乙酯"], formula: "CH3COOC2H5", category: "organic" },
   { keywords: ["蔗糖"], formula: "C12H22O11", category: "organic" },
+  { keywords: ["油脂", "植物油", "花生油"], formula: "fat", category: "organic" },
+  { keywords: ["四氯化碳"], formula: "CCl4", category: "organic" },
   // —— 通用强酸（放在所有含"酸"字的盐 / 有机酸之后）——
   { keywords: ["盐酸", "氢氯酸"], formula: "HCl", category: "acid" },
   { keywords: ["硫酸"], formula: "H2SO4", category: "acid" },
@@ -113,6 +128,8 @@ REAGENT_RULES.push(
   // —— 气体 / 水（兜底）——
   // 肥皂水：检验硬水的辅助试剂，须先于"水"匹配（否则"肥皂水"含"水"被当成 H₂O）
   { keywords: ["肥皂水", "肥皂"], formula: "soap-solution", category: "other" },
+  { keywords: ["四氧化二氮"], formula: "N2O4", category: "gas" },
+  { keywords: ["二氧化氮"], formula: "NO2", category: "gas" },
   { keywords: ["二氧化碳"], formula: "CO2", category: "gas" },
   { keywords: ["氧气"], formula: "O2", category: "gas" },
   { keywords: ["氢气"], formula: "H2", category: "gas" },

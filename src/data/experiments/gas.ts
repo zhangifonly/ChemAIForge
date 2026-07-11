@@ -36,8 +36,9 @@ export const gasExperiments: ExperimentSeed[] = [
     description: "用锌粒与稀硫酸反应制取氢气，验证氢气的可燃性与爆鸣实验。",
     category: C.GAS,
     difficulty: D.EASY,
-    reagents: ["锌", "硫酸"],
-    apparatus: ["试管", "导管", "尖嘴管", "肥皂水"],
+    // 肥皂水用于收集氢气吹泡做爆鸣实验，是试剂而非仪器
+    reagents: ["锌", "硫酸", "肥皂水"],
+    apparatus: ["试管", "导管", "尖嘴管"],
     objectives: ["掌握氢气制取", "检验氢气纯度", "观察爆鸣现象"],
     estimatedMinutes: 30,
     probe: { reagentKeys: ["锌", "硫酸"], expect: { reacted: true, gas: true } },
@@ -91,6 +92,8 @@ export const gasExperiments: ExperimentSeed[] = [
     probe: { reagentKeys: ["碳酸氢钠", "盐酸"], expect: { reacted: true, gas: true } },
   },
   {
+    // slug 里的 "fountain"（喷泉）是历史误命名，本实验与喷泉无关；
+    // slug 是线上 URL 与会话外键，故保留不改，以 title 为准。喷泉实验见 nh3-preparation。
     slug: "ammonia-fountain-hcl",
     title: "氨气与氯化氢相遇成烟",
     description: "将蘸有浓氨水与浓盐酸的玻璃棒靠近，观察生成白烟氯化铵，认识气体间反应。",
@@ -108,11 +111,16 @@ export const gasExperiments: ExperimentSeed[] = [
     description: "加热碳酸氢铵观察其完全分解为氨气、水和二氧化碳，理解不稳定铵盐特性。",
     category: C.GAS,
     difficulty: D.EASY,
-    reagents: ["碳酸铵", "氢氧化钙"],
+    // title/description 讲的是碳酸氢铵 NH4HCO3，原试剂误写为碳酸铵 (NH4)2CO3（另一种物质）
+    reagents: ["碳酸氢铵", "氢氧化钙"],
     apparatus: ["试管", "导管", "酒精灯", "湿润石蕊试纸"],
     objectives: ["观察分解产气", "检验氨气与 CO₂", "认识铵盐不稳定性"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["碳酸铵", "氢氧化钙"], expect: { reacted: true, precipitate: true } },
+    // 核心现象是放出氨气（湿润石蕊试纸变蓝），并非生成沉淀
+    probe: {
+      reagentKeys: ["碳酸氢铵", "氢氧化钙"],
+      expect: { reacted: true, gas: true },
+    },
   },
   {
     slug: "co2-properties",
@@ -131,7 +139,7 @@ export const gasExperiments: ExperimentSeed[] = [
     description: "用带火星木条、铁丝、硫粉验证氧气的助燃性，观察剧烈燃烧现象。",
     category: C.GAS,
     difficulty: D.EASY,
-    reagents: ["过氧化氢", "二氧化锰", "铁"],
+    reagents: ["过氧化氢", "二氧化锰", "铁", "硫粉"],
     apparatus: ["集气瓶", "燃烧匙", "坩埚钳"],
     objectives: ["认识氧气助燃性", "观察铁丝燃烧", "理解助燃与可燃"],
     estimatedMinutes: 30,

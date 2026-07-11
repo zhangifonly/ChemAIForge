@@ -4,6 +4,7 @@
 // 避免通用规则提前命中导致特异现象（如沉淀、产气）被吞掉。
 
 import type { Reaction } from "./helpers";
+import { kineticsRules } from "./kinetics";
 import { organicRules } from "./organic";
 import { precipitationRules } from "./precipitation";
 import { gasRules } from "./gas";
@@ -12,6 +13,8 @@ import { coordinationRules } from "./coordination";
 import { metalRules } from "./metal";
 
 export const extendedReactions: Reaction[] = [
+  // 钟反应 / 速率类：约束多达四组分，特异性最高，须先于产气与浑浊类通用规则
+  ...kineticsRules,
   // 有机特征反应：银镜/酯化/醇钠/苯酚溴代，多含三组分约束，特异性最高
   ...organicRules,
   // 显色 / 配位：多依赖具体离子

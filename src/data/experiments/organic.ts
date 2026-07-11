@@ -12,8 +12,9 @@ export const organicExperiments: ExperimentSeed[] = [
     description: "乙酸与乙醇在浓硫酸催化下酯化生成有果香味的乙酸乙酯，掌握酯化反应。",
     category: C.ORGANIC,
     difficulty: D.MEDIUM,
-    reagents: ["乙酸", "乙醇", "硫酸", "碳酸钠"],
-    apparatus: ["试管", "导管", "酒精灯", "饱和碳酸钠溶液"],
+    reagents: ["乙酸", "乙醇", "硫酸", "饱和碳酸钠"],
+    // 饱和碳酸钠溶液是收集时的除杂/吸收试剂（已列在 reagents），不是仪器
+    apparatus: ["试管", "导管", "酒精灯", "试管夹"],
     objectives: ["掌握酯化反应", "理解催化与脱水", "认识可逆反应"],
     estimatedMinutes: 40,
     probe: { reagentKeys: ["乙酸", "乙醇", "硫酸"], expect: { reacted: true } },
@@ -102,7 +103,8 @@ export const organicExperiments: ExperimentSeed[] = [
     description: "蔗糖在稀硫酸催化下水解为葡萄糖与果糖，再用银氨溶液检验产物。",
     category: C.ORGANIC,
     difficulty: D.HARD,
-    reagents: ["蔗糖", "硫酸", "氢氧化钠", "硝酸银"],
+    // 银氨溶液须由 硝酸银 + 氨水 配制，原试剂表缺氨水
+    reagents: ["蔗糖", "硫酸", "氢氧化钠", "硝酸银", "氨水"],
     apparatus: ["试管", "水浴", "胶头滴管"],
     objectives: ["认识水解反应", "理解催化作用", "检验水解产物"],
     estimatedMinutes: 40,
@@ -124,10 +126,11 @@ export const organicExperiments: ExperimentSeed[] = [
     description: "油脂在氢氧化钠溶液中加热水解生成高级脂肪酸钠（肥皂）与甘油。",
     category: C.ORGANIC,
     difficulty: D.HARD,
-    reagents: ["氢氧化钠", "食盐", "蒸馏水"],
+    reagents: ["油脂", "氢氧化钠", "食盐", "蒸馏水"],
     apparatus: ["蒸发皿", "酒精灯", "玻璃棒", "烧杯"],
     objectives: ["认识皂化反应", "掌握盐析操作", "联系日用化工"],
     estimatedMinutes: 50,
+    probe: { reagentKeys: ["油脂", "氢氧化钠"], expect: { reacted: true } },
   },
 ];
 

@@ -12,8 +12,9 @@ export const analysisExperiments: ExperimentSeed[] = [
     description: "用铂丝蘸取不同金属盐在火焰中灼烧，观察钠黄、钾紫、钙砖红等特征焰色。",
     category: C.ANALYSIS,
     difficulty: D.EASY,
-    reagents: ["氯化钠", "氯化钙", "硝酸钾"],
-    apparatus: ["铂丝", "酒精灯", "蓝色钴玻璃", "盐酸"],
+    // 盐酸用于灼烧前后蘸洗铂丝，是试剂而非仪器
+    reagents: ["氯化钠", "氯化钙", "硝酸钾", "盐酸"],
+    apparatus: ["铂丝", "酒精灯", "蓝色钴玻璃"],
     objectives: ["掌握焰色反应", "识别金属元素", "联系烟花原理"],
     estimatedMinutes: 30,
   },
@@ -129,7 +130,8 @@ export const analysisExperiments: ExperimentSeed[] = [
     description: "用食盐水模拟钢铁吸氧腐蚀，结合铁氰化钾指示剂观察腐蚀微电池。",
     category: C.ELECTROCHEM,
     difficulty: D.HARD,
-    reagents: ["铁", "食盐", "酚酞"],
+    // 铁氰化钾显示阳极 Fe²⁺（变蓝），酚酞显示阴极 OH⁻（变红），description 已点名
+    reagents: ["铁", "食盐", "酚酞", "铁氰化钾"],
     apparatus: ["培养皿", "琼脂", "导线"],
     objectives: ["认识吸氧腐蚀", "理解微电池", "联系金属防护"],
     estimatedMinutes: 45,

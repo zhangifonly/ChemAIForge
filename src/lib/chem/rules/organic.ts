@@ -6,6 +6,26 @@ import { hasAnyFormula } from "./helpers";
 
 export const organicRules: Reaction[] = [
   {
+    id: "saponification",
+    name: "皂化反应",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["fat"]) && hasAnyFormula(inputs, ["NaOH", "KOH"]),
+    build: () => ({
+      products: [
+        { formula: "RCOONa", name: "高级脂肪酸钠（肥皂）", category: "salt" },
+        { formula: "C3H8O3", name: "甘油", category: "organic" },
+      ],
+      producesGas: false,
+      producesPrecipitate: false,
+      colorChange: false,
+      thermal: "none",
+      phTrend: "decrease",
+      equation: "油脂 + 3NaOH →(加热) 3RCOONa + 甘油",
+      description:
+        "油脂在碱性条件下加热水解为高级脂肪酸钠与甘油，加食盐盐析后上层析出肥皂。",
+    }),
+  },
+  {
     id: "silver-mirror",
     name: "银镜反应",
     match: (inputs) =>
