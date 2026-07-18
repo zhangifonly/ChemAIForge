@@ -11,7 +11,10 @@ export const redoxRules: Reaction[] = [
     match: (inputs) =>
       hasAnyFormula(inputs, ["KMnO4"]) &&
       (hasCategory(inputs, "reducer") ||
-        hasAnyFormula(inputs, ["H2C2O4", "Na2SO3", "FeSO4", "C2H5OH", "SO2"])),
+        hasAnyFormula(inputs, [
+          "H2C2O4", "Na2SO3", "NaHSO3", "FeSO4", "FeCl2",
+          "C2H5OH", "C2H4", "CH3CHO", "SO2", "KI", "NaI",
+        ])),
     build: () => ({
       products: [{ formula: "Mn2+", name: "锰(II)离子", category: "salt" }],
       producesGas: false,

@@ -12,6 +12,14 @@ import { thermoExperiments } from "./thermo";
 import { analysisExperiments } from "./analysis";
 import { electrochemExperiments } from "./electrochem";
 import { coordination2Experiments } from "./coordination2";
+import { acidBase2Experiments } from "./acid-base2";
+import { gas2Experiments } from "./gas2";
+import { precipitation2Experiments } from "./precipitation2";
+import { redox2Experiments } from "./redox2";
+import { metal2Experiments } from "./metal2";
+import { organic2Experiments } from "./organic2";
+import { thermo2Experiments } from "./thermo2";
+import { analysis2Experiments } from "./analysis2";
 
 export const allExperiments: ExperimentSeed[] = [
   ...acidBaseExperiments,
@@ -25,6 +33,14 @@ export const allExperiments: ExperimentSeed[] = [
   ...analysisExperiments,
   ...electrochemExperiments,
   ...coordination2Experiments,
+  ...acidBase2Experiments,
+  ...gas2Experiments,
+  ...precipitation2Experiments,
+  ...redox2Experiments,
+  ...metal2Experiments,
+  ...organic2Experiments,
+  ...thermo2Experiments,
+  ...analysis2Experiments,
 ];
 
 export type { ExperimentSeed, ReactionProbe } from "./types";

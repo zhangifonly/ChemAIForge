@@ -56,8 +56,14 @@ describe("焰色反应装置判定", () => {
     expect(usesGasDelivery(e.apparatus, e.reagents)).toBe(false);
   });
 
-  it("仅 flame-test 用铂丝焰色装置", () => {
+  it("焰色装置实验都含铂丝且不与集气/导气冲突", () => {
     const flame = allExperiments.filter((e) => usesFlameTest(e.apparatus));
-    expect(flame.map((e) => e.slug)).toEqual(["flame-test"]);
+    // 至少包含经典 flame-test，且每个焰色实验都用铂丝、排斥集气/导气
+    expect(flame.some((e) => e.slug === "flame-test")).toBe(true);
+    for (const e of flame) {
+      expect(e.apparatus.join(" ")).toMatch(/铂丝|铂金丝/);
+      expect(usesGasCollection(e.apparatus)).toBe(false);
+      expect(usesGasDelivery(e.apparatus, e.reagents)).toBe(false);
+    }
   });
 });
