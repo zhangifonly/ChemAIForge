@@ -121,10 +121,32 @@ function conductivityLesson(exp: ExperimentSeed): LessonStep[] | null {
   return steps;
 }
 
+// 通用电化学兜底：装置判定为电解 / 原电池 / 导电，但无法被精细引擎建模
+// （如熔盐电解、燃料电池、外加电流保护）。仍属电化学，须走通电讲解而非混合，
+// 否则会错误地生成「混合反应」步骤。
+function genericElectrochemLesson(exp: ExperimentSeed): LessonStep[] | null {
+  const isElectrolysis = isElectrolysisSetup(exp.apparatus);
+  const isGalvanic = isGalvanicSetup(exp.apparatus);
+  if (!isElectrolysis && !isGalvanic && !usesConductivity(exp.apparatus)) return null;
+  const verb = isElectrolysis ? "接通直流电源，开始电解" : "接通电路";
+  const steps: LessonStep[] = [
+    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "准备", title: "连接装置", narration: "按电路图连接电极与电源／测量仪表，插入电解质。" },
+    { id: "power", phase: "操作", title: verb, narration: `${verb}，注意观察两极及仪表的变化。`, action: { kind: "energize" } },
+    { id: "observe", phase: "现象", title: "两极现象", narration: describePhenomena(exp.probe?.expect) },
+  ];
+  const s = summaryStep(exp);
+  if (s) steps.push(s);
+  return steps;
+}
+
 export function buildLesson(exp: ExperimentSeed): LessonStep[] {
   // 电化学实验：生成模式对应的讲解（通电 / 接通电路 + 真实两极现象）
   const electro =
-    electrolysisLesson(exp) ?? galvanicLesson(exp) ?? conductivityLesson(exp);
+    electrolysisLesson(exp) ??
+    galvanicLesson(exp) ??
+    conductivityLesson(exp) ??
+    genericElectrochemLesson(exp);
   if (electro) return electro;
 
   const steps: LessonStep[] = [];

@@ -10,6 +10,8 @@ import { coordinationExperiments } from "./coordination";
 import { organicExperiments } from "./organic";
 import { thermoExperiments } from "./thermo";
 import { analysisExperiments } from "./analysis";
+import { electrochemExperiments } from "./electrochem";
+import { coordination2Experiments } from "./coordination2";
 
 export const allExperiments: ExperimentSeed[] = [
   ...acidBaseExperiments,
@@ -21,6 +23,8 @@ export const allExperiments: ExperimentSeed[] = [
   ...organicExperiments,
   ...thermoExperiments,
   ...analysisExperiments,
+  ...electrochemExperiments,
+  ...coordination2Experiments,
 ];
 
 export type { ExperimentSeed, ReactionProbe } from "./types";

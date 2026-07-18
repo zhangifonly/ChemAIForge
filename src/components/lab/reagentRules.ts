@@ -55,6 +55,8 @@ REAGENT_RULES.push(
   { keywords: ["硫酸镁"], formula: "MgSO4", category: "salt" },
   { keywords: ["硫酸锌"], formula: "ZnSO4", category: "salt" },
   { keywords: ["氯化钴"], formula: "CoCl2", category: "salt" },
+  { keywords: ["氯化镍"], formula: "NiCl2", category: "salt" },
+  { keywords: ["氟化钠"], formula: "NaF", category: "salt" },
   { keywords: ["氯化钙"], formula: "CaCl2", category: "salt" },
   { keywords: ["氯化钠", "食盐"], formula: "NaCl", category: "salt" },
   { keywords: ["硝酸钾"], formula: "KNO3", category: "salt" },
@@ -80,6 +82,9 @@ REAGENT_RULES.push(
   { keywords: ["氧化铁", "铁锈"], formula: "Fe2O3", category: "oxide" },
   { keywords: ["氧化镁"], formula: "MgO", category: "oxide" },
   { keywords: ["氧化钙", "生石灰"], formula: "CaO", category: "oxide" },
+  { keywords: ["氧化铝", "三氧化二铝"], formula: "Al2O3", category: "oxide" },
+  // 二氧化铅：铅酸电池正极材料，须先于金属"铅"匹配（否则"二氧化铅"含"铅"被吞）
+  { keywords: ["二氧化铅"], formula: "PbO2", category: "oxide" },
   { keywords: ["二氧化锰"], formula: "MnO2", category: "oxidizer" },
 );
 
@@ -101,6 +106,7 @@ REAGENT_RULES.push(
   { keywords: ["pH 试纸", "pH试纸", "广泛试纸"], formula: "ph-paper", category: "indicator" },
   { keywords: ["淀粉"], formula: "starch", category: "other" },
   { keywords: ["催化剂"], formula: "catalyst", category: "other" },
+  { keywords: ["冰晶石"], formula: "Na3AlF6", category: "other" },
   // 硫单质：只认"硫粉/硫黄/硫磺"，绝不可用裸"硫"——否则会吞掉硫酸/硫化钠等一大片
   { keywords: ["硫粉", "硫黄", "硫磺"], formula: "S", category: "other" },
 );
@@ -109,6 +115,7 @@ REAGENT_RULES.push(
 REAGENT_RULES.push(
   { keywords: ["乙酸", "醋酸"], formula: "CH3COOH", category: "acid" },
   { keywords: ["甲酸"], formula: "HCOOH", category: "acid" },
+  { keywords: ["柠檬酸"], formula: "C6H8O7", category: "acid" },
   { keywords: ["苯酚", "石炭酸"], formula: "C6H5OH", category: "organic" },
   { keywords: ["乙醇", "酒精"], formula: "C2H5OH", category: "organic" },
   { keywords: ["甲醇"], formula: "CH3OH", category: "organic" },
@@ -119,6 +126,8 @@ REAGENT_RULES.push(
   { keywords: ["蔗糖"], formula: "C12H22O11", category: "organic" },
   { keywords: ["油脂", "植物油", "花生油"], formula: "fat", category: "organic" },
   { keywords: ["四氯化碳"], formula: "CCl4", category: "organic" },
+  { keywords: ["丁二酮肟"], formula: "C4H8N2O2", category: "indicator" },
+  { keywords: ["水杨酸"], formula: "C7H6O3", category: "organic" },
   // —— 通用强酸（放在所有含"酸"字的盐 / 有机酸之后）——
   { keywords: ["盐酸", "氢氯酸"], formula: "HCl", category: "acid" },
   { keywords: ["硫酸"], formula: "H2SO4", category: "acid" },
@@ -147,5 +156,6 @@ REAGENT_RULES.push(
   { keywords: ["金属钠", "钠块", "钠"], formula: "Na", category: "metal" },
   { keywords: ["金属钾", "钾"], formula: "K", category: "metal" },
   { keywords: ["金属钙", "钙"], formula: "Ca", category: "metal" },
+  { keywords: ["铅片", "铅块", "铅"], formula: "Pb", category: "metal" },
   { keywords: ["银"], formula: "Ag", category: "metal" },
 );
