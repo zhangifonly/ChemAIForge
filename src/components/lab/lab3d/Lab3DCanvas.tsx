@@ -10,6 +10,8 @@ import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { IronCopperScene } from "./IronCopperScene";
 import { ZincAcidScene } from "./ZincAcidScene";
+import { PrecipitationScene } from "./PrecipitationScene";
+import { Co2PreparationScene } from "./Co2PreparationScene";
 
 export default function Lab3DCanvas({
   slug,
@@ -39,6 +41,31 @@ export default function Lab3DCanvas({
             hasMetal={has("Zn")}
             hasLiquid={has("H2SO4") || contents.length > 0}
             reacted={reactedNow && has("Zn") && has("H2SO4")}
+          />
+        );
+      case "feoh3-precipitation":
+        return (
+          <PrecipitationScene
+            hasSalt={has("FeCl3") || contents.length > 0}
+            reacted={reactedNow && has("FeCl3") && has("NaOH")}
+            saltColor="#e0b34a"
+            precipColor="#b04a24"
+          />
+        );
+      case "cuoh2-precipitation":
+        return (
+          <PrecipitationScene
+            hasSalt={has("CuSO4") || contents.length > 0}
+            reacted={reactedNow && has("CuSO4") && has("NaOH")}
+            saltColor="#5bb6e6"
+            precipColor="#2f7fd0"
+          />
+        );
+      case "co2-preparation":
+        return (
+          <Co2PreparationScene
+            hasAcid={has("HCl") || contents.length > 0}
+            reacted={reactedNow && has("CaCO3") && has("HCl")}
           />
         );
       default:

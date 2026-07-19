@@ -7,8 +7,9 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import type { MeshStandardMaterial, Group, Points } from "three";
-import { Color, MathUtils } from "three";
+import { MathUtils } from "three";
 import { LabBench, TubeRack, GlassTube, TUBE_R, TUBE_FLOOR } from "./LabPrimitives";
+import { ColorLiquid } from "./phenomena";
 
 export interface IronCopperProps {
   hasFe: boolean;
@@ -24,80 +25,14 @@ export function IronCopperScene({ hasFe, hasLiquid, reacted }: IronCopperProps) 
       <LabBench />
       <TubeRack />
       <GlassTube />
-      {hasLiquid && <Liquid reacted={reacted} />}
+      {hasLiquid && (
+        <ColorLiquid from="#2f93dd" to="#cfe6f2" reacted={reacted} topY={LIQUID_TOP} emissive={0.5} />
+      )}
       {hasFe && <IronNail reacted={reacted} />}
       {reacted && <CopperBits />}
       {/* 配套仪器：砂纸（打磨铁钉除锈）+ 镊子（夹取铁钉） */}
       <Sandpaper />
       <Tweezers />
-    </group>
-  );
-}
-
-// 液体：试管内蓝色硫酸铜溶液（半球底 + 圆柱，嵌入试管内壁），反应后蓝色渐浅。
-function Liquid({ reacted }: { reacted: boolean }) {
-  const bodyMat = useRef<MeshStandardMaterial>(null);
-  const ballMat = useRef<MeshStandardMaterial>(null);
-  const surfMat = useRef<MeshStandardMaterial>(null);
-  const deep = useMemo(() => new Color("#2f93dd"), []);
-  const faded = useMemo(() => new Color("#cfe6f2"), []);
-  const r = TUBE_R * 0.9;
-  const bottomCY = TUBE_FLOOR + TUBE_R; // 与试管半球底同心
-  const h = LIQUID_TOP - bottomCY;
-  const cy = bottomCY + h / 2;
-
-  useFrame((_, dt) => {
-    const target = reacted ? faded : deep;
-    const k = Math.min(1, dt * 0.7);
-    bodyMat.current?.color.lerp(target, k);
-    ballMat.current?.color.lerp(target, k);
-    surfMat.current?.color.lerp(target, k);
-    if (bodyMat.current) bodyMat.current.emissive.lerp(target, k);
-    if (ballMat.current) ballMat.current.emissive.lerp(target, k);
-  });
-
-  return (
-    <group>
-      {/* 半球底 */}
-      <mesh position={[0, bottomCY, 0]}>
-        <sphereGeometry args={[r, 40, 24, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2]} />
-        <meshStandardMaterial
-          ref={ballMat}
-          color="#2f93dd"
-          transparent
-          opacity={0.82}
-          roughness={0.12}
-          emissive="#2f93dd"
-          emissiveIntensity={0.5}
-        />
-      </mesh>
-      {/* 圆柱体 */}
-      <mesh position={[0, cy, 0]}>
-        <cylinderGeometry args={[r, r, h, 48]} />
-        <meshStandardMaterial
-          ref={bodyMat}
-          color="#2f93dd"
-          transparent
-          opacity={0.82}
-          roughness={0.12}
-          emissive="#2f93dd"
-          emissiveIntensity={0.5}
-        />
-      </mesh>
-      {/* 液面 */}
-      <mesh position={[0, LIQUID_TOP, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <circleGeometry args={[r, 48]} />
-        <meshStandardMaterial
-          ref={surfMat}
-          color="#54aee8"
-          transparent
-          opacity={0.92}
-          roughness={0.06}
-          metalness={0.1}
-          emissive="#2a8fd6"
-          emissiveIntensity={0.15}
-        />
-      </mesh>
     </group>
   );
 }

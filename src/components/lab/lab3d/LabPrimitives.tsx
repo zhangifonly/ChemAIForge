@@ -104,6 +104,39 @@ export function GlassTube() {
   );
 }
 
+// 滴瓶：棕色小瓶 + 胶头滴管，摆在台面作配套器材。position 为瓶底中心。
+export function DropperBottle({
+  position = [0, 0, 0],
+  liquidColor = "#8899aa",
+}: {
+  position?: [number, number, number];
+  liquidColor?: string;
+}) {
+  return (
+    <group position={position}>
+      {/* 瓶身 */}
+      <mesh position={[0, 0.28, 0]} castShadow>
+        <cylinderGeometry args={[0.16, 0.16, 0.56, 32]} />
+        <meshPhysicalMaterial color="#6b4f2a" transparent opacity={0.55} roughness={0.2} transmission={0.4} ior={1.4} />
+      </mesh>
+      {/* 内液 */}
+      <mesh position={[0, 0.2, 0]}>
+        <cylinderGeometry args={[0.13, 0.13, 0.34, 24]} />
+        <meshStandardMaterial color={liquidColor} transparent opacity={0.85} emissive={liquidColor} emissiveIntensity={0.2} />
+      </mesh>
+      {/* 瓶颈 + 橡胶头 */}
+      <mesh position={[0, 0.62, 0]} castShadow>
+        <cylinderGeometry args={[0.05, 0.05, 0.16, 20]} />
+        <meshStandardMaterial color="#5a411f" roughness={0.5} />
+      </mesh>
+      <mesh position={[0, 0.76, 0]} castShadow>
+        <capsuleGeometry args={[0.06, 0.12, 8, 16]} />
+        <meshStandardMaterial color="#33383d" roughness={0.7} />
+      </mesh>
+    </group>
+  );
+}
+
 // 通用液柱（静态色）：半球底 + 圆柱，嵌入试管内壁（半球底中心与试管一致）。
 export function LiquidColumn({
   color = "#cfe0ec",
