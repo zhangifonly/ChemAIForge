@@ -8,6 +8,10 @@ export const EXPERIMENTS_WITH_3D = new Set<string>([
   "co2-preparation", // 二氧化碳制取：产气→导管→石灰水变浑浊
   "feoh3-precipitation", // 氢氧化铁：红棕絮状沉淀下沉
   "cuoh2-precipitation", // 氢氧化铜：蓝色絮状沉淀下沉
+  // —— 变色与显色 ——
+  "fe3-scn-coloring", // 硫氰合铁：无色瞬变血红
+  "kmno4-oxalic-acid", // 高锰酸钾被草酸还原：紫红渐褪
+  "copper-ammonia-complex", // 铜氨配离子：蓝沉淀→深蓝溶解
 ]);
 
 export function has3D(slug: string): boolean {

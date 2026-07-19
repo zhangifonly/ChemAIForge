@@ -12,6 +12,8 @@ import { IronCopperScene } from "./IronCopperScene";
 import { ZincAcidScene } from "./ZincAcidScene";
 import { PrecipitationScene } from "./PrecipitationScene";
 import { Co2PreparationScene } from "./Co2PreparationScene";
+import { ColorChangeScene } from "./ColorChangeScene";
+import { CopperAmmoniaScene } from "./CopperAmmoniaScene";
 
 export default function Lab3DCanvas({
   slug,
@@ -66,6 +68,33 @@ export default function Lab3DCanvas({
           <Co2PreparationScene
             hasAcid={has("HCl") || contents.length > 0}
             reacted={reactedNow && has("CaCO3") && has("HCl")}
+          />
+        );
+      case "fe3-scn-coloring":
+        return (
+          <ColorChangeScene
+            hasLiquid={contents.length > 0}
+            reacted={reactedNow && has("FeCl3") && has("KSCN")}
+            fromColor="#ecc86a"
+            toColor="#a11020"
+            dropperColor="#e8e0c8"
+          />
+        );
+      case "kmno4-oxalic-acid":
+        return (
+          <ColorChangeScene
+            hasLiquid={has("KMnO4") || contents.length > 0}
+            reacted={reactedNow && has("KMnO4") && has("H2C2O4")}
+            fromColor="#8b1f8f"
+            toColor="#eef1f4"
+            dropperColor="#e6e6ea"
+          />
+        );
+      case "copper-ammonia-complex":
+        return (
+          <CopperAmmoniaScene
+            hasCu={has("CuSO4") || contents.length > 0}
+            reacted={reactedNow && has("CuSO4") && has("NH3·H2O")}
           />
         );
       default:
