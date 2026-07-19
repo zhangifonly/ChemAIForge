@@ -14,6 +14,8 @@ import { PrecipitationScene } from "./PrecipitationScene";
 import { Co2PreparationScene } from "./Co2PreparationScene";
 import { ColorChangeScene } from "./ColorChangeScene";
 import { CopperAmmoniaScene } from "./CopperAmmoniaScene";
+import { MagnesiumBurningScene } from "./MagnesiumBurningScene";
+import { IronCombustionScene } from "./IronCombustionScene";
 
 export default function Lab3DCanvas({
   slug,
@@ -95,6 +97,22 @@ export default function Lab3DCanvas({
           <CopperAmmoniaScene
             hasCu={has("CuSO4") || contents.length > 0}
             reacted={reactedNow && has("CuSO4") && has("NH3·H2O")}
+          />
+        );
+      case "magnesium-burning":
+        // 燃烧不走 react()：镁与氧气都在且已点击混合(result 非空)即点燃
+        return (
+          <MagnesiumBurningScene
+            hasMg={has("Mg")}
+            reacted={has("Mg") && has("O2") && result !== null}
+          />
+        );
+      case "o2-iron-combustion":
+        // 过氧化氢+二氧化锰产氧，铁丝在氧气中燃烧
+        return (
+          <IronCombustionScene
+            hasFe={has("Fe")}
+            reacted={reactedNow && has("Fe") && has("H2O2")}
           />
         );
       default:

@@ -12,6 +12,9 @@ export const EXPERIMENTS_WITH_3D = new Set<string>([
   "fe3-scn-coloring", // 硫氰合铁：无色瞬变血红
   "kmno4-oxalic-acid", // 高锰酸钾被草酸还原：紫红渐褪
   "copper-ammonia-complex", // 铜氨配离子：蓝沉淀→深蓝溶解
+  // —— 燃烧与放热 ——
+  "magnesium-burning", // 镁条燃烧：耀眼白光+白烟+白色氧化镁
+  "o2-iron-combustion", // 铁丝在氧气中燃烧：火星四射+黑色熔珠
 ]);
 
 export function has3D(slug: string): boolean {

@@ -7,3 +7,5 @@ export { Precipitate } from "./precipitate";
 export type { PrecipitateProps } from "./precipitate";
 export { ColorLiquid } from "./colorLiquid";
 export type { ColorLiquidProps } from "./colorLiquid";
+export { BrightFlare, Smoke } from "./flame";
+export { Sparks } from "./sparks";
