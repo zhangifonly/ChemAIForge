@@ -16,6 +16,8 @@ import { ColorChangeScene } from "./ColorChangeScene";
 import { CopperAmmoniaScene } from "./CopperAmmoniaScene";
 import { MagnesiumBurningScene } from "./MagnesiumBurningScene";
 import { IronCombustionScene } from "./IronCombustionScene";
+import { ElectrolysisWaterScene } from "./ElectrolysisWaterScene";
+import { CopperZincCellScene } from "./CopperZincCellScene";
 
 export default function Lab3DCanvas({
   slug,
@@ -24,9 +26,12 @@ export default function Lab3DCanvas({
   slug: string;
   reagents: string[];
 }) {
-  const { contents, result, addReagent, mix, reset } = useLabStore();
+  const { contents, result, energized, addReagent, mix, setEnergized, reset } = useLabStore();
   const has = (f: string) => contents.some((c) => c.formula === f);
   const reactedNow = Boolean(result?.reacted);
+  // 电化学实验（电解 / 原电池）：靠"接通电源"而非"混合反应"驱动现象
+  const ELECTRO = new Set(["electrolysis-water", "copper-zinc-cell"]);
+  const isElectro = ELECTRO.has(slug);
 
   // 各实验在 Canvas 外计算派生状态后构造场景（规避 R3F 跨 reconciler 订阅失效）
   function renderScene() {
@@ -115,6 +120,20 @@ export default function Lab3DCanvas({
             reacted={reactedNow && has("Fe") && has("H2O2")}
           />
         );
+      case "electrolysis-water":
+        return (
+          <ElectrolysisWaterScene
+            hasLiquid={contents.length > 0}
+            energized={energized}
+          />
+        );
+      case "copper-zinc-cell":
+        return (
+          <CopperZincCellScene
+            hasMetals={has("Zn") && has("Cu")}
+            energized={energized}
+          />
+        );
       default:
         return null;
     }
@@ -146,14 +165,25 @@ export default function Lab3DCanvas({
           );
         })}
         <div className="mt-2 flex flex-col gap-2">
-          <button
-            type="button"
-            onClick={mix}
-            disabled={contents.length < 2}
-            className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
-          >
-            混合反应
-          </button>
+          {isElectro ? (
+            <button
+              type="button"
+              onClick={() => setEnergized(!energized)}
+              disabled={contents.length < 1}
+              className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
+            >
+              {energized ? "断开电源" : "接通电源"}
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={mix}
+              disabled={contents.length < 2}
+              className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
+            >
+              混合反应
+            </button>
+          )}
           <button
             type="button"
             onClick={reset}
