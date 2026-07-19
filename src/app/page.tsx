@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { allExperiments } from "@/data/experiments";
 
 // 首页：左对齐 Hero + 编号式工作流（替代通用三等分卡片），单一品牌青色调
+// 实验数量从目录动态读取，避免文案与实际脱节（曾写死 102 导致扩容后不同步）。
 export default function HomePage() {
+  const experimentCount = allExperiments.length;
   return (
     <main id="main" className="relative z-10 mx-auto max-w-5xl px-6 py-20 sm:py-28">
       <section className="flex max-w-3xl flex-col gap-6 animate-fade-up">
@@ -18,7 +21,7 @@ export default function HomePage() {
         </h1>
         <p className="max-w-xl text-lg leading-relaxed text-foreground/65">
           拖拽试剂、观察变色与气泡、随时向 AI 导师提问，
-          实验结束自动生成结构化报告。102 个经过验证的实验，安全可重复。
+          实验结束自动生成结构化报告。{experimentCount} 个经过验证的实验，安全可重复。
         </p>
         <div className="flex flex-wrap items-center gap-3 pt-2">
           <Link
