@@ -2,10 +2,7 @@
 
 // 3D 实验台画布：R3F Canvas + 灯光 + 轨道控制器，按 slug 选择 3D 场景。
 // 复用 labStore 状态与现有交互逻辑（加试剂/混合/清空），让 3D 与 2D 共享同一实验进程。
-import { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Lightformer, ContactShadows } from "@react-three/drei";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { SceneShell } from "./SceneShell";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { IronCopperScene } from "./IronCopperScene";
@@ -18,6 +15,7 @@ import { MagnesiumBurningScene } from "./MagnesiumBurningScene";
 import { IronCombustionScene } from "./IronCombustionScene";
 import { ElectrolysisWaterScene } from "./ElectrolysisWaterScene";
 import { CopperZincCellScene } from "./CopperZincCellScene";
+import { TitrationLab } from "./TitrationLab";
 
 export default function Lab3DCanvas({
   slug,
@@ -26,6 +24,12 @@ export default function Lab3DCanvas({
   slug: string;
   reagents: string[];
 }) {
+  // 酸碱中和滴定有独立的定量交互（旋塞开度/滴数/终点判定），单独成台
+  if (slug === "acid-base-titration") return <TitrationLab />;
+  return <Lab3DGeneric slug={slug} reagents={reagents} />;
+}
+
+function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) {
   const { contents, result, energized, addReagent, mix, setEnergized, reset } = useLabStore();
   const has = (f: string) => contents.some((c) => c.formula === f);
   const reactedNow = Boolean(result?.reacted);
@@ -199,53 +203,8 @@ export default function Lab3DCanvas({
         )}
       </aside>
 
-      {/* 3D 画布 */}
-      <div className="relative h-[520px] overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6]">
-        <Canvas
-          shadows
-          camera={{ position: [2.8, 2.0, 4.4], fov: 40 }}
-          dpr={[1, 2]}
-          gl={{ antialias: true, alpha: false }}
-        >
-          <color attach="background" args={["#d3dce4"]} />
-          <ambientLight intensity={0.85} />
-          <directionalLight
-            position={[4, 7, 4]}
-            intensity={2}
-            castShadow
-            shadow-mapSize={[2048, 2048]}
-            shadow-camera-near={0.5}
-            shadow-camera-far={20}
-          />
-          <Suspense fallback={null}>
-            {renderScene()}
-            {/* 程序化环境光：自发光面光源构成反射环境，无需外网 HDR */}
-            <Environment resolution={256}>
-              <Lightformer intensity={2} position={[0, 3, 2]} scale={[4, 4, 1]} color="#ffffff" />
-              <Lightformer intensity={1.2} position={[-3, 1, 1]} scale={[3, 3, 1]} color="#bcd8ff" />
-              <Lightformer intensity={1} position={[3, 1, -1]} scale={[3, 3, 1]} color="#ffe6c4" />
-            </Environment>
-            {/* 阴影平面须贴合台面（场景 group 位于 y=-1.0），略抬 0.005 避免 z-fighting */}
-            <ContactShadows position={[0, -0.995, 0]} opacity={0.35} scale={10} blur={2.6} far={4} />
-            <EffectComposer>
-              <Bloom luminanceThreshold={0.8} intensity={0.35} mipmapBlur radius={0.5} />
-            </EffectComposer>
-          </Suspense>
-          <OrbitControls
-            enablePan={false}
-            autoRotate
-            autoRotateSpeed={0.5}
-            target={[0, 0.2, 0]}
-            minDistance={3.5}
-            maxDistance={9}
-            minPolarAngle={Math.PI / 6}
-            maxPolarAngle={Math.PI / 2.2}
-          />
-        </Canvas>
-        <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/30 px-3 py-1 text-xs text-white/70 backdrop-blur">
-          拖拽旋转 · 滚轮缩放
-        </span>
-      </div>
+      {/* 3D 画布（灯光/环境/后处理统一由 SceneShell 提供） */}
+      <SceneShell>{renderScene()}</SceneShell>
     </div>
   );
 }

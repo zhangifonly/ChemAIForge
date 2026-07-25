@@ -15,6 +15,11 @@ export const EXPERIMENTS_WITH_3D = new Set<string>([
   // —— 燃烧与放热 ——
   "magnesium-burning", // 镁条燃烧：耀眼白光+白烟+白色氧化镁
   "o2-iron-combustion", // 铁丝在氧气中燃烧：火星四射+黑色熔珠
+  // —— 电化学 ——
+  "electrolysis-water", // 电解水：阴极产氢约 2 倍、阳极产氧 1 倍
+  "copper-zinc-cell", // 锌铜原电池：电流计偏转+铜片析氢
+  // —— 定量分析（精细场景，独立实现） ——
+  "acid-base-titration", // 酸碱中和滴定：可拖拽活塞控制滴速、终点半滴之差
 ]);
 
 export function has3D(slug: string): boolean {
