@@ -57,6 +57,7 @@ export function TitrationLab() {
     onSwirlToggle: () => setSwirl((s) => !s),
     onFinish,
     onReset,
+    onOpennessChange: setOpenness,
   };
 
   // 滴定装置是竖高构型（台面到管顶约 5.6 单位），画布须占满宽度才有足够纵向视野，

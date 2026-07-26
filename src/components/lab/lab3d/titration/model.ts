@@ -92,3 +92,22 @@ export function flaskLevelY(deliveredMl: number): number {
   const v = Math.min(TITRATION.buretteCapacityMl, Math.max(0, deliveredMl));
   return FLASK_LIQUID_TOP + v * 0.006;
 }
+
+/** 生成计时的单帧上限（秒）：防止切回标签页时把积压时间一次性倾出一堆液滴 */
+export const DROP_GEN_MAX_DT = 0.25;
+
+/**
+ * 单帧应生成的液滴数与残余计时。
+ * 关键：用真实帧间隔累加，不可复用物理步长的钳制值（0.05s），
+ * 否则低帧机器上滴速会被同比例拖慢 —— 等于"电脑越慢滴定越慢"。
+ */
+export function dropsThisFrame(
+  acc: number,
+  dt: number,
+  ratePerSec: number,
+): { count: number; acc: number } {
+  if (ratePerSec <= 0) return { count: 0, acc: 0 };
+  const next = acc + Math.min(dt, DROP_GEN_MAX_DT) * ratePerSec;
+  const count = Math.floor(next);
+  return { count, acc: next - count };
+}

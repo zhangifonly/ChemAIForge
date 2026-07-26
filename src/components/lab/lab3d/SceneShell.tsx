@@ -73,6 +73,9 @@ export function SceneShell({
           </EffectComposer>
         </Suspense>
         <OrbitControls
+          // makeDefault：让场景内的可拖拽部件能取到 controls 并在拖拽期间临时禁用它，
+          // 否则拖旋塞会同时旋转相机，部件从指针下跑掉、拖拽随即失效。
+          makeDefault
           enablePan={false}
           autoRotate={autoRotate}
           autoRotateSpeed={0.5}

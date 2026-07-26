@@ -3,9 +3,9 @@
 // 酸碱中和滴定 3D 场景（精细标杆）：铁架台夹持酸式滴定管，下方锥形瓶盛待测氢氧化钠 + 酚酞。
 // 交互核心：拖拽旋塞控制滴速 → 液滴逐滴落下 → pH 下降 → 酚酞粉红渐褪 → 终点判定。
 // 现象化学依据全部来自 titration/model.ts（已单测），本组件只负责呈现。
-import { useState, useRef, useCallback, useMemo } from "react";
+import { useState, useRef, useCallback, useMemo, useEffect } from "react";
 import { Html } from "@react-three/drei";
-import type { ThreeEvent } from "@react-three/fiber";
+import { useThree, type ThreeEvent } from "@react-three/fiber";
 import { LabBench } from "./LabPrimitives";
 import { Stand } from "./titration/Stand";
 import { Burette, BURETTE_TIP_Y } from "./titration/Burette";
@@ -59,7 +59,7 @@ export function TitrationScene({
       {/* 滴定管：夹在铁架台上，尖嘴对准锥形瓶口 */}
       <group position={[0, BURETTE_BASE_Y, 0]}>
         <Burette deliveredMl={deliveredMl} openness={openness} />
-        <StopcockHandle openness={openness} onChange={onOpennessChange} />
+        <StopcockHandle openness={openness} onChange={onOpennessChange} ready={ready} />
       </group>
       {/* 液滴：从尖嘴落到瓶内液面（液面随体积上升，落点同步跟随） */}
       {ready && <Drops rate={rate} fromY={TIP_WORLD_Y} landY={levelY} onLand={onDrop} />}
@@ -86,14 +86,21 @@ export function TitrationScene({
 function StopcockHandle({
   openness,
   onChange,
+  ready,
 }: {
   openness: number;
   onChange: (v: number) => void;
+  /** 待测液是否已就位；未就位时开旋塞无意义，需明确告知而非静默无反应 */
+  ready: boolean;
 }) {
   const dragging = useRef(false);
   const startX = useRef(0);
   const startVal = useRef(0);
   const [hover, setHover] = useState(false);
+
+  // 拖拽期间必须禁用 OrbitControls：否则相机跟着转，旋塞从指针下移开，拖拽中断
+  const controls = useThree((s) => s.controls) as { enabled: boolean } | null;
+  const gl = useThree((s) => s.gl);
 
   // 按下时抓取指针：否则鼠标一移出旋塞球体，onPointerMove 就断了，拖不动
   const onDown = useCallback(
@@ -102,28 +109,47 @@ function StopcockHandle({
       dragging.current = true;
       startX.current = e.clientX;
       startVal.current = openness;
+      if (controls) controls.enabled = false;
       (e.target as Element | null)?.setPointerCapture?.(e.pointerId);
     },
-    [openness],
+    [openness, controls],
   );
 
   const onMove = useCallback(
     (e: ThreeEvent<PointerEvent>) => {
       if (!dragging.current) return;
+      e.stopPropagation();
+      // 未取待测液时旋塞开了也不该出液（标签已提示"先取待测液"），锁住避免假状态
+      if (!ready) return;
       const dx = e.clientX - startX.current;
       // 拖 200px 对应全开，便于精细控制半滴
       onChange(Math.min(1, Math.max(0, startVal.current + dx / 200)));
     },
-    [onChange],
+    [onChange, ready],
   );
 
-  const onUp = useCallback((e: ThreeEvent<PointerEvent>) => {
-    dragging.current = false;
-    (e.target as Element | null)?.releasePointerCapture?.(e.pointerId);
-  }, []);
+  const onUp = useCallback(
+    (e: ThreeEvent<PointerEvent>) => {
+      dragging.current = false;
+      if (controls) controls.enabled = true;
+      (e.target as Element | null)?.releasePointerCapture?.(e.pointerId);
+    },
+    [controls],
+  );
+
+  // 悬停时把光标改成左右拖动样式：3D 里没有这个反馈，用户不知道此处可拖
+  useEffect(() => {
+    if (!hover && !dragging.current) return;
+    const el = gl.domElement;
+    const prev = el.style.cursor;
+    el.style.cursor = "ew-resize";
+    return () => {
+      el.style.cursor = prev;
+    };
+  }, [hover, gl]);
 
   return (
-    <group position={[0, -0.24, 0.24]}>
+    <group position={[0, -0.24, 0.24]} scale={[1.15, 0.85, 1]}>
       <mesh
         onPointerDown={onDown}
         onPointerMove={onMove}
@@ -131,16 +157,27 @@ function StopcockHandle({
         onPointerOver={() => setHover(true)}
         onPointerLeave={() => setHover(false)}
       >
-        <sphereGeometry args={[0.24, 16, 12]} />
-        <meshBasicMaterial transparent opacity={hover ? 0.18 : 0.06} color="#38bdf8" />
+        {/* 热区半径 0.24 时屏幕上只有约 40px，太难瞄；放大到 0.42（约 70px）
+            并做成横向扁球，契合"左右拖动"的操作方向 */}
+        <sphereGeometry args={[0.42, 20, 14]} />
+        <meshBasicMaterial transparent opacity={hover ? 0.16 : 0.05} color="#38bdf8" />
       </mesh>
-      <Html center distanceFactor={7} position={[0.55, 0.1, 0]}>
+      {/* 提示标签必须整体穿透指针：drei Html 的外层包裹 div 默认 pointer-events:auto，
+          会盖在旋塞热区上方把 pointerdown 吃掉，导致旋塞根本拖不动。
+          仅给内层文字加 pointer-events-none 不够，须用 style 关掉外层容器。 */}
+      <Html
+        center
+        distanceFactor={7}
+        position={[0.62, 0.34, 0]}
+        style={{ pointerEvents: "none" }}
+        zIndexRange={[10, 0]}
+      >
         <div className="pointer-events-none select-none whitespace-nowrap rounded-full bg-black/55 px-2 py-0.5 text-[11px] text-white backdrop-blur">
-          {hover
-            ? "按住左右拖动 · 右为开大"
-            : openness <= 0.001
-              ? "← 拖动旋塞开始滴定"
-              : `开度 ${Math.round(openness * 100)}%`}
+          {!ready
+            ? "先取待测液 →"
+            : hover || openness > 0.001
+              ? `开度 ${Math.round(openness * 100)}% · 按住左右拖动`
+              : "← 拖动旋塞开始滴定"}
         </div>
       </Html>
     </group>

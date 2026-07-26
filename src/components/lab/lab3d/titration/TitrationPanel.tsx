@@ -24,6 +24,8 @@ export interface TitrationPanelProps {
   onSwirlToggle: () => void;
   onFinish: () => void;
   onReset: () => void;
+  /** 旋塞开度变更（面板滑块与 3D 旋塞共用同一状态） */
+  onOpennessChange: (v: number) => void;
 }
 
 /** 读数 + 曲线（数据列） */
@@ -43,7 +45,43 @@ export function TitrationControls(props: TitrationPanelProps) {
   return (
     <div className="flex flex-col gap-3">
       <Actions {...props} />
+      <StopcockSlider {...props} />
       {finished && <Verdict deliveredMl={deliveredMl} />}
+    </div>
+  );
+}
+
+/**
+ * 旋塞开度滑块：3D 场景里的部件无法被 Tab 聚焦，键盘与读屏用户拖不到旋塞。
+ * 这里提供等价的开度输入（与 3D 旋塞双向同步），保证滴定不是只能靠鼠标完成。
+ */
+function StopcockSlider({ ready, openness, finished, onOpennessChange }: TitrationPanelProps) {
+  if (!ready) return null;
+  const pct = Math.round(openness * 100);
+  return (
+    <div className="rounded-xl border border-foreground/15 bg-surface/70 px-3 py-2">
+      <label
+        htmlFor="stopcock-openness"
+        className="flex items-center justify-between text-xs text-foreground/70"
+      >
+        <span>旋塞开度</span>
+        <span className="font-mono tabular-nums text-foreground/85">{pct}%</span>
+      </label>
+      <input
+        id="stopcock-openness"
+        type="range"
+        min={0}
+        max={100}
+        step={1}
+        value={pct}
+        disabled={finished}
+        onChange={(e) => onOpennessChange(Number(e.target.value) / 100)}
+        aria-describedby="stopcock-hint"
+        className="mt-1.5 w-full accent-brand-500 disabled:opacity-40"
+      />
+      <p id="stopcock-hint" className="mt-1 text-[11px] text-foreground/45">
+        与 3D 旋塞联动 · 开度越大滴速越快，逐滴控制用 10%～20%
+      </p>
     </div>
   );
 }
@@ -114,6 +152,7 @@ function Curve({ deliveredMl }: { deliveredMl: number }) {
 /** 操作按钮区 */
 function Actions({
   ready,
+  deliveredMl,
   swirl,
   finished,
   onPrepare,
@@ -122,6 +161,8 @@ function Actions({
   onFinish,
   onReset,
 }: TitrationPanelProps) {
+  // 满量程后加半滴不再有效，按钮须真禁用；否则点了没反应，用户会以为界面坏了
+  const full = deliveredMl >= TITRATION.buretteCapacityMl - 1e-9;
   return (
     <div className="flex flex-col gap-2">
       {!ready ? (
@@ -137,10 +178,10 @@ function Actions({
           <button
             type="button"
             onClick={onHalfDrop}
-            disabled={finished}
-            className="rounded-xl border border-brand-400/50 bg-brand-500/10 px-3 py-2 text-sm font-medium transition-all hover:bg-brand-500/20 disabled:opacity-40"
+            disabled={finished || full}
+            className="rounded-xl border border-brand-400/50 bg-brand-500/10 px-3 py-2 text-sm font-medium transition-all hover:bg-brand-500/20 disabled:cursor-not-allowed disabled:opacity-40"
           >
-            加半滴（{(DROP_ML / 2).toFixed(3)} mL）
+            {full ? "滴定管已放空（50 mL）" : `加半滴（${(DROP_ML / 2).toFixed(3)} mL）`}
           </button>
           <button
             type="button"

@@ -6,6 +6,7 @@ import { useRef, useMemo, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import type { InstancedMesh, Mesh } from "three";
 import { Object3D, MathUtils } from "three";
+import { dropsThisFrame } from "./model";
 
 const MAX_DROPS = 24;
 const G = 5.2; // 视觉重力
@@ -42,21 +43,19 @@ export function Drops({ rate, fromY, landY, onLand }: DropsProps) {
 
   useFrame((_, dt) => {
     if (!inst.current) return;
+    // 物理步长钳制以免掉帧时穿透液面；但生成计时必须用真实 dt，
+    // 否则低帧率机器上滴速会被同比例拖慢（实测只剩设定值的三分之一），
+    // 相当于"电脑越慢滴定越慢"。上限 0.25s 防止切回标签页时瞬间倾出一堆滴。
     const d = Math.min(dt, 0.05);
-    // 按滴速生成新滴
-    if (rate > 0) {
-      st.acc += d * rate;
-      while (st.acc >= 1) {
-        st.acc -= 1;
-        const i = st.alive.indexOf(0);
-        if (i >= 0) {
-          st.alive[i] = 1;
-          st.y[i] = fromY;
-          st.v[i] = 0;
-        }
-      }
-    } else {
-      st.acc = 0;
+    // 按滴速生成新滴（生成量的计算在 model.ts，有单测覆盖帧率解耦）
+    const gen = dropsThisFrame(st.acc, dt, rate);
+    st.acc = gen.acc;
+    for (let k = 0; k < gen.count; k++) {
+      const i = st.alive.indexOf(0);
+      if (i < 0) break;
+      st.alive[i] = 1;
+      st.y[i] = fromY;
+      st.v[i] = 0;
     }
     // 自由落体推进
     for (let i = 0; i < MAX_DROPS; i++) {

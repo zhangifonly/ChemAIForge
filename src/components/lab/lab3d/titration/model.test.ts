@@ -13,6 +13,8 @@ import {
   flaskLevelY,
   FLASK_LIQUID_TOP,
   FLASK_MOUTH_Y,
+  dropsThisFrame,
+  DROP_GEN_MAX_DT,
 } from "./model";
 
 
@@ -140,5 +142,51 @@ describe("锥形瓶液面高度", () => {
     expect(flaskLevelY(50)).toBeLessThan(FLASK_MOUTH_Y);
     expect(flaskLevelY(-5)).toBe(FLASK_LIQUID_TOP);
     expect(flaskLevelY(999)).toBe(flaskLevelY(50));
+  });
+});
+
+describe("液滴生成计时与帧率解耦", () => {
+  /** 以帧步长 dt 跑 frames 帧，返回总滴数 */
+  const total = (dt: number, frames: number, rate: number) => {
+    let acc = 0;
+    let n = 0;
+    for (let i = 0; i < frames; i++) {
+      const r = dropsThisFrame(acc, dt, rate);
+      acc = r.acc;
+      n += r.count;
+    }
+    return n;
+  };
+
+  it("低帧率与 60fps 在同样墙钟时间内滴数一致", () => {
+    const fast = total(1 / 60, 600, 2); // 60fps × 10 秒
+    const slow = total(1 / 8, 80, 2); // 8fps × 10 秒（帧步长仍在上限内）
+    // 2 滴/秒 × 10 秒 ≈ 20 滴；浮点累加允许 1 滴误差，但两种帧率不得系统性偏差
+    for (const n of [fast, slow]) {
+      expect(n).toBeGreaterThanOrEqual(19);
+      expect(n).toBeLessThanOrEqual(20);
+    }
+    expect(Math.abs(fast - slow)).toBeLessThanOrEqual(1);
+  });
+
+  it("单帧生成量受 DROP_GEN_MAX_DT 上限约束（防止切回标签页倾泻）", () => {
+    const r = dropsThisFrame(0, 30, 6);
+    expect(r.count).toBe(Math.floor(DROP_GEN_MAX_DT * 6));
+  });
+
+  it("关闭旋塞时清零累计器，不留下半滴", () => {
+    const r = dropsThisFrame(0.9, 1 / 60, 0);
+    expect(r).toEqual({ count: 0, acc: 0 });
+  });
+
+  it("余量跨帧累加，慢滴速下也能凑出整滴", () => {
+    let acc = 0;
+    let n = 0;
+    for (let i = 0; i < 35; i++) {
+      const r = dropsThisFrame(acc, 0.2, 0.5); // 0.5 滴/秒，共 7 秒
+      acc = r.acc;
+      n += r.count;
+    }
+    expect(n).toBe(3); // 单帧只累积 0.1 滴，仍须跨帧凑出 3 滴
   });
 });
