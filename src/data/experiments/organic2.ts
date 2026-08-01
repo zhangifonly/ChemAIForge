@@ -147,7 +147,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "试管夹"],
     objectives: ["认识淀粉水解", "掌握中和后检验", "验证水解产物"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "硝酸银", "氨水"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    // 主导现象是银镜析出（水解产物检验），热效应由外部水浴提供而非反应自身
+    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "硝酸银", "氨水"], expect: { reacted: true, colorChange: true, precipitate: true, thermal: "none" } },
   },
   {
     slug: "starch-hydrolysis-iodine",

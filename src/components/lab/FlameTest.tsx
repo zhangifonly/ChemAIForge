@@ -3,23 +3,11 @@
 // 焰色反应装置：铂丝蘸取金属盐在酒精灯外焰上灼烧，火焰呈现该金属离子的特征焰色。
 // 纯展示组件，焰色由所选金属盐决定（钠黄、钾紫、钙砖红、铜绿等）。
 
-// 金属盐化学式 / 名称 → 特征焰色
-const FLAME_COLOR: { test: RegExp; color: string; outer: string; label: string }[] = [
-  { test: /Na|钠/, color: "#ffd24a", outer: "#ffb13c", label: "钠 · 黄色" },
-  { test: /^K|钾/, color: "#d08be0", outer: "#a85fd0", label: "钾 · 紫色（透过蓝色钴玻璃）" },
-  { test: /Ca|钙/, color: "#ff8a5c", outer: "#e85a2c", label: "钙 · 砖红色" },
-  { test: /Cu|铜/, color: "#7fe0a0", outer: "#3fae6e", label: "铜 · 绿色" },
-  { test: /Sr|锶/, color: "#ff6a7c", outer: "#e0394c", label: "锶 · 洋红色" },
-  { test: /Ba|钡/, color: "#bfe07a", outer: "#9bc04a", label: "钡 · 黄绿色" },
-  { test: /Li|锂/, color: "#ff7a8c", outer: "#e0495c", label: "锂 · 紫红色" },
-];
-
-const DEFAULT = { color: "#7ec8ff", outer: "#4a9be0", label: "酒精灯本色（蘸取金属盐后观察）" };
+// 焰色数据在 lib/chem/flameColor.ts，与 3D 焰色装置共用一份，避免两视图颜色不一致
+import { flameColor } from "@/lib/chem/flameColor";
 
 export function FlameTest({ sample }: { sample?: string }) {
-  const hit = sample
-    ? FLAME_COLOR.find((c) => c.test.test(sample)) ?? DEFAULT
-    : DEFAULT;
+  const hit = flameColor(sample);
 
   return (
     <svg

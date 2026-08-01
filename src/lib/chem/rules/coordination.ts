@@ -113,6 +113,107 @@ export const coordinationRules: Reaction[] = [
     }),
   },
   {
+    id: "silver-ammonia",
+    name: "银氨溶液配制",
+    // AgNO₃ 中滴氨水：先生成白色 AgOH/Ag₂O 沉淀，继续加氨至沉淀恰好溶解得银氨溶液
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["AgNO3"]) && hasAnyFormula(inputs, ["NH3·H2O", "NH3"]),
+    build: () => ({
+      products: [
+        { formula: "[Ag(NH3)2]+", name: "二氨合银配离子", category: "salt" },
+      ],
+      producesGas: false,
+      // 加氨过程中确有白色沉淀先出现，是这个实验的关键观察点
+      producesPrecipitate: true,
+      colorChange: false,
+      thermal: "none",
+      phTrend: "increase",
+      equation: "Ag⁺ + 2NH₃ → [Ag(NH₃)₂]⁺（沉淀先生成后溶解）",
+      description:
+        "硝酸银中逐滴加入氨水，先析出白色沉淀，继续滴加至沉淀恰好溶解，即得澄清的银氨溶液。",
+    }),
+  },
+  {
+    id: "zinc-ammonia",
+    name: "锌氨配离子",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["ZnSO4", "ZnCl2", "Zn(NO3)2"]) &&
+      hasAnyFormula(inputs, ["NH3·H2O", "NH3"]),
+    build: () => ({
+      products: [
+        { formula: "[Zn(NH3)4]2+", name: "锌氨配离子", category: "salt" },
+      ],
+      producesGas: false,
+      producesPrecipitate: true,
+      colorChange: false,
+      thermal: "none",
+      phTrend: "increase",
+      equation: "Zn²⁺ + 4NH₃ → [Zn(NH₃)₄]²⁺（白色沉淀先生成后溶解）",
+      description:
+        "锌盐中加少量氨水生成白色氢氧化锌沉淀，氨水过量时沉淀溶解为无色锌氨配离子。",
+    }),
+  },
+  {
+    id: "nickel-ammonia",
+    name: "镍氨配离子显色",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["NiCl2", "NiSO4", "Ni(NO3)2"]) &&
+      hasAnyFormula(inputs, ["NH3·H2O", "NH3"]),
+    build: () => ({
+      products: [
+        { formula: "[Ni(NH3)6]2+", name: "六氨合镍配离子", category: "salt" },
+      ],
+      producesGas: false,
+      producesPrecipitate: true,
+      colorChange: true,
+      thermal: "none",
+      phTrend: "increase",
+      equation: "Ni²⁺ + 6NH₃ → [Ni(NH₃)₆]²⁺（浅绿 → 蓝紫）",
+      description:
+        "镍盐加氨水先生成浅绿色氢氧化镍沉淀，氨水过量后溶解为蓝紫色六氨合镍配离子。",
+    }),
+  },
+  {
+    id: "nickel-dimethylglyoxime",
+    name: "镍与二乙酮肟显色",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["NiCl2", "NiSO4", "Ni(NO3)2"]) &&
+      hasAnyFormula(inputs, ["C4H8N2O2"]),
+    build: () => ({
+      products: [
+        { formula: "Ni(DMG)2", name: "二乙酮肟镍", category: "salt" },
+      ],
+      producesGas: false,
+      producesPrecipitate: true,
+      colorChange: true,
+      thermal: "none",
+      phTrend: "neutral",
+      equation: "Ni²⁺ + 2HDMG → Ni(DMG)₂↓（鲜红）",
+      description:
+        "弱碱性条件下镍离子与二乙酮肟生成鲜红色螯合沉淀，是镍的特征鉴别反应，灵敏度极高。",
+    }),
+  },
+  {
+    id: "aluminum-hydroxide-amphoteric",
+    name: "氢氧化铝两性溶解",
+    // 既溶于酸又溶于强碱，是"两性"最经典的演示；碱中生成偏铝酸盐
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["Al(OH)3"]) && hasAnyFormula(inputs, ["NaOH", "KOH"]),
+    build: () => ({
+      products: [
+        { formula: "NaAlO2", name: "偏铝酸钠", category: "salt" },
+      ],
+      producesGas: false,
+      producesPrecipitate: false,
+      colorChange: false,
+      thermal: "none",
+      phTrend: "increase",
+      equation: "Al(OH)₃ + NaOH → NaAlO₂ + 2H₂O",
+      description:
+        "白色氢氧化铝沉淀在强碱中溶解为无色澄清的偏铝酸钠溶液，与它溶于酸的行为共同体现两性。",
+    }),
+  },
+  {
     id: "phenol-fecl3",
     name: "苯酚与氯化铁显色",
     match: (inputs) =>

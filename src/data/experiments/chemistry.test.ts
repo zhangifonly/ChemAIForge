@@ -13,7 +13,8 @@ import { resolveSubstance } from "@/components/lab/reagents";
 
 // 描述里紧跟这些词出现的物质是「产物」而非试剂，不应要求出现在 reagents 中
 // （如"溶于稀硫酸生成蓝色硫酸铜溶液"里的硫酸铜、"水解为葡萄糖"里的葡萄糖）。
-const PRODUCT_MARKERS = "生成|析出|水解为|转化为|变为|得到|放出|产生|制得";
+const PRODUCT_MARKERS =
+  "生成|析出|水解为|转化为|变为|得到|放出|产生|制得|逸出|冒出|还原产物为|氧化产物为";
 
 /** 会在描述里被点名、且必须作为试剂出现的物质关键字 */
 const NAMED_SUBSTANCES = [

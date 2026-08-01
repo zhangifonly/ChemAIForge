@@ -20,6 +20,16 @@ import { metal2Experiments } from "./metal2";
 import { organic2Experiments } from "./organic2";
 import { thermo2Experiments } from "./thermo2";
 import { analysis2Experiments } from "./analysis2";
+import { acidBase3Experiments } from "./acid-base3";
+import { gas3Experiments } from "./gas3";
+import { precipitation3Experiments } from "./precipitation3";
+import { redox3Experiments } from "./redox3";
+import { metal3Experiments } from "./metal3";
+import { coordination3Experiments } from "./coordination3";
+import { organic3Experiments } from "./organic3";
+import { thermo3Experiments } from "./thermo3";
+import { analysis3Experiments } from "./analysis3";
+import { electrochem3Experiments } from "./electrochem3";
 
 export const allExperiments: ExperimentSeed[] = [
   ...acidBaseExperiments,
@@ -41,6 +51,16 @@ export const allExperiments: ExperimentSeed[] = [
   ...organic2Experiments,
   ...thermo2Experiments,
   ...analysis2Experiments,
+  ...acidBase3Experiments,
+  ...gas3Experiments,
+  ...precipitation3Experiments,
+  ...redox3Experiments,
+  ...metal3Experiments,
+  ...coordination3Experiments,
+  ...organic3Experiments,
+  ...thermo3Experiments,
+  ...analysis3Experiments,
+  ...electrochem3Experiments,
 ];
 
 export type { ExperimentSeed, ReactionProbe } from "./types";

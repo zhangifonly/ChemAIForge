@@ -52,6 +52,15 @@ export function hasAnyFormula(inputs: Substance[], formulas: string[]): boolean 
   return inputs.some((s) => formulas.includes(s.formula));
 }
 
+/**
+ * 判断某化学式对应的试剂是否为浓溶液。浓度不进化学式，只体现在试剂中文名里
+ * （"浓硫酸" / "稀硝酸"），而铜与浓硫酸放 SO₂、与浓硝酸放红棕 NO₂、与稀硝酸放
+ * 无色 NO，产物完全不同，故必须能从名称读出浓度。
+ */
+export function isConcentrated(inputs: Substance[], formula: string): boolean {
+  return inputs.some((s) => s.formula === formula && s.name.includes("浓"));
+}
+
 /** 是否包含全部指定化学式 */
 export function hasAllFormulas(inputs: Substance[], formulas: string[]): boolean {
   return formulas.every((f) => inputs.some((s) => s.formula === f));

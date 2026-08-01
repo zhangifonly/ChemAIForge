@@ -172,7 +172,8 @@ export const analysis2Experiments: ExperimentSeed[] = [
     apparatus: ["铂丝", "酒精灯"],
     objectives: ["区分钠钾焰色", "掌握铂丝清洗", "理解焰色反应原理"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["氯化钠", "氯化钾", "盐酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    // 焰色反应是元素的物理性质（电子跃迁），不是化学反应，故不设 probe；
+    // 其 3D 看点由铂丝 + 酒精灯的焰色装置提供，与 flame-test 一致
   },
   {
     slug: "titration-acid-base",

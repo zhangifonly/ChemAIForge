@@ -16,26 +16,84 @@ import { IronCombustionScene } from "./IronCombustionScene";
 import { ElectrolysisWaterScene } from "./ElectrolysisWaterScene";
 import { CopperZincCellScene } from "./CopperZincCellScene";
 import { TitrationLab } from "./TitrationLab";
+import { GenericScene, VESSEL_VIEW } from "./GenericScene";
+import { planScene } from "@/lib/chem/scenePlan";
+import { has3D } from "./registry";
+
+/** 视为"正在加热"的温度阈值（酒精灯点燃） */
+const HEAT_ON_TEMP = 60;
 
 export default function Lab3DCanvas({
   slug,
   reagents,
+  apparatus = [],
 }: {
   slug: string;
   reagents: string[];
+  apparatus?: string[];
 }) {
   // 酸碱中和滴定有独立的定量交互（旋塞开度/滴数/终点判定），单独成台
   if (slug === "acid-base-titration") return <TitrationLab />;
-  return <Lab3DGeneric slug={slug} reagents={reagents} />;
+  return <Lab3DGeneric slug={slug} reagents={reagents} apparatus={apparatus} />;
 }
 
-function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) {
-  const { contents, result, energized, addReagent, mix, setEnergized, reset } = useLabStore();
+function Lab3DGeneric({
+  slug,
+  reagents,
+  apparatus,
+}: {
+  slug: string;
+  reagents: string[];
+  apparatus: string[];
+}) {
+  const {
+    contents,
+    result,
+    energized,
+    readings,
+    addReagent,
+    mix,
+    setEnergized,
+    setTemperature,
+    reset,
+  } = useLabStore();
   const has = (f: string) => contents.some((c) => c.formula === f);
   const reactedNow = Boolean(result?.reacted);
   // 电化学实验（电解 / 原电池）：靠"接通电源"而非"混合反应"驱动现象
   const ELECTRO = new Set(["electrolysis-water", "copper-zinc-cell"]);
   const isElectro = ELECTRO.has(slug);
+  const heating = readings.temperature >= HEAT_ON_TEMP;
+  // 有专用手写场景的实验沿用其自带取景；其余走通用场景，按器皿造型取景
+  const refined = has3D(slug);
+  const plan = planScene({
+    contents,
+    result,
+    apparatus,
+    heated: heating,
+    // 装置类实验（电解 / 蒸馏 / 过滤 / 焰色）复用 energized 当作"装置启动"开关
+    rigActive: energized,
+    temperature: readings.temperature,
+  });
+  // 需要电源 / 电压表开关的装置：手写电化学场景 + 通用场景里的电解与原电池
+  const rigKind = plan.rig.kind;
+  const needsSwitch = isElectro || rigKind !== "none";
+  // 各装置的开关文案：让按钮说清"这一下会发生什么"
+  const SWITCH_LABEL: Record<string, [string, string]> = {
+    electrolysis: ["接通电源", "断开电源"],
+    cell: ["接通电路", "断开电路"],
+    "flame-test": ["点燃酒精灯", "熄灭酒精灯"],
+    "water-bath": ["开始水浴加热", "停止水浴加热"],
+    distillation: ["开始蒸馏", "停止蒸馏"],
+    filtration: ["开始过滤", "停止过滤"],
+    calorimeter: ["开始搅拌测温", "停止搅拌"],
+    "gas-collect": ["开始收集气体", "停止收集"],
+    titration: ["打开旋塞滴加", "关闭旋塞"],
+    syringe: ["压缩活塞加压", "拉回活塞减压"],
+    "ph-meter": ["打开 pH 计", "关闭 pH 计"],
+    evaporation: ["点燃酒精灯蒸发", "熄灭酒精灯"],
+    "pressure-drop": ["拧紧瓶盖振荡", "松开瓶盖"],
+  };
+  const [onLabel, offLabel] = SWITCH_LABEL[rigKind] ?? ["接通电源", "断开电源"];
 
   // 各实验在 Canvas 外计算派生状态后构造场景（规避 R3F 跨 reconciler 订阅失效）
   function renderScene() {
@@ -139,7 +197,9 @@ function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) 
           />
         );
       default:
-        return null;
+        // 未手写专用场景的实验走数据驱动通用场景：按引擎结果自动组装
+        // 器皿 / 液色 / 气泡 / 沉淀 / 火焰 / 加热，使 3D 覆盖全部实验。
+        return <GenericScene plan={plan} />;
     }
   }
 
@@ -169,16 +229,18 @@ function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) 
           );
         })}
         <div className="mt-2 flex flex-col gap-2">
-          {isElectro ? (
+          {/* 装置开关：电解 / 原电池 / 焰色 / 水浴 / 蒸馏 / 过滤 都靠"启动装置"驱动现象 */}
+          {needsSwitch && (
             <button
               type="button"
               onClick={() => setEnergized(!energized)}
               disabled={contents.length < 1}
               className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
             >
-              {energized ? "断开电源" : "接通电源"}
+              {energized ? offLabel : onLabel}
             </button>
-          ) : (
+          )}
+          {!isElectro && (
             <button
               type="button"
               onClick={mix}
@@ -186,6 +248,21 @@ function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) 
               className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
             >
               混合反应
+            </button>
+          )}
+          {/* 加热：通用场景在器皿下点燃酒精灯；水浴装置自带热源，无需这个按钮 */}
+          {!isElectro && rigKind !== "water-bath" && rigKind !== "flame-test" && (
+            <button
+              type="button"
+              onClick={() => setTemperature(heating ? 25 : 80)}
+              disabled={contents.length < 1}
+              className={`rounded-xl border px-3 py-2 text-sm transition-all disabled:cursor-not-allowed disabled:opacity-40 ${
+                heating
+                  ? "border-amber-500/60 bg-amber-500/12 text-amber-700 dark:text-amber-300"
+                  : "border-foreground/20 hover:border-amber-400/60"
+              }`}
+            >
+              {heating ? "🔥 停止加热" : "点燃酒精灯加热"}
             </button>
           )}
           <button
@@ -204,7 +281,10 @@ function Lab3DGeneric({ slug, reagents }: { slug: string; reagents: string[] }) 
       </aside>
 
       {/* 3D 画布（灯光/环境/后处理统一由 SceneShell 提供） */}
-      <SceneShell>{renderScene()}</SceneShell>
+      {/* 通用场景按器皿造型取景（试管细高需拉远抬高），专用场景沿用各自默认 */}
+      <SceneShell {...(refined ? {} : VESSEL_VIEW[plan.vessel])} autoRotate={false}>
+        {renderScene()}
+      </SceneShell>
     </div>
   );
 }

@@ -28,7 +28,10 @@ export function LabWorkbench({
   reagents: string[];
   apparatus: string[];
 }) {
-  const enable3D = has3D(slug);
+  // 通用 3D 场景已能按反应引擎结果自动组装现象，故所有实验都提供 3D 视图；
+  // registry 登记的是"有专用手写场景"的实验（表现更精细），非 3D 的开关。
+  const enable3D = true;
+  const refined3D = has3D(slug);
   const [mode, setMode] = useState<"2d" | "3d">("2d");
 
   return (
@@ -46,14 +49,14 @@ export function LabWorkbench({
                   : "text-foreground/60 hover:text-foreground/90"
               }`}
             >
-              {m === "2d" ? "2D 示意" : "3D 实验台"}
+              {m === "2d" ? "2D 示意" : refined3D ? "3D 实验台 ★" : "3D 实验台"}
             </button>
           ))}
         </div>
       )}
 
       {enable3D && mode === "3d" ? (
-        <Lab3DCanvas slug={slug} reagents={reagents} />
+        <Lab3DCanvas slug={slug} reagents={reagents} apparatus={apparatus} />
       ) : (
         <LabCanvas
           experimentId={experimentId}

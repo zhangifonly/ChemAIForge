@@ -6,14 +6,28 @@
 
 // 金属活动性顺序（越靠前越活泼，rank 越小）
 const METAL_RANK: Record<string, number> = {
-  K: 0, Ca: 1, Na: 2, Mg: 3, Al: 4, Zn: 5, Fe: 6, Sn: 7, Pb: 8,
+  // Cd / Ni / Co 位于 Fe 与 Sn 之间，用小数插入以免改动既有整数序位
+  K: 0, Ca: 1, Na: 2, Mg: 3, Al: 4, Zn: 5, Fe: 6,
+  Cd: 6.3, Co: 6.5, Ni: 6.7, Sn: 7, Pb: 8,
   Cu: 10, Hg: 11, Ag: 12, Pt: 13, Au: 14,
 };
 
 const METAL_NAME: Record<string, string> = {
   Mg: "镁", Al: "铝", Zn: "锌", Fe: "铁", Sn: "锡", Pb: "铅",
+  Cd: "镉", Co: "钴", Ni: "镍",
   Cu: "铜", Ag: "银",
 };
+
+/**
+ * a 是否比 b 更活泼（能把 b 从其盐溶液中置换出来）。
+ * 任一元素不在活动性顺序表中时返回 false——宁可不反应，也不臆断次序。
+ */
+export function isMoreActive(a: string, b: string): boolean {
+  const ra = METAL_RANK[a];
+  const rb = METAL_RANK[b];
+  if (ra === undefined || rb === undefined) return false;
+  return ra < rb;
+}
 
 /** 正极反应类型 */
 export type PositiveKind = "hydrogen" | "oxygen";

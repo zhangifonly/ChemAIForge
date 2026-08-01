@@ -28,7 +28,8 @@ export const precipitation2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "表面皿"],
     objectives: ["观察白色沉淀生成", "认识卤化银感光性", "联系照相与感光材料"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["硝酸银", "氯化钾"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    // 白色氯化银沉淀是即时现象；变黑属于光照后的缓慢感光过程，引擎不建模
+    probe: { reagentKeys: ["硝酸银", "氯化钾"], expect: { reacted: true, precipitate: true, thermal: "none" } },
   },
   {
     slug: "halide-fractional-precipitation",
