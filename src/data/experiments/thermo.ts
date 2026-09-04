@@ -16,6 +16,11 @@ export const thermoExperiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "温度计", "电子天平", "玻璃棒"],
     objectives: ["掌握溶解度概念", "探究温度影响", "绘制溶解度曲线"],
     estimatedMinutes: 60,
+    // 硝酸钾溶解显著吸热，这正是"升温使溶解度陡增"的热力学原因
+    probe: {
+      reagentKeys: ["硝酸钾", "蒸馏水"],
+      expect: { reacted: true, precipitate: false, thermal: "endothermic" },
+    },
   },
   {
     slug: "dissolution-heat",
@@ -27,6 +32,12 @@ export const thermoExperiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "温度计", "玻璃棒"],
     objectives: ["认识溶解热", "区分吸放热", "联系即热即冷包"],
     estimatedMinutes: 25,
+    // 三种盐是分别溶解的对照，probe 只取吸热那一支（硝酸铵）作代表：
+    // 若把 NaOH 与 NH₄NO₃ 放进同一杯，铵盐遇强碱会放出氨气，那是另一个反应
+    probe: {
+      reagentKeys: ["硝酸铵", "蒸馏水"],
+      expect: { reacted: true, gas: false, thermal: "endothermic" },
+    },
   },
   {
     slug: "neutralization-enthalpy",
@@ -113,6 +124,8 @@ export const thermoExperiments: ExperimentSeed[] = [
     apparatus: ["密封球管", "冷水浴", "热水浴"],
     objectives: ["认识平衡移动", "观察颜色变化", "理解勒夏特列原理"],
     estimatedMinutes: 30,
+    // 温度改变平衡位置，看点是红棕色深浅，故只断言变色
+    probe: { reagentKeys: ["二氧化氮", "四氧化二氮"], expect: { reacted: true, colorChange: true, gas: false, thermal: "none" } },
   },
   {
     slug: "instant-cold-pack",
@@ -124,6 +137,8 @@ export const thermoExperiments: ExperimentSeed[] = [
     apparatus: ["密封袋", "温度计"],
     objectives: ["应用溶解吸热", "测量降温幅度", "联系医用冷敷"],
     estimatedMinutes: 20,
+    // 冰袋的唯一看点是硝酸铵溶解吸热造成的温降
+    probe: { reagentKeys: ["硝酸铵", "蒸馏水"], expect: { reacted: true, thermal: "endothermic", gas: false, precipitate: false } },
   },
 ];
 

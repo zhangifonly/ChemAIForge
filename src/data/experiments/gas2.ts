@@ -28,6 +28,12 @@ export const gas2Experiments: ExperimentSeed[] = [
     apparatus: ["大试管", "酒精灯", "铁架台", "导管", "干燥管"],
     objectives: ["验证氢气的还原性", "观察氧化铜被还原为铜的颜色变化", "掌握先通气后加热、先撤灯后停气的操作顺序"],
     estimatedMinutes: 30,
+    // 黑色氧化铜被还原为亮红色铜，管口有水珠；氢气是反应物故不计产气
+    probe: {
+      reagentKeys: ["氢气", "氧化铜"],
+      heated: true,
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "h2-from-aluminum",
@@ -39,6 +45,8 @@ export const gas2Experiments: ExperimentSeed[] = [
     apparatus: ["锥形瓶", "分液漏斗", "导管", "集气瓶", "水槽"],
     objectives: ["掌握金属与碱反应制氢", "对比铝与酸、碱反应的差异", "巩固排水法收集氢气"],
     estimatedMinutes: 30,
+    // 铝与强碱反应放氢：铝的两性是本实验唯一看点
+    probe: { reagentKeys: ["铝片", "氢氧化钠"], expect: { reacted: true, gas: true, thermal: "exothermic", precipitate: false } },
   },
   {
     slug: "o2-from-kmno4",
@@ -50,6 +58,8 @@ export const gas2Experiments: ExperimentSeed[] = [
     apparatus: ["大试管", "铁架台", "酒精灯", "导管", "集气瓶", "水槽"],
     objectives: ["掌握加热固体制氧气", "理解试管口略向下倾斜与棉花团的作用", "学会排水法收集与检验氧气"],
     estimatedMinutes: 20,
+    // 单一反应物的分解反应，必须加热才发生
+    probe: { reagentKeys: ["高锰酸钾"], heated: true, expect: { reacted: true, gas: true } },
   },
   {
     slug: "o2-iron-combustion",
@@ -65,7 +75,7 @@ export const gas2Experiments: ExperimentSeed[] = [
   },
   {
     slug: "o2-magnesium-combustion",
-    title: "镁条在氧气中燃烧",
+    title: "自制氧气中点燃镁条",
     description: "以二氧化锰催化过氧化氢制氧气，点燃镁条伸入集气瓶，观察耀眼白光与白色固体生成。",
     category: C.GAS,
     difficulty: D.EASY,
@@ -117,11 +127,12 @@ export const gas2Experiments: ExperimentSeed[] = [
     description: "用碳酸钙与稀盐酸制得的二氧化碳含有氯化氢和水蒸气，先通过饱和碳酸氢钠溶液除氯化氢，再用浓硫酸干燥。",
     category: C.GAS,
     difficulty: D.HARD,
-    reagents: ["碳酸钙", "盐酸", "碳酸氢钠", "硫酸"],
+    // 干燥剂是浓硫酸（吸水），制气用的才是稀盐酸
+    reagents: ["碳酸钙", "盐酸", "碳酸氢钠", "浓硫酸"],
     apparatus: ["洗气瓶", "干燥管", "导管", "集气瓶"],
     objectives: ["理解制气产物中的杂质来源", "掌握洗气除杂与浓硫酸干燥", "明确洗气瓶长进短出的连接方向"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["碳酸钙", "盐酸", "碳酸氢钠", "硫酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["碳酸钙", "盐酸", "碳酸氢钠", "浓硫酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
   },
   {
     slug: "hcl-preparation",
@@ -129,11 +140,17 @@ export const gas2Experiments: ExperimentSeed[] = [
     description: "用氯化钠固体与浓硫酸微热反应制取氯化氢气体，观察其在潮湿空气中形成白雾，并溶于水得盐酸。",
     category: C.GAS,
     difficulty: D.MEDIUM,
-    reagents: ["氯化钠", "硫酸", "石蕊"],
+    // 制 HCl 靠浓硫酸的高沸点把挥发性酸置换出来，稀硫酸不行
+    reagents: ["氯化钠", "浓硫酸", "石蕊"],
     apparatus: ["圆底烧瓶", "分液漏斗", "酒精灯", "导管", "洗气瓶"],
     objectives: ["掌握难挥发性酸制挥发性酸的原理", "认识氯化氢的极易溶与酸性", "了解向上排空气法收集"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["氯化钠", "硫酸", "石蕊"], expect: { reacted: true, colorChange: true } },
+    // 原 probe 写"硫酸"（稀），引擎判不反应却因石蕊在场被"指示剂变色"兜住，
+    // 于是 reacted:true 通过了测试 —— 掩盖了整个制气反应根本没发生
+    probe: {
+      reagentKeys: ["氯化钠", "浓硫酸", "石蕊"],
+      expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "nh3-from-ammonium-sulfate",
@@ -193,6 +210,8 @@ export const gas2Experiments: ExperimentSeed[] = [
     apparatus: ["洗气瓶", "导管", "集气瓶"],
     objectives: ["掌握氯气尾气的碱液吸收", "理解有毒气体不得直排的环保要求", "认识氯气与碱反应的产物"],
     estimatedMinutes: 30,
+    // 尾气吸收：黄绿色氯气被碱液吸收褪色，无气体逸出即吸收成功
+    probe: { reagentKeys: ["氯气", "氢氧化钠"], expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "so2-reduce-kmno4",

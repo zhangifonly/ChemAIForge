@@ -17,7 +17,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["圆底烧瓶", "分液漏斗", "酒精灯", "铁架台", "集气瓶", "导管"],
     objectives: ["掌握实验室制氯气的原理与装置", "理解稀盐酸不能被二氧化锰氧化的原因", "学会用碱液吸收氯气尾气"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["二氧化锰", "浓盐酸"], expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["二氧化锰", "浓盐酸"],
+      heated: true, expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "kmno4-concentrated-hcl-chlorine",
@@ -29,7 +30,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["圆底烧瓶", "分液漏斗", "集气瓶", "导管", "铁架台"],
     objectives: ["比较高锰酸钾与二氧化锰的氧化性强弱", "掌握无需加热的制氯气方案", "规范处理有毒尾气"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["高锰酸钾", "浓盐酸"], expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["高锰酸钾", "浓盐酸"],
+      heated: true, expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "kclo3-mno2-oxygen",
@@ -41,7 +43,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "酒精灯", "铁架台", "集气瓶", "导管", "水槽"],
     objectives: ["掌握氯酸钾制氧的原理", "理解催化剂的定义与特征", "学会排水法收集氧气与验满"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["氯酸钾", "二氧化锰"], expect: { reacted: true, gas: true, thermal: "endothermic" } },
+    probe: { reagentKeys: ["氯酸钾", "二氧化锰"],
+      heated: true, expect: { reacted: true, gas: true, thermal: "endothermic" } },
   },
   {
     slug: "iron-burning-chlorine",
@@ -53,7 +56,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "酒精灯", "坩埚钳", "石棉网"],
     objectives: ["观察铁在氯气中燃烧的棕褐色烟", "理解氧化剂强弱决定产物价态", "对比铁与盐酸只生成亚铁盐"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["铁丝", "氯气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铁丝", "氯气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "copper-burning-chlorine",
@@ -65,7 +69,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "酒精灯", "坩埚钳"],
     objectives: ["观察铜在氯气中的燃烧现象", "理解氯气可直接氧化不活泼金属", "认识氯化铜溶液的颜色"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["铜片", "氯气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铜片", "氯气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "hydrogen-burning-chlorine",
@@ -77,7 +82,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "尖嘴导管", "铁架台"],
     objectives: ["观察苍白色火焰与瓶口白雾", "理解光照下该反应会爆炸的危险性", "联系工业合成盐酸的工艺"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["氢气", "氯气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氢气", "氯气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "sodium-burning-chlorine",
@@ -89,7 +95,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "石棉网", "坩埚钳", "酒精灯"],
     objectives: ["观察钠在氯气中燃烧的黄色火焰与白烟", "理解离子化合物由单质直接化合而成", "掌握活泼金属的安全操作"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["金属钠", "氯气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["金属钠", "氯气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "zinc-concentrated-sulfuric-so2",
@@ -197,7 +204,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["尖嘴导管", "烧杯", "集气瓶", "铁架台"],
     objectives: ["观察甲烷燃烧的淡蓝色火焰", "用两步检验确认产物为 CO₂ 与 H₂O", "理解烃完全燃烧的通式"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["甲烷", "氧气"], expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["甲烷", "氧气"],
+      heated: true, expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "carbon-monoxide-burning",
@@ -209,7 +217,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["尖嘴导管", "集气瓶", "烧杯", "铁架台"],
     objectives: ["观察一氧化碳燃烧的蓝色火焰", "验证产物为二氧化碳", "认识一氧化碳中毒的机理与防范"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["一氧化碳", "氧气"], expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["一氧化碳", "氧气"],
+      heated: true, expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "red-phosphorus-oxygen-smoke",
@@ -221,7 +230,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "燃烧匙", "酒精灯", "石棉网"],
     objectives: ["观察红磷燃烧的黄光与白烟", "认识五氧化二磷的吸湿性", "理解测定空气含氧量的实验设计"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["红磷", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["红磷", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "zinc-oxygen-blue-green",
@@ -233,7 +243,8 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["燃烧匙", "集气瓶", "酒精灯"],
     objectives: ["观察锌燃烧的蓝绿色光", "认识氧化锌的外观与用途", "对比不同金属燃烧的焰色差异"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["锌粒", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["锌粒", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "dichromate-sulfite-green",
@@ -258,5 +269,17 @@ export const redox3Experiments: ExperimentSeed[] = [
     objectives: ["观察亚铁被氧化的颜色变化", "用硫氰化钾确认铁(III)的生成", "理解双氧水作氧化剂的绿色特性"],
     estimatedMinutes: 25,
     probe: { reagentKeys: ["过氧化氢", "硫酸亚铁"], expect: { reacted: true, colorChange: true } },
+  },
+  {
+    slug: "sulfite-reduce-fe3",
+    title: "亚硫酸盐还原铁(III)离子",
+    description: "亚硫酸钠滴入棕黄色氯化铁溶液，颜色褪为浅绿并生成硫酸根，与上一实验的双氧水氧化亚铁正好构成一对可逆的价态互变。",
+    category: C.REDOX,
+    difficulty: D.MEDIUM,
+    reagents: ["氯化铁", "亚硫酸钠"],
+    apparatus: ["试管", "胶头滴管", "试管架"],
+    objectives: ["观察棕黄褪为浅绿的价态变化", "认识亚硫酸盐作还原剂", "对比铁的两个价态如何互相转化"],
+    estimatedMinutes: 20,
+    probe: { reagentKeys: ["氯化铁", "亚硫酸钠"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
 ];

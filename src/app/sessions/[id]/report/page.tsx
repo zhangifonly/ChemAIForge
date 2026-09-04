@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getSession } from "@/server/session";
 import { getExperimentById } from "@/server/experiments/service";
 import { MeasurementChart } from "@/components/session/measurement-chart";
+import { GenerateReportButton } from "@/components/session/generate-report-button";
 
 // 实验报告页：服务端查询会话，展示 AI 结构化报告（结论/误差/改进/掌握评估）
 // 与 measurements 折线图。未生成报告时引导用户先行生成。
@@ -73,15 +74,15 @@ export default async function SessionReportPage({
             title="知识点掌握评估"
             body={report.knowledgeAssessment}
           />
+          <GenerateReportButton sessionId={session.id} regenerate />
         </>
       ) : (
-        <p className="rounded-2xl border border-foreground/10 bg-surface/50 p-4 text-sm text-foreground/60 backdrop-blur">
-          尚未生成报告。请在实验结束后调用生成接口
-          <code className="mx-1 rounded bg-brand-500/10 px-1.5 py-0.5 text-xs text-brand-700 dark:text-brand-300">
-            POST /api/sessions/{session.id}/report
-          </code>
-          后刷新本页查看。
-        </p>
+        <div className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
+          <p className="text-sm text-foreground/60">
+            尚未生成报告。AI 会依据本次实验的操作步骤与测量读数，给出结论、误差分析、改进建议与掌握评估。
+          </p>
+          <GenerateReportButton sessionId={session.id} />
+        </div>
       )}
     </main>
   );

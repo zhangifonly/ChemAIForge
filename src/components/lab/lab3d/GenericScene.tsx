@@ -59,7 +59,13 @@ export function GenericScene({ plan }: { plan: ScenePlan }) {
       <Vessel kind={plan.vessel}>
         {plan.liquid && <VesselLiquid kind={plan.vessel} tint={plan.liquid} fill={FILL} />}
         {/* 金属固体：沉在液底（无液时直接置于器皿底） */}
-        {plan.solid && <MetalSolid formula={plan.solid.formula} y={g.floorY + 0.06} />}
+        {plan.solid && (
+          <MetalSolid
+            formula={plan.solid.formula}
+            y={g.floorY + 0.06}
+            dissolving={plan.solid.dissolving}
+          />
+        )}
         {/* 气泡：电解时贴着两极冒（阴极氢气约为阳极氧气的 2 倍），其余自液底整体升起 */}
         {plan.bubbles && plan.rig.kind === "electrolysis" && plan.rig.active ? (
           <>

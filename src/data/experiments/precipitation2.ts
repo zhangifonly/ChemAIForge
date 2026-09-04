@@ -173,6 +173,8 @@ export const precipitation2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "玻璃棒", "漏斗", "滤纸"],
     objectives: ["了解海水提镁流程", "制取氢氧化镁", "认识廉价碱的选择"],
     estimatedMinutes: 30,
+    // 沉淀富集第一步：石灰乳把 Mg²⁺ 转为氢氧化镁沉淀，过滤才有料
+    probe: { reagentKeys: ["氯化镁", "氢氧化钙"], expect: { reacted: true, precipitate: true, gas: false, colorChange: false } },
   },
   {
     slug: "caco3-acid-dissolution",

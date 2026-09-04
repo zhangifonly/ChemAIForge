@@ -10,11 +10,22 @@ import type { Reaction } from "./helpers";
 import { hasAnyFormula, hasFormula } from "./helpers";
 
 /** 溶解显著放热的物质：水合热大于晶格能，无水盐比结晶水合物更明显 */
+// ⚠️ 不要把 CaO / Na2O 等碱性氧化物放进来：它们遇水是化合反应（CaO + H₂O →
+// Ca(OH)₂），不是溶解，归 oxide.ts 的 basic-oxide-water 处理。
 const EXOTHERMIC_SOLUTES = [
-  "NaOH", "KOH", "CaO", "H2SO4", "Na2CO3", "CaCl2", "MgSO4",
+  "NaOH", "KOH", "H2SO4", "Na2CO3", "CaCl2", "MgSO4",
   // 无水硫酸铜溶解放热并由白变蓝，是检验乙醇中微量水的经典试剂
-  "CuSO4", "AlCl3", "Al2(SO4)3", "MgCl2", "LiCl", "Na2O",
+  "CuSO4", "AlCl3", "Al2(SO4)3", "MgCl2", "LiCl",
 ];
+
+/**
+ * 适合重结晶提纯的固体：溶解度随温度陡增，冷却时能大量析出。
+ * 苯甲酸 / 水杨酸 / 乙酰苯胺是有机实验的经典对象。
+ *
+ * ⚠️ 不要放 KNO₃：它虽然也靠冷却析晶，但在本目录里承担的是「测溶解度曲线」
+ * 实验（看点为温度-溶解度关系，非晶体），放进来会把那条实验的现象换掉。
+ */
+const RECRYSTALLIZABLE = ["C7H6O3", "C6H5COOH", "C8H9NO"];
 
 /** 溶解显著吸热的物质：晶格能大于水合热，常用于速冷袋 */
 const ENDOTHERMIC_SOLUTES = [
@@ -62,6 +73,31 @@ export const dissolutionRules: Reaction[] = [
         phTrend: "unknown" as const,
         equation: `${solute.formula}(s) --H₂O--> ${solute.formula}(aq)  ΔH < 0`,
         description: `${solute.name}溶于水时水合放出的热量大于破坏晶格吸收的热量，溶液温度升高。`,
+      };
+    },
+  },
+  {
+    id: "recrystallization",
+    name: "重结晶提纯",
+    // 重结晶的看点不是温度计，而是「热水里溶清、冷下来析出晶体」这一往复：
+    // 溶解度随温度陡增的固体才适用，杂质因量少始终不饱和而留在母液中。
+    // 必须排在通用溶解吸热之前，否则只会报一句"温度下降"，看不到晶体
+    match: (inputs) =>
+      hasFormula(inputs, "H2O") &&
+      hasAnyFormula(inputs, RECRYSTALLIZABLE) &&
+      inputs.length === 2,
+    build: (inputs) => {
+      const solute = inputs.find((s) => RECRYSTALLIZABLE.includes(s.formula))!;
+      return {
+        products: [{ ...solute, name: `${solute.name}晶体` }],
+        producesGas: false,
+        // 冷却后析出的晶体在 3D 里就是容器底部的固相
+        producesPrecipitate: true,
+        colorChange: true,
+        thermal: "endothermic" as const,
+        phTrend: "unknown" as const,
+        equation: `${solute.formula}(s) --热H₂O--> 饱和溶液 --冷却--> ${solute.formula}(晶体)↓`,
+        description: `${solute.name}的溶解度随温度显著变化：热水中配成饱和溶液后趁热过滤除去不溶杂质，冷却时溶解度骤降而析出较大晶体，可溶杂质因浓度远未饱和留在母液中。这就是重结晶提纯的原理，晶体析出越慢越纯净。`,
       };
     },
   },

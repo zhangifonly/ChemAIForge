@@ -1,16 +1,24 @@
 // 沉淀 / 复分解反应规则
 // 覆盖常见难溶物生成：BaSO4、CaCO3、Cu(OH)2、Fe(OH)3、AgBr/AgI、Mg(OH)2 等。
 // 每条按特定离子组合（化学式）匹配，特异性高，需排在通用规则之前。
+import type { Substance } from "../engine";
 import type { Reaction } from "./helpers";
 import { hasAnyFormula } from "./helpers";
 
 // 构造一条「双指定组：A 组任一 + B 组任一 → 沉淀」的复分解规则
+//
+// resolve 用于同一条规则会生成不同沉淀的情形：卤化银就是典型 ——
+// AgCl 白、AgBr 淡黄、AgI 黄，颜色差异正是「按沉淀色区分卤离子」的全部依据，
+// 原先统一返回占位符 AgX，色表查不到便一律回退白色，四个鉴别实验在 3D 里
+// 长得一模一样，恰好把这类实验唯一的观察点抹掉了。
 function precipitate(opts: {
   id: string;
   name: string;
   groupA: string[];
   groupB: string[];
   product: { formula: string; name: string };
+  /** 按实际投料细化产物；返回 null 时用 opts.product 兜底 */
+  resolve?: (inputs: Substance[]) => { formula: string; name: string } | null;
   color?: boolean;
   equation: string;
   description: string;
@@ -20,8 +28,10 @@ function precipitate(opts: {
     name: opts.name,
     match: (inputs) =>
       hasAnyFormula(inputs, opts.groupA) && hasAnyFormula(inputs, opts.groupB),
-    build: () => ({
-      products: [{ ...opts.product, category: "salt" as const }],
+    build: (inputs) => ({
+      products: [
+        { ...(opts.resolve?.(inputs) ?? opts.product), category: "salt" as const },
+      ],
       producesGas: false,
       producesPrecipitate: true,
       colorChange: opts.color ?? false,
@@ -32,6 +42,13 @@ function precipitate(opts: {
     }),
   };
 }
+
+/** 卤离子源 → 生成的卤化银。碘化物优先判定，避免 KI 被含 I 的其它式子抢先 */
+const SILVER_HALIDE: Array<{ sources: string[]; formula: string; name: string }> = [
+  { sources: ["KI", "NaI"], formula: "AgI", name: "碘化银" },
+  { sources: ["KBr", "NaBr"], formula: "AgBr", name: "溴化银" },
+  { sources: ["KCl", "NaCl"], formula: "AgCl", name: "氯化银" },
+];
 
 export const precipitationRules: Reaction[] = [
   precipitate({
@@ -97,8 +114,13 @@ export const precipitationRules: Reaction[] = [
     groupA: ["AgNO3"],
     groupB: ["KBr", "NaBr", "KI", "NaI"],
     product: { formula: "AgX", name: "卤化银" },
+    // 按实际卤离子给出具体的卤化银，让 3D 呈现 AgCl 白 / AgBr 淡黄 / AgI 黄的差异
+    resolve: (inputs) =>
+      SILVER_HALIDE.find((h) => hasAnyFormula(inputs, h.sources)) ?? null,
     color: true,
     equation: "Ag⁺ + X⁻ → AgX↓",
-    description: "硝酸银与溴/碘化物生成浅黄至黄色卤化银沉淀。",
+    description:
+      "硝酸银与卤化物生成卤化银沉淀，颜色由氯到碘依次加深：AgCl 白、AgBr 淡黄、AgI 黄，" +
+      "这一颜色梯度正是区分三种卤离子的依据。",
   }),
 ];

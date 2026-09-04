@@ -29,3 +29,6 @@ next-env.d.ts
 
 # prisma
 /prisma/*.db
+
+# TTS 生成失败清单（运行产物，供重跑排查）
+/public/audio/lesson/*-failed.txt

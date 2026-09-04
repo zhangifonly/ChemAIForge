@@ -10,6 +10,7 @@ export const oxidantRules: Reaction[] = [
   {
     id: "mno2-concentrated-hcl-chlorine",
     name: "实验室制氯气",
+    requiresHeat: true,
     // 只有浓盐酸才被氧化出氯气，稀盐酸不行；这是浓度决定反应能否发生的
     // 典型例子，故必须读试剂名里的「浓」字
     match: (inputs) =>
@@ -40,6 +41,7 @@ export const oxidantRules: Reaction[] = [
   {
     id: "kclo3-decompose",
     name: "氯酸钾分解制氧",
+    requiresHeat: true,
     // 二氧化锰只作催化剂，不出现在产物里；未加催化剂时分解温度高得多，
     // 这正是"催化剂改变反应条件"的教材实验
     match: (inputs) => hasAnyFormula(inputs, ["KClO3"]) && hasAnyFormula(inputs, ["MnO2"]),
@@ -56,6 +58,30 @@ export const oxidantRules: Reaction[] = [
       equation: "2KClO₃ --MnO₂/Δ--> 2KCl + 3O₂↑",
       description:
         "氯酸钾在二氧化锰催化下受热分解放出氧气，带火星的木条复燃即可验证。催化剂本身质量与化学性质不变。",
+    }),
+  },
+  {
+    id: "kmno4-decompose",
+    name: "高锰酸钾分解制氧",
+    requiresHeat: true,
+    // 必须限定"容器里只有高锰酸钾"：KMnO₄ 还在十几个实验里作强氧化剂
+    // （氧化草酸、亚铁、浓盐酸制氯气…），若只判断"含 KMnO₄"，本条会抢在
+    // 那些规则之前命中，把它们统统变成分解制氧。
+    match: (inputs) => inputs.length === 1 && inputs[0].formula === "KMnO4",
+    build: () => ({
+      products: [
+        { formula: "O2", name: "氧气", category: "gas" },
+        { formula: "K2MnO4", name: "锰酸钾", category: "salt" },
+        { formula: "MnO2", name: "二氧化锰", category: "oxide" },
+      ],
+      producesGas: true,
+      producesPrecipitate: false,
+      colorChange: true,
+      thermal: "endothermic",
+      phTrend: "neutral",
+      equation: "2KMnO₄ --Δ--> K₂MnO₄ + MnO₂ + O₂↑",
+      description:
+        "加热紫黑色高锰酸钾固体，分解放出氧气，带火星的木条复燃即可验证。试管口需塞一团棉花，防止高锰酸钾粉末随气流进入导管。",
     }),
   },
   {

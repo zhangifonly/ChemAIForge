@@ -73,6 +73,8 @@ export const electrochemExperiments: ExperimentSeed[] = [
     apparatus: ["电流计", "导线", "发光二极管"],
     objectives: ["认识原电池构成", "判断正负极", "理解能量转化"],
     estimatedMinutes: 25,
+    // 水果电池的化学本质是锌被果酸腐蚀放氢，电流由此而来
+    probe: { reagentKeys: ["锌", "柠檬酸"], expect: { reacted: true, gas: true, thermal: "exothermic", precipitate: false } },
   },
   {
     slug: "daniell-cell",
@@ -107,6 +109,10 @@ export const electrochemExperiments: ExperimentSeed[] = [
     apparatus: ["具支试管", "导管", "红墨水"],
     objectives: ["认识吸氧腐蚀", "对比析氢腐蚀", "联系金属防护"],
     estimatedMinutes: 40,
+    probe: {
+      reagentKeys: ["铁", "食盐", "蒸馏水"],
+      expect: { reacted: true, gas: false, precipitate: true, thermal: "none" },
+    },
   },
   {
     slug: "impressed-current-protection",
@@ -269,10 +275,16 @@ export const electrochemExperiments: ExperimentSeed[] = [
     description: "将发黑银器与铝箔置于热碳酸钠溶液中构成原电池，使硫化银还原为银。",
     category: C.ELECTROCHEM,
     difficulty: D.MEDIUM,
-    reagents: ["碳酸钠", "蒸馏水", "银", "铝"],
+    // 反应物是银器表面的黑锈「硫化银」，不是银单质本身 —— 写成"银"引擎就找不到
+    // 被还原的对象，3D 台上只是一块泡在水里的金属
+    reagents: ["碳酸钠", "蒸馏水", "硫化银", "铝"],
     apparatus: ["铝箔", "烧杯", "酒精灯"],
     objectives: ["认识原电池还原", "理解除锈原理", "联系生活应用"],
     estimatedMinutes: 30,
+    probe: {
+      reagentKeys: ["碳酸钠", "蒸馏水", "硫化银", "铝"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "electrolysis-ki-solution",

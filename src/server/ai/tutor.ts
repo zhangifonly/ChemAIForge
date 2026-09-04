@@ -28,6 +28,13 @@ export interface TutorRequestBody {
 }
 
 const DEFAULT_MAX_TOKENS = 1024;
+/**
+ * 空闲超时：多久收不到新数据才算卡死，而不是"整段对话的总时长上限"。
+ *
+ * 流式回答持续输出十几秒到几十秒是常态（max_tokens 有 1024），
+ * 按总时长计时会把正常的长回答拦腰截断 —— 学生看到导师说到一半就断了。
+ * 改成每收到一块增量就重新计时，只有真正停止输出才中断。
+ */
 const DEFAULT_TIMEOUT_MS = 30000;
 
 // 构造资深化学导师 system prompt，注入实验标题/目标等上下文
@@ -103,10 +110,14 @@ export async function* streamTutorReply(
   const body = buildTutorPrompt(experiment, context);
 
   const controller = new AbortController();
-  const timeout = setTimeout(
-    () => controller.abort(),
-    context.timeoutMs ?? DEFAULT_TIMEOUT_MS,
-  );
+  const idleMs = context.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  // 每收到一块增量就重新计时，只有真正停止输出才中断（见 DEFAULT_TIMEOUT_MS 说明）
+  const armTimeout = () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => controller.abort(), idleMs);
+  };
+  armTimeout();
 
   let response: Response;
   try {
@@ -138,14 +149,25 @@ export async function* streamTutorReply(
     );
   }
 
+  const reader = response.body.getReader();
   try {
-    const reader = response.body.getReader();
     const decoder = new TextDecoder();
     let buffer = "";
     for (;;) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      buffer += decoder.decode(value, { stream: true });
+      let chunk: ReadableStreamReadResult<Uint8Array>;
+      try {
+        chunk = await reader.read();
+      } catch (err) {
+        // 读取中途被空闲超时 abort 时抛的是 AbortError，不转换的话
+        // 上层会把它当成"上游异常"原样透出，排障时完全指错方向
+        if (err instanceof Error && err.name === "AbortError") {
+          throw new Error("AI 导师响应超时，请稍后重试。");
+        }
+        throw err;
+      }
+      if (chunk.done) break;
+      armTimeout(); // 收到数据即续期：正在稳定输出的长回答不该被判为超时
+      buffer += decoder.decode(chunk.value, { stream: true });
       const lines = buffer.split("\n");
       buffer = lines.pop() ?? "";
       for (const line of lines) {
@@ -155,5 +177,9 @@ export async function* streamTutorReply(
     }
   } finally {
     clearTimeout(timeout);
+    // 主动断开上游：调用方提前 return()（用户关页面 / 重新提问）时，
+    // 只清定时器不取消 reader，上游连接会一直挂着继续计费。
+    // 已正常读完时 cancel 是无害的 no-op。
+    await reader.cancel().catch(() => {});
   }
 }

@@ -8,7 +8,7 @@ import type { ExperimentSeed } from "./types";
 export const gas3Experiments: ExperimentSeed[] = [
   {
     slug: "aluminum-naoh-hydrogen",
-    title: "铝与氢氧化钠溶液制氢气",
+    title: "铝的两性：与强碱反应放氢",
     description: "铝片投入氢氧化钠溶液持续冒出氢气并放热，说明铝既溶于酸也溶于强碱，是两性金属的直接证据。",
     category: C.GAS,
     difficulty: D.MEDIUM,
@@ -28,7 +28,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "坩埚钳", "酒精灯", "石棉网"],
     objectives: ["观察镁在纯氧中的剧烈燃烧", "认识金属氧化物的生成", "掌握观察强光实验的护眼措施"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["镁条", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["镁条", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "sulfur-oxygen-blue-flame",
@@ -40,7 +41,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["燃烧匙", "集气瓶", "酒精灯", "洗气瓶"],
     objectives: ["对比硫在空气与纯氧中的火焰", "认识二氧化硫的刺激性", "掌握有毒气体的碱液吸收"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["硫粉", "氧气"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["硫粉", "氧气"],
+      heated: true, expect: { reacted: true, gas: true, thermal: "exothermic" } },
   },
   {
     slug: "iron-wire-oxygen-sparks",
@@ -52,7 +54,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "坩埚钳", "酒精灯"],
     objectives: ["观察铁在纯氧中的剧烈燃烧", "理解氧浓度对燃烧剧烈程度的影响", "掌握垫沙防止瓶底炸裂的操作"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["铁片", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铁片", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "charcoal-oxygen-white-glow",
@@ -64,7 +67,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["集气瓶", "坩埚钳", "酒精灯"],
     objectives: ["观察木炭在纯氧中的白光燃烧", "检验燃烧产物二氧化碳", "对比在空气与纯氧中的现象差异"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["木炭", "氧气"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["木炭", "氧气"],
+      heated: true, expect: { reacted: true, gas: true, thermal: "exothermic" } },
   },
   {
     slug: "hydrogen-oxygen-quiet-flame",
@@ -76,7 +80,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["尖嘴导管", "烧杯", "集气瓶", "酒精灯"],
     objectives: ["观察氢气燃烧的淡蓝色火焰", "由水珠确认产物是水", "强调点燃氢气前必须验纯"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["氢气", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氢气", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "hydrogen-reduce-fe2o3",
@@ -88,7 +93,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["大试管", "酒精灯", "铁架台", "干燥管", "导管"],
     objectives: ["验证氢气的还原性", "观察氧化铁被还原的颜色变化", "掌握防止爆炸的操作顺序"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["氢气", "氧化铁"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氢气", "氧化铁"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "co-reduce-cuo-tail-gas",
@@ -100,7 +106,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["硬质玻璃管", "酒精灯", "铁架台", "导管", "洗气瓶"],
     objectives: ["验证一氧化碳的还原性", "检验产物二氧化碳", "理解有毒尾气必须处理的原因"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["一氧化碳", "氧化铜"], expect: { reacted: true, gas: true, colorChange: true } },
+    probe: { reagentKeys: ["一氧化碳", "氧化铜"],
+      heated: true, expect: { reacted: true, gas: true, colorChange: true } },
   },
   {
     slug: "chlorine-naoh-bleach-liquid",
@@ -120,11 +127,11 @@ export const gas3Experiments: ExperimentSeed[] = [
     description: "氯气通入石灰乳，浑浊体系吸收氯气后黄绿色消失，得到以次氯酸钙为有效成分的漂白粉。",
     category: C.GAS,
     difficulty: D.MEDIUM,
-    reagents: ["氯气", "氢氧化钙"],
+    reagents: ["氯气", "石灰乳"],
     apparatus: ["洗气瓶", "导管", "烧杯", "玻璃棒"],
     objectives: ["理解工业漂白粉的制备原理", "认识次氯酸钙是有效成分", "解释漂白粉需密封保存的原因"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["氯气", "氢氧化钙"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氯气", "石灰乳"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "ammonia-water-fountain",
@@ -144,11 +151,12 @@ export const gas3Experiments: ExperimentSeed[] = [
     description: "分别蘸取浓氨水与浓盐酸的两根玻璃棒靠近，空中立即产生大量白烟氯化铵，是两者互相检验的经典现象。",
     category: C.GAS,
     difficulty: D.EASY,
-    reagents: ["氨气", "盐酸"],
+    // 同 ammonia-fountain-hcl：酸须为浓盐酸才挥发出 HCl
+    reagents: ["氨气", "浓盐酸"],
     apparatus: ["玻璃棒", "集气瓶", "表面皿"],
     objectives: ["观察气体间反应生成固体白烟", "掌握氨与氯化氢的互检方法", "区分白烟与白雾的概念"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["氨气", "盐酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氨气", "浓盐酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "copper-air-heating-black",
@@ -160,7 +168,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["坩埚钳", "酒精灯", "石棉网"],
     objectives: ["观察铜被氧气氧化的颜色变化", "认识铜的两种价态氧化物", "为氧化还原循环实验作准备"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["铜片", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铜片", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "ethanol-oxygen-combustion",
@@ -172,7 +181,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["蒸发皿", "集气瓶", "烧杯"],
     objectives: ["观察乙醇的完全燃烧火焰", "检验燃烧产物", "对比完全燃烧与不完全燃烧的现象"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["乙醇", "氧气"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["乙醇", "氧气"],
+      heated: true, expect: { reacted: true, gas: true, thermal: "exothermic" } },
   },
   {
     slug: "sodium-oxygen-peroxide",
@@ -184,7 +194,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["坩埚", "泥三角", "酒精灯", "铁架台", "镊子"],
     objectives: ["理解反应条件影响产物", "观察钠燃烧的黄色火焰", "掌握活泼金属的取用与保存"],
     estimatedMinutes: 25,
-    probe: { reagentKeys: ["金属钠", "氧气"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["金属钠", "氧气"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "sodium-sulfide-acid-h2s",
@@ -228,11 +239,12 @@ export const gas3Experiments: ExperimentSeed[] = [
     description: "浓氨水与浓硝酸挥发出的气体相遇产生白烟硝酸铵，反应放热，是工业硝铵肥料合成的微型演示。",
     category: C.GAS,
     difficulty: D.MEDIUM,
-    reagents: ["氨气", "硝酸"],
+    // 挥发性酸须为浓硝酸
+    reagents: ["氨气", "浓硝酸"],
     apparatus: ["玻璃棒", "表面皿", "集气瓶"],
     objectives: ["观察挥发性酸与氨的成烟反应", "联系硝铵肥料的工业合成", "理解白烟是微小晶体的悬浮"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["氨气", "硝酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["氨气", "浓硝酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "co2-baoh2-precipitate",
@@ -268,7 +280,8 @@ export const gas3Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "胶头滴管", "玻璃棒"],
     objectives: ["观察弱酸与碳酸氢盐的产气", "联系发酵粉的生活应用", "由气体体积估算小苏打含量"],
     estimatedMinutes: 15,
-    probe: { reagentKeys: ["碳酸氢钠", "乙酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    // 小苏打 + 醋同样吸热
+    probe: { reagentKeys: ["碳酸氢钠", "乙酸"], expect: { reacted: true, gas: true, thermal: "endothermic" } },
   },
   {
     slug: "ammonium-chloride-lime-ammonia",

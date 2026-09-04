@@ -197,7 +197,7 @@ export const analysis2Experiments: ExperimentSeed[] = [
     apparatus: ["酸式滴定管", "锥形瓶", "移液管", "烧杯"],
     objectives: ["掌握氧化还原滴定", "利用自身指示终点", "计算还原剂含量"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic", gas: true } },
   },
   {
     slug: "edta-hardness-titration",

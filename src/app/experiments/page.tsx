@@ -27,17 +27,28 @@ export default function ExperimentsPage() {
 
     const controller = new AbortController();
     setLoading(true);
-    fetch(`/api/experiments?${params.toString()}`, {
-      signal: controller.signal,
-    })
-      .then((res) => (res.ok ? res.json() : []))
-      .then((data: ExperimentDTO[]) => setExperiments(data))
-      .catch(() => {
-        /* 请求被中止或失败时忽略 */
+    // 搜索框每敲一个字都会重跑本 effect，直接发请求等于一个字一次全量查询。
+    // 延迟 250ms 再发，期间继续输入就把上一次取消掉。
+    const timer = window.setTimeout(() => {
+      fetch(`/api/experiments?${params.toString()}`, {
+        signal: controller.signal,
       })
-      .finally(() => setLoading(false));
+        .then((res) => (res.ok ? res.json() : []))
+        .then((data: ExperimentDTO[]) => setExperiments(data))
+        .catch(() => {
+          /* 请求被中止或失败时忽略 */
+        })
+        .finally(() => {
+          // 被 abort 的旧请求也会走到这里，且时序上晚于新 effect 的 setLoading(true)，
+          // 若无条件置 false，骨架屏会提前消失、瞬间闪出"没有符合条件的实验"。
+          if (!controller.signal.aborted) setLoading(false);
+        });
+    }, 250);
 
-    return () => controller.abort();
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
   }, [filters]);
 
   return (

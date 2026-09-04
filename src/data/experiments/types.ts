@@ -25,6 +25,13 @@ export interface ReactionExpectation {
 export interface ReactionProbe {
   /** 参与核心反应的试剂中文名（须能被 resolveSubstance 解析）*/
   reagentKeys: string[];
+  /**
+   * 该实验的核心反应需要加热（点燃 / 灼烧 / 水浴 / 高温）。
+   *
+   * 引擎对声明了 requiresHeat 的规则在常温下不给结果，测试与画布默认演示
+   * 都得按加热条件去驱动，否则会把「需要加热」误判成「实验坏了」。
+   */
+  heated?: boolean;
   /** 预期现象 */
   expect: ReactionExpectation;
 }

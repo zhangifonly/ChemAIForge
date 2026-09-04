@@ -3,7 +3,7 @@
 // "氯气与碱制漂白液""氨气溶于水""氨与酸生成白烟"这几条引擎原先缺失的核心反应。
 // 这些反应的共同点是至少一方为气体，因此单独成文件，与 gas.ts（由固液制气）互补。
 import type { Reaction } from "./helpers";
-import { hasAnyFormula, hasCategory } from "./helpers";
+import { hasAnyFormula, hasCategory, isConcentrated } from "./helpers";
 
 /** 在氧气中燃烧的可燃物：化学式 → 产物与现象描述 */
 const O2_BURN: Record<
@@ -48,6 +48,7 @@ export const combustionRules: Reaction[] = [
   {
     id: "burn-in-oxygen",
     name: "物质在氧气中燃烧",
+    requiresHeat: true,
     // 必须有氧气 + 一种登记过的可燃物；产物与火焰颜色都由可燃物决定
     match: (inputs) =>
       hasAnyFormula(inputs, ["O2"]) &&
@@ -71,6 +72,7 @@ export const combustionRules: Reaction[] = [
   {
     id: "h2-reduce-oxide",
     name: "氢气还原金属氧化物",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ["H2", "CO"]) &&
       inputs.some((s) => s.formula in REDUCIBLE_OXIDE),
@@ -116,6 +118,7 @@ export const combustionRules: Reaction[] = [
   {
     id: "burn-in-chlorine",
     name: "金属在氯气中燃烧",
+    requiresHeat: true,
     // 氯气的氧化性使金属直接生成高价氯化物：铁在氯气中只生成 FeCl₃（棕黄烟），
     // 不会停在 FeCl₂，这是「氧化剂强弱决定产物价态」的关键证据
     match: (inputs) =>
@@ -211,8 +214,23 @@ export const combustionRules: Reaction[] = [
   {
     id: "ammonia-acid-smoke",
     name: "氨与挥发性酸生成白烟",
-    match: (inputs) =>
-      hasAnyFormula(inputs, ["NH3"]) && hasAnyFormula(inputs, ["HCl", "HNO3"]),
+    // 白烟发生在空气中而非溶液里：两根玻璃棒各蘸浓氨水与浓盐酸靠近，
+    // 挥发出的 NH₃ 与 HCl 在气相相遇成 NH₄Cl 微晶。因此判据有两条路 ——
+    //   ① 直接给氨气；
+    //   ② 给的是浓氨水且酸也是浓的（浓才挥发得出来）。
+    // 若两者都是稀溶液，倒在一起就只是普通中和，不该报白烟，
+    // 这时让位给 acidBaseNeutralization
+    match: (inputs) => {
+      const acid = hasAnyFormula(inputs, ["HCl", "HNO3"]);
+      if (!acid) return false;
+      if (hasAnyFormula(inputs, ["NH3"])) return true;
+      const concAmmonia = inputs.some(
+        (s) => s.formula === "NH3·H2O" && s.name.includes("浓"),
+      );
+      const concAcid =
+        isConcentrated(inputs, "HCl") || isConcentrated(inputs, "HNO3");
+      return concAmmonia && concAcid;
+    },
     build: (inputs) => {
       const isHCl = hasAnyFormula(inputs, ["HCl"]);
       return {

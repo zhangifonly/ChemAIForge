@@ -58,8 +58,14 @@ const ESTER_MAP: Record<string, { formula: string; name: string; equation: strin
   },
 };
 
-/** 参与酯化的羧酸与醇（供 pickEster 与 esterification.match 共用） */
-const ESTER_ACIDS = ["CH3COOH", "HCOOH", "C6H5COOH", "C2H5COOH"];
+/**
+ * 参与酯化的羧酸与醇（供 pickEster 与 esterification.match 共用）。
+ *
+ * ESTER_ACIDS 需导出：organic3.ts 的乙醇消去规则必须排除这些酸在场，
+ * 否则「乙酸 + 乙醇 + 浓硫酸」会被判成 170 ℃ 制乙烯。两处若各写一份表，
+ * 以后新增羧酸只改一处就会重新引入那个 bug
+ */
+export const ESTER_ACIDS = ["CH3COOH", "HCOOH", "C6H5COOH", "C2H5COOH"];
 const ESTER_ALCOHOLS = ["C2H5OH", "CH3OH", "C3H7OH", "C4H9OH"];
 
 /** 按输入的酸醇组合选出酯；组合不在表内时回退乙酸乙酯（最常见的教学酯） */
@@ -74,6 +80,7 @@ export const organicRules: Reaction[] = [
   {
     id: "saponification",
     name: "皂化反应",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ["fat"]) && hasAnyFormula(inputs, ["NaOH", "KOH"]),
     build: () => ({
@@ -94,6 +101,7 @@ export const organicRules: Reaction[] = [
   {
     id: "silver-mirror",
     name: "银镜反应",
+    requiresHeat: true,
     // 直接含醛基的物质可直接银镜；淀粉 / 蔗糖本身不能，须先在酸催化下水解出
     // 葡萄糖（教材做法：水解后用碱中和再加银氨），故这两者额外要求有酸参与
     match: (inputs) => {
@@ -121,6 +129,7 @@ export const organicRules: Reaction[] = [
   {
     id: "esterification",
     name: "酯化反应",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ESTER_ACIDS) &&
       hasAnyFormula(inputs, ESTER_ALCOHOLS) &&
@@ -149,6 +158,7 @@ export const organicRules: Reaction[] = [
     // 碱性水解（皂化型）：不可逆、更彻底，酯层消失得快，所以与酸性水解分开两条规则
     id: "ester-hydrolysis-base",
     name: "酯的碱性水解",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ESTER_FORMULAS) && hasAnyFormula(inputs, ["NaOH", "KOH"]),
     build: () => ({
@@ -158,8 +168,10 @@ export const organicRules: Reaction[] = [
       ],
       producesGas: false,
       producesPrecipitate: false,
-      // 上层油状酯层逐渐消失、体系由分层变均一，属于肉眼可见的外观变化
-      colorChange: true,
+      // 酯层消失属于「分层变化」而不是「颜色变化」：酯与产物乙酸钠、乙醇全是无色，
+      // 液色一动不动。这一路看点由 scenePlan 的 phase（酯层）承载，
+      // 标 colorChange 反而让 3D 去找一个不存在的颜色过渡
+      colorChange: false,
       thermal: "exothermic",
       phTrend: "decrease",
       equation: "CH₃COOC₂H₅ + NaOH --Δ--> CH₃COONa + C₂H₅OH",
@@ -169,6 +181,7 @@ export const organicRules: Reaction[] = [
   {
     id: "ester-hydrolysis-acid",
     name: "酯的酸性水解",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ESTER_FORMULAS) && hasAnyFormula(inputs, ["H2SO4", "HCl"]),
     build: () => ({
@@ -178,7 +191,8 @@ export const organicRules: Reaction[] = [
       ],
       producesGas: false,
       producesPrecipitate: false,
-      colorChange: true,
+      // 同碱性水解：产物无色，看点是酯层变薄（phase），不是变色
+      colorChange: false,
       thermal: "none",
       phTrend: "decrease",
       equation: "CH₃COOC₂H₅ + H₂O ⇌(稀硫酸,Δ) CH₃COOH + C₂H₅OH",

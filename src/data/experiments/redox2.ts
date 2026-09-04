@@ -28,6 +28,11 @@ export const redox2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察褪色与气泡", "认识双氧水还原性", "理解自身指示剂"],
     estimatedMinutes: 30,
+    // 此处 H₂O₂ 作还原剂被高锰酸钾氧化，放出氧气并使紫色褪去（见 rules/peroxide.ts）
+    probe: {
+      reagentKeys: ["高锰酸钾", "过氧化氢", "硫酸"],
+      expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "k2cr2o7-fe2",
@@ -39,6 +44,11 @@ export const redox2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "点滴板"],
     objectives: ["观察橙变绿", "认识铬价态变化", "书写氧化还原方程式"],
     estimatedMinutes: 30,
+    // 橙黄的 Cr₂O₇²⁻ 被 Fe²⁺ 还原成绿色 Cr³⁺，均相反应无沉淀无气体
+    probe: {
+      reagentKeys: ["重铬酸钾", "硫酸亚铁", "硫酸"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "k2cr2o7-ethanol",
@@ -50,6 +60,11 @@ export const redox2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察橙变绿", "认识乙醇被氧化", "联系酒驾检测"],
     estimatedMinutes: 30,
+    // 酒精检测仪原理：乙醇把橙色重铬酸钾还原为绿色铬(III)
+    probe: {
+      reagentKeys: ["重铬酸钾", "乙醇", "硫酸"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "thiosulfate-iodine-titration",
@@ -105,11 +120,14 @@ export const redox2Experiments: ExperimentSeed[] = [
     description: "加热铜片与浓硫酸，放出有刺激性的气体、溶液变蓝，认识浓硫酸的强氧化性（通风操作）。",
     category: C.REDOX,
     difficulty: D.HARD,
-    reagents: ["铜片", "硫酸"],
+    // 必须是「浓硫酸」：铜排在氢之后，稀硫酸与它完全不反应（这正是本实验要对比的
+    // 「与稀酸区别」）。只有浓硫酸的强氧化性才能溶铜并放出 SO₂
+    reagents: ["铜片", "浓硫酸"],
     apparatus: ["试管", "酒精灯", "铁架台", "导管"],
     objectives: ["认识浓硫酸氧化性", "观察气体与变蓝", "理解与稀酸区别"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["铜片", "硫酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铜片", "浓硫酸"],
+      heated: true, expect: { reacted: true, gas: true, thermal: "exothermic" } },
   },
   {
     slug: "silver-nitric-acid",
@@ -157,6 +175,11 @@ export const redox2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["认识Fe³⁺氧化性", "观察碘生成", "比较氧化性强弱"],
     estimatedMinutes: 30,
+    // Fe³⁺ 把 I⁻ 氧化成 I₂，淀粉随即显蓝；两个离子反应无热效应可测
+    probe: {
+      reagentKeys: ["氯化铁", "碘化钾", "淀粉"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "sulfite-iodine-reduction",
@@ -192,6 +215,10 @@ export const redox2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "酒精灯", "铁架台"],
     objectives: ["观察橙变绿", "认识草酸还原性", "理解铬被还原"],
     estimatedMinutes: 30,
+    probe: {
+      reagentKeys: ["草酸", "重铬酸钾", "硫酸"],
+      expect: { reacted: true, colorChange: true, thermal: "exothermic", gas: true },
+    },
   },
   {
     slug: "iodine-thiosulfate-decolor",

@@ -25,6 +25,19 @@ describe("实验目录 - 规模与唯一性", () => {
     expect(new Set(slugs).size).toBe(slugs.length);
     for (const slug of slugs) expect(slug).toMatch(SLUG_RE);
   });
+
+  // slug 唯一挡不住标题重复：目录扩到 500 个时曾出现 5 对标题一字不差的条目
+  //（碘钟反应、氯化银溶于氨水、氧化镁与盐酸反应…），在列表页显示成两条完全
+  // 相同的卡片，用户无法辨认该点哪个。侧重不同就该在标题里写清楚。
+  it("标题不重复", () => {
+    const dup = new Map<string, string[]>();
+    for (const e of allExperiments) {
+      const key = e.title.replace(/\s/g, "");
+      dup.set(key, [...(dup.get(key) ?? []), e.slug]);
+    }
+    const bad = [...dup.entries()].filter(([, v]) => v.length > 1);
+    expect(bad.map(([t, v]) => `${t}: ${v.join(", ")}`)).toEqual([]);
+  });
 });
 
 describe.each(allExperiments.map((e) => [e.slug, e] as const))(

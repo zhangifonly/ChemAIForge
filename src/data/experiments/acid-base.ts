@@ -17,7 +17,10 @@ export const acidBaseExperiments: ExperimentSeed[] = [
     apparatus: ["酸式滴定管", "锥形瓶", "移液管", "铁架台"],
     objectives: ["理解中和滴定原理与终点判断", "规范使用滴定管", "计算未知浓度"],
     estimatedMinutes: 45,
-    probe: { reagentKeys: ["盐酸", "氢氧化钠"], expect: { reacted: true, thermal: "exothermic" } },
+    probe: {
+      reagentKeys: ["0.1 mol/L 盐酸标准液", "待测氢氧化钠溶液"],
+      expect: { reacted: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "hcl-naoh-neutralization",
@@ -101,6 +104,8 @@ export const acidBaseExperiments: ExperimentSeed[] = [
     apparatus: ["pH 计", "比色卡", "玻璃棒", "表面皿"],
     objectives: ["掌握 pH 测定方法", "理解 pH 与酸碱性", "比较测量精度"],
     estimatedMinutes: 30,
+    // pH 试纸本身就是指示剂：核心可验证现象是它在酸中显色
+    probe: { reagentKeys: ["盐酸", "pH 试纸"], expect: { reacted: true, colorChange: true, gas: false, thermal: "none" } },
   },
   {
     slug: "weak-acid-ionization",
@@ -120,10 +125,13 @@ export const acidBaseExperiments: ExperimentSeed[] = [
     description: "测定碳酸钠、氯化铵、氯化钠溶液的 pH，探究盐类水解使溶液呈酸碱性的规律。",
     category: C.ACID_BASE,
     difficulty: D.HARD,
-    reagents: ["碳酸钠", "氯化铵", "氯化钠", "酚酞"],
+    // 三种盐都要配成溶液才能测 pH，蒸馏水是必需试剂（原表遗漏）
+    reagents: ["碳酸钠", "氯化铵", "氯化钠", "蒸馏水", "酚酞"],
     apparatus: ["试管", "pH 计", "胶头滴管"],
     objectives: ["理解盐类水解原理", "判断盐溶液酸碱性", "书写水解方程式"],
     estimatedMinutes: 40,
+    // 三种盐里只有碳酸钠水解显碱性，酚酞变红即判据
+    probe: { reagentKeys: ["碳酸钠", "蒸馏水", "酚酞"], expect: { reacted: true, colorChange: true, gas: false, thermal: "none" } },
   },
   {
     slug: "antacid-stomach",

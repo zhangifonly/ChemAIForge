@@ -135,6 +135,11 @@ export const analysisExperiments: ExperimentSeed[] = [
     apparatus: ["培养皿", "琼脂", "导线"],
     objectives: ["认识吸氧腐蚀", "理解微电池", "联系金属防护"],
     estimatedMinutes: 45,
+    // 双指示剂显示两极分区：阳极滕氏蓝、阴极酚酞红。腐蚀缓慢故无可测温升
+    probe: {
+      reagentKeys: ["铁", "食盐", "酚酞", "铁氰化钾"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "sacrificial-anode",
@@ -146,6 +151,11 @@ export const analysisExperiments: ExperimentSeed[] = [
     apparatus: ["培养皿", "导线", "电流计"],
     objectives: ["理解阴极保护", "对比腐蚀速率", "联系船舶防腐"],
     estimatedMinutes: 35,
+    // 锌作阳极被腐蚀、铁受保护不锈，故无铁锈沉淀——这正是与上一条的关键差别
+    probe: {
+      reagentKeys: ["铁", "锌", "食盐"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "gas-volume-measurement",

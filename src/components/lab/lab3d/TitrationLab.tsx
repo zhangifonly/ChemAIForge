@@ -4,12 +4,27 @@
 // 左侧为定量操作面板，右侧为 3D 场景。滴定量的唯一来源是"落下的滴数"，
 // 因此界面读数与 3D 里看到的液滴严格一致。
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import { SceneShell } from "./SceneShell";
 import { TitrationScene } from "./TitrationScene";
 import { TitrationData, TitrationControls } from "./titration/TitrationPanel";
-import { DROP_ML, TITRATION, verdictAt } from "./titration/model";
+import { useLabStore } from "../labStore";
+import {
+  DROP_ML,
+  TITRATION,
+  verdictAt,
+  phAt,
+  calcAnalyteConc,
+  relativeErrorPct,
+} from "./titration/model";
 
 export function TitrationLab() {
+  // 本实验台不走"加试剂→混合"的通用流程，故手动把关键节点写进会话，
+  // 否则滴定的会话里没有任何步骤与读数，报告页一片空白、状态永远"进行中"。
+  const record = useLabStore((s) => s.record);
+  const complete = useLabStore((s) => s.complete);
+  const completed = useLabStore((s) => s.completed);
+  const sessionId = useLabStore((s) => s.sessionId);
   const [ready, setReady] = useState(false);
   const [deliveredMl, setDelivered] = useState(0);
   const [openness, setOpenness] = useState(0);
@@ -36,12 +51,32 @@ export function TitrationLab() {
     setOpenness(0);
     setSwirl(false);
     setFinished(false);
-  }, []);
+    record("titration-reset");
+  }, [record]);
 
   const onFinish = useCallback(() => {
     setOpenness(0);
     setFinished(true);
-  }, []);
+    // 终点是这个实验唯一有价值的数据点：体积、判定、算得浓度与相对误差
+    // 一并留档，AI 报告的误差分析全靠它。
+    const verdict = verdictAt(deliveredMl);
+    record(
+      "titration-endpoint",
+      {
+        终点体积: `${deliveredMl.toFixed(2)} mL`,
+        判定:
+          verdict === "good"
+            ? "终点合格"
+            : verdict === "over"
+              ? "滴过量"
+              : "尚未到终点（粉红未褪）",
+        测得碱浓度: `${calcAnalyteConc(deliveredMl).toFixed(4)} mol/L`,
+        相对误差: `${relativeErrorPct(deliveredMl).toFixed(2)}%`,
+        标准液浓度: `${TITRATION.titrantConc} mol/L`,
+      },
+      { ph: Number(phAt(deliveredMl).toFixed(2)), temperature: 25 },
+    );
+  }, [deliveredMl, record]);
 
   // 判定终点后关闭旋塞，防止继续滴入干扰读数
   const effectiveOpenness = finished ? 0 : openness;
@@ -52,7 +87,14 @@ export function TitrationLab() {
     openness: effectiveOpenness,
     swirl,
     finished,
-    onPrepare: () => setReady(true),
+    onPrepare: () => {
+      setReady(true);
+      record("titration-prepare", {
+        待测液: `氢氧化钠 ${TITRATION.analyteVolumeMl.toFixed(2)} mL`,
+        指示剂: "酚酞",
+        标准液: `盐酸 ${TITRATION.titrantConc} mol/L`,
+      });
+    },
     onHalfDrop,
     onSwirlToggle: () => setSwirl((s) => !s),
     onFinish,
@@ -81,6 +123,27 @@ export function TitrationLab() {
             </p>
           </div>
           {ready && !finished && <LiveHint deliveredMl={deliveredMl} />}
+          {/* 判定终点后给出结束会话与看报告的出口：本实验台原先与会话完全脱节 */}
+          {finished ? (
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={complete}
+                disabled={completed}
+                className="rounded-xl border border-emerald-500/40 px-3 py-2 text-sm text-emerald-700 transition-colors hover:bg-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+              >
+                {completed ? "实验已完成" : "完成实验"}
+              </button>
+              {completed && sessionId ? (
+                <Link
+                  href={`/sessions/${sessionId}/report`}
+                  className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow"
+                >
+                  查看实验报告 →
+                </Link>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </aside>
 

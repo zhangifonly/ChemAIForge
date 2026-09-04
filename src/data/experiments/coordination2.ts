@@ -10,7 +10,7 @@ import type { ExperimentSeed } from "./types";
 export const coordination2Experiments: ExperimentSeed[] = [
   {
     slug: "silver-ammonia-complex-dissolve",
-    title: "氯化银溶于氨水",
+    title: "氯化银的氨水溶解与硝酸再生",
     description: "白色氯化银沉淀加入氨水后溶解生成银氨配离子，再加硝酸又析出沉淀。",
     category: C.COORDINATION,
     difficulty: D.MEDIUM,
@@ -18,6 +18,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["认识配位溶解", "理解配离子稳定性", "观察沉淀溶解与再生"],
     estimatedMinutes: 25,
+    // 第一步先生成白色氯化银沉淀，加氨水才配位溶解；引擎给出的是首步现象
+    probe: {
+      reagentKeys: ["硝酸银", "氯化钠", "氨水", "硝酸"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "copper-ammonia-deep-blue",
@@ -44,6 +49,10 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "试管架", "胶头滴管"],
     objectives: ["对比溶解性", "关联溶度积", "理解配位竞争"],
     estimatedMinutes: 30,
+    probe: {
+      reagentKeys: ["硝酸银", "氯化钠", "溴化钾", "碘化钾", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "nickel-dimethylglyoxime",
@@ -55,6 +64,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "点滴板"],
     objectives: ["认识螯合显色", "掌握镍检验", "理解特效试剂"],
     estimatedMinutes: 25,
+    // 鲜红色螯合沉淀。丁二酮肟对镍是特效试剂，其显色须胜过氨配位
+    probe: {
+      reagentKeys: ["氯化镍", "丁二酮肟", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "fe3-salicylic-acid",
@@ -66,6 +80,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["比色管", "胶头滴管"],
     objectives: ["观察配位显色", "理解 pH 影响", "联系比色分析"],
     estimatedMinutes: 25,
+    // 酚羟基与 Fe³⁺ 生成紫红色配合物，均相显色故无沉淀
+    probe: {
+      reagentKeys: ["氯化铁", "水杨酸"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "cobalt-thiocyanate-test",
@@ -77,6 +96,10 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["认识钴配离子", "掌握钴检验", "对比铁的硫氰显色"],
     estimatedMinutes: 25,
+    probe: {
+      reagentKeys: ["氯化钴", "硫氰酸铵"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "tetraamminecopper-crystal",
@@ -118,6 +141,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察沉淀溶解", "认识锌氨配离子", "对比铜氨配位"],
     estimatedMinutes: 20,
+    // 白色氢氧化锌先沉淀、氨水过量后溶解为无色配离子，故无颜色变化
+    probe: {
+      reagentKeys: ["硫酸锌", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: false, thermal: "none" },
+    },
   },
   {
     slug: "aluminum-hydroxide-amphoteric-complex",
@@ -129,6 +157,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "试管架", "胶头滴管"],
     objectives: ["认识两性", "理解配位溶解", "书写两类方程"],
     estimatedMinutes: 30,
+    // 两性溶解：酸碱两边都得澄清溶液，无沉淀、无显色，看点是沉淀的消失
+    probe: {
+      reagentKeys: ["氢氧化铝", "盐酸", "氢氧化钠"],
+      expect: { reacted: true, precipitate: false, colorChange: false, thermal: "none" },
+    },
   },
   {
     slug: "chromium-color-states",
@@ -140,6 +173,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察颜色互变", "理解铬酸盐平衡", "认识 pH 影响"],
     estimatedMinutes: 25,
+    // 黄橙互变是平衡移动，无净热效应（详见 rules/equilibrium.ts）
+    probe: {
+      reagentKeys: ["重铬酸钾", "氢氧化钠", "硫酸"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "copper-chloride-complex-color",
@@ -147,10 +185,15 @@ export const coordination2Experiments: ExperimentSeed[] = [
     description: "浓盐酸加入硫酸铜溶液，生成黄绿色氯合铜配离子，稀释后又变回蓝色。",
     category: C.COORDINATION,
     difficulty: D.MEDIUM,
-    reagents: ["硫酸铜", "盐酸", "蒸馏水"],
+    // 试剂须为「浓盐酸」：稀盐酸不足以把配位平衡推向 [CuCl₄]²⁻，描述里也写的是浓盐酸
+    reagents: ["硫酸铜", "浓盐酸", "蒸馏水"],
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察配位颜色", "理解配体交换", "联系氯化钴平衡"],
     estimatedMinutes: 25,
+    probe: {
+      reagentKeys: ["硫酸铜", "浓盐酸"],
+      expect: { reacted: true, colorChange: true, precipitate: false },
+    },
   },
   {
     slug: "starch-iodine-complex",
@@ -177,6 +220,10 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["洁净试管", "胶头滴管"],
     objectives: ["掌握配制方法", "理解适量氨水", "认识不可久置"],
     estimatedMinutes: 15,
+    probe: {
+      reagentKeys: ["硝酸银", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: false, thermal: "none" },
+    },
   },
   {
     slug: "fe3-fluoride-masking",
@@ -188,6 +235,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["理解配位竞争", "认识掩蔽剂", "比较配合物稳定性"],
     estimatedMinutes: 25,
+    // 引擎给出的是首步血红色 Fe(SCN)₃；加氟化钠后被掩蔽褪色是第二步
+    probe: {
+      reagentKeys: ["氯化铁", "硫氰酸钾", "氟化钠"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "copper-edta-complex",
@@ -199,6 +251,8 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["锥形瓶", "酸式滴定管"],
     objectives: ["认识 EDTA 配位", "理解 1∶1 配合", "联系配位滴定"],
     estimatedMinutes: 30,
+    // EDTA 与 Cu²⁺ 生成深蓝色螯合物，颜色变化即滴定终点判据
+    probe: { reagentKeys: ["硫酸铜", "EDTA"], expect: { reacted: true, colorChange: true, gas: false, precipitate: false } },
   },
   {
     slug: "calcium-carbonate-hardness-titration",
@@ -210,6 +264,8 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["酸式滴定管", "锥形瓶", "移液管", "洗耳球"],
     objectives: ["测定水总硬度", "掌握终点判断", "计算硬度含量"],
     estimatedMinutes: 45,
+    // 铬黑T 指示剂由酒红转纯蓝即终点；probe 取钙的螯合这一主反应
+    probe: { reagentKeys: ["EDTA", "氯化钙", "铬黑T"], expect: { reacted: true, colorChange: true, gas: false, precipitate: false } },
   },
   {
     slug: "nickel-ammonia-complex",
@@ -221,6 +277,10 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察颜色变化", "认识镍氨配离子", "对比铜氨配位"],
     estimatedMinutes: 20,
+    probe: {
+      reagentKeys: ["氯化镍", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "hexacyanoferrate-color",
@@ -232,6 +292,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "试管架"],
     objectives: ["区分两种配离子", "关联铁的价态", "认识配离子稳定性"],
     estimatedMinutes: 20,
+    // 两种配离子共存，只对比颜色（黄 vs 橙红），无沉淀无热效应
+    probe: {
+      reagentKeys: ["亚铁氰化钾", "铁氰化钾"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "turnbull-blue",
@@ -258,6 +323,11 @@ export const coordination2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["观察氧化变色", "理解配位稳定高价", "认识钴配合物"],
     estimatedMinutes: 25,
+    // 过氧化氢作氧化剂把 Co(II) 升为 Co(III)，放热（见 rules/peroxide.ts）
+    probe: {
+      reagentKeys: ["氯化钴", "氨水", "过氧化氢"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "ferric-phenol-purple",

@@ -4,7 +4,8 @@
 // 容器内试剂以可移除标签显示，液面随试剂量上升；点击混合触发反应引擎，
 // 由 Glassware 按实验仪器以立体 SVG（烧杯/锥形瓶/试管）渲染变色/气泡/沉淀/蒸汽与读数。
 // 反应判定一律委托 src/lib/chem/engine，本组件不含任何反应规则。
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Link from "next/link";
 import type { SubstanceCategory } from "@/lib/chem/engine";
 import { useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
@@ -18,12 +19,13 @@ import { ConductivityTester } from "./ConductivityTester";
 import { ElectroLab } from "./ElectroLab";
 import { resolveLabMode } from "./labMode";
 import {
-  chooseVessel,
   usesGasCollection,
   usesGasDelivery,
   usesFlameTest,
   isInertAnode,
 } from "./vesselGeom";
+// 器皿选型用 3D 与讲解共用的那一份，2D 不再自成一套（否则同一实验切视图会换器皿）
+import { chooseVessel, planRig } from "@/lib/chem/scenePlan";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { conductivity } from "@/lib/chem/conductivity";
@@ -68,11 +70,9 @@ const SOLUTION_TINT: Record<string, { top: string; bottom: string }> = {
 };
 
 export function LabCanvas({
-  experimentId,
   reagents,
   apparatus,
 }: {
-  experimentId: string;
   reagents: string[];
   apparatus: string[];
 }) {
@@ -81,7 +81,7 @@ export function LabCanvas({
     result,
     readings,
     completed,
-    initSession,
+    sessionId,
     addReagent,
     removeReagent,
     setTemperature,
@@ -94,10 +94,8 @@ export function LabCanvas({
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
 
-  // 挂载时绑定实验并创建会话（未登录则静默无会话）
-  useEffect(() => {
-    initSession(experimentId);
-  }, [experimentId, initSession]);
+  // 会话绑定已上移到 LabWorkbench（3D 视图下本组件不挂载，放这里会漏），
+  // 本组件只负责 2D 画布的呈现与交互。
 
   // 解析标签并入容器（点击 / 拖拽共用）
   const pour = (label: string) => addReagent(resolveSubstance(label));
@@ -117,8 +115,8 @@ export function LabCanvas({
     .map((c) => SOLUTION_TINT[c.formula])
     .find(Boolean);
 
-  // 按实验仪器选择器皿造型（试管 / 锥形瓶 / 烧杯）
-  const vessel = chooseVessel(apparatus);
+  // 按实验仪器与装置类型选择器皿造型（试管 / 锥形瓶 / 烧杯），与 3D 场景同源
+  const vessel = chooseVessel(apparatus, planRig(apparatus).kind);
   // 产气类实验：显示排水法集气装置，反应产气时联动收集
   const gasSetup = usesGasCollection(apparatus);
   const collecting = Boolean(result?.reacted && result.producesGas);
@@ -451,6 +449,16 @@ export function LabCanvas({
           >
             {completed ? "实验已完成" : "完成实验"}
           </button>
+          {/* 完成后给出去报告页的出口：否则用户点完「完成实验」只看到按钮变灰，
+              不知道 AI 报告在哪。会话未建立（记录接口失败）时不显示，避免死链。 */}
+          {completed && sessionId ? (
+            <Link
+              href={`/sessions/${sessionId}/report`}
+              className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98]"
+            >
+              查看实验报告 →
+            </Link>
+          ) : null}
         </div>
       </section>
     </div>

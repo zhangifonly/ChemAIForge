@@ -77,7 +77,8 @@ export const metal3Experiments: ExperimentSeed[] = [
     apparatus: ["蒸发皿", "漏斗", "滤纸", "镁条", "沙盘", "铁架台"],
     objectives: ["观察铝热反应的高温与熔融金属", "理解铝的强还原性来源", "认识铝热焊接的工业应用"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["铝粉", "氧化铁"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铝粉", "氧化铁"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "thermite-copper-oxide",
@@ -89,7 +90,8 @@ export const metal3Experiments: ExperimentSeed[] = [
     apparatus: ["蒸发皿", "漏斗", "镁条", "沙盘", "铁架台"],
     objectives: ["观察黑色氧化铜被还原为紫红色铜", "比较铝与铜的还原性", "掌握铝热反应的引燃操作与安全"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["铝粉", "氧化铜"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["铝粉", "氧化铜"],
+      heated: true, expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "magnetite-acid-dissolve",

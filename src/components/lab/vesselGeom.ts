@@ -79,13 +79,9 @@ export const VESSELS: Record<VesselKind, VesselGeom> = {
   },
 };
 
-// 由实验仪器列表选择器皿：含「试管」→ 试管，「锥形瓶/烧瓶」→ 锥形瓶，否则烧杯
-export function chooseVessel(apparatus: string[]): VesselKind {
-  const text = apparatus.join(" ");
-  if (/试管/.test(text)) return "tube";
-  if (/锥形瓶|烧瓶/.test(text)) return "flask";
-  return "beaker";
-}
+// 器皿选型不在这里实现：它是 2D、3D 与讲解口播三方共用的决策，
+// 唯一权威在 src/lib/chem/scenePlan.ts 的 chooseVessel（还会依装置类型 rig 调整）。
+// 本文件曾有一份各自演进的副本，导致 15 个实验在 2D 与 3D 里显示成不同器皿。
 
 // 实验是否配有排水法集气装置（须有集气瓶/水槽/排水等明确特征；
 // 不能仅凭"导管"判定——很多导气→吸收/检验装置也有导管，那属于 usesGasDelivery）

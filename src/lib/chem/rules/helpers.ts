@@ -10,6 +10,14 @@ export interface Reaction {
   name: string;
   /** 判断给定输入是否触发该反应 */
   match: (inputs: Substance[]) => boolean;
+  /**
+   * 该反应必须加热（含点燃 / 灼烧 / 水浴 / 催化氧化）才能进行。
+   *
+   * 声明式放在规则上、而不是把 conditions 塞进 match：match 只该管
+   * 「试剂搭配对不对」这一件事，条件判定由引擎统一处理，
+   * 一百多条规则也就不必各自重复写一遍温度比较。
+   */
+  requiresHeat?: boolean;
   /** 生成反应结果（不含 reacted 字段，由引擎补全） */
   build: (
     inputs: Substance[],
@@ -64,4 +72,19 @@ export function isConcentrated(inputs: Substance[], formula: string): boolean {
 /** 是否包含全部指定化学式 */
 export function hasAllFormulas(inputs: Substance[], formulas: string[]): boolean {
   return formulas.every((f) => inputs.some((s) => s.formula === f));
+}
+
+/** 半角数字 → 全角下标的映射 */
+const SUB_DIGITS = "₀₁₂₃₄₅₆₇₈₉";
+
+/**
+ * 把化学式里的半角数字转成全角下标，供 equation / description 排版使用。
+ *
+ * 产物 formula 必须保持半角 —— 它是查 PRECIPITATE_COLOR / SOLUTION_TINT 的键，
+ * `CaCO₃` 与 `CaCO3` 是两个不同字符串，混用会让颜色静默回退默认值。
+ * 但方程式是给人读的，全角下标可读性明显更好，于是两者用同一个半角变量、
+ * 在排版时才经这里转换，避免出现"同一个式子写两遍"的不一致。
+ */
+export function sub(formula: string): string {
+  return formula.replace(/\d/g, (d) => SUB_DIGITS[Number(d)]);
 }

@@ -56,6 +56,8 @@ export const SOLUTION_TINT: Record<string, SolutionTint> = {
   "[Ni(NH3)6](OH)2": { top: "#8f9fe0", bottom: "#4a5ab8" }, // 六氨合镍·蓝紫
   "[Zn(NH3)4](OH)2": { top: "#eef6fa", bottom: "#d2e6f0" }, // 四氨合锌·无色澄清
   "[Ag(NH3)2]OH": { top: "#f0f4f8", bottom: "#d8e4ee" }, // 银氨配合物·无色澄清
+  // 深蓝是「氢氧化铜溶于氨水」的唯一看点，漏登记会让这个实验在 3D 里毫无变化
+  "[Cu(NH3)4](OH)2": { top: "#4a6fd0", bottom: "#1f3aa0" }, // 四氨合铜·深蓝
   "[Co(NH3)6]2+": { top: "#c9a8d9", bottom: "#8a5ab0" }, // 钴氨配离子·紫红
   "[M-EDTA]": { top: "#bfe6dc", bottom: "#6fbfae" }, // EDTA 螯合物·浅青（多数金属螯合后色浅）
   // —— 酯化产物：酯层无色透明，与酸醇混合液的差异体现在分层而非色相 ——
@@ -65,6 +67,49 @@ export const SOLUTION_TINT: Record<string, SolutionTint> = {
   CH3COOC3H7: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 乙酸丙酯·无色
   CH3COOC4H9: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 乙酸丁酯·无色
   C6H5COOC2H5: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 苯甲酸乙酯·无色
+  // —— 置换反应生成的无色盐：必须显式登记，不能靠"查不到"来表示无色 ——
+  // 查不到会让 productTint 返回 null，3D 便保持反应前的颜色不动 ——
+  // 而「锌置换铜」的看点恰恰是蓝色褪成无色。同理钴的粉红褪去、镍的绿褪去。
+  ZnSO4: { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸锌·无色
+  ZnCl2: { top: "#f4f9fc", bottom: "#e0edf5" }, // 氯化锌·无色
+  "Zn(NO3)2": { top: "#f4f9fc", bottom: "#e0edf5" }, // 硝酸锌·无色
+  MgSO4: { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸镁·无色
+  MgCl2: { top: "#f4f9fc", bottom: "#e0edf5" }, // 氯化镁·无色
+  "Mg(NO3)2": { top: "#f4f9fc", bottom: "#e0edf5" }, // 硝酸镁·无色
+  AlCl3: { top: "#f4f9fc", bottom: "#e0edf5" }, // 氯化铝·无色
+  "Al2(SO4)3": { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸铝·无色
+  SnCl2: { top: "#f4f9fc", bottom: "#e0edf5" }, // 氯化亚锡·无色
+  "Pb(NO3)2": { top: "#f4f9fc", bottom: "#e0edf5" }, // 硝酸铅·无色
+  CdSO4: { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸镉·无色
+  NiCl2: { top: "#9fd9a8", bottom: "#4fae5e" }, // 氯化镍·绿
+  // —— 离子式产物：引擎有的规则直接返回离子，与整体盐式两种写法都要登记 ——
+  // 这些反应既不产沉淀也不冒气泡，液色是唯一的可见变化，
+  // 查不到色表就等于 3D 里什么都没发生
+  "Fe3+": { top: "#e0b56a", bottom: "#b9772c" }, // 铁(III)·黄棕
+  "Fe³⁺": { top: "#e0b56a", bottom: "#b9772c" }, // 同上（全角上标写法）
+  "Fe2+": { top: "#bfe0b6", bottom: "#7fbf86" }, // 铁(II)·浅绿
+  "Cr3+": { top: "#8fd9c8", bottom: "#2f9b86" }, // 铬(III)·绿（重铬酸盐被还原的终态）
+  "Co3+": { top: "#c9a8d9", bottom: "#8a5ab0" }, // 钴(III)氨配合物·紫红
+  "CrO4^2-": { top: "#f5d96a", bottom: "#e0b62c" }, // 铬酸根·黄
+  "Cr2O7^2-": { top: "#f0b06a", bottom: "#d9722c" }, // 重铬酸根·橙
+  "[Co(SCN)4]2-": { top: "#5a8fd9", bottom: "#1f4aa8" }, // 四硫氰钴·亮蓝
+  "[CuCl4]2-": { top: "#4fbf9f", bottom: "#1f8f6f" }, // 四氯合铜·黄绿（浓盐酸中由蓝转绿）
+  "[Fe-phenolate]": { top: "#a06ac0", bottom: "#5a2a8a" }, // 酚铁配合物·紫
+  "[Fe(CN)6]-mix": { top: "#e8d98a", bottom: "#c9b23a" }, // 铁氰/亚铁氰混合·黄
+  "[Ca-EDTA]2-": { top: "#bfe6dc", bottom: "#6fbfae" }, // 钙-EDTA 螯合物·浅青
+  "X-": { top: "#f4f9fc", bottom: "#e0edf5" }, // 卤素被还原为卤离子·无色（溴水/碘水褪色）
+  // —— 溴水褪色类：加成/取代产物都是无色，「橙棕褪成无色」就是全部看点 ——
+  C2H4Br2: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 1,2-二溴乙烷·无色
+  C2H2Br4: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 四溴乙烷·无色
+  C8H8Br2: { top: "#f7fbfd", bottom: "#e6f1f7" }, // 苯乙烯溴加成物·无色
+  // —— 碘量法终点：I₂ 被还原为无色 I⁻，蓝色/棕色恰好消失即为终点 ——
+  NaI: { top: "#f4f9fc", bottom: "#e0edf5" }, // 碘化钠·无色
+  Na2S4O6: { top: "#f4f9fc", bottom: "#e0edf5" }, // 连四硫酸钠·无色
+  // —— 水解产物：酯水解后油状酯层消失，液相回到无色澄清 ——
+  CH3COONa: { top: "#f4f9fc", bottom: "#e0edf5" }, // 乙酸钠·无色
+  C6H12O6: { top: "#f4f9fc", bottom: "#e0edf5" }, // 葡萄糖·无色（淀粉水解后碘不再显蓝）
+  SnSO4: { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸亚锡·无色（锡置换铜后蓝色褪去）
+  PbSO4: { top: "#f4f9fc", bottom: "#e0edf5" }, // 硫酸铅·上层清液无色（本体为白色沉淀，见 PRECIPITATE 表）
 };
 
 /** 常见沉淀的颜色 */
@@ -87,6 +132,35 @@ export const PRECIPITATE_COLOR: Record<string, string> = {
   "Cu2(OH)2CO3": "#3fa08a", // 碱式碳酸铜·绿
   PbI2: "#f2d84a", // 亮黄（金色鳞片）
   "Ag2CrO4": "#a8302a", // 砖红
+  // —— 以下为原表遗漏项。未收录时 precipitateColor 一律回退白色 #f5f7f9，
+  //    对白色沉淀无妨，但黑色 Ag₂S、亮黄 PbCrO₄、粉红 Co(OH)₂、绿 Ni(OH)₂ 全被画成白色，
+  //    而颜色正是这些沉淀的鉴定依据 —— 3D 里看到白色，结论就反了 ——
+  // 有色氢氧化物：过渡金属的特征色，是「按沉淀颜色判断阳离子」这类实验的全部依据
+  "Co(OH)2": "#f0a0b8", // 粉红（久置被空气氧化转棕黑）
+  "Ni(OH)2": "#5fbf72", // 苹果绿
+  "Mn(OH)2": "#c98f5a", // 白色迅速氧化为棕色
+  "Cr(OH)3": "#4fae96", // 灰绿
+  "Zn(OH)2": "#f4f7f9", // 白（两性，溶于过量碱）
+  // 有色铬酸盐 / 硫化物 / 单质
+  PbCrO4: "#f2c81a", // 铬黄（曾用作黄色颜料）
+  BaCrO4: "#f5e08a", // 浅黄
+  "Ag2S": "#17171c", // 黑（银器发黑的元凶）
+  AgOH: "#f2f5f8", // 白（配银氨溶液时先析出，继续加氨即溶解）
+  Ag: "#d8dde2", // 银镜·金属光泽的亮灰白
+  S: "#f0e07a", // 淡黄（硫代硫酸盐遇酸析出的乳黄浑浊）
+  // 普鲁士蓝 / 特征螯合物：颜色即检验结论
+  "KFe[Fe(CN)6]": "#2f52a8", // 普鲁士蓝·深蓝
+  "Ni(DMG)2": "#e0304a", // 丁二酮肟镍·鲜红（镍的经典重量分析）
+  // 白色难溶盐：颜色不是看点，但登记后语义明确，也避免误以为漏配
+  BaSO3: "#f7f9fa", CaSO3: "#f7f9fa", SrSO4: "#fbfcfd", SrCO3: "#f7f9fa",
+  MgCO3: "#f7f9fa", FeCO3: "#e8e4d8", PbSO4: "#fbfcfd", PbCl2: "#f7f9fa",
+  CaF2: "#f7f9fa", "Ca3(PO4)2": "#f7f9fa", "Ba3(PO4)2": "#f7f9fa",
+  "Ag2CO3": "#f2eddc", "Ag2SO4": "#fbfcfd", "Ag3PO4": "#f0dc90", // 磷酸银·黄
+  // 有机固体：重结晶与取代反应析出的白色晶体
+  C6H5COOH: "#fbfcfd", // 苯甲酸·白色针状
+  C7H6O3: "#fbfcfd", // 水杨酸·白色晶体
+  "C6H2Br3OH": "#fbfcfd", // 三溴苯酚·白色（苯酚遇溴水的定性依据）
+  "C6H2Br3NH2": "#fbfcfd", // 三溴苯胺·白色
 };
 
 /** 气体颜色（多为无色，仅少数有色） */

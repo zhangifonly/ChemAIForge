@@ -16,6 +16,11 @@ export const acidBase2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "玻璃棒"],
     objectives: ["理解强酸弱碱盐水解显酸性", "会用指示剂判断溶液酸碱性", "书写水解离子方程式"],
     estimatedMinutes: 20,
+    // 强酸弱碱盐水解显酸性，石蕊变红；水解程度极小故无热效应可测
+    probe: {
+      reagentKeys: ["氯化铵", "石蕊"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "washing-soda-alkalinity",
@@ -27,6 +32,11 @@ export const acidBase2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管", "玻璃棒"],
     objectives: ["认识强碱弱酸盐水解显碱性", "观察酚酞变色现象", "联系纯碱去污的生活应用"],
     estimatedMinutes: 20,
+    // 碳酸根水解显碱性使酚酞变红，这是纯碱能去油污的原因
+    probe: {
+      reagentKeys: ["碳酸钠", "酚酞"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "acetate-salt-basicity",

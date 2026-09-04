@@ -64,6 +64,11 @@ export const coordinationExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "胶头滴管"],
     objectives: ["配制银氨溶液", "理解配位溶解", "为银镜反应做准备"],
     estimatedMinutes: 20,
+    // 氨水先沉淀出 AgOH/Ag₂O，过量后溶解为无色银氨配离子，故不显色
+    probe: {
+      reagentKeys: ["硝酸银", "氨水"],
+      expect: { reacted: true, precipitate: true, colorChange: false, thermal: "none" },
+    },
   },
   {
     // slug 沿用历史命名（改动会导致线上链接与会话记录失效），内容以 title 为准

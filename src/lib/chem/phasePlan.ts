@@ -47,15 +47,30 @@ export const EXTRACT_TINT: Record<string, string> = {
 export const TURBID_FORMULAS = new Set([
   "C6H5OH", // 苯酚：常温水中乳浊
   "C7H6O3", // 水杨酸：微溶
-  "Ca(OH)2", // 石灰乳 / 澄清石灰水通 CO₂ 后的碳酸钙浊液
+  // ⚠️ 这里绝不能放 Ca(OH)₂。它虽是微溶物，但实验里用的是「澄清」石灰水 ——
+  // 二十多个实验（检验 CO₂、验证燃烧产物、氨气制备）的唯一看点正是
+  // 「原本澄清 → 通入气体后变浑浊」。把它登记成乳浊，反应前就是一杯白汤，
+  // 这个对比彻底消失。通气后的浑浊来自产物 CaCO₃，由沉淀层负责绘制。
   "fat", // 油脂在水中乳化
   "soap-solution",
   "starch", // 淀粉糊呈乳白半透明
 ]);
 
+/**
+ * 靠名称而非化学式判定的浊液：同一个 Ca(OH)₂，「澄清石灰水」是澄清溶液，
+ * 「石灰乳 / 熟石灰」是过量固体悬浮的白色浊液。化学式分不出，只能看标签。
+ */
+const TURBID_NAME_KEYWORDS = ["石灰乳", "熟石灰", "生石灰", "乳浊"];
+
+/** 该物质是否以浊液形式存在（化学式白名单 或 名称白名单） */
+export function isTurbidSubstance(s: Substance): boolean {
+  if (TURBID_FORMULAS.has(s.formula)) return true;
+  return TURBID_NAME_KEYWORDS.some((k) => s.name.includes(k));
+}
+
 /** 判断体系是否呈浑浊（乳浊液）。生成澄清产物的反应会解除浑浊 */
 export function isTurbid(contents: Substance[], result: ReactionResult | null): boolean {
-  const hasTurbid = contents.some((c) => TURBID_FORMULAS.has(c.formula));
+  const hasTurbid = contents.some(isTurbidSubstance);
   if (!hasTurbid) return false;
   // 苯酚 + NaOH → 苯酚钠（可溶）时体系变澄清；但若产物里又出现难溶物则仍浑浊
   if (result?.reacted) {

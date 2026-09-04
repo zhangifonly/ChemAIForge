@@ -20,6 +20,12 @@ export function buildLabState(s: LabSnapshot): Record<string, unknown> {
           发生反应: s.result.reacted,
           方程式: s.result.equation,
           现象: s.result.description,
+          // 试剂对了只缺加热，与"试剂根本不匹配"必须让导师分得清：
+          // 学生此刻最常问"为什么没反应"，只给 发生反应:false 会被答成"换试剂"，
+          // 而正确的指引是点燃酒精灯。
+          ...(s.result.pendingCondition === "heat"
+            ? { 未反应原因: "试剂搭配正确，但尚未加热（该反应需加热才能进行）" }
+            : {}),
         }
       : null,
   };
@@ -27,6 +33,11 @@ export function buildLabState(s: LabSnapshot): Record<string, unknown> {
 
 // 根据反应结果判断是否为关键事件，若是则返回一条自动询问的情境提示
 export function contextualPrompt(result: ReactionResult): string | null {
+  // 缺加热是个明确的教学节点：试剂配对成功、只差条件，此时主动讲清"为什么必须加热"
+  // 比等学生自己困惑更有价值，故不与"试剂不匹配"一起被静默掉。
+  if (result.pendingCondition === "heat") {
+    return "我把试剂混合后没有观察到现象，提示说这个反应需要加热。请解释为什么这个反应必须在加热条件下才能进行。";
+  }
   if (!result.reacted) return null;
   const phenomena: string[] = [];
   if (result.producesPrecipitate) phenomena.push("生成沉淀");

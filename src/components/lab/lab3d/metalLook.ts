@@ -1,5 +1,6 @@
 // 金属外观表（纯数据，可单测）：化学式 → 真实金属色与实验室常见形态。
 // 与 appearance.ts 分工：那边管溶液/沉淀/气体，这边管金属单质固体。
+import { PRECIPITATE_COLOR } from "@/lib/chem/appearance";
 
 export type MetalShape = "grain" | "strip" | "wire" | "sheet";
 
@@ -26,6 +27,8 @@ export const METAL_LOOK: Record<string, MetalLook> = {
   C: { color: "#2a2c30", roughness: 0.8, metalness: 0.15, shape: "grain" }, // 碳（石墨/木炭）
   S: { color: "#e8d44a", roughness: 0.72, metalness: 0.05, shape: "grain" }, // 硫粉·黄
   P: { color: "#d94f3a", roughness: 0.7, metalness: 0.08, shape: "grain" }, // 红磷
+  Ca: { color: "#cfd0c8", roughness: 0.6, metalness: 0.55, shape: "grain" }, // 钙屑·银白偏暗（表面易生氧化膜）
+  Cd: { color: "#c3c8cc", roughness: 0.34, metalness: 0.82, shape: "sheet" }, // 镉片·蓝白色金属光泽
 };
 
 /** 默认外观：未收录的固体按灰色颗粒处理 */
@@ -59,23 +62,39 @@ export const SOLID_LOOK: Record<string, MetalLook> = {
   CaCO3: { color: "#f6f7f8", roughness: 0.9, metalness: 0.04, shape: "grain" }, // 大理石·白
   NaHCO3: { color: "#fafbfb", roughness: 0.93, metalness: 0.03, shape: "grain" },
   Na2CO3: { color: "#f8f9fa", roughness: 0.93, metalness: 0.03, shape: "grain" },
+  K2CO3: { color: "#f8f9fa", roughness: 0.93, metalness: 0.03, shape: "grain" }, // 碳酸钾·白（易潮解）
+  NH4HCO3: { color: "#fafbfb", roughness: 0.9, metalness: 0.03, shape: "grain" }, // 碳酸氢铵·白色晶粒
+  Na2O2: { color: "#f5f0c8", roughness: 0.9, metalness: 0.04, shape: "grain" }, // 过氧化钠·淡黄（区别于白色 Na₂O，颜色即判据）
+  Na2O: { color: "#f6f7f4", roughness: 0.93, metalness: 0.03, shape: "grain" }, // 氧化钠·白
   KMnO4: { color: "#4a1060", roughness: 0.6, metalness: 0.2, shape: "grain" }, // 高锰酸钾晶体·紫黑
   KNO3: { color: "#fafbfc", roughness: 0.68, metalness: 0.06, shape: "grain" }, // 硝酸钾晶体
   CuSO4: { color: "#2f7fc7", roughness: 0.55, metalness: 0.12, shape: "grain" }, // 胆矾·蓝晶
   I2: { color: "#3a2c3f", roughness: 0.55, metalness: 0.3, shape: "grain" }, // 碘·紫黑有光泽
   "Al(OH)3": { color: "#f0f3f5", roughness: 0.95, metalness: 0.02, shape: "grain" },
+  "Ca(OH)2": { color: "#f4f6f4", roughness: 0.95, metalness: 0.02, shape: "grain" }, // 熟石灰粉末·白（仅石灰乳/熟石灰形态会画出固体）
   "Fe(OH)3": { color: "#b04a24", roughness: 0.94, metalness: 0.03, shape: "grain" },
   C6H5OH: { color: "#f7f4ea", roughness: 0.72, metalness: 0.05, shape: "grain" }, // 苯酚·白晶
   fat: { color: "#f5efdc", roughness: 0.86, metalness: 0.04, shape: "grain" }, // 油脂
   starch: { color: "#fbfbf8", roughness: 0.95, metalness: 0.02, shape: "grain" }, // 淀粉
 };
 
-/** 取固体外观：金属优先，其次非金属固体，最后灰色颗粒兜底 */
+/**
+ * 取固体外观：金属 → 非金属固体表 → 难溶物颜色表 → 灰色颗粒兜底。
+ *
+ * 第三级是关键：难溶物投入时也按固体渲染（见 scenePlan.pickSolid），而
+ * PRECIPITATE_COLOR 里已经存着它们的准确颜色（黑色 FeS、黄色 AgI、绿色 Ni(OH)₂…），
+ * 复用即可，不必在本表手抄一遍——否则新增沉淀又要两处同步，漏一处就画成灰点，
+ * 而颜色恰恰是这些实验的鉴定依据。
+ */
 export function solidLook(formula: string): MetalLook {
-  return METAL_LOOK[formula] ?? SOLID_LOOK[formula] ?? DEFAULT_METAL_LOOK;
+  const known = METAL_LOOK[formula] ?? SOLID_LOOK[formula];
+  if (known) return known;
+  const precip = PRECIPITATE_COLOR[formula];
+  if (precip) return { color: precip, roughness: 0.93, metalness: 0.03, shape: "grain" };
+  return DEFAULT_METAL_LOOK;
 }
 
 /** 该化学式是否有已知固体外观（用于判断"值不值得渲染成固体"） */
 export function hasSolidLook(formula: string): boolean {
-  return formula in METAL_LOOK || formula in SOLID_LOOK;
+  return formula in METAL_LOOK || formula in SOLID_LOOK || formula in PRECIPITATE_COLOR;
 }

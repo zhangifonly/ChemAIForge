@@ -2,6 +2,7 @@
 
 // 3D 实验台画布：R3F Canvas + 灯光 + 轨道控制器，按 slug 选择 3D 场景。
 // 复用 labStore 状态与现有交互逻辑（加试剂/混合/清空），让 3D 与 2D 共享同一实验进程。
+import Link from "next/link";
 import { SceneShell } from "./SceneShell";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
@@ -18,10 +19,14 @@ import { CopperZincCellScene } from "./CopperZincCellScene";
 import { TitrationLab } from "./TitrationLab";
 import { GenericScene, VESSEL_VIEW } from "./GenericScene";
 import { planScene } from "@/lib/chem/scenePlan";
+import { HEAT_THRESHOLD } from "@/lib/chem/engine";
 import { has3D } from "./registry";
 
-/** 视为"正在加热"的温度阈值（酒精灯点燃） */
-const HEAT_ON_TEMP = 60;
+// 加热阈值直接用引擎的 HEAT_THRESHOLD：3D 上"火焰亮起"与化学上"反应发生"
+// 必须是同一个门槛，各写一份迟早会漂移成"看着在烧但不反应"。
+
+/** 自带热源的装置：启动开关即等于加热，故隐藏独立的酒精灯按钮 */
+const HEATING_RIGS = new Set(["water-bath", "flame-test", "evaporation", "distillation"]);
 
 export default function Lab3DCanvas({
   slug,
@@ -56,13 +61,16 @@ function Lab3DGeneric({
     setEnergized,
     setTemperature,
     reset,
+    complete,
+    completed,
+    sessionId,
   } = useLabStore();
   const has = (f: string) => contents.some((c) => c.formula === f);
   const reactedNow = Boolean(result?.reacted);
   // 电化学实验（电解 / 原电池）：靠"接通电源"而非"混合反应"驱动现象
   const ELECTRO = new Set(["electrolysis-water", "copper-zinc-cell"]);
   const isElectro = ELECTRO.has(slug);
-  const heating = readings.temperature >= HEAT_ON_TEMP;
+  const heating = readings.temperature >= HEAT_THRESHOLD;
   // 有专用手写场景的实验沿用其自带取景；其余走通用场景，按器皿造型取景
   const refined = has3D(slug);
   const plan = planScene({
@@ -167,12 +175,10 @@ function Lab3DGeneric({
           />
         );
       case "magnesium-burning":
-        // 燃烧不走 react()：镁与氧气都在且已点击混合(result 非空)即点燃
+        // 镁在氧气中燃烧需点燃：引擎已把这条规则标为 requiresHeat，
+        // 原先用 result !== null 兜底会让镁在常温下自己烧起来 —— 直接采信引擎判定
         return (
-          <MagnesiumBurningScene
-            hasMg={has("Mg")}
-            reacted={has("Mg") && has("O2") && result !== null}
-          />
+          <MagnesiumBurningScene hasMg={has("Mg")} reacted={reactedNow && has("Mg") && has("O2")} />
         );
       case "o2-iron-combustion":
         // 过氧化氢+二氧化锰产氧，铁丝在氧气中燃烧
@@ -233,7 +239,14 @@ function Lab3DGeneric({
           {needsSwitch && (
             <button
               type="button"
-              onClick={() => setEnergized(!energized)}
+              onClick={() => {
+                const on = !energized;
+                setEnergized(on);
+                // 带热源的装置（水浴 / 焰色 / 蒸发）启动时同步把体系温度带到加热档：
+                // 这几种 rig 会隐藏「点燃酒精灯」按钮，若开关只改 3D 不改温度，
+                // 银镜、酯的水解等 11 个水浴实验在界面上就没有任何办法让反应发生。
+                if (HEATING_RIGS.has(rigKind)) setTemperature(on ? HEAT_THRESHOLD + 20 : 25);
+              }}
               disabled={contents.length < 1}
               className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
             >
@@ -250,11 +263,12 @@ function Lab3DGeneric({
               混合反应
             </button>
           )}
-          {/* 加热：通用场景在器皿下点燃酒精灯；水浴装置自带热源，无需这个按钮 */}
-          {!isElectro && rigKind !== "water-bath" && rigKind !== "flame-test" && (
+          {/* 加热：通用场景在器皿下点燃酒精灯。自带热源的装置由上面的装置开关
+              一并管温度，这里就不再出第二个加热入口，免得两个按钮互相打架 */}
+          {!isElectro && !HEATING_RIGS.has(rigKind) && (
             <button
               type="button"
-              onClick={() => setTemperature(heating ? 25 : 80)}
+              onClick={() => setTemperature(heating ? 25 : HEAT_THRESHOLD + 20)}
               disabled={contents.length < 1}
               className={`rounded-xl border px-3 py-2 text-sm transition-all disabled:cursor-not-allowed disabled:opacity-40 ${
                 heating
@@ -272,6 +286,25 @@ function Lab3DGeneric({
           >
             清空
           </button>
+          {/* 完成实验 + 报告出口：原先只有 2D 画布有，在 3D 下做完实验没法结束会话，
+              会话状态永远停在"进行中"，AI 报告也无从生成。
+              电化学实验靠通电产生现象、result 为空，故其判据用 energized。 */}
+          <button
+            type="button"
+            onClick={complete}
+            disabled={completed || !(isElectro ? energized : result)}
+            className="rounded-xl border border-emerald-500/40 px-3 py-2 text-sm text-emerald-700 transition-colors hover:bg-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+          >
+            {completed ? "实验已完成" : "完成实验"}
+          </button>
+          {completed && sessionId ? (
+            <Link
+              href={`/sessions/${sessionId}/report`}
+              className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow"
+            >
+              查看实验报告 →
+            </Link>
+          ) : null}
         </div>
         {result?.reacted && (
           <p className="mt-1 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs text-emerald-700 dark:text-emerald-300">

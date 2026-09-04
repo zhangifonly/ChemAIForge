@@ -16,7 +16,7 @@ export const redoxExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "秒表"],
     objectives: ["观察氧化褪色", "理解强氧化性", "探究反应速率"],
     estimatedMinutes: 35,
-    probe: { reagentKeys: ["高锰酸钾", "草酸"], expect: { reacted: true, colorChange: true } },
+    probe: { reagentKeys: ["高锰酸钾", "草酸"], expect: { reacted: true, colorChange: true, gas: true } },
   },
   {
     slug: "kmno4-fe2",
@@ -160,6 +160,11 @@ export const redoxExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "有色布条"],
     objectives: ["认识漂白原理", "区分氯气与次氯酸", "联系漂白粉"],
     estimatedMinutes: 20,
+    // 氯水显酸性先使石蕊变红，次氯酸的强氧化性随后把红色漂白褪去
+    probe: {
+      reagentKeys: ["氯水", "石蕊"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "fe2-fe3-conversion",

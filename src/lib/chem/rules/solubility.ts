@@ -24,6 +24,9 @@ const ANION_SOURCE: Record<string, string> = {
   Na2CO3: "CO32-", K2CO3: "CO32-", "(NH4)2CO3": "CO32-", NaHCO3: "CO32-",
   Na2SO3: "SO32-", NaHSO3: "SO32-",
   NaOH: "OH-", KOH: "OH-",
+  // 石灰乳 / 氢氧钡也是 OH⁻ 来源（工业上正是用石灰乳从海水沉镁）。
+  // 它们同时登记在 CATION_SOURCE 里，规则内已排除「同一物质既当阳离子又当阴离子」
+  "Ca(OH)2": "OH-", "Ba(OH)2": "OH-",
   Na2S: "S2-", NaF: "F-",
   KBr: "Br-", NaBr: "Br-", KI: "I-", NaI: "I-",
   Na3PO4: "PO43-",
@@ -66,24 +69,40 @@ const INSOLUBLE: Record<string, { formula: string; name: string; look: string }>
   "Pb2+|S2-": { formula: "PbS", name: "硫化铅", look: "黑色" },
 };
 
-/** 在输入中找出第一个能提供阳离子 / 阴离子的物质及其离子符号 */
-function findIon(inputs: Substance[], table: Record<string, string>) {
-  for (const s of inputs) {
-    const ion = table[s.formula];
-    if (ion) return { substance: s, ion };
+/**
+ * 定位一对能生成难溶物的离子组合（同一物质不能同时充当两方）。
+ *
+ * 必须穷举所有 (阳离子源, 阴离子源) 配对，不能「先取第一个阳离子源、再在余下里找
+ * 阴离子源」——像 Ca(OH)₂ / Ba(OH)₂ 这类既在阳离子表又在阴离子表的物质，会把自己
+ * 占成阳离子源导致配对失败，使反应判定依赖试剂的添加顺序（氯化镁 + 石灰乳能沉镁，
+ * 顺序颠倒却不反应）。反应是否发生与投料顺序无关，这里必须对称。
+ *
+ * accept 用于在含酸体系里只接受「不溶于稀酸」的那一对：多组离子并存时首个命中
+ * 可能是个溶于酸的组合（如碳酸钡），不筛选就会漏掉真正会析出的那对（如硫酸钡），
+ * 结果随投料顺序变化。
+ */
+function findPair(
+  inputs: Substance[],
+  accept?: (formula: string) => boolean,
+) {
+  for (const c of inputs) {
+    const cationIon = CATION_SOURCE[c.formula];
+    if (!cationIon) continue;
+    for (const a of inputs) {
+      if (a === c) continue;
+      const anionIon = ANION_SOURCE[a.formula];
+      if (!anionIon) continue;
+      const spec = INSOLUBLE[`${cationIon}|${anionIon}`];
+      if (spec && (!accept || accept(spec.formula))) {
+        return {
+          cation: { substance: c, ion: cationIon },
+          anion: { substance: a, ion: anionIon },
+          spec,
+        };
+      }
+    }
   }
   return null;
-}
-
-/** 定位一对能生成难溶物的离子组合（同一物质不能同时充当两方） */
-function findPair(inputs: Substance[]) {
-  const cation = findIon(inputs, CATION_SOURCE);
-  if (!cation) return null;
-  const rest = inputs.filter((s) => s !== cation.substance);
-  const anion = findIon(rest, ANION_SOURCE);
-  if (!anion) return null;
-  const spec = INSOLUBLE[`${cation.ion}|${anion.ion}`];
-  return spec ? { cation, anion, spec } : null;
 }
 
 /** 有色沉淀（生成时肉眼可见颜色变化，而非单纯白色浑浊） */
@@ -92,16 +111,46 @@ const COLORED = new Set([
   "AgBr", "AgI", "Ag3PO4", "Co(OH)2", "Ni(OH)2", "Cu2(OH)2CO3",
 ]);
 
+/**
+ * 不溶于稀酸的沉淀：即使体系里有强酸，它们照样析出且不被酸溶解。
+ *
+ * 「加酸不溶」正是这些沉淀的鉴定价值所在 —— 检验 SO₄²⁻ 要先加盐酸排除碳酸根干扰，
+ * 靠的就是 BaSO₄ 不溶于酸；用 Na₂S 沉淀废水里的 Cu²⁺/Pb²⁺ 之所以彻底，
+ * 也是因为 CuS/PbS 的 Ksp 小到酸都夺不走 S²⁻。
+ *
+ * 反过来，碳酸盐、氢氧化物、磷酸盐、亚硫酸盐这类溶于强酸的沉淀不在此表：
+ * 含酸时它们不该析出，该让位给产气/中和规则。
+ */
+const ACID_RESISTANT = new Set([
+  "BaSO4", "PbSO4",
+  "AgCl", "AgBr", "AgI",
+  "CuS", "PbS", "Ag2S", "HgS",
+]);
+
+/**
+ * match 与 build 共用的配对入口：含酸体系只认不溶于稀酸的沉淀。
+ *
+ * 两处若各写一份判断，早晚会出现 match 通过而 build 拿到另一对的错位
+ * （build 里的 `findPair(inputs)!` 一旦为 null 就直接崩）。
+ */
+function pickPair(inputs: Substance[]) {
+  const acidic = inputs.some((s) => s.category === "acid");
+  return findPair(inputs, acidic ? (f) => ACID_RESISTANT.has(f) : undefined);
+}
+
 export const solubilityRules: Reaction[] = [
   {
     id: "generic-precipitation",
     name: "复分解生成难溶物",
-    // 只处理"可溶盐 + 可溶盐/碱"这一路。含酸的体系交给产气规则（碳酸盐+酸放气优先），
-    // 否则 Na₂CO₃ + HCl 会被误判成沉淀反应
-    match: (inputs) =>
-      !inputs.some((s) => s.category === "acid") && findPair(inputs) !== null,
+    // 含酸的体系原则上交给产气/中和规则（碳酸盐 + 酸放气优先），
+    // 否则 Na₂CO₃ + HCl 会被误判成沉淀反应。
+    //
+    // 但「不溶于稀酸」的沉淀是例外：CuS/PbS/BaSO₄ 在酸中照样析出，
+    // 原先一律排除含酸体系，导致「硫酸铜 + 硫化钠 + 盐酸」判成完全不反应 ——
+    // 而这个实验的核心看点恰恰是黑色 CuS 生成后加酸也不溶
+    match: (inputs) => pickPair(inputs) !== null,
     build: (inputs) => {
-      const { cation, anion, spec } = findPair(inputs)!;
+      const { cation, anion, spec } = pickPair(inputs)!;
       return {
         products: [{ formula: spec.formula, name: spec.name, category: "salt" as const }],
         producesGas: false,
@@ -110,7 +159,13 @@ export const solubilityRules: Reaction[] = [
         thermal: "none" as const,
         phTrend: "neutral" as const,
         equation: `${cation.substance.formula} + ${anion.substance.formula} → ${spec.formula}↓`,
-        description: `${cation.substance.name}与${anion.substance.name}发生复分解，生成${spec.look}的${spec.name}沉淀。`,
+        description:
+          `${cation.substance.name}与${anion.substance.name}发生复分解，生成${spec.look}的${spec.name}沉淀。` +
+          // 含酸时补一句"加酸不溶"：这是抗酸沉淀被用作定性检验的全部理由，
+          // 少了它文案与不含酸的情形一字不差，学生看不出这一步在验证什么
+          (inputs.some((s) => s.category === "acid")
+            ? `加入酸后沉淀不溶解，说明${spec.name}的溶解度极小，这正是它可用于定性检验的依据。`
+            : ""),
       };
     },
   },

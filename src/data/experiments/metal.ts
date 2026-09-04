@@ -64,6 +64,11 @@ export const metalExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "棉花", "干燥剂", "植物油"],
     objectives: ["探究生锈条件", "理解防锈原理", "设计对照实验"],
     estimatedMinutes: 40,
+    // 常温敞口锈蚀慢到温度计读不出，故 thermal 为 none（与暖手袋的富氧加速形成对照）
+    probe: {
+      reagentKeys: ["铁", "蒸馏水", "食盐"],
+      expect: { reacted: true, gas: false, precipitate: true, thermal: "none" },
+    },
   },
   {
     slug: "aluminum-acid-base",
@@ -87,6 +92,12 @@ export const metalExperiments: ExperimentSeed[] = [
     apparatus: ["坩埚钳", "石棉网", "酒精灯"],
     objectives: ["观察燃烧现象", "认识氧化镁", "理解放热反应"],
     estimatedMinutes: 20,
+    // 产物氧化镁是固体，故不产气；耀眼白光对应 3D 的火焰看点
+    probe: {
+      reagentKeys: ["镁", "氧气"],
+      heated: true,
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "thermite-reaction",
@@ -98,6 +109,12 @@ export const metalExperiments: ExperimentSeed[] = [
     apparatus: ["蒸发皿", "镁条引燃", "沙土"],
     objectives: ["认识铝热反应", "理解工业焊接应用", "注意安全操作"],
     estimatedMinutes: 30,
+    // 铝把氧从氧化铁里夺走，全程无气体逸出，温度可达 2000 ℃ 使铁呈熔融态流下
+    probe: {
+      reagentKeys: ["铝", "氧化铁"],
+      heated: true,
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "metal-displacement-series",

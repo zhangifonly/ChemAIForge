@@ -28,6 +28,11 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "温度计", "玻璃棒", "铁架台"],
     objectives: ["认识放热反应", "测量温度骤升", "联系建材水化放热"],
     estimatedMinutes: 20,
+    // CaO + H₂O → Ca(OH)₂ 是化合反应而非溶解，故 gas/precipitate 均为假、剧烈放热
+    probe: {
+      reagentKeys: ["氧化钙", "蒸馏水"],
+      expect: { reacted: true, gas: false, thermal: "exothermic" },
+    },
   },
   {
     slug: "metal-acid-exothermic",
@@ -51,6 +56,13 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["量热计", "温度计", "天平", "烧杯", "酒精灯"],
     objectives: ["测定燃烧热", "分析热量计算", "评估热量损失"],
     estimatedMinutes: 30,
+    // 完全燃烧生成 CO₂（产气）并剧烈放热；与「乙醇 + 铜 + 氧气」的催化氧化
+    // 形成对照：后者只夺一个氧得乙醛，不产气也无火焰
+    probe: {
+      reagentKeys: ["乙醇", "氧气"],
+      heated: true,
+      expect: { reacted: true, gas: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "sulfuric-dilution-heat",
@@ -62,6 +74,10 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "温度计", "玻璃棒", "量筒"],
     objectives: ["认识稀释放热", "掌握安全稀释顺序", "测量温升幅度"],
     estimatedMinutes: 20,
+    probe: {
+      reagentKeys: ["硫酸", "蒸馏水"],
+      expect: { reacted: true, gas: false, precipitate: false, thermal: "exothermic" },
+    },
   },
   {
     slug: "sodium-hydroxide-dissolution-heat",
@@ -73,6 +89,10 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["保温杯", "温度计", "天平", "玻璃棒"],
     objectives: ["认识溶解放热", "测量温度变化", "理解溶解焓"],
     estimatedMinutes: 20,
+    probe: {
+      reagentKeys: ["氢氧化钠", "蒸馏水"],
+      expect: { reacted: true, gas: false, thermal: "exothermic" },
+    },
   },
   {
     slug: "ammonium-nitrate-dissolution-endotherm",
@@ -84,6 +104,10 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["保温杯", "温度计", "天平", "玻璃棒"],
     objectives: ["认识溶解吸热", "测量降温幅度", "对比放热溶解"],
     estimatedMinutes: 20,
+    probe: {
+      reagentKeys: ["硝酸铵", "蒸馏水"],
+      expect: { reacted: true, gas: false, thermal: "endothermic" },
+    },
   },
   {
     slug: "citric-bicarbonate-endotherm",
@@ -95,7 +119,8 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "温度计", "玻璃棒", "秒表"],
     objectives: ["认识吸热反应", "观察产气与降温", "联系泡腾片原理"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["柠檬酸", "碳酸氢钠", "蒸馏水"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    // 本实验唯一看点就是温度下降，probe 原写放热与标题、描述都相反
+    probe: { reagentKeys: ["柠檬酸", "碳酸氢钠", "蒸馏水"], expect: { reacted: true, gas: true, thermal: "endothermic" } },
   },
   {
     slug: "neutralization-heat-comparison",
@@ -119,6 +144,11 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["保温杯", "温度计", "天平"],
     objectives: ["认识缓慢氧化放热", "理解电解质促进作用", "联系商品暖宝宝"],
     estimatedMinutes: 20,
+    // 富氧 + 铁粉大表面积把锈蚀加速到可测：温升是本实验唯一的定量看点
+    probe: {
+      reagentKeys: ["铁片", "氧气", "氯化钠", "蒸馏水"],
+      expect: { reacted: true, gas: false, precipitate: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "thiosulfate-concentration-rate",
@@ -154,7 +184,7 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "温度计", "秒表"],
     objectives: ["探究温度影响", "以褪色计时", "控制变量"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic", gas: true } },
   },
   {
     slug: "permanganate-oxalate-autocatalysis",
@@ -166,11 +196,11 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["锥形瓶", "秒表", "温度计", "水浴", "玻璃棒"],
     objectives: ["认识自催化", "理解活化能", "分析速率随时间变化"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    probe: { reagentKeys: ["高锰酸钾", "草酸", "硫酸"], expect: { reacted: true, colorChange: true, thermal: "exothermic", gas: true } },
   },
   {
     slug: "iodine-clock-reaction",
-    title: "碘钟反应",
+    title: "碘钟反应速率测定",
     description: "过氧化氢在酸性条件下氧化碘化钾生成碘，被硫代硫酸钠消耗完毕后突然使淀粉变蓝，测定反应速率。",
     category: C.THERMODYNAMICS,
     difficulty: D.HARD,
@@ -213,7 +243,8 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "酒精灯", "导管", "集气瓶", "铁架台"],
     objectives: ["认识可逆反应", "理解酯化平衡", "探讨提高产率措施"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["乙酸", "乙醇", "硫酸"], expect: { reacted: true } },
+    probe: { reagentKeys: ["乙酸", "乙醇", "硫酸"],
+      heated: true, expect: { reacted: true } },
   },
   {
     slug: "dichromate-chromate-equilibrium",
@@ -225,7 +256,9 @@ export const thermo2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "玻璃棒", "量筒"],
     objectives: ["观察平衡移动", "认识浓度影响", "应用勒夏特列原理"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["重铬酸钾", "氢氧化钠", "硫酸", "蒸馏水"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    // 热效应为 none：黄橙互变是 Cr₂O₇²⁻/CrO₄²⁻ 平衡移动，看点是颜色而非温度。
+    // 原先写 exothermic 是被「酸+碱→盐+水」规则误判出来的，并非本实验的现象
+    probe: { reagentKeys: ["重铬酸钾", "氢氧化钠", "硫酸", "蒸馏水"], expect: { reacted: true, colorChange: true, thermal: "none" } },
   },
   {
     slug: "carbonic-acid-reversible",

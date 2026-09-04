@@ -13,8 +13,23 @@ import { TutorMarkdown } from "./TutorMarkdown";
 export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
-  const { send, streaming, error } = useTutorStream();
+  const { send, streaming, error, cancel } = useTutorStream();
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // 换实验时清空对话：App Router 复用本组件、状态不会自动丢弃，
+  // 否则上一个实验的问答历史会连同新实验的 slug 一起发给导师，上下文自相矛盾。
+  const [prevSlug, setPrevSlug] = useState(experimentSlug);
+  if (prevSlug !== experimentSlug) {
+    setPrevSlug(experimentSlug);
+    setMessages([]);
+    setInput("");
+  }
+
+  // 换实验时中断上一个实验仍在流式输出的回答：只清空 messages 的话，
+  // 在途请求的 onDelta 会继续往新实验的空对话里写回上一轮的答案。
+  useEffect(() => {
+    return cancel;
+  }, [experimentSlug, cancel]);
 
   // 把累计的助手文本写入最后一条助手气泡
   const onDelta = useCallback((full: string) => {
@@ -48,7 +63,12 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
     return useLabStore.subscribe((state) => {
       const { result } = state;
       if (!result || result === lastResultRef.current) return;
+      // 先登记再判静默：讲解演示出的结果就此翻篇，退出静默后不该被补触发一次
       lastResultRef.current = result;
+      // 讲解重放的结果不提问 —— 那是演示不是学生的操作。每前进一步都会重放
+      // 一次 mix()，每次 react() 都返回新对象、躲过上面的去重，
+      // 于是一趟讲解能连着打出十几次真实 AI 请求。
+      if (state.silent) return;
       const prompt = contextualPrompt(result);
       if (prompt) void submit(prompt);
     });

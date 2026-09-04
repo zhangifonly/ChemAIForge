@@ -16,7 +16,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "试管夹"],
     objectives: ["认识甲酸的还原性", "观察银镜生成", "理解醛基特征反应"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["甲酸", "硝酸银", "氨水"], expect: { reacted: true, precipitate: true, colorChange: true } },
+    probe: { reagentKeys: ["甲酸", "硝酸银", "氨水"],
+      heated: true, expect: { reacted: true, precipitate: true, colorChange: true } },
   },
   {
     slug: "formic-acid-methyl-ester",
@@ -24,11 +25,13 @@ export const organic2Experiments: ExperimentSeed[] = [
     description: "甲酸与甲醇在浓硫酸催化、加热下酯化，生成有香味的甲酸甲酯，认识羧酸与醇的酯化。",
     category: C.ORGANIC,
     difficulty: D.MEDIUM,
-    reagents: ["甲酸", "甲醇", "硫酸"],
+    // 描述已写明浓硫酸催化，reagents 须一致
+    reagents: ["甲酸", "甲醇", "浓硫酸"],
     apparatus: ["试管", "导管", "酒精灯", "试管夹"],
     objectives: ["掌握酯化反应", "理解浓硫酸的催化脱水", "认识可逆反应"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["甲酸", "甲醇", "硫酸"], expect: { reacted: true } },
+    probe: { reagentKeys: ["甲酸", "甲醇", "浓硫酸"],
+      heated: true, expect: { reacted: true } },
   },
   {
     slug: "acetic-acid-methyl-ester",
@@ -36,11 +39,13 @@ export const organic2Experiments: ExperimentSeed[] = [
     description: "乙酸与甲醇在浓硫酸催化下酯化生成乙酸甲酯，与乙酸乙酯对比认识不同醇的酯化产物。",
     category: C.ORGANIC,
     difficulty: D.MEDIUM,
-    reagents: ["乙酸", "甲醇", "硫酸"],
+    // 同上：酯化的催化剂是浓硫酸
+    reagents: ["乙酸", "甲醇", "浓硫酸"],
     apparatus: ["试管", "导管", "酒精灯", "试管夹"],
     objectives: ["巩固酯化反应", "对比不同醇的酯", "理解催化剂作用"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["乙酸", "甲醇", "硫酸"], expect: { reacted: true } },
+    probe: { reagentKeys: ["乙酸", "甲醇", "浓硫酸"],
+      heated: true, expect: { reacted: true } },
   },
   {
     slug: "acetic-acid-carbonate",
@@ -64,7 +69,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "玻璃棒"],
     objectives: ["认识多元羧酸酸性", "观察泡腾现象", "联系生活用品"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["柠檬酸", "碳酸氢钠", "蒸馏水"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    // 碳酸氢盐与酸是吸热反应（泡腾片入水降温），原 probe 写放热
+    probe: { reagentKeys: ["柠檬酸", "碳酸氢钠", "蒸馏水"], expect: { reacted: true, gas: true, thermal: "endothermic" } },
   },
   {
     slug: "phenol-weak-acidity",
@@ -88,7 +94,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "试管夹"],
     objectives: ["检验葡萄糖", "观察银镜生成", "认识糖类的还原性"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["葡萄糖", "硝酸银", "氨水"], expect: { reacted: true, precipitate: true, colorChange: true } },
+    probe: { reagentKeys: ["葡萄糖", "硝酸银", "氨水"],
+      heated: true, expect: { reacted: true, precipitate: true, colorChange: true } },
   },
   {
     slug: "acetaldehyde-copper-hydroxide",
@@ -112,6 +119,10 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "温度计"],
     objectives: ["认识酯的水解", "理解催化的作用", "对比酸碱水解"],
     estimatedMinutes: 40,
+    // 酸性水解可逆不彻底，看点是上层酯层逐渐变薄（分层界面移动）
+    // 看点是酯层变薄（分层），产物乙酸与乙醇均无色，故 colorChange 为 false
+    probe: { reagentKeys: ["乙酸乙酯", "硫酸", "蒸馏水"],
+      heated: true, expect: { reacted: true, colorChange: false, gas: false, thermal: "none" } },
   },
   {
     slug: "ester-hydrolysis-base",
@@ -123,7 +134,9 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "温度计"],
     objectives: ["认识碱性水解", "理解水解程度差异", "联系皂化反应"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["乙酸乙酯", "氢氧化钠"], expect: { reacted: true, colorChange: true, thermal: "exothermic" } },
+    // 同酸性水解：酯层迅速消失属分层变化，液色始终无色
+    probe: { reagentKeys: ["乙酸乙酯", "氢氧化钠"],
+      heated: true, expect: { reacted: true, colorChange: false, thermal: "exothermic" } },
   },
   {
     slug: "ethylene-kmno4",
@@ -148,7 +161,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     objectives: ["认识淀粉水解", "掌握中和后检验", "验证水解产物"],
     estimatedMinutes: 40,
     // 主导现象是银镜析出（水解产物检验），热效应由外部水浴提供而非反应自身
-    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "硝酸银", "氨水"], expect: { reacted: true, colorChange: true, precipitate: true, thermal: "none" } },
+    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "硝酸银", "氨水"],
+      heated: true, expect: { reacted: true, colorChange: true, precipitate: true, thermal: "none" } },
   },
   {
     slug: "starch-hydrolysis-iodine",
@@ -160,7 +174,8 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "水浴", "表面皿"],
     objectives: ["监控水解进程", "掌握碘的检验法", "理解取样中和的必要性"],
     estimatedMinutes: 30,
-    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "碘水"], expect: { reacted: true, colorChange: true } },
+    probe: { reagentKeys: ["淀粉", "硫酸", "氢氧化钠", "碘水"],
+      heated: true, expect: { reacted: true, colorChange: true } },
   },
   {
     slug: "fat-hydrolysis-acid",
@@ -172,6 +187,9 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["锥形瓶", "水浴", "温度计", "玻璃棒"],
     objectives: ["认识油脂水解", "对比酸碱水解产物", "理解甘油的生成"],
     estimatedMinutes: 40,
+    // 与皂化区分：产物是脂肪酸而非肥皂，故无泡沫，只见分层与浑浊
+    probe: { reagentKeys: ["油脂", "硫酸", "蒸馏水"],
+      heated: true, expect: { reacted: true, colorChange: true, gas: false, thermal: "none" } },
   },
   {
     slug: "acetic-acid-litmus",
@@ -206,6 +224,11 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["分液漏斗", "烧杯", "铁架台"],
     objectives: ["掌握萃取原理", "熟练分液操作", "理解溶解度差异"],
     estimatedMinutes: 30,
+    // 萃取不是化学反应，看点是分层与两层颜色对调（四氯化碳层在下呈紫红）
+    probe: {
+      reagentKeys: ["碘水", "四氯化碳"],
+      expect: { reacted: true, gas: false, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "salicylic-acid-recrystallization",
@@ -217,6 +240,11 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["烧杯", "酒精灯", "玻璃棒", "表面皿", "锥形瓶"],
     objectives: ["掌握重结晶操作", "利用溶解度随温度变化", "认识提纯方法"],
     estimatedMinutes: 40,
+    // 热水溶解后冷却析出针状晶体：precipitate 对应晶体析出，溶解过程吸热
+    probe: {
+      reagentKeys: ["水杨酸", "蒸馏水"],
+      expect: { reacted: true, precipitate: true, thermal: "endothermic" },
+    },
   },
   {
     slug: "salicylic-acid-fecl3",
@@ -228,6 +256,10 @@ export const organic2Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "表面皿"],
     objectives: ["检验酚羟基", "观察紫色显色", "认识水杨酸结构"],
     estimatedMinutes: 20,
+    probe: {
+      reagentKeys: ["水杨酸", "氯化铁"],
+      expect: { reacted: true, precipitate: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "ethanol-dehydration-ethylene",
@@ -235,9 +267,14 @@ export const organic2Experiments: ExperimentSeed[] = [
     description: "乙醇与浓硫酸加热到约170℃发生消去反应生成乙烯，将气体通入溴水使其褪色，验证乙烯的生成。",
     category: C.ORGANIC,
     difficulty: D.HARD,
-    reagents: ["乙醇", "硫酸", "溴水"],
+    // 必须是「浓硫酸」：稀硫酸既无脱水能力也达不到 170 ℃，描述里也写的是浓硫酸
+    reagents: ["乙醇", "浓硫酸", "溴水"],
     apparatus: ["圆底烧瓶", "导管", "酒精灯", "温度计", "铁架台", "试管"],
     objectives: ["认识消去反应", "掌握控温制乙烯", "用溴水检验产物"],
     estimatedMinutes: 40,
+    probe: {
+      reagentKeys: ["乙醇", "浓硫酸", "溴水"],
+      expect: { reacted: true, gas: true, colorChange: true },
+    },
   },
 ];

@@ -38,6 +38,9 @@ export const REAGENT_RULES: ReagentRule[] = [
   { keywords: ["亚硫酸氢钠"], formula: "NaHSO3", category: "salt" },
   { keywords: ["硫化亚铁"], formula: "FeS", category: "salt" },
   { keywords: ["硫化钠"], formula: "Na2S", category: "salt" },
+  // 银器表面的黑色锈层。必须登记在裸"银"之前，否则被吞成 Ag 单质，
+  // 电解还原除黑实验就失去反应物
+  { keywords: ["硫化银"], formula: "Ag2S", category: "salt" },
 ];
 
 
@@ -73,8 +76,10 @@ REAGENT_RULES.push(
   // 「硫酸铝」被通用"硫酸"吞成 H₂SO₄
   { keywords: ["氯化铝", "三氯化铝"], formula: "AlCl3", category: "salt" },
   { keywords: ["硫酸铝"], formula: "Al2(SO4)3", category: "salt" },
-  // 碳酸银：须先于通用"碳酸"，否则被解析成碳酸 H₂CO₃
-  { keywords: ["碳酸银"], formula: "Ag2CO3", category: "salt" },
+  // 碳酸银：须先于通用"碳酸"，否则被解析成碳酸 H₂CO₃。
+  // 类别是 carbonate 而非 salt —— 其余碳酸盐都是 carbonate，写成 salt 会让它
+  // 遇酸不放 CO₂（实测 Ag₂CO₃ + 稀硝酸 判成不反应，化学上是错的）。
+  { keywords: ["碳酸银"], formula: "Ag2CO3", category: "carbonate" },
   { keywords: ["氟化钠"], formula: "NaF", category: "salt" },
   { keywords: ["氯化钙"], formula: "CaCl2", category: "salt" },
   { keywords: ["氯化钠", "食盐"], formula: "NaCl", category: "salt" },
@@ -108,7 +113,9 @@ REAGENT_RULES.push(
 REAGENT_RULES.push(
   { keywords: ["氢氧化钠", "烧碱", "火碱"], formula: "NaOH", category: "base" },
   { keywords: ["氢氧化钾"], formula: "KOH", category: "base" },
-  { keywords: ["氢氧化钙", "熟石灰", "石灰水"], formula: "Ca(OH)2", category: "base" },
+  // 石灰乳与熟石灰同为 Ca(OH)₂，但形态不同（浊液/粉末 vs 澄清溶液），
+  // 差异由渲染层按 name 判定，见 phasePlan.isTurbidSubstance 与 scenePlan.pickSolid
+  { keywords: ["氢氧化钙", "熟石灰", "石灰乳", "石灰水"], formula: "Ca(OH)2", category: "base" },
   { keywords: ["氢氧化钡"], formula: "Ba(OH)2", category: "base" },
   { keywords: ["氢氧化铝"], formula: "Al(OH)3", category: "base" },
   // 不溶性碱：必须登记在氧化物之前，否则"氢氧化铁"会被"氧化铁"子串吞成 Fe₂O₃，
@@ -223,6 +230,9 @@ REAGENT_RULES.push(
   { keywords: ["水杨酸"], formula: "C7H6O3", category: "organic" },
   // —— 通用强酸（放在所有含"酸"字的盐 / 有机酸之后）——
   { keywords: ["盐酸", "氢氯酸"], formula: "HCl", category: "acid" },
+  // 氯化氢气体：与盐酸同化学式但形态不同（干燥 HCl 不显酸性、不导电），
+  // 白烟实验与氢气氯气化合实验里出现的是气态，原先未登记会落到 other 而不反应
+  { keywords: ["氯化氢"], formula: "HCl", category: "gas" },
   { keywords: ["硫酸"], formula: "H2SO4", category: "acid" },
   { keywords: ["硝酸"], formula: "HNO3", category: "acid" },
   { keywords: ["磷酸"], formula: "H3PO4", category: "acid" },

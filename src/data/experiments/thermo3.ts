@@ -319,6 +319,7 @@ export const thermo3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 30,
     probe: {
       reagentKeys: ["铝粉", "氧化铁"],
+      heated: true,
       expect: { reacted: true, colorChange: true, thermal: "exothermic" },
     },
   },

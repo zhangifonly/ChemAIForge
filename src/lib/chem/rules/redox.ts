@@ -53,6 +53,21 @@ function findHalogenPair(inputs: Substance[]) {
   return null;
 }
 
+/**
+ * 被强氧化剂氧化后会放出 CO₂ 的还原剂。
+ *
+ * 草酸的碳已是 +3 价，被 MnO₄⁻ / Cr₂O₇²⁻ 氧化即升到 +4 价变成 CO₂ 逸出
+ * （H₂C₂O₄ → 2CO₂↑）—— 冒泡与褪色是同时发生的两个现象，六个用草酸的实验
+ * （含有专用 3D 场景的 kmno4-oxalic-acid）此前一个气泡都不冒。
+ * 其余还原剂不产气：亚硫酸盐氧化成硫酸盐、乙醇氧化成乙酸、碘离子氧化成碘单质，
+ * 都留在溶液里，所以这里按化学式白名单而不是笼统地"含碳还原剂"。
+ */
+const CO2_RELEASING_REDUCERS = ["H2C2O4"];
+
+function releasesCO2(inputs: Parameters<Reaction["match"]>[0]): boolean {
+  return hasAnyFormula(inputs, CO2_RELEASING_REDUCERS);
+}
+
 export const redoxRules: Reaction[] = [
   {
     id: "kmno4-decolor",
@@ -64,16 +79,28 @@ export const redoxRules: Reaction[] = [
           "H2C2O4", "Na2SO3", "NaHSO3", "FeSO4", "FeCl2",
           "C2H5OH", "C2H4", "CH3CHO", "SO2", "KI", "NaI",
         ])),
-    build: () => ({
-      products: [{ formula: "Mn2+", name: "锰(II)离子", category: "salt" }],
-      producesGas: false,
-      producesPrecipitate: false,
-      colorChange: true,
-      thermal: "exothermic",
-      phTrend: "unknown",
-      equation: "MnO₄⁻ + 还原剂 → Mn²⁺ + …（紫红褪去）",
-      description: "高锰酸钾被还原，紫红色逐渐褪去，体现其强氧化性。",
-    }),
+    build: (inputs) => {
+      const co2 = releasesCO2(inputs);
+      return {
+        products: [
+          { formula: "Mn2+", name: "锰(II)离子", category: "salt" as const },
+          ...(co2
+            ? [{ formula: "CO2", name: "二氧化碳", category: "gas" as const }]
+            : []),
+        ],
+        producesGas: co2,
+        producesPrecipitate: false,
+        colorChange: true,
+        thermal: "exothermic" as const,
+        phTrend: "unknown" as const,
+        equation: co2
+          ? "2MnO₄⁻ + 5H₂C₂O₄ + 6H⁺ → 2Mn²⁺ + 10CO₂↑ + 8H₂O"
+          : "MnO₄⁻ + 还原剂 → Mn²⁺ + …（紫红褪去）",
+        description: co2
+          ? "高锰酸钾被草酸还原，紫红色逐渐褪去并放出二氧化碳气泡；随着 Mn²⁺ 生成反应自身加快，这是自催化的经典例子。"
+          : "高锰酸钾被还原，紫红色逐渐褪去，体现其强氧化性。",
+      };
+    },
   },
   {
     id: "bromine-water-decolor",
@@ -144,17 +171,28 @@ export const redoxRules: Reaction[] = [
           "H2C2O4", "Na2SO3", "NaHSO3", "FeSO4", "FeCl2",
           "C2H5OH", "CH3CHO", "SO2", "KI", "NaI", "Na2S", "H2S",
         ])),
-    build: () => ({
-      products: [{ formula: "Cr3+", name: "铬(III)离子", category: "salt" }],
-      producesGas: false,
-      producesPrecipitate: false,
-      colorChange: true,
-      thermal: "exothermic",
-      phTrend: "unknown",
-      equation: "Cr₂O₇²⁻ + 还原剂 + H⁺ → Cr³⁺ + …（橙黄变绿）",
-      description:
-        "重铬酸钾在酸性条件下被还原，溶液由橙黄色变为铬(III)的绿色，是检测酒精等还原性物质的经典显色。",
-    }),
+    build: (inputs) => {
+      const co2 = releasesCO2(inputs);
+      return {
+        products: [
+          { formula: "Cr3+", name: "铬(III)离子", category: "salt" as const },
+          ...(co2
+            ? [{ formula: "CO2", name: "二氧化碳", category: "gas" as const }]
+            : []),
+        ],
+        producesGas: co2,
+        producesPrecipitate: false,
+        colorChange: true,
+        thermal: "exothermic" as const,
+        phTrend: "unknown" as const,
+        equation: co2
+          ? "Cr₂O₇²⁻ + 3H₂C₂O₄ + 8H⁺ → 2Cr³⁺ + 6CO₂↑ + 7H₂O"
+          : "Cr₂O₇²⁻ + 还原剂 + H⁺ → Cr³⁺ + …（橙黄变绿）",
+        description: co2
+          ? "重铬酸钾在酸性条件下被草酸还原，溶液由橙黄变为铬(III)的绿色，同时放出二氧化碳气泡。"
+          : "重铬酸钾在酸性条件下被还原，溶液由橙黄色变为铬(III)的绿色，是检测酒精等还原性物质的经典显色。",
+      };
+    },
   },
   {
     id: "fe3-etch-copper",

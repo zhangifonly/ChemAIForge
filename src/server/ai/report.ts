@@ -8,6 +8,23 @@ import { getClaudeApiConfig } from "./config";
 
 const DEFAULT_MAX_TOKENS = 1500;
 const DEFAULT_TIMEOUT_MS = 60000;
+/**
+ * 注入 prompt 的步骤 / 读数明细条数上限。
+ *
+ * 会话最多留 500 条（MAX_SESSION_ENTRIES），每条 step 的 detail 里还带完整方程式，
+ * 全量逐条列出轻易上万 token —— 又慢又贵，且模型注意力被淹没在重复的"混合"里。
+ * 超限时只列最近 N 条，总数与区间统计仍按全量算，误差分析不受影响。
+ */
+const MAX_PROMPT_ENTRIES = 60;
+
+// 取最近 N 条明细，并返回被省略的条数（用于在 prompt 里如实说明）
+function recent<T>(list: T[]): { shown: T[]; omitted: number } {
+  if (list.length <= MAX_PROMPT_ENTRIES) return { shown: list, omitted: 0 };
+  return {
+    shown: list.slice(list.length - MAX_PROMPT_ENTRIES),
+    omitted: list.length - MAX_PROMPT_ENTRIES,
+  };
+}
 
 // Claude Messages API 请求体（非流式）
 export interface ReportRequestBody {
@@ -24,13 +41,15 @@ function summarizeMeasurements(session: SessionDTO): string {
   const temps = session.measurements.map((m) => m.temperature);
   const range = (xs: number[]) =>
     `最低 ${Math.min(...xs).toFixed(2)} / 最高 ${Math.max(...xs).toFixed(2)}`;
-  const lines = session.measurements.map(
+  // 区间统计按全量算，只有明细截断
+  const { shown, omitted } = recent(session.measurements);
+  const lines = shown.map(
     (m, i) =>
-      `${i + 1}. [${m.at}] pH=${m.ph.toFixed(2)}　温度=${m.temperature.toFixed(2)}℃`,
+      `${i + 1 + omitted}. [${m.at}] pH=${m.ph.toFixed(2)}　温度=${m.temperature.toFixed(2)}℃`,
   );
   return [
     `共 ${session.measurements.length} 条读数。pH 区间：${range(phs)}；温度区间：${range(temps)}。`,
-    "明细：",
+    omitted > 0 ? `明细（已省略较早的 ${omitted} 条，以下为最近 ${shown.length} 条）：` : "明细：",
     ...lines,
   ].join("\n");
 }
@@ -38,12 +57,16 @@ function summarizeMeasurements(session: SessionDTO): string {
 // 汇总操作步骤序列
 function summarizeSteps(session: SessionDTO): string {
   if (session.steps.length === 0) return "（本次实验未记录操作步骤）";
-  return session.steps
-    .map((s, i) => {
-      const detail = s.detail ? `　详情：${JSON.stringify(s.detail)}` : "";
-      return `${i + 1}. [${s.at}] ${s.action}${detail}`;
-    })
-    .join("\n");
+  const { shown, omitted } = recent(session.steps);
+  const lines = shown.map((s, i) => {
+    const detail = s.detail ? `　详情：${JSON.stringify(s.detail)}` : "";
+    return `${i + 1 + omitted}. [${s.at}] ${s.action}${detail}`;
+  });
+  if (omitted === 0) return lines.join("\n");
+  return [
+    `共 ${session.steps.length} 步，已省略较早的 ${omitted} 步，以下为最近 ${shown.length} 步：`,
+    ...lines,
+  ].join("\n");
 }
 
 // 构造资深化学导师评估 system prompt，约束模型仅输出结构化 JSON
@@ -157,38 +180,54 @@ export async function generateReport(
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
-  let response: Response;
+  // 超时必须覆盖到读完响应体：原先在 fetch 的 finally 里就 clearTimeout，
+  // 而 fetch 只等到响应头，之后 response.json() 读 body 已无任何超时保护 ——
+  // 上游发完头就卡住时这里会永久挂起，接口请求一直悬着不返回。
   try {
-    response = await fetch(`${baseUrl.replace(/\/$/, "")}/v1/messages`, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify(body),
-      signal: controller.signal,
+    let response: Response;
+    try {
+      response = await fetch(`${baseUrl.replace(/\/$/, "")}/v1/messages`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-api-key": apiKey,
+          "anthropic-version": "2023-06-01",
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      });
+    } catch (err) {
+      if (err instanceof Error && err.name === "AbortError") {
+        throw new Error("AI 报告生成超时，请稍后重试。");
+      }
+      throw new Error(
+        `调用 AI 报告服务失败：${err instanceof Error ? err.message : String(err)}`,
+      );
+    }
+
+    if (!response.ok) {
+      const detail = await response.text().catch(() => "");
+      throw new Error(
+        `AI 报告服务返回错误（${response.status}）：${detail.slice(0, 200)}`,
+      );
+    }
+
+    // 这里不能无条件 catch 成 null：读 body 时被超时 abort 也会走进 catch，
+    // 于是超时被误报成"返回空内容"，排障时完全指错方向。只吞真正的解析失败。
+    const data = await response.json().catch((err: unknown) => {
+      if (err instanceof Error && err.name === "AbortError") throw err;
+      return null;
     });
+    const text = extractText(data);
+    if (!text) throw new Error("AI 报告服务返回空内容。");
+    return parseReportText(text);
   } catch (err) {
+    // 读 body 阶段被超时 abort 时错误类型是 AbortError，转成同一句可读文案
     if (err instanceof Error && err.name === "AbortError") {
       throw new Error("AI 报告生成超时，请稍后重试。");
     }
-    throw new Error(
-      `调用 AI 报告服务失败：${err instanceof Error ? err.message : String(err)}`,
-    );
+    throw err;
   } finally {
     clearTimeout(timeout);
   }
-
-  if (!response.ok) {
-    const detail = await response.text().catch(() => "");
-    throw new Error(
-      `AI 报告服务返回错误（${response.status}）：${detail.slice(0, 200)}`,
-    );
-  }
-
-  const data = await response.json().catch(() => null);
-  const text = extractText(data);
-  if (!text) throw new Error("AI 报告服务返回空内容。");
-  return parseReportText(text);
 }

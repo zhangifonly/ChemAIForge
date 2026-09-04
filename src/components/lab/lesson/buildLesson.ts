@@ -1,5 +1,5 @@
 // 讲解生成器：从实验数据（描述 / 试剂 / 探针 / 目标）自动派生分步讲解，
-// 无需为 102 个实验逐个编写脚本。纯函数，便于测试。
+// 无需为五百多个实验逐个编写脚本。纯函数，便于测试。
 import type { ExperimentSeed } from "@/data/experiments";
 import type { ReactionExpectation } from "@/data/experiments/types";
 import type { LessonStep } from "./types";
@@ -13,8 +13,52 @@ import {
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { conductivity } from "@/lib/chem/conductivity";
+import { react } from "@/lib/chem/engine";
+import { chooseVessel, planRig } from "@/lib/chem/scenePlan";
 
-// 由探针预期现象生成「现象」步骤的口播
+/** 容器的中文称呼，用于口播 */
+const VESSEL_NAME: Record<string, string> = {
+  beaker: "烧杯",
+  tube: "试管",
+  flask: "锥形瓶",
+};
+
+/**
+ * 讲解里提到的容器必须与 3D 里真正画出来的那个一致。
+ *
+ * 原先三处口播把容器名写死（"加入烧杯中"/"给试管加热"/"将烧杯中的试剂充分混合"），
+ * 而 3D 按 chooseVessel 选型 —— 501 个实验里 313 个说着烧杯、画的却是试管或锥形瓶，
+ * 其中 54 个更在同一段讲解里先说烧杯、再说试管、又说烧杯，自相矛盾。
+ * 这里复用 3D 完全相同的推导（planRig + chooseVessel），两边不可能再对不上。
+ */
+function vesselName(exp: ExperimentSeed): string {
+  const apparatus = exp.apparatus ?? [];
+  return VESSEL_NAME[chooseVessel(apparatus, planRig(apparatus).kind)] ?? "烧杯";
+}
+
+/**
+ * 由引擎实际结果得出现象，而不是照搬测试探针的声明。
+ *
+ * probe.expect 是给回归测试用的断言，只声明关键字段即可 —— 实测 472 个带
+ * 探针的实验里有 87 个漏声明了放热 / 变色 / 产气。拿它生成口播，学生就会
+ * 听着"可以看到有气泡逸出"、而 3D 里同时还在升温变色，或者反过来
+ * 明明在冒泡却只字未提。讲解要描述的是真实会发生什么。
+ */
+function actualPhenomena(exp: ExperimentSeed, reagents: string[]): ReactionExpectation {
+  const r = react(
+    reagents.map(resolveSubstance),
+    exp.probe?.heated ? { heated: true } : {},
+  );
+  return {
+    reacted: r.reacted,
+    gas: r.producesGas,
+    precipitate: r.producesPrecipitate,
+    colorChange: r.colorChange,
+    thermal: r.thermal,
+  };
+}
+
+// 把现象四元组铺成一句口播
 function describePhenomena(e?: ReactionExpectation): string {
   if (!e || !e.reacted)
     return "仔细观察体系，留意是否出现颜色、气泡或温度的变化。";
@@ -151,6 +195,7 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
 
   const steps: LessonStep[] = [];
   const reagents = pickReagents(exp);
+  const vessel = vesselName(exp);
 
   // 原理：实验描述
   steps.push({
@@ -167,17 +212,32 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
       id: `add-${i}`,
       phase: "准备",
       title: `取用${r}`,
-      narration: `取用${r}，加入烧杯中。`,
+      narration: `取用${r}，加入${vessel}中。`,
       action: { kind: "add", reagent: r },
     });
   });
+
+  // 操作：需要加热的反应先点燃酒精灯 —— 引擎在常温下不给结果，
+  // 少了这一步讲解播到"观察现象"时烧杯里其实什么也没发生
+  const needHeat = Boolean(exp.probe?.heated);
+  if (needHeat) {
+    steps.push({
+      id: "heat",
+      phase: "操作",
+      title: "点燃酒精灯",
+      narration: `点燃酒精灯给${vessel}加热 —— 这个反应必须在受热条件下才能进行。`,
+      action: { kind: "heat" },
+    });
+  }
 
   // 操作：混合
   steps.push({
     id: "mix",
     phase: "操作",
     title: "混合反应",
-    narration: "将烧杯中的试剂充分混合，反应随即开始。",
+    narration: needHeat
+      ? "受热后将试剂充分混合，反应随即开始。"
+      : `将${vessel}中的试剂充分混合，反应随即开始。`,
     action: { kind: "mix" },
   });
 
@@ -186,7 +246,7 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
     id: "observe",
     phase: "现象",
     title: "观察现象",
-    narration: describePhenomena(exp.probe?.expect),
+    narration: describePhenomena(actualPhenomena(exp, reagents)),
   });
 
   // 结论：实验目标

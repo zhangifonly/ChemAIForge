@@ -9,6 +9,7 @@ import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
 import { buildLesson } from "./buildLesson";
 import { audioSrc, type VoiceRole } from "./audioKey";
+import { HEAT_THRESHOLD } from "@/lib/chem/engine";
 
 const PHASE_STYLE: Record<string, string> = {
   原理: "bg-brand-500/12 text-brand-600 dark:text-brand-300",
@@ -24,34 +25,64 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
     return seed ? buildLesson(seed) : [];
   }, [experimentSlug]);
 
-  const { reset, addReagent, mix, setEnergized } = useLabStore();
+  const { reset, addReagent, mix, setEnergized, setTemperature } = useLabStore();
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(false);
   // 是否已介入实验台（介入后才重放动作，避免打断用户自由操作）
   const [engaged, setEngaged] = useState(false);
+
+  // 切换实验时把进度归零。App Router 在同位置复用本组件、状态不会自动丢弃：
+  // 各实验讲解步数不同，从步数多的实验切到步数少的，steps[index] 会是 undefined，
+  // 下面渲染 step.phase 就直接抛错白屏。用渲染期同步状态（React 官方模式），
+  // 放到 useEffect 里则本次渲染仍会拿到越界下标。
+  const [prevSlug, setPrevSlug] = useState(experimentSlug);
+  if (prevSlug !== experimentSlug) {
+    setPrevSlug(experimentSlug);
+    setIndex(0);
+    setPlaying(false);
+    setEngaged(false);
+  }
   // 语音讲解：静音开关、倍速、音色（晓晓女声 / 云希男声，借鉴 mathviz）
   const [muted, setMuted] = useState(false);
   const [rate, setRate] = useState(1);
   const [voice, setVoice] = useState<VoiceRole>("xiaoxiao");
 
-  // 确定性重放：从头执行到当前步，保证烧杯状态与讲解严格一致
+  // 确定性重放：从头执行到当前步，保证烧杯状态与讲解严格一致。
+  //
+  // 全程静默：这些是演示动作，不是学生操作。每前进一步都要从头重放，
+  // 不静默的话一次完整播放就往会话灌几十条 reset/add/mix（实测平均 27 条、
+  // 最多 74 条），AI 报告里全是机械重复，学生真正做了什么反而被淹没。
   useEffect(() => {
     if (!engaged || steps.length === 0) return;
-    reset();
-    for (let i = 0; i <= index; i++) {
-      const a = steps[i].action;
-      if (!a) continue;
-      if (a.kind === "add") addReagent(resolveSubstance(a.reagent));
-      else if (a.kind === "mix") mix();
-      else if (a.kind === "energize") setEnergized(true);
+    const { setSilent } = useLabStore.getState();
+    setSilent(true);
+    try {
+      reset();
+      for (let i = 0; i <= index; i++) {
+        const a = steps[i].action;
+        if (!a) continue;
+        if (a.kind === "add") addReagent(resolveSubstance(a.reagent));
+        // 加热排在混合之前，此时 result 仍为 null，不会触发 setTemperature 里的重算
+        else if (a.kind === "heat") setTemperature(HEAT_THRESHOLD + 20);
+        else if (a.kind === "mix") mix();
+        else if (a.kind === "energize") setEnergized(true);
+      }
+    } finally {
+      // 必须 finally：中途抛错而标志留在 true，之后学生自己的操作就一条都记不上了
+      setSilent(false);
     }
-  }, [index, engaged, steps, reset, addReagent, mix, setEnergized]);
+  }, [index, engaged, steps, reset, addReagent, mix, setEnergized, setTemperature]);
 
   // 自动播放 + 语音讲解：优先播放预生成的高音质 mp3（edge-tts 晓晓），
   // mp3 缺失 / 加载失败时回退浏览器 speechSynthesis；都不可用则按字数计时推进。
   useEffect(() => {
     if (!playing) return;
-    const advance = () =>
+    // 一步只推进一次：onended 与兜底定时器可能先后都触发（音频正常放完、
+    // 定时器随后到点），各调一次 advance 就会一口气跳过两步讲解。
+    let advanced = false;
+    const advance = () => {
+      if (advanced) return;
+      advanced = true;
       setIndex((i) => {
         if (i >= steps.length - 1) {
           setPlaying(false);
@@ -59,6 +90,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
         }
         return i + 1;
       });
+    };
 
     const text = steps[index]?.narration ?? "";
     if (muted || !text) {
@@ -72,13 +104,28 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
 
     let cancelled = false;
     let cleanup = () => {};
+    let fellBack = false;
+
+    // 统一的兜底定时器：三条播放路径（mp3 / 语音合成 / 纯计时）共用一个，
+    // 保证任何一条卡住时讲解都能继续，且同时只存在一个待触发的定时器。
+    let watchdog = 0;
+    const armWatchdog = (ms: number) => {
+      clearTimeout(watchdog);
+      watchdog = window.setTimeout(advance, ms);
+    };
+    // 拿不到音频时长时按字数估算播放时长（中文约每字 260ms，随倍速缩放）
+    const estimateMs = () => Math.max(4000, (text.length / rate) * 260);
 
     // 回退：浏览器语音合成（音质较差，仅当 mp3 不可用时）
     const speakFallback = () => {
+      // mp3 缺失时 error 事件与 play() 的 rejection 会各触发一次回退。
+      // 不加这道闸就会起两个 utterance + 两个兜底定时器，而 cleanup 只留得下后赋值的那个，
+      // 前一个定时器无人清理，稍后自行 advance 一次 —— 讲解凭空跳掉一步。
+      if (fellBack) return;
+      fellBack = true;
       const synth = typeof window !== "undefined" ? window.speechSynthesis : null;
       if (!synth) {
-        const t = window.setTimeout(advance, Math.max(4000, text.length * 240));
-        cleanup = () => clearTimeout(t);
+        armWatchdog(estimateMs()); // 没有语音合成能力，退化成纯计时推进
         return;
       }
       synth.cancel();
@@ -87,11 +134,8 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       u.rate = rate;
       u.onend = advance;
       synth.speak(u);
-      const fb = window.setTimeout(advance, Math.max(4000, (text.length / rate) * 260));
-      cleanup = () => {
-        synth.cancel();
-        clearTimeout(fb);
-      };
+      armWatchdog(estimateMs());
+      cleanup = () => synth.cancel();
     };
 
     // 优先：预生成 mp3
@@ -101,9 +145,25 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
     audio.onerror = () => {
       if (!cancelled) speakFallback();
     };
+    // mp3 播到一半卡住时 onended 与 onerror 都不会再触发（播放已经开始过），
+    // 没有兜底就永久停在这一步、而按钮还显示"播放中"。另两条路径本来就有
+    // 定时器兜底，唯独这条没有。
+    // 时长已知就按真实长度算（留 3 秒余量，绝不能早于音频自然结束），否则按字数估。
+    // loadedmetadata 与 play() 谁先谁后不定，故两处共用一个函数：后执行的那次
+    // 总能用上更准的 duration，不会把已校准的值覆盖回粗糙的估算。
+    const armPlaybackWatchdog = () => {
+      if (fellBack) return;
+      armWatchdog(
+        Number.isFinite(audio.duration)
+          ? (audio.duration / rate) * 1000 + 3000
+          : estimateMs() + 3000,
+      );
+    };
+    audio.onloadedmetadata = armPlaybackWatchdog;
     audio
       .play()
       .then(() => {
+        armPlaybackWatchdog();
         cleanup = () => {
           audio.pause();
           audio.src = "";
@@ -115,8 +175,10 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
 
     return () => {
       cancelled = true;
+      clearTimeout(watchdog);
       audio.onended = null;
       audio.onerror = null;
+      audio.onloadedmetadata = null;
       audio.pause();
       cleanup();
     };
@@ -130,7 +192,8 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
   }, []);
 
   if (steps.length === 0) return null;
-  const step = steps[index];
+  // 兜底：下标越界时退回首步，而不是让 step.phase 抛错把整页打成白屏
+  const step = steps[index] ?? steps[0];
 
   const go = (next: number) => {
     setEngaged(true);

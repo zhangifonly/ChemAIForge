@@ -118,7 +118,9 @@ export const analysis3Experiments: ExperimentSeed[] = [
     description: "硝酸锶与碳酸钠生成白色碳酸锶沉淀，再加稀酸沉淀溶解并冒气泡，两步现象确证碳酸盐身份。",
     category: C.ANALYSIS,
     difficulty: D.MEDIUM,
-    reagents: ["硝酸锶", "碳酸钠"],
+    // 标题、描述、目标都要求"再加稀酸"这第二步（沉淀溶解并冒气泡正是确证
+    // 碳酸盐的关键判据），原试剂表却没有酸 —— 学生在实验台上做不了这一步
+    reagents: ["硝酸锶", "碳酸钠", "盐酸"],
     apparatus: ["试管", "胶头滴管", "试管架", "药匙"],
     objectives: ["生成并确认碳酸锶沉淀", "用酸溶验证沉淀成分", "掌握两步验证的分析逻辑"],
     estimatedMinutes: 25,
@@ -244,7 +246,7 @@ export const analysis3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 40,
     probe: {
       reagentKeys: ["草酸", "高锰酸钾", "硫酸"],
-      expect: { reacted: true, colorChange: true, thermal: "exothermic" },
+      expect: { reacted: true, colorChange: true, thermal: "exothermic", gas: true },
     },
   },
   {

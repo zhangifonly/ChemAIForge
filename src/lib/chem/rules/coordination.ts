@@ -2,7 +2,7 @@
 // 覆盖：Fe³⁺ + SCN⁻ 血红、Cu²⁺ + 过量氨水深蓝、苯酚 + FeCl₃ 紫色、
 // 蛋白质遇浓硝酸变黄、酸碱指示剂变色。
 import type { Reaction } from "./helpers";
-import { hasAnyFormula, hasCategory } from "./helpers";
+import { hasAnyFormula } from "./helpers";
 
 export const coordinationRules: Reaction[] = [
   {
@@ -50,32 +50,9 @@ export const coordinationRules: Reaction[] = [
         "EDTA 夺取被铬黑T 络合的钙镁离子，指示剂游离，溶液由酒红色变为纯蓝色，即为滴定终点。",
     }),
   },
-  {
-    id: "cocl2-equilibrium",
-    name: "氯化钴配位平衡",
-    match: (inputs) =>
-      hasAnyFormula(inputs, ["CoCl2"]) &&
-      (hasAnyFormula(inputs, ["HCl"]) || hasCategory(inputs, "water")),
-    build: (inputs) => {
-      const toBlue = hasAnyFormula(inputs, ["HCl"]);
-      return {
-        products: [
-          toBlue
-            ? { formula: "[CoCl4]2-", name: "四氯合钴配离子", category: "salt" as const }
-            : { formula: "[Co(H2O)6]2+", name: "六水合钴配离子", category: "salt" as const },
-        ],
-        producesGas: false,
-        producesPrecipitate: false,
-        colorChange: true,
-        thermal: "none",
-        phTrend: "neutral",
-        equation: "[Co(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CoCl₄]²⁻ + 6H₂O",
-        description: toBlue
-          ? "增大氯离子浓度使平衡右移，溶液由粉红色转为蓝色。"
-          : "加水稀释使平衡左移，溶液由蓝色转回粉红色。",
-      };
-    },
-  },
+  // 原 cocl2-equilibrium 已删除：与 equilibrium.ts 的 cobalt-chloride-equilibrium
+  // 是同一化学，而后者注册序号更前（4 < 37），按首命中优先本规则永远轮不到执行，
+  // 属于死代码；且后者的方程带 ΔH > 0、描述里有变色硅胶的实际应用，信息更完整。
   {
     id: "fe-scn",
     name: "铁(III)与硫氰酸根显色",
@@ -125,6 +102,8 @@ export const coordinationRules: Reaction[] = [
       producesGas: false,
       // 加氨过程中确有白色沉淀先出现，是这个实验的关键观察点
       producesPrecipitate: true,
+      // 沉淀是 AgOH（白），不是产物那个无色配离子
+      precipitateFormula: "AgOH",
       colorChange: false,
       thermal: "none",
       phTrend: "increase",
@@ -145,6 +124,8 @@ export const coordinationRules: Reaction[] = [
       ],
       producesGas: false,
       producesPrecipitate: true,
+      // 中间沉淀是白色 Zn(OH)2；产物配离子无色，拿它查沉淀色表查不到
+      precipitateFormula: "Zn(OH)2",
       colorChange: false,
       thermal: "none",
       phTrend: "increase",
@@ -156,15 +137,22 @@ export const coordinationRules: Reaction[] = [
   {
     id: "nickel-ammonia",
     name: "镍氨配离子显色",
+    // 必须排除丁二酮肟：它是镍的特效试剂，螯合常数远大于氨，且实验里加氨水
+    // 只为调到弱碱性。若不排除，「氯化镍 + 丁二酮肟 + 氨水」会报成蓝紫色氨配离子，
+    // 丢掉鲜红螯合沉淀这个唯一看点（下一条规则本可正确处理，却因排序被截住）
     match: (inputs) =>
       hasAnyFormula(inputs, ["NiCl2", "NiSO4", "Ni(NO3)2"]) &&
-      hasAnyFormula(inputs, ["NH3·H2O", "NH3"]),
+      hasAnyFormula(inputs, ["NH3·H2O", "NH3"]) &&
+      !hasAnyFormula(inputs, ["C4H8N2O2"]),
     build: () => ({
       products: [
         { formula: "[Ni(NH3)6]2+", name: "六氨合镍配离子", category: "salt" },
       ],
       producesGas: false,
       producesPrecipitate: true,
+      // 中间沉淀是苹果绿的 Ni(OH)2。原先靠产物反推，拿蓝紫配离子去查沉淀色表
+      // 查不到，回退成白色 —— 恰好把「绿色沉淀溶成蓝紫溶液」的对比抹平
+      precipitateFormula: "Ni(OH)2",
       colorChange: true,
       thermal: "none",
       phTrend: "increase",
@@ -213,49 +201,7 @@ export const coordinationRules: Reaction[] = [
         "白色氢氧化铝沉淀在强碱中溶解为无色澄清的偏铝酸钠溶液，与它溶于酸的行为共同体现两性。",
     }),
   },
-  {
-    id: "phenol-fecl3",
-    name: "苯酚与氯化铁显色",
-    match: (inputs) =>
-      hasAnyFormula(inputs, ["C6H5OH"]) && hasAnyFormula(inputs, ["FeCl3"]),
-    build: () => ({
-      products: [{ formula: "complex", name: "铁酚配合物", category: "other" }],
-      producesGas: false,
-      producesPrecipitate: false,
-      colorChange: true,
-      thermal: "none",
-      phTrend: "neutral",
-      equation: "苯酚 + FeCl₃ → 紫色配合物",
-      description: "苯酚遇氯化铁溶液显特征紫色，可用于酚羟基的检验。",
-    }),
-  },
-  {
-    id: "indicator-acid-base",
-    name: "指示剂酸碱变色",
-    // 指示剂遇酸/碱，或遇溶于水显酸性的气体(CO₂/SO₂)、氯水(含 HClO)时变色
-    match: (inputs) =>
-      hasCategory(inputs, "indicator") &&
-      (hasCategory(inputs, "acid") ||
-        hasCategory(inputs, "base") ||
-        hasAnyFormula(inputs, ["CO2", "SO2", "Cl2"])),
-    build: (inputs) => {
-      const basic = hasCategory(inputs, "base");
-      const acidic = !basic; // 酸 / 酸性氧化物 / 氯水 均显酸性
-      const bleach = hasAnyFormula(inputs, ["Cl2"]);
-      return {
-        products: inputs,
-        producesGas: false,
-        producesPrecipitate: false,
-        colorChange: true,
-        thermal: "none",
-        phTrend: basic ? "increase" : "decrease",
-        equation: "指示剂 + 酸/碱 → 变色",
-        description: bleach
-          ? "氯水中的次氯酸先使石蕊变红，随后将其氧化褪色（漂白性）。"
-          : acidic
-            ? "指示剂在酸性环境中显特征颜色（如石蕊变红、酚酞无色）。"
-            : "指示剂在碱性环境中显特征颜色（如石蕊变蓝、酚酞变红）。",
-      };
-    },
-  },
+  // 原 phenol-fecl3 已删除：chromogenic.ts 的 chromo-phenol-fe3 注册序号更前
+  //（31 < 45），本规则永远命中不到。后者覆盖面也更广：酚一侧含水杨酸、
+  // 铁一侧含硫酸铁与硝酸铁，方程写出了配位比与放出的 H⁺，产物化学式规范。
 ];

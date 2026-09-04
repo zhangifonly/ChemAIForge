@@ -5,6 +5,21 @@
 import type { Reaction } from "./helpers";
 import { hasAnyFormula, hasCategory } from "./helpers";
 
+/**
+ * 与水直接化合成碱的碱性氧化物。
+ *
+ * 只收「对应碱可溶」的：Ca(OH)₂ 微溶但足以使酚酞变红，也算。CuO / Fe₂O₃ 等
+ * 对应碱难溶，与水不反应，不能放进来。
+ */
+const BASIC_OXIDE: Record<string, { product: string; name: string; equation: string }> = {
+  Na2O: { product: "NaOH", name: "氢氧化钠", equation: "Na₂O + H₂O → 2NaOH" },
+  K2O: { product: "KOH", name: "氢氧化钾", equation: "K₂O + H₂O → 2KOH" },
+  BaO: { product: "Ba(OH)2", name: "氢氧化钡", equation: "BaO + H₂O → Ba(OH)₂" },
+  CaO: { product: "Ca(OH)2", name: "氢氧化钙", equation: "CaO + H₂O → Ca(OH)₂" },
+  Li2O: { product: "LiOH", name: "氢氧化锂", equation: "Li₂O + H₂O → 2LiOH" },
+  SrO: { product: "Sr(OH)2", name: "氢氧化锶", equation: "SrO + H₂O → Sr(OH)₂" },
+};
+
 /** 两性氧化物 / 氢氧化物溶于强碱生成的偏酸盐 */
 const AMPHOTERIC: Record<string, { product: string; name: string; equation: string }> = {
   Al2O3: { product: "NaAlO2", name: "偏铝酸钠", equation: "Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O" },
@@ -66,21 +81,28 @@ export const oxideRules: Reaction[] = [
     }),
   },
   {
-    id: "sodium-oxide-water",
+    id: "basic-oxide-water",
     name: "碱性氧化物与水化合",
+    // 必须涵盖 CaO：生石灰消化（CaO + H₂O → Ca(OH)₂）放热到能点燃纸张，是最经典的
+    // 化合放热实验。漏掉它会落到「溶解放热」规则，打印出化学上不存在的 CaO(aq)。
     match: (inputs) =>
-      hasAnyFormula(inputs, ["Na2O", "K2O", "BaO"]) && hasCategory(inputs, "water"),
-    build: () => ({
-      products: [{ formula: "NaOH", name: "对应强碱", category: "base" }],
-      producesGas: false,
-      producesPrecipitate: false,
-      colorChange: false,
-      thermal: "exothermic",
-      phTrend: "increase",
-      equation: "Na₂O + H₂O → 2NaOH",
-      description:
-        "碱性氧化物与水直接化合生成对应强碱，放出热量，滴入酚酞立即变红。注意它不放气体。",
-    }),
+      inputs.some((s) => s.formula in BASIC_OXIDE) && hasCategory(inputs, "water"),
+    build: (inputs) => {
+      const oxide = inputs.find((s) => s.formula in BASIC_OXIDE)!;
+      const spec = BASIC_OXIDE[oxide.formula];
+      return {
+        products: [
+          { formula: spec.product, name: spec.name, category: "base" as const },
+        ],
+        producesGas: false,
+        producesPrecipitate: false,
+        colorChange: false,
+        thermal: "exothermic" as const,
+        phTrend: "increase" as const,
+        equation: spec.equation,
+        description: `${oxide.name}与水直接化合生成${spec.name}并放出大量热，滴入酚酞立即变红。注意它不放气体。`,
+      };
+    },
   },
   {
     id: "amphoteric-oxide-base",
@@ -111,6 +133,7 @@ export const oxideRules: Reaction[] = [
   {
     id: "thermite-reaction",
     name: "铝热反应",
+    requiresHeat: true,
     // 铝的还原性强且放热极多，能把氧化物中的金属还原为熔融态流出，
     // 用于野外焊接钢轨；引擎原先完全没有固-固高温反应
     match: (inputs) =>

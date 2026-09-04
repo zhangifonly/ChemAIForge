@@ -34,15 +34,23 @@ describe("有机相分层", () => {
     expect(extractedColor(S("氯化钠", "四氯化碳"), base)).toBe(base);
   });
 
+  // 酯化必须加热（浓硫酸催化 + 水浴），常温下引擎不给结果，故显式带上条件
+  const HOT = { heated: true };
+
   it("酯化生成的酯要在液面形成油状层（产物也参与分层判定）", () => {
     const contents = S("乙酸", "乙醇", "硫酸");
-    const plan = planScene({ contents, result: react(contents), apparatus: ["试管", "酒精灯"] });
+    const plan = planScene({
+      contents,
+      result: react(contents, HOT),
+      apparatus: ["试管", "酒精灯"],
+      heated: true,
+    });
     expect(plan.phase?.side).toBe("top");
   });
 
   it("酯化产物按实际酸醇组合推出，而非一律乙酸乙酯", () => {
     const formulas = (names: string[]) =>
-      react(S(...names)).products.map((p) => p.formula);
+      react(S(...names), HOT).products.map((p) => p.formula);
     expect(formulas(["甲酸", "甲醇", "硫酸"])).toContain("HCOOCH3");
     expect(formulas(["乙酸", "甲醇", "硫酸"])).toContain("CH3COOCH3");
     expect(formulas(["乙酸", "乙醇", "硫酸"])).toContain("CH3COOC2H5");
@@ -63,6 +71,36 @@ describe("乳浊与澄清", () => {
 
   it("不含难溶物的体系不浑浊", () => {
     expect(isTurbid(S("盐酸", "氢氧化钠"), null)).toBe(false);
+  });
+
+  // 「CO₂ 使澄清石灰水变浑浊」是二十多个实验的共同看点，
+  // 一旦石灰水在反应前就被画成浊液，这个对比就彻底看不出来了。
+  it("澄清石灰水本身澄清，通 CO₂ 后靠沉淀呈现浑浊", () => {
+    const lime = S("澄清石灰水");
+    expect(isTurbid(lime, null)).toBe(false);
+    const contents = S("澄清石灰水", "二氧化碳");
+    const result = react(contents);
+    const plan = planScene({ contents, result, apparatus: ["试管", "导管"] });
+    expect(result.reacted).toBe(true);
+    expect(plan.precipitate).not.toBeNull(); // CaCO₃ 白色沉淀，浑浊由它体现
+  });
+
+  it("石灰水/氢氧化钙溶液里不该出现固体块", () => {
+    for (const name of ["澄清石灰水", "石灰水", "氢氧化钙"]) {
+      const contents = S(name, "盐酸");
+      const plan = planScene({ contents, result: react(contents), apparatus: ["试管"] });
+      expect(plan.solid, name).toBeNull();
+    }
+  });
+
+  it("石灰乳是浊液且带固体，与澄清石灰水区分开", () => {
+    const milk = S("石灰乳");
+    expect(milk[0].formula).toBe("Ca(OH)2");
+    expect(isTurbid(milk, null)).toBe(true);
+    const contents = S("石灰乳", "氯气");
+    const plan = planScene({ contents, result: react(contents), apparatus: ["烧杯", "导管"] });
+    expect(plan.turbid).toBe(true);
+    expect(plan.solid?.formula).toBe("Ca(OH)2");
   });
 });
 

@@ -99,11 +99,16 @@ export const gasExperiments: ExperimentSeed[] = [
     description: "将蘸有浓氨水与浓盐酸的玻璃棒靠近，观察生成白烟氯化铵，认识气体间反应。",
     category: C.GAS,
     difficulty: D.MEDIUM,
-    reagents: ["氨水", "盐酸"],
+    // 白烟发生在气相：必须是浓氨水与浓盐酸，两者挥发出的气体在空中相遇才成烟。
+    // 稀溶液倒在一起只是中和，看不到白烟
+    reagents: ["浓氨水", "浓盐酸"],
     apparatus: ["玻璃棒", "广口瓶"],
     objectives: ["观察白烟现象", "理解气体反应", "认识氯化铵生成"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["氨水", "盐酸"], expect: { reacted: true } },
+    probe: {
+      reagentKeys: ["浓氨水", "浓盐酸"],
+      expect: { reacted: true, colorChange: true, gas: false, thermal: "exothermic" },
+    },
   },
   {
     slug: "carbonate-thermal",
@@ -132,6 +137,11 @@ export const gasExperiments: ExperimentSeed[] = [
     apparatus: ["阶梯蜡烛", "烧杯", "软塑料瓶"],
     objectives: ["认识 CO₂ 性质", "验证与水反应", "联系灭火应用"],
     estimatedMinutes: 30,
+    // CO₂ 溶于水生成碳酸使石蕊变红；本体不再产气（气体已作反应物投入）
+    probe: {
+      reagentKeys: ["二氧化碳", "石蕊", "蒸馏水"],
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "none" },
+    },
   },
   {
     slug: "o2-properties",
@@ -151,10 +161,17 @@ export const gasExperiments: ExperimentSeed[] = [
     description: "用二氧化锰与浓盐酸加热制取氯气，验证其漂白性与刺激性（通风橱操作）。",
     category: C.GAS,
     difficulty: D.HARD,
-    reagents: ["二氧化锰", "盐酸", "石蕊"],
+    // 必须是「浓盐酸」：稀盐酸与二氧化锰不反应（Cl⁻ 浓度不足、电极电势不够），
+    // 描述里也写的是浓盐酸。写成"盐酸"会落到"指示剂变色"，制不出氯气
+    reagents: ["二氧化锰", "浓盐酸", "石蕊"],
     apparatus: ["圆底烧瓶", "分液漏斗", "通风橱", "集气瓶"],
     objectives: ["掌握氯气制取", "验证漂白性", "认识尾气处理"],
     estimatedMinutes: 45,
+    probe: {
+      reagentKeys: ["二氧化锰", "浓盐酸", "石蕊"],
+      heated: true,
+      expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" },
+    },
   },
 ];
 

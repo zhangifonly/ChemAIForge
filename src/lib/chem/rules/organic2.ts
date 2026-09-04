@@ -182,6 +182,7 @@ export const organic2Rules: Reaction[] = [
   {
     id: "saccharide-hydrolysis",
     name: "糖类与多糖的酸性水解",
+    requiresHeat: true,
     // 「有糖 + 有酸」这个条件本身很宽，必须排除两类情形，否则会抢走更该
     // 呈现的现象：① 同时给了银氨试剂时，主导现象是水解产物的银镜析出；
     // ② 淀粉只作碘指示剂、真正反应是别的氧化还原时（如 H₂O₂ + KI + 硫酸）
@@ -228,6 +229,7 @@ export const organic2Rules: Reaction[] = [
   {
     id: "benzaldehyde-silver-mirror",
     name: "苯甲醛的银镜反应",
+    requiresHeat: true,
     match: (inputs) =>
       hasAnyFormula(inputs, ["C6H5CHO"]) &&
       hasAnyFormula(inputs, ["AgNO3"]) &&

@@ -63,6 +63,9 @@ export async function POST(request: Request) {
   const sse = (text: string) =>
     encoder.encode(`data: ${JSON.stringify({ text })}\n\n`);
 
+  // 客户端是否已断开：断开后 controller 已关闭，再 enqueue 会抛 TypeError，
+  // 那个异常又会被下面的 catch 当成"上游出错"去 enqueue 错误事件，二次抛错。
+  let aborted = false;
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       try {
@@ -70,17 +73,25 @@ export async function POST(request: Request) {
         for (;;) {
           const { done, value } = await iterator.next();
           if (done) break;
+          if (aborted) break;
           controller.enqueue(sse(value));
         }
-        controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+        if (!aborted) controller.enqueue(encoder.encode("data: [DONE]\n\n"));
       } catch (err) {
+        if (aborted) return;
         const detail = err instanceof Error ? err.message : String(err);
         controller.enqueue(
           encoder.encode(`event: error\ndata: ${JSON.stringify({ detail })}\n\n`),
         );
       } finally {
-        controller.close();
+        // 关掉上游迭代器：用户关页面 / 重新提问打断时若不 return，
+        // 上游连接会一直挂着继续生成，白耗配额。
+        await iterator.return?.().catch(() => {});
+        if (!aborted) controller.close();
       }
+    },
+    cancel() {
+      aborted = true;
     },
   });
 

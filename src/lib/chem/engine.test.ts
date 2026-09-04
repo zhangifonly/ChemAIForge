@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { react, type Substance } from "./engine";
+import { resolveSubstance } from "@/components/lab/reagents";
 
 const HCl: Substance = { formula: "HCl", name: "盐酸", category: "acid" };
 const NaOH: Substance = { formula: "NaOH", name: "氢氧化钠", category: "base" };
@@ -66,7 +67,9 @@ describe("react - 活泼金属与水（价态正确）", () => {
 
   it("钙 + 水 → Ca(OH)₂（+2 价，非 CaOH）配平正确", () => {
     const r = react([Ca, H2O]);
-    expect(r.products.some((p) => p.formula === "Ca(OH)₂")).toBe(true);
+    // 产物 formula 一律半角下标：它是查色表的键，全角 `Ca(OH)₂` 查不到任何表。
+    // 本用例要守的是"钙按 +2 价配平"，与下标的排版形式无关
+    expect(r.products.some((p) => p.formula === "Ca(OH)2")).toBe(true);
     expect(r.products.some((p) => p.formula === "CaOH")).toBe(false);
     expect(r.equation).toContain("Ca + 2H₂O → Ca(OH)₂ + H₂↑");
   });
@@ -121,5 +124,38 @@ describe("react - 指示剂变色（扩展）", () => {
 
   it("钠 + 水（无指示剂）→ 不显色", () => {
     expect(react([Na, H2O]).colorChange).toBe(false);
+  });
+});
+
+// 草酸的碳是 +3 价，被强氧化剂氧化即升到 +4 价变成 CO₂ 逸出
+// （H₂C₂O₄ → 2CO₂↑）——「冒泡」与「褪色」是同时发生的两个现象。
+// 通用的"强氧化剂 + 还原剂"规则原先一律不产气，六个用草酸的实验
+// （含有专用 3D 场景的 kmno4-oxalic-acid）连一个气泡都不冒。
+describe("react - 草酸被强氧化剂氧化放出 CO₂", () => {
+  const S = (...names: string[]) => names.map(resolveSubstance);
+
+  it("高锰酸钾 / 重铬酸钾氧化草酸时产气", () => {
+    for (const oxidant of ["高锰酸钾", "重铬酸钾"]) {
+      const r = react(S(oxidant, "草酸", "硫酸"), { temperature: 80 });
+      expect(r.reacted, oxidant).toBe(true);
+      expect(r.producesGas, oxidant).toBe(true);
+      expect(r.colorChange, oxidant).toBe(true); // 褪色仍在
+      expect(r.products.some((p) => p.formula === "CO2"), oxidant).toBe(true);
+      expect(r.equation, oxidant).toContain("CO₂↑");
+    }
+  });
+
+  it("不产 CO₂ 的还原剂仍然只褪色不冒泡", () => {
+    // 亚硫酸钠不加酸：加了硫酸会走「亚硫酸盐 + 酸 → SO₂↑」那条规则，
+    // 那个气泡是对的，但与草酸的 CO₂ 无关，会掩盖本用例要验的东西
+    const cases: Array<[string[], string]> = [
+      [["高锰酸钾", "亚硫酸钠"], "高锰酸钾+亚硫酸钠"],
+      [["重铬酸钾", "乙醇", "硫酸"], "重铬酸钾+乙醇"],
+    ];
+    for (const [reagents, label] of cases) {
+      const r = react(S(...reagents), { temperature: 80 });
+      expect(r.producesGas, label).toBe(false);
+      expect(r.colorChange, label).toBe(true);
+    }
   });
 });

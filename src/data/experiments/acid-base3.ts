@@ -76,7 +76,8 @@ export const acidBase3Experiments: ExperimentSeed[] = [
     apparatus: ["试管", "导管", "酒精灯", "试管夹"],
     objectives: ["观察碳酸氢铵与酸的产气", "理解铵盐与碳酸氢盐都不稳定", "解释碳酸氢铵作氮肥须避免与碱性物质混用"],
     estimatedMinutes: 20,
-    probe: { reagentKeys: ["碳酸氢铵", "盐酸"], expect: { reacted: true, gas: true, thermal: "exothermic" } },
+    // 碳酸氢根与酸吸热
+    probe: { reagentKeys: ["碳酸氢铵", "盐酸"], expect: { reacted: true, gas: true, thermal: "endothermic" } },
   },
   {
     slug: "aluminum-hydroxide-acid-dissolve",

@@ -12,12 +12,14 @@ export const organicExperiments: ExperimentSeed[] = [
     description: "乙酸与乙醇在浓硫酸催化下酯化生成有果香味的乙酸乙酯，掌握酯化反应。",
     category: C.ORGANIC,
     difficulty: D.MEDIUM,
-    reagents: ["乙酸", "乙醇", "硫酸", "饱和碳酸钠"],
+    // 酯化必须用浓硫酸：它既是催化剂又是吸水剂，写稀硫酸引擎不认（isConcentrated 判 name 含"浓"）
+    reagents: ["乙酸", "乙醇", "浓硫酸", "饱和碳酸钠"],
     // 饱和碳酸钠溶液是收集时的除杂/吸收试剂（已列在 reagents），不是仪器
     apparatus: ["试管", "导管", "酒精灯", "试管夹"],
     objectives: ["掌握酯化反应", "理解催化与脱水", "认识可逆反应"],
     estimatedMinutes: 40,
-    probe: { reagentKeys: ["乙酸", "乙醇", "硫酸"], expect: { reacted: true } },
+    probe: { reagentKeys: ["乙酸", "乙醇", "浓硫酸"],
+      heated: true, expect: { reacted: true } },
   },
   {
     slug: "silver-mirror",
@@ -31,6 +33,7 @@ export const organicExperiments: ExperimentSeed[] = [
     estimatedMinutes: 35,
     probe: {
       reagentKeys: ["乙醛", "硝酸银", "氨水"],
+      heated: true,
       expect: { reacted: true, precipitate: true, colorChange: true },
     },
   },
@@ -104,10 +107,14 @@ export const organicExperiments: ExperimentSeed[] = [
     category: C.ORGANIC,
     difficulty: D.HARD,
     // 银氨溶液须由 硝酸银 + 氨水 配制，原试剂表缺氨水
-    reagents: ["蔗糖", "硫酸", "氢氧化钠", "硝酸银", "氨水"],
+    // 水解本身要消耗水，稀硫酸也需水稀释，蒸馏水是必需试剂（原表遗漏）
+    reagents: ["蔗糖", "蒸馏水", "硫酸", "氢氧化钠", "硝酸银", "氨水"],
     apparatus: ["试管", "水浴", "胶头滴管"],
     objectives: ["认识水解反应", "理解催化作用", "检验水解产物"],
     estimatedMinutes: 40,
+    // 先验证水解本身；银镜检验须先中和残酸，故 probe 只取水解一步
+    probe: { reagentKeys: ["蔗糖", "硫酸", "蒸馏水"],
+      heated: true, expect: { reacted: true, colorChange: true, gas: false, thermal: "none" } },
   },
   {
     slug: "ethanol-oxidation-copper",
@@ -119,6 +126,12 @@ export const organicExperiments: ExperimentSeed[] = [
     apparatus: ["试管", "酒精灯", "铜丝"],
     objectives: ["认识催化氧化", "观察铜丝变化", "理解催化剂循环"],
     estimatedMinutes: 25,
+    // 催化氧化只夺一个氧得乙醛，不产气、无火焰；铜丝黑红交替即 colorChange
+    probe: {
+      reagentKeys: ["乙醇", "铜", "氧气"],
+      heated: true,
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "soap-saponification",
@@ -130,7 +143,8 @@ export const organicExperiments: ExperimentSeed[] = [
     apparatus: ["蒸发皿", "酒精灯", "玻璃棒", "烧杯"],
     objectives: ["认识皂化反应", "掌握盐析操作", "联系日用化工"],
     estimatedMinutes: 50,
-    probe: { reagentKeys: ["油脂", "氢氧化钠"], expect: { reacted: true } },
+    probe: { reagentKeys: ["油脂", "氢氧化钠"],
+      heated: true, expect: { reacted: true } },
   },
 ];
 

@@ -188,7 +188,7 @@ export const metal2Experiments: ExperimentSeed[] = [
   },
   {
     slug: "magnesium-oxide-hydrochloric",
-    title: "氧化镁与盐酸反应",
+    title: "氧化镁的碱性氧化物性质",
     description: "白色氧化镁加入稀盐酸溶解生成无色氯化镁溶液，体现碱性氧化物与酸反应。",
     category: C.METAL,
     difficulty: D.EASY,
@@ -208,6 +208,9 @@ export const metal2Experiments: ExperimentSeed[] = [
     apparatus: ["燃烧匙", "集气瓶", "酒精灯"],
     objectives: ["观察火星四射", "认识燃烧产物", "理解瓶底铺沙作用"],
     estimatedMinutes: 30,
+    // 纯氧中铁丝剧烈燃烧火星四射，生成黑色四氧化三铁
+    probe: { reagentKeys: ["铁片", "氧气"],
+      heated: true, expect: { reacted: true, thermal: "exothermic", colorChange: true, gas: false } },
   },
   {
     slug: "copper-air-heating",
@@ -219,6 +222,12 @@ export const metal2Experiments: ExperimentSeed[] = [
     apparatus: ["坩埚钳", "酒精灯", "石棉网"],
     objectives: ["观察表面变黑", "认识氧化铜生成", "理解金属氧化"],
     estimatedMinutes: 20,
+    // 光亮红色铜表面生成黑色氧化铜，产物为固体故不产气
+    probe: {
+      reagentKeys: ["铜片", "氧气"],
+      heated: true,
+      expect: { reacted: true, gas: false, colorChange: true, thermal: "exothermic" },
+    },
   },
   {
     slug: "sodium-copper-sulfate-solution",

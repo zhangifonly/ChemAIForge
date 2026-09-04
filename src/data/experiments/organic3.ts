@@ -169,6 +169,7 @@ export const organic3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 30,
     probe: {
       reagentKeys: ["苯甲醛", "硝酸银", "氨水"],
+      heated: true,
       expect: { reacted: true, precipitate: true, colorChange: true },
     },
   },
@@ -178,12 +179,14 @@ export const organic3Experiments: ExperimentSeed[] = [
     description: "苯甲酸与乙醇在浓硫酸催化下酯化生成有果香的苯甲酸乙酯，产物不溶于水而浮在液面。",
     category: C.ORGANIC,
     difficulty: D.HARD,
-    reagents: ["苯甲酸", "乙醇", "硫酸"],
+    // 同上：酯化的催化剂是浓硫酸
+    reagents: ["苯甲酸", "乙醇", "浓硫酸"],
     apparatus: ["圆底烧瓶", "回流冷凝管", "分液漏斗", "酒精灯", "铁架台"],
     objectives: ["掌握芳香酸的酯化条件", "理解回流装置的作用", "学会用分液漏斗分离酯层"],
     estimatedMinutes: 50,
     probe: {
-      reagentKeys: ["苯甲酸", "乙醇", "硫酸"],
+      reagentKeys: ["苯甲酸", "乙醇", "浓硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true },
     },
   },
@@ -199,6 +202,7 @@ export const organic3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 40,
     probe: {
       reagentKeys: ["丙酸", "乙醇", "硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true },
     },
   },
@@ -214,6 +218,7 @@ export const organic3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 40,
     probe: {
       reagentKeys: ["乙酸", "丙醇", "硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true },
     },
   },
@@ -229,6 +234,7 @@ export const organic3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 55,
     probe: {
       reagentKeys: ["乙酸", "正丁醇", "硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true },
     },
   },
@@ -244,6 +250,7 @@ export const organic3Experiments: ExperimentSeed[] = [
     estimatedMinutes: 35,
     probe: {
       reagentKeys: ["蔗糖", "硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true, thermal: "none" },
     },
   },
@@ -253,12 +260,14 @@ export const organic3Experiments: ExperimentSeed[] = [
     description: "脱脂棉在浓硫酸中长时间加热逐步水解为葡萄糖，比一般多糖难得多，是生物质制糖的基本路线。",
     category: C.ORGANIC,
     difficulty: D.HARD,
-    reagents: ["纤维素", "硫酸"],
+    // 纤维素比淀粉难水解，必须浓硫酸长时间加热
+    reagents: ["纤维素", "浓硫酸"],
     apparatus: ["圆底烧瓶", "回流冷凝管", "水浴", "铁架台", "玻璃棒"],
     objectives: ["比较纤维素与淀粉的水解难度", "理解晶区结构对水解的阻碍", "认识生物质制糖的工业意义"],
     estimatedMinutes: 60,
     probe: {
-      reagentKeys: ["纤维素", "硫酸"],
+      reagentKeys: ["纤维素", "浓硫酸"],
+      heated: true,
       expect: { reacted: true, colorChange: true, thermal: "none" },
     },
   },
