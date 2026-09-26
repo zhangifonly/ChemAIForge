@@ -9,10 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Tailwind 默认透明度刻度是 0/5/10/15/20…，没有 8 与 12。项目里写了
+      // border-foreground/12、bg-foreground/8 等 13 处，它们从来没生成过规则 ——
+      // 边框退回全局默认的 gray-200，浅色主题下看不出来，深色主题下是一圈刺眼的亮线
+      opacity: { 8: "0.08", 12: "0.12" },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        surface: "var(--surface)",
+        // <alpha-value> 让 Tailwind 能生成 /60 这类透明度修饰（见 globals.css 的说明）
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
         // 化学科技风品牌色：青蓝主色 + 紫罗兰辅色
         brand: {
           50: "#eafaf7",

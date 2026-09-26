@@ -4,9 +4,12 @@
 
 :root {
   /* 浅色主题：极淡青灰背景，深石墨前景 */
-  --background: #f6f9f9;
-  --foreground: #0f1f24;
-  --surface: #ffffff;
+  /* 以 RGB 通道存储（不带 rgb() 外壳）：Tailwind 3 只有拿到通道才能生成 bg-surface/60
+     这类透明度修饰。原先写成十六进制，所有 foreground/surface/background 的透明度类
+     （272 处边框、弱化文字、浅底）在生产 CSS 里整条缺失，静默失效 */
+  --background: 246 249 249;
+  --foreground: 15 31 36;
+  --surface: 255 255 255;
   /* 字体栈：Outfit 负责西文/数字，中文回退到系统优质黑体 */
   --font-sans:
     var(--font-outfit), "PingFang SC", "Hiragino Sans GB",
@@ -16,16 +19,16 @@
 
 .dark {
   /* 深色主题：深海蓝黑背景，柔白前景 */
-  --background: #0a1418;
-  --foreground: #e6f1ef;
-  --surface: #10212699;
+  --background: 10 20 24;
+  --foreground: 230 241 239;
+  --surface: 16 33 38;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
-    --background: #0a1418;
-    --foreground: #e6f1ef;
-    --surface: #10212699;
+    --background: 10 20 24;
+    --foreground: 230 241 239;
+    --surface: 16 33 38;
   }
 }
 
@@ -34,8 +37,8 @@ html {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
   font-family: var(--font-sans);
   /* 数据界面统一启用等宽数字，读数 / 时长对齐更稳 */
   font-variant-numeric: tabular-nums;
