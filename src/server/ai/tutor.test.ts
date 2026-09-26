@@ -10,7 +10,13 @@ vi.mock("./config", () => ({
   }),
 }));
 
-import { buildTutorPrompt, streamTutorReply } from "./tutor";
+import {
+  buildTutorPrompt,
+  streamTutorReply,
+  trimHistory,
+  MAX_HISTORY_MESSAGES,
+  MAX_MESSAGE_CHARS,
+} from "./tutor";
 import type { ExperimentDTO } from "@/types/experiment";
 
 const experiment = {
@@ -63,6 +69,69 @@ describe("buildTutorPrompt", () => {
     expect(body.system).toContain("酸碱中和");
     expect(body.system).toContain("盐酸、氢氧化钠");
     expect(JSON.stringify(body)).not.toContain("test-key");
+  });
+});
+
+// 对话历史必须有上限：客户端每次提问都全量重发，而画布的情境提示会自动追加问答，
+// 不裁剪则历史线性增长，最终超过上游请求体上限，导师直接报错哑掉。
+describe("对话历史裁剪", () => {
+  /** 生成交替的 user/assistant 历史，末条恒为 user（真实提问的形状） */
+  const history = (n: number) =>
+    Array.from({ length: n }, (_, i) => ({
+      role: (n - i) % 2 === 1 ? ("user" as const) : ("assistant" as const),
+      content: `第${i + 1}条`,
+    }));
+
+  it("超长历史只保留最近若干条，且末条（最新提问）不丢", () => {
+    const kept = trimHistory(history(80));
+    expect(kept.length).toBeLessThanOrEqual(MAX_HISTORY_MESSAGES);
+    expect(kept[kept.length - 1].content).toBe("第80条");
+  });
+
+  it("裁剪后首条仍是 user，不会被上游拒绝", () => {
+    // 取偶数条时尾部窗口正好以 assistant 打头，这是最容易踩的一刀
+    for (const n of [MAX_HISTORY_MESSAGES + 1, MAX_HISTORY_MESSAGES + 2, 99, 100]) {
+      const kept = trimHistory(history(n));
+      expect(kept[0].role, `n=${n}`).toBe("user");
+    }
+  });
+
+  it("短历史原样保留，不做无谓改动", () => {
+    // 用奇数条，形状为 user/assistant/…/user，即真实提问轮次的样子
+    const short = history(5);
+    expect(trimHistory(short)).toEqual(short);
+  });
+
+  it("以 assistant 打头的历史即使很短也会被削掉开头（上游硬要求首条是 user）", () => {
+    const kept = trimHistory([
+      { role: "assistant", content: "上轮回答" },
+      { role: "user", content: "追问" },
+    ]);
+    expect(kept).toEqual([{ role: "user", content: "追问" }]);
+  });
+
+  it("单条超长内容被截断，且保留头尾（问题开头与末尾的实验台状态）", () => {
+    const huge = `开头标记${"填".repeat(MAX_MESSAGE_CHARS)}结尾标记`;
+    const [only] = trimHistory([{ role: "user", content: huge }]);
+    expect(only.content.length).toBeLessThan(MAX_MESSAGE_CHARS + 50);
+    expect(only.content.startsWith("开头标记")).toBe(true);
+    expect(only.content.endsWith("结尾标记")).toBe(true);
+    expect(only.content).toContain("已省略");
+  });
+
+  it("全是 assistant 的异常历史也至少发出一条，不会发空数组", () => {
+    const kept = trimHistory([
+      { role: "assistant", content: "甲" },
+      { role: "assistant", content: "乙" },
+    ]);
+    expect(kept).toHaveLength(1);
+    expect(kept[0].content).toBe("乙");
+  });
+
+  it("buildTutorPrompt 实际应用了裁剪", () => {
+    const body = buildTutorPrompt(experiment, { messages: history(60) });
+    expect(body.messages.length).toBeLessThanOrEqual(MAX_HISTORY_MESSAGES);
+    expect(body.messages[0].role).toBe("user");
   });
 });
 

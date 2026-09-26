@@ -9,7 +9,7 @@ vi.mock("./config", () => ({
   }),
 }));
 
-import { buildReportPrompt, generateReport } from "./report";
+import { buildReportPrompt, generateReport, parseReportText } from "./report";
 import type { SessionDTO } from "@/server/session/types";
 import type { ExperimentDTO } from "@/types/experiment";
 
@@ -84,6 +84,50 @@ describe("buildReportPrompt", () => {
   });
 });
 
+// 学生在实验台上已经看到「本组平均 X、相对偏差 Y%」，报告必须拿到同一批数字，
+// 否则模型只能重新定性描述一遍「读数有波动」，把已经算出的结论丢掉。
+describe("定量统计注入 prompt", () => {
+  // 覆盖 measurements：session() 的读数不带 mark，构不成平行测定
+  function withReadings(ms: SessionDTO["measurements"]): SessionDTO {
+    return { ...session(0, 0), measurements: ms };
+  }
+
+  it("两次同体系读数给出平均值、相对偏差与一致性结论", () => {
+    const text = content(
+      withReadings([
+        { ph: 7, temperature: 24, at: "t0", volume: 20, mark: "读数" },
+        { ph: 7, temperature: 26, at: "t1", volume: 20, mark: "读数" },
+      ]),
+    );
+    expect(text).toContain("定量统计");
+    expect(text).toContain("平均温度=25.00℃");
+    expect(text).toContain("平均体积=20.00 mL");
+    expect(text).toContain("最大相对平均偏差=4.00%");
+  });
+
+  it("只有混合快照时如实说明无法计算，不编造偏差", () => {
+    const text = content(
+      withReadings([{ ph: 7, temperature: 40, at: "t0", mark: "混合" }]),
+    );
+    expect(text).toContain("未使用「读数」操作");
+    expect(text).not.toContain("最大相对平均偏差");
+  });
+
+  it("明细里带上动作标记，模型能分辨读数与顺带快照", () => {
+    const text = content(
+      withReadings([{ ph: 7, temperature: 25, at: "t0", volume: 15, mark: "读数" }]),
+    );
+    expect(text).toContain("体积=15.00mL");
+    expect(text).toContain("动作：读数");
+  });
+
+  it("system prompt 要求引用具体数字而非定性改写", () => {
+    const body = buildReportPrompt(experiment, session(0, 0));
+    expect(body.system).toContain("必须原样引用");
+    expect(body.system).toContain("不得自行编造未给出的数值");
+  });
+});
+
 describe("generateReport 的超时保护", () => {
   // fetch 只等到响应头就 resolve，读 body 是另一段等待。
   // 上游"发完头就卡住"时，若超时定时器已被清掉，这里会永久挂起。
@@ -109,5 +153,64 @@ describe("generateReport 的超时保护", () => {
     ).rejects.toThrow("AI 报告生成超时，请稍后重试。");
 
     vi.unstubAllGlobals();
+  });
+});
+
+// 报告解析的容错边界。逐字段回退空串本是好事，但它会把「这段 JSON 根本不是报告」
+// 伪装成生成成功：报告存了库，页面从「尚未生成」变成四个「（暂无内容）」，
+// 学生得自己看出不对再去点重新生成。上游空内容、JSON 非法都会抛错，唯独这档漏了。
+describe("parseReportText", () => {
+  const full = JSON.stringify({
+    conclusion: "达成目标",
+    errorAnalysis: "读数波动小",
+    improvements: ["多次测量取平均"],
+    knowledgeAssessment: "掌握良好",
+  });
+
+  it("正常 JSON 解析出四个字段", () => {
+    const r = parseReportText(full);
+    expect(r.conclusion).toBe("达成目标");
+    expect(r.improvements).toEqual(["多次测量取平均"]);
+    expect(r.generatedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+  });
+
+  it("剥离 Markdown 代码块标记", () => {
+    expect(parseReportText("```json\n" + full + "\n```").conclusion).toBe("达成目标");
+  });
+
+  it("非法 JSON 抛错", () => {
+    expect(() => parseReportText("这不是 JSON")).toThrow("不是合法 JSON");
+  });
+
+  it("四项全空时抛错，而不是产出一份空报告", () => {
+    // 模型返回顶层数组 / 外面多包一层 / 字段名全不对，都会落到这里
+    expect(() => parseReportText("[]")).toThrow("缺少全部关键字段");
+    expect(() => parseReportText('{"report":{"conclusion":"x"}}')).toThrow("缺少全部关键字段");
+    expect(() => parseReportText('{"结论":"达成目标"}')).toThrow("缺少全部关键字段");
+    expect(() => parseReportText('{"conclusion":"   "}')).toThrow("缺少全部关键字段");
+  });
+
+  it("只要有一项拿得到就不算失败（部分缺字段仍是有价值的报告）", () => {
+    const r = parseReportText('{"conclusion":"达成目标"}');
+    expect(r.conclusion).toBe("达成目标");
+    expect(r.errorAnalysis).toBe("");
+    expect(r.improvements).toEqual([]);
+  });
+
+  it("只有 improvements 一项也算有效报告", () => {
+    expect(parseReportText('{"improvements":["下次控温"]}').improvements).toEqual(["下次控温"]);
+  });
+
+  it("improvements 里的对象元素转成可读文本，不再是 [object Object]", () => {
+    const r = parseReportText(
+      '{"improvements":[{"建议":"控制温度","理由":"放热明显"},"直接一句话"]}',
+    );
+    expect(r.improvements).toEqual(["控制温度：放热明显", "直接一句话"]);
+    expect(r.improvements.join()).not.toContain("[object Object]");
+  });
+
+  it("improvements 里拿不出文本的元素被丢弃，而不是塞一行垃圾", () => {
+    const r = parseReportText('{"conclusion":"x","improvements":[null,{},[],"  ","有效建议"]}');
+    expect(r.improvements).toEqual(["有效建议"]);
   });
 });

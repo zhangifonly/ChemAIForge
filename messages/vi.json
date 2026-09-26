@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Bước trước",
+    "pause": "Tạm dừng",
+    "play": "Phát",
+    "next": "Bước tiếp",
+    "voiceOn": "Bật thuyết minh giọng nói",
+    "voiceOff": "Tắt thuyết minh giọng nói",
+    "muted": "🔇 Đã tắt tiếng",
+    "askTutor": "Giảng đến bước “{title}”: {narration} Dựa vào hiện tượng và số liệu đọc được trong cốc lúc này, hãy giải thích ngắn gọn nguyên lý hoá học và phương trình liên quan.",
+    "phase": {
+      "theory": "Nguyên lý",
+      "prep": "Chuẩn bị",
+      "operate": "Thao tác",
+      "observe": "Hiện tượng",
+      "conclude": "Kết luận"
+    },
+    "voiceLabel": "🔊 Thuyết minh giọng nói",
+    "voiceFemale": "Nữ ♀",
+    "voiceMale": "Nam ♂",
+    "vesselBeaker": "Cốc thuỷ tinh",
+    "vesselTube": "Ống nghiệm",
+    "vesselFlask": "Bình nón",
+    "observeGeneric": "Quan sát kỹ hệ thống, chú ý xem có sự thay đổi về màu sắc, bọt khí hoặc nhiệt độ không.",
+    "observeReacting": "Phản ứng đang xảy ra, chú ý quan sát sự thay đổi của pH và nhiệt độ.",
+    "phenomenaList": "Có thể thấy {parts}.",
+    "partGas": "bọt khí liên tục thoát ra",
+    "partPrecipitate": "dung dịch trở nên đục và tạo kết tủa",
+    "partColor": "màu sắc dung dịch thay đổi rõ rệt",
+    "partExo": "đồng thời tỏa nhiệt, nhiệt độ tăng",
+    "partEndo": "đồng thời thu nhiệt, nhiệt độ giảm",
+    "titlePrinciple": "Nguyên lý thí nghiệm",
+    "titleSummary": "Tổng kết thí nghiệm",
+    "titleConnect": "Lắp ráp thiết bị",
+    "titleConnectCircuit": "Kết nối mạch điện",
+    "titlePowerOn": "Bật nguồn điện",
+    "titleConnectOn": "Đóng mạch điện",
+    "titleConductTest": "Kiểm tra độ dẫn điện",
+    "titleElectrodes": "Hiện tượng tại hai cực",
+    "titleConductCompare": "So sánh độ dẫn điện",
+    "titleTake": "Lấy {reagent}",
+    "titleHeat": "Đốt đèn cồn",
+    "titleMix": "Trộn hóa chất phản ứng",
+    "titleObserve": "Quan sát hiện tượng",
+    "summary": "Qua thí nghiệm này, bạn sẽ {objectives}.",
+    "narrSetupElectrode": "Cắm điện cực vào dung dịch điện phân, nối lần lượt với cực dương và cực âm của nguồn điện một chiều.",
+    "narrPowerOn": "Bật nguồn điện một chiều, bắt đầu điện phân, chú ý quan sát sự thay đổi tại hai cực.",
+    "narrSetupCircuit": "Dùng dây dẫn nối hai điện cực qua điện kế, rồi cắm vào dung dịch điện ly.",
+    "narrConnectOn": "Đóng mạch điện, quan sát xem kim điện kế có lệch không.",
+    "narrSetupConduct": "Lần lượt kết nối các dung dịch có cùng nồng độ vào mạch điện cực có gắn bóng đèn.",
+    "narrConductTest": "Đóng mạch điện, so sánh độ sáng của bóng đèn trong từng dung dịch.",
+    "narrSetupGeneric": "Kết nối điện cực và nguồn điện/thiết bị đo theo sơ đồ mạch, rồi cắm vào chất điện ly.",
+    "narrRigOn": "{verb}，chú ý quan sát sự thay đổi ở hai cực và đồng hồ đo.",
+    "verbElectrolysis": "Bật nguồn điện một chiều, bắt đầu điện phân",
+    "verbCircuit": "Đóng mạch điện",
+    "narrTake": "Lấy {reagent}, cho vào {vessel}.",
+    "narrHeat": "Đốt đèn cồn để đun nóng {vessel} — phản ứng này chỉ xảy ra khi được gia nhiệt.",
+    "narrMixHeated": "Sau khi gia nhiệt, trộn đều các thuốc thử, phản ứng bắt đầu ngay.",
+    "narrMix": "Trộn đều các thuốc thử trong {vessel}, phản ứng bắt đầu ngay.",
+    "electrodesFading": "; màu xanh của dung dịch nhạt dần",
+    "brine": "nước muối",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Đề cương hướng dẫn thí nghiệm",
+    "outlineHint": "Sau khi vào bàn thí nghiệm, nhấn “Hướng dẫn thí nghiệm ▶” để tự động trình diễn từng bước.",
+    "cardTitle": "Hướng dẫn thí nghiệm",
+    "askTutorButton": "Nhờ giảng viên giải thích bước này",
+    "sentenceEnd": ".",
+    "noVoice": "Ngôn ngữ này chưa có giọng đọc, bài giảng sẽ tự động chuyển theo phụ đề.",
+    "narrTake_beaker": "Lấy {reagent}, cho vào cốc thủy tinh.",
+    "narrTake_tube": "Lấy {reagent}, cho vào ống nghiệm.",
+    "narrTake_flask": "Lấy {reagent}, cho vào bình tam giác.",
+    "narrHeat_beaker": "Thắp đèn cồn để đun nóng cốc thủy tinh — phản ứng này chỉ có thể xảy ra khi được đun nóng.",
+    "narrHeat_tube": "Thắp đèn cồn để đun nóng ống nghiệm — phản ứng này chỉ có thể xảy ra khi được đun nóng.",
+    "narrHeat_flask": "Thắp đèn cồn để đun nóng bình tam giác — phản ứng này chỉ có thể xảy ra khi được đun nóng.",
+    "narrMix_beaker": "Trộn đều các thuốc thử trong cốc thủy tinh, phản ứng lập tức bắt đầu.",
+    "narrMix_tube": "Trộn đều các thuốc thử trong ống nghiệm, phản ứng lập tức bắt đầu.",
+    "narrMix_flask": "Trộn đều các thuốc thử trong bình tam giác, phản ứng lập tức bắt đầu."
+  },
+  "a11y": {
+    "skipToMain": "Chuyển đến nội dung chính"
+  },
+  "catalog": {
+    "title": "Thư viện thí nghiệm",
+    "empty": "Không có thí nghiệm nào phù hợp.",
+    "searchPlaceholder": "Tìm tên thí nghiệm…",
+    "searchLabel": "Tìm kiếm thí nghiệm",
+    "filterCategory": "Lọc theo danh mục",
+    "allCategories": "Tất cả danh mục",
+    "filterDifficulty": "Lọc theo độ khó",
+    "allDifficulties": "Tất cả độ khó",
+    "objectives": "Mục tiêu thí nghiệm",
+    "reagents": "Hóa chất cần dùng",
+    "apparatus": "Dụng cụ cần dùng",
+    "subtitle": "Chọn một thí nghiệm để bắt đầu trong phòng thí nghiệm ảo.",
+    "estimatedMinutes": "Dự kiến {minutes} phút",
+    "startLab": "Bắt đầu thí nghiệm →"
+  },
+  "category": {
+    "ACID_BASE": "Phản ứng axit-bazơ",
+    "ORGANIC": "Hóa học hữu cơ",
+    "THERMODYNAMICS": "Nhiệt động lực học",
+    "REDOX": "Oxi hóa-khử",
+    "PRECIPITATION": "Phản ứng trao đổi kết tủa",
+    "GAS": "Điều chế khí",
+    "ELECTROCHEM": "Điện hóa học",
+    "METAL": "Hoạt động kim loại",
+    "ANALYSIS": "Phân tích và kiểm nghiệm",
+    "COORDINATION": "Phức chất hiện màu"
+  },
+  "chart": {
+    "temperature": "Nhiệt độ",
+    "ph": "pH",
+    "volume": "Thể tích",
+    "ariaLabel": "Đồ thị {label} theo thời gian, giá trị hiện tại {value}",
+    "measureAria": "Biểu đồ đường số liệu đo theo thời gian, gồm {count} số liệu, thang pH 0 đến 14, thang nhiệt độ 0 đến 100 ℃",
+    "title": "Đường cong quá trình",
+    "current": "Hiện tại",
+    "peak": "Đỉnh",
+    "samples": "Lấy mẫu {count} điểm",
+    "channelTemp": "Nhiệt độ",
+    "channelPh": "pH",
+    "channelVolume": "Thể tích",
+    "empty": "Sau khi bắt đầu thao tác, đường cong theo thời gian sẽ hiển thị tại đây"
+  },
+  "dataTable": {
+    "title": "Bảng ghi dữ liệu",
+    "emptyHint": "Nhấn “Đọc số” để ghi một lần đo",
+    "recorded": "Nhóm này đã ghi {count} lần",
+    "recordedNeedMore": "Nhóm này đã ghi {count} lần (cần đo song song ít nhất 2 lần)",
+    "emptyBody": "Thí nghiệm định lượng cần đo lặp để lấy giá trị trung bình; mỗi lần nhấn “Đọc số” sẽ thêm một hàng tại đây.",
+    "colIndex": "STT",
+    "colTime": "Thời điểm / s",
+    "colTemperature": "Nhiệt độ / ℃",
+    "colPh": "pH",
+    "colVolume": "Thể tích / mL",
+    "rowMean": "Trung bình nhóm",
+    "rowDeviation": "Độ lệch tương đối",
+    "worstDeviation": "Độ lệch tương đối lớn nhất {value}%:",
+    "verdictGood": "Dữ liệu nhất quán tốt, có thể dùng để tính toán.",
+    "verdictFair": "Độ lệch hơi lớn, hãy kiểm tra xem mắt có ngang với vạch chia và hệ thống đã ổn định chưa.",
+    "verdictPoor": "Độ lệch quá lớn, cần xác định nguyên nhân rồi đo song song lại, không nên lấy trung bình trực tiếp."
+  },
+  "deck": {
+    "readings": "Số đọc dụng cụ trên bàn thí nghiệm",
+    "temperature": "Nhiệt độ",
+    "volume": "Thể tích",
+    "ph": "pH",
+    "operations": "Thao tác thí nghiệm",
+    "needReagent": "Vui lòng lấy thuốc thử trước",
+    "inOrder": "Thao tác theo đúng thứ tự các bước thực tế"
+  },
+  "device": {
+    "glassware": "Dụng cụ thủy tinh",
+    "electrolysisCell": "Bình điện phân",
+    "galvanicCell": "Pin điện hóa",
+    "flameTest": "Thiết bị thử màu ngọn lửa",
+    "gasCollection": "Thiết bị thu khí bằng phương pháp đẩy nước",
+    "gasDelivery": "Thiết bị dẫn và hấp thụ khí",
+    "conductivity": "So sánh độ dẫn điện của dung dịch",
+    "strongBright": "Mạnh · Sáng rõ",
+    "weakDim": "Yếu · Sáng mờ",
+    "nonNone": "Không dẫn · Không sáng"
+  },
+  "difficulty": {
+    "EASY": "Cơ bản",
+    "MEDIUM": "Nâng cao",
+    "HARD": "Thử thách"
+  },
+  "electro": {
+    "conductivityDesc": "So sánh khả năng dẫn điện của các dung dịch cùng nồng độ (độ sáng bóng đèn phản ánh nồng độ ion).",
+    "conductivityActive": "Đang kiểm tra thông điện: bóng đèn càng sáng, khả năng dẫn điện càng mạnh",
+    "conductivityIdle": "Nhấn “Kiểm tra thông điện” để so sánh khả năng dẫn điện của các dung dịch",
+    "conductivityOn": "💡 Kiểm tra thông điện",
+    "powerOff": "Ngắt điện",
+    "electrolyteInert": "Dung dịch điện phân: {name} ({formula}) · Anôt trơ (carbon)",
+    "electrolyteActive": "Dung dịch điện phân: {name} ({formula}) · Anôt hoạt động (đồng)",
+    "electrolysisActive": "Đang điện phân…",
+    "electrolysisIdle": "Nhấn “Thông điện” để bắt đầu điện phân, quan sát hiện tượng ở hai cực",
+    "copperFading": "Dung dịch: màu xanh nhạt dần (ion đồng bị tiêu thụ)",
+    "powerOn": "⚡ Thông điện",
+    "brine": "Nước muối",
+    "electrolyte": "Chất điện ly: {name}",
+    "cellActive": "Mạch điện đã đóng, điện kế lệch, pin điện hóa đang phóng điện…",
+    "cellIdle": "Nhấn “Đóng mạch điện” để quan sát độ lệch của điện kế và hiện tượng ở hai cực",
+    "cellOn": "🔌 Đóng mạch điện",
+    "cellOff": "Ngắt mạch điện",
+    "cathode": "Cực âm (−)",
+    "anode": "Cực dương (＋)",
+    "negative": "Cực âm",
+    "positive": "Cực dương"
+  },
+  "errors": {
+    "noActivity": "Chưa có thao tác nào được ghi lại trong thí nghiệm này. Hãy thực hiện thí nghiệm trên bàn làm việc trước khi tạo báo cáo.",
+    "reportFailed": "Tạo báo cáo thất bại",
+    "tutorUnavailable": "Dịch vụ gia sư AI gặp sự cố",
+    "unknown": "Lỗi không xác định"
+  },
+  "home": {
+    "labTitle": "Bàn thí nghiệm tương tác",
+    "labDesc": "Kéo hóa chất vào cốc thủy tinh, động cơ phản ứng tức thời xác định sự đổi màu, bọt khí, kết tủa và biến đổi nhiệt độ — những gì bạn thấy là những gì xảy ra.",
+    "tutorTitle": "Gia sư thí nghiệm AI",
+    "tutorDesc": "Đặt câu hỏi về nguyên lý và thao tác bất cứ lúc nào; khi canvas kích hoạt phản ứng quan trọng, gia sư sẽ chủ động giải thích và đưa ra lưu ý an toàn.",
+    "reportTitle": "Báo cáo thí nghiệm thông minh",
+    "reportDesc": "Tổng hợp đường cong số liệu của toàn bộ thí nghiệm, tự động tạo kết luận, phân tích sai số, đề xuất cải tiến và đánh giá kiến thức.",
+    "badge": "Phòng thí nghiệm hóa học ảo được hỗ trợ bởi AI",
+    "heroLine1": "Ngay trên trình duyệt",
+    "heroLine2": "Thực hiện thí nghiệm hóa học thực sự",
+    "heroDesc": "Kéo thả hóa chất, quan sát sự đổi màu và bọt khí, đặt câu hỏi cho gia sư AI bất cứ lúc nào — báo cáo có cấu trúc được tạo tự động khi kết thúc thí nghiệm. {count} thí nghiệm đã được xác minh, an toàn và có thể lặp lại.",
+    "ctaCatalog": "Xem thư viện thí nghiệm →",
+    "ctaSessions": "Phiên của tôi"
+  },
+  "lab": {
+    "mix": "Trộn phản ứng",
+    "reset": "Làm trống dụng cụ",
+    "clear": "Xóa",
+    "complete": "Hoàn thành thí nghiệm",
+    "completed": "Thí nghiệm đã hoàn thành",
+    "viewReport": "Xem báo cáo thí nghiệm →",
+    "removeItem": "Nhấn để xóa",
+    "conditions": "Điều kiện hệ",
+    "temperature": "Nhiệt độ hệ",
+    "reagentShelf": "Kệ hoá chất",
+    "apparatusList": "Danh sách dụng cụ",
+    "emptyContainer": "Chọn lượng dùng ở kệ hoá chất bên trái rồi lấy, hoặc kéo thả hoá chất vào đây",
+    "absorbent": "Dung dịch hấp thụ",
+    "apparatus": "Dụng cụ",
+    "addReagent": "Thêm {name}",
+    "removeReagent": "Xoá {name}",
+    "mixAction": "Trộn",
+    "backToDetail": "← Quay lại chi tiết thí nghiệm",
+    "backToCatalog": "← Quay lại thư viện thí nghiệm",
+    "labSuffix": "Bàn thí nghiệm",
+    "labHint": "Nhấp hoặc kéo hoá chất vào cốc, chọn “Phản ứng trộn” để quan sát hiện tượng; hoặc dùng “Hướng dẫn thí nghiệm” để tự động trình diễn từng bước."
+  },
+  "locale": {
+    "switchLabel": "Chuyển ngôn ngữ giao diện",
+    "searchPlaceholder": "Tìm kiếm ngôn ngữ…",
+    "noMatch": "Không tìm thấy ngôn ngữ phù hợp",
+    "groupFull": "Ngôn ngữ chính",
+    "groupBasic": "Ngôn ngữ khác",
+    "groupBasicHint": "Bao gồm nội dung thí nghiệm đầy đủ và thuyết minh giọng nói, bản dịch được thực hiện bằng máy"
+  },
+  "nav": {
+    "catalog": "Thư viện thí nghiệm",
+    "sessions": "Phiên của tôi",
+    "home": "Trang chủ"
+  },
+  "op": {
+    "stir": {
+      "label": "Khuấy",
+      "effect": "Khuấy bằng đũa thủy tinh, chất tan hòa tan nhanh hơn và hỗn hợp đồng đều hơn",
+      "hint": "Khuấy thúc đẩy hòa tan và truyền nhiệt, đồng thời cân bằng nồng độ cục bộ để số đọc phản ánh toàn bộ dung dịch"
+    },
+    "shake": {
+      "label": "Lắc",
+      "effect": "Lắc đều để các thuốc thử tiếp xúc đầy đủ",
+      "hint": "Lượng chất lỏng trong ống nghiệm ít, trộn đều bằng cách lắc (không khuấy), giữ miệng ống hướng về phía không có người"
+    },
+    "heat": {
+      "label": "Đun nóng",
+      "effect": "Đốt đèn cồn để đun nóng, nhiệt độ hệ tăng lên",
+      "hint": "Hầu hết phản ứng tăng tốc khi tăng nhiệt; phản ứng thu nhiệt phải đun liên tục mới tiến hành được"
+    },
+    "cool": {
+      "label": "Làm nguội",
+      "effect": "Rút nguồn nhiệt, để nguội tự nhiên, nhiệt độ giảm dần",
+      "hint": "Làm nguội giảm độ tan, là bước thường quy để kết tinh và thu sản phẩm"
+    },
+    "settle": {
+      "label": "Để yên",
+      "effect": "Để yên một lúc, kết tủa lắng xuống, các lớp chất lỏng phân tách rõ hơn",
+      "hint": "Kết tủa và phân lớp cần có thời gian; sau khi để yên mới đánh giá được lớp chất lỏng phía trên có trong hay không"
+    },
+    "read": {
+      "label": "Đọc số",
+      "effect": "Ghi lại số đọc hiện tại",
+      "hint": "Đọc số khi mắt ngang với vạch chia; ghi từng lần đọc vào bảng số liệu mới tính được giá trị trung bình và sai số"
+    }
+  },
+  "quant": {
+    "verdictGood": "Độ nhất quán của dữ liệu tốt, có thể dùng để tính toán",
+    "verdictFair": "Độ lệch còn lớn, kiểm tra thị sai khi đọc số và độ ổn định của hệ",
+    "verdictPoor": "Độ lệch quá lớn, cần xác định nguyên nhân rồi thực hiện lại phép đo song song",
+    "meanPh": "pH trung bình",
+    "meanTemp": "Nhiệt độ trung bình",
+    "meanVolume": "Thể tích trung bình",
+    "group": "Nhóm {no}",
+    "readings": "{count} lần đọc",
+    "finalGroup": "Kết luận lấy theo nhóm này",
+    "singleReading": "Chỉ có 1 lần đo, không thể tính độ lệch tương đối (quy chuẩn yêu cầu đo song song ít nhất 2 lần)",
+    "worstDeviation": "Độ lệch trung bình tương đối lớn nhất {value}%",
+    "groupNote": "Mỗi lần hệ được lấy mẫu / trộn / đun nóng sẽ mở một nhóm mới; các lần đọc số khác nhóm không cấu thành phép đo song song nên được thống kê riêng.",
+    "noReadings": "Thí nghiệm này không có bản ghi đo lường nào từ thao tác “Đọc số”, không thể tính giá trị trung bình và độ lệch tương đối. Thí nghiệm định lượng yêu cầu đọc số lặp lại ít nhất 2 lần trong cùng một trạng thái hệ."
+  },
+  "report": {
+    "conclusion": "Kết luận thí nghiệm",
+    "errorAnalysis": "Phân tích sai số",
+    "improvements": "Đề xuất cải tiến",
+    "noImprovements": "Chưa có đề xuất cải tiến.",
+    "knowledge": "Đánh giá mức độ nắm kiến thức",
+    "empty": "（Chưa có nội dung）",
+    "measurements": "Số liệu đo",
+    "quantData": "Dữ liệu định lượng",
+    "noMeasurements": "Không có số liệu nào được ghi lại trong thí nghiệm này.",
+    "generating": "AI đang phân tích dữ liệu thí nghiệm…",
+    "regenerate": "Tạo lại báo cáo",
+    "generate": "Tạo báo cáo thí nghiệm",
+    "generateFailed": "Tạo thất bại ({status})",
+    "notGenerated": "Báo cáo chưa được tạo. AI sẽ dựa trên các bước thao tác và số liệu đo của thí nghiệm này để đưa ra kết luận, phân tích sai số, đề xuất cải tiến và đánh giá mức độ nắm kiến thức.",
+    "noActivity": "Thí nghiệm này chưa có thao tác nào được ghi lại, chưa thể tạo báo cáo.",
+    "backToLab": "Quay lại bàn thí nghiệm để thực hành →",
+    "title": "Báo cáo thí nghiệm",
+    "generatedAt": "Tạo lúc {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Bật nguồn điện",
+      "off": "Ngắt nguồn điện"
+    },
+    "cell": {
+      "on": "Đóng mạch điện",
+      "off": "Ngắt mạch điện"
+    },
+    "flameTest": {
+      "on": "Châm đèn cồn",
+      "off": "Tắt đèn cồn"
+    },
+    "waterBath": {
+      "on": "Bắt đầu đun cách thủy",
+      "off": "Dừng đun cách thủy"
+    },
+    "distillation": {
+      "on": "Bắt đầu chưng cất",
+      "off": "Dừng chưng cất"
+    },
+    "filtration": {
+      "on": "Bắt đầu lọc",
+      "off": "Dừng lọc"
+    },
+    "calorimeter": {
+      "on": "Bắt đầu khuấy đo nhiệt",
+      "off": "Dừng khuấy"
+    },
+    "gasCollect": {
+      "on": "Bắt đầu thu khí",
+      "off": "Dừng thu khí"
+    },
+    "titration": {
+      "on": "Mở khóa buret để nhỏ giọt",
+      "off": "Đóng khóa buret"
+    },
+    "syringe": {
+      "on": "Nén piston để tăng áp",
+      "off": "Kéo piston để giảm áp"
+    },
+    "phMeter": {
+      "on": "Bật máy đo pH",
+      "off": "Tắt máy đo pH"
+    },
+    "evaporation": {
+      "on": "Thắp đèn cồn để cô cạn",
+      "off": "Tắt đèn cồn"
+    },
+    "pressureDrop": {
+      "on": "Vặn chặt nắp bình và lắc",
+      "off": "Mở nắp bình"
+    },
+    "heat": {
+      "on": "Thắp đèn cồn để đun nóng",
+      "off": "Ngừng đun nóng"
+    }
+  },
+  "sessions": {
+    "title": "Phiên của tôi",
+    "subtitle": "Xem lịch sử thí nghiệm và truy cập báo cáo tương ứng",
+    "unknownExperiment": "Thí nghiệm không xác định",
+    "completed": "Đã hoàn thành",
+    "inProgress": "Đang tiến hành",
+    "startedAt": "Bắt đầu lúc {time}",
+    "viewReport": "Xem báo cáo"
+  },
+  "shelf": {
+    "title": "Giá hóa chất",
+    "taken": "Đã lấy {dose} {unit}",
+    "takeSome": "Nhỏ giọt / lấy vừa đủ",
+    "take": "Lấy {unit}",
+    "specIndicator": "Chỉ thị",
+    "specGas": "Khí",
+    "specBulk": "Lấy vừa đủ",
+    "specSolution": "Dung dịch",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Chất lỏng nguyên chất ρ={density} g/mL",
+    "specLiquid": "Chất lỏng",
+    "specSolid": "Rắn · Tinh khiết phân tích"
+  },
+  "site": {
+    "title": "ChemAIForge · Phòng thí nghiệm Hóa học AI ảo",
+    "description": "Thực hiện thí nghiệm hóa học ngay trên trình duyệt: kéo thả hóa chất, quan sát phản ứng, nhận hướng dẫn từ gia sư AI và tự động tạo báo cáo thí nghiệm."
+  },
+  "titration": {
+    "stopcock": "Độ mở khóa van",
+    "buretteReading": "Số đọc buret",
+    "phMeter": "Máy đo pH",
+    "unfilled": "Chưa nạp dung dịch",
+    "strongBase": "Kiềm mạnh",
+    "weakBase": "Kiềm yếu · Vùng đổi màu",
+    "nearNeutral": "Gần trung tính",
+    "acidExcess": "Axit · Đã dư",
+    "endpointOk": "Điểm cuối đạt yêu cầu",
+    "overshoot": "Nhỏ quá lượng",
+    "notYet": "Chưa đến điểm cuối (hồng chưa mất)",
+    "justFaded": "Vừa mất màu",
+    "keyPoints": "Lưu ý thao tác",
+    "takeAnalyte": "Lấy dung dịch cần chuẩn độ trước →",
+    "dragStopcock": "← Kéo khóa van để bắt đầu chuẩn độ",
+    "openness": "Độ mở {pct}% · Giữ và kéo trái/phải"
+  },
+  "tutor": {
+    "placeholder": "Nhập câu hỏi của bạn…",
+    "replying": "Đang trả lời…",
+    "send": "Gửi",
+    "unknownError": "Lỗi không xác định",
+    "requestFailed": "Yêu cầu thất bại ({status})",
+    "askHeat": "Tôi đã trộn các hóa chất nhưng không quan sát thấy hiện tượng gì; gợi ý cho biết phản ứng này cần gia nhiệt. Hãy giải thích tại sao phản ứng này chỉ xảy ra khi được đun nóng.",
+    "askObserved": "Tôi vừa quan sát thấy phản ứng {equation}{phenomena}, hãy giúp tôi giải thích điều gì đã xảy ra và nguyên lý là gì?",
+    "phPrecipitate": "tạo kết tủa",
+    "phGas": "sinh khí",
+    "phColor": "đổi màu",
+    "listJoin": "、",
+    "eqWrap": "（{equation}）",
+    "title": "Trợ lý Thí nghiệm AI",
+    "empty": "Hãy đặt câu hỏi bất cứ lúc nào, hoặc kích hoạt phản ứng trên bảng vẽ để tôi gợi ý."
+  },
+  "workbench": {
+    "view2d": "Sơ đồ 2D",
+    "view3d": "Bàn thí nghiệm 3D",
+    "view3dRefined": "Bàn thí nghiệm 3D ★",
+    "sceneHint": "Kéo để xoay · Cuộn để thu phóng"
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Pasul anterior",
+    "pause": "Pauză",
+    "play": "Redare",
+    "next": "Pasul următor",
+    "voiceOn": "Activează explicația vocală",
+    "voiceOff": "Dezactivează explicația vocală",
+    "muted": "🔇 Dezactivat",
+    "askTutor": "La pasul «{title}»: {narration} Pe baza fenomenelor și valorilor din pahar, explicați succint principiile chimice și ecuațiile aferente.",
+    "phase": {
+      "theory": "Principiu",
+      "prep": "Pregătire",
+      "operate": "Operare",
+      "observe": "Fenomene",
+      "conclude": "Concluzie"
+    },
+    "voiceLabel": "🔊 Explicație vocală",
+    "vesselBeaker": "Pahar Berzelius",
+    "vesselTube": "Eprubetă",
+    "vesselFlask": "Erlenmayer",
+    "observeGeneric": "Observați cu atenție sistemul și urmăriți eventuale modificări de culoare, bule de gaz sau temperatură.",
+    "observeReacting": "Reacția este în curs; urmăriți variațiile indicatorilor pH și temperatură.",
+    "phenomenaList": "Se poate observa {parts}.",
+    "partGas": "bule de gaz degajate continuu",
+    "partPrecipitate": "soluția devine tulbure și se formează un precipitat",
+    "partColor": "culoarea soluției se modifică vizibil",
+    "partExo": "cu degajare de căldură și creșterea temperaturii",
+    "partEndo": "cu absorbție de căldură și scăderea temperaturii",
+    "titlePrinciple": "Principiul experimentului",
+    "titleSummary": "Concluzie",
+    "titleConnect": "Conectarea dispozitivului",
+    "titleConnectCircuit": "Conectarea circuitului",
+    "titlePowerOn": "Alimentare",
+    "titleConnectOn": "Închiderea circuitului",
+    "titleConductTest": "Test de conductivitate",
+    "titleElectrodes": "Fenomene la electrozi",
+    "titleConductCompare": "Comparație conductivitate",
+    "titleTake": "Prelevare {reagent}",
+    "titleHeat": "Aprinderea lămpii cu alcool",
+    "titleMix": "Amestecare și reacție",
+    "titleObserve": "Observarea fenomenelor",
+    "summary": "Prin acest experiment veți {objectives}.",
+    "narrSetupElectrode": "Introduceți electrozii în electrolit și conectați-i la polul pozitiv, respectiv negativ al sursei de curent continuu.",
+    "narrPowerOn": "Conectați sursa de curent continuu pentru a începe electroliza și urmăriți modificările de la cei doi electrozi.",
+    "narrSetupCircuit": "Conectați cei doi electrozi printr-un galvanometru folosind fire conductoare, apoi introduceți-i în soluția de electrolit.",
+    "narrConnectOn": "Închideți circuitul și observați dacă acul galvanometrului deviază.",
+    "narrSetupConduct": "Conectați soluții de aceeași concentrație la circuite cu electrozi prevăzute cu bec.",
+    "narrConductTest": "Închideți circuitul și comparați luminozitatea becurilor în fiecare soluție.",
+    "narrSetupGeneric": "Conectați electrozii și sursa/instrumentele de măsură conform schemei de circuit, apoi introduceți electrolitul.",
+    "narrRigOn": "{verb}，observați cu atenție modificările de la electrozi și de pe instrumente.",
+    "verbElectrolysis": "Conectați sursa de curent continuu și începeți electroliza",
+    "verbCircuit": "Conectați circuitul",
+    "narrTake": "Luați {reagent} și adăugați-l în {vessel}.",
+    "narrHeat": "Aprindeți lampa cu alcool pentru a încălzi {vessel} — această reacție are loc numai în condiții de încălzire.",
+    "narrMixHeated": "După încălzire, amestecați bine reactivii; reacția începe imediat.",
+    "narrMix": "Amestecați bine reactivii din {vessel}; reacția începe imediat.",
+    "electrodesFading": "; culoarea albastră a soluției se estompează treptat",
+    "brine": "apă sărată",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Planul explicației experimentului",
+    "outlineHint": "După intrarea la bancul de lucru, apăsați «Explicație experiment ▶» pentru demonstrație automată pas cu pas.",
+    "cardTitle": "Explicație experiment",
+    "askTutorButton": "Cere tutorelui să explice acest pas",
+    "sentenceEnd": ".",
+    "voiceFemale": "Voce feminină ♀",
+    "voiceMale": "Voce masculină ♂",
+    "noVoice": "Această limbă nu are voce disponibilă; explicațiile vor avansa automat după subtitrare.",
+    "narrTake_beaker": "Luați {reagent} și adăugați-l în pahar.",
+    "narrTake_tube": "Luați {reagent} și adăugați-l în eprubetă.",
+    "narrTake_flask": "Luați {reagent} și adăugați-l în erlenmeyerul.",
+    "narrHeat_beaker": "Aprindeți lampa cu alcool pentru a încălzi paharul — această reacție poate avea loc numai în condiții de încălzire.",
+    "narrHeat_tube": "Aprindeți lampa cu alcool pentru a încălzi eprubeta — această reacție poate avea loc numai în condiții de încălzire.",
+    "narrHeat_flask": "Aprindeți lampa cu alcool pentru a încălzi erlenmeyerul — această reacție poate avea loc numai în condiții de încălzire.",
+    "narrMix_beaker": "Amestecați bine reactivii din pahar — reacția începe imediat.",
+    "narrMix_tube": "Amestecați bine reactivii din eprubetă — reacția începe imediat.",
+    "narrMix_flask": "Amestecați bine reactivii din erlenmeyer — reacția începe imediat."
+  },
+  "a11y": {
+    "skipToMain": "Sari la conținutul principal"
+  },
+  "catalog": {
+    "title": "Biblioteca de experimente",
+    "empty": "Niciun experiment nu corespunde criteriilor.",
+    "searchPlaceholder": "Caută după numele experimentului…",
+    "searchLabel": "Caută experimente",
+    "filterCategory": "Filtrează după categorie",
+    "allCategories": "Toate categoriile",
+    "filterDifficulty": "Filtrează după dificultate",
+    "allDifficulties": "Toate dificultățile",
+    "objectives": "Obiectivele experimentului",
+    "reagents": "Reactivi necesari",
+    "apparatus": "Aparatură necesară",
+    "subtitle": "Alege un experiment și intră în laboratorul virtual.",
+    "estimatedMinutes": "Aproximativ {minutes} minute",
+    "startLab": "Începe experimentul →"
+  },
+  "category": {
+    "ACID_BASE": "Reacții acido-bazice",
+    "ORGANIC": "Chimie organică",
+    "THERMODYNAMICS": "Termodinamică",
+    "REDOX": "Oxidoreducere",
+    "PRECIPITATION": "Precipitare și metateze",
+    "GAS": "Preparare gaze",
+    "ELECTROCHEM": "Electrochimie",
+    "METAL": "Activitate metalică",
+    "ANALYSIS": "Analiză și identificare",
+    "COORDINATION": "Complexare și colorimetrie"
+  },
+  "chart": {
+    "temperature": "Temperatură",
+    "ph": "pH",
+    "volume": "Volum",
+    "ariaLabel": "Grafic {label} în funcție de timp, valoare curentă {value}",
+    "measureAria": "Grafic liniar al măsurătorilor în funcție de timp, {count} serii de date, pH de la 0 la 14, temperatură de la 0 la 100 ℃",
+    "title": "Curba procesului",
+    "current": "Curent",
+    "peak": "Vârf",
+    "samples": "Eșantionare {count} puncte",
+    "channelTemp": "Temperatură",
+    "channelPh": "pH",
+    "channelVolume": "Volum",
+    "empty": "După pornirea operației, aici se va afișa curba de variație în timp"
+  },
+  "dataTable": {
+    "title": "Tabel de înregistrare a datelor",
+    "emptyHint": "Apasă «Citire» pentru a înregistra o măsurătoare",
+    "recorded": "Grup curent: {count} înregistrări",
+    "recordedNeedMore": "Grup curent: {count} înregistrări (min. 2 măsurători paralele)",
+    "emptyBody": "Experimentele cantitative necesită măsurători repetate pentru medie; fiecare apăsare pe «Citire» adaugă un rând.",
+    "colIndex": "Nr.",
+    "colTime": "Timp / s",
+    "colTemperature": "Temperatură / ℃",
+    "colPh": "pH",
+    "colVolume": "Volum / mL",
+    "rowMean": "Media grupului",
+    "rowDeviation": "Abatere relativă",
+    "worstDeviation": "Abatere relativă maximă {value}%:",
+    "verdictGood": "Consistența datelor este bună; pot fi utilizate pentru calcul.",
+    "verdictFair": "Abatere ridicată — verificați alinierea ochiului cu scala și stabilizarea sistemului.",
+    "verdictPoor": "Abatere excesivă — identificați cauza și repetați măsurătorile paralele; nu calculați direct media."
+  },
+  "deck": {
+    "readings": "Citiri instrumente banc de lucru",
+    "temperature": "Temperatură",
+    "volume": "Volum",
+    "ph": "pH",
+    "operations": "Operații experimentale",
+    "needReagent": "Preluați mai întâi reactivul",
+    "inOrder": "Urmați ordinea reală a pașilor"
+  },
+  "device": {
+    "glassware": "Veselă de laborator",
+    "electrolysisCell": "Celulă de electroliză",
+    "galvanicCell": "Element galvanic",
+    "flameTest": "Dispozitiv test flacără",
+    "gasCollection": "Colectare gaz prin deplasarea apei",
+    "gasDelivery": "Dispozitiv de transport și absorbție gaz",
+    "conductivity": "Comparație conductivitate soluții",
+    "strongBright": "Puternic · Luminos",
+    "weakDim": "Slab · Slab luminos",
+    "nonNone": "Neconductor · Stins"
+  },
+  "difficulty": {
+    "EASY": "Începător",
+    "MEDIUM": "Intermediar",
+    "HARD": "Avansat"
+  },
+  "electro": {
+    "conductivityDesc": "Comparați conductivitatea soluțiilor la aceeași concentrație (luminozitatea becului reflectă concentrația ionică).",
+    "conductivityActive": "Test în curs: cu cât becul e mai luminos, cu atât conductivitatea e mai mare",
+    "conductivityIdle": "Apăsați «Test conductivitate» pentru a compara conductivitatea soluțiilor",
+    "conductivityOn": "💡 Test conductivitate",
+    "powerOff": "Deconectare",
+    "electrolyteInert": "Electrolit: {name} ({formula}) · anod inert (carbon)",
+    "electrolyteActive": "Electrolit: {name} ({formula}) · anod activ (cupru)",
+    "electrolysisActive": "Electroliză în curs…",
+    "electrolysisIdle": "Apăsați «Conectare» pentru a începe electroliza și a observa fenomenele la electrozi",
+    "copperFading": "Soluție: culoarea albastră se estompează treptat (ionii de cupru sunt consumați)",
+    "powerOn": "⚡ Conectare",
+    "brine": "Apă sărată",
+    "electrolyte": "Electrolit: {name}",
+    "cellActive": "Circuit închis — galvanometrul deviază, elementul galvanic în descărcare…",
+    "cellIdle": "Apăsați «Închide circuitul» pentru a observa deviația galvanometrului și fenomenele la electrozi",
+    "cellOn": "🔌 Închide circuitul",
+    "cellOff": "Circuit deconectat",
+    "cathode": "Catod (−)",
+    "anode": "Anod (＋)",
+    "negative": "Pol negativ",
+    "positive": "Pol pozitiv"
+  },
+  "errors": {
+    "noActivity": "Nu există nicio operațiune înregistrată pentru acest experiment. Efectuați mai întâi o acțiune la masa de lucru, apoi generați raportul.",
+    "reportFailed": "Generarea raportului a eșuat",
+    "tutorUnavailable": "Serviciul tutore AI este indisponibil",
+    "unknown": "Eroare necunoscută"
+  },
+  "home": {
+    "labTitle": "Masă de lucru interactivă",
+    "labDesc": "Trageți reactivi în pahar; motorul de reacție determină în timp real schimbările de culoare, bule, precipitate și variații de temperatură — ce vezi este ce obții.",
+    "tutorTitle": "Tutore AI de laborator",
+    "tutorDesc": "Puneți întrebări despre principii și proceduri oricând. Când pe planșă se declanșează o reacție cheie, tutorele oferă explicații și avertismente de siguranță.",
+    "reportTitle": "Raport de laborator inteligent",
+    "reportDesc": "Sintetizează curbele de măsurare ale întregului experiment și generează automat concluzii, analiză a erorilor, sugestii de îmbunătățire și evaluarea cunoștințelor.",
+    "badge": "Laborator virtual de chimie bazat pe AI",
+    "heroLine1": "Chiar în browser,",
+    "heroLine2": "experimente chimice reale",
+    "heroDesc": "Trageți reactivi, observați schimbările de culoare și bulele, întrebați tutorele AI oricând — la final se generează automat un raport structurat. {count} experimente validate, sigure și repetabile.",
+    "ctaCatalog": "Explorează biblioteca →",
+    "ctaSessions": "Sesiunile mele"
+  },
+  "lab": {
+    "mix": "Amestecă și reacționează",
+    "reset": "Golește recipientul",
+    "clear": "Șterge",
+    "complete": "Finalizează experimentul",
+    "completed": "Experiment finalizat",
+    "viewReport": "Vezi raportul experimentului →",
+    "removeItem": "Clic pentru a elimina",
+    "conditions": "Condiții sistem",
+    "temperature": "Temperatura sistemului",
+    "reagentShelf": "Raft de reactivi",
+    "apparatusList": "Echipamente disponibile",
+    "emptyContainer": "Selectați cantitatea din raftul de reactivi din stânga, apoi preluați reactantul sau trageți-l aici.",
+    "absorbent": "Soluție absorbantă",
+    "apparatus": "Aparatură",
+    "addReagent": "Adaugă {name}",
+    "removeReagent": "Elimină {name}",
+    "mixAction": "Amestecă",
+    "backToDetail": "← Înapoi la detalii experiment",
+    "backToCatalog": "← Înapoi la biblioteca de experimente",
+    "labSuffix": "Bancă de lucru",
+    "labHint": "Faceți clic sau trageți reactivi în pahar, folosiți «Reacție de amestecare» pentru a observa fenomenele; sau utilizați «Explicație experiment» pentru demonstrație automată pas cu pas."
+  },
+  "locale": {
+    "switchLabel": "Schimbați limba interfeței",
+    "searchPlaceholder": "Căutați o limbă…",
+    "noMatch": "Nicio limbă găsită",
+    "groupFull": "Limbi principale",
+    "groupBasic": "Alte limbi",
+    "groupBasicHint": "Conține conținut complet al experimentului și narațiune audio; traducerea este automată"
+  },
+  "nav": {
+    "catalog": "Biblioteca de experimente",
+    "sessions": "Sesiunile mele",
+    "home": "Acasă"
+  },
+  "op": {
+    "stir": {
+      "label": "Agitare",
+      "effect": "Agitați cu bagheta de sticlă pentru a accelera dizolvarea și a omogeniza amestecul",
+      "hint": "Agitarea accelerează dizolvarea și transferul de căldură, egalizând concentrația locală pentru o citire reprezentativă"
+    },
+    "shake": {
+      "label": "Scuturare",
+      "effect": "Scuturați pentru a omogeniza reactivii și a asigura contactul complet",
+      "hint": "Lichidul din eprubetă este puțin; amestecați prin agitare (nu amestecare), ținând gura eprubetei departe de persoane."
+    },
+    "heat": {
+      "label": "Încălzire",
+      "effect": "Se aprinde lampa cu alcool; temperatura sistemului crește.",
+      "hint": "Majoritatea reacțiilor se accelerează la temperaturi mai ridicate; reacțiile endoterme necesită încălzire continuă."
+    },
+    "cool": {
+      "label": "Răcire",
+      "effect": "Se îndepărtează sursa de căldură; temperatura scade natural.",
+      "hint": "Răcirea reduce solubilitatea — pas standard pentru cristalizare și colectarea produsului."
+    },
+    "settle": {
+      "label": "Decantare",
+      "effect": "Se lasă în repaus; precipitatul sedimentează și separarea lichidelor devine mai clară.",
+      "hint": "Precipitarea și separarea straturilor necesită timp; abia după repaus se poate aprecia limpezimea lichidului superior."
+    },
+    "read": {
+      "label": "Citire",
+      "effect": "Se înregistrează valoarea curentă.",
+      "hint": "Citiți cu privirea la nivelul gradației; înregistrați fiecare citire în tabel pentru a calcula media și eroarea."
+    }
+  },
+  "quant": {
+    "verdictGood": "Consistența datelor este bună; se pot utiliza pentru calcul.",
+    "verdictFair": "Abatere ridicată — verificați unghiul de citire și stabilitatea sistemului.",
+    "verdictPoor": "Abatere excesivă — identificați cauza și repetați măsurătorile paralele.",
+    "meanPh": "pH mediu",
+    "meanTemp": "Temperatură medie",
+    "meanVolume": "Volum mediu",
+    "group": "Grupul {no}",
+    "readings": "{count} citiri",
+    "finalGroup": "Concluzia se bazează pe acest grup.",
+    "singleReading": "O singură determinare — abaterea relativă nu poate fi calculată (normele impun cel puțin 2 determinări paralele).",
+    "worstDeviation": "Abatere medie relativă maximă {value}%",
+    "groupNote": "Un grup nou se deschide de fiecare dată când sistemul este prelevat, amestecat sau încălzit; citirile din grupuri diferite nu constituie determinări paralele și sunt statisticate separat.",
+    "noReadings": "Nu există înregistrări de măsurare din operația „Citire” în acest experiment; media și abaterea relativă nu pot fi calculate. Experimentele cantitative necesită cel puțin 2 citiri repetate în aceeași stare a sistemului."
+  },
+  "report": {
+    "conclusion": "Concluzia experimentului",
+    "errorAnalysis": "Analiza erorilor",
+    "improvements": "Sugestii de îmbunătățire",
+    "noImprovements": "Nicio sugestie de îmbunătățire deocamdată.",
+    "knowledge": "Evaluarea cunoștințelor acumulate",
+    "empty": "(Fără conținut)",
+    "measurements": "Citiri de măsurători",
+    "quantData": "Date cantitative",
+    "noMeasurements": "Nu a fost înregistrată nicio citire în acest experiment.",
+    "generating": "AI analizează datele experimentului…",
+    "regenerate": "Regenerează raportul",
+    "generate": "Generează raportul de experiment",
+    "generateFailed": "Generare eșuată ({status})",
+    "notGenerated": "Raportul nu a fost generat încă. AI va oferi concluzii, analiza erorilor, sugestii de îmbunătățire și evaluarea cunoștințelor, pe baza pașilor și citirilor din acest experiment.",
+    "noActivity": "Nu există nicio operațiune înregistrată pentru acest experiment; raportul nu poate fi generat momentan.",
+    "backToLab": "Întoarce-te la bancul de lucru și efectuează experimentul →",
+    "title": "Raport de experiment",
+    "generatedAt": "Generat la {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Conectează alimentarea",
+      "off": "Deconectează alimentarea"
+    },
+    "cell": {
+      "on": "Închide circuitul",
+      "off": "Deschide circuitul"
+    },
+    "flameTest": {
+      "on": "Aprinde lampa cu alcool",
+      "off": "Stinge lampa cu alcool"
+    },
+    "waterBath": {
+      "on": "Pornește încălzirea pe baie de apă",
+      "off": "Oprește încălzirea pe baie de apă"
+    },
+    "distillation": {
+      "on": "Pornește distilarea",
+      "off": "Oprește distilarea"
+    },
+    "filtration": {
+      "on": "Pornește filtrarea",
+      "off": "Oprește filtrarea"
+    },
+    "calorimeter": {
+      "on": "Pornește agitarea și măsurarea temperaturii",
+      "off": "Oprește agitarea"
+    },
+    "gasCollect": {
+      "on": "Pornește colectarea gazului",
+      "off": "Oprește colectarea"
+    },
+    "titration": {
+      "on": "Deschide robinetul pentru titrare",
+      "off": "Închide robinetul"
+    },
+    "syringe": {
+      "on": "Apasă pistonul pentru presiune",
+      "off": "Retrage pistonul pentru depresurrizare"
+    },
+    "phMeter": {
+      "on": "Pornește pH-metrul",
+      "off": "Oprește pH-metrul"
+    },
+    "evaporation": {
+      "on": "Aprinde lampa cu alcool pentru evaporare",
+      "off": "Stinge lampa cu alcool"
+    },
+    "pressureDrop": {
+      "on": "Strânge capacul și agită",
+      "off": "Slăbește capacul"
+    },
+    "heat": {
+      "on": "Aprinde lampa cu alcool pentru încălzire",
+      "off": "Oprește încălzirea"
+    }
+  },
+  "sessions": {
+    "title": "Sesiunile mele",
+    "subtitle": "Vezi istoricul experimentelor și accesează rapoartele",
+    "unknownExperiment": "Experiment necunoscut",
+    "completed": "Finalizat",
+    "inProgress": "În desfășurare",
+    "startedAt": "Început la {time}",
+    "viewReport": "Vezi raportul"
+  },
+  "shelf": {
+    "title": "Raft de reactivi",
+    "taken": "Preluat {dose} {unit}",
+    "takeSome": "Adaugă picătură cu picătură / ia o cantitate adecvată",
+    "take": "Ia {unit}",
+    "specIndicator": "Indicator",
+    "specGas": "Gaz",
+    "specBulk": "Ia cantitate adecvată",
+    "specSolution": "Soluție",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Lichid pur ρ={density} g/mL",
+    "specLiquid": "Lichid",
+    "specSolid": "Solid · p.a."
+  },
+  "site": {
+    "title": "ChemAIForge · Laborator Virtual de Chimie AI",
+    "description": "Efectuează experimente chimice în browser: trage reactivi, observă reacții, primește îndrumare de la tutorul AI și generează automat rapoarte de laborator."
+  },
+  "titration": {
+    "stopcock": "Deschidere robinet",
+    "buretteReading": "Citire biuretă",
+    "phMeter": "pH-metru",
+    "unfilled": "Neumplut",
+    "strongBase": "Puternic bazic",
+    "weakBase": "Slab bazic · zonă de viraj",
+    "nearNeutral": "Aproape neutru",
+    "acidExcess": "Acid · exces",
+    "endpointOk": "Punct final corect",
+    "overshoot": "Titrare excesivă",
+    "notYet": "Punct final neating (roz persistent)",
+    "justFaded": "Culoare tocmai dispărută",
+    "keyPoints": "Puncte cheie de operare",
+    "takeAnalyte": "Prelevați mai întâi analitul →",
+    "dragStopcock": "← Trageți robinetul pentru a începe titrarea",
+    "openness": "Deschidere {pct}% · Trageți stânga-dreapta"
+  },
+  "tutor": {
+    "placeholder": "Introduceți întrebarea dvs.…",
+    "replying": "Se răspunde…",
+    "send": "Trimite",
+    "unknownError": "Eroare necunoscută",
+    "requestFailed": "Cerere eșuată ({status})",
+    "askHeat": "Am amestecat reactivii și nu am observat niciun fenomen; instrucțiunile indică faptul că această reacție necesită încălzire. Explicați de ce reacția are loc numai în condiții de încălzire.",
+    "askObserved": "Tocmai am observat reacția {equation}{phenomena}. Puteți explica ce s-a întâmplat și care este principiul din spatele acesteia?",
+    "phPrecipitate": "s-a format un precipitat",
+    "phGas": "s-a degajat un gaz",
+    "phColor": "a avut loc o schimbare de culoare",
+    "listJoin": ", ",
+    "eqWrap": "（{equation}）",
+    "title": "Tutore AI de laborator",
+    "empty": "Pune-mi orice întrebare sau declanșează o reacție pe canvas și îți voi oferi indicii."
+  },
+  "workbench": {
+    "view2d": "Schemă 2D",
+    "view3d": "Bancă de lucru 3D",
+    "view3dRefined": "Bancă de lucru 3D ★",
+    "sceneHint": "Trageți pentru rotire · Scroll pentru zoom"
+  }
+}

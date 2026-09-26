@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Predchádzajúci krok",
+    "pause": "Pozastaviť",
+    "play": "Prehrať",
+    "next": "Ďalší krok",
+    "voiceOn": "Zapnúť hlasový výklad",
+    "voiceOff": "Vypnúť hlasový výklad",
+    "muted": "🔇 Stíšené",
+    "askTutor": "Výklad ku kroku „{title}“: {narration} Na základe aktuálnych javov a hodnôt v pohári stručne vysvetlite chemické princípy a rovnice.",
+    "phase": {
+      "theory": "Princíp",
+      "prep": "Príprava",
+      "operate": "Postup",
+      "observe": "Pozorovanie",
+      "conclude": "Záver"
+    },
+    "voiceLabel": "🔊 Hlasový výklad",
+    "vesselBeaker": "Pohár",
+    "vesselTube": "Skúmavka",
+    "vesselFlask": "Erlenmeyerova banka",
+    "observeGeneric": "Pozorne sledujte sústavu a všímajte si prípadné zmeny farby, bublín alebo teploty.",
+    "observeReacting": "Prebieha reakcia – sledujte zmeny hodnôt pH a teploty.",
+    "phenomenaList": "Možno pozorovať {parts}.",
+    "partGas": "unikanie bublín plynu",
+    "partPrecipitate": "zakalenie roztoku a vznik zrazeniny",
+    "partColor": "výraznú zmenu farby roztoku",
+    "partExo": "súčasné uvoľňovanie tepla a nárast teploty",
+    "partEndo": "súčasné pohlcovanie tepla a pokles teploty",
+    "titlePrinciple": "Princíp experimentu",
+    "titleSummary": "Záver experimentu",
+    "titleConnect": "Zapojenie zariadenia",
+    "titleConnectCircuit": "Zapojenie obvodu",
+    "titlePowerOn": "Zapnutie napájania",
+    "titleConnectOn": "Uzavretie obvodu",
+    "titleConductTest": "Test vodivosti",
+    "titleElectrodes": "Javy na elektródach",
+    "titleConductCompare": "Porovnanie vodivosti",
+    "titleTake": "Odber: {reagent}",
+    "titleHeat": "Zapálenie liehovej lampy",
+    "titleMix": "Zmiešanie a reakcia",
+    "titleObserve": "Pozorovanie javov",
+    "summary": "Týmto experimentom {objectives}.",
+    "narrSetupElectrode": "Vložte elektródy do elektrolytu a pripojte ich k kladnému a zápornému pólu jednosmerného zdroja.",
+    "narrPowerOn": "Zapnite jednosmerný zdroj, spustite elektrolýzu a sledujte zmeny na oboch elektródach.",
+    "narrSetupCircuit": "Prepojte obe elektródy vodičmi cez galvanometer a ponorte ich do elektrolytického roztoku.",
+    "narrConnectOn": "Uzavrite obvod a sledujte, či sa výchylka ručičky galvanometra zmení.",
+    "narrSetupConduct": "Zapojte roztoky rovnakej koncentrácie do elektródových obvodov s žiarovkou.",
+    "narrConductTest": "Uzavrite obvod a porovnajte jas žiarovky v jednotlivých roztokoch.",
+    "narrSetupGeneric": "Podľa schémy zapojte elektródy so zdrojom napájania alebo meracími prístrojmi a vložte elektrolyt.",
+    "narrRigOn": "{verb}，pozorujte zmeny na elektródach a prístrojoch.",
+    "verbElectrolysis": "Zapnite jednosmerný zdroj a spustite elektrolýzu",
+    "verbCircuit": "Zapojte obvod",
+    "narrTake": "Odoberte {reagent} a pridajte do {vessel}.",
+    "narrHeat": "Zapáľte liehovú lampu a zahrievajte {vessel} — reakcia prebieha len za zvýšenej teploty.",
+    "narrMixHeated": "Po zahriatí dôkladne premiešajte reagenty; reakcia sa okamžite spustí.",
+    "narrMix": "Dôkladne premiešajte reagenty v {vessel}; reakcia sa okamžite spustí.",
+    "electrodesFading": "; modré sfarbenie roztoku postupne bledne",
+    "brine": "soľný roztok",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Osnova výkladu experimentu",
+    "outlineHint": "Po vstupe na pracovisko kliknite na „Výklad experimentu ▶“ pre postupnú automatickú ukážku.",
+    "cardTitle": "Výklad experimentu",
+    "askTutorButton": "Nech tútor vysvetlí tento krok",
+    "sentenceEnd": ".",
+    "voiceFemale": "Ženský hlas ♀",
+    "voiceMale": "Mužský hlas ♂",
+    "noVoice": "Pre tento jazyk nie je k dispozícii hlas, výklad bude automaticky postupovať podľa titulkov.",
+    "narrTake_beaker": "Vezmite {reagent} a pridajte ho do kadičky.",
+    "narrTake_tube": "Vezmite {reagent} a pridajte ho do skúmavky.",
+    "narrTake_flask": "Vezmite {reagent} a pridajte ho do Erlenmeyerovej banky.",
+    "narrHeat_beaker": "Zapáľte liehovku a zohrievajte kadičku – táto reakcia prebieha len za zvýšenej teploty.",
+    "narrHeat_tube": "Zapáľte liehovku a zohrievajte skúmavku – táto reakcia prebieha len za zvýšenej teploty.",
+    "narrHeat_flask": "Zapáľte liehovku a zohrievajte Erlenmeyerovu banku – táto reakcia prebieha len za zvýšenej teploty.",
+    "narrMix_beaker": "Dôkladne premiešajte činidlá v kadičke – reakcia sa ihneď začne.",
+    "narrMix_tube": "Dôkladne premiešajte činidlá v skúmavke – reakcia sa ihneď začne.",
+    "narrMix_flask": "Dôkladne premiešajte činidlá v Erlenmeyerovej banke – reakcia sa ihneď začne."
+  },
+  "a11y": {
+    "skipToMain": "Preskočiť na hlavný obsah"
+  },
+  "catalog": {
+    "title": "Knižnica experimentov",
+    "empty": "Žiadne experimenty nevyhovujú zadaným kritériám.",
+    "searchPlaceholder": "Hľadať názov experimentu…",
+    "searchLabel": "Hľadať experiment",
+    "filterCategory": "Filtrovať podľa kategórie",
+    "allCategories": "Všetky kategórie",
+    "filterDifficulty": "Filtrovať podľa obtiažnosti",
+    "allDifficulties": "Všetky obtiažnosti",
+    "objectives": "Ciele experimentu",
+    "reagents": "Potrebné reagenty",
+    "apparatus": "Potrebné vybavenie",
+    "subtitle": "Vyberte experiment a vstúpte do virtuálneho laboratória.",
+    "estimatedMinutes": "Odhadovaný čas: {minutes} min",
+    "startLab": "Spustiť experiment →"
+  },
+  "category": {
+    "ACID_BASE": "Acidobázické reakcie",
+    "ORGANIC": "Organická chémia",
+    "THERMODYNAMICS": "Termodynamika",
+    "REDOX": "Oxidačno-redukčné reakcie",
+    "PRECIPITATION": "Zrážacie reakcie",
+    "GAS": "Príprava plynov",
+    "ELECTROCHEM": "Elektrochémia",
+    "METAL": "Aktivita kovov",
+    "ANALYSIS": "Analytická skúška",
+    "COORDINATION": "Koordinačné sfarbenie"
+  },
+  "chart": {
+    "temperature": "Teplota",
+    "ph": "pH",
+    "volume": "Objem",
+    "ariaLabel": "Graf zmeny {label} v čase, aktuálna hodnota {value}",
+    "measureAria": "Čiarový graf meraných hodnôt v čase, celkom {count} záznamov, rozsah pH 0 až 14, rozsah teploty 0 až 100 ℃",
+    "title": "Krivka priebehu",
+    "current": "Aktuálne",
+    "peak": "Maximum",
+    "samples": "Vzorky: {count} bodov",
+    "channelTemp": "Teplota",
+    "channelPh": "pH",
+    "channelVolume": "Objem",
+    "empty": "Po začatí operácie sa tu zobrazí krivka závislosti od času"
+  },
+  "dataTable": {
+    "title": "Tabuľka záznamu dát",
+    "emptyHint": "Kliknutím na „Odčítať“ zaznamenáte jedno meranie",
+    "recorded": "V tejto skupine: {count} záznamov",
+    "recordedNeedMore": "V tejto skupine: {count} záznamov (paralelné meranie min. 2×)",
+    "emptyBody": "Pri kvantitatívnych experimentoch opakujte merania a vypočítajte priemer; každé kliknutie na „Odčítať“ pridá jeden riadok.",
+    "colIndex": "č.",
+    "colTime": "Čas / s",
+    "colTemperature": "Teplota / ℃",
+    "colPh": "pH",
+    "colVolume": "Objem / mL",
+    "rowMean": "Priemer skupiny",
+    "rowDeviation": "Relatívna odchýlka",
+    "worstDeviation": "Max. relatívna odchýlka {value}%:",
+    "verdictGood": "Konzistentnosť dát je dobrá, možno použiť na výpočet.",
+    "verdictFair": "Odchýlka je väčšia — skontrolujte, či je pohľad pri odčítavaní kolmý na stupnicu a či je sústava v rovnovážnom stave.",
+    "verdictPoor": "Odchýlka je príliš veľká. Zistite príčinu a zopakujte paralelné meranie; nepočítajte priemer z týchto hodnôt."
+  },
+  "deck": {
+    "readings": "Odčítania prístrojov na pracovnom stole",
+    "temperature": "Teplota",
+    "volume": "Objem",
+    "ph": "pH",
+    "operations": "Laboratórne operácie",
+    "needReagent": "Najprv odoberte činidlo",
+    "inOrder": "Postupujte podľa skutočného poradia krokov"
+  },
+  "device": {
+    "glassware": "Laboratórne sklo",
+    "electrolysisCell": "Elektrolytická nádoba",
+    "galvanicCell": "Galvanický článok",
+    "flameTest": "Zariadenie na plameňovú skúšku",
+    "gasCollection": "Zariadenie na zber plynu vytesňovaním vody",
+    "gasDelivery": "Zariadenie na vedenie a absorpciu plynu",
+    "conductivity": "Porovnanie vodivosti roztokov",
+    "strongBright": "Silná · jasná",
+    "weakDim": "Slabá · tlmená",
+    "nonNone": "Žiadna · nesvieti"
+  },
+  "difficulty": {
+    "EASY": "Začiatočník",
+    "MEDIUM": "Pokročilý",
+    "HARD": "Výzva"
+  },
+  "electro": {
+    "conductivityDesc": "Porovnanie vodivosti roztokov rovnakej koncentrácie (jas žiarovky odráža koncentráciu iónov).",
+    "conductivityActive": "Prebieha test vodivosti: čím jasnejšia žiarovka, tým vyššia vodivosť",
+    "conductivityIdle": "Kliknutím na „Test vodivosti“ porovnajte vodivosť jednotlivých roztokov",
+    "conductivityOn": "💡 Test vodivosti",
+    "powerOff": "Odpojiť",
+    "electrolyteInert": "Elektrolyt: {name} ({formula}) · inertná anóda (uhlík)",
+    "electrolyteActive": "Elektrolyt: {name} ({formula}) · aktívna anóda (meď)",
+    "electrolysisActive": "Prebieha elektrolýza…",
+    "electrolysisIdle": "Kliknutím na „Zapojiť“ spustite elektrolýzu a sledujte javy na oboch elektródach",
+    "copperFading": "Roztok: modrá farba postupne bledne (spotrebúvajú sa ióny medi)",
+    "powerOn": "⚡ Zapojiť",
+    "brine": "Soľný roztok",
+    "electrolyte": "Elektrolyt: {name}",
+    "cellActive": "Obvod zapojený, galvanometer sa vychyľuje, článok vyrába prúd…",
+    "cellIdle": "Kliknutím na „Zapojiť obvod“ sledujte výchylku galvanometra a javy na oboch elektródach",
+    "cellOn": "🔌 Zapojiť obvod",
+    "cellOff": "Obvod odpojený",
+    "cathode": "Katóda (−)",
+    "anode": "Anóda (＋)",
+    "negative": "Záporný pól",
+    "positive": "Kladný pól"
+  },
+  "errors": {
+    "noActivity": "V tomto experimente zatiaľ nie sú žiadne záznamy operácií. Najprv vykonajte pokus na laboratórnom stole a potom vygenerujte správu.",
+    "reportFailed": "Generovanie správy zlyhalo",
+    "tutorUnavailable": "Služba AI tutora nie je dostupná",
+    "unknown": "Neznáma chyba"
+  },
+  "home": {
+    "labTitle": "Interaktívny laboratórny stôl",
+    "labDesc": "Presuňte reagencie do pohára – reakčný engine v reálnom čase vyhodnocuje zmenu farby, bublinky, zrazeniny a teplotné zmeny. Čo vidíte, to dostanete.",
+    "tutorTitle": "AI laboratórny tútor",
+    "tutorDesc": "Kedykoľvek sa pýtajte na princípy a postupy. Keď na plátne nastane kľúčová reakcia, tútor automaticky poskytne výklad a bezpečnostné upozornenia.",
+    "reportTitle": "Inteligentná laboratórna správa",
+    "reportDesc": "Zhrnie krivky meraní z celého experimentu a automaticky vygeneruje závery, analýzu chýb, odporúčania na zlepšenie a hodnotenie znalostí.",
+    "badge": "Virtuálne chemické laboratórium poháňané AI",
+    "heroLine1": "V prehliadači",
+    "heroLine2": "robte skutočné chemické experimenty",
+    "heroDesc": "Pretiahnite reagencie, sledujte zmeny farby a bublinky, kedykoľvek sa pýtajte AI tútora – po skončení experimentu sa automaticky vygeneruje štruktúrovaná správa. {count} overených experimentov, bezpečných a opakovateľných.",
+    "ctaCatalog": "Prehľadávať knižnicu experimentov →",
+    "ctaSessions": "Moje relácie"
+  },
+  "lab": {
+    "mix": "Zmiešať a reagovať",
+    "reset": "Vyprázdniť nádobu",
+    "clear": "Vymazať",
+    "complete": "Dokončiť experiment",
+    "completed": "Experiment dokončený",
+    "viewReport": "Zobraziť správu z experimentu →",
+    "removeItem": "Kliknutím odstránite",
+    "conditions": "Podmienky systému",
+    "temperature": "Teplota systému",
+    "reagentShelf": "Polica s reagenciami",
+    "apparatusList": "Vybavenie laboratória",
+    "emptyContainer": "Vyberte množstvo na ľavej polici a odoberte reagent, alebo ho presuňte sem",
+    "absorbent": "Absorbčná kvapalina",
+    "apparatus": "Prístroj",
+    "addReagent": "Pridať {name}",
+    "removeReagent": "Odstrániť {name}",
+    "mixAction": "Zmiešať",
+    "backToDetail": "← Späť na detail experimentu",
+    "backToCatalog": "← Späť do katalógu experimentov",
+    "labSuffix": "Pracovný stôl",
+    "labHint": "Kliknite alebo presuňte reagent do pohára, spustite „Miešanie reakcie“ a sledujte javy; alebo použite „Výklad experimentu“ na automatické krokovanie."
+  },
+  "locale": {
+    "switchLabel": "Prepnúť jazyk rozhrania",
+    "searchPlaceholder": "Hľadať jazyk…",
+    "noMatch": "Žiadny zodpovedajúci jazyk",
+    "groupFull": "Hlavné jazyky",
+    "groupBasic": "Ostatné jazyky",
+    "groupBasicHint": "Obsahuje kompletný obsah experimentov a hlasový komentár; preklad je strojový"
+  },
+  "nav": {
+    "catalog": "Knižnica experimentov",
+    "sessions": "Moje relácie",
+    "home": "Domov"
+  },
+  "op": {
+    "stir": {
+      "label": "Miešanie",
+      "effect": "Miešajte sklenenou tyčinkou; rozpúšťanie sa urýchli a zmes bude rovnomernejšia",
+      "hint": "Miešanie urýchľuje rozpúšťanie a prenos tepla a vyrovnáva miestne koncentrácie, takže namerané hodnoty reprezentujú celok"
+    },
+    "shake": {
+      "label": "Pretrepávanie",
+      "effect": "Pretrepte a premiešajte; reagenty sa dôkladne spoja",
+      "hint": "Málo kvapaliny v skúmavke — miešajte trasením (nie miešadlom); ústie skúmavky smerujte od osôb"
+    },
+    "heat": {
+      "label": "Zahrievanie",
+      "effect": "Zapaľte liehový kahan; teplota sústavy stúpa",
+      "hint": "Väčšina reakcií sa pri vyššej teplote zrýchľuje; endotermické reakcie vyžadujú nepretržité zahrievanie"
+    },
+    "cool": {
+      "label": "Chladenie",
+      "effect": "Odstráňte zdroj tepla; teplota klesá prirodzeným ochladením",
+      "hint": "Chladenie znižuje rozpustnosť — je to štandardný krok pri kryštalizácii a zbere produktu"
+    },
+    "settle": {
+      "label": "Usadenie",
+      "effect": "Nechajte chvíľu stáť; zrazenina sa usadí a vrstvy kvapaliny sa zreteľnejšie oddelia",
+      "hint": "Zrážanie a rozvrstvenie vyžaduje čas; až po usadení možno posúdiť, či je horná vrstva číra"
+    },
+    "read": {
+      "label": "Odčítanie",
+      "effect": "Zaznamenajte aktuálnu hodnotu",
+      "hint": "Odčítavajte pohľadom v úrovni stupnice; každé odčítanie zapíšte do tabuľky — len tak vypočítate priemer a odchýlku"
+    }
+  },
+  "quant": {
+    "verdictGood": "Konzistentnosť údajov je dobrá; možno ich použiť na výpočet",
+    "verdictFair": "Odchýlka je príliš veľká; skontrolujte uhol pohľadu pri odčítaní a stabilitu sústavy",
+    "verdictPoor": "Odchýlka je neprípustne veľká; zistite príčinu a paralelné merania zopakujte",
+    "meanPh": "Priemerné pH",
+    "meanTemp": "Priemerná teplota",
+    "meanVolume": "Priemerný objem",
+    "group": "Skupina {no}",
+    "readings": "{count} odčítaní",
+    "finalGroup": "Záver vychádza z tejto skupiny",
+    "singleReading": "Iba 1 meranie — relatívnu odchýlku nemožno vypočítať (norma vyžaduje aspoň 2 paralelné merania)",
+    "worstDeviation": "Maximálna relatívna priemerná odchýlka {value}%",
+    "groupNote": "Zakaždým, keď je sústava odobratá, zmiešaná alebo zahrievaná, začína sa nová skupina; odčítania z rôznych skupín netvorí paralelné merania, preto sa vyhodnocujú samostatne.",
+    "noReadings": "V tomto experimente nebola použitá operácia „Odčítanie“, takže nie sú k dispozícii žiadne záznamy meraní — priemer ani relatívnu odchýlku nemožno vypočítať. Kvantitatívny experiment vyžaduje aspoň 2 opakované odčítania v rovnakom stave sústavy."
+  },
+  "report": {
+    "conclusion": "Záver experimentu",
+    "errorAnalysis": "Analýza chýb",
+    "improvements": "Návrhy na zlepšenie",
+    "noImprovements": "Zatiaľ žiadne návrhy na zlepšenie.",
+    "knowledge": "Hodnotenie zvládnutia učiva",
+    "empty": "(žiadny obsah)",
+    "measurements": "Namerané hodnoty",
+    "quantData": "Kvantitatívne údaje",
+    "noMeasurements": "V tomto experimente neboli zaznamenané žiadne hodnoty.",
+    "generating": "AI analyzuje údaje experimentu…",
+    "regenerate": "Znovu vygenerovať správu",
+    "generate": "Vygenerovať správu o experimente",
+    "generateFailed": "Generovanie zlyhalo ({status})",
+    "notGenerated": "Správa zatiaľ nebola vygenerovaná. AI vyhodnotí postup a namerané hodnoty a poskytne záver, analýzu chýb, odporúčania na zlepšenie a hodnotenie zvládnutia učiva.",
+    "noActivity": "V tomto experimente nie sú zaznamenané žiadne operácie; správu zatiaľ nie je možné vygenerovať.",
+    "backToLab": "Vrátiť sa na pracovný stôl a vykonať experiment →",
+    "title": "Správa o experimente",
+    "generatedAt": "Vygenerované: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Zapojiť napájanie",
+      "off": "Odpojiť napájanie"
+    },
+    "cell": {
+      "on": "Zapojiť obvod",
+      "off": "Odpojiť obvod"
+    },
+    "flameTest": {
+      "on": "Zapáliť liehový kahan",
+      "off": "Uhasiť liehový kahan"
+    },
+    "waterBath": {
+      "on": "Spustiť zahrievanie vodným kúpeľom",
+      "off": "Zastaviť zahrievanie vodným kúpeľom"
+    },
+    "distillation": {
+      "on": "Spustiť destiláciu",
+      "off": "Zastaviť destiláciu"
+    },
+    "filtration": {
+      "on": "Spustiť filtráciu",
+      "off": "Zastaviť filtráciu"
+    },
+    "calorimeter": {
+      "on": "Spustiť miešanie a meranie teploty",
+      "off": "Zastaviť miešanie"
+    },
+    "gasCollect": {
+      "on": "Spustiť zachytávanie plynu",
+      "off": "Zastaviť zachytávanie plynu"
+    },
+    "titration": {
+      "on": "Otvoriť kohútik a pridávať kvapky",
+      "off": "Zatvoriť kohútik"
+    },
+    "syringe": {
+      "on": "Stlačiť piest – pretlakovať",
+      "off": "Vytiahnuť piest – odtlakovať"
+    },
+    "phMeter": {
+      "on": "Zapnúť pH meter",
+      "off": "Vypnúť pH meter"
+    },
+    "evaporation": {
+      "on": "Zapáliť liehovú lampu – odparovať",
+      "off": "Uhasiť liehovú lampu"
+    },
+    "pressureDrop": {
+      "on": "Zaskrutkovať viečko a pretrepať",
+      "off": "Odskrutkovať viečko"
+    },
+    "heat": {
+      "on": "Zapáliť liehovú lampu – ohrievať",
+      "off": "Zastaviť ohrievanie"
+    }
+  },
+  "sessions": {
+    "title": "Moje relácie",
+    "subtitle": "Zobraziť históriu experimentov a príslušné správy",
+    "unknownExperiment": "Neznámy experiment",
+    "completed": "Dokončené",
+    "inProgress": "Prebieha",
+    "startedAt": "Začaté {time}",
+    "viewReport": "Zobraziť správu"
+  },
+  "shelf": {
+    "title": "Regál s reagenciami",
+    "taken": "Odobraté {dose} {unit}",
+    "takeSome": "Pridať kvapky / odobrať primerané množstvo",
+    "take": "Odobrať {unit}",
+    "specIndicator": "Indikátor",
+    "specGas": "Plyn",
+    "specBulk": "Odobrať primerané množstvo",
+    "specSolution": "Roztok",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Čistá kvapalina ρ={density} g/mL",
+    "specLiquid": "Kvapalina",
+    "specSolid": "pevná látka analyticky čistá"
+  },
+  "site": {
+    "title": "ChemAIForge · AI virtuálne chemické laboratórium",
+    "description": "Robte chemické experimenty v prehliadači: ťahajte reagenty, sledujte reakcie, získajte usmernenie od AI tutora a automaticky generujte laboratórne správy."
+  },
+  "titration": {
+    "stopcock": "otvorenie kohúta",
+    "buretteReading": "odčítanie byrety",
+    "phMeter": "pH meter",
+    "unfilled": "nenaplnené",
+    "strongBase": "silne zásaditý",
+    "weakBase": "slabo zásaditý · oblasť zmeny farby",
+    "nearNeutral": "takmer neutrálny",
+    "acidExcess": "kyslý · prebytok",
+    "endpointOk": "ekvivalenčný bod dosiahnutý",
+    "overshoot": "pretitrovanie",
+    "notYet": "ekvivalenčný bod ešte nedosiahnutý (ružová nevymizla)",
+    "justFaded": "farba práve vymizla",
+    "keyPoints": "pokyny k obsluhe",
+    "takeAnalyte": "najprv odoberte analyzovaný roztok →",
+    "dragStopcock": "← potiahnite kohút a začnite titráciu",
+    "openness": "otvorenie {pct} % · ťahajte doľava alebo doprava"
+  },
+  "tutor": {
+    "placeholder": "Zadajte svoju otázku…",
+    "replying": "odpovedá…",
+    "send": "Odoslať",
+    "unknownError": "neznáma chyba",
+    "requestFailed": "požiadavka zlyhala ({status})",
+    "askHeat": "Po zmiešaní reagentov som nepozoroval žiadnu reakciu. Nápoveda hovorí, že táto reakcia vyžaduje zahrievanie. Vysvetlite, prečo musí táto reakcia prebiehať za podmienok zahrievania.",
+    "askObserved": "Práve som pozoroval reakciu {equation}{phenomena}. Pomôžte mi vysvetliť, čo sa stalo a aký je princíp reakcie.",
+    "phPrecipitate": "vzniká zrazenina",
+    "phGas": "vyvíja sa plyn",
+    "phColor": "dochádza k zmene farby",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Laboratórny tútor",
+    "empty": "Kedykoľvek sa ma opýtajte, alebo spustite reakciu na plátne a ja sám upozorním."
+  },
+  "workbench": {
+    "view2d": "2D schéma",
+    "view3d": "3D pracovisko",
+    "view3dRefined": "3D pracovisko ★",
+    "sceneHint": "Ťahom otočte · kolieskom priblížte"
+  }
+}

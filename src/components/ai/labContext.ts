@@ -31,19 +31,28 @@ export function buildLabState(s: LabSnapshot): Record<string, unknown> {
   };
 }
 
-// 根据反应结果判断是否为关键事件，若是则返回一条自动询问的情境提示
-export function contextualPrompt(result: ReactionResult): string | null {
+// 根据反应结果判断是否为关键事件，若是则返回一条自动询问的情境提示。
+//
+// 这句话会作为"学生的消息"显示在对话框里，故必须是当前界面语言 ——
+// 否则日语用户会看到自己"说"了一句中文。取词函数由调用方注入（本文件是纯 .ts）。
+type T = (key: string, vars?: Record<string, string | number>) => string;
+
+export function contextualPrompt(
+  result: ReactionResult,
+  t: T,
+  // 含汉字的方程式（「--点燃-->」「→ 盐 + …」）要换成当前语言；纯化学式原样
+  phrase: (text: string) => string = (x) => x,
+): string | null {
   // 缺加热是个明确的教学节点：试剂配对成功、只差条件，此时主动讲清"为什么必须加热"
   // 比等学生自己困惑更有价值，故不与"试剂不匹配"一起被静默掉。
-  if (result.pendingCondition === "heat") {
-    return "我把试剂混合后没有观察到现象，提示说这个反应需要加热。请解释为什么这个反应必须在加热条件下才能进行。";
-  }
+  if (result.pendingCondition === "heat") return t("askHeat");
   if (!result.reacted) return null;
   const phenomena: string[] = [];
-  if (result.producesPrecipitate) phenomena.push("生成沉淀");
-  if (result.producesGas) phenomena.push("产生气体");
-  if (result.colorChange) phenomena.push("发生颜色变化");
+  if (result.producesPrecipitate) phenomena.push(t("phPrecipitate"));
+  if (result.producesGas) phenomena.push(t("phGas"));
+  if (result.colorChange) phenomena.push(t("phColor"));
   if (phenomena.length === 0) return null;
-  const eq = result.equation ? `（${result.equation}）` : "";
-  return `我刚刚观察到反应${eq}${phenomena.join("、")}，请帮我解释发生了什么、原理是什么？`;
+  // 方程式是国际通用记法，不译，只换外面的括号
+  const equation = result.equation ? t("eqWrap", { equation: phrase(result.equation) }) : "";
+  return t("askObserved", { equation, phenomena: phenomena.join(t("listJoin")) });
 }

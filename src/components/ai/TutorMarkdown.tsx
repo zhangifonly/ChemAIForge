@@ -13,14 +13,14 @@ export function TutorMarkdown({ content }: { content: string }) {
         prose-p:my-1.5 prose-p:leading-relaxed
         prose-headings:mt-3 prose-headings:mb-1.5 prose-headings:font-semibold
         prose-h1:text-base prose-h2:text-[15px] prose-h3:text-sm
-        prose-ul:my-1.5 prose-ul:pl-5 prose-ol:my-1.5 prose-ol:pl-5
+        prose-ul:my-1.5 prose-ul:ps-5 prose-ol:my-1.5 prose-ol:ps-5
         prose-li:my-0.5 prose-li:marker:text-brand-500
         prose-strong:text-foreground prose-strong:font-semibold
         prose-a:text-brand-600 dark:prose-a:text-brand-300 prose-a:no-underline hover:prose-a:underline
         prose-code:rounded prose-code:bg-foreground/8 prose-code:px-1 prose-code:py-0.5
         prose-code:text-[0.85em] prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
         prose-pre:my-2 prose-pre:rounded-lg prose-pre:bg-foreground/5 prose-pre:text-foreground
-        prose-blockquote:border-l-2 prose-blockquote:border-brand-400/50 prose-blockquote:pl-3
+        prose-blockquote:border-s-2 prose-blockquote:border-brand-400/50 prose-blockquote:ps-3
         prose-blockquote:text-foreground/70 prose-blockquote:not-italic
         prose-table:my-2 prose-table:text-xs
         prose-th:border prose-th:border-foreground/15 prose-th:bg-foreground/5 prose-th:px-2 prose-th:py-1

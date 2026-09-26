@@ -32,3 +32,17 @@ next-env.d.ts
 
 # TTS 生成失败清单（运行产物，供重跑排查）
 /public/audio/lesson/*-failed.txt
+
+# 按需合成的语音缓存（运行期产物，见 src/server/tts/synthesize.ts）
+/.tts-cache/
+
+# 非中文语种的预生成语音不入库：57 语种 × 双声全量约 8.8 GB，
+# 进 git 会废掉仓库。这些语种走 /api/tts 按需合成（见 src/server/tts）。
+# 只有 xiaoxiao / yunxi 两个中文目录是随代码发布的静态资源。
+/public/audio/lesson/*/
+!/public/audio/lesson/xiaoxiao/
+!/public/audio/lesson/yunxi/
+
+# 国际化扫描产物：由 scripts/i18n-scan.mjs、i18n-review-equations.mjs 随时重新生成
+/docs/i18n-scan.json
+/docs/i18n-equation-review.json

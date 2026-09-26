@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Skip to main content"
+  },
+  "dataTable": {
+    "title": "Data Log",
+    "emptyHint": "Click “Read” to record a measurement",
+    "recorded": "{count} readings recorded in this run",
+    "recordedNeedMore": "{count} readings recorded in this run (at least 2 replicates required)",
+    "emptyBody": "Quantitative experiments require repeated measurements averaged together; each click of “Read” adds one row here.",
+    "colIndex": "#",
+    "colTime": "Time / s",
+    "colTemperature": "Temperature / ℃",
+    "colPh": "pH",
+    "colVolume": "Volume / mL",
+    "rowMean": "Run Mean",
+    "rowDeviation": "Relative Deviation",
+    "worstDeviation": "Max relative deviation {value}%:",
+    "verdictGood": "Data consistency is good; suitable for calculation.",
+    "verdictFair": "Deviation is high — check that readings were taken at eye level with the scale and that the system had stabilized.",
+    "verdictPoor": "Deviation is too large. Identify the cause and repeat the replicates; do not average these results as-is."
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtual Chemistry Lab",
+    "description": "Run chemistry experiments in your browser: drag and drop reagents, observe reactions, get AI tutor guidance, and generate lab reports automatically."
+  },
+  "catalog": {
+    "title": "Experiment Library",
+    "empty": "No experiments match your criteria.",
+    "searchPlaceholder": "Search experiment name…",
+    "searchLabel": "Search experiments",
+    "filterCategory": "Filter by category",
+    "allCategories": "All categories",
+    "filterDifficulty": "Filter by difficulty",
+    "allDifficulties": "All difficulties",
+    "objectives": "Objectives",
+    "reagents": "Reagents required",
+    "apparatus": "Apparatus required",
+    "subtitle": "Select an experiment to enter the virtual lab and start working.",
+    "estimatedMinutes": "Est. {minutes} min",
+    "startLab": "Enter Lab →"
+  },
+  "chart": {
+    "temperature": "Temperature",
+    "ph": "pH",
+    "volume": "Volume",
+    "ariaLabel": "{label} over time, current value {value}",
+    "measureAria": "Line chart of measurement readings over time, {count} readings total, pH range 0–14, temperature range 0–100 ℃",
+    "title": "Process Curve",
+    "current": "Current",
+    "peak": "Peak",
+    "samples": "{count} samples",
+    "channelTemp": "Temperature",
+    "channelPh": "pH",
+    "channelVolume": "Volume",
+    "empty": "Start an operation to see the time-series chart here"
+  },
+  "deck": {
+    "readings": "Bench readings",
+    "temperature": "Temperature",
+    "volume": "Volume",
+    "ph": "pH",
+    "operations": "Lab operations",
+    "needReagent": "Add a reagent first",
+    "inOrder": "Follow the actual step order"
+  },
+  "device": {
+    "glassware": "Glassware",
+    "electrolysisCell": "Electrolytic cell",
+    "galvanicCell": "Galvanic cell",
+    "flameTest": "Flame test apparatus",
+    "gasCollection": "Water displacement gas collection apparatus",
+    "gasDelivery": "Gas delivery and absorption apparatus",
+    "conductivity": "Solution conductivity comparison",
+    "strongBright": "Strong · Bright",
+    "weakDim": "Weak · Dim",
+    "nonNone": "None · Off"
+  },
+  "electro": {
+    "conductivityDesc": "Compare the conductivity of solutions at equal concentration (bulb brightness reflects ion concentration).",
+    "conductivityActive": "Live test running: the brighter the bulb, the stronger the conductivity",
+    "conductivityIdle": "Click “Power Test” to compare the conductivity of each solution",
+    "conductivityOn": "💡 Power Test",
+    "powerOff": "Power Off",
+    "electrolyteInert": "Electrolyte: {name} ({formula}) · Inert anode (carbon)",
+    "electrolyteActive": "Electrolyte: {name} ({formula}) · Active anode (copper)",
+    "electrolysisActive": "Electrolysis in progress…",
+    "electrolysisIdle": "Click “Power On” to start electrolysis and observe both electrodes",
+    "copperFading": "Solution: blue gradually fades (copper ions being consumed)",
+    "powerOn": "⚡ Power On",
+    "brine": "Brine",
+    "electrolyte": "Electrolyte: {name}",
+    "cellActive": "Circuit closed — galvanometer deflecting, galvanic cell discharging…",
+    "cellIdle": "Click “Close Circuit” to observe galvanometer deflection and electrode behavior",
+    "cellOn": "🔌 Close Circuit",
+    "cellOff": "Open Circuit",
+    "cathode": "Cathode (−)",
+    "anode": "Anode (＋)",
+    "negative": "Negative terminal",
+    "positive": "Positive terminal"
+  },
+  "home": {
+    "labTitle": "Interactive Lab Bench",
+    "labDesc": "Drag reagents into a beaker and let the reaction engine detect color changes, bubbles, precipitates, and temperature shifts in real time — what you see is what you get.",
+    "tutorTitle": "AI Lab Tutor",
+    "tutorDesc": "Ask about principles or procedures at any time. When a key reaction is triggered on the canvas, the tutor will proactively offer explanations and safety tips.",
+    "reportTitle": "Smart Lab Report",
+    "reportDesc": "Aggregates all readings and curves from the session, then auto-generates conclusions, error analysis, improvement suggestions, and a knowledge-point assessment.",
+    "badge": "AI-powered virtual chemistry lab",
+    "heroLine1": "In your browser",
+    "heroLine2": "Real chemistry experiments",
+    "heroDesc": "Drag reagents, watch color changes and bubbles, ask your AI tutor anytime — a structured report is generated automatically when the experiment ends. {count} verified experiments, safe and repeatable.",
+    "ctaCatalog": "Browse experiment library →",
+    "ctaSessions": "My sessions"
+  },
+  "lab": {
+    "mix": "Mix & React",
+    "reset": "Empty Container",
+    "clear": "Clear",
+    "complete": "Finish Experiment",
+    "completed": "Experiment Complete",
+    "viewReport": "View Lab Report →",
+    "removeItem": "Click to Remove",
+    "conditions": "System Conditions",
+    "temperature": "System Temperature",
+    "reagentShelf": "Reagent Shelf",
+    "apparatusList": "Apparatus List",
+    "emptyContainer": "Select an amount from the reagent shelf on the left, or drag a reagent here",
+    "absorbent": "Absorbent Solution",
+    "apparatus": "Apparatus",
+    "addReagent": "Add {name}",
+    "removeReagent": "Remove {name}",
+    "mixAction": "Mix",
+    "backToDetail": "← Back to Experiment Details",
+    "backToCatalog": "← Back to Catalog",
+    "labSuffix": "Lab Bench",
+    "labHint": "Click or drag reagents into the beaker. Use “Mix & React” to observe results, or “Guided Walkthrough” for a step-by-step demonstration."
+  },
+  "lesson": {
+    "prev": "Previous",
+    "pause": "Pause",
+    "play": "Play",
+    "next": "Next",
+    "voiceOn": "Enable Voice Narration",
+    "voiceOff": "Disable Voice Narration",
+    "muted": "🔇 Muted",
+    "askTutor": "At the step “{title}”: {narration} Please explain what is happening in the beaker at this moment, connecting the observed phenomena with the underlying theory.",
+    "phase": {
+      "theory": "Theory",
+      "prep": "Preparation",
+      "operate": "Procedure",
+      "observe": "Observations",
+      "conclude": "Conclusions"
+    },
+    "voiceLabel": "🔊 Narration",
+    "vesselBeaker": "Beaker",
+    "vesselTube": "Test Tube",
+    "vesselFlask": "Erlenmeyer Flask",
+    "observeGeneric": "Observe the system carefully. Watch for any changes in color, bubbles, or temperature.",
+    "observeReacting": "Reaction in progress — monitor changes in pH and temperature readings.",
+    "phenomenaList": "You can observe {parts}.",
+    "partGas": "bubbles escaping continuously",
+    "partPrecipitate": "the solution turning cloudy with precipitate forming",
+    "partColor": "a distinct color change in the solution",
+    "partExo": "heat being released and temperature rising",
+    "partEndo": "heat being absorbed and temperature dropping",
+    "titlePrinciple": "Experiment Principle",
+    "titleSummary": "Experiment Summary",
+    "titleConnect": "Assemble Apparatus",
+    "titleConnectCircuit": "Connect Circuit",
+    "titlePowerOn": "Switch On Power",
+    "titleConnectOn": "Close Circuit",
+    "titleConductTest": "Conductivity Test",
+    "titleElectrodes": "Electrode Observations",
+    "titleConductCompare": "Conductivity Comparison",
+    "titleTake": "Measure Out {reagent}",
+    "titleHeat": "Light Alcohol Lamp",
+    "titleMix": "Mix and React",
+    "titleObserve": "Observe Phenomena",
+    "summary": "Through this experiment, you will {objectives}.",
+    "narrSetupElectrode": "Insert the electrodes into the electrolyte and connect them to the positive and negative terminals of the direct current power supply respectively.",
+    "narrPowerOn": "Switch on the direct current power supply to begin electrolysis. Observe changes at both electrodes.",
+    "narrSetupCircuit": "Use connecting wires to link the two electrodes through a galvanometer, then immerse them in the electrolyte solution.",
+    "narrConnectOn": "Close the circuit and observe whether the galvanometer needle deflects.",
+    "narrSetupConduct": "Connect solutions of equal concentration into separate electrode circuits, each fitted with a light bulb.",
+    "narrConductTest": "Close the circuit and compare the brightness of the bulb in each solution.",
+    "narrSetupGeneric": "Connect the electrodes and power supply / measuring instruments according to the circuit diagram, then insert the electrolyte.",
+    "narrRigOn": "{verb} — observe the changes at both electrodes and on the instruments.",
+    "verbElectrolysis": "Connect the direct current power supply to begin electrolysis",
+    "verbCircuit": "Close the circuit",
+    "narrTake": "Take {reagent} and add it to {vessel}.",
+    "narrHeat": "Light the alcohol lamp to heat {vessel} — this reaction requires heating to proceed.",
+    "narrMixHeated": "Once heated, mix the reagents thoroughly; the reaction begins immediately.",
+    "narrMix": "Mix the reagents in {vessel} thoroughly; the reaction begins immediately.",
+    "electrodesFading": "; the blue color of the solution gradually fades",
+    "brine": "brine",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Lab Guide Outline",
+    "outlineHint": "Once at the bench, click “Lab Guide ▶” for a step-by-step auto demonstration.",
+    "cardTitle": "Experiment Guide",
+    "askTutorButton": "Ask tutor to explain this step",
+    "sentenceJoin": " ",
+    "voiceFemale": "Female ♀",
+    "voiceMale": "Male ♂",
+    "sentenceEnd": ".",
+    "noVoice": "No voice available for this language. The narration will advance automatically by subtitle.",
+    "narrTake_beaker": "Take {reagent} and add it to the beaker.",
+    "narrTake_tube": "Take {reagent} and add it to the test tube.",
+    "narrTake_flask": "Take {reagent} and add it to the Erlenmeyer flask.",
+    "narrHeat_beaker": "Light the alcohol lamp to heat the beaker — this reaction can only proceed under heated conditions.",
+    "narrHeat_tube": "Light the alcohol lamp to heat the test tube — this reaction can only proceed under heated conditions.",
+    "narrHeat_flask": "Light the alcohol lamp to heat the Erlenmeyer flask — this reaction can only proceed under heated conditions.",
+    "narrMix_beaker": "Thoroughly mix the reagents in the beaker — the reaction will begin immediately.",
+    "narrMix_tube": "Thoroughly mix the reagents in the test tube — the reaction will begin immediately.",
+    "narrMix_flask": "Thoroughly mix the reagents in the Erlenmeyer flask — the reaction will begin immediately."
+  },
+  "quant": {
+    "verdictGood": "Data consistency is good — suitable for calculation",
+    "verdictFair": "Deviation is high; check line of sight when reading and verify system stability",
+    "verdictPoor": "Deviation is too large; identify the cause before repeating parallel measurements",
+    "meanPh": "Mean pH",
+    "meanTemp": "Mean Temperature",
+    "meanVolume": "Mean Volume",
+    "group": "Group {no}",
+    "readings": "{count} readings",
+    "finalGroup": "Conclusion based on this group",
+    "singleReading": "Only 1 measurement — relative deviation cannot be calculated (protocol requires at least 2 parallel measurements)",
+    "worstDeviation": "Max relative mean deviation {value}%",
+    "groupNote": "A new group is created each time the system is sampled, mixed, or heated. Readings across groups do not constitute parallel measurements and are therefore tallied separately.",
+    "noReadings": "No measurement records were captured using the “Read” operation in this experiment, so mean and relative deviation cannot be calculated. Quantitative experiments require at least 2 repeated readings under the same system state."
+  },
+  "report": {
+    "conclusion": "Experimental Conclusion",
+    "errorAnalysis": "Error Analysis",
+    "improvements": "Suggestions for Improvement",
+    "noImprovements": "No suggestions at this time.",
+    "knowledge": "Knowledge Mastery Assessment",
+    "empty": "(No content)",
+    "measurements": "Measurement Readings",
+    "quantData": "Quantitative Data",
+    "noMeasurements": "No readings were recorded in this experiment.",
+    "generating": "AI is analyzing experimental data…",
+    "regenerate": "Regenerate Report",
+    "generate": "Generate Experiment Report",
+    "generateFailed": "Generation failed ({status})",
+    "notGenerated": "No report generated yet. AI will analyze your procedure and measurements to provide conclusions, error analysis, improvement suggestions, and a mastery assessment.",
+    "noActivity": "No activity recorded for this experiment. Complete at least one step before generating a report.",
+    "backToLab": "Go to the Lab Bench and give it a try →",
+    "title": "Lab Report",
+    "generatedAt": "Generated at {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Power On",
+      "off": "Power Off"
+    },
+    "cell": {
+      "on": "Close Circuit",
+      "off": "Open Circuit"
+    },
+    "flameTest": {
+      "on": "Light alcohol lamp",
+      "off": "Extinguish alcohol lamp"
+    },
+    "waterBath": {
+      "on": "Start water bath heating",
+      "off": "Stop water bath heating"
+    },
+    "distillation": {
+      "on": "Start distillation",
+      "off": "Stop distillation"
+    },
+    "filtration": {
+      "on": "Start filtration",
+      "off": "Stop filtration"
+    },
+    "calorimeter": {
+      "on": "Start stirring and measuring temperature",
+      "off": "Stop stirring"
+    },
+    "gasCollect": {
+      "on": "Start collecting gas",
+      "off": "Stop collecting"
+    },
+    "titration": {
+      "on": "Open stopcock to add drops",
+      "off": "Close stopcock"
+    },
+    "syringe": {
+      "on": "Push piston to pressurize",
+      "off": "Pull piston to depressurize"
+    },
+    "phMeter": {
+      "on": "Turn on pH meter",
+      "off": "Turn off pH meter"
+    },
+    "evaporation": {
+      "on": "Light alcohol lamp to evaporate",
+      "off": "Extinguish alcohol lamp"
+    },
+    "pressureDrop": {
+      "on": "Tighten cap and shake",
+      "off": "Loosen cap"
+    },
+    "heat": {
+      "on": "Light alcohol lamp to heat",
+      "off": "Stop heating"
+    }
+  },
+  "sessions": {
+    "title": "My Sessions",
+    "subtitle": "View past experiment records and open their reports",
+    "unknownExperiment": "Unknown Experiment",
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "startedAt": "Started at {time}",
+    "viewReport": "View report"
+  },
+  "titration": {
+    "stopcock": "Stopcock opening",
+    "buretteReading": "Burette Reading",
+    "phMeter": "pH Meter",
+    "unfilled": "Unfilled",
+    "strongBase": "Strongly Basic",
+    "weakBase": "Weakly Basic · Color-Change Zone",
+    "nearNeutral": "Near Neutral",
+    "acidExcess": "Acidic · Excess Added",
+    "endpointOk": "Endpoint Reached",
+    "overshoot": "Overshot",
+    "notYet": "Not Yet at Endpoint (Pink Persists)",
+    "justFaded": "Just Faded",
+    "keyPoints": "Key Steps",
+    "takeAnalyte": "First, collect analyte →",
+    "dragStopcock": "← Drag stopcock to begin titration",
+    "openness": "Opening {pct}% · Hold and drag left/right"
+  },
+  "tutor": {
+    "placeholder": "Type your question…",
+    "replying": "Replying…",
+    "send": "Send",
+    "unknownError": "Unknown error",
+    "requestFailed": "Request failed ({status})",
+    "askHeat": "After mixing the reagents I observed no change. The hint says this reaction requires heating. Please explain why this reaction can only proceed under heated conditions.",
+    "askObserved": "I just observed reaction {equation}{phenomena}. Can you explain what happened and the underlying principle?",
+    "phPrecipitate": "Precipitate formed",
+    "phGas": "Gas produced",
+    "phColor": "Color change observed",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Lab Tutor",
+    "empty": "Ask me anything, or trigger a reaction on the canvas and I'll offer proactive hints."
+  },
+  "workbench": {
+    "view2d": "2D Diagram",
+    "view3d": "3D Workbench",
+    "view3dRefined": "3D Workbench ★",
+    "sceneHint": "Drag to rotate · Scroll to zoom"
+  },
+  "category": {
+    "ACID_BASE": "Acid-Base Reactions",
+    "ORGANIC": "Organic Chemistry",
+    "THERMODYNAMICS": "Thermodynamics",
+    "REDOX": "Oxidation-Reduction",
+    "PRECIPITATION": "Precipitation & Metathesis",
+    "GAS": "Gas Preparation",
+    "ELECTROCHEM": "Electrochemistry",
+    "METAL": "Metal Reactivity",
+    "ANALYSIS": "Qualitative Analysis",
+    "COORDINATION": "Coordination & Color Reactions"
+  },
+  "difficulty": {
+    "EASY": "Beginner",
+    "MEDIUM": "Intermediate",
+    "HARD": "Advanced"
+  },
+  "locale": {
+    "switchLabel": "Switch interface language",
+    "searchPlaceholder": "Search languages…",
+    "noMatch": "No matching languages",
+    "groupFull": "Primary Languages",
+    "groupBasic": "Other Languages",
+    "groupBasicHint": "Includes full experiment content and voice narration; translations are machine-generated"
+  },
+  "nav": {
+    "catalog": "Lab Catalog",
+    "sessions": "My Sessions",
+    "home": "Home"
+  },
+  "errors": {
+    "noActivity": "No actions recorded for this experiment. Complete a run on the bench before generating a report.",
+    "reportFailed": "Report generation failed",
+    "tutorUnavailable": "AI tutor service unavailable",
+    "unknown": "Unknown error"
+  },
+  "shelf": {
+    "title": "Reagent Shelf",
+    "taken": "Taken {dose} {unit}",
+    "takeSome": "Drop / Take as needed",
+    "take": "Take {unit}",
+    "specIndicator": "Indicator",
+    "specGas": "Gas",
+    "specBulk": "Take as needed",
+    "specSolution": "Solution",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Pure liquid ρ={density} g/mL",
+    "specLiquid": "Liquid",
+    "specSolid": "Solid, ACS grade"
+  },
+  "op": {
+    "stir": {
+      "label": "Stir",
+      "effect": "Stir with a glass stirring rod to speed up solute dissolution and improve mixing",
+      "hint": "Stirring accelerates dissolving and heat transfer, and equalizes local concentration so readings represent the bulk solution"
+    },
+    "shake": {
+      "label": "Shake",
+      "effect": "Shake to mix thoroughly and ensure full contact between reagents",
+      "hint": "With small volumes in a test tube, shaking (not stirring) is used to mix — keep the mouth of the tube pointed away from people"
+    },
+    "heat": {
+      "label": "Heat",
+      "effect": "Light the alcohol lamp to heat the system and raise its temperature",
+      "hint": "Most reactions speed up with heat; endothermic reactions require continuous heating to proceed"
+    },
+    "cool": {
+      "label": "Cool",
+      "effect": "Remove the heat source and allow the system to cool naturally",
+      "hint": "Cooling reduces solubility — a standard step for crystallization and product collection"
+    },
+    "settle": {
+      "label": "Settle",
+      "effect": "Allow to stand briefly so precipitates sink and liquid layers separate more clearly",
+      "hint": "Precipitation and phase separation take time; only after settling can you judge whether the supernatant is clear"
+    },
+    "read": {
+      "label": "Read",
+      "effect": "Record the current reading",
+      "hint": "Read with your eye level with the graduation mark; log each reading in the data table to calculate averages and errors"
+    }
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Siirry pääsisältöön"
+  },
+  "catalog": {
+    "title": "Laboratoriokatalogi",
+    "empty": "Hakuehtoja vastaavia kokeita ei löydy.",
+    "searchPlaceholder": "Hae kokeen nimellä…",
+    "searchLabel": "Hae kokeita",
+    "filterCategory": "Suodata kategorian mukaan",
+    "allCategories": "Kaikki kategoriat",
+    "filterDifficulty": "Suodata vaikeustason mukaan",
+    "allDifficulties": "Kaikki vaikeustasot",
+    "objectives": "Kokeen tavoitteet",
+    "reagents": "Tarvittavat reagenssit",
+    "apparatus": "Tarvittavat välineet",
+    "subtitle": "Valitse koe aloittaaksesi virtuaalilaboratoriossa.",
+    "estimatedMinutes": "Arvioitu kesto {minutes} min",
+    "startLab": "Aloita koe →"
+  },
+  "category": {
+    "ACID_BASE": "Happo-emäsreaktiot",
+    "ORGANIC": "Orgaaninen kemia",
+    "THERMODYNAMICS": "Termodynamiikka",
+    "REDOX": "Hapetus-pelkistysreaktiot",
+    "PRECIPITATION": "Saostusreaktiot",
+    "GAS": "Kaasunvalmistus",
+    "ELECTROCHEM": "Sähkökemia",
+    "METAL": "Metallien reaktiivisuus",
+    "ANALYSIS": "Analyyttinen testaus",
+    "COORDINATION": "Kompleksiyhdisteiden värireaktion"
+  },
+  "chart": {
+    "temperature": "Lämpötila",
+    "ph": "pH",
+    "volume": "Tilavuus",
+    "ariaLabel": "{label} ajan funktiona, nykyinen arvo {value}",
+    "measureAria": "Mittauslukemien aikasarjakaavio, yhteensä {count} lukemaa, pH-asteikko 0–14, lämpötila-asteikko 0–100 ℃",
+    "title": "Prosessikäyrä",
+    "current": "Nykyinen",
+    "peak": "Huippu",
+    "samples": "Näytteitä {count} kpl",
+    "channelTemp": "Lämpötila",
+    "channelPh": "pH",
+    "channelVolume": "Tilavuus",
+    "empty": "Käynnistä toiminto nähdäksesi aikakaavion"
+  },
+  "dataTable": {
+    "title": "Datalokiraulukko",
+    "emptyHint": "Tallenna mittaus painamalla “Lukema”",
+    "recorded": "Ryhmässä tallennettu {count} kertaa",
+    "recordedNeedMore": "Ryhmässä tallennettu {count} kertaa (rinnakkaismääritys vähintään 2 kertaa)",
+    "emptyBody": "Kvantitatiivisissa kokeissa toista mittaukset ja laske keskiarvo; kukin “Lukema”-painallus lisää rivin taulukkoon.",
+    "colIndex": "Nro",
+    "colTime": "Aika / s",
+    "colTemperature": "Lämpötila / ℃",
+    "colPh": "pH",
+    "colVolume": "Tilavuus / mL",
+    "rowMean": "Ryhmän keskiarvo",
+    "rowDeviation": "Suhteellinen poikkeama",
+    "worstDeviation": "Suurin suhteellinen poikkeama {value}%:",
+    "verdictGood": "Datan yhdenmukaisuus on hyvä; sopii laskentaan.",
+    "verdictFair": "Poikkeama on suuri – tarkista, onko katse asteikon tasalla ja onko järjestelmä stabiloitunut.",
+    "verdictPoor": "Poikkeama on liian suuri – selvitä syy ja toista rinnakkaismääritys ennen keskiarvon laskemista."
+  },
+  "deck": {
+    "readings": "Pöydän mittarilukema",
+    "temperature": "Lämpötila",
+    "volume": "Tilavuus",
+    "ph": "pH",
+    "operations": "Koetoimenpiteet",
+    "needReagent": "Hae ensin reagenssi",
+    "inOrder": "Toimi vaiheiden todellisessa järjestyksessä"
+  },
+  "device": {
+    "glassware": "Laboratoriolasisto",
+    "electrolysisCell": "Elektrolyysikennо",
+    "galvanicCell": "Galvaaninen kenno",
+    "flameTest": "Liekki­väritesti­laitteisto",
+    "gasCollection": "Veden­siirto­kaasunkeruu­laitteisto",
+    "gasDelivery": "Kaasun­johto- ja absorptio­laitteisto",
+    "conductivity": "Liuosten sähkön­johtavuuden vertailu",
+    "strongBright": "Vahva · kirkas",
+    "weakDim": "Heikko · himmеä",
+    "nonNone": "Ei-johtava · ei valoa"
+  },
+  "difficulty": {
+    "EASY": "Aloittelija",
+    "MEDIUM": "Edistynyt",
+    "HARD": "Haaste"
+  },
+  "electro": {
+    "conductivityDesc": "Vertaa liuosten sähkön­johtavuutta samalla konsentraatiolla (lampun kirkkaus heijastaa ioni­pitoisuutta).",
+    "conductivityActive": "Jännitteen­mittaus käynnissä: mitä kirkkaampi lamppu, sitä parempi johtavuus",
+    "conductivityIdle": "Vertaa liuosten johtavuutta napsauttamalla “Käynnistä mittaus”",
+    "conductivityOn": "💡 Käynnistä mittaus",
+    "powerOff": "Katkaise virta",
+    "electrolyteInert": "Elektrolyytti: {name}（{formula}）· inertti anodi (hiili)",
+    "electrolyteActive": "Elektrolyytti: {name}（{formula}）· aktiivinen anodi (kupari)",
+    "electrolysisActive": "Elektrolyysi käynnissä…",
+    "electrolysisIdle": "Aloita elektrolyysi napsauttamalla “Kytke virta” ja tarkkaile elektrodeja",
+    "copperFading": "Liuos: sininen väri vaalenee vähitellen (kupari-ionit kuluvat)",
+    "powerOn": "⚡ Kytke virta",
+    "brine": "Suolavesi",
+    "electrolyte": "Elektrolyytti: {name}",
+    "cellActive": "Piiri suljettu – galvanometri poikkeaa, kenno purkautuu…",
+    "cellIdle": "Sulje piiri napsauttamalla “Kytke piiri” ja tarkkaile galvanometriä sekä elektrodeja",
+    "cellOn": "🔌 Kytke piiri",
+    "cellOff": "Katkaise piiri",
+    "cathode": "Katodi (−)",
+    "anode": "Anodi (＋)",
+    "negative": "Negatiivinen napa",
+    "positive": "Positiivinen napa"
+  },
+  "errors": {
+    "noActivity": "Tälle kokeelle ei ole kirjattu yhtään toimenpidettä. Tee koe ensin laboratoriossa, sitten voit luoda raportin.",
+    "reportFailed": "Raportin luonti epäonnistui",
+    "tutorUnavailable": "AI-tutoripalvelu ei ole käytettävissä",
+    "unknown": "Tuntematon virhe"
+  },
+  "home": {
+    "labTitle": "Interaktiivinen laboratoriopöytä",
+    "labDesc": "Vedä reagenssit dekantteriin – reaktiomoottori arvioi reaaliajassa värinmuutokset, kuplat, sakkaumat ja lämpötilamuutokset. Mitä näet, sitä saat.",
+    "tutorTitle": "AI-laboratorio-ohjaaja",
+    "tutorDesc": "Kysy periaatteista ja työskentelystä milloin tahansa. Kun kankaalla käynnistyy avainreaktio, ohjaaja antaa selityksen ja turvallisuushuomiot automaattisesti.",
+    "reportTitle": "Älykäs laboratorioraportti",
+    "reportDesc": "Kokoaa koko kokeen mittauskäyrät ja luo automaattisesti johtopäätökset, virheanalyysin, parannusehdotukset sekä osaamisen arvioinnin.",
+    "badge": "AI-pohjainen virtuaalinen kemian laboratorio",
+    "heroLine1": "Selaimessa,",
+    "heroLine2": "oikeita kemian kokeita",
+    "heroDesc": "Vedä reagensseja, seuraa värinmuutoksia ja kuplia, kysy AI-ohjaajalta milloin tahansa – kokeen päätyttyä raportti luodaan automaattisesti. {count} vahvistettua koetta, turvallisesti toistettavissa.",
+    "ctaCatalog": "Selaa koekatalogia →",
+    "ctaSessions": "Omat istunnot"
+  },
+  "lab": {
+    "mix": "Sekoita ja reagoi",
+    "reset": "Tyhjennä astia",
+    "clear": "Tyhjennä",
+    "complete": "Viimeistele koe",
+    "completed": "Koe valmis",
+    "viewReport": "Näytä laboratorioraportti →",
+    "removeItem": "Poista napsauttamalla",
+    "conditions": "Järjestelmän olosuhteet",
+    "temperature": "Järjestelmän lämpötila",
+    "reagentShelf": "Reagenssihylly",
+    "apparatusList": "Laitevarustelu",
+    "emptyContainer": "Valitse määrä vasemman reunan reagenssihyllystä tai vedä reagenssi tähän",
+    "absorbent": "Absorptioneste",
+    "apparatus": "Väline",
+    "addReagent": "Lisää {name}",
+    "removeReagent": "Poista {name}",
+    "mixAction": "Sekoita",
+    "backToDetail": "← Takaisin kokeen tietoihin",
+    "backToCatalog": "← Takaisin kokeluetteloon",
+    "labSuffix": "Laboratoriopöytä",
+    "labHint": "Klikkaa tai vedä reagensseja astiaan ja valitse “Sekoitusreaktio” havaintoja varten; voit myös käyttää “Kokeen selitystä” automaattiseen vaiheistukseen."
+  },
+  "lesson": {
+    "prev": "Edellinen",
+    "pause": "Tauko",
+    "play": "Toista",
+    "next": "Seuraava",
+    "voiceOn": "Ota ääniselitys käyttöön",
+    "voiceOff": "Poista ääniselitys käytöstä",
+    "muted": "🔇 Mykistetty",
+    "askTutor": "Selitys vaiheessa “{title}”: {narration} Selitä lyhyesti kemialliset periaatteet ja reaktioyhtälöt suhteessa astiassa tällä hetkellä näkyviin ilmiöihin ja lukemiin.",
+    "phase": {
+      "theory": "Teoria",
+      "prep": "Valmistelu",
+      "operate": "Toimenpide",
+      "observe": "Havainnot",
+      "conclude": "Johtopäätös"
+    },
+    "voiceLabel": "🔊 Ääniselitys",
+    "vesselBeaker": "Dekantterilasi",
+    "vesselTube": "Koeputki",
+    "vesselFlask": "Erlenmeyerpullo",
+    "observeGeneric": "Tarkkaile järjestelmää huolellisesti – kiinnitä huomiota mahdollisiin väri-, kupla- tai lämpötilamuutoksiin.",
+    "observeReacting": "Reaktio on käynnissä – seuraa pH:n ja lämpötilan muutoksia.",
+    "phenomenaList": "Havaitaan: {parts}.",
+    "partGas": "kaasukuplia vapautuu jatkuvasti",
+    "partPrecipitate": "liuos samenee ja muodostaa sakkaa",
+    "partColor": "liuoksen väri muuttuu selvästi",
+    "partExo": "samalla vapautuu lämpöä ja lämpötila nousee",
+    "partEndo": "samalla sitoutuu lämpöä ja lämpötila laskee",
+    "titlePrinciple": "Kokeen periaate",
+    "titleSummary": "Koosте",
+    "titleConnect": "Liitä laitteisto",
+    "titleConnectCircuit": "Liitä piiri",
+    "titlePowerOn": "Kytke virta",
+    "titleConnectOn": "Sulje piiri",
+    "titleConductTest": "Johtavuustesti",
+    "titleElectrodes": "Elektrodihavainnot",
+    "titleConductCompare": "Johtavuuden vertailu",
+    "titleTake": "Ota {reagent}",
+    "titleHeat": "Sytytä spriilamppu",
+    "titleMix": "Sekoita ja reagoi",
+    "titleObserve": "Tarkkaile ilmiöitä",
+    "summary": "Tämän kokeen avulla {objectives}.",
+    "narrSetupElectrode": "Aseta elektrodit elektrolyyttiin ja liitä ne tasavirtalähteen plus- ja miinusnapaan.",
+    "narrPowerOn": "Kytke tasavirtalähde päälle ja aloita elektrolyysi – seuraa molempien elektrodien muutoksia.",
+    "narrSetupCircuit": "Liitä elektrodit johtimilla galvanometrin kautta ja aseta ne elektrolyyttiliuokseen.",
+    "narrConnectOn": "Sulje piiri ja tarkista, poikkeutuuko galvanometrin osoitin.",
+    "narrSetupConduct": "Liitä samanväkevyisiä liuoksia erillisiin elektrodipiireihin, joissa on hehkulamppu.",
+    "narrConductTest": "Sulje piiri ja vertaile lamppujen kirkkautta eri liuoksissa.",
+    "narrSetupGeneric": "Kytke elektrodit ja virtalähde/mittalaitteet piirikaavion mukaan ja lisää elektrolyytti.",
+    "narrRigOn": "{verb} – tarkkaile elektrodien ja mittareiden muutoksia.",
+    "verbElectrolysis": "Kytke tasavirtälähde päälle ja aloita elektrolyysi",
+    "verbCircuit": "Sulje virtapiiri",
+    "narrTake": "Ota {reagent} ja lisää se astiaan {vessel}.",
+    "narrHeat": "Sytytä spriilamppu lämmittämään {vessel} – reaktio edellyttää lämpöä.",
+    "narrMixHeated": "Sekoita reagenssit perusteellisesti lämmityksen jälkeen – reaktio käynnistyy.",
+    "narrMix": "Sekoita {vessel} reagenssit perusteellisesti – reaktio käynnistyy.",
+    "electrodesFading": "; liuoksen sininen väri haalistuu vähitellen",
+    "brine": "suolavesi",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Kokeen selitysrunko",
+    "outlineHint": "Pöydällä voit käynnistää vaiheistuksen painamalla “Kokeen selitys ▶”.",
+    "cardTitle": "Kokeen selitys",
+    "askTutorButton": "Pyydä ohjaajaa selittämään tämä vaihe",
+    "sentenceJoin": " ",
+    "voiceFemale": "Nainen ♀",
+    "voiceMale": "Mies ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Tälle kielelle ei ole saatavilla puhetta – selitys etenee automaattisesti tekstityksen mukaan.",
+    "narrTake_beaker": "Ota {reagent} ja lisää se dekantterilasiin.",
+    "narrTake_tube": "Ota {reagent} ja lisää se koeputkeen.",
+    "narrTake_flask": "Ota {reagent} ja lisää se Erlenmeyerin pulloon.",
+    "narrHeat_beaker": "Sytytä spriilamppu ja kuumenna dekantterilasia — tämä reaktio vaatii lämmitystä edetäkseen.",
+    "narrHeat_tube": "Sytytä spriilamppu ja kuumenna koeputkea — tämä reaktio vaatii lämmitystä edetäkseen.",
+    "narrHeat_flask": "Sytytä spriilamppu ja kuumenna Erlenmeyerin pulloa — tämä reaktio vaatii lämmitystä edetäkseen.",
+    "narrMix_beaker": "Sekoita dekantterilasissa olevat reagenssit huolellisesti — reaktio alkaa välittömästi.",
+    "narrMix_tube": "Sekoita koeputkessa olevat reagenssit huolellisesti — reaktio alkaa välittömästi.",
+    "narrMix_flask": "Sekoita Erlenmeyerin pullossa olevat reagenssit huolellisesti — reaktio alkaa välittömästi."
+  },
+  "locale": {
+    "switchLabel": "Vaihda käyttöliittymän kieli",
+    "searchPlaceholder": "Hae kieltä…",
+    "noMatch": "Ei vastaavia kieliä",
+    "groupFull": "Ensisijainen kieli",
+    "groupBasic": "Muut kielet",
+    "groupBasicHint": "Sisältää täyden laboratoriosisällön ja ääniselostuksen; käännös on konekäännös"
+  },
+  "nav": {
+    "catalog": "Kokeiden kirjasto",
+    "sessions": "Omat istunnot",
+    "home": "Etusivu"
+  },
+  "op": {
+    "stir": {
+      "label": "Sekoita",
+      "effect": "Sekoita lasitangolla – liuotin liukenee nopeammin ja seos tasaantuu",
+      "hint": "Sekoittaminen nopeuttaa liukenemista ja lämmönsiirtoa sekä tasoittaa paikallisia pitoisuuseroja, jolloin lukema edustaa koko liuosta"
+    },
+    "shake": {
+      "label": "Ravista",
+      "effect": "Ravista seosta – reagenssit sekoittuvat tehokkaasti",
+      "hint": "Koeputkessa on vähän nestettä, joten sekoitus tapahtuu ravistelemalla (ei tangolla) – pidä putki poissa muiden läheltä"
+    },
+    "heat": {
+      "label": "Kuumenna",
+      "effect": "Sytytetään spriilamppu lämmittämään; järjestelmän lämpötila nousee",
+      "hint": "Useimmat reaktiot nopeutuvat lämmitettäessä; endoterminen reaktio vaatii jatkuvaa lämmitystä"
+    },
+    "cool": {
+      "label": "Jäähdytä",
+      "effect": "Poistetaan lämmönlähde ja annetaan jäähtyä; lämpötila laskee",
+      "hint": "Jäähtyminen pienentää liukoisuutta – kiteytyksessä ja tuotteen talteenottamisessa vakiomenetelmä"
+    },
+    "settle": {
+      "label": "Anna seistä",
+      "effect": "Annetaan seistä hetki; sakka laskeutuu ja nesteet kerrostuvat selkeämmin",
+      "hint": "Saostuminen ja kerrostuminen vievät aikaa; vasta seisottamisen jälkeen voidaan arvioida, onko ylin kerros kirkas"
+    },
+    "read": {
+      "label": "Lue arvo",
+      "effect": "Kirjataan nykyinen lukema",
+      "hint": "Lue asteikko silmien tasolta; kirjaa jokainen lukema taulukkoon keskiarvon ja virheen laskemiseksi"
+    }
+  },
+  "quant": {
+    "verdictGood": "Tietojen yhdenmukaisuus on hyvä; soveltuu laskentaan",
+    "verdictFair": "Hajonta on suuri; tarkista lukematarkkuus ja järjestelmän vakaus",
+    "verdictPoor": "Hajonta on liian suuri; selvitä syy ja toista rinnakkaismittaukset",
+    "meanPh": "Keskimääräinen pH",
+    "meanTemp": "Keskilämpötila",
+    "meanVolume": "Keskimääräinen tilavuus",
+    "group": "Ryhmä {no}",
+    "readings": "{count} lukemaa",
+    "finalGroup": "Johtopäätös perustuu tähän ryhmään",
+    "singleReading": "Vain 1 mittaus; suhteellista keskihajontaa ei voida laskea (ohje edellyttää vähintään 2 rinnakkaismittausta)",
+    "worstDeviation": "Suurin suhteellinen keskipoikkeama {value}%",
+    "groupNote": "Aina kun järjestelmästä otetaan näyte, sekoitetaan tai lämmitetään, aloitetaan uusi ryhmä; eri ryhmien lukemia ei voida pitää rinnakkaismittauksina, joten ne tilastoidaan erikseen.",
+    "noReadings": "Kokeessa ei käytetty “Lue arvo” -toimintoa mittaustulosten tallentamiseen, joten keskiarvoa ja suhteellista hajontaa ei voida laskea. Kvantitatiivinen koe edellyttää vähintään 2 toistettua lukemaa samassa järjestelmän tilassa."
+  },
+  "report": {
+    "conclusion": "Kokeellinen johtopäätös",
+    "errorAnalysis": "Virheanalyysi",
+    "improvements": "Parannusehdotukset",
+    "noImprovements": "Ei parannusehdotuksia.",
+    "knowledge": "Tietojen hallinta-arviointi",
+    "empty": "（ei sisältöä）",
+    "measurements": "Mittauslukemat",
+    "quantData": "Kvantitatiiviset tiedot",
+    "noMeasurements": "Tässä kokeessa ei tallennettu yhtään lukemaa.",
+    "generating": "Tekoäly analysoi koedataa…",
+    "regenerate": "Luo raportti uudelleen",
+    "generate": "Luo koeraportti",
+    "generateFailed": "Luonti epäonnistui ({status})",
+    "notGenerated": "Raporttia ei ole vielä luotu. Tekoäly analysoi kokeen työvaiheet ja mittauslukemat ja antaa johtopäätökset, virheanalyysin, parannusehdotukset sekä osaamisen arvioinnin.",
+    "noActivity": "Tässä kokeessa ei ole vielä yhtään kirjattua toimenpidettä, joten raporttia ei voida luoda.",
+    "backToLab": "Palaa laboratoriopöydälle ja tee koe →",
+    "title": "Koeraportti",
+    "generatedAt": "Luotu {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Kytke virta",
+      "off": "Katkaise virta"
+    },
+    "cell": {
+      "on": "Sulje piiri",
+      "off": "Avaa piiri"
+    },
+    "flameTest": {
+      "on": "Sytytä spriilamppu",
+      "off": "Sammuta spriilamppu"
+    },
+    "waterBath": {
+      "on": "Aloita vesihaudelämmitys",
+      "off": "Lopeta vesihaudelämmitys"
+    },
+    "distillation": {
+      "on": "Aloita tislaus",
+      "off": "Lopeta tislaus"
+    },
+    "filtration": {
+      "on": "Aloita suodatus",
+      "off": "Lopeta suodatus"
+    },
+    "calorimeter": {
+      "on": "Aloita sekoitus ja lämpötilan mittaus",
+      "off": "Lopeta sekoitus"
+    },
+    "gasCollect": {
+      "on": "Aloita kaasun keräys",
+      "off": "Lopeta keräys"
+    },
+    "titration": {
+      "on": "Avaa hana ja lisää titrausliuosta",
+      "off": "Sulje hana"
+    },
+    "syringe": {
+      "on": "Paina mäntää — lisää painetta",
+      "off": "Vedä mäntää — vähennä painetta"
+    },
+    "phMeter": {
+      "on": "Avaa pH-mittari",
+      "off": "Sulje pH-mittari"
+    },
+    "evaporation": {
+      "on": "Sytytä spriilamppu — haihduta",
+      "off": "Sammuta spriilamppu"
+    },
+    "pressureDrop": {
+      "on": "Kierrä korkki kiinni ja ravista",
+      "off": "Löysää korkki"
+    },
+    "heat": {
+      "on": "Sytytä spriilamppu — kuumenna",
+      "off": "Lopeta kuumennus"
+    }
+  },
+  "sessions": {
+    "title": "Omat istunnot",
+    "subtitle": "Selaa aiempia kokeita ja avaa raportit",
+    "unknownExperiment": "Tuntematon koe",
+    "completed": "Valmis",
+    "inProgress": "Käynnissä",
+    "startedAt": "Aloitettu {time}",
+    "viewReport": "Näytä raportti"
+  },
+  "shelf": {
+    "title": "Reagenssihylly",
+    "taken": "Otettu {dose} {unit}",
+    "takeSome": "Lisää pisaroittain / ota sopiva määrä",
+    "take": "Ota {unit}",
+    "specIndicator": "Indikaattori",
+    "specGas": "Kaasu",
+    "specBulk": "Ota sopiva määrä",
+    "specSolution": "Liuos",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Puhdas neste ρ={density} g/mL",
+    "specLiquid": "Neste",
+    "specSolid": "Kiinteä aine, analyysipuhdas"
+  },
+  "site": {
+    "title": "ChemAIForge · AI-virtuaalinen kemian laboratorio",
+    "description": "Tee kemian kokeita selaimessa: vedä reagensseja, tarkkaile reaktioita, saa AI-ohjaajan neuvoja ja luo automaattisesti laboratorioraportteja."
+  },
+  "titration": {
+    "stopcock": "Hanan avausaste",
+    "buretteReading": "Byrentin lukema",
+    "phMeter": "pH-mittari",
+    "unfilled": "Täyttämätön",
+    "strongBase": "Voimakkaasti emäksinen",
+    "weakBase": "Heikosti emäksinen · värinmuutosalue",
+    "nearNeutral": "Lähes neutraali",
+    "acidExcess": "Hapan · ylitetty",
+    "endpointOk": "Päätepiste hyväksytty",
+    "overshoot": "Ylititraus",
+    "notYet": "Päätepistettä ei vielä saavutettu (vaaleanpunainen ei haalistunut)",
+    "justFaded": "Juuri haalistunut",
+    "keyPoints": "Käyttöohjeet",
+    "takeAnalyte": "Ota ensin analysoitava liuos →",
+    "dragStopcock": "← Vedä hanaa aloittaaksesi titrauksen",
+    "openness": "Avausaste {pct}% · pidä painettuna ja vedä vasemmalle tai oikealle"
+  },
+  "tutor": {
+    "placeholder": "Kirjoita kysymyksesi…",
+    "replying": "Vastataan…",
+    "send": "Lähetä",
+    "unknownError": "Tuntematon virhe",
+    "requestFailed": "Pyyntö epäonnistui ({status})",
+    "askHeat": "Sekoitin reagenssit, mutta en havainnut mitään reaktiota. Ohjeen mukaan tämä reaktio vaatii lämmitystä. Selitä, miksi reaktio voi tapahtua vain lämmitettäessä.",
+    "askObserved": "Havaitsin juuri reaktion {equation}{phenomena}. Voitko selittää, mitä tapahtui ja mikä on sen periaate?",
+    "phPrecipitate": "saostuma muodostui",
+    "phGas": "kaasua kehittyi",
+    "phColor": "väri muuttui",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI-laboratorio-ohjaaja",
+    "empty": "Kysy minulta koska tahansa – tai käynnistä reaktio piirtoalustalla, niin annan vihjeitä."
+  },
+  "workbench": {
+    "view2d": "2D-kaavio",
+    "view3d": "3D-työpöytä",
+    "view3dRefined": "3D-työpöytä ★",
+    "sceneHint": "Pyöritä vetämällä · Zoomaa vierittämällä"
+  }
+}

@@ -1,11 +1,19 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { ensureGuestUserId } from "@/server/guest";
 import { listSessionsByUser } from "@/server/session";
 import { getExperimentById } from "@/server/experiments/service";
 import { SessionStatus } from "@/server/session/types";
+import { getTranslations } from "next-intl/server";
+import { localizeExperiment } from "@/lib/i18n/content";
 
-// 「我的会话」列表页：平台已去登录，会话归属固定访客用户，直接列出其历史会话
-export default async function SessionsPage() {
+// 「{t("title")}」列表页：平台已去登录，会话归属固定访客用户，直接列出其历史会话
+export default async function SessionsPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = params;
+  const t = await getTranslations("sessions");
   const userId = await ensureGuestUserId();
 
   const sessions = await listSessionsByUser(userId);
@@ -15,7 +23,9 @@ export default async function SessionsPage() {
   const titleEntries = await Promise.all(
     experimentIds.map(async (id) => {
       const exp = await getExperimentById(id);
-      return [id, exp?.title ?? "未知实验"] as const;
+      // 标题套译文：会话列表是学生回看自己做过什么的地方，标题是中文就认不出
+      const title = exp ? (await localizeExperiment(exp, locale)).title : null;
+      return [id, title ?? t("unknownExperiment")] as const;
     }),
   );
   const titleMap = new Map(titleEntries);
@@ -23,14 +33,14 @@ export default async function SessionsPage() {
   return (
     <main id="main" className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-10 animate-fade-up">
       <header className="flex flex-col gap-1">
-        <h1 className="text-3xl font-bold tracking-tight">我的会话</h1>
-        <p className="text-foreground/70">查看历史实验记录并进入对应报告</p>
+        <h1 className="text-3xl font-bold tracking-tight">{t("title")}</h1>
+        <p className="text-foreground/70">{t("subtitle")}</p>
       </header>
 
       {sessions.length === 0 ? (
         <div className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-foreground/15 py-16 text-center">
           <span className="text-3xl">🧫</span>
-          <p className="text-sm text-foreground/50">
+          <p className="text-sm text-foreground/65">
             暂无实验会话，去{" "}
             <Link
               href="/experiments"
@@ -52,18 +62,18 @@ export default async function SessionsPage() {
                 <span className="font-medium">
                   {titleMap.get(s.experimentId)}
                 </span>
-                <span className="text-xs text-foreground/50">
-                  开始于 {new Date(s.startedAt).toLocaleString("zh-CN")}
+                <span className="text-xs text-foreground/65">
+                  {t("startedAt", { time: new Date(s.startedAt).toLocaleString(locale) })}
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
-                <StatusBadge status={s.status} />
+                <StatusBadge status={s.status} label={s.status === "COMPLETED" ? t("completed") : t("inProgress")} />
                 <Link
                   href={`/sessions/${s.id}/report`}
                   className="text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
                 >
-                  查看报告
+                  {t("viewReport")}
                 </Link>
               </div>
             </li>
@@ -75,7 +85,8 @@ export default async function SessionsPage() {
 }
 
 // 会话状态徽标：进行中 / 已完成
-function StatusBadge({ status }: { status: SessionStatus }) {
+// 文案由父组件传入：服务端组件里的子函数取不到 await getTranslations
+function StatusBadge({ status, label }: { status: SessionStatus; label: string }) {
   const completed = status === SessionStatus.COMPLETED;
   return (
     <span
@@ -85,7 +96,7 @@ function StatusBadge({ status }: { status: SessionStatus }) {
           : "bg-amber-500/15 text-amber-600"
       }`}
     >
-      {completed ? "已完成" : "进行中"}
+      {label}
     </span>
   );
 }

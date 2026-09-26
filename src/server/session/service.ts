@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { withSessionLock } from "./serialize";
 import {
   SessionStatus,
+  hasActivity,
   type ExperimentReport,
   type SessionDTO,
   type SessionMeasurement,
@@ -92,7 +93,9 @@ export async function getSession(id: string): Promise<SessionDTO | null> {
   return row ? toDTO(row) : null;
 }
 
-// 列出指定用户的全部会话，按开始时间倒序（最新在前），供「我的会话」页使用
+// 列出指定用户有过实验操作的会话，按开始时间倒序（最新在前），供「我的会话」页使用。
+// 空会话（只打开过页面）不列出，判据见 hasActivity。在应用层过滤而非拼 where：
+// steps/measurements 是 JSON 字符串，拼 SQL 条件等于把判据复制一份，两边迟早对不上。
 export async function listSessionsByUser(
   userId: string,
 ): Promise<SessionDTO[]> {
@@ -100,7 +103,7 @@ export async function listSessionsByUser(
     where: { userId },
     orderBy: { startedAt: "desc" },
   });
-  return rows.map(toDTO);
+  return rows.map(toDTO).filter(hasActivity);
 }
 
 // 向会话追加一条操作步骤（读写均在应用层序列化 JSON）

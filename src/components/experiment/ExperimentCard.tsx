@@ -1,6 +1,6 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import type { ExperimentDTO } from "@/types/experiment";
-import { CATEGORY_LABELS, DIFFICULTY_LABELS } from "./labels";
+import { useTranslations } from "next-intl";
 
 // 实验列表中的单张卡片，点击进入详情页
 export default function ExperimentCard({
@@ -8,6 +8,9 @@ export default function ExperimentCard({
 }: {
   experiment: ExperimentDTO;
 }) {
+  const t = useTranslations("catalog");
+  const tCat = useTranslations("category");
+  const tDiff = useTranslations("difficulty");
   return (
     <Link
       href={`/experiments/${experiment.slug}`}
@@ -15,10 +18,10 @@ export default function ExperimentCard({
     >
       <div className="flex items-center gap-2 text-xs">
         <span className="rounded-full bg-brand-500/12 px-2.5 py-0.5 font-medium text-brand-700 dark:text-brand-300">
-          {CATEGORY_LABELS[experiment.category]}
+          {tCat(experiment.category)}
         </span>
         <span className="rounded-full bg-foreground/8 px-2.5 py-0.5 font-medium text-foreground/65">
-          {DIFFICULTY_LABELS[experiment.difficulty]}
+          {tDiff(experiment.difficulty)}
         </span>
       </div>
       <h3 className="text-lg font-semibold transition-colors group-hover:text-brand-600 dark:group-hover:text-brand-300">
@@ -27,8 +30,8 @@ export default function ExperimentCard({
       <p className="line-clamp-3 text-sm text-foreground/65">
         {experiment.description}
       </p>
-      <span className="mt-auto flex items-center gap-1 text-xs text-foreground/50">
-        <span aria-hidden>⏱</span> 预计 {experiment.estimatedMinutes} 分钟
+      <span className="mt-auto flex items-center gap-1 text-xs text-foreground/65">
+        <span aria-hidden>⏱</span> {t("estimatedMinutes", { minutes: experiment.estimatedMinutes })}
       </span>
     </Link>
   );

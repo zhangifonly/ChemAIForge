@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Liigu põhisisuni"
+  },
+  "catalog": {
+    "title": "Katsete kogu",
+    "empty": "Tingimustele vastavaid katseid ei leitud.",
+    "searchPlaceholder": "Otsi katse nime…",
+    "searchLabel": "Otsi katset",
+    "filterCategory": "Filtreeri kategooria järgi",
+    "allCategories": "Kõik kategooriad",
+    "filterDifficulty": "Filtreeri raskusastme järgi",
+    "allDifficulties": "Kõik raskusastmed",
+    "objectives": "Katse eesmärgid",
+    "reagents": "Vajalikud reagendid",
+    "apparatus": "Vajalikud seadmed",
+    "subtitle": "Vali katse ja alusta virtuaalses laboris.",
+    "estimatedMinutes": "Hinnanguline aeg: {minutes} min",
+    "startLab": "Alusta katset →"
+  },
+  "category": {
+    "ACID_BASE": "Happe-aluse reaktsioonid",
+    "ORGANIC": "Orgaaniline keemia",
+    "THERMODYNAMICS": "Termodünaamika",
+    "REDOX": "Redoksreaktsioonid",
+    "PRECIPITATION": "Sadestusreaktsioonid",
+    "GAS": "Gaaside valmistamine",
+    "ELECTROCHEM": "Elektrokeemia",
+    "METAL": "Metallide aktiivsus",
+    "ANALYSIS": "Analüüs ja tuvastamine",
+    "COORDINATION": "Koordinatsiooniühendite värvireaktsioonid"
+  },
+  "chart": {
+    "temperature": "Temperatuur",
+    "ph": "pH",
+    "volume": "Maht",
+    "ariaLabel": "{label} muutus ajas, praegune väärtus {value}",
+    "measureAria": "Mõõtmistulemuste ajagraafik, kokku {count} näitu, pH skaala 0 kuni 14, temperatuur 0 kuni 100 ℃",
+    "title": "Protsessikõver",
+    "current": "Praegune",
+    "peak": "Tippväärtus",
+    "samples": "{count} proovipunkti",
+    "channelTemp": "Temperatuur",
+    "channelPh": "pH",
+    "channelVolume": "Maht",
+    "empty": "Pärast toimingu alustamist kuvatakse siin ajaline kõver"
+  },
+  "dataTable": {
+    "title": "Andmetabel",
+    "emptyHint": "Klõpsa „Loe näit“ ühe mõõtmise salvestamiseks",
+    "recorded": "Selles seerias on {count} kirjet",
+    "recordedNeedMore": "Selles seerias on {count} kirjet (paralleelmõõtmiseks vähemalt 2)",
+    "emptyBody": "Kvantitatiivses katses korrake mõõtmisi ja võtke keskmine; iga „Loe näit“ lisab siia ühe rea.",
+    "colIndex": "Nr",
+    "colTime": "Aeg / s",
+    "colTemperature": "Temperatuur / ℃",
+    "colPh": "pH",
+    "colVolume": "Maht / mL",
+    "rowMean": "Seeria keskmine",
+    "rowDeviation": "Suhteline hälve",
+    "worstDeviation": "Suurim suhteline hälve {value}%:",
+    "verdictGood": "Andmete järjepidevus on hea – sobib arvutusteks.",
+    "verdictFair": "Hälve on suurevõitu – kontrollige, kas silm on skaalaga samal tasemel ja süsteem on stabiliseerunud.",
+    "verdictPoor": "Hälve on liiga suur – selgitage põhjus välja ja korrake paralleelmõõtmisi, ärge võtke lihtsalt keskmist."
+  },
+  "deck": {
+    "readings": "Lauainstrumentide näidud",
+    "temperature": "Temperatuur",
+    "volume": "Maht",
+    "ph": "pH",
+    "operations": "Katsetoimingud",
+    "needReagent": "Võtke esmalt reagent",
+    "inOrder": "Järgi tegelikku toimingute järjekorda"
+  },
+  "device": {
+    "glassware": "Laboritarvikud",
+    "electrolysisCell": "Elektrolüüsikamber",
+    "galvanicCell": "Galvaaniline element",
+    "flameTest": "Leekproovi seade",
+    "gasCollection": "Gaasi kogumine veeväljutusega",
+    "gasDelivery": "Gaasi juhtimise ja neeldumise seade",
+    "conductivity": "Lahuste elektrijuhtivuse võrdlus",
+    "strongBright": "Tugev · ere",
+    "weakDim": "Nõrk · hämar",
+    "nonNone": "Puudub · ei põle"
+  },
+  "difficulty": {
+    "EASY": "Algaja",
+    "MEDIUM": "Edasijõudnu",
+    "HARD": "Väljakutse"
+  },
+  "electro": {
+    "conductivityDesc": "Võrdle lahuste elektrijuhtivust sama kontsentratsiooni korral (lambi heledus peegeldab ioonide kontsentratsiooni).",
+    "conductivityActive": "Testimine käib: mida heledam lamp, seda parem juhtivus",
+    "conductivityIdle": "Klõpsa „Lülita vool sisse“, et võrrelda lahuste elektrijuhtivust",
+    "conductivityOn": "💡 Lülita vool sisse",
+    "powerOff": "Katkesta vool",
+    "electrolyteInert": "Elektrolüüt: {name} ({formula}) · inertatsioon anoodil (süsinik)",
+    "electrolyteActive": "Elektrolüüt: {name} ({formula}) · aktiivne anood (vask)",
+    "electrolysisActive": "Elektrolüüs käib…",
+    "electrolysisIdle": "Klõpsa „Lülita vool sisse“, et alustada elektrolüüsi ja jälgida elektroodide nähtusi",
+    "copperFading": "Lahus: sinine värvus tuhmub järk-järgult (vaskioonid kuluvad)",
+    "powerOn": "⚡ Lülita vool sisse",
+    "brine": "Soolalahus",
+    "electrolyte": "Elektrolüüt: {name}",
+    "cellActive": "Vooluring suletud, galvanomeeter kõrvaldub, element tühjeneb…",
+    "cellIdle": "Klõpsa „Sulge vooluring“, et jälgida galvanomeetri kõrvalekallet ja elektroodide nähtusi",
+    "cellOn": "🔌 Sulge vooluring",
+    "cellOff": "Lülita ahel välja",
+    "cathode": "Katood (−)",
+    "anode": "Anood (＋)",
+    "negative": "Negatiivne pool",
+    "positive": "Positiivne pool"
+  },
+  "errors": {
+    "noActivity": "Sellel katsel pole veel ühtegi toimingut salvestatud. Tee katseid laborilaua peal, enne kui genereerid aruande.",
+    "reportFailed": "Aruande genereerimine ebaõnnestus",
+    "tutorUnavailable": "AI juhendaja teenus ei ole saadaval",
+    "unknown": "Tundmatu viga"
+  },
+  "home": {
+    "labTitle": "Interaktiivne laborilaud",
+    "labDesc": "Lohista reaktiive keeduklaasi — reaktsioonimootor hindab värvimuutust, mullide teket, sadestumist ja temperatuurimuutust reaalajas.",
+    "tutorTitle": "AI labori juhendaja",
+    "tutorDesc": "Küsi igal hetkel põhimõtete ja toimingute kohta. Kui lõuendil käivitub võtmereaktsioon, annab juhendaja ise selgitusi ja ohutussoovitusi.",
+    "reportTitle": "Nutikas laboriaruanne",
+    "reportDesc": "Koondab kogu katse mõõtmiskõverad ning genereerib automaatselt järeldused, veavanalüüsi, parendussoovitused ja teadmiste hinnangu.",
+    "badge": "AI-põhine virtuaalne keemialabor",
+    "heroLine1": "Otse brauseris —",
+    "heroLine2": "päris keemiakatse",
+    "heroDesc": "Lohista reaktiive, jälgi värvimuutusi ja mulle, küsi AI juhendajalt ning saa katse lõpus struktureeritud aruanne. {count} valideeritud katset — ohutu ja korratav.",
+    "ctaCatalog": "Sirvi katsete kataloogi →",
+    "ctaSessions": "Minu sessioonid"
+  },
+  "lab": {
+    "mix": "Sega reaktsioon",
+    "reset": "Tühjenda anum",
+    "clear": "Tühjenda",
+    "complete": "Lõpeta katse",
+    "completed": "Katse lõpetatud",
+    "viewReport": "Vaata laboriaruannet →",
+    "removeItem": "Klõpsa eemaldamiseks",
+    "conditions": "Süsteemi tingimused",
+    "temperature": "Süsteemi temperatuur",
+    "reagentShelf": "Reagentide riiul",
+    "apparatusList": "Varustus",
+    "emptyContainer": "Vali kogus vasakult reagentide riiulilt ja võta kätte või lohista reagent siia",
+    "absorbent": "Absorbentlahus",
+    "apparatus": "Aparatuur",
+    "addReagent": "Lisa {name}",
+    "removeReagent": "Eemalda {name}",
+    "mixAction": "Sega",
+    "backToDetail": "← Tagasi katse juurde",
+    "backToCatalog": "← Tagasi kataloogi",
+    "labSuffix": "Laborialus",
+    "labHint": "Klõpsa või lohista reagent klaasi, vali „Segamisreaktsioon“ ja jälgi nähtusi; või kasuta „Katse selgitust“ automaatseks sammhaaval demonstratsiooniks."
+  },
+  "lesson": {
+    "prev": "Eelmine samm",
+    "pause": "Peata",
+    "play": "Esita",
+    "next": "Järgmine samm",
+    "voiceOn": "Lülita häälselgitus sisse",
+    "voiceOff": "Lülita häälselgitus välja",
+    "muted": "🔇 Vaigistatud",
+    "askTutor": "Selgituse samm „{title}“: {narration} Kirjelda lühidalt klaasis nähtavaid muutusi ja näite põhjal kemilist printsiipi ning reaktsioonivõrrandit.",
+    "phase": {
+      "theory": "Teooria",
+      "prep": "Ettevalmistus",
+      "operate": "Toiming",
+      "observe": "Nähtused",
+      "conclude": "Järeldus"
+    },
+    "voiceLabel": "🔊 Häälselgitus",
+    "vesselBeaker": "Keeduklaas",
+    "vesselTube": "Katseklaas",
+    "vesselFlask": "Erlenmeieri kolb",
+    "observeGeneric": "Jälgi süsteemi tähelepanelikult – pane tähele võimalikke muutusi värvis, mullides või temperatuuris.",
+    "observeReacting": "Reaktsioon on käimas – jälgi pH ja temperatuuri näitude muutumist.",
+    "phenomenaList": "Näha on {parts}.",
+    "partGas": "pidevalt eralduvaid gaasimullikesi",
+    "partPrecipitate": "lahuse hägustumist ja sademe teket",
+    "partColor": "lahuse värvuse selget muutumist",
+    "partExo": "soojuse eraldumist ja temperatuuri tõusu",
+    "partEndo": "soojuse neeldumist ja temperatuuri langust",
+    "titlePrinciple": "Katse põhimõte",
+    "titleSummary": "Katse kokkuvõte",
+    "titleConnect": "Seadme ühendamine",
+    "titleConnectCircuit": "Ahela ühendamine",
+    "titlePowerOn": "Toite sisselülitamine",
+    "titleConnectOn": "Ahela sisselülitamine",
+    "titleConductTest": "Juhtivuse testimine",
+    "titleElectrodes": "Elektroodide nähtused",
+    "titleConductCompare": "Juhtivuse võrdlus",
+    "titleTake": "{reagent} võtmine",
+    "titleHeat": "Alkoholilambiga soojendamine",
+    "titleMix": "Reaktsioonisegu valmistamine",
+    "titleObserve": "Nähtuste jälgimine",
+    "summary": "Selle katsega õpid {objectives}.",
+    "narrSetupElectrode": "Aseta elektroodid elektrolüüti ja ühenda need alalisvooluallika pluss- ja miinusklemmiga.",
+    "narrPowerOn": "Lülita alalisvooluallikas sisse, alusta elektrolüüsi ja jälgi muutusi mõlemal elektroodil.",
+    "narrSetupCircuit": "Ühenda mõlemad elektroodid juhtmetega galvanomeetri kaudu ja aseta need elektrolüüdilahusesse.",
+    "narrConnectOn": "Lülita ahel sisse ja jälgi, kas galvanomeetri nõel kõrvaldub.",
+    "narrSetupConduct": "Ühenda sama kontsentratsiooniga lahused eraldi pirniga varustatud elektroodiahelatesse.",
+    "narrConductTest": "Lülita ahelad sisse ja võrdle pirni heledust eri lahustes.",
+    "narrSetupGeneric": "Ühenda elektroodid ja toiteallikas/mõõteriistad vastavalt ahelaskeemile ning aseta elektrolüüt.",
+    "narrRigOn": "{verb}, jälgi hoolikalt mõlema elektroodi ja mõõteriistade muutusi.",
+    "verbElectrolysis": "Lülita sisse alalisvooluallikas ja alusta elektrolüüsi",
+    "verbCircuit": "Sulge vooluring",
+    "narrTake": "Võta {reagent} ja lisa {vessel}.",
+    "narrHeat": "Süüta alkoholilamp, et kuumutada {vessel} — reaktsioon toimub ainult kuumutamisel.",
+    "narrMixHeated": "Kuumutamise järel sega reagendid põhjalikult; reaktsioon algab kohe.",
+    "narrMix": "Sega {vessel} reagendid põhjalikult; reaktsioon algab kohe.",
+    "electrodesFading": "; lahuse sinine värvus tuhmub järk-järgult",
+    "brine": "soolalahus",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Katse selgituse ülevaade",
+    "outlineHint": "Laborilaual klõpsa „Katse selgitus ▶“, et alustada samm-sammulist automaatdemot.",
+    "cardTitle": "Katse selgitus",
+    "askTutorButton": "Lase juhendajal see samm selgitada",
+    "sentenceJoin": " ",
+    "voiceFemale": "Naishääl ♀",
+    "voiceMale": "Meeshääl ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Selles keeles pole hääld saadaval. Selgitus edeneb automaatselt subtiitrite järgi.",
+    "narrTake_beaker": "Võtke {reagent} ja lisage see keeduklaasi.",
+    "narrTake_tube": "Võtke {reagent} ja lisage see katseklaasi.",
+    "narrTake_flask": "Võtke {reagent} ja lisage see erlenmeyeri kolbi.",
+    "narrHeat_beaker": "Süütage piirituslamp ja soojendage keeduklaasi — see reaktsioon saab toimuda ainult kuumutamise tingimustes.",
+    "narrHeat_tube": "Süütage piirituslamp ja soojendage katseklaasi — see reaktsioon saab toimuda ainult kuumutamise tingimustes.",
+    "narrHeat_flask": "Süütage piirituslamp ja soojendage erlenmeyeri kolbi — see reaktsioon saab toimuda ainult kuumutamise tingimustes.",
+    "narrMix_beaker": "Segage keeduklaasis olevaid reagente põhjalikult — reaktsioon algab kohe.",
+    "narrMix_tube": "Segage katseklaasis olevaid reagente põhjalikult — reaktsioon algab kohe.",
+    "narrMix_flask": "Segage erlenmeyeri kolbis olevaid reagente põhjalikult — reaktsioon algab kohe."
+  },
+  "locale": {
+    "switchLabel": "Vaheta liidese keel",
+    "searchPlaceholder": "Otsi keelt…",
+    "noMatch": "Ühtegi keelt ei leitud",
+    "groupFull": "Põhikeeled",
+    "groupBasic": "Muud keeled",
+    "groupBasicHint": "Sisaldab täielikku katsesisu ja häälselgitusi; tõlge on masintõlge"
+  },
+  "nav": {
+    "catalog": "Katsete kogu",
+    "sessions": "Minu seansid",
+    "home": "Avaleht"
+  },
+  "op": {
+    "stir": {
+      "label": "Sega",
+      "effect": "Sega klaaspulgaga; lahustumine kiireneb ja segu muutub ühtlasemaks",
+      "hint": "Segamine kiirendab lahustumist ja soojusülekannet ning ühtlustab kontsentratsiooni, nii et näit iseloomustab kogu lahust"
+    },
+    "shake": {
+      "label": "Loksuta",
+      "effect": "Loksuta, kuni reagendid on täielikult segunenud",
+      "hint": "Katseklaasis on vedelikku vähe — segu ühtlustamiseks loksuta (ärge segage), hoides toru suud eemale kõigist inimestest"
+    },
+    "heat": {
+      "label": "Kuumutamine",
+      "effect": "Süüdatakse alkoholilamp, süsteemi temperatuur tõuseb",
+      "hint": "Enamik reaktsioone kiireneb temperatuuri tõustes; endotermilised reaktsioonid vajavad pidevat kuumutamist"
+    },
+    "cool": {
+      "label": "Jahutamine",
+      "effect": "Soojusallikas eemaldatakse, temperatuur langeb loomulikult",
+      "hint": "Jahutamine vähendab lahustuvust — see on kristallisatsiooni ja produkti kogumise tavapärane samm"
+    },
+    "settle": {
+      "label": "Seismine",
+      "effect": "Lühike seismine selgitab sade ja vedeliku kihid",
+      "hint": "Sade ja kihistumine vajavad aega; alles pärast seismist saab hinnata, kas ülemine kiht on selge"
+    },
+    "read": {
+      "label": "Näidu lugemine",
+      "effect": "Praegune näit salvestatakse",
+      "hint": "Loe skaala silmade kõrgusel; kanna iga näit andmetabelisse, et arvutada keskmine ja viga"
+    }
+  },
+  "quant": {
+    "verdictGood": "Andmete ühtsus on hea, sobib arvutusteks",
+    "verdictFair": "Hälve on suur — kontrolli lugemise nurka ja süsteemi stabiilsust",
+    "verdictPoor": "Hälve on liiga suur — selgita põhjus ja korda paralleelmõõtmisi",
+    "meanPh": "Keskmine pH",
+    "meanTemp": "Keskmine temperatuur",
+    "meanVolume": "Keskmine maht",
+    "group": "{no}. rühm",
+    "readings": "{count} näitu",
+    "finalGroup": "Järeldus põhineb sellel rühmal",
+    "singleReading": "Ainult 1 mõõtmine — suhtelist keskmist hälvet ei saa arvutada (norm nõuab vähemalt 2 paralleelmõõtmist)",
+    "worstDeviation": "Suurim suhteline keskmine hälve {value}%",
+    "groupNote": "Iga kord, kui süsteemist võetakse proov, segatakse või kuumutatakse, alustatakse uut rühma. Rühmadeülesed näidud ei moodusta paralleelmõõtmisi ja neid arvestatakse eraldi.",
+    "noReadings": "Selles katses ei kasutatud «näidu lugemise» toimingut, seega mõõteandmed puuduvad ja keskmist ega suhtelist hälvet ei saa arvutada. Kvantitatiivne katse nõuab sama süsteemi seisundi juures vähemalt 2 korduvat näitu."
+  },
+  "report": {
+    "conclusion": "Katse järeldus",
+    "errorAnalysis": "Veaanalüüs",
+    "improvements": "Parendusettepanekud",
+    "noImprovements": "Parendusettepanekuid pole.",
+    "knowledge": "Teadmiste omandamise hinnang",
+    "empty": "（sisu puudub）",
+    "measurements": "Mõõtmistulemused",
+    "quantData": "Kvantitatiivsed andmed",
+    "noMeasurements": "Selle katse käigus ei salvestatud ühtegi näitu.",
+    "generating": "AI analüüsib katseandmeid…",
+    "regenerate": "Genereeri aruanne uuesti",
+    "generate": "Genereeri katsearuanne",
+    "generateFailed": "Genereerimine ebaõnnestus ({status})",
+    "notGenerated": "Aruannet pole veel genereeritud. AI koostab katse toimingute ja mõõtmistulemuste põhjal järeldused, veaanalüüsi, parendussoovitused ning oskuste hinnangu.",
+    "noActivity": "Selles katses pole ühtegi toimingut tehtud – aruande genereerimine pole võimalik.",
+    "backToLab": "Mine tagasi laborilaudu ja tee katse ära →",
+    "title": "Katsearuanne",
+    "generatedAt": "Genereeritud: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Lülita toide sisse",
+      "off": "Lülita toide välja"
+    },
+    "cell": {
+      "on": "Sulge vooluring",
+      "off": "Ava vooluring"
+    },
+    "flameTest": {
+      "on": "Süüta alkoholilamp",
+      "off": "Kustuta alkoholilamp"
+    },
+    "waterBath": {
+      "on": "Alusta veevanni kuumutamist",
+      "off": "Peata veevanni kuumutamine"
+    },
+    "distillation": {
+      "on": "Alusta destilleerimist",
+      "off": "Peata destilleerimine"
+    },
+    "filtration": {
+      "on": "Alusta filtreerimist",
+      "off": "Peata filtreerimine"
+    },
+    "calorimeter": {
+      "on": "Alusta segamist ja temperatuuri mõõtmist",
+      "off": "Peata segamine"
+    },
+    "gasCollect": {
+      "on": "Alusta gaasi kogumist",
+      "off": "Peata kogumine"
+    },
+    "titration": {
+      "on": "Ava kraanike ja tilguta",
+      "off": "Sulge kraan"
+    },
+    "syringe": {
+      "on": "Vajuta kolb alla – suurenda rõhku",
+      "off": "Tõmba kolb tagasi – vähenda rõhku"
+    },
+    "phMeter": {
+      "on": "Lülita pH-meeter sisse",
+      "off": "Lülita pH-meeter välja"
+    },
+    "evaporation": {
+      "on": "Süüta piirituslamp – alusta aurutamist",
+      "off": "Kustuta piirituslamp"
+    },
+    "pressureDrop": {
+      "on": "Keera kork kinni ja raputa",
+      "off": "Ava kork"
+    },
+    "heat": {
+      "on": "Süüta piirituslamp – alusta kuumutamist",
+      "off": "Peata kuumutamine"
+    }
+  },
+  "sessions": {
+    "title": "Minu seansid",
+    "subtitle": "Vaata varasemate katsete ajalugu ja ava vastav aruanne",
+    "unknownExperiment": "Tundmatu katse",
+    "completed": "Lõpetatud",
+    "inProgress": "Pooleli",
+    "startedAt": "Alustatud: {time}",
+    "viewReport": "Vaata aruannet"
+  },
+  "shelf": {
+    "title": "Reagendiriiul",
+    "taken": "Võetud {dose} {unit}",
+    "takeSome": "Tilguta / võta sobiv kogus",
+    "take": "Võta {unit}",
+    "specIndicator": "Indikaator",
+    "specGas": "Gaas",
+    "specBulk": "Võta sobiv kogus",
+    "specSolution": "Lahus",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Puhas vedelik ρ={density} g/mL",
+    "specLiquid": "Vedelik",
+    "specSolid": "Tahke aine, analüütiline puhtus"
+  },
+  "site": {
+    "title": "ChemAIForge · AI virtuaalne keemialabor",
+    "description": "Tee keemiaeksperimente brauseris: lohista reagente, jälgi reaktsioone, saa AI-juhendaja nõuandeid ja genereeri automaatselt laboriprotokoll."
+  },
+  "titration": {
+    "stopcock": "Kraani avamisaste",
+    "buretteReading": "Büretilugemine",
+    "phMeter": "pH-meeter",
+    "unfilled": "Täitmata",
+    "strongBase": "Tugevalt aluseline",
+    "weakBase": "Nõrgalt aluseline · värvusvahetus",
+    "nearNeutral": "Lähedane neutraalsele",
+    "acidExcess": "Happeline · liig lisatud",
+    "endpointOk": "Ekvivalentspunkt saavutatud",
+    "overshoot": "Üle titreeritud",
+    "notYet": "Ekvivalentspunkti pole saavutatud (roosa ei ole kadunud)",
+    "justFaded": "Värv just kadus",
+    "keyPoints": "Töövõtted",
+    "takeAnalyte": "Võta analüsaat →",
+    "dragStopcock": "← lohista kraan tiitrimise alustamiseks",
+    "openness": "Avamisaste {pct}% · hoia ja lohista vasakule-paremale"
+  },
+  "tutor": {
+    "placeholder": "Sisesta oma küsimus…",
+    "replying": "Vastan…",
+    "send": "Saada",
+    "unknownError": "Tundmatu viga",
+    "requestFailed": "Päring ebaõnnestus ({status})",
+    "askHeat": "Segasin reagendid, kuid ei täheldanud mingit muutust. Vihje ütleb, et see reaktsioon nõuab kuumutamist. Palun selgita, miks see reaktsioon toimub ainult kuumutamisel.",
+    "askObserved": "Täheldsin just reaktsiooni {equation}{phenomena}. Palun selgita, mis toimus ja mis on selle põhimõte.",
+    "phPrecipitate": "moodustus sade",
+    "phGas": "eraldus gaas",
+    "phColor": "toimus värvimuutus",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Laboriõpetaja",
+    "empty": "Küsi minult igal ajal või käivita reaktsioon lõuendil — annan ise vihje."
+  },
+  "workbench": {
+    "view2d": "2D skeem",
+    "view3d": "3D töölaud",
+    "view3dRefined": "3D töölaud ★",
+    "sceneHint": "Lohistage pööramiseks · Kerige suurendamiseks"
+  }
+}

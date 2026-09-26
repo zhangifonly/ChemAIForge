@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "跳到主内容"
+  },
+  "catalog": {
+    "title": "实验库",
+    "empty": "没有符合条件的实验。",
+    "searchPlaceholder": "搜索实验名称…",
+    "searchLabel": "搜索实验",
+    "filterCategory": "按分类筛选",
+    "allCategories": "全部分类",
+    "filterDifficulty": "按难度筛选",
+    "allDifficulties": "全部难度",
+    "objectives": "实验目标",
+    "reagents": "所需试剂",
+    "apparatus": "所需仪器",
+    "subtitle": "选择一个实验，进入虚拟实验室开始操作。",
+    "estimatedMinutes": "预计 {minutes} 分钟",
+    "startLab": "开始实验 →"
+  },
+  "category": {
+    "ACID_BASE": "酸碱反应",
+    "ORGANIC": "有机化学",
+    "THERMODYNAMICS": "热力学",
+    "REDOX": "氧化还原",
+    "PRECIPITATION": "沉淀复分解",
+    "GAS": "气体制备",
+    "ELECTROCHEM": "电化学",
+    "METAL": "金属活动性",
+    "ANALYSIS": "分析检验",
+    "COORDINATION": "配位显色"
+  },
+  "chart": {
+    "temperature": "温度",
+    "ph": "pH",
+    "volume": "体积",
+    "ariaLabel": "{label}随时间变化曲线，当前 {value}",
+    "measureAria": "测量读数随时间变化折线图，共 {count} 条读数，pH 量程 0 至 14，温度量程 0 至 100 摄氏度",
+    "title": "过程曲线",
+    "current": "当前",
+    "peak": "峰值",
+    "samples": "采样 {count} 点",
+    "channelTemp": "温度",
+    "channelPh": "pH",
+    "channelVolume": "体积",
+    "empty": "开始操作后这里显示随时间变化的曲线"
+  },
+  "dataTable": {
+    "title": "数据记录表",
+    "emptyHint": "点「读数」记录一次测量",
+    "recorded": "本组已记 {count} 次",
+    "recordedNeedMore": "本组已记 {count} 次（平行测定至少 2 次）",
+    "emptyBody": "定量实验要重复测量取平均值；每次点「读数」在此留下一行。",
+    "colIndex": "序号",
+    "colTime": "时刻 / s",
+    "colTemperature": "温度 / ℃",
+    "colPh": "pH",
+    "colVolume": "体积 / mL",
+    "rowMean": "本组平均",
+    "rowDeviation": "相对偏差",
+    "worstDeviation": "最大相对偏差 {value}%：",
+    "verdictGood": "数据一致性良好，可用于计算。",
+    "verdictFair": "偏差偏大，检查读数时视线是否与刻度平齐、体系是否已稳定。",
+    "verdictPoor": "偏差过大，应查明原因后重做平行测定，不要直接取平均。"
+  },
+  "deck": {
+    "readings": "实验台仪表读数",
+    "temperature": "温度",
+    "volume": "体积",
+    "ph": "pH",
+    "operations": "实验操作",
+    "needReagent": "先取用试剂",
+    "inOrder": "按实际步骤顺序操作"
+  },
+  "device": {
+    "glassware": "实验器皿",
+    "electrolysisCell": "电解槽",
+    "galvanicCell": "原电池",
+    "flameTest": "焰色反应装置",
+    "gasCollection": "排水法集气装置",
+    "gasDelivery": "导气吸收装置",
+    "conductivity": "溶液导电性对比",
+    "strongBright": "强·明亮",
+    "weakDim": "弱·微亮",
+    "nonNone": "非·不亮"
+  },
+  "difficulty": {
+    "EASY": "入门",
+    "MEDIUM": "进阶",
+    "HARD": "挑战"
+  },
+  "electro": {
+    "conductivityDesc": "相同浓度下比较溶液的导电能力（灯泡亮度反映离子浓度）。",
+    "conductivityActive": "通电检测中：灯泡越亮，导电能力越强",
+    "conductivityIdle": "点击「通电检测」，比较各溶液的导电能力",
+    "conductivityOn": "💡 通电检测",
+    "powerOff": "断电",
+    "electrolyteInert": "电解液：{name}（{formula}）·阳极惰性（碳）",
+    "electrolyteActive": "电解液：{name}（{formula}）·阳极活性（铜）",
+    "electrolysisActive": "电解进行中…",
+    "electrolysisIdle": "点击「通电」开始电解，观察两极现象",
+    "copperFading": "溶液：蓝色逐渐变浅（铜离子被消耗）",
+    "powerOn": "⚡ 通电",
+    "brine": "食盐水",
+    "electrolyte": "电解质：{name}",
+    "cellActive": "电路接通，电流计偏转，原电池放电中…",
+    "cellIdle": "点击「接通电路」，观察电流计偏转与两极现象",
+    "cellOn": "🔌 接通电路",
+    "cellOff": "断开电路",
+    "cathode": "阴极（−）",
+    "anode": "阳极（＋）",
+    "negative": "负极",
+    "positive": "正极"
+  },
+  "errors": {
+    "noActivity": "本次实验还没有任何操作记录，先在实验台上动手做一次再生成报告。",
+    "reportFailed": "报告生成失败",
+    "tutorUnavailable": "AI 导师服务异常",
+    "unknown": "未知错误"
+  },
+  "home": {
+    "labTitle": "交互式实验台",
+    "labDesc": "把试剂拖进烧杯，反应引擎实时判定变色、气泡、沉淀与温度变化，所见即所得。",
+    "tutorTitle": "AI 实验导师",
+    "tutorDesc": "随时提问原理与操作，画布触发关键反应时导师还会主动给出讲解与安全提示。",
+    "reportTitle": "智能实验报告",
+    "reportDesc": "汇总整场实验的读数曲线，自动生成结论、误差分析、改进建议与知识点评估。",
+    "badge": "AI 驱动的虚拟化学实验室",
+    "heroLine1": "在浏览器里",
+    "heroLine2": "做真实的化学实验",
+    "heroDesc": "拖拽试剂、观察变色与气泡、随时向 AI 导师提问，实验结束自动生成结构化报告。{count} 个经过验证的实验，安全可重复。",
+    "ctaCatalog": "浏览实验库 →",
+    "ctaSessions": "我的会话"
+  },
+  "lab": {
+    "mix": "混合反应",
+    "reset": "清空容器",
+    "clear": "清空",
+    "complete": "完成实验",
+    "completed": "实验已完成",
+    "viewReport": "查看实验报告 →",
+    "removeItem": "点击移除",
+    "conditions": "体系条件",
+    "temperature": "体系温度",
+    "reagentShelf": "试剂架",
+    "apparatusList": "仪器配备",
+    "emptyContainer": "在左侧试剂架选定用量后取用，或拖拽试剂至此",
+    "absorbent": "吸收液",
+    "apparatus": "仪器",
+    "addReagent": "加{name}",
+    "removeReagent": "移除{name}",
+    "mixAction": "混合",
+    "backToDetail": "← 返回实验详情",
+    "backToCatalog": "← 返回实验库",
+    "labSuffix": "实验台",
+    "labHint": "点击或拖拽试剂入杯、「混合反应」观察现象；也可用「实验讲解」自动分步演示。"
+  },
+  "lesson": {
+    "prev": "上一步",
+    "pause": "暂停",
+    "play": "播放",
+    "next": "下一步",
+    "voiceOn": "开启语音讲解",
+    "voiceOff": "关闭语音讲解",
+    "muted": "🔇 已静音",
+    "askTutor": "讲解到「{title}」这一步：{narration} 请结合此刻烧杯里的现象与读数，简明讲解其中的化学原理与方程式。",
+    "phase": {
+      "theory": "原理",
+      "prep": "准备",
+      "operate": "操作",
+      "observe": "现象",
+      "conclude": "结论"
+    },
+    "voiceLabel": "🔊 语音讲解",
+    "voiceFemale": "女声 ♀",
+    "voiceMale": "男声 ♂",
+    "vesselBeaker": "烧杯",
+    "vesselTube": "试管",
+    "vesselFlask": "锥形瓶",
+    "observeGeneric": "仔细观察体系，留意是否出现颜色、气泡或温度的变化。",
+    "observeReacting": "反应正在发生，注意观察 pH 与温度读数的变化。",
+    "phenomenaList": "可以看到{parts}。",
+    "partGas": "有气泡不断逸出",
+    "partPrecipitate": "溶液变浑浊并生成沉淀",
+    "partColor": "溶液颜色发生明显变化",
+    "partExo": "同时放出热量、温度升高",
+    "partEndo": "同时吸收热量、温度下降",
+    "titlePrinciple": "实验原理",
+    "titleSummary": "实验小结",
+    "titleConnect": "连接装置",
+    "titleConnectCircuit": "连接电路",
+    "titlePowerOn": "接通电源",
+    "titleConnectOn": "接通电路",
+    "titleConductTest": "通电检测",
+    "titleElectrodes": "两极现象",
+    "titleConductCompare": "导电性对比",
+    "titleTake": "取用{reagent}",
+    "titleHeat": "点燃酒精灯",
+    "titleMix": "混合反应",
+    "titleObserve": "观察现象",
+    "summary": "通过本实验，你将{objectives}。",
+    "narrSetupElectrode": "将电极插入电解液，分别与直流电源的正、负极相连。",
+    "narrPowerOn": "接通直流电源，开始电解，注意观察两极变化。",
+    "narrSetupCircuit": "用导线将两电极经电流计相连，插入电解质溶液。",
+    "narrConnectOn": "接通电路，观察电流计指针是否偏转。",
+    "narrSetupConduct": "将相同浓度的溶液分别接入带灯泡的电极电路。",
+    "narrConductTest": "接通电路，比较各溶液中灯泡的明暗。",
+    "narrSetupGeneric": "按电路图连接电极与电源／测量仪表，插入电解质。",
+    "narrRigOn": "{verb}，注意观察两极及仪表的变化。",
+    "verbElectrolysis": "接通直流电源，开始电解",
+    "verbCircuit": "接通电路",
+    "narrTake": "取用{reagent}，加入{vessel}中。",
+    "narrHeat": "点燃酒精灯给{vessel}加热 —— 这个反应必须在受热条件下才能进行。",
+    "narrMixHeated": "受热后将试剂充分混合，反应随即开始。",
+    "narrMix": "将{vessel}中的试剂充分混合，反应随即开始。",
+    "electrodesFading": "；溶液蓝色逐渐变浅",
+    "brine": "食盐水",
+    "joinComma": "，",
+    "joinSemicolon": "；",
+    "outlineTitle": "实验讲解大纲",
+    "outlineHint": "进入实验台后可点「实验讲解 ▶」逐步自动演示。",
+    "cardTitle": "实验讲解",
+    "askTutorButton": "让导师讲讲这一步",
+    "sentenceEnd": "。",
+    "sentenceJoin": "",
+    "noVoice": "本语言暂无语音，讲解将按字幕自动推进。",
+    "narrTake_beaker": "取用{reagent}，加入烧杯中。",
+    "narrTake_tube": "取用{reagent}，加入试管中。",
+    "narrTake_flask": "取用{reagent}，加入锥形瓶中。",
+    "narrHeat_beaker": "点燃酒精灯给烧杯加热 —— 这个反应必须在受热条件下才能进行。",
+    "narrHeat_tube": "点燃酒精灯给试管加热 —— 这个反应必须在受热条件下才能进行。",
+    "narrHeat_flask": "点燃酒精灯给锥形瓶加热 —— 这个反应必须在受热条件下才能进行。",
+    "narrMix_beaker": "将烧杯中的试剂充分混合，反应随即开始。",
+    "narrMix_tube": "将试管中的试剂充分混合，反应随即开始。",
+    "narrMix_flask": "将锥形瓶中的试剂充分混合，反应随即开始。"
+  },
+  "locale": {
+    "switchLabel": "切换界面语言",
+    "searchPlaceholder": "搜索语言…",
+    "groupFull": "主力语种",
+    "groupBasic": "其他语种",
+    "groupBasicHint": "含完整实验内容与语音讲解，译文为机器翻译",
+    "noMatch": "没有匹配的语言"
+  },
+  "nav": {
+    "catalog": "实验库",
+    "sessions": "我的会话",
+    "home": "首页"
+  },
+  "op": {
+    "stir": {
+      "label": "搅拌",
+      "effect": "用玻璃棒搅拌，溶质加速溶解、混合更均匀",
+      "hint": "搅拌加快溶解与传热，也让局部浓度趋于一致，读数才代表整体"
+    },
+    "shake": {
+      "label": "振荡",
+      "effect": "振荡摇匀，试剂充分接触",
+      "hint": "试管内液体少，靠振荡（不是搅拌）混匀，手持管口朝无人处"
+    },
+    "heat": {
+      "label": "加热",
+      "effect": "点燃酒精灯加热，体系温度上升",
+      "hint": "多数反应升温加快；吸热反应必须持续加热才能进行"
+    },
+    "cool": {
+      "label": "冷却",
+      "effect": "撤去热源自然冷却，温度回落",
+      "hint": "冷却让溶解度下降，是结晶析出与产物收集的常规步骤"
+    },
+    "settle": {
+      "label": "静置",
+      "effect": "静置片刻，沉淀沉降、液体分层更清晰",
+      "hint": "沉淀与分层需要时间；静置后才能判断上层清液是否澄清"
+    },
+    "read": {
+      "label": "读数",
+      "effect": "记录当前读数",
+      "hint": "视线与刻度平齐读数；把每次读数记进数据表才能算平均值与误差"
+    }
+  },
+  "quant": {
+    "verdictGood": "数据一致性良好，可用于计算",
+    "verdictFair": "偏差偏大，检查读数视线与体系是否稳定",
+    "verdictPoor": "偏差过大，应查明原因后重做平行测定",
+    "meanPh": "平均 pH",
+    "meanTemp": "平均温度",
+    "meanVolume": "平均体积",
+    "group": "第 {no} 组",
+    "readings": "{count} 次读数",
+    "finalGroup": "结论以此组为准",
+    "singleReading": "仅 1 次测定，无法计算相对偏差（规范要求平行测定至少 2 次）",
+    "worstDeviation": "最大相对平均偏差 {value}%",
+    "groupNote": "体系每次被取用 / 混合 / 加热都会开新的一组，跨组读数不构成平行测定，因此分别统计。",
+    "noReadings": "本次实验没有用「读数」操作留下测量记录，无法计算平均值与相对偏差。定量实验需在同一体系状态下重复读数至少 2 次。"
+  },
+  "report": {
+    "conclusion": "实验结论",
+    "errorAnalysis": "误差分析",
+    "improvements": "改进建议",
+    "noImprovements": "暂无改进建议。",
+    "knowledge": "知识点掌握评估",
+    "empty": "（暂无内容）",
+    "measurements": "测量读数",
+    "quantData": "定量数据",
+    "noMeasurements": "本次实验未记录任何读数。",
+    "generating": "AI 正在分析实验数据…",
+    "regenerate": "重新生成报告",
+    "generate": "生成实验报告",
+    "generateFailed": "生成失败（{status}）",
+    "notGenerated": "尚未生成报告。AI 会依据本次实验的操作步骤与测量读数，给出结论、误差分析、改进建议与掌握评估。",
+    "noActivity": "这次实验还没有任何操作记录，暂时无法生成报告。",
+    "backToLab": "回到实验台动手做一次 →",
+    "title": "实验报告",
+    "generatedAt": "生成于 {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "接通电源",
+      "off": "断开电源"
+    },
+    "cell": {
+      "on": "接通电路",
+      "off": "断开电路"
+    },
+    "flameTest": {
+      "on": "点燃酒精灯",
+      "off": "熄灭酒精灯"
+    },
+    "waterBath": {
+      "on": "开始水浴加热",
+      "off": "停止水浴加热"
+    },
+    "distillation": {
+      "on": "开始蒸馏",
+      "off": "停止蒸馏"
+    },
+    "filtration": {
+      "on": "开始过滤",
+      "off": "停止过滤"
+    },
+    "calorimeter": {
+      "on": "开始搅拌测温",
+      "off": "停止搅拌"
+    },
+    "gasCollect": {
+      "on": "开始收集气体",
+      "off": "停止收集"
+    },
+    "titration": {
+      "on": "打开旋塞滴加",
+      "off": "关闭旋塞"
+    },
+    "syringe": {
+      "on": "压缩活塞加压",
+      "off": "拉回活塞减压"
+    },
+    "phMeter": {
+      "on": "打开 pH 计",
+      "off": "关闭 pH 计"
+    },
+    "evaporation": {
+      "on": "点燃酒精灯蒸发",
+      "off": "熄灭酒精灯"
+    },
+    "pressureDrop": {
+      "on": "拧紧瓶盖振荡",
+      "off": "松开瓶盖"
+    },
+    "heat": {
+      "on": "点燃酒精灯加热",
+      "off": "停止加热"
+    }
+  },
+  "sessions": {
+    "title": "我的会话",
+    "subtitle": "查看历史实验记录并进入对应报告",
+    "unknownExperiment": "未知实验",
+    "completed": "已完成",
+    "inProgress": "进行中",
+    "startedAt": "开始于 {time}",
+    "viewReport": "查看报告"
+  },
+  "shelf": {
+    "title": "试剂架",
+    "taken": "已取 {dose} {unit}",
+    "takeSome": "滴加 / 取适量",
+    "take": "取 {unit}",
+    "specIndicator": "指示剂",
+    "specGas": "气体",
+    "specBulk": "取适量",
+    "specSolution": "溶液",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "纯液体 ρ={density} g/mL",
+    "specLiquid": "液体",
+    "specSolid": "固体 分析纯"
+  },
+  "site": {
+    "title": "ChemAIForge · AI 虚拟化学实验室",
+    "description": "在浏览器里做化学实验：拖拽试剂、观察反应、获取 AI 导师指导，自动生成实验报告。"
+  },
+  "titration": {
+    "stopcock": "旋塞开度",
+    "buretteReading": "滴定管读数",
+    "phMeter": "pH 计",
+    "unfilled": "待装液",
+    "strongBase": "强碱性",
+    "weakBase": "弱碱性 · 变色区",
+    "nearNeutral": "接近中性",
+    "acidExcess": "酸性 · 已过量",
+    "endpointOk": "终点合格",
+    "overshoot": "滴过量",
+    "notYet": "尚未到终点（粉红未褪）",
+    "justFaded": "刚好褪去",
+    "keyPoints": "操作要点",
+    "takeAnalyte": "先取待测液 →",
+    "dragStopcock": "← 拖动旋塞开始滴定",
+    "openness": "开度 {pct}% · 按住左右拖动"
+  },
+  "tutor": {
+    "placeholder": "输入你的问题…",
+    "replying": "回复中…",
+    "send": "发送",
+    "unknownError": "未知错误",
+    "requestFailed": "请求失败（{status}）",
+    "askHeat": "我把试剂混合后没有观察到现象，提示说这个反应需要加热。请解释为什么这个反应必须在加热条件下才能进行。",
+    "askObserved": "我刚刚观察到反应{equation}{phenomena}，请帮我解释发生了什么、原理是什么？",
+    "phPrecipitate": "生成沉淀",
+    "phGas": "产生气体",
+    "phColor": "发生颜色变化",
+    "listJoin": "、",
+    "eqWrap": "（{equation}）",
+    "title": "AI 实验导师",
+    "empty": "随时向我提问，或在画布中触发反应后我会主动提示。"
+  },
+  "workbench": {
+    "view2d": "2D 示意",
+    "view3d": "3D 实验台",
+    "view3dRefined": "3D 实验台 ★",
+    "sceneHint": "拖拽旋转 · 滚轮缩放"
+  }
+}

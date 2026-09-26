@@ -9,8 +9,13 @@ import { useTutorBus } from "./tutorBus";
 import { useTutorStream, type ChatMessage } from "./useTutorStream";
 import { buildLabState, contextualPrompt } from "./labContext";
 import { TutorMarkdown } from "./TutorMarkdown";
+import { useLocale, useTranslations } from "next-intl";
+import { usePhrase } from "@/lib/i18n/PhenomenaProvider";
 
 export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
+  const t = useTranslations("tutor");
+  const locale = useLocale();
+  const phrase = usePhrase();
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const { send, streaming, error, cancel } = useTutorStream();
@@ -52,7 +57,7 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
       setMessages([...history, { role: "assistant", content: "" }]);
       // 取发送时刻的画布快照，避免闭包过期
       const labState = buildLabState(useLabStore.getState());
-      await send({ experimentSlug, messages: history, labState, onDelta });
+      await send({ experimentSlug, messages: history, labState, locale, onDelta });
     },
     [messages, streaming, send, experimentSlug, onDelta],
   );
@@ -69,10 +74,10 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
       // 一次 mix()，每次 react() 都返回新对象、躲过上面的去重，
       // 于是一趟讲解能连着打出十几次真实 AI 请求。
       if (state.silent) return;
-      const prompt = contextualPrompt(result);
+      const prompt = contextualPrompt(result, (k, v) => t(k, v), phrase);
       if (prompt) void submit(prompt);
     });
-  }, [submit]);
+  }, [submit, locale]);
 
   // 订阅讲解播放器投递的提示，自动发起一次带画布上下文的提问
   useEffect(() => {
@@ -94,7 +99,7 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
         <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600 text-xs text-white">
           🤖
         </span>
-        AI 实验导师
+        {t("title")}
       </h2>
 
       <div
@@ -103,8 +108,8 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
         aria-live="polite"
       >
         {messages.length === 0 && (
-          <p className="text-xs text-foreground/40">
-            随时向我提问，或在画布中触发反应后我会主动提示。
+          <p className="text-xs text-foreground/65">
+            {t("empty")}
           </p>
         )}
         {messages.map((m, i) => (
@@ -128,7 +133,7 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="输入你的问题…"
+          placeholder={t("placeholder")}
           className="min-w-0 flex-1 rounded-xl border border-foreground/15 bg-background/60 px-3 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
         />
         <button
@@ -136,7 +141,7 @@ export function TutorChat({ experimentSlug }: { experimentSlug: string }) {
           disabled={streaming || !input.trim()}
           className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-4 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-soft"
         >
-          {streaming ? "回复中…" : "发送"}
+          {streaming ? t("replying") : t("send")}
         </button>
       </form>
     </div>

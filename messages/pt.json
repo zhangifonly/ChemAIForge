@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Ir para o conteúdo principal"
+  },
+  "catalog": {
+    "title": "Biblioteca de Experimentos",
+    "empty": "Nenhum experimento encontrado.",
+    "searchPlaceholder": "Pesquisar nome do experimento…",
+    "searchLabel": "Pesquisar experimento",
+    "filterCategory": "Filtrar por categoria",
+    "allCategories": "Todas as categorias",
+    "filterDifficulty": "Filtrar por dificuldade",
+    "allDifficulties": "Todas as dificuldades",
+    "objectives": "Objetivos do experimento",
+    "reagents": "Reagentes necessários",
+    "apparatus": "Equipamentos necessários",
+    "subtitle": "Selecione um experimento para iniciar o laboratório virtual.",
+    "estimatedMinutes": "Duração estimada: {minutes} min",
+    "startLab": "Iniciar experimento →"
+  },
+  "category": {
+    "ACID_BASE": "Reações ácido-base",
+    "ORGANIC": "Química orgânica",
+    "THERMODYNAMICS": "Termodinâmica",
+    "REDOX": "Oxirredução",
+    "PRECIPITATION": "Precipitação e metátese",
+    "GAS": "Preparação de gases",
+    "ELECTROCHEM": "Eletroquímica",
+    "METAL": "Atividade dos metais",
+    "ANALYSIS": "Análise e identificação",
+    "COORDINATION": "Complexos coloridos"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Volume",
+    "ariaLabel": "Curva de {label} ao longo do tempo, valor atual: {value}",
+    "measureAria": "Gráfico de leituras ao longo do tempo, {count} leituras no total, escala de pH de 0 a 14, escala de temperatura de 0 a 100 ℃",
+    "title": "Curva do Processo",
+    "current": "Atual",
+    "peak": "Pico",
+    "samples": "{count} amostras",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Volume",
+    "empty": "A curva de variação ao longo do tempo será exibida aqui após o início da operação"
+  },
+  "dataTable": {
+    "title": "Tabela de Registro de Dados",
+    "emptyHint": "Clique em «Leitura» para registrar uma medição",
+    "recorded": "{count} registros neste grupo",
+    "recordedNeedMore": "{count} registros neste grupo (mínimo de 2 medições paralelas)",
+    "emptyBody": "Experimentos quantitativos exigem medições repetidas para calcular a média; cada clique em «Leitura» adiciona uma linha aqui.",
+    "colIndex": "Nº",
+    "colTime": "Tempo / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Volume / mL",
+    "rowMean": "Média do grupo",
+    "rowDeviation": "Desvio relativo",
+    "worstDeviation": "Maior desvio relativo {value}%:",
+    "verdictGood": "Consistência dos dados satisfatória; adequada para cálculo.",
+    "verdictFair": "Desvio elevado — verifique se a leitura foi feita com a visão alinhada à escala e se o sistema já estava estabilizado.",
+    "verdictPoor": "Desvio excessivo — identifique a causa e repita as medições paralelas; não use a média diretamente."
+  },
+  "deck": {
+    "readings": "Leituras dos instrumentos da bancada",
+    "temperature": "Temperatura",
+    "volume": "Volume",
+    "ph": "pH",
+    "operations": "Operações do experimento",
+    "needReagent": "Adicione um reagente primeiro",
+    "inOrder": "Siga a ordem real dos passos"
+  },
+  "device": {
+    "glassware": "Vidraria de laboratório",
+    "electrolysisCell": "Célula de eletrólise",
+    "galvanicCell": "Célula galvânica",
+    "flameTest": "Dispositivo de teste de chama",
+    "gasCollection": "Coleta de gás por deslocamento de água",
+    "gasDelivery": "Dispositivo de condução e absorção de gás",
+    "conductivity": "Comparação de condutividade de soluções",
+    "strongBright": "Forte · Brilhante",
+    "weakDim": "Fraco · Tênue",
+    "nonNone": "Nulo · Apagado"
+  },
+  "difficulty": {
+    "EASY": "Iniciante",
+    "MEDIUM": "Intermediário",
+    "HARD": "Desafio"
+  },
+  "electro": {
+    "conductivityDesc": "Compare a condutividade de soluções com a mesma concentração (o brilho da lâmpada reflete a concentração de íons).",
+    "conductivityActive": "Teste ativo: quanto mais brilhante a lâmpada, maior a condutividade",
+    "conductivityIdle": "Clique em «Testar condutividade» para comparar as soluções",
+    "conductivityOn": "💡 Testar condutividade",
+    "powerOff": "Desligar",
+    "electrolyteInert": "Eletrólito: {name} ({formula}) · Ânodo inerte (carbono)",
+    "electrolyteActive": "Eletrólito: {name} ({formula}) · Ânodo ativo (cobre)",
+    "electrolysisActive": "Eletrólise em andamento…",
+    "electrolysisIdle": "Clique em «Ligar» para iniciar a eletrólise e observar os eletrodos",
+    "copperFading": "Solução: azul gradualmente mais claro (íons de cobre sendo consumidos)",
+    "powerOn": "⚡ Ligar",
+    "brine": "Água salgada",
+    "electrolyte": "Eletrólito: {name}",
+    "cellActive": "Circuito fechado — galvanômetro desviado, célula galvânica em descarga…",
+    "cellIdle": "Clique em «Fechar circuito» para observar o desvio do galvanômetro e os eletrodos",
+    "cellOn": "🔌 Fechar circuito",
+    "cellOff": "Circuito desligado",
+    "cathode": "Cátodo (−)",
+    "anode": "Ânodo (＋)",
+    "negative": "Polo negativo",
+    "positive": "Polo positivo"
+  },
+  "errors": {
+    "noActivity": "Nenhuma operação registrada neste experimento. Realize ao menos uma ação na bancada antes de gerar o relatório.",
+    "reportFailed": "Falha ao gerar o relatório",
+    "tutorUnavailable": "Serviço do tutor de IA indisponível",
+    "unknown": "Erro desconhecido"
+  },
+  "home": {
+    "labTitle": "Bancada interativa",
+    "labDesc": "Arraste reagentes para o béquer e o motor de reações determina em tempo real mudanças de cor, bolhas, precipitados e variações de temperatura — o que você vê é o que acontece.",
+    "tutorTitle": "Tutor de experimentos com IA",
+    "tutorDesc": "Tire dúvidas sobre princípios e procedimentos a qualquer momento. Quando reações importantes são acionadas na tela, o tutor oferece explicações e avisos de segurança proativamente.",
+    "reportTitle": "Relatório de experimento inteligente",
+    "reportDesc": "Consolida as curvas de leitura de todo o experimento e gera automaticamente conclusões, análise de erros, sugestões de melhoria e avaliação dos conceitos abordados.",
+    "badge": "Laboratório virtual de química com IA",
+    "heroLine1": "No navegador,",
+    "heroLine2": "experimentos de química reais",
+    "heroDesc": "Arraste reagentes, observe mudanças de cor e bolhas, consulte o tutor de IA a qualquer momento e receba um relatório estruturado ao final. {count} experimentos validados, seguros e reprodutíveis.",
+    "ctaCatalog": "Ver catálogo de experimentos →",
+    "ctaSessions": "Minhas sessões"
+  },
+  "lab": {
+    "mix": "Misturar e reagir",
+    "reset": "Esvaziar recipiente",
+    "clear": "Limpar",
+    "complete": "Concluir experimento",
+    "completed": "Experimento concluído",
+    "viewReport": "Ver relatório do experimento →",
+    "removeItem": "Clique para remover",
+    "conditions": "Condições do sistema",
+    "temperature": "Temperatura do sistema",
+    "reagentShelf": "Estante de Reagentes",
+    "apparatusList": "Equipamentos Disponíveis",
+    "emptyContainer": "Selecione a quantidade na estante de reagentes à esquerda, ou arraste o reagente até aqui",
+    "absorbent": "Solução Absorvente",
+    "apparatus": "Instrumento",
+    "addReagent": "Adicionar {name}",
+    "removeReagent": "Remover {name}",
+    "mixAction": "Misturar",
+    "backToDetail": "← Voltar aos Detalhes do Experimento",
+    "backToCatalog": "← Voltar ao Catálogo de Experimentos",
+    "labSuffix": "Bancada de Laboratório",
+    "labHint": "Clique ou arraste reagentes para o béquer e use «Misturar e Reagir» para observar os fenômenos; ou utilize «Explicação do Experimento» para uma demonstração automática passo a passo."
+  },
+  "lesson": {
+    "prev": "Passo Anterior",
+    "pause": "Pausar",
+    "play": "Reproduzir",
+    "next": "Próximo Passo",
+    "voiceOn": "Ativar Narração",
+    "voiceOff": "Desativar Narração",
+    "muted": "🔇 Sem Som",
+    "askTutor": "Explicando a etapa «{title}»: {narration} Com base nos fenômenos e leituras atuais do béquer, explique de forma clara os princípios químicos e as equações envolvidas.",
+    "phase": {
+      "theory": "Teoria",
+      "prep": "Preparação",
+      "operate": "Procedimento",
+      "observe": "Fenômenos",
+      "conclude": "Conclusão"
+    },
+    "voiceLabel": "🔊 Narração",
+    "vesselBeaker": "Béquer",
+    "vesselTube": "Tubo de Ensaio",
+    "vesselFlask": "Erlenmeyer",
+    "observeGeneric": "Observe atentamente o sistema, verificando se surgem alterações de cor, bolhas ou temperatura.",
+    "observeReacting": "A reação está em curso; acompanhe as variações de pH e temperatura.",
+    "phenomenaList": "É possível observar {parts}.",
+    "partGas": "bolhas escapando continuamente",
+    "partPrecipitate": "turvação da solução com formação de precipitado",
+    "partColor": "alteração visível na cor da solução",
+    "partExo": "liberação de calor com elevação de temperatura",
+    "partEndo": "absorção de calor com queda de temperatura",
+    "titlePrinciple": "Princípio do experimento",
+    "titleSummary": "Resumo do experimento",
+    "titleConnect": "Montagem do aparato",
+    "titleConnectCircuit": "Montagem do circuito",
+    "titlePowerOn": "Ligar a alimentação",
+    "titleConnectOn": "Fechar o circuito",
+    "titleConductTest": "Teste de condutividade",
+    "titleElectrodes": "Fenômenos nos eletrodos",
+    "titleConductCompare": "Comparação de condutividade",
+    "titleTake": "Adicionar {reagent}",
+    "titleHeat": "Acender o bico de álcool",
+    "titleMix": "Misturar e reagir",
+    "titleObserve": "Observar os fenômenos",
+    "summary": "Com este experimento, você irá {objectives}.",
+    "narrSetupElectrode": "Insira os eletrodos no eletrólito e conecte-os, respectivamente, aos polos positivo e negativo da fonte de corrente contínua.",
+    "narrPowerOn": "Ligue a fonte de corrente contínua para iniciar a eletrólise e observe as mudanças em cada eletrodo.",
+    "narrSetupCircuit": "Conecte os dois eletrodos ao galvanômetro por meio de fios e mergulhe-os na solução eletrolítica.",
+    "narrConnectOn": "Feche o circuito e verifique se o ponteiro do galvanômetro sofre deflexão.",
+    "narrSetupConduct": "Conecte soluções de mesma concentração, individualmente, ao circuito de eletrodos com lâmpada.",
+    "narrConductTest": "Feche o circuito e compare o brilho da lâmpada em cada solução.",
+    "narrSetupGeneric": "Monte os eletrodos e a fonte/instrumentos de medição conforme o diagrama do circuito e introduza o eletrólito.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Voz feminina ♀",
+    "voiceMale": "Voz masculina ♂",
+    "narrRigOn": "{verb}，observe atentamente as mudanças nos eletrodos e nos instrumentos.",
+    "verbElectrolysis": "Ligue a fonte de corrente contínua e inicie a eletrólise",
+    "verbCircuit": "Feche o circuito",
+    "narrTake": "Pegue {reagent} e adicione ao {vessel}.",
+    "narrHeat": "Acenda a lâmpada de álcool para aquecer {vessel} — esta reação só ocorre sob aquecimento.",
+    "narrMixHeated": "Após o aquecimento, misture bem os reagentes; a reação começa imediatamente.",
+    "narrMix": "Misture bem os reagentes em {vessel}; a reação começa imediatamente.",
+    "electrodesFading": "; a coloração azul da solução vai se tornando mais clara",
+    "brine": "solução de cloreto de sódio",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Roteiro da aula experimental",
+    "outlineHint": "Após entrar na bancada, clique em «Explicação do experimento ▶» para a demonstração automática passo a passo.",
+    "cardTitle": "Explicação do experimento",
+    "askTutorButton": "Pedir ao tutor para explicar esta etapa",
+    "sentenceEnd": ".",
+    "noVoice": "Esta língua ainda não tem suporte de voz; a explicação avançará automaticamente pelas legendas.",
+    "narrTake_beaker": "Pegue {reagent} e adicione ao béquer.",
+    "narrTake_tube": "Pegue {reagent} e adicione ao tubo de ensaio.",
+    "narrTake_flask": "Pegue {reagent} e adicione ao erlenmeyer.",
+    "narrHeat_beaker": "Acenda o bico de Bunsen para aquecer o béquer — esta reação só ocorre sob aquecimento.",
+    "narrHeat_tube": "Acenda o bico de Bunsen para aquecer o tubo de ensaio — esta reação só ocorre sob aquecimento.",
+    "narrHeat_flask": "Acenda o bico de Bunsen para aquecer o erlenmeyer — esta reação só ocorre sob aquecimento.",
+    "narrMix_beaker": "Misture bem os reagentes no béquer — a reação tem início imediatamente.",
+    "narrMix_tube": "Misture bem os reagentes no tubo de ensaio — a reação tem início imediatamente.",
+    "narrMix_flask": "Misture bem os reagentes no erlenmeyer — a reação tem início imediatamente."
+  },
+  "locale": {
+    "switchLabel": "Mudar idioma da interface",
+    "searchPlaceholder": "Pesquisar idioma…",
+    "noMatch": "Nenhum idioma encontrado",
+    "groupFull": "Idiomas principais",
+    "groupBasic": "Outros idiomas",
+    "groupBasicHint": "Inclui conteúdo completo do laboratório e narração em áudio; tradução automática"
+  },
+  "nav": {
+    "catalog": "Biblioteca de experimentos",
+    "sessions": "Minhas sessões",
+    "home": "Início"
+  },
+  "op": {
+    "stir": {
+      "label": "Agitar",
+      "effect": "Agite com o bastão de vidro para acelerar a dissolução do soluto e homogeneizar a mistura",
+      "hint": "A agitação acelera a dissolução e a transferência de calor, homogeneizando a concentração local para que a leitura represente o sistema como um todo"
+    },
+    "shake": {
+      "label": "Agitar",
+      "effect": "Agitação por vibração para contato completo entre os reagentes",
+      "hint": "Com pouco líquido no tubo de ensaio, use vibração (não agitador) para misturar; segure com a boca do tubo voltada para longe de pessoas"
+    },
+    "heat": {
+      "label": "Aquecer",
+      "effect": "Acender a lâmpada de álcool para aquecer; a temperatura do sistema sobe",
+      "hint": "A maioria das reações acelera com o aquecimento; reações endotérmicas exigem aquecimento contínuo para ocorrer"
+    },
+    "cool": {
+      "label": "Resfriar",
+      "effect": "Remover a fonte de calor e deixar resfriar naturalmente; a temperatura cai",
+      "hint": "O resfriamento reduz a solubilidade — etapa padrão para cristalização e coleta de produto"
+    },
+    "settle": {
+      "label": "Decantar",
+      "effect": "Aguardar alguns instantes para que o precipitado sedimente e as camadas de líquido se separem com clareza",
+      "hint": "Precipitação e separação de fases levam tempo; só após a decantação é possível avaliar se o sobrenadante está límpido"
+    },
+    "read": {
+      "label": "Ler",
+      "effect": "Registrar a leitura atual",
+      "hint": "Alinhe a visão com a escala ao fazer a leitura; registre cada valor na tabela de dados para calcular a média e o desvio"
+    }
+  },
+  "quant": {
+    "verdictGood": "Boa consistência dos dados; adequado para cálculo",
+    "verdictFair": "Desvio elevado; verifique o alinhamento visual na leitura e a estabilidade do sistema",
+    "verdictPoor": "Desvio excessivo; identifique a causa e repita as medições paralelas",
+    "meanPh": "pH médio",
+    "meanTemp": "Temperatura média",
+    "meanVolume": "Volume médio",
+    "group": "Grupo {no}",
+    "readings": "{count} leituras",
+    "finalGroup": "Conclusão baseada neste grupo",
+    "singleReading": "Apenas 1 medição; não é possível calcular o desvio relativo (a norma exige pelo menos 2 medições paralelas)",
+    "worstDeviation": "Desvio médio relativo máximo {value}%",
+    "groupNote": "Um novo grupo é iniciado sempre que o sistema é amostrado, misturado ou aquecido; leituras de grupos diferentes não constituem medições paralelas e são contabilizadas separadamente.",
+    "noReadings": "Nenhum registro de medição foi feito com a operação «Ler» neste experimento; não é possível calcular a média nem o desvio relativo. Em experimentos quantitativos, repita a leitura pelo menos 2 vezes no mesmo estado do sistema."
+  },
+  "report": {
+    "conclusion": "Conclusão do experimento",
+    "errorAnalysis": "Análise de erros",
+    "improvements": "Sugestões de melhoria",
+    "noImprovements": "Nenhuma sugestão de melhoria.",
+    "knowledge": "Avaliação do domínio dos conceitos",
+    "empty": "(Sem conteúdo)",
+    "measurements": "Leituras de medição",
+    "quantData": "Dados quantitativos",
+    "noMeasurements": "Nenhuma leitura registada neste experimento.",
+    "generating": "A IA está a analisar os dados do experimento…",
+    "regenerate": "Gerar relatório novamente",
+    "generate": "Gerar relatório do experimento",
+    "generateFailed": "Falha na geração ({status})",
+    "notGenerated": "Relatório ainda não gerado. A IA irá produzir conclusões, análise de erros, sugestões de melhoria e avaliação de domínio com base nos passos e leituras deste experimento.",
+    "noActivity": "Este experimento não tem operações registadas; não é possível gerar o relatório.",
+    "backToLab": "Voltar à bancada e realizar o experimento →",
+    "title": "Relatório de Experimento",
+    "generatedAt": "Gerado em {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Ligar a alimentação",
+      "off": "Desligar a alimentação"
+    },
+    "cell": {
+      "on": "Fechar o circuito",
+      "off": "Abrir o circuito"
+    },
+    "flameTest": {
+      "on": "Acender a lâmpada de álcool",
+      "off": "Apagar a lâmpada de álcool"
+    },
+    "waterBath": {
+      "on": "Iniciar aquecimento em banho-maria",
+      "off": "Parar aquecimento em banho-maria"
+    },
+    "distillation": {
+      "on": "Iniciar destilação",
+      "off": "Parar destilação"
+    },
+    "filtration": {
+      "on": "Iniciar filtração",
+      "off": "Parar filtração"
+    },
+    "calorimeter": {
+      "on": "Iniciar agitação e medição de temperatura",
+      "off": "Parar agitação"
+    },
+    "gasCollect": {
+      "on": "Iniciar coleta de gás",
+      "off": "Parar coleta"
+    },
+    "titration": {
+      "on": "Abrir torneira de titulação",
+      "off": "Fechar torneira"
+    },
+    "syringe": {
+      "on": "Comprimir êmbolo para pressurizar",
+      "off": "Recuar êmbolo para despressurizar"
+    },
+    "phMeter": {
+      "on": "Ligar medidor de pH",
+      "off": "Desligar medidor de pH"
+    },
+    "evaporation": {
+      "on": "Acender lâmpada de álcool para evaporar",
+      "off": "Apagar lâmpada de álcool"
+    },
+    "pressureDrop": {
+      "on": "Apertar tampa e agitar",
+      "off": "Soltar tampa"
+    },
+    "heat": {
+      "on": "Acender lâmpada de álcool para aquecer",
+      "off": "Parar aquecimento"
+    }
+  },
+  "sessions": {
+    "title": "Minhas sessões",
+    "subtitle": "Ver histórico de experimentos e acessar relatórios",
+    "unknownExperiment": "Experimento desconhecido",
+    "completed": "Concluído",
+    "inProgress": "Em andamento",
+    "startedAt": "Iniciado em {time}",
+    "viewReport": "Ver relatório"
+  },
+  "shelf": {
+    "title": "Estante de reagentes",
+    "taken": "Retirado: {dose} {unit}",
+    "takeSome": "Adicionar por gotas / retirar quantidade adequada",
+    "take": "Retirar {unit}",
+    "specIndicator": "Indicador",
+    "specGas": "Gás",
+    "specBulk": "Retirar quantidade adequada",
+    "specSolution": "Solução",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Líquido puro ρ={density} g/mL",
+    "specLiquid": "Líquido",
+    "specSolid": "Sólido p.a."
+  },
+  "site": {
+    "title": "ChemAIForge · Laboratório Virtual de Química com IA",
+    "description": "Faça experimentos de química no navegador: arraste reagentes, observe reações, receba orientação de um tutor de IA e gere relatórios automaticamente."
+  },
+  "titration": {
+    "stopcock": "Abertura da torneira",
+    "buretteReading": "Leitura da bureta",
+    "phMeter": "Medidor de pH",
+    "unfilled": "Sem solução",
+    "strongBase": "Fortemente básico",
+    "weakBase": "Fracamente básico · zona de viragem",
+    "nearNeutral": "Próximo do neutro",
+    "acidExcess": "Ácido · excesso adicionado",
+    "endpointOk": "Ponto final atingido",
+    "overshoot": "Excesso na titulação",
+    "notYet": "Ponto final não atingido (rosa persistente)",
+    "justFaded": "Cor acabou de desaparecer",
+    "keyPoints": "Pontos-chave de operação",
+    "takeAnalyte": "Adicionar o analito primeiro →",
+    "dragStopcock": "← Arrastar a torneira para iniciar a titulação",
+    "openness": "Abertura {pct}% · clique e arraste para a esquerda ou direita"
+  },
+  "tutor": {
+    "placeholder": "Digite a sua pergunta…",
+    "replying": "A responder…",
+    "send": "Enviar",
+    "unknownError": "Erro desconhecido",
+    "requestFailed": "Falha na requisição ({status})",
+    "askHeat": "Misturei os reagentes e não observei nenhuma reação; a mensagem indica que esta reação requer aquecimento. Por favor, explique por que esta reação só ocorre sob aquecimento.",
+    "askObserved": "Acabei de observar a reação {equation}{phenomena}. Pode explicar o que aconteceu e qual é o princípio envolvido?",
+    "phPrecipitate": "Formação de precipitado",
+    "phGas": "produção de gás",
+    "phColor": "mudança de cor",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "Tutor IA de Laboratório",
+    "empty": "Pergunte a qualquer momento, ou acione uma reação na bancada e eu darei dicas."
+  },
+  "workbench": {
+    "view2d": "Esquema 2D",
+    "view3d": "Bancada 3D",
+    "view3dRefined": "Bancada 3D ★",
+    "sceneHint": "Arrastar para girar · Rolar para zoom"
+  }
+}

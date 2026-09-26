@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Ugrás a főtartalomhoz"
+  },
+  "catalog": {
+    "title": "Kísérletkönyvtár",
+    "empty": "Nincs a feltételeknek megfelelő kísérlet.",
+    "searchPlaceholder": "Kísérlet nevének keresése…",
+    "searchLabel": "Kísérlet keresése",
+    "filterCategory": "Szűrés kategória szerint",
+    "allCategories": "Összes kategória",
+    "filterDifficulty": "Szűrés nehézség szerint",
+    "allDifficulties": "Összes nehézség",
+    "objectives": "Kísérleti célok",
+    "reagents": "Szükséges reagensek",
+    "apparatus": "Szükséges eszközök",
+    "subtitle": "Válasszon egy kísérletet a virtuális laboratórium megnyitásához.",
+    "estimatedMinutes": "Becsült idő: {minutes} perc",
+    "startLab": "Kísérlet indítása →"
+  },
+  "category": {
+    "ACID_BASE": "Sav-bázis reakciók",
+    "ORGANIC": "Szerves kémia",
+    "THERMODYNAMICS": "Termodinamika",
+    "REDOX": "Redoxreakciók",
+    "PRECIPITATION": "Csapadékos kettős csere",
+    "GAS": "Gázelőállítás",
+    "ELECTROCHEM": "Elektrokémia",
+    "METAL": "Fémek aktivitása",
+    "ANALYSIS": "Analitikai vizsgálatok",
+    "COORDINATION": "Koordinációs színreakciók"
+  },
+  "chart": {
+    "temperature": "Hőmérséklet",
+    "ph": "pH",
+    "volume": "Térfogat",
+    "ariaLabel": "{label} időbeli változása, aktuális érték: {value}",
+    "measureAria": "Mérési értékek időbeli változása – {count} mérés, pH-tartomány: 0–14, hőmérséklettartomány: 0–100 ℃",
+    "title": "Folyamatgörbe",
+    "current": "Aktuális",
+    "peak": "Csúcsérték",
+    "samples": "{count} mintapont",
+    "channelTemp": "Hőmérséklet",
+    "channelPh": "pH",
+    "channelVolume": "Térfogat",
+    "empty": "A művelet megkezdése után itt jelenik meg az időfüggő görbe"
+  },
+  "dataTable": {
+    "title": "Adatrögzítő táblázat",
+    "emptyHint": "Kattintson az „Leolvasás” gombra egy mérés rögzítéséhez",
+    "recorded": "Ebben a csoportban {count} bejegyzés",
+    "recordedNeedMore": "Ebben a csoportban {count} bejegyzés (párhuzamos méréshez legalább 2 szükséges)",
+    "emptyBody": "Kvantitatív kísérletben ismételje meg a mérést, és vegye az átlagot; minden „Leolvasás” kattintás egy új sort rögzít.",
+    "colIndex": "Ssz.",
+    "colTime": "Idő / s",
+    "colTemperature": "Hőmérséklet / ℃",
+    "colPh": "pH",
+    "colVolume": "Térfogat / mL",
+    "rowMean": "Csoport átlaga",
+    "rowDeviation": "Relatív eltérés",
+    "worstDeviation": "Maximális relatív eltérés {value}%:",
+    "verdictGood": "Az adatok konzisztensek, felhasználhatók a számításhoz.",
+    "verdictFair": "Az eltérés nagyobb a kelleténél – ellenőrizze, hogy leolvasáskor a szem a skálával egy szintben volt-e, és hogy a rendszer stabilizálódott-e.",
+    "verdictPoor": "Az eltérés túl nagy – derítse fel az okát, és végezze el újra a párhuzamos méréseket; ne egyszerűsítse átlagra."
+  },
+  "deck": {
+    "readings": "Műszerleolvasások a laborasztalon",
+    "temperature": "Hőmérséklet",
+    "volume": "Térfogat",
+    "ph": "pH",
+    "operations": "Kísérleti műveletek",
+    "needReagent": "Először vegyen fel reagenst",
+    "inOrder": "Kövesse a tényleges lépések sorrendjét"
+  },
+  "device": {
+    "glassware": "Laboratóriumi üvegeszközök",
+    "electrolysisCell": "Elektrolizáló cella",
+    "galvanicCell": "Galváncella",
+    "flameTest": "Lángpróba-berendezés",
+    "gasCollection": "Víznyomásos gázgyűjtő",
+    "gasDelivery": "Gázvezetékes elnyelő",
+    "conductivity": "Oldat-vezetőképesség összehasonlítás",
+    "strongBright": "Erős · Fényes",
+    "weakDim": "Gyenge · Halványan világít",
+    "nonNone": "Nem vezető · Nem világít"
+  },
+  "difficulty": {
+    "EASY": "Kezdő",
+    "MEDIUM": "Haladó",
+    "HARD": "Kihívás"
+  },
+  "electro": {
+    "conductivityDesc": "Azonos koncentrációjú oldatok vezetőképességének összehasonlítása (az izzó fényereje az ionkoncentrációt tükrözi).",
+    "conductivityActive": "Áramvizsgálat folyamatban: minél fényesebb az izzó, annál jobb a vezetőképesség",
+    "conductivityIdle": "Kattintson az „Áramvizsgálat” gombra az oldatok vezetőképességének összehasonlításához",
+    "conductivityOn": "💡 Áramvizsgálat",
+    "powerOff": "Áramtalanítás",
+    "electrolyteInert": "Elektrolit: {name}（{formula}）· Inert anód (szén)",
+    "electrolyteActive": "Elektrolit: {name}（{formula}）· Aktív anód (réz)",
+    "electrolysisActive": "Elektrolízis folyamatban…",
+    "electrolysisIdle": "Kattintson az „Áram bekapcsolása” gombra az elektrolízis indításához, és figyelje az elektróda-jelenségeket",
+    "copperFading": "Oldat: a kék szín fokozatosan halványul (rézionok fogynak)",
+    "powerOn": "⚡ Áram bekapcsolása",
+    "brine": "Sóoldat",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Áramkör zárt, a galvanométer kitér, a galváncella üzemel…",
+    "cellIdle": "Kattintson az „Áramkör zárása” gombra a galvanométer kitérésének és az elektróda-jelenségeknek a megfigyeléséhez",
+    "cellOn": "🔌 Áramkör zárása",
+    "cellOff": "Áramkör megszakítva",
+    "cathode": "Katód (−)",
+    "anode": "Anód (＋)",
+    "negative": "Negatív pólus",
+    "positive": "Pozitív pólus"
+  },
+  "errors": {
+    "noActivity": "Ehhez a kísérlethez még nem rögzült művelet. Végezz el egy lépést a laborasztalon, majd generáld a jelentést.",
+    "reportFailed": "A jelentés generálása sikertelen",
+    "tutorUnavailable": "Az AI-tutor szolgáltatás nem érhető el",
+    "unknown": "Ismeretlen hiba"
+  },
+  "home": {
+    "labTitle": "Interaktív laborasztal",
+    "labDesc": "Húzd a reagenseket a főzőpohárba – a reakciómotor valós időben jelzi a színváltozást, buborékképződést, csapadékot és a hőmérséklet-változást.",
+    "tutorTitle": "AI-labortutor",
+    "tutorDesc": "Bármikor kérdezhetsz elvekről és eljárásokról; kulcsreakció esetén a tutor maga is magyarázatot és biztonsági figyelmeztetést ad.",
+    "reportTitle": "Intelligens labórjelentés",
+    "reportDesc": "Összefoglalja a teljes kísérlet mérési görbéit, és automatikusan következtetéseket, hibaanalízist, fejlesztési javaslatokat és tudásfelmérést generál.",
+    "badge": "AI-alapú virtuális kémiai labor",
+    "heroLine1": "A böngészőben",
+    "heroLine2": "valódi kémiai kísérletek",
+    "heroDesc": "Húzd a reagenseket, figyeld a színváltozást és a buborékokat, kérdezz az AI-tutortól bármikor – a kísérlet végén strukturált jelentés készül automatikusan. {count} ellenőrzött kísérlet, biztonságosan és megismételhetően.",
+    "ctaCatalog": "Kísérletkönyvtár böngészése →",
+    "ctaSessions": "Saját munkamenetek"
+  },
+  "lab": {
+    "mix": "Keverés és reakció",
+    "reset": "Tartály ürítése",
+    "clear": "Törlés",
+    "complete": "Kísérlet befejezése",
+    "completed": "Kísérlet befejezve",
+    "viewReport": "Labórjelentés megtekintése →",
+    "removeItem": "Kattints az eltávolításhoz",
+    "conditions": "Rendszerfeltételek",
+    "temperature": "Rendszerhőmérséklet",
+    "reagentShelf": "Reagensállvány",
+    "apparatusList": "Eszközök",
+    "emptyContainer": "Válasszon mennyiséget a bal oldali reagensállványon, majd vegye ki, vagy húzza ide a reagenst",
+    "absorbent": "Abszorbensoldat",
+    "apparatus": "Eszköz",
+    "addReagent": "{name} hozzáadása",
+    "removeReagent": "{name} eltávolítása",
+    "mixAction": "Keverés",
+    "backToDetail": "← Vissza a kísérlet részleteihez",
+    "backToCatalog": "← Vissza a kísérletárhoz",
+    "labSuffix": "Laborasztal",
+    "labHint": "Kattintson vagy húzzon reagenst a pohárba, majd a „Keverési reakció” gombbal figyelje meg a jelenségeket; vagy használja a „Kísérleti magyarázat” funkciót az automatikus lépésenkénti bemutatóhoz."
+  },
+  "lesson": {
+    "prev": "Előző lépés",
+    "pause": "Szünet",
+    "play": "Lejátszás",
+    "next": "Következő lépés",
+    "voiceOn": "Hangos magyarázat bekapcsolása",
+    "voiceOff": "Hangos magyarázat kikapcsolása",
+    "muted": "🔇 Némítva",
+    "askTutor": "Magyarázat a „{title}” lépésnél: {narration} Kérjük, a pohárban látható jelenségek és leolvasott értékek alapján tömören ismertesse a mögöttes kémiai elveket és egyenleteket.",
+    "phase": {
+      "theory": "Elmélet",
+      "prep": "Előkészítés",
+      "operate": "Végrehajtás",
+      "observe": "Jelenségek",
+      "conclude": "Következtetés"
+    },
+    "voiceLabel": "🔊 Hangos magyarázat",
+    "vesselBeaker": "Főzőpohár",
+    "vesselTube": "Kémcső",
+    "vesselFlask": "Erlenmeyer-lombik",
+    "observeGeneric": "Figyelje meg alaposan a rendszert – ügyeljen a szín, a buborékképződés vagy a hőmérséklet változásaira.",
+    "observeReacting": "A reakció folyamatban van – kövesse a pH és a hőmérséklet értékeinek változását.",
+    "phenomenaList": "A következők figyelhetők meg: {parts}.",
+    "partGas": "gázbuborékok folyamatosan távoznak",
+    "partPrecipitate": "az oldat megzavarosodik és csapadék keletkezik",
+    "partColor": "az oldat színe szembetűnően megváltozik",
+    "partExo": "hő szabadul fel, a hőmérséklet emelkedik",
+    "partEndo": "hő nyelődik el, a hőmérséklet csökken",
+    "titlePrinciple": "Kísérleti elv",
+    "titleSummary": "Kísérleti összefoglalás",
+    "titleConnect": "Eszköz összeszerelése",
+    "titleConnectCircuit": "Áramkör összekapcsolása",
+    "titlePowerOn": "Tápfeszültség bekapcsolása",
+    "titleConnectOn": "Áramkör bekapcsolása",
+    "titleConductTest": "Vezetőképesség mérése",
+    "titleElectrodes": "Elektródjelenségek",
+    "titleConductCompare": "Vezetőképesség összehasonlítása",
+    "titleTake": "{reagent} kimérése",
+    "titleHeat": "Szeszlámpa meggyújtása",
+    "titleMix": "Reakciókeverék előkészítése",
+    "titleObserve": "Jelenségek megfigyelése",
+    "summary": "A kísérlet elvégzésével {objectives}.",
+    "narrSetupElectrode": "Helyezze az elektródokat az elektrolitoldatba, és csatlakoztassa őket az egyenáramú tápegység pozitív, illetve negatív pólusához.",
+    "narrPowerOn": "Kapcsolja be az egyenáramú tápegységet az elektrolízis megindításához, és figyelje meg a két elektródon zajló változásokat.",
+    "narrSetupCircuit": "Vezesse össze a két elektródot galvanométeren át, majd merítse őket az elektrolitoldatba.",
+    "narrConnectOn": "Zárja be az áramkört, és figyelje meg, hogy a galvanométer mutatója kitér-e.",
+    "narrSetupConduct": "Csatlakoztasson azonos koncentrációjú oldatokat külön-külön a villanykörtes elektródáramkörhöz.",
+    "narrConductTest": "Zárja be az áramkört, és hasonlítsa össze az izzók fényerejét az egyes oldatokban.",
+    "narrSetupGeneric": "Az áramköri rajz alapján kösse össze az elektródokat a tápegységgel és a mérőműszerekkel, majd helyezze be az elektrolitot.",
+    "narrRigOn": "{verb}, figyelje meg az elektródák és a műszerek változásait.",
+    "verbElectrolysis": "Kapcsolja be az egyenáramú tápegységet, kezdje meg az elektrolízist",
+    "verbCircuit": "Zárja be az áramkört",
+    "narrTake": "Vegyen {reagent} anyagot, és adja a(z) {vessel} edénybe.",
+    "narrHeat": "Gyújtsa meg a szeszlámpát a(z) {vessel} melegítéséhez – ez a reakció csak hő hatására megy végbe.",
+    "narrMixHeated": "Melegítés után keverje össze alaposan a reagenseket – a reakció azonnal megindul.",
+    "narrMix": "Keverje össze alaposan a(z) {vessel} edényben lévő reagenseket – a reakció azonnal megindul.",
+    "electrodesFading": "; az oldat kék színe fokozatosan halványul",
+    "brine": "sóoldat",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Kísérlet-magyarázat vázlata",
+    "outlineHint": "A laborasztalon a „Kísérlet magyarázata ▶” gombra kattintva lépésről lépésre automatikus bemutató indul.",
+    "cardTitle": "Kísérlet magyarázata",
+    "askTutorButton": "Magyarázza el a tutor ezt a lépést",
+    "sentenceJoin": " ",
+    "voiceFemale": "Női hang ♀",
+    "voiceMale": "Férfi hang ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Ehhez a nyelvhez nincs elérhető hang; a magyarázat automatikusan, feliratok szerint halad előre.",
+    "narrTake_beaker": "Vegyen {reagent}, és adja a főzőpohárba.",
+    "narrTake_tube": "Vegyen {reagent}, és adja a kémcsőbe.",
+    "narrTake_flask": "Vegyen {reagent}, és adja az Erlenmeyer-lombikba.",
+    "narrHeat_beaker": "Gyújtsa meg a szeszlámpát, és melegítse a főzőpoharat – ez a reakció csak hő hatására megy végbe.",
+    "narrHeat_tube": "Gyújtsa meg a szeszlámpát, és melegítse a kémcsövet – ez a reakció csak hő hatására megy végbe.",
+    "narrHeat_flask": "Gyújtsa meg a szeszlámpát, és melegítse az Erlenmeyer-lombikot – ez a reakció csak hő hatására megy végbe.",
+    "narrMix_beaker": "Alaposan keverje össze a főzőpohárban lévő reagenseket – a reakció azonnal megindul.",
+    "narrMix_tube": "Alaposan keverje össze a kémcsőben lévő reagenseket – a reakció azonnal megindul.",
+    "narrMix_flask": "Alaposan keverje össze az Erlenmeyer-lombikban lévő reagenseket – a reakció azonnal megindul."
+  },
+  "locale": {
+    "switchLabel": "Felületi nyelv váltása",
+    "searchPlaceholder": "Nyelv keresése…",
+    "noMatch": "Nincs egyező nyelv",
+    "groupFull": "Fő nyelv",
+    "groupBasic": "Egyéb nyelvek",
+    "groupBasicHint": "Teljes kísérleti tartalommal és hangos magyarázattal; a fordítás gépi fordítás"
+  },
+  "nav": {
+    "catalog": "Kísérletkönyvtár",
+    "sessions": "Saját munkamenetek",
+    "home": "Főoldal"
+  },
+  "op": {
+    "stir": {
+      "label": "Keverés",
+      "effect": "Üvegbottal keverve az oldódás felgyorsul, az elegy egyenletesebb lesz",
+      "hint": "A keverés gyorsítja az oldódást és a hőátadást, és kiegyenlíti a helyi koncentrációkülönbségeket – így a leolvasott érték az egész oldatra jellemző"
+    },
+    "shake": {
+      "label": "Rázás",
+      "effect": "Rázással összekeveri a reagenseket, amelyek így alaposan érintkeznek egymással",
+      "hint": "A kémcsőben kevés folyadék van – összekeveréséhez rázás szükséges (nem keverés); a csövet a nyílásával másoktól el irányban tartsa"
+    },
+    "heat": {
+      "label": "Melegítés",
+      "effect": "Az alkohollámpa meggyújtásával melegítés kezdődik, a rendszer hőmérséklete emelkedik",
+      "hint": "A legtöbb reakció melegítéssel felgyorsul; endoterm reakcióhoz folyamatos melegítés szükséges"
+    },
+    "cool": {
+      "label": "Hűtés",
+      "effect": "A hőforrás eltávolítása után természetes hűlés, a hőmérséklet csökken",
+      "hint": "Hűtés hatására az oldhatóság csökken – ez a kristályosítás és a termék begyűjtésének szokásos lépése"
+    },
+    "settle": {
+      "label": "Ülepítés",
+      "effect": "Rövid várakozás után a csapadék leülepszik, a folyadékrétegek jobban elkülönülnek",
+      "hint": "A csapadék leválásához és a rétegződéshez idő kell; csak ülepítés után ítélhető meg, hogy a felső folyadék tiszta-e"
+    },
+    "read": {
+      "label": "Leolvasás",
+      "effect": "Az aktuális mérőszám rögzítése",
+      "hint": "A skálával egy szintből olvass le; minden értéket jegyezz fel az adattáblázatba az átlag és a hiba kiszámításához"
+    }
+  },
+  "quant": {
+    "verdictGood": "Az adatok konzisztenciája megfelelő, felhasználhatók a számításhoz",
+    "verdictFair": "Az eltérés nagy; ellenőrizd a leolvasás szögét és a rendszer stabilitását",
+    "verdictPoor": "Az eltérés túl nagy; az ok tisztázása után ismételd meg a párhuzamos mérést",
+    "meanPh": "Átlagos pH",
+    "meanTemp": "Átlagos hőmérséklet",
+    "meanVolume": "Átlagos térfogat",
+    "group": "{no}. csoport",
+    "readings": "{count} leolvasás",
+    "finalGroup": "A következtetés ezen csoport alapján érvényes",
+    "singleReading": "Csak 1 mérés áll rendelkezésre, a relatív eltérés nem számítható (a szabvány legalább 2 párhuzamos mérést ír elő)",
+    "worstDeviation": "Legnagyobb relatív átlageltérés: {value}%",
+    "groupNote": "Minden alkalommal, amikor a rendszert megcsapolják, összekeverik vagy melegítik, új csoport kezdődik; a különböző csoportok leolvasásai nem minősülnek párhuzamos mérésnek, ezért külön kerülnek kiértékelésre.",
+    "noReadings": "A kísérlet során nem történt „Leolvasás” művelet, ezért nincs mérési adat az átlag és a relatív eltérés kiszámításához. Kvantitatív kísérletben ugyanazon rendszerállapotban legalább 2 ismételt leolvasás szükséges."
+  },
+  "report": {
+    "conclusion": "Kísérleti következtetés",
+    "errorAnalysis": "Hibaelemzés",
+    "improvements": "Fejlesztési javaslatok",
+    "noImprovements": "Egyelőre nincs fejlesztési javaslat.",
+    "knowledge": "Tudásanyag elsajátításának értékelése",
+    "empty": "（Nincs tartalom）",
+    "measurements": "Mérési leolvasások",
+    "quantData": "Kvantitatív adatok",
+    "noMeasurements": "Ebben a kísérletben nem rögzítettünk leolvasást.",
+    "generating": "Az AI elemzi a kísérleti adatokat…",
+    "regenerate": "Jelentés újragenerálása",
+    "generate": "Kísérleti jelentés generálása",
+    "generateFailed": "Generálás sikertelen ({status})",
+    "notGenerated": "A jelentés még nem készült el. Az AI a kísérlet lépései és mérési leolvasásai alapján következtetéseket, hibaelemzést, fejlesztési javaslatokat és értékelést ad.",
+    "noActivity": "Ebben a kísérletben még nem történt művelet, ezért a jelentés egyelőre nem generálható.",
+    "backToLab": "Vissza a laborasztalhoz – próbáld ki →",
+    "title": "Kísérleti jelentés",
+    "generatedAt": "Generálva: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Áram bekapcsolása",
+      "off": "Áram kikapcsolása"
+    },
+    "cell": {
+      "on": "Áramkör zárása",
+      "off": "Áramkör nyitása"
+    },
+    "flameTest": {
+      "on": "Szeszlámpa meggyújtása",
+      "off": "Szeszlámpa eloltása"
+    },
+    "waterBath": {
+      "on": "Vízfürdős melegítés indítása",
+      "off": "Vízfürdős melegítés leállítása"
+    },
+    "distillation": {
+      "on": "Desztilláció indítása",
+      "off": "Desztilláció leállítása"
+    },
+    "filtration": {
+      "on": "Szűrés indítása",
+      "off": "Szűrés leállítása"
+    },
+    "calorimeter": {
+      "on": "Keverés és hőmérsékletmérés indítása",
+      "off": "Keverés leállítása"
+    },
+    "gasCollect": {
+      "on": "Gázgyűjtés indítása",
+      "off": "Gyűjtés leállítása"
+    },
+    "titration": {
+      "on": "Csap kinyitása – csepegtető indítása",
+      "off": "Csap zárása"
+    },
+    "syringe": {
+      "on": "Dugattyú benyomása – nyomásnövelés",
+      "off": "Dugattyú visszahúzása – nyomáscsökkentés"
+    },
+    "phMeter": {
+      "on": "pH-mérő bekapcsolása",
+      "off": "pH-mérő kikapcsolása"
+    },
+    "evaporation": {
+      "on": "Szeszlámpa meggyújtása – bepárlás",
+      "off": "Szeszlámpa eloltása"
+    },
+    "pressureDrop": {
+      "on": "Kupak meghúzása és rázás",
+      "off": "Kupak lazítása"
+    },
+    "heat": {
+      "on": "Szeszlámpa meggyújtása – melegítés",
+      "off": "Melegítés leállítása"
+    }
+  },
+  "sessions": {
+    "title": "Munkameneteim",
+    "subtitle": "Korábbi kísérletek megtekintése és a kapcsolódó jelentések megnyitása",
+    "unknownExperiment": "Ismeretlen kísérlet",
+    "completed": "Befejezve",
+    "inProgress": "Folyamatban",
+    "startedAt": "Kezdés: {time}",
+    "viewReport": "Jelentés megtekintése"
+  },
+  "shelf": {
+    "title": "Vegyszerállvány",
+    "taken": "{dose} {unit} kivéve",
+    "takeSome": "Cseppenként adagol / megfelelő mennyiséget vesz",
+    "take": "{unit} kivétele",
+    "specIndicator": "Indikátor",
+    "specGas": "Gáz",
+    "specBulk": "Megfelelő mennyiség",
+    "specSolution": "Oldat",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Tiszta folyadék ρ={density} g/mL",
+    "specLiquid": "Folyadék",
+    "specSolid": "Szilárd – analitikai tisztaságú"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtuális Kémiai Labor",
+    "description": "Végezz kémiai kísérleteket a böngészőben: húzd be a reagenseket, figyeld a reakciókat, kapj AI-mentori útmutatást, és generálj automatikus laborjelentéseket."
+  },
+  "titration": {
+    "stopcock": "Csap nyitása",
+    "buretteReading": "Bürettaleolvasás",
+    "phMeter": "pH-mérő",
+    "unfilled": "Töltetlen",
+    "strongBase": "Erősen lúgos",
+    "weakBase": "Gyengén lúgos · színváltási zóna",
+    "nearNeutral": "Közel semleges",
+    "acidExcess": "Savas · túltitrálva",
+    "endpointOk": "Végpont megfelelő",
+    "overshoot": "Túltitrálás",
+    "notYet": "Még nem érte el a végpontot (rózsaszín nem halványult el)",
+    "justFaded": "Éppen elhalványult",
+    "keyPoints": "Műveleti útmutató",
+    "takeAnalyte": "Először vedd fel az analitot →",
+    "dragStopcock": "← Húzd a csapot a titrálás megkezdéséhez",
+    "openness": "Nyitás: {pct}% · tartsd lenyomva és húzd balra/jobbra"
+  },
+  "tutor": {
+    "placeholder": "Írd be a kérdésedet…",
+    "replying": "Válasz folyamatban…",
+    "send": "Küldés",
+    "unknownError": "Ismeretlen hiba",
+    "requestFailed": "A kérés sikertelen ({status})",
+    "askHeat": "A reagensek összekeverése után nem tapasztaltam semmilyen jelenséget; az útmutató szerint ehhez a reakcióhoz hevítés szükséges. Magyarázd el, miért kell ezt a reakciót feltétlenül hevíteni.",
+    "askObserved": "Az imént megfigyeltem a(z) {equation}{phenomena} reakciót – segíts elmagyarázni, mi történt és mi az elve?",
+    "phPrecipitate": "csapadék képződött",
+    "phGas": "gáz fejlődött",
+    "phColor": "színváltozás következett be",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Kísérleti Tutor",
+    "empty": "Bármikor feltehetsz kérdést, vagy ha reakciót indítasz el a vásznon, én is jelzek."
+  },
+  "workbench": {
+    "view2d": "2D nézet",
+    "view3d": "3D munkaasztal",
+    "view3dRefined": "3D munkaasztal ★",
+    "sceneHint": "Húzással forgatható · Görgővel nagyítható"
+  }
+}

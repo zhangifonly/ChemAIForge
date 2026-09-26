@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Prejšnji korak",
+    "pause": "Premor",
+    "play": "Predvajaj",
+    "next": "Naslednji korak",
+    "voiceOn": "Vklopi glasovno razlago",
+    "voiceOff": "Izklopi glasovno razlago",
+    "muted": "🔇 Utišano",
+    "askTutor": "Razlaga koraka «{title}»: {narration} Ob upoštevanju trenutnih pojavov in odčitkov v čaši na kratko pojasni kemijska načela in enačbe.",
+    "phase": {
+      "theory": "Načelo",
+      "prep": "Priprava",
+      "operate": "Izvedba",
+      "observe": "Opazovanje",
+      "conclude": "Zaključek"
+    },
+    "voiceLabel": "🔊 Glasovna razlaga",
+    "vesselBeaker": "Čaša",
+    "vesselTube": "Epruveta",
+    "vesselFlask": "Erlenmayerjeva bučka",
+    "observeGeneric": "Pozorno opazujte sistem in bodite pozorni na morebitne spremembe barve, mehurčkov ali temperature.",
+    "observeReacting": "Reakcija poteka – opazujte spremembe vrednosti pH in temperature.",
+    "phenomenaList": "Opazimo lahko {parts}.",
+    "partGas": "neprestano uhajanje mehurčkov",
+    "partPrecipitate": "raztopina se zmoti in nastane oborina",
+    "partColor": "izrazita sprememba barve raztopine",
+    "partExo": "hkrati se sprošča toplota in temperatura naraste",
+    "partEndo": "hkrati se absorbira toplota in temperatura pade",
+    "titlePrinciple": "Načelo poskusa",
+    "titleSummary": "Povzetek poskusa",
+    "titleConnect": "Priklop naprave",
+    "titleConnectCircuit": "Priklop vezja",
+    "titlePowerOn": "Vklop napajanja",
+    "titleConnectOn": "Sklenitev vezja",
+    "titleConductTest": "Preizkus prevodnosti",
+    "titleElectrodes": "Pojavi na elektrodah",
+    "titleConductCompare": "Primerjava prevodnosti",
+    "titleTake": "Odvzem {reagent}",
+    "titleHeat": "Prižig alkoholne svetilke",
+    "titleMix": "Mešanje in reakcija",
+    "titleObserve": "Opazovanje pojavov",
+    "summary": "S tem poskusom boste {objectives}.",
+    "narrSetupElectrode": "Vstavite elektrodi v elektrolit in ju povežite s pozitivnim oziroma negativnim polom enosmernega vira.",
+    "narrPowerOn": "Vklopite enosmerni vir in začnite elektrolizo – pozorno opazujte spremembe na obeh elektrodah.",
+    "narrSetupCircuit": "Z vodniki povežite obe elektrodi prek galvanometra in ju potopite v elektrolitsko raztopino.",
+    "narrConnectOn": "Sklenite vezje in preverite, ali se kazalec galvanometra odkloni.",
+    "narrSetupConduct": "Povežite raztopine enake koncentracije vsako v ločeno elektrodna vezje z žarnico.",
+    "narrConductTest": "Sklenite vezje in primerjajte svetlost žarnic v posameznih raztopinah.",
+    "narrSetupGeneric": "Po shemi vezja povežite elektrodi z virom napajanja in merilnimi instrumenti ter vstavite elektrolit.",
+    "narrRigOn": "{verb} — pozorno opazujte spremembe na elektrodah in merilnikih.",
+    "verbElectrolysis": "Priključite enosmerni vir in začnite elektrolizo",
+    "verbCircuit": "Sklenite tokokrog",
+    "narrTake": "Vzemite {reagent} in ga dodajte v {vessel}.",
+    "narrHeat": "Prižgite spiritno svetilko in segrejte {vessel} — reakcija poteka le pri povišani temperaturi.",
+    "narrMixHeated": "Po segrevanju dobro premešajte reagente; reakcija se takoj začne.",
+    "narrMix": "Dobro premešajte reagente v {vessel}; reakcija se takoj začne.",
+    "electrodesFading": "; modra barva raztopine postopoma bledi",
+    "brine": "slanica",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Oris razlage poskusa",
+    "outlineHint": "Ko vstopite v laboratorij, kliknite „Razlaga poskusa ▶“ za samodejno vodeno demonstracijo.",
+    "cardTitle": "Razlaga poskusa",
+    "askTutorButton": "Naj mentor razloži ta korak",
+    "sentenceEnd": ".",
+    "voiceFemale": "Ženski glas ♀",
+    "voiceMale": "Moški glas ♂",
+    "noVoice": "Za ta jezik ni na voljo glasovne razlage; podnapisi bodo napredovali samodejno.",
+    "narrTake_beaker": "Vzemite {reagent} in ga dodajte v čašo.",
+    "narrTake_tube": "Vzemite {reagent} in ga dodajte v epruveto.",
+    "narrTake_flask": "Vzemite {reagent} in ga dodajte v erlenmajerico.",
+    "narrHeat_beaker": "Prižgite alkoholno svetilko in segrejte čašo — ta reakcija mora potekati pri povišani temperaturi.",
+    "narrHeat_tube": "Prižgite alkoholno svetilko in segrejte epruveto — ta reakcija mora potekati pri povišani temperaturi.",
+    "narrHeat_flask": "Prižgite alkoholno svetilko in segrejte erlenmajerico — ta reakcija mora potekati pri povišani temperaturi.",
+    "narrMix_beaker": "Dobro premešajte reagente v čaši — reakcija se takoj začne.",
+    "narrMix_tube": "Dobro premešajte reagente v epruveti — reakcija se takoj začne.",
+    "narrMix_flask": "Dobro premešajte reagente v erlenmajerici — reakcija se takoj začne."
+  },
+  "a11y": {
+    "skipToMain": "Preskoči na glavno vsebino"
+  },
+  "catalog": {
+    "title": "Knjižnica eksperimentov",
+    "empty": "Ni eksperimentov, ki ustrezajo pogojem.",
+    "searchPlaceholder": "Išči ime eksperimenta…",
+    "searchLabel": "Iskanje eksperimentov",
+    "filterCategory": "Filtriraj po kategoriji",
+    "allCategories": "Vse kategorije",
+    "filterDifficulty": "Filtriraj po težavnosti",
+    "allDifficulties": "Vse težavnosti",
+    "objectives": "Cilji eksperimenta",
+    "reagents": "Potrebni reagenti",
+    "apparatus": "Potrebna oprema",
+    "subtitle": "Izberite eksperiment in začnite delo v virtualnem laboratoriju.",
+    "estimatedMinutes": "Ocenjeno {minutes} min",
+    "startLab": "Začni eksperiment →"
+  },
+  "category": {
+    "ACID_BASE": "Kislinsko-bazične reakcije",
+    "ORGANIC": "Organska kemija",
+    "THERMODYNAMICS": "Termodinamika",
+    "REDOX": "Oksidacijsko-redukcijske reakcije",
+    "PRECIPITATION": "Oborinske reakcije",
+    "GAS": "Priprava plinov",
+    "ELECTROCHEM": "Elektrokemija",
+    "METAL": "Reaktivnost kovin",
+    "ANALYSIS": "Analitsko testiranje",
+    "COORDINATION": "Koordinacijska barvna reakcija"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Volumen",
+    "ariaLabel": "Krivulja {label} v odvisnosti od časa, trenutna vrednost {value}",
+    "measureAria": "Črtni grafikon meritev v odvisnosti od časa, skupaj {count} meritev, pH obseg 0 do 14, temperatura obseg 0 do 100 ℃",
+    "title": "Krivulja procesa",
+    "current": "Trenutno",
+    "peak": "Vrh",
+    "samples": "Vzorcev: {count}",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Volumen",
+    "empty": "Po začetku operacije se tukaj prikaže krivulja v odvisnosti od časa"
+  },
+  "dataTable": {
+    "title": "Tabela podatkov",
+    "emptyHint": "Tapnite »Odčitek«, da zabeležite meritev",
+    "recorded": "V tej skupini: {count} zapisov",
+    "recordedNeedMore": "V tej skupini: {count} zapisov (vzporedne meritve zahtevajo vsaj 2)",
+    "emptyBody": "Pri kvantitativnih poskusih meritev ponovite in izračunajte povprečje; vsak »Odčitek« doda eno vrstico.",
+    "colIndex": "Št.",
+    "colTime": "Čas / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Volumen / mL",
+    "rowMean": "Povprečje skupine",
+    "rowDeviation": "Relativno odstopanje",
+    "worstDeviation": "Največje relativno odstopanje {value}%:",
+    "verdictGood": "Skladnost podatkov je dobra; vrednosti so primerne za izračun.",
+    "verdictFair": "Odstopanje je povečano — preverite, ali je oko pri odčitavanju poravnano s skalo in ali je sistem že ustaljen.",
+    "verdictPoor": "Odstopanje je preveliko. Ugotovite vzrok in ponovite vzporedne meritve; ne računajte povprečja kar tako."
+  },
+  "deck": {
+    "readings": "Odčitki inštrumentov",
+    "temperature": "Temperatura",
+    "volume": "Volumen",
+    "ph": "pH",
+    "operations": "Laboratorijske operacije",
+    "needReagent": "Najprej vzemite reagent",
+    "inOrder": "Sledite dejanskem vrstnem redu korakov"
+  },
+  "device": {
+    "glassware": "Laboratorijsko steklo",
+    "electrolysisCell": "Elektrolizna celica",
+    "galvanicCell": "Galvanski člen",
+    "flameTest": "Naprava za preizkus plamena",
+    "gasCollection": "Zbiranje plina z izpodrivanjem vode",
+    "gasDelivery": "Naprava za odvod in absorpcijo plina",
+    "conductivity": "Primerjava prevodnosti raztopin",
+    "strongBright": "Močna · svetlo",
+    "weakDim": "Šibka · temno",
+    "nonNone": "Brez · ne sveti"
+  },
+  "difficulty": {
+    "EASY": "Začetnik",
+    "MEDIUM": "Napredni",
+    "HARD": "Izziv"
+  },
+  "electro": {
+    "conductivityDesc": "Primerjava prevodnosti raztopin pri enaki koncentraciji (svetlost žarnice odraža koncentracijo ionov).",
+    "conductivityActive": "Preizkus v teku: večja svetlost žarnice pomeni večjo prevodnost",
+    "conductivityIdle": "Kliknite «Preizkus prevodnosti», da primerjate prevodnost raztopin",
+    "conductivityOn": "💡 Preizkus prevodnosti",
+    "powerOff": "Izklopi napajanje",
+    "electrolyteInert": "Elektrolit: {name} ({formula}) · inertna anoda (ogljik)",
+    "electrolyteActive": "Elektrolit: {name} ({formula}) · aktivna anoda (baker)",
+    "electrolysisActive": "Elektroliza poteka…",
+    "electrolysisIdle": "Kliknite «Vklopi napajanje», da začnete elektrolizo, in opazujte pojave na elektrodah",
+    "copperFading": "Raztopina: modra barva postopoma bledi (bakrovi ioni se porabljajo)",
+    "powerOn": "⚡ Vklopi napajanje",
+    "brine": "Slanica",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Vezje sklenjeno, galvanometer se odkloni, galvanski člen oddaja tok…",
+    "cellIdle": "Kliknite «Skleni vezje», da opazujete odklon galvanometra in pojave na elektrodah",
+    "cellOn": "🔌 Skleni vezje",
+    "cellOff": "Prekini vezje",
+    "cathode": "Katoda (−)",
+    "anode": "Anoda (＋)",
+    "negative": "Negativni pol",
+    "positive": "Pozitivni pol"
+  },
+  "errors": {
+    "noActivity": "V tem poskusu še ni zabeleženih dejanj. Najprej izvedi poskus na delovni mizi, nato ustvari poročilo.",
+    "reportFailed": "Ustvarjanje poročila ni uspelo",
+    "tutorUnavailable": "Storitev AI tutorja ni na voljo",
+    "unknown": "Neznana napaka"
+  },
+  "home": {
+    "labTitle": "Interaktivna delovna miza",
+    "labDesc": "Povleci reagente v čašo – reakcijski mehanizem sproti zazna spremembo barve, mehurčke, oborino in temperaturne spremembe. Kar vidiš, to dobiš.",
+    "tutorTitle": "AI eksperimentalni tutor",
+    "tutorDesc": "Kadar koli postavi vprašanje o principih ali postopkih. Ko na platnu sprožiš ključno reakcijo, tutor samodejno ponudi razlago in varnostna opozorila.",
+    "reportTitle": "Pametno eksperimentalno poročilo",
+    "reportDesc": "Zbere krivulje odčitkov celotnega poskusa ter samodejno ustvari zaključke, analizo napak, predloge za izboljšave in oceno znanja.",
+    "badge": "Virtualni kemijski laboratorij na osnovi AI",
+    "heroLine1": "V brskalniku",
+    "heroLine2": "izvajaj prave kemijske poskuse",
+    "heroDesc": "Povleci reagente, opazuj spremembe barve in mehurčke, kadar koli vprašaj AI tutorja – ob koncu poskusa se samodejno ustvari strukturirano poročilo. {count} preverjenih poskusov, varnih in ponovljivih.",
+    "ctaCatalog": "Poišči poskuse →",
+    "ctaSessions": "Moje seje"
+  },
+  "lab": {
+    "mix": "Mešanje in reakcija",
+    "reset": "Izprazni posodo",
+    "clear": "Počisti",
+    "complete": "Zaključi poskus",
+    "completed": "Poskus zaključen",
+    "viewReport": "Oglej si poročilo →",
+    "removeItem": "Klikni za odstranitev",
+    "conditions": "Pogoji sistema",
+    "temperature": "Temperatura sistema",
+    "reagentShelf": "Polica z reagenti",
+    "apparatusList": "Oprema laboratorija",
+    "emptyContainer": "Na levi polici izberite količino in vzemite reagent ali ga povlecite sem",
+    "absorbent": "Absorbcijska raztopina",
+    "apparatus": "Instrument",
+    "addReagent": "Dodaj {name}",
+    "removeReagent": "Odstrani {name}",
+    "mixAction": "Mešaj",
+    "backToDetail": "← Nazaj na podrobnosti poskusa",
+    "backToCatalog": "← Nazaj na seznam poskusov",
+    "labSuffix": "Delovna miza",
+    "labHint": "Kliknite ali povlecite reagent v čašo, nato «Zmešaj in reagiraj» za opazovanje; ali uporabite «Razlago poskusa» za samodejno vodeno demonstracijo."
+  },
+  "locale": {
+    "switchLabel": "Zamenjaj jezik vmesnika",
+    "searchPlaceholder": "Iskanje jezika…",
+    "noMatch": "Ni ujemajočih se jezikov",
+    "groupFull": "Glavni jeziki",
+    "groupBasic": "Drugi jeziki",
+    "groupBasicHint": "Vsebuje celotno vsebino laboratorija in zvočno razlago; prevod je strojno preveden"
+  },
+  "nav": {
+    "catalog": "Knjižnica poskusov",
+    "sessions": "Moje seje",
+    "home": "Domov"
+  },
+  "op": {
+    "stir": {
+      "label": "Mešanje",
+      "effect": "Mešajte s stekleno palčko; topljenje se pospeši in zmes postane bolj homogena",
+      "hint": "Mešanje pospešuje raztapljanje in prenos toplote ter izenačuje lokalne koncentracije, zato je odčitek reprezentativen za celotno raztopino"
+    },
+    "shake": {
+      "label": "Stresanje",
+      "effect": "Stresite in premešajte vsebino; reagenti pridejo v popoln stik",
+      "hint": "V epruveti je malo tekočine; mešajte z stresanjem (ne z mešanjem), držite odprtino stran od oseb"
+    },
+    "heat": {
+      "label": "Segrevanje",
+      "effect": "Vžgite alkoholno svetilko; temperatura sistema naraste",
+      "hint": "Višja temperatura pospeši večino reakcij; endotermne reakcije zahtevajo neprekinjeno segrevanje"
+    },
+    "cool": {
+      "label": "Hlajenje",
+      "effect": "Odstranite vir toplote in pustite, da se sistem ohladi naravno",
+      "hint": "Hlajenje zmanjša topnost; standardni korak za kristalizacijo in zbiranje produkta"
+    },
+    "settle": {
+      "label": "Mirovanje",
+      "effect": "Počakajte trenutek; oborina se posede, sloji tekočine se bolj jasno ločijo",
+      "hint": "Posedanje in razslojevanje zahtevata čas; šele po mirovanju presodite, ali je zgornja plast bistra"
+    },
+    "read": {
+      "label": "Odčitek",
+      "effect": "Zabeležite trenutni odčitek",
+      "hint": "Oko poravnajte z merilno lestvico; vsak odčitek vnesite v podatkovno tabelo za izračun povprečja in napake"
+    }
+  },
+  "quant": {
+    "verdictGood": "Skladnost podatkov je dobra; primerni za izračun",
+    "verdictFair": "Odstopanje je preveliko; preverite poravnavo pogleda in stabilnost sistema",
+    "verdictPoor": "Odstopanje je prekomerno; ugotovite vzrok in ponovite vzporedne meritve",
+    "meanPh": "Povprečni pH",
+    "meanTemp": "Povprečna temperatura",
+    "meanVolume": "Povprečni volumen",
+    "group": "Skupina {no}",
+    "readings": "{count} odčitkov",
+    "finalGroup": "Sklep temelji na tej skupini",
+    "singleReading": "Samo 1 meritev; relativnega odstopanja ni mogoče izračunati (standard zahteva vsaj 2 vzporedni meritvi)",
+    "worstDeviation": "Največje relativno povprečno odstopanje {value}%",
+    "groupNote": "Vsakič, ko je sistem vzorčen, zmešan ali segrevan, se začne nova skupina; odčitki iz različnih skupin ne tvorijo vzporednih meritev in se zato beležijo ločeno.",
+    "noReadings": "V tem poskusu ni bila uporabljena operacija »Odčitek«, zato ni meritev za izračun povprečja ali relativnega odstopanja. Kvantitativni poskus zahteva vsaj 2 ponovljena odčitka pri enakem stanju sistema."
+  },
+  "report": {
+    "conclusion": "Sklep poskusa",
+    "errorAnalysis": "Analiza napak",
+    "improvements": "Predlogi za izboljšave",
+    "noImprovements": "Zaenkrat ni predlogov za izboljšave.",
+    "knowledge": "Ocena znanja",
+    "empty": "（ni vsebine）",
+    "measurements": "Odčitki meritev",
+    "quantData": "Kvantitativni podatki",
+    "noMeasurements": "V tem poskusu ni bil zabeležen noben odčitek.",
+    "generating": "UI analizira podatke poskusa…",
+    "regenerate": "Ponovno generiraj poročilo",
+    "generate": "Generiraj poročilo o poskusu",
+    "generateFailed": "Generiranje ni uspelo ({status})",
+    "notGenerated": "Poročilo še ni bilo generirano. UI bo na podlagi korakov in meritev tega poskusa podal zaključke, analizo napak, predloge za izboljšave in oceno znanja.",
+    "noActivity": "V tem poskusu ni bila zabeležena nobena operacija, zato poročila trenutno ni mogoče generirati.",
+    "backToLab": "Nazaj na delovno mizo →",
+    "title": "Poročilo o poskusu",
+    "generatedAt": "Generirano: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Vklopi napajanje",
+      "off": "Izklopi napajanje"
+    },
+    "cell": {
+      "on": "Skleni vezje",
+      "off": "Prekini vezje"
+    },
+    "flameTest": {
+      "on": "Prižgi alkoholno svetilko",
+      "off": "Ugasni alkoholno svetilko"
+    },
+    "waterBath": {
+      "on": "Začni segrevanje v vodni kopeli",
+      "off": "Ustavi segrevanje v vodni kopeli"
+    },
+    "distillation": {
+      "on": "Začni destilacijo",
+      "off": "Ustavi destilacijo"
+    },
+    "filtration": {
+      "on": "Začni filtracijo",
+      "off": "Ustavi filtracijo"
+    },
+    "calorimeter": {
+      "on": "Začni mešanje in merjenje temperature",
+      "off": "Ustavi mešanje"
+    },
+    "gasCollect": {
+      "on": "Začni zbiranje plina",
+      "off": "Ustavi zbiranje plina"
+    },
+    "titration": {
+      "on": "Odpri pipeto in dodajaj po kapljicah",
+      "off": "Zapri pipeto"
+    },
+    "syringe": {
+      "on": "Stisni bat za tlak",
+      "off": "Izvleci bat za razbremenitev"
+    },
+    "phMeter": {
+      "on": "Vklopi pH-meter",
+      "off": "Izklopi pH-meter"
+    },
+    "evaporation": {
+      "on": "Prižgi alkoholno svetilko za uparjevanje",
+      "off": "Ugasni alkoholno svetilko"
+    },
+    "pressureDrop": {
+      "on": "Privij pokrovček in stresaj",
+      "off": "Odvrni pokrovček"
+    },
+    "heat": {
+      "on": "Prižgi alkoholno svetilko za segrevanje",
+      "off": "Ustavi segrevanje"
+    }
+  },
+  "sessions": {
+    "title": "Moje seje",
+    "subtitle": "Preglej zgodovino poskusov in odpri ustrezna poročila",
+    "unknownExperiment": "Neznan poskus",
+    "completed": "Zaključeno",
+    "inProgress": "V teku",
+    "startedAt": "Začeto ob {time}",
+    "viewReport": "Odpri poročilo"
+  },
+  "shelf": {
+    "title": "Polica z reagenti",
+    "taken": "Vzeto {dose} {unit}",
+    "takeSome": "Dodaj po kapljicah / vzemi primerno količino",
+    "take": "Vzemi {unit}",
+    "specIndicator": "Indikator",
+    "specGas": "Plin",
+    "specBulk": "Vzemi primerno količino",
+    "specSolution": "Raztopina",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Čista tekočina ρ={density} g/mL",
+    "specLiquid": "Tekočina",
+    "specSolid": "trdna snov · analitsko čista"
+  },
+  "site": {
+    "title": "ChemAIForge · AI virtualni kemijski laboratorij",
+    "description": "Izvajajte kemijske poskuse v brskalniku: povlecite reagente, opazujte reakcije, pridobite nasvete AI-mentorja in samodejno ustvarite poročilo o poskusu."
+  },
+  "titration": {
+    "stopcock": "odprtost pipete",
+    "buretteReading": "odčitek birete",
+    "phMeter": "pH-meter",
+    "unfilled": "brez raztopine",
+    "strongBase": "močno bazično",
+    "weakBase": "šibko bazično · območje barvne spremembe",
+    "nearNeutral": "blizu nevtralnega",
+    "acidExcess": "kislinsko · presežek",
+    "endpointOk": "končna točka dosežena",
+    "overshoot": "pretitriranje",
+    "notYet": "končna točka še ni dosežena (rožnata barva ni izginila)",
+    "justFaded": "barva je ravnokar izginila",
+    "keyPoints": "napotki za delo",
+    "takeAnalyte": "najprej odvzemite analitsko raztopino →",
+    "dragStopcock": "← povlecite pipeto za začetek titracije",
+    "openness": "odprtost {pct}% · povlecite levo ali desno"
+  },
+  "tutor": {
+    "placeholder": "Vnesite vprašanje…",
+    "replying": "odgovarjam…",
+    "send": "Pošlji",
+    "unknownError": "neznana napaka",
+    "requestFailed": "zahteva ni uspela ({status})",
+    "askHeat": "Po mešanju reagentov nisem opazil/-a nobene spremembe. Namig navaja, da ta reakcija zahteva segrevanje. Prosim, razloži, zakaj mora ta reakcija potekati pri povišani temperaturi.",
+    "askObserved": "Pravkar sem opazil/-a reakcijo {equation}{phenomena}. Prosim, razloži, kaj se je zgodilo in kakšen je princip.",
+    "phPrecipitate": "nastane oborina",
+    "phGas": "nastane plin",
+    "phColor": "pride do spremembe barve",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Laboratorijski Mentor",
+    "empty": "Kadarkoli mi postavite vprašanje ali sprožite reakcijo na platnu — takrat vas bom sam opozoril."
+  },
+  "workbench": {
+    "view2d": "2D Prikaz",
+    "view3d": "3D Delovna Miza",
+    "view3dRefined": "3D Delovna Miza ★",
+    "sceneHint": "Povleci za vrtenje · Kolesce za povečavo"
+  }
+}

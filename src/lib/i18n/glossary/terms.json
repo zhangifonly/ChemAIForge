@@ -1,0 +1,1296 @@
+{
+  "note": "试剂与仪器的中文术语清单。原文是引擎匹配键，不可改动；译文见 <locale>.json",
+  "experiments": 501,
+  "reagents": [
+    {
+      "term": "蒸馏水",
+      "count": 82
+    },
+    {
+      "term": "氢氧化钠",
+      "count": 74
+    },
+    {
+      "term": "盐酸",
+      "count": 72
+    },
+    {
+      "term": "硫酸",
+      "count": 66
+    },
+    {
+      "term": "硝酸银",
+      "count": 42
+    },
+    {
+      "term": "硫酸铜",
+      "count": 39
+    },
+    {
+      "term": "氨水",
+      "count": 34
+    },
+    {
+      "term": "酚酞",
+      "count": 27
+    },
+    {
+      "term": "碳酸钠",
+      "count": 27
+    },
+    {
+      "term": "氯化钠",
+      "count": 26
+    },
+    {
+      "term": "氯化铁",
+      "count": 25
+    },
+    {
+      "term": "石蕊",
+      "count": 22
+    },
+    {
+      "term": "淀粉",
+      "count": 21
+    },
+    {
+      "term": "碘化钾",
+      "count": 20
+    },
+    {
+      "term": "氧气",
+      "count": 19
+    },
+    {
+      "term": "高锰酸钾",
+      "count": 18
+    },
+    {
+      "term": "氢氧化钙",
+      "count": 18
+    },
+    {
+      "term": "硝酸",
+      "count": 18
+    },
+    {
+      "term": "过氧化氢",
+      "count": 16
+    },
+    {
+      "term": "锌粒",
+      "count": 16
+    },
+    {
+      "term": "硫酸钠",
+      "count": 15
+    },
+    {
+      "term": "氯化铵",
+      "count": 15
+    },
+    {
+      "term": "氯化钡",
+      "count": 15
+    },
+    {
+      "term": "乙酸",
+      "count": 15
+    },
+    {
+      "term": "硫酸亚铁",
+      "count": 13
+    },
+    {
+      "term": "氯化钙",
+      "count": 13
+    },
+    {
+      "term": "铁",
+      "count": 13
+    },
+    {
+      "term": "乙醇",
+      "count": 13
+    },
+    {
+      "term": "EDTA",
+      "count": 12
+    },
+    {
+      "term": "二氧化锰",
+      "count": 11
+    },
+    {
+      "term": "硫代硫酸钠",
+      "count": 11
+    },
+    {
+      "term": "硫氰酸钾",
+      "count": 11
+    },
+    {
+      "term": "亚硫酸钠",
+      "count": 11
+    },
+    {
+      "term": "碘水",
+      "count": 10
+    },
+    {
+      "term": "浓硫酸",
+      "count": 10
+    },
+    {
+      "term": "铜",
+      "count": 10
+    },
+    {
+      "term": "溴水",
+      "count": 10
+    },
+    {
+      "term": "二氧化碳",
+      "count": 9
+    },
+    {
+      "term": "氯气",
+      "count": 9
+    },
+    {
+      "term": "碳酸氢钠",
+      "count": 9
+    },
+    {
+      "term": "甲基橙",
+      "count": 8
+    },
+    {
+      "term": "硫化钠",
+      "count": 8
+    },
+    {
+      "term": "镁条",
+      "count": 8
+    },
+    {
+      "term": "铜片",
+      "count": 8
+    },
+    {
+      "term": "硝酸铅",
+      "count": 8
+    },
+    {
+      "term": "锌",
+      "count": 8
+    },
+    {
+      "term": "氯化钴",
+      "count": 7
+    },
+    {
+      "term": "氯化镁",
+      "count": 7
+    },
+    {
+      "term": "食盐",
+      "count": 7
+    },
+    {
+      "term": "碳酸钙",
+      "count": 7
+    },
+    {
+      "term": "铁片",
+      "count": 7
+    },
+    {
+      "term": "重铬酸钾",
+      "count": 7
+    },
+    {
+      "term": "草酸",
+      "count": 6
+    },
+    {
+      "term": "硫酸锌",
+      "count": 6
+    },
+    {
+      "term": "铝片",
+      "count": 6
+    },
+    {
+      "term": "氯化镍",
+      "count": 6
+    },
+    {
+      "term": "氯化铜",
+      "count": 6
+    },
+    {
+      "term": "氯水",
+      "count": 6
+    },
+    {
+      "term": "浓盐酸",
+      "count": 6
+    },
+    {
+      "term": "溴化钾",
+      "count": 6
+    },
+    {
+      "term": "氧化铜",
+      "count": 6
+    },
+    {
+      "term": "铬黑T",
+      "count": 5
+    },
+    {
+      "term": "铝",
+      "count": 5
+    },
+    {
+      "term": "镁",
+      "count": 5
+    },
+    {
+      "term": "钠",
+      "count": 5
+    },
+    {
+      "term": "氢气",
+      "count": 5
+    },
+    {
+      "term": "氢氧化钾",
+      "count": 5
+    },
+    {
+      "term": "铁氰化钾",
+      "count": 5
+    },
+    {
+      "term": "氧化铁",
+      "count": 5
+    },
+    {
+      "term": "苯酚",
+      "count": 4
+    },
+    {
+      "term": "金属钠",
+      "count": 4
+    },
+    {
+      "term": "磷酸钠",
+      "count": 4
+    },
+    {
+      "term": "镍片",
+      "count": 4
+    },
+    {
+      "term": "柠檬酸",
+      "count": 4
+    },
+    {
+      "term": "铅片",
+      "count": 4
+    },
+    {
+      "term": "氢氧化钡",
+      "count": 4
+    },
+    {
+      "term": "氨气",
+      "count": 3
+    },
+    {
+      "term": "二氧化硫",
+      "count": 3
+    },
+    {
+      "term": "铬酸钾",
+      "count": 3
+    },
+    {
+      "term": "过氧化钠",
+      "count": 3
+    },
+    {
+      "term": "金属钾",
+      "count": 3
+    },
+    {
+      "term": "硫酸铵",
+      "count": 3
+    },
+    {
+      "term": "硫酸镁",
+      "count": 3
+    },
+    {
+      "term": "硫酸铁",
+      "count": 3
+    },
+    {
+      "term": "铝粉",
+      "count": 3
+    },
+    {
+      "term": "氯化钾",
+      "count": 3
+    },
+    {
+      "term": "氯酸钾",
+      "count": 3
+    },
+    {
+      "term": "浓硝酸",
+      "count": 3
+    },
+    {
+      "term": "氢氧化铝",
+      "count": 3
+    },
+    {
+      "term": "水杨酸",
+      "count": 3
+    },
+    {
+      "term": "锡片",
+      "count": 3
+    },
+    {
+      "term": "硝酸铵",
+      "count": 3
+    },
+    {
+      "term": "氧化铝",
+      "count": 3
+    },
+    {
+      "term": "银",
+      "count": 3
+    },
+    {
+      "term": "蔗糖",
+      "count": 3
+    },
+    {
+      "term": "pH试纸",
+      "count": 3
+    },
+    {
+      "term": "丙醇",
+      "count": 2
+    },
+    {
+      "term": "碘化银",
+      "count": 2
+    },
+    {
+      "term": "二氧化氮",
+      "count": 2
+    },
+    {
+      "term": "肥皂水",
+      "count": 2
+    },
+    {
+      "term": "氟化钠",
+      "count": 2
+    },
+    {
+      "term": "镉片",
+      "count": 2
+    },
+    {
+      "term": "甲苯",
+      "count": 2
+    },
+    {
+      "term": "甲醇",
+      "count": 2
+    },
+    {
+      "term": "甲酸",
+      "count": 2
+    },
+    {
+      "term": "磷酸",
+      "count": 2
+    },
+    {
+      "term": "硫粉",
+      "count": 2
+    },
+    {
+      "term": "硫化亚铁",
+      "count": 2
+    },
+    {
+      "term": "硫氰化钾",
+      "count": 2
+    },
+    {
+      "term": "硫酸钾",
+      "count": 2
+    },
+    {
+      "term": "硫酸镍",
+      "count": 2
+    },
+    {
+      "term": "氯化铝",
+      "count": 2
+    },
+    {
+      "term": "葡萄糖",
+      "count": 2
+    },
+    {
+      "term": "氢氧化钠溶液",
+      "count": 2
+    },
+    {
+      "term": "氢氧化铜",
+      "count": 2
+    },
+    {
+      "term": "石灰水",
+      "count": 2
+    },
+    {
+      "term": "四氯化碳",
+      "count": 2
+    },
+    {
+      "term": "四氧化二氮",
+      "count": 2
+    },
+    {
+      "term": "碳酸氢铵",
+      "count": 2
+    },
+    {
+      "term": "铁钉",
+      "count": 2
+    },
+    {
+      "term": "铁粉",
+      "count": 2
+    },
+    {
+      "term": "铁丝",
+      "count": 2
+    },
+    {
+      "term": "硝酸钡",
+      "count": 2
+    },
+    {
+      "term": "硝酸钾",
+      "count": 2
+    },
+    {
+      "term": "硝酸铜",
+      "count": 2
+    },
+    {
+      "term": "溴",
+      "count": 2
+    },
+    {
+      "term": "溴化钠",
+      "count": 2
+    },
+    {
+      "term": "溴化银",
+      "count": 2
+    },
+    {
+      "term": "亚硫酸氢钠",
+      "count": 2
+    },
+    {
+      "term": "氧化钙",
+      "count": 2
+    },
+    {
+      "term": "氧化镁",
+      "count": 2
+    },
+    {
+      "term": "一氧化碳",
+      "count": 2
+    },
+    {
+      "term": "乙醛",
+      "count": 2
+    },
+    {
+      "term": "乙炔",
+      "count": 2
+    },
+    {
+      "term": "乙酸乙酯",
+      "count": 2
+    },
+    {
+      "term": "乙烯",
+      "count": 2
+    },
+    {
+      "term": "油脂",
+      "count": 2
+    },
+    {
+      "term": "pH 试纸",
+      "count": 2
+    },
+    {
+      "term": "0.1 mol/L 盐酸标准液",
+      "count": 1
+    },
+    {
+      "term": "饱和碳酸钠",
+      "count": 1
+    },
+    {
+      "term": "苯",
+      "count": 1
+    },
+    {
+      "term": "苯胺",
+      "count": 1
+    },
+    {
+      "term": "苯甲醛",
+      "count": 1
+    },
+    {
+      "term": "苯甲酸",
+      "count": 1
+    },
+    {
+      "term": "苯乙烯",
+      "count": 1
+    },
+    {
+      "term": "冰晶石",
+      "count": 1
+    },
+    {
+      "term": "丙酸",
+      "count": 1
+    },
+    {
+      "term": "次氯酸钠",
+      "count": 1
+    },
+    {
+      "term": "醋酸钠",
+      "count": 1
+    },
+    {
+      "term": "待测氢氧化钠溶液",
+      "count": 1
+    },
+    {
+      "term": "碘",
+      "count": 1
+    },
+    {
+      "term": "丁二酮肟",
+      "count": 1
+    },
+    {
+      "term": "二氧化铅",
+      "count": 1
+    },
+    {
+      "term": "甘油",
+      "count": 1
+    },
+    {
+      "term": "红磷",
+      "count": 1
+    },
+    {
+      "term": "甲烷",
+      "count": 1
+    },
+    {
+      "term": "金属钙",
+      "count": 1
+    },
+    {
+      "term": "硫化银",
+      "count": 1
+    },
+    {
+      "term": "硫氰酸铵",
+      "count": 1
+    },
+    {
+      "term": "硫酸锰",
+      "count": 1
+    },
+    {
+      "term": "氯化锂",
+      "count": 1
+    },
+    {
+      "term": "氯化锶",
+      "count": 1
+    },
+    {
+      "term": "氯化亚铁",
+      "count": 1
+    },
+    {
+      "term": "氯化银",
+      "count": 1
+    },
+    {
+      "term": "木炭",
+      "count": 1
+    },
+    {
+      "term": "浓氨水",
+      "count": 1
+    },
+    {
+      "term": "铅",
+      "count": 1
+    },
+    {
+      "term": "氢氧化镍",
+      "count": 1
+    },
+    {
+      "term": "氢氧化铁",
+      "count": 1
+    },
+    {
+      "term": "氢氧化锌",
+      "count": 1
+    },
+    {
+      "term": "石灰乳",
+      "count": 1
+    },
+    {
+      "term": "食盐水",
+      "count": 1
+    },
+    {
+      "term": "四氧化三铁",
+      "count": 1
+    },
+    {
+      "term": "碳酸钾",
+      "count": 1
+    },
+    {
+      "term": "碳酸银",
+      "count": 1
+    },
+    {
+      "term": "稀硝酸",
+      "count": 1
+    },
+    {
+      "term": "稀盐酸",
+      "count": 1
+    },
+    {
+      "term": "纤维素",
+      "count": 1
+    },
+    {
+      "term": "硝酸钠",
+      "count": 1
+    },
+    {
+      "term": "硝酸锶",
+      "count": 1
+    },
+    {
+      "term": "亚铁氰化钾",
+      "count": 1
+    },
+    {
+      "term": "氧化钠",
+      "count": 1
+    },
+    {
+      "term": "氧化锌",
+      "count": 1
+    },
+    {
+      "term": "乙二醇",
+      "count": 1
+    },
+    {
+      "term": "正丁醇",
+      "count": 1
+    }
+  ],
+  "apparatus": [
+    {
+      "term": "试管",
+      "count": 256
+    },
+    {
+      "term": "胶头滴管",
+      "count": 172
+    },
+    {
+      "term": "烧杯",
+      "count": 109
+    },
+    {
+      "term": "试管架",
+      "count": 87
+    },
+    {
+      "term": "玻璃棒",
+      "count": 84
+    },
+    {
+      "term": "导管",
+      "count": 83
+    },
+    {
+      "term": "酒精灯",
+      "count": 75
+    },
+    {
+      "term": "温度计",
+      "count": 67
+    },
+    {
+      "term": "铁架台",
+      "count": 61
+    },
+    {
+      "term": "锥形瓶",
+      "count": 49
+    },
+    {
+      "term": "镊子",
+      "count": 48
+    },
+    {
+      "term": "集气瓶",
+      "count": 41
+    },
+    {
+      "term": "导线",
+      "count": 22
+    },
+    {
+      "term": "秒表",
+      "count": 22
+    },
+    {
+      "term": "酸式滴定管",
+      "count": 21
+    },
+    {
+      "term": "点滴板",
+      "count": 18
+    },
+    {
+      "term": "试管夹",
+      "count": 18
+    },
+    {
+      "term": "水浴",
+      "count": 18
+    },
+    {
+      "term": "移液管",
+      "count": 18
+    },
+    {
+      "term": "砂纸",
+      "count": 17
+    },
+    {
+      "term": "直流电源",
+      "count": 17
+    },
+    {
+      "term": "滤纸",
+      "count": 16
+    },
+    {
+      "term": "白瓷板",
+      "count": 15
+    },
+    {
+      "term": "量筒",
+      "count": 15
+    },
+    {
+      "term": "洗气瓶",
+      "count": 15
+    },
+    {
+      "term": "圆底烧瓶",
+      "count": 15
+    },
+    {
+      "term": "分液漏斗",
+      "count": 14
+    },
+    {
+      "term": "坩埚钳",
+      "count": 12
+    },
+    {
+      "term": "电子天平",
+      "count": 11
+    },
+    {
+      "term": "漏斗",
+      "count": 11
+    },
+    {
+      "term": "表面皿",
+      "count": 10
+    },
+    {
+      "term": "电解槽",
+      "count": 10
+    },
+    {
+      "term": "保温杯",
+      "count": 9
+    },
+    {
+      "term": "药匙",
+      "count": 9
+    },
+    {
+      "term": "燃烧匙",
+      "count": 8
+    },
+    {
+      "term": "石棉网",
+      "count": 8
+    },
+    {
+      "term": "蒸发皿",
+      "count": 8
+    },
+    {
+      "term": "pH 计",
+      "count": 8
+    },
+    {
+      "term": "比色管",
+      "count": 7
+    },
+    {
+      "term": "大试管",
+      "count": 7
+    },
+    {
+      "term": "手套",
+      "count": 7
+    },
+    {
+      "term": "碳电极",
+      "count": 7
+    },
+    {
+      "term": "碱式滴定管",
+      "count": 6
+    },
+    {
+      "term": "天平",
+      "count": 6
+    },
+    {
+      "term": "通风橱",
+      "count": 6
+    },
+    {
+      "term": "电流计",
+      "count": 5
+    },
+    {
+      "term": "干燥管",
+      "count": 5
+    },
+    {
+      "term": "尖嘴导管",
+      "count": 5
+    },
+    {
+      "term": "量气管",
+      "count": 5
+    },
+    {
+      "term": "量热计",
+      "count": 5
+    },
+    {
+      "term": "水槽",
+      "count": 5
+    },
+    {
+      "term": "小刀",
+      "count": 5
+    },
+    {
+      "term": "铂丝",
+      "count": 4
+    },
+    {
+      "term": "电压表",
+      "count": 4
+    },
+    {
+      "term": "放大镜",
+      "count": 4
+    },
+    {
+      "term": "坩埚",
+      "count": 4
+    },
+    {
+      "term": "回流冷凝管",
+      "count": 4
+    },
+    {
+      "term": "铜电极",
+      "count": 4
+    },
+    {
+      "term": "废液桶",
+      "count": 3
+    },
+    {
+      "term": "火柴",
+      "count": 3
+    },
+    {
+      "term": "蓝色钴玻璃",
+      "count": 3
+    },
+    {
+      "term": "离心机",
+      "count": 3
+    },
+    {
+      "term": "镁条",
+      "count": 3
+    },
+    {
+      "term": "木条",
+      "count": 3
+    },
+    {
+      "term": "启普发生器",
+      "count": 3
+    },
+    {
+      "term": "容量瓶",
+      "count": 3
+    },
+    {
+      "term": "沙盘",
+      "count": 3
+    },
+    {
+      "term": "盐桥",
+      "count": 3
+    },
+    {
+      "term": "pH计",
+      "count": 3
+    },
+    {
+      "term": "玻璃片",
+      "count": 2
+    },
+    {
+      "term": "铂电极",
+      "count": 2
+    },
+    {
+      "term": "布氏漏斗",
+      "count": 2
+    },
+    {
+      "term": "带火星木条",
+      "count": 2
+    },
+    {
+      "term": "滴定管",
+      "count": 2
+    },
+    {
+      "term": "发光二极管",
+      "count": 2
+    },
+    {
+      "term": "防护屏",
+      "count": 2
+    },
+    {
+      "term": "洁净试管",
+      "count": 2
+    },
+    {
+      "term": "培养皿",
+      "count": 2
+    },
+    {
+      "term": "湿润石蕊试纸",
+      "count": 2
+    },
+    {
+      "term": "石蕊试纸",
+      "count": 2
+    },
+    {
+      "term": "水浴锅",
+      "count": 2
+    },
+    {
+      "term": "塑料槽",
+      "count": 2
+    },
+    {
+      "term": "碳棒",
+      "count": 2
+    },
+    {
+      "term": "铜丝",
+      "count": 2
+    },
+    {
+      "term": "洗耳球",
+      "count": 2
+    },
+    {
+      "term": "白色背景板",
+      "count": 1
+    },
+    {
+      "term": "比色卡",
+      "count": 1
+    },
+    {
+      "term": "避光容器",
+      "count": 1
+    },
+    {
+      "term": "抽滤瓶",
+      "count": 1
+    },
+    {
+      "term": "磁力搅拌器",
+      "count": 1
+    },
+    {
+      "term": "导电装置",
+      "count": 1
+    },
+    {
+      "term": "滴定管夹",
+      "count": 1
+    },
+    {
+      "term": "电导率仪",
+      "count": 1
+    },
+    {
+      "term": "分光光度计",
+      "count": 1
+    },
+    {
+      "term": "分析天平",
+      "count": 1
+    },
+    {
+      "term": "干燥剂",
+      "count": 1
+    },
+    {
+      "term": "干燥器",
+      "count": 1
+    },
+    {
+      "term": "广口瓶",
+      "count": 1
+    },
+    {
+      "term": "过滤装置",
+      "count": 1
+    },
+    {
+      "term": "红墨水",
+      "count": 1
+    },
+    {
+      "term": "红色石蕊试纸",
+      "count": 1
+    },
+    {
+      "term": "环形玻璃搅拌棒",
+      "count": 1
+    },
+    {
+      "term": "尖嘴管",
+      "count": 1
+    },
+    {
+      "term": "胶塞",
+      "count": 1
+    },
+    {
+      "term": "阶梯蜡烛",
+      "count": 1
+    },
+    {
+      "term": "具支试管",
+      "count": 1
+    },
+    {
+      "term": "冷凝管",
+      "count": 1
+    },
+    {
+      "term": "冷水浴",
+      "count": 1
+    },
+    {
+      "term": "铝箔",
+      "count": 1
+    },
+    {
+      "term": "马弗炉",
+      "count": 1
+    },
+    {
+      "term": "镁条引燃",
+      "count": 1
+    },
+    {
+      "term": "密封袋",
+      "count": 1
+    },
+    {
+      "term": "密封球管",
+      "count": 1
+    },
+    {
+      "term": "棉花",
+      "count": 1
+    },
+    {
+      "term": "木板",
+      "count": 1
+    },
+    {
+      "term": "泥三角",
+      "count": 1
+    },
+    {
+      "term": "气球",
+      "count": 1
+    },
+    {
+      "term": "铅阴极",
+      "count": 1
+    },
+    {
+      "term": "琼脂",
+      "count": 1
+    },
+    {
+      "term": "热水浴",
+      "count": 1
+    },
+    {
+      "term": "软塑料瓶",
+      "count": 1
+    },
+    {
+      "term": "沙土",
+      "count": 1
+    },
+    {
+      "term": "石墨电极",
+      "count": 1
+    },
+    {
+      "term": "石墨阳极",
+      "count": 1
+    },
+    {
+      "term": "水准管",
+      "count": 1
+    },
+    {
+      "term": "碳阳极",
+      "count": 1
+    },
+    {
+      "term": "碳阴极",
+      "count": 1
+    },
+    {
+      "term": "铁阴极",
+      "count": 1
+    },
+    {
+      "term": "小灯泡",
+      "count": 1
+    },
+    {
+      "term": "小烧杯",
+      "count": 1
+    },
+    {
+      "term": "银电极",
+      "count": 1
+    },
+    {
+      "term": "硬质玻璃管",
+      "count": 1
+    },
+    {
+      "term": "有色布条",
+      "count": 1
+    },
+    {
+      "term": "蒸馏烧瓶",
+      "count": 1
+    },
+    {
+      "term": "植物油",
+      "count": 1
+    },
+    {
+      "term": "注射器",
+      "count": 1
+    },
+    {
+      "term": "U形管",
+      "count": 1
+    }
+  ]
+}

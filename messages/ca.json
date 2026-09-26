@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Vés al contingut principal"
+  },
+  "catalog": {
+    "title": "Biblioteca d'experiments",
+    "empty": "No hi ha experiments que coincideixin amb els criteris.",
+    "searchPlaceholder": "Cerca el nom de l'experiment…",
+    "searchLabel": "Cerca experiments",
+    "filterCategory": "Filtra per categoria",
+    "allCategories": "Totes les categories",
+    "filterDifficulty": "Filtra per dificultat",
+    "allDifficulties": "Totes les dificultats",
+    "objectives": "Objectius de l'experiment",
+    "reagents": "Reactius necessaris",
+    "apparatus": "Material necessari",
+    "subtitle": "Selecciona un experiment per entrar al laboratori virtual i començar.",
+    "estimatedMinutes": "{minutes} minuts aprox.",
+    "startLab": "Inicia l'experiment →"
+  },
+  "category": {
+    "ACID_BASE": "Reaccions àcid-base",
+    "ORGANIC": "Química orgànica",
+    "THERMODYNAMICS": "Termodinàmica",
+    "REDOX": "Oxidació-reducció",
+    "PRECIPITATION": "Precipitació i doble descomposició",
+    "GAS": "Preparació de gasos",
+    "ELECTROCHEM": "Electroquímica",
+    "METAL": "Activitat dels metalls",
+    "ANALYSIS": "Anàlisi i identificació",
+    "COORDINATION": "Complexos de coordinació i coloració"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Volum",
+    "ariaLabel": "Corba de {label} en funció del temps, valor actual {value}",
+    "measureAria": "Gràfic de línies de lectures de mesura en funció del temps, {count} lectures en total, escala de pH de 0 a 14, escala de temperatura de 0 a 100 ℃",
+    "title": "Corba del procés",
+    "current": "Actual",
+    "peak": "Pic",
+    "samples": "{count} mostres",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Volum",
+    "empty": "Un cop iniciada l'operació, aquí es mostrarà la corba en funció del temps"
+  },
+  "dataTable": {
+    "title": "Taula de registre de dades",
+    "emptyHint": "Premeu «Lectura» per registrar una mesura",
+    "recorded": "Aquest grup ha registrat {count} vegades",
+    "recordedNeedMore": "Aquest grup ha registrat {count} vegades (calen almenys 2 mesures paral·leles)",
+    "emptyBody": "Els experiments quantitatius requereixen mesures repetides per calcular la mitjana; cada cop que premeu «Lectura» s'afegeix una fila aquí.",
+    "colIndex": "Núm.",
+    "colTime": "Temps / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Volum / mL",
+    "rowMean": "Mitjana del grup",
+    "rowDeviation": "Desviació relativa",
+    "worstDeviation": "Desviació relativa màxima {value}%:",
+    "verdictGood": "La consistència de les dades és bona; es poden utilitzar per als càlculs.",
+    "verdictFair": "La desviació és elevada; comproveu que la visual estigui alineada amb l'escala i que el sistema s'hagi estabilitzat.",
+    "verdictPoor": "La desviació és excessiva; identifiqueu la causa i repetiu les mesures paral·leles abans de calcular la mitjana."
+  },
+  "deck": {
+    "readings": "Lectures dels instruments de laboratori",
+    "temperature": "Temperatura",
+    "volume": "Volum",
+    "ph": "pH",
+    "operations": "Operacions de laboratori",
+    "needReagent": "Primer obteniu el reactiu",
+    "inOrder": "Seguiu l'ordre real dels passos"
+  },
+  "device": {
+    "glassware": "Material de vidre",
+    "electrolysisCell": "Cuba electrolítica",
+    "galvanicCell": "Pila galvànica",
+    "flameTest": "Dispositiu d'assaig a la flama",
+    "gasCollection": "Recollida de gas per desplaçament d'aigua",
+    "gasDelivery": "Dispositiu de conducció i absorció de gas",
+    "conductivity": "Comparació de conductivitat de solucions",
+    "strongBright": "Fort · brillant",
+    "weakDim": "Feble · tènue",
+    "nonNone": "No conductor · apagat"
+  },
+  "difficulty": {
+    "EASY": "Inicial",
+    "MEDIUM": "Intermedi",
+    "HARD": "Avançat"
+  },
+  "electro": {
+    "conductivityDesc": "Compareu la conductivitat de solucions a la mateixa concentració (la lluminositat de la bombeta reflecteix la concentració d'ions).",
+    "conductivityActive": "Detecció activa: com més brillant la bombeta, major conductivitat",
+    "conductivityIdle": "Premeu «Detecció activa» per comparar la conductivitat de cada solució",
+    "conductivityOn": "💡 Detecció activa",
+    "powerOff": "Desconnectar",
+    "electrolyteInert": "Electròlit: {name} ({formula}) · ànode inert (carboni)",
+    "electrolyteActive": "Electròlit: {name} ({formula}) · ànode actiu (coure)",
+    "electrolysisActive": "Electròlisi en curs…",
+    "electrolysisIdle": "Premeu «Connectar» per iniciar l'electròlisi i observar els elèctrodes",
+    "copperFading": "Solució: el color blau s'esvaeix gradualment (ions de coure consumits)",
+    "powerOn": "⚡ Connectar",
+    "brine": "Aigua salada",
+    "electrolyte": "Electròlit: {name}",
+    "cellActive": "Circuit tancat, galvanòmetre deflectit, pila en descàrrega…",
+    "cellIdle": "Premeu «Tancar el circuit» per observar la deflexió del galvanòmetre i els elèctrodes",
+    "cellOn": "🔌 Tancar el circuit",
+    "cellOff": "Circuit obert",
+    "cathode": "Càtode (−)",
+    "anode": "Ànode (＋)",
+    "negative": "Pol negatiu",
+    "positive": "Pol positiu"
+  },
+  "errors": {
+    "noActivity": "Encara no hi ha cap operació registrada en aquest experiment. Feu alguna acció al laboratori abans de generar l'informe.",
+    "reportFailed": "Error en generar l'informe",
+    "tutorUnavailable": "El servei del tutor IA no està disponible",
+    "unknown": "Error desconegut"
+  },
+  "home": {
+    "labTitle": "Taula de laboratori interactiva",
+    "labDesc": "Arrossegueu els reactius al vas de precipitats; el motor de reaccions avalua en temps real els canvis de color, les bombolles, els precipitats i les variacions de temperatura.",
+    "tutorTitle": "Tutor IA de laboratori",
+    "tutorDesc": "Consulteu principis i procediments en qualsevol moment. Quan es produeix una reacció clau al llenç, el tutor ofereix explicacions i avisos de seguretat de manera proactiva.",
+    "reportTitle": "Informe d'experiment intel·ligent",
+    "reportDesc": "Recull les corbes de mesura de tota la sessió i genera automàticament conclusions, anàlisi d'errors, suggeriments de millora i avaluació de coneixements.",
+    "badge": "Laboratori virtual de química basat en IA",
+    "heroLine1": "Al navegador,",
+    "heroLine2": "experiments de química reals",
+    "heroDesc": "Arrossegueu reactius, observeu canvis de color i bombolles, consulteu el tutor IA en qualsevol moment i obteniu un informe estructurat en acabar. {count} experiments verificats, segurs i reproduïbles.",
+    "ctaCatalog": "Explorar el catàleg →",
+    "ctaSessions": "Les meves sessions"
+  },
+  "lab": {
+    "mix": "Barrejar i reaccionar",
+    "reset": "Buidar el recipient",
+    "clear": "Netejar",
+    "complete": "Finalitzar l'experiment",
+    "completed": "Experiment finalitzat",
+    "viewReport": "Veure l'informe →",
+    "removeItem": "Feu clic per eliminar",
+    "conditions": "Condicions del sistema",
+    "temperature": "Temperatura del sistema",
+    "reagentShelf": "Prestatgeria de reactius",
+    "apparatusList": "Equipament",
+    "emptyContainer": "Seleccioneu la quantitat a la prestatgeria de l'esquerra i agafeu el reactiu, o arrossegueu-lo aquí",
+    "absorbent": "Líquid absorbent",
+    "apparatus": "Instrument",
+    "addReagent": "Afegir {name}",
+    "removeReagent": "Eliminar {name}",
+    "mixAction": "Barrejar",
+    "backToDetail": "← Tornar als detalls",
+    "backToCatalog": "← Tornar al catàleg",
+    "labSuffix": "Taula de laboratori",
+    "labHint": "Feu clic o arrossegueu reactius al got, «Barreja i reacció» per observar els fenòmens; o useu «Explicació» per a la demostració automàtica pas a pas."
+  },
+  "lesson": {
+    "prev": "Pas anterior",
+    "pause": "Pausa",
+    "play": "Reproduir",
+    "next": "Pas següent",
+    "voiceOn": "Activar veu",
+    "voiceOff": "Desactivar veu",
+    "muted": "🔇 Silenciat",
+    "askTutor": "Al pas «{title}»: {narration} Explica breument els principis químics i les equacions relacionats amb els fenòmens i lectures actuals del got.",
+    "phase": {
+      "theory": "Principi",
+      "prep": "Preparació",
+      "operate": "Operació",
+      "observe": "Fenòmens",
+      "conclude": "Conclusió"
+    },
+    "voiceLabel": "🔊 Explicació de veu",
+    "vesselBeaker": "Got de precipitats",
+    "vesselTube": "Tub d'assaig",
+    "vesselFlask": "Matràs Erlenmeyer",
+    "observeGeneric": "Observa atentament el sistema i fixa't en possibles canvis de color, bombolles o temperatura.",
+    "observeReacting": "La reacció està tenint lloc; observa els canvis de pH i temperatura.",
+    "phenomenaList": "Es pot observar {parts}.",
+    "partGas": "bombolles que s'escapen contínuament",
+    "partPrecipitate": "la solució s'enterbola i es forma un precipitat",
+    "partColor": "un canvi de color evident en la solució",
+    "partExo": "alliberament de calor i augment de temperatura",
+    "partEndo": "absorció de calor i descens de temperatura",
+    "titlePrinciple": "Fonament teòric",
+    "titleSummary": "Resum de l'experiment",
+    "titleConnect": "Muntatge del dispositiu",
+    "titleConnectCircuit": "Connexió del circuit",
+    "titlePowerOn": "Connexió de l'alimentació",
+    "titleConnectOn": "Tancament del circuit",
+    "titleConductTest": "Prova de conductivitat",
+    "titleElectrodes": "Fenòmens als elèctrodes",
+    "titleConductCompare": "Comparació de conductivitat",
+    "titleTake": "Agafar {reagent}",
+    "titleHeat": "Encendre el cremador d'alcohol",
+    "titleMix": "Barreja i reacció",
+    "titleObserve": "Observació dels fenòmens",
+    "summary": "Mitjançant aquest experiment, {objectives}.",
+    "narrSetupElectrode": "Introdueix els elèctrodes a l'electròlit i connecta'ls als pols positiu i negatiu de la font de corrent continu.",
+    "narrPowerOn": "Connecta la font de corrent continu per iniciar l'electròlisi i observa els canvis als dos elèctrodes.",
+    "narrSetupCircuit": "Connecta els dos elèctrodes mitjançant un galvanòmetre amb fils conductors i introdueix-los a la solució electrolítica.",
+    "narrConnectOn": "Tanca el circuit i comprova si l'agulla del galvanòmetre es desvia.",
+    "narrSetupConduct": "Connecta solucions de la mateixa concentració a circuits d'elèctrodes amb bombeta.",
+    "narrConductTest": "Tanca el circuit i compara la brillantor de la bombeta en cada solució.",
+    "narrSetupGeneric": "Connecta els elèctrodes i la font d'alimentació o els instruments de mesura seguint el diagrama del circuit, i introdueix l'electròlit.",
+    "narrRigOn": "{verb}, observeu els canvis als elèctrodes i als instruments.",
+    "verbElectrolysis": "Connecteu la font de corrent continu per iniciar l'electròlisi",
+    "verbCircuit": "Tanqueu el circuit",
+    "narrTake": "Agafeu {reagent} i afegiu-lo a {vessel}.",
+    "narrHeat": "Enceneu el cremador d'alcohol per escalfar {vessel} — aquesta reacció requereix calor.",
+    "narrMixHeated": "Un cop escalfat, barregeu bé els reactius; la reacció comença de seguida.",
+    "narrMix": "Barregeu bé els reactius de {vessel}; la reacció comença de seguida.",
+    "electrodesFading": "; el color blau de la solució s'esvaeix gradualment",
+    "brine": "aigua salada",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Esquema de l'explicació",
+    "outlineHint": "Un cop a la taula de laboratori, feu clic a «Explicació ▶» per a la demostració pas a pas.",
+    "cardTitle": "Explicació de l'experiment",
+    "askTutorButton": "Que el tutor expliqui aquest pas",
+    "sentenceJoin": " ",
+    "voiceFemale": "Veu femenina ♀",
+    "voiceMale": "Veu masculina ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Aquesta llengua no té veu disponible; l'explicació avançarà automàticament amb els subtítols.",
+    "narrTake_beaker": "Agafeu {reagent} i afegiu-lo al got de precipitats.",
+    "narrTake_tube": "Agafeu {reagent} i afegiu-lo al tub d'assaig.",
+    "narrTake_flask": "Agafeu {reagent} i afegiu-lo al matràs Erlenmeyer.",
+    "narrHeat_beaker": "Enceneu el cremador d'alcohol per escalfar el got de precipitats — aquesta reacció només pot tenir lloc en condicions de calor.",
+    "narrHeat_tube": "Enceneu el cremador d'alcohol per escalfar el tub d'assaig — aquesta reacció només pot tenir lloc en condicions de calor.",
+    "narrHeat_flask": "Enceneu el cremador d'alcohol per escalfar el matràs Erlenmeyer — aquesta reacció només pot tenir lloc en condicions de calor.",
+    "narrMix_beaker": "Barregeu bé els reactius que hi ha al got de precipitats; la reacció comença immediatament.",
+    "narrMix_tube": "Barregeu bé els reactius que hi ha al tub d'assaig; la reacció comença immediatament.",
+    "narrMix_flask": "Barregeu bé els reactius que hi ha al matràs Erlenmeyer; la reacció comença immediatament."
+  },
+  "locale": {
+    "switchLabel": "Canvia l'idioma de la interfície",
+    "searchPlaceholder": "Cerca un idioma…",
+    "noMatch": "No s'ha trobat cap idioma",
+    "groupFull": "Idiomes principals",
+    "groupBasic": "Altres idiomes",
+    "groupBasicHint": "Inclou contingut complet de laboratori i narració de veu; les traduccions són de traducció automàtica"
+  },
+  "nav": {
+    "catalog": "Catàleg d'experiments",
+    "sessions": "Les meves sessions",
+    "home": "Inici"
+  },
+  "op": {
+    "stir": {
+      "label": "Remenar",
+      "effect": "Remeneu amb la vareta de vidre per accelerar la dissolució i homogeneïtzar la mescla",
+      "hint": "Remenar accelera la dissolució i la transferència de calor, i uniformitza la concentració local per a una lectura representativa"
+    },
+    "shake": {
+      "label": "Agitar",
+      "effect": "Agiteu per barrejar bé els reactius",
+      "hint": "Amb poc líquid al tub d'assaig, cal agitar (no remenar) per barrejar; sosteniu el tub allunyat de les persones"
+    },
+    "heat": {
+      "label": "Escalfar",
+      "effect": "S'encén el cremador d'alcohol i s'escalfa; la temperatura del sistema augmenta",
+      "hint": "La majoria de reaccions s'acceleren en augmentar la temperatura; les reaccions endotèrmiques requereixen escalfament continu"
+    },
+    "cool": {
+      "label": "Refredar",
+      "effect": "Es retira la font de calor i el sistema es refreda de manera natural; la temperatura baixa",
+      "hint": "El refredament redueix la solubilitat; és el pas habitual per a la cristal·lització i la recollida del producte"
+    },
+    "settle": {
+      "label": "Decantar",
+      "effect": "Es deixa reposar uns instants; el precipitat sedimenta i les capes de líquid es distingeixen millor",
+      "hint": "La sedimentació i la separació de capes requereixen temps; cal decantar abans de comprovar si el líquid sobrenedant és clar"
+    },
+    "read": {
+      "label": "Llegir",
+      "effect": "Es registra la lectura actual",
+      "hint": "Llegiu alineant la vista amb la graduació; anoteu cada lectura a la taula de dades per calcular la mitjana i l'error"
+    }
+  },
+  "quant": {
+    "verdictGood": "La consistència de les dades és bona; es pot usar per al càlcul",
+    "verdictFair": "La desviació és elevada; comproveu l'alineació visual en la lectura i l'estabilitat del sistema",
+    "verdictPoor": "La desviació és excessiva; cal identificar la causa i repetir les mesures en paral·lel",
+    "meanPh": "pH mitjà",
+    "meanTemp": "Temperatura mitjana",
+    "meanVolume": "Volum mitjà",
+    "group": "Grup {no}",
+    "readings": "{count} lectures",
+    "finalGroup": "Les conclusions es basen en aquest grup",
+    "singleReading": "Només hi ha 1 mesura; no es pot calcular la desviació relativa (la normativa exigeix almenys 2 mesures en paral·lel)",
+    "worstDeviation": "Desviació mitjana relativa màxima: {value}%",
+    "groupNote": "Cada vegada que el sistema és mostrejat, barrejat o escalfat s'inicia un grup nou; les lectures de grups diferents no constitueixen mesures en paral·lel i, per tant, s'estadísticament per separat.",
+    "noReadings": "En aquest experiment no s'ha fet cap lectura amb l'operació «Llegir» i no és possible calcular la mitjana ni la desviació relativa. En un experiment quantitatiu cal repetir la lectura almenys 2 vegades en el mateix estat del sistema."
+  },
+  "report": {
+    "conclusion": "Conclusió de l'experiment",
+    "errorAnalysis": "Anàlisi d'errors",
+    "improvements": "Suggeriments de millora",
+    "noImprovements": "Sense suggeriments de millora.",
+    "knowledge": "Avaluació dels conceptes assolits",
+    "empty": "（sense contingut）",
+    "measurements": "Lectures de mesura",
+    "quantData": "Dades quantitatives",
+    "noMeasurements": "No s'ha registrat cap lectura en aquest experiment.",
+    "generating": "La IA està analitzant les dades de l'experiment…",
+    "regenerate": "Torna a generar l'informe",
+    "generate": "Genera l'informe de l'experiment",
+    "generateFailed": "Error en la generació ({status})",
+    "notGenerated": "L'informe encara no s'ha generat. La IA elaborarà conclusions, anàlisi d'errors, suggeriments de millora i avaluació de l'aprenentatge a partir dels passos i les lectures d'aquest experiment.",
+    "noActivity": "No hi ha cap operació registrada en aquest experiment; de moment no es pot generar l'informe.",
+    "backToLab": "Torna al laboratori i fes l'experiment →",
+    "title": "Informe de l'experiment",
+    "generatedAt": "Generat el {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Connecta l'alimentació",
+      "off": "Desconnecta l'alimentació"
+    },
+    "cell": {
+      "on": "Tanca el circuit",
+      "off": "Obre el circuit"
+    },
+    "flameTest": {
+      "on": "Encén el bec de Bunsen",
+      "off": "Apaga el bec de Bunsen"
+    },
+    "waterBath": {
+      "on": "Inicia el bany maria",
+      "off": "Atura el bany maria"
+    },
+    "distillation": {
+      "on": "Inicia la destil·lació",
+      "off": "Atura la destil·lació"
+    },
+    "filtration": {
+      "on": "Inicia la filtració",
+      "off": "Atura la filtració"
+    },
+    "calorimeter": {
+      "on": "Inicia l'agitació i mesura de temperatura",
+      "off": "Atura l'agitació"
+    },
+    "gasCollect": {
+      "on": "Inicia la recollida de gas",
+      "off": "Atura la recollida"
+    },
+    "titration": {
+      "on": "Obre la clau de pas per afegir gotes",
+      "off": "Tancar la clau de pas"
+    },
+    "syringe": {
+      "on": "Comprimir l'èmbol per pressuritzar",
+      "off": "Retirar l'èmbol per despressuritzar"
+    },
+    "phMeter": {
+      "on": "Activar el pH-metre",
+      "off": "Desactivar el pH-metre"
+    },
+    "evaporation": {
+      "on": "Encendre el llum d'alcohol per evaporar",
+      "off": "Apagar el llum d'alcohol"
+    },
+    "pressureDrop": {
+      "on": "Tancar el tap i agitar",
+      "off": "Obrir el tap"
+    },
+    "heat": {
+      "on": "Encendre el llum d'alcohol per escalfar",
+      "off": "Aturar l'escalfament"
+    }
+  },
+  "sessions": {
+    "title": "Les meves sessions",
+    "subtitle": "Consulta l'historial d'experiments i accedeix als informes",
+    "unknownExperiment": "Experiment desconegut",
+    "completed": "Completat",
+    "inProgress": "En curs",
+    "startedAt": "Iniciat a les {time}",
+    "viewReport": "Veure l'informe"
+  },
+  "shelf": {
+    "title": "Prestatge de reactius",
+    "taken": "Pres {dose} {unit}",
+    "takeSome": "Afegir gotes / prendre quantitat adequada",
+    "take": "Prendre {unit}",
+    "specIndicator": "Indicador",
+    "specGas": "Gas",
+    "specBulk": "Prendre quantitat adequada",
+    "specSolution": "Solució",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Líquid pur ρ={density} g/mL",
+    "specLiquid": "Líquid",
+    "specSolid": "Sòlid de qualitat analítica"
+  },
+  "site": {
+    "title": "ChemAIForge · Laboratori Virtual de Química amb IA",
+    "description": "Fes experiments de química al navegador: arrossega reactius, observa reaccions, rep orientació d'un tutor d'IA i genera informes automàticament."
+  },
+  "titration": {
+    "stopcock": "Obertura de la clau",
+    "buretteReading": "Lectura de la bureta",
+    "phMeter": "pHmetre",
+    "unfilled": "Sense solució",
+    "strongBase": "Fortament bàsic",
+    "weakBase": "Lleugerament bàsic · zona de viratge",
+    "nearNeutral": "Pròxim a neutre",
+    "acidExcess": "Àcid · excés afegit",
+    "endpointOk": "Punt final correcte",
+    "overshoot": "Excés de gotes",
+    "notYet": "Punt final no assolit (rosa persistent)",
+    "justFaded": "Decolorat just ara",
+    "keyPoints": "Punts clau d'operació",
+    "takeAnalyte": "Primer, agafa l'analitzand →",
+    "dragStopcock": "← Arrossega la clau per iniciar la titulació",
+    "openness": "Obertura {pct}% · mantén premut i arrossega esquerra/dreta"
+  },
+  "tutor": {
+    "placeholder": "Escriu la teva pregunta…",
+    "replying": "Responent…",
+    "send": "Envia",
+    "unknownError": "Error desconegut",
+    "requestFailed": "Sol·licitud fallida ({status})",
+    "askHeat": "He barrejat els reactius i no he observat cap canvi; l'indicació diu que aquesta reacció requereix escalfament. Explica per què aquesta reacció necessita calor per tenir lloc.",
+    "askObserved": "Acabo d'observar la reacció {equation}{phenomena}. Pots explicar-me què ha passat i quin és el principi darrere?",
+    "phPrecipitate": "formació de precipitat",
+    "phGas": "despreniment de gas",
+    "phColor": "canvi de color",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "Tutor IA de laboratori",
+    "empty": "Pregunta'm qualsevol cosa, o inicia una reacció al llenç i t'ho comentaré."
+  },
+  "workbench": {
+    "view2d": "Vista 2D",
+    "view3d": "Taula 3D",
+    "view3dRefined": "Taula 3D ★",
+    "sceneHint": "Arrossega per girar · Roda per zoom"
+  }
+}

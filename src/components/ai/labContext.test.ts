@@ -4,6 +4,11 @@ import { describe, expect, it } from "vitest";
 import { react } from "@/lib/chem/engine";
 import { resolveSubstance } from "@/components/lab/reagents";
 import { buildLabState, contextualPrompt } from "./labContext";
+import { plainT } from "@/lib/i18n/plainT";
+import zhMessages from "../../../messages/zh.json";
+
+// 用中文词条跑：断言里按中文关键词校验，守的是"何时发问、问什么"的逻辑
+const t = plainT(zhMessages, "tutor");
 
 const S = (...names: string[]) => names.map(resolveSubstance);
 const snap = (contents: ReturnType<typeof S>, result: ReturnType<typeof react> | null) => ({
@@ -36,17 +41,17 @@ describe("buildLabState", () => {
 
 describe("contextualPrompt", () => {
   it("缺加热时主动提问为什么必须加热", () => {
-    const p = contextualPrompt(react(S("乙酸", "乙醇", "硫酸")));
+    const p = contextualPrompt(react(S("乙酸", "乙醇", "硫酸")), t);
     expect(p).not.toBeNull();
     expect(p).toContain("加热");
   });
 
   it("试剂不匹配时不打扰用户", () => {
-    expect(contextualPrompt(react(S("氯化钠", "硝酸钾")))).toBeNull();
+    expect(contextualPrompt(react(S("氯化钠", "硝酸钾")), t)).toBeNull();
   });
 
   it("有明显现象的反应生成含方程式的提问", () => {
-    const p = contextualPrompt(react(S("氯化钡", "硫酸")));
+    const p = contextualPrompt(react(S("氯化钡", "硫酸")), t);
     expect(p).toContain("沉淀");
   });
 });

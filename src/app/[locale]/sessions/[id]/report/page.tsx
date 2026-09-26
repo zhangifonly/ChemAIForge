@@ -1,17 +1,21 @@
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { notFound } from "next/navigation";
-import { getSession } from "@/server/session";
+import { getSession, hasActivity } from "@/server/session";
 import { getExperimentById } from "@/server/experiments/service";
 import { MeasurementChart } from "@/components/session/measurement-chart";
+import { QuantSummary } from "@/components/session/QuantSummary";
 import { GenerateReportButton } from "@/components/session/generate-report-button";
+import { getTranslations } from "next-intl/server";
 
 // 实验报告页：服务端查询会话，展示 AI 结构化报告（结论/误差/改进/掌握评估）
 // 与 measurements 折线图。未生成报告时引导用户先行生成。
 export default async function SessionReportPage({
   params,
 }: {
-  params: { id: string };
+  params: { id: string; locale: string };
 }) {
+  const t = await getTranslations("report");
+  const tLab = await getTranslations("lab");
   const session = await getSession(params.id);
   if (!session) notFound();
 
@@ -24,7 +28,7 @@ export default async function SessionReportPage({
         href="/experiments"
         className="text-sm text-foreground/60 transition-colors hover:text-brand-600 dark:hover:text-brand-300"
       >
-        ← 返回实验库
+        {tLab("backToCatalog")}
       </Link>
 
       <header className="flex flex-col gap-1.5 rounded-2xl border border-foreground/10 bg-surface/70 p-6 shadow-soft backdrop-blur">
@@ -37,8 +41,8 @@ export default async function SessionReportPage({
           <p className="text-foreground/70">{experiment.title}</p>
         ) : null}
         {report ? (
-          <p className="text-xs text-foreground/50">
-            生成于 {new Date(report.generatedAt).toLocaleString("zh-CN")}
+          <p className="text-xs text-foreground/65">
+            {t("generatedAt", { time: new Date(report.generatedAt).toLocaleString(params.locale) })}
           </p>
         ) : null}
       </header>
@@ -46,42 +50,66 @@ export default async function SessionReportPage({
       <section className="flex flex-col gap-2 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
         <h2 className="flex items-center gap-2 text-lg font-semibold">
           <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
-          测量读数
+          {t("measurements")}
         </h2>
         <MeasurementChart measurements={session.measurements} />
       </section>
 
+      {/* 曲线之后紧跟结论表：折线看趋势，这里给出要写进报告的那几个数字 */}
+      <section className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
+        <h2 className="flex items-center gap-2 text-lg font-semibold">
+          <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
+          {t("quantData")}
+        </h2>
+        <QuantSummary measurements={session.measurements} />
+      </section>
+
       {report ? (
         <>
-          <TextSection title="实验结论" body={report.conclusion} />
-          <TextSection title="误差分析" body={report.errorAnalysis} />
+          <TextSection title={t("conclusion")} body={report.conclusion} />
+          <TextSection title={t("errorAnalysis")} body={report.errorAnalysis} />
           <section className="flex flex-col gap-2 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
             <h2 className="flex items-center gap-2 text-lg font-semibold">
               <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
-              改进建议
+              {t("improvements")}
             </h2>
             {report.improvements.length ? (
-              <ul className="flex list-disc flex-col gap-1 pl-5 text-sm text-foreground/80 marker:text-brand-500">
+              <ul className="flex list-disc flex-col gap-1 ps-5 text-sm text-foreground/80 marker:text-brand-500">
                 {report.improvements.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-foreground/50">暂无改进建议。</p>
+              <p className="text-sm text-foreground/65">{t("noImprovements")}</p>
             )}
           </section>
           <TextSection
-            title="知识点掌握评估"
+            title={t("knowledge")}
             body={report.knowledgeAssessment}
           />
           <GenerateReportButton sessionId={session.id} regenerate />
         </>
-      ) : (
+      ) : hasActivity(session) ? (
         <div className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
           <p className="text-sm text-foreground/60">
-            尚未生成报告。AI 会依据本次实验的操作步骤与测量读数，给出结论、误差分析、改进建议与掌握评估。
+            {t("notGenerated")}
           </p>
           <GenerateReportButton sessionId={session.id} />
+        </div>
+      ) : (
+        // 空会话不给生成按钮（接口也会拒绝），直接告诉学生该去哪
+        <div className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/50 p-5 backdrop-blur">
+          <p className="text-sm text-foreground/60">
+            {t("noActivity")}
+          </p>
+          {experiment ? (
+            <Link
+              href={`/experiments/${experiment.slug}`}
+              className="self-start text-sm font-medium text-brand-600 hover:underline dark:text-brand-300"
+            >
+              {t("backToLab")}
+            </Link>
+          ) : null}
         </div>
       )}
     </main>

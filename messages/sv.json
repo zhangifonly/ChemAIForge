@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Föregående steg",
+    "pause": "Pausa",
+    "play": "Spela upp",
+    "next": "Nästa steg",
+    "voiceOn": "Aktivera röstgenomgång",
+    "voiceOff": "Inaktivera röstgenomgång",
+    "muted": "🔇 Ljud av",
+    "askTutor": "Genomgång till steget “{title}”: {narration} Förklara kort de kemiska principerna och reaktionsekvationerna utifrån de fenomen och avläsningar som syns i bägaren just nu.",
+    "phase": {
+      "theory": "Princip",
+      "prep": "Förberedelse",
+      "operate": "Utförande",
+      "observe": "Observation",
+      "conclude": "Slutsats"
+    },
+    "voiceLabel": "🔊 Röstgenomgång",
+    "vesselBeaker": "Bägare",
+    "vesselTube": "Provrör",
+    "vesselFlask": "Erlenmeyerkolv",
+    "observeGeneric": "Observera systemet noggrant och notera eventuella förändringar i färg, gasutveckling eller temperatur.",
+    "observeReacting": "Reaktionen pågår – följ förändringarna i pH och temperaturavläsning.",
+    "phenomenaList": "Man kan se {parts}.",
+    "partGas": "gasbubblor stiger kontinuerligt upp",
+    "partPrecipitate": "lösningen blir grumlig och ett fällning bildas",
+    "partColor": "lösningens färg förändras markant",
+    "partExo": "samtidigt avges värme och temperaturen stiger",
+    "partEndo": "samtidigt absorberas värme och temperaturen sjunker",
+    "titlePrinciple": "Experimentprincip",
+    "titleSummary": "Experimentsammanfattning",
+    "titleConnect": "Koppla utrustningen",
+    "titleConnectCircuit": "Koppla kretsen",
+    "titlePowerOn": "Slå på strömmen",
+    "titleConnectOn": "Slut kretsen",
+    "titleConductTest": "Konduktivitetstest",
+    "titleElectrodes": "Fenomen vid elektroderna",
+    "titleConductCompare": "Jämförelse av konduktivitet",
+    "titleTake": "Ta {reagent}",
+    "titleHeat": "Tänd spritlampan",
+    "titleMix": "Blanda och reagera",
+    "titleObserve": "Observera fenomen",
+    "summary": "Genom detta experiment kommer du att {objectives}.",
+    "narrSetupElectrode": "Sätt i elektroderna i elektrolyten och anslut dem till likströmskällans plus- respektive minuspol.",
+    "narrPowerOn": "Slå på likströmskällan för att starta elektrolysen och observera förändringarna vid elektroderna.",
+    "narrSetupCircuit": "Anslut de två elektroderna via en galvanometer med ledningar och sänk ned dem i elektrolytlösningen.",
+    "narrConnectOn": "Slut kretsen och kontrollera om galvanometerns visare utslår.",
+    "narrSetupConduct": "Koppla lösningar med samma koncentration till var sin elektrodkrets med glödlampa.",
+    "narrConductTest": "Slut kretsarna och jämför lampans ljusstyrka i de olika lösningarna.",
+    "narrSetupGeneric": "Koppla elektroder och strömkälla/mätinstrument enligt kopplingsschema och tillsätt elektrolyten.",
+    "narrRigOn": "{verb}，observera förändringarna vid elektroderna och instrumenten.",
+    "verbElectrolysis": "Anslut likströmskällan och starta elektrolysen",
+    "verbCircuit": "Slut kretsen",
+    "narrTake": "Ta {reagent} och tillsätt det i {vessel}.",
+    "narrHeat": "Tänd spritlampan och värm {vessel} — reaktionen kräver uppvärmning.",
+    "narrMixHeated": "Blanda reagenserna ordentligt efter uppvärmning; reaktionen startar omedelbart.",
+    "narrMix": "Blanda reagenserna i {vessel} ordentligt; reaktionen startar omedelbart.",
+    "electrodesFading": "; lösningens blå färg blenar gradvis",
+    "brine": "saltlösning",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Experimentgenomgång – disposition",
+    "outlineHint": "På labbänken kan du klicka på “Experimentgenomgång ▶” för steg-för-steg-demonstration.",
+    "cardTitle": "Experimentgenomgång",
+    "askTutorButton": "Be handledaren förklara det här steget",
+    "sentenceEnd": ".",
+    "voiceFemale": "Kvinnlig röst ♀",
+    "voiceMale": "Manlig röst ♂",
+    "noVoice": "Inget tal finns för detta språk – genomgången framförs automatiskt via undertexter.",
+    "narrTake_beaker": "Ta {reagent} och tillsätt det i bägaren.",
+    "narrTake_tube": "Ta {reagent} och tillsätt det i provrøret.",
+    "narrTake_flask": "Ta {reagent} och tillsätt det i erlenmeyerkolven.",
+    "narrHeat_beaker": "Tänd spritlampan och värm bägaren – den här reaktionen kräver uppvärmning för att kunna ske.",
+    "narrHeat_tube": "Tänd spritlampan och värm provrøret – den här reaktionen kräver uppvärmning för att kunna ske.",
+    "narrHeat_flask": "Tänd spritlampan och värm erlenmeyerkolven – den här reaktionen kräver uppvärmning för att kunna ske.",
+    "narrMix_beaker": "Blanda reagenserna i bägaren ordentligt – reaktionen börjar omedelbart.",
+    "narrMix_tube": "Blanda reagenserna i provrøret ordentligt – reaktionen börjar omedelbart.",
+    "narrMix_flask": "Blanda reagenserna i erlenmeyerkolven ordentligt – reaktionen börjar omedelbart."
+  },
+  "a11y": {
+    "skipToMain": "Hoppa till huvudinnehåll"
+  },
+  "catalog": {
+    "title": "Experimentbibliotek",
+    "empty": "Inga experiment matchar sökkriterierna.",
+    "searchPlaceholder": "Sök experimentnamn…",
+    "searchLabel": "Sök experiment",
+    "filterCategory": "Filtrera efter kategori",
+    "allCategories": "Alla kategorier",
+    "filterDifficulty": "Filtrera efter svårighetsgrad",
+    "allDifficulties": "Alla svårighetsgrader",
+    "objectives": "Experimentmål",
+    "reagents": "Nödvändiga reagenser",
+    "apparatus": "Nödvändig utrustning",
+    "subtitle": "Välj ett experiment för att gå in i det virtuella laboratoriet.",
+    "estimatedMinutes": "Ca {minutes} minuter",
+    "startLab": "Starta experiment →"
+  },
+  "category": {
+    "ACID_BASE": "Syra-basreaktioner",
+    "ORGANIC": "Organisk kemi",
+    "THERMODYNAMICS": "Termodynamik",
+    "REDOX": "Redoxreaktioner",
+    "PRECIPITATION": "Fällningsreaktioner",
+    "GAS": "Gasframställning",
+    "ELECTROCHEM": "Elektrokemi",
+    "METAL": "Metallaktivitet",
+    "ANALYSIS": "Analytisk provning",
+    "COORDINATION": "Koordinationsfärgning"
+  },
+  "chart": {
+    "temperature": "Temperatur",
+    "ph": "pH",
+    "volume": "Volym",
+    "ariaLabel": "{label} över tid, aktuellt värde {value}",
+    "measureAria": "Linjediagram över mätvärden över tid, totalt {count} avläsningar, pH-skala 0–14, temperaturskala 0–100 ℃",
+    "title": "Processkurva",
+    "current": "Aktuell",
+    "peak": "Toppvärde",
+    "samples": "{count} samplade punkter",
+    "channelTemp": "Temperatur",
+    "channelPh": "pH",
+    "channelVolume": "Volym",
+    "empty": "Kurvan över tid visas här när operationen har startat"
+  },
+  "dataTable": {
+    "title": "Datalogg",
+    "emptyHint": "Tryck på “Avläsning” för att registrera en mätning",
+    "recorded": "{count} avläsningar registrerade i denna grupp",
+    "recordedNeedMore": "{count} avläsningar registrerade i denna grupp (minst 2 parallella mätningar krävs)",
+    "emptyBody": "Upprepa mätningarna och ta medelvärdet vid kvantitativa experiment. Varje “Avläsning” lägger till en rad här.",
+    "colIndex": "Nr",
+    "colTime": "Tid / s",
+    "colTemperature": "Temperatur / ℃",
+    "colPh": "pH",
+    "colVolume": "Volym / mL",
+    "rowMean": "Gruppmedelvärde",
+    "rowDeviation": "Relativ avvikelse",
+    "worstDeviation": "Maximal relativ avvikelse {value}%:",
+    "verdictGood": "God datakonsistens – kan användas för beräkning.",
+    "verdictFair": "Avvikelsen är stor. Kontrollera att avläsningen sker i ögonhöjd med skalan och att systemet är i jämvikt.",
+    "verdictPoor": "Avvikelsen är för stor. Undersök orsaken och gör om de parallella mätningarna – ta inte medelvärdet direkt."
+  },
+  "deck": {
+    "readings": "Avläsningar från bänkinstrument",
+    "temperature": "Temperatur",
+    "volume": "Volym",
+    "ph": "pH",
+    "operations": "Laborationsåtgärder",
+    "needReagent": "Hämta ett reagens först",
+    "inOrder": "Följ stegen i rätt ordning"
+  },
+  "device": {
+    "glassware": "Laboratorieutrustning",
+    "electrolysisCell": "Elektrolyscell",
+    "galvanicCell": "Galvaniskt element",
+    "flameTest": "Flamfärgsreaktion",
+    "gasCollection": "Gasinsamling (vattendränkning)",
+    "gasDelivery": "Gasledning och absorption",
+    "conductivity": "Jämförelse av lösningarnas ledningsförmåga",
+    "strongBright": "Stark · Ljust",
+    "weakDim": "Svag · Svagt",
+    "nonNone": "Ingen · Släckt"
+  },
+  "difficulty": {
+    "EASY": "Nybörjare",
+    "MEDIUM": "Avancerad",
+    "HARD": "Utmaning"
+  },
+  "electro": {
+    "conductivityDesc": "Jämför lösningarnas ledningsförmåga vid samma koncentration (glödlampans ljusstyrka speglar jonkoncentrationen).",
+    "conductivityActive": "Spänning påkopplad: ju ljusare lampa, desto bättre ledningsförmåga",
+    "conductivityIdle": "Tryck på “Koppla på spänning” för att jämföra lösningarnas ledningsförmåga",
+    "conductivityOn": "💡 Koppla på spänning",
+    "powerOff": "Koppla från",
+    "electrolyteInert": "Elektrolyt: {name}（{formula}）· Inert anod (kol)",
+    "electrolyteActive": "Elektrolyt: {name}（{formula}）· Aktiv anod (koppar)",
+    "electrolysisActive": "Elektrolys pågår…",
+    "electrolysisIdle": "Tryck på “Koppla på” för att starta elektrolysen och observera elektroderna",
+    "copperFading": "Lösning: blå färg avtar gradvis (kopparjoner förbrukas)",
+    "powerOn": "⚡ Koppla på",
+    "brine": "Saltlösning",
+    "electrolyte": "Elektrolyt: {name}",
+    "cellActive": "Kretsen sluten – galvanometern utslaget, elementet urladdas…",
+    "cellIdle": "Tryck på “Slut kretsen” för att observera galvanometerns utslag och elektroderna",
+    "cellOn": "🔌 Slut kretsen",
+    "cellOff": "Bryt kretsen",
+    "cathode": "Katod (−)",
+    "anode": "Anod (+)",
+    "negative": "Negativ pol",
+    "positive": "Positiv pol"
+  },
+  "errors": {
+    "noActivity": "Inga åtgärder har registrerats för det här experimentet. Utför experimentet på labbbänken innan du genererar rapporten.",
+    "reportFailed": "Rapporten kunde inte genereras",
+    "tutorUnavailable": "AI-handledartjänsten är inte tillgänglig",
+    "unknown": "Okänt fel"
+  },
+  "home": {
+    "labTitle": "Interaktiv labbänk",
+    "labDesc": "Dra reagenser till bägaren – reaktionsmotorn bedömer färgändring, gasbubblor, utfällning och temperaturförändring i realtid. Det du ser är det du får.",
+    "tutorTitle": "AI-labbhandledare",
+    "tutorDesc": "Ställ frågor om principer och procedurer när som helst. När en viktig reaktion utlöses på arbetsytan ger handledaren förklaringar och säkerhetsanvisningar på eget initiativ.",
+    "reportTitle": "Intelligent labrapport",
+    "reportDesc": "Sammanställer mätkurvor från hela experimentet och genererar automatiskt slutsatser, felanalys, förbättringsförslag och kunskapsbedömning.",
+    "badge": "AI-drivet virtuellt kemilabb",
+    "heroLine1": "Direkt i webbläsaren –",
+    "heroLine2": "riktiga kemiska experiment",
+    "heroDesc": "Dra och släpp reagenser, observera färgändringar och gasbubblor, fråga AI-handledaren när som helst och få en strukturerad rapport automatiskt när experimentet är klart. {count} verifierade experiment – säkra och repeterbara.",
+    "ctaCatalog": "Bläddra i experimentbiblioteket →",
+    "ctaSessions": "Mina sessioner"
+  },
+  "lab": {
+    "mix": "Blanda och reagera",
+    "reset": "Töm behållaren",
+    "clear": "Rensa",
+    "complete": "Avsluta experiment",
+    "completed": "Experimentet är avslutat",
+    "viewReport": "Visa labrapport →",
+    "removeItem": "Klicka för att ta bort",
+    "conditions": "Systembetingelser",
+    "temperature": "Systemtemperatur",
+    "reagentShelf": "Reagenshylla",
+    "apparatusList": "Utrustningslista",
+    "emptyContainer": "Välj mängd i reagenshyllan till vänster och hämta, eller dra ett reagens hit",
+    "absorbent": "Absorptionsvätska",
+    "apparatus": "Instrument",
+    "addReagent": "Tillsätt {name}",
+    "removeReagent": "Ta bort {name}",
+    "mixAction": "Blanda",
+    "backToDetail": "← Tillbaka till försöksdetaljer",
+    "backToCatalog": "← Tillbaka till försökskatalogen",
+    "labSuffix": "Labbänk",
+    "labHint": "Klicka eller dra ett reagens till bägaren och välj “Blandningsreaktion” för att observera; använd “Försöksgenomgång” för automatisk steg-för-steg-demonstration."
+  },
+  "locale": {
+    "switchLabel": "Byt gränssnittsspråk",
+    "searchPlaceholder": "Sök språk…",
+    "noMatch": "Inga matchande språk",
+    "groupFull": "Huvudspråk",
+    "groupBasic": "Övriga språk",
+    "groupBasicHint": "Innehåller fullständigt laborationsinnehåll och röstkommentarer; översättningen är maskinöversatt"
+  },
+  "nav": {
+    "catalog": "Experimentbibliotek",
+    "sessions": "Mina sessioner",
+    "home": "Startsida"
+  },
+  "op": {
+    "stir": {
+      "label": "Rör om",
+      "effect": "Rör om med glasstav; lösningstakten ökar och blandningen blir jämnare",
+      "hint": "Omrörning påskyndar upplösning och värmeöverföring och utjämnar lokala koncentrationsskillnader, så att avläsningen representerar hela lösningen"
+    },
+    "shake": {
+      "label": "Skaka",
+      "effect": "Skaka och blanda; reagenserna kommer i fullständig kontakt",
+      "hint": "Lite vätska i provrör – blanda genom skakning (ej omrörning); håll röröppningen bort från personer"
+    },
+    "heat": {
+      "label": "Värm",
+      "effect": "Tänd spritlampan och värm; systemets temperatur stiger",
+      "hint": "De flesta reaktioner påskyndas vid högre temperatur; endoterma reaktioner kräver kontinuerlig värmetillförsel"
+    },
+    "cool": {
+      "label": "Kyl",
+      "effect": "Ta bort värmekällan och låt systemet svalna naturligt",
+      "hint": "Kylning sänker lösligheten – ett standardsteg vid kristallisering och produktinsamling"
+    },
+    "settle": {
+      "label": "Låt stå",
+      "effect": "Låt stå en stund så att sediment sjunker och vätskelager separeras tydligare",
+      "hint": "Fällning och skiktning tar tid; kontrollera först efter vila om det övre skiktet är klart"
+    },
+    "read": {
+      "label": "Avläs",
+      "effect": "Registrera aktuellt mätvärde",
+      "hint": "Håll blicken i nivå med skalan vid avläsning; för in varje värde i datatabellen för att kunna beräkna medelvärde och fel"
+    }
+  },
+  "quant": {
+    "verdictGood": "God datakonsistens – lämplig för beräkning",
+    "verdictFair": "Relativt stor avvikelse – kontrollera avläsningsvinkel och systemstabilitet",
+    "verdictPoor": "Avvikelsen är för stor – utred orsaken och upprepa parallellmätningarna",
+    "meanPh": "Medel-pH",
+    "meanTemp": "Medeltemperatur",
+    "meanVolume": "Medelvolym",
+    "group": "Grupp {no}",
+    "readings": "{count} avläsningar",
+    "finalGroup": "Slutsatsen baseras på denna grupp",
+    "singleReading": "Endast 1 mätning – relativ avvikelse kan inte beräknas (minst 2 parallellmätningar krävs)",
+    "worstDeviation": "Största relativa medelavvikelse {value}%",
+    "groupNote": "En ny grupp startas varje gång systemet tas ut, blandas eller värms. Avläsningar från olika grupper utgör inte parallellmätningar och statistikförs därför separat.",
+    "noReadings": "Inga mätvärden registrerades med “Avläs” under detta försök – medelvärde och relativ avvikelse kan inte beräknas. Ett kvantitativt försök kräver minst 2 upprepade avläsningar i samma systemtillstånd."
+  },
+  "report": {
+    "conclusion": "Försöksslutledning",
+    "errorAnalysis": "Felanalys",
+    "improvements": "Förbättringsförslag",
+    "noImprovements": "Inga förbättringsförslag för tillfället.",
+    "knowledge": "Bedömning av kunskapsbehärskning",
+    "empty": "(Inget innehåll)",
+    "measurements": "Mätavläsningar",
+    "quantData": "Kvantitativa data",
+    "noMeasurements": "Inga avläsningar registrerades under detta experiment.",
+    "generating": "AI analyserar experimentdata…",
+    "regenerate": "Generera om rapporten",
+    "generate": "Generera experimentrapport",
+    "generateFailed": "Generering misslyckades ({status})",
+    "notGenerated": "Rapporten har inte genererats ännu. AI ger slutsatser, felanalys, förbättringsförslag och kunskapsbedömning baserat på åtgärder och mätavläsningar från detta experiment.",
+    "noActivity": "Inga åtgärder har registrerats för detta experiment – rapporten kan inte genereras ännu.",
+    "backToLab": "Gå tillbaka till labbet och prova själv →",
+    "title": "Experimentrapport",
+    "generatedAt": "Genererad {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Slå på strömmen",
+      "off": "Bryt strömmen"
+    },
+    "cell": {
+      "on": "Slut kretsen",
+      "off": "Bryt kretsen"
+    },
+    "flameTest": {
+      "on": "Tänd spritlampan",
+      "off": "Släck spritlampan"
+    },
+    "waterBath": {
+      "on": "Starta vattenbadsuppvärmning",
+      "off": "Stoppa vattenbadsuppvärmning"
+    },
+    "distillation": {
+      "on": "Starta destillation",
+      "off": "Stoppa destillation"
+    },
+    "filtration": {
+      "on": "Starta filtrering",
+      "off": "Stoppa filtrering"
+    },
+    "calorimeter": {
+      "on": "Starta omrörning och temperaturmätning",
+      "off": "Stoppa omrörning"
+    },
+    "gasCollect": {
+      "on": "Starta gasinsamling",
+      "off": "Stoppa gasinsamling"
+    },
+    "titration": {
+      "on": "Öppna kranen – droppa till",
+      "off": "Stäng kranen"
+    },
+    "syringe": {
+      "on": "Tryck in kolven – öka trycket",
+      "off": "Dra tillbaka kolven – minska trycket"
+    },
+    "phMeter": {
+      "on": "Slå på pH-mätaren",
+      "off": "Stäng av pH-mätaren"
+    },
+    "evaporation": {
+      "on": "Tänd spritlampan – evaporera",
+      "off": "Släck spritlampan"
+    },
+    "pressureDrop": {
+      "on": "Skruva åt locket – skaka",
+      "off": "Lossa locket"
+    },
+    "heat": {
+      "on": "Tänd spritlampan – värm",
+      "off": "Sluta värma"
+    }
+  },
+  "sessions": {
+    "title": "Mina sessioner",
+    "subtitle": "Visa tidigare experiment och öppna tillhörande rapport",
+    "unknownExperiment": "Okänt experiment",
+    "completed": "Slutfört",
+    "inProgress": "Pågående",
+    "startedAt": "Startad {time}",
+    "viewReport": "Visa rapport"
+  },
+  "shelf": {
+    "title": "Reagenshylla",
+    "taken": "{dose} {unit} uttaget",
+    "takeSome": "Droppa / ta lämplig mängd",
+    "take": "Ta {unit}",
+    "specIndicator": "Indikator",
+    "specGas": "Gas",
+    "specBulk": "Ta lämplig mängd",
+    "specSolution": "Lösning",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Ren vätska ρ={density} g/mL",
+    "specLiquid": "Vätska",
+    "specSolid": "Fast · Analytisk ren"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtuellt Kemilaboratorium",
+    "description": "Utför kemiska experiment i webbläsaren: dra och släpp reagenser, observera reaktioner, få AI-handledning och generera labbrapporter automatiskt."
+  },
+  "titration": {
+    "stopcock": "Kransköppning",
+    "buretteReading": "Byrettavläsning",
+    "phMeter": "pH-mätare",
+    "unfilled": "Ej fylld",
+    "strongBase": "Starkt basisk",
+    "weakBase": "Svagt basisk · Färgomslag",
+    "nearNeutral": "Nära neutralt",
+    "acidExcess": "Surt · Överskott",
+    "endpointOk": "Ekvivalenspunkt godkänd",
+    "overshoot": "Överdoserat",
+    "notYet": "Ej nått ekvivalenspunkten (rosa kvarstår)",
+    "justFaded": "Precis avfärgat",
+    "keyPoints": "Viktiga moment",
+    "takeAnalyte": "Häll i analyt först →",
+    "dragStopcock": "← Dra kranen för att börja titrera",
+    "openness": "Öppning {pct}% · Håll och dra vänster/höger"
+  },
+  "tutor": {
+    "placeholder": "Skriv din fråga…",
+    "replying": "Svarar…",
+    "send": "Skicka",
+    "unknownError": "Okänt fel",
+    "requestFailed": "Begäran misslyckades ({status})",
+    "askHeat": "Jag blandade reagenserna men observerade ingen reaktion. Systemet indikerar att reaktionen kräver uppvärmning. Förklara varför denna reaktion måste genomföras under uppvärmning.",
+    "askObserved": "Jag observerade just reaktionen {equation}{phenomena} – kan du förklara vad som hände och vad som ligger bakom?",
+    "phPrecipitate": "Fällning bildas",
+    "phGas": "Gas utvecklas",
+    "phColor": "Färgförändring sker",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI-labbhandledare",
+    "empty": "Ställ frågor när som helst, eller så ger jag tips när du startar en reaktion på arbetsytan."
+  },
+  "workbench": {
+    "view2d": "2D-schema",
+    "view3d": "3D-labbstation",
+    "view3dRefined": "3D-labbstation ★",
+    "sceneHint": "Dra för att rotera · Scrolla för att zooma"
+  }
+}

@@ -1,15 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import type {
   ExperimentCategory,
   ExperimentDifficulty,
 } from "@/server/experiment/types";
-import {
-  CATEGORY_LABELS,
-  CATEGORY_OPTIONS,
-  DIFFICULTY_LABELS,
-  DIFFICULTY_OPTIONS,
-} from "./labels";
+import { CATEGORY_OPTIONS, DIFFICULTY_OPTIONS } from "./labels";
 
 // 列表页筛选状态：分类、难度、关键词搜索
 export interface ExperimentFilters {
@@ -26,14 +23,17 @@ export default function FilterBar({
   filters: ExperimentFilters;
   onChange: (next: ExperimentFilters) => void;
 }) {
+  const t = useTranslations("catalog");
+  const tCat = useTranslations("category");
+  const tDiff = useTranslations("difficulty");
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-surface/60 p-3 shadow-soft backdrop-blur sm:flex-row sm:items-center">
       <input
         type="search"
         value={filters.q}
         onChange={(e) => onChange({ ...filters, q: e.target.value })}
-        placeholder="搜索实验名称…"
-        aria-label="搜索实验"
+        placeholder={t("searchPlaceholder")}
+        aria-label={t("searchLabel")}
         className="flex-1 rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       />
       <select
@@ -44,13 +44,13 @@ export default function FilterBar({
             category: e.target.value as ExperimentCategory | "",
           })
         }
-        aria-label="按分类筛选"
+        aria-label={t("filterCategory")}
         className="rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       >
-        <option value="">全部分类</option>
+        <option value="">{t("allCategories")}</option>
         {CATEGORY_OPTIONS.map((c) => (
           <option key={c} value={c}>
-            {CATEGORY_LABELS[c]}
+            {tCat(c)}
           </option>
         ))}
       </select>
@@ -62,13 +62,13 @@ export default function FilterBar({
             difficulty: e.target.value as ExperimentDifficulty | "",
           })
         }
-        aria-label="按难度筛选"
+        aria-label={t("filterDifficulty")}
         className="rounded-xl border border-foreground/15 bg-background/60 px-3.5 py-2 text-sm outline-none transition-colors focus:border-brand-400 focus:ring-2 focus:ring-brand-400/30"
       >
-        <option value="">全部难度</option>
+        <option value="">{t("allDifficulties")}</option>
         {DIFFICULTY_OPTIONS.map((d) => (
           <option key={d} value={d}>
-            {DIFFICULTY_LABELS[d]}
+            {tDiff(d)}
           </option>
         ))}
       </select>

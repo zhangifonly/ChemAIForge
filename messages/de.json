@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Zum Hauptinhalt springen"
+  },
+  "dataTable": {
+    "title": "Messdatentabelle",
+    "emptyHint": "„Ablesen“ drücken, um eine Messung zu erfassen",
+    "recorded": "{count} Messung(en) in dieser Gruppe erfasst",
+    "recordedNeedMore": "{count} Messung(en) in dieser Gruppe erfasst (Parallelmessung: mind. 2)",
+    "emptyBody": "Quantitative Experimente erfordern Mehrfachmessungen zur Mittelwertbildung; jedes „Ablesen“ hinterlässt hier eine Zeile.",
+    "colIndex": "Nr.",
+    "colTime": "Zeit / s",
+    "colTemperature": "Temperatur / ℃",
+    "colPh": "pH",
+    "colVolume": "Volumen / mL",
+    "rowMean": "Gruppenmittelwert",
+    "rowDeviation": "Relative Abweichung",
+    "worstDeviation": "Größte relative Abweichung {value}%:",
+    "verdictGood": "Datenkonsistenz gut – für Berechnungen verwendbar.",
+    "verdictFair": "Abweichung erhöht – prüfen, ob die Ablesung lotrecht zur Skala erfolgte und ob das System eingeschwungen ist.",
+    "verdictPoor": "Abweichung zu groß – Ursache klären und Parallelmessungen wiederholen; keine direkte Mittelwertbildung."
+  },
+  "site": {
+    "title": "ChemAIForge · KI-gestütztes virtuelles Chemielabor",
+    "description": "Chemieexperimente im Browser: Reagenzien per Drag-and-drop hinzufügen, Reaktionen beobachten, KI-Lernbegleitung erhalten und Versuchsberichte automatisch erstellen."
+  },
+  "catalog": {
+    "title": "Versuchsbibliothek",
+    "empty": "Keine passenden Experimente gefunden.",
+    "searchPlaceholder": "Versuchsname suchen…",
+    "searchLabel": "Experimente suchen",
+    "filterCategory": "Nach Kategorie filtern",
+    "allCategories": "Alle Kategorien",
+    "filterDifficulty": "Nach Schwierigkeit filtern",
+    "allDifficulties": "Alle Schwierigkeiten",
+    "objectives": "Versuchsziele",
+    "reagents": "Benötigte Reagenzien",
+    "apparatus": "Benötigte Geräte",
+    "subtitle": "Wählen Sie ein Experiment aus, um das virtuelle Labor zu betreten und zu beginnen.",
+    "estimatedMinutes": "Ca. {minutes} Min.",
+    "startLab": "Zum Labor →"
+  },
+  "chart": {
+    "temperature": "Temperatur",
+    "ph": "pH",
+    "volume": "Volumen",
+    "ariaLabel": "{label}-Verlaufskurve, aktuell {value}",
+    "measureAria": "Liniendiagramm der Messwerte über die Zeit, {count} Messwerte gesamt, pH-Bereich 0 bis 14, Temperaturbereich 0 bis 100 ℃",
+    "title": "Prozesskurve",
+    "current": "Aktuell",
+    "peak": "Spitzenwert",
+    "samples": "{count} Messpunkte",
+    "channelTemp": "Temperatur",
+    "channelPh": "pH",
+    "channelVolume": "Volumen",
+    "empty": "Nach dem Start wird hier die zeitliche Kurve angezeigt"
+  },
+  "deck": {
+    "readings": "Tischmessgeräte-Anzeige",
+    "temperature": "Temperatur",
+    "volume": "Volumen",
+    "ph": "pH",
+    "operations": "Versuchsoperationen",
+    "needReagent": "Zuerst Reagenz entnehmen",
+    "inOrder": "Schritte in der vorgesehenen Reihenfolge ausführen"
+  },
+  "device": {
+    "glassware": "Glasgeräte",
+    "electrolysisCell": "Elektrolysezelle",
+    "galvanicCell": "Galvanisches Element",
+    "flameTest": "Flammenfärbereaktion-Aufbau",
+    "gasCollection": "Wasserverdrängungsanlage",
+    "gasDelivery": "Gasleitungs- und Absorptionsanlage",
+    "conductivity": "Vergleich der elektrischen Leitfähigkeit von Lösungen",
+    "strongBright": "Stark · Hell",
+    "weakDim": "Schwach · Dunkel",
+    "nonNone": "Kein · Aus"
+  },
+  "electro": {
+    "conductivityDesc": "Vergleich der Leitfähigkeit von Lösungen gleicher Konzentration (Helligkeit der Glühbirne spiegelt Ionenkonzentration wider).",
+    "conductivityActive": "Stromprüfung aktiv: Je heller die Glühbirne, desto besser die Leitfähigkeit",
+    "conductivityIdle": "„Stromprüfung“ klicken, um die Leitfähigkeit der Lösungen zu vergleichen",
+    "conductivityOn": "💡 Stromprüfung",
+    "powerOff": "Strom trennen",
+    "electrolyteInert": "Elektrolyt: {name} ({formula}) · Anode inert (Kohle)",
+    "electrolyteActive": "Elektrolyt: {name} ({formula}) · Anode aktiv (Kupfer)",
+    "electrolysisActive": "Elektrolyse läuft…",
+    "electrolysisIdle": "„Strom ein“ klicken, um die Elektrolyse zu starten und die Elektrodenreaktionen zu beobachten",
+    "copperFading": "Lösung: Blaufärbung nimmt ab (Kupferionen werden verbraucht)",
+    "powerOn": "⚡ Strom ein",
+    "brine": "Kochsalzlösung",
+    "electrolyte": "Elektrolyt: {name}",
+    "cellActive": "Stromkreis geschlossen – Galvanometer ausgelenkt, galvanische Zelle entlädt…",
+    "cellIdle": "„Stromkreis schließen“ klicken, um Galvanometerausschlag und Elektrodenreaktionen zu beobachten",
+    "cellOn": "🔌 Stromkreis schließen",
+    "cellOff": "Stromkreis öffnen",
+    "cathode": "Kathode (−)",
+    "anode": "Anode (＋)",
+    "negative": "Minuspol",
+    "positive": "Pluspol"
+  },
+  "home": {
+    "labTitle": "Interaktiver Laborplatz",
+    "labDesc": "Reagenzien per Drag-and-drop ins Becherglas geben – die Reaktions-Engine berechnet Farbänderungen, Gasblasen, Niederschläge und Temperaturverläufe in Echtzeit.",
+    "tutorTitle": "KI-Labortutor",
+    "tutorDesc": "Jederzeit Fragen zu Theorie und Durchführung stellen; bei wichtigen Reaktionen auf der Arbeitsfläche gibt der Tutor automatisch Erläuterungen und Sicherheitshinweise.",
+    "reportTitle": "Intelligentes Laborbericht",
+    "reportDesc": "Messwertverläufe des gesamten Experiments werden zusammengefasst; Schlussfolgerungen, Fehleranalyse, Verbesserungsvorschläge und Lernzielauswertung werden automatisch erstellt.",
+    "badge": "KI-gestütztes virtuelles Chemielabor",
+    "heroLine1": "Im Browser",
+    "heroLine2": "echte Chemieexperimente durchführen",
+    "heroDesc": "Reagenzien per Drag-and-drop hinzufügen, Farbwechsel und Gasblasen beobachten, jederzeit den KI-Tutor befragen – nach dem Experiment wird automatisch ein strukturierter Bericht erstellt. {count} geprüfte Experimente, sicher und reproduzierbar.",
+    "ctaCatalog": "Experimentierkatalog durchsuchen →",
+    "ctaSessions": "Meine Sitzungen"
+  },
+  "lab": {
+    "mix": "Reaktion mischen",
+    "reset": "Behälter leeren",
+    "clear": "Leeren",
+    "complete": "Experiment abschließen",
+    "completed": "Experiment abgeschlossen",
+    "viewReport": "Versuchsbericht ansehen →",
+    "removeItem": "Zum Entfernen klicken",
+    "conditions": "Systembedingungen",
+    "temperature": "Systemtemperatur",
+    "reagentShelf": "Reagenzienregal",
+    "apparatusList": "Geräteausstattung",
+    "emptyContainer": "Menge im linken Reagenzienregal wählen und entnehmen oder Reagenz hierher ziehen",
+    "absorbent": "Absorptionslösung",
+    "apparatus": "Gerät",
+    "addReagent": "{name} hinzufügen",
+    "removeReagent": "{name} entfernen",
+    "mixAction": "Mischen",
+    "backToDetail": "← Zurück zur Experimentübersicht",
+    "backToCatalog": "← Zurück zur Experimentbibliothek",
+    "labSuffix": "Labortisch",
+    "labHint": "Reagenzien per Klick oder Drag & Drop in den Becher geben, mit „Reaktion starten“ das Ergebnis beobachten; oder „Versuchsanleitung“ für eine automatische Schritt-für-Schritt-Demonstration nutzen."
+  },
+  "lesson": {
+    "prev": "Vorheriger Schritt",
+    "pause": "Pause",
+    "play": "Abspielen",
+    "next": "Nächster Schritt",
+    "voiceOn": "Spracherklärung aktivieren",
+    "voiceOff": "Spracherklärung deaktivieren",
+    "muted": "🔇 Stummgeschaltet",
+    "askTutor": "Zum Schritt „{title}“: {narration} Bitte erläutere die Erscheinungen und Zusammenhänge im Becherglas in diesem Moment.",
+    "phase": {
+      "theory": "Theorie",
+      "prep": "Vorbereitung",
+      "operate": "Durchführung",
+      "observe": "Beobachtung",
+      "conclude": "Schlussfolgerung"
+    },
+    "voiceLabel": "🔊 Sprachausgabe",
+    "vesselBeaker": "Becherglas",
+    "vesselTube": "Reagenzglas",
+    "vesselFlask": "Erlenmeyerkolben",
+    "observeGeneric": "Beobachten Sie das System sorgfältig auf Farb-, Blasen- oder Temperaturveränderungen.",
+    "observeReacting": "Die Reaktion läuft – beobachten Sie die Änderungen der pH- und Temperaturwerte.",
+    "phenomenaList": "Es ist {parts} zu beobachten.",
+    "partGas": "eine kontinuierliche Gasblasenentwicklung",
+    "partPrecipitate": "eine Trübung der Lösung mit Niederschlagsbildung",
+    "partColor": "eine deutliche Farbveränderung der Lösung",
+    "partExo": "sowie eine Wärmefreisetzung mit Temperaturanstieg",
+    "partEndo": "sowie eine Wärmeaufnahme mit Temperaturabfall",
+    "titlePrinciple": "Versuchsprinzip",
+    "titleSummary": "Versuchszusammenfassung",
+    "titleConnect": "Aufbau verbinden",
+    "titleConnectCircuit": "Schaltkreis verbinden",
+    "titlePowerOn": "Stromversorgung einschalten",
+    "titleConnectOn": "Schaltkreis schließen",
+    "titleConductTest": "Leitfähigkeitsprüfung",
+    "titleElectrodes": "Erscheinungen an den Elektroden",
+    "titleConductCompare": "Leitfähigkeitsvergleich",
+    "titleTake": "{reagent} entnehmen",
+    "titleHeat": "Spirituslampe anzünden",
+    "titleMix": "Reaktion mischen",
+    "titleObserve": "Phänomene beobachten",
+    "summary": "In diesem Versuch werden Sie {objectives}.",
+    "narrSetupElectrode": "Die Elektroden in die Elektrolytlösung einführen und jeweils mit dem Plus- und Minuspol der Gleichstromquelle verbinden.",
+    "narrPowerOn": "Die Gleichstromquelle einschalten, die Elektrolyse starten und die Veränderungen an beiden Elektroden beobachten.",
+    "narrSetupCircuit": "Die beiden Elektroden mit einem Verbindungskabel über das Galvanometer verbinden und in die Elektrolytlösung einführen.",
+    "narrConnectOn": "Den Schaltkreis schließen und beobachten, ob der Zeiger des Galvanometers ausschlägt.",
+    "narrSetupConduct": "Lösungen gleicher Konzentration jeweils in einen Elektrodenkreis mit Glühbirne einschalten.",
+    "narrConductTest": "Stromkreis schließen und die Helligkeit der Glühlampe in den einzelnen Lösungen vergleichen.",
+    "narrSetupGeneric": "Elektroden und Stromquelle gemäß Schaltplan verbinden und den Elektrolyten einsetzen.",
+    "narrRigOn": "{verb} – Veränderungen an beiden Elektroden und den Messgeräten genau beobachten.",
+    "verbElectrolysis": "Gleichstromquelle einschalten und Elektrolyse starten",
+    "verbCircuit": "Stromkreis schließen",
+    "narrTake": "{reagent} entnehmen und in {vessel} geben.",
+    "narrHeat": "Spirituslampe entzünden und {vessel} erhitzen – diese Reaktion erfordert Wärmezufuhr.",
+    "narrMixHeated": "Nach dem Erhitzen die Reagenzien gründlich mischen; die Reaktion beginnt sofort.",
+    "narrMix": "Die Reagenzien in {vessel} gründlich mischen; die Reaktion beginnt sofort.",
+    "electrodesFading": "; Blaufärbung der Lösung nimmt allmählich ab",
+    "brine": "Kochsalzlösung",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Versuchserklärung – Gliederung",
+    "outlineHint": "Nach dem Betreten des Labortisches können Sie auf „Versuchserklärung ▶“ tippen, um die automatische Schritt-für-Schritt-Demonstration zu starten.",
+    "cardTitle": "Versuchserläuterung",
+    "askTutorButton": "Diesen Schritt vom Tutor erklären lassen",
+    "sentenceJoin": " ",
+    "voiceFemale": "Weiblich ♀",
+    "voiceMale": "Männlich ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Für diese Sprache ist keine Sprachausgabe verfügbar. Die Erklärung wird automatisch per Untertitel fortgesetzt.",
+    "narrTake_beaker": "Nimm {reagent} und gib es in das Becherglas.",
+    "narrTake_tube": "Nimm {reagent} und gib es in das Reagenzglas.",
+    "narrTake_flask": "Nimm {reagent} und gib es in den Erlenmeyerkolben.",
+    "narrHeat_beaker": "Zünde die Spirituslampe an und erhitze das Becherglas – diese Reaktion kann nur unter Wärmezufuhr ablaufen.",
+    "narrHeat_tube": "Zünde die Spirituslampe an und erhitze das Reagenzglas – diese Reaktion kann nur unter Wärmezufuhr ablaufen.",
+    "narrHeat_flask": "Zünde die Spirituslampe an und erhitze den Erlenmeyerkolben – diese Reaktion kann nur unter Wärmezufuhr ablaufen.",
+    "narrMix_beaker": "Mische die Reagenzien im Becherglas gründlich durch – die Reaktion beginnt sofort.",
+    "narrMix_tube": "Mische die Reagenzien im Reagenzglas gründlich durch – die Reaktion beginnt sofort.",
+    "narrMix_flask": "Mische die Reagenzien im Erlenmeyerkolben gründlich durch – die Reaktion beginnt sofort."
+  },
+  "quant": {
+    "verdictGood": "Datenkonsistenz gut – für Berechnungen geeignet",
+    "verdictFair": "Abweichung zu groß – Ablesewinkel und Systemstabilität prüfen",
+    "verdictPoor": "Abweichung unzulässig groß – Ursache klären und Parallelmessungen wiederholen",
+    "meanPh": "Mittlerer pH",
+    "meanTemp": "Mittlere Temperatur",
+    "meanVolume": "Mittleres Volumen",
+    "group": "Gruppe {no}",
+    "readings": "{count} Messwerte",
+    "finalGroup": "Diese Gruppe ist maßgebend für das Ergebnis",
+    "singleReading": "Nur 1 Messung – relative Abweichung nicht berechenbar (Norm fordert mindestens 2 Parallelmessungen)",
+    "worstDeviation": "Größte relative Durchschnittsabweichung {value}%",
+    "groupNote": "Jede Entnahme, Mischung oder Erwärmung des Systems beginnt eine neue Gruppe. Messwerte aus verschiedenen Gruppen gelten nicht als Parallelmessungen und werden daher getrennt ausgewertet.",
+    "noReadings": "In diesem Versuch wurden mit der Funktion „Ablesen“ keine Messwerte erfasst – Mittelwert und relative Abweichung können nicht berechnet werden. Bei quantitativen Versuchen ist dasselbe System mindestens 2-mal unter gleichen Bedingungen abzulesen."
+  },
+  "report": {
+    "conclusion": "Versuchsschlussfolgerung",
+    "errorAnalysis": "Fehleranalyse",
+    "improvements": "Verbesserungsvorschläge",
+    "noImprovements": "Keine Verbesserungsvorschläge.",
+    "knowledge": "Bewertung des Wissensstands",
+    "empty": "(Kein Inhalt)",
+    "measurements": "Messwerte",
+    "quantData": "Quantitative Daten",
+    "noMeasurements": "In diesem Versuch wurden keine Messwerte erfasst.",
+    "generating": "KI analysiert die Versuchsdaten…",
+    "regenerate": "Bericht neu generieren",
+    "generate": "Versuchsbericht generieren",
+    "generateFailed": "Generierung fehlgeschlagen ({status})",
+    "notGenerated": "Noch kein Bericht erstellt. Die KI wertet die Versuchsschritte und Messwerte aus und liefert Fazit, Fehleranalyse, Verbesserungsvorschläge sowie eine Lernstandseinschätzung.",
+    "noActivity": "Für diesen Versuch wurden noch keine Aktionen aufgezeichnet. Ein Bericht kann derzeit nicht erstellt werden.",
+    "backToLab": "Zurück zum Labortisch – selbst ausprobieren →",
+    "title": "Versuchsbericht",
+    "generatedAt": "Erstellt am {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Stromversorgung einschalten",
+      "off": "Stromversorgung ausschalten"
+    },
+    "cell": {
+      "on": "Stromkreis schließen",
+      "off": "Stromkreis öffnen"
+    },
+    "flameTest": {
+      "on": "Spirituslampe anzünden",
+      "off": "Spirituslampe löschen"
+    },
+    "waterBath": {
+      "on": "Wasserbad-Heizung starten",
+      "off": "Wasserbad-Heizung stoppen"
+    },
+    "distillation": {
+      "on": "Destillation starten",
+      "off": "Destillation stoppen"
+    },
+    "filtration": {
+      "on": "Filtration starten",
+      "off": "Filtration stoppen"
+    },
+    "calorimeter": {
+      "on": "Rühren und Temperaturmessung starten",
+      "off": "Rühren stoppen"
+    },
+    "gasCollect": {
+      "on": "Gassammlung starten",
+      "off": "Sammlung stoppen"
+    },
+    "titration": {
+      "on": "Hahn öffnen und zutropfen",
+      "off": "Hahn schließen"
+    },
+    "syringe": {
+      "on": "Kolben eindrücken – Druck erhöhen",
+      "off": "Kolben zurückziehen – Druck verringern"
+    },
+    "phMeter": {
+      "on": "pH-Meter einschalten",
+      "off": "pH-Meter ausschalten"
+    },
+    "evaporation": {
+      "on": "Spirituslampe zum Eindampfen anzünden",
+      "off": "Spirituslampe löschen"
+    },
+    "pressureDrop": {
+      "on": "Deckel fest verschrauben und schütteln",
+      "off": "Deckel lösen"
+    },
+    "heat": {
+      "on": "Spirituslampe zum Heizen anzünden",
+      "off": "Heizung stoppen"
+    }
+  },
+  "sessions": {
+    "title": "Meine Sitzungen",
+    "subtitle": "Vergangene Experimente anzeigen und Berichte öffnen",
+    "unknownExperiment": "Unbekanntes Experiment",
+    "completed": "Abgeschlossen",
+    "inProgress": "In Bearbeitung",
+    "startedAt": "Gestartet um {time}",
+    "viewReport": "Bericht anzeigen"
+  },
+  "titration": {
+    "stopcock": "Hahnöffnung",
+    "buretteReading": "Büretten-Ablesewert",
+    "phMeter": "pH-Meter",
+    "unfilled": "Nicht befüllt",
+    "strongBase": "Stark basisch",
+    "weakBase": "Schwach basisch · Umschlagsbereich",
+    "nearNeutral": "Nahezu neutral",
+    "acidExcess": "Sauer · Überschuss",
+    "endpointOk": "Äquivalenzpunkt erreicht",
+    "overshoot": "Übertitration",
+    "notYet": "Noch nicht am Endpunkt (Rosa nicht verblasst)",
+    "justFaded": "Gerade entfärbt",
+    "keyPoints": "Hinweise zur Durchführung",
+    "takeAnalyte": "Zuerst Analyt entnehmen →",
+    "dragStopcock": "← Hahn ziehen, um Titration zu starten",
+    "openness": "Öffnung {pct}% · Gedrückt halten und links/rechts ziehen"
+  },
+  "tutor": {
+    "placeholder": "Frage eingeben…",
+    "replying": "Antwort wird generiert…",
+    "send": "Senden",
+    "unknownError": "Unbekannter Fehler",
+    "requestFailed": "Anfrage fehlgeschlagen ({status})",
+    "askHeat": "Nach dem Mischen der Reagenzien habe ich keine Reaktion beobachtet. Der Hinweis besagt, dass diese Reaktion Wärmezufuhr benötigt. Bitte erkläre, warum diese Reaktion zwingend unter Heizbedingungen abläuft.",
+    "askObserved": "Ich habe soeben bei der Reaktion {equation} folgendes beobachtet: {phenomena}. Bitte erkläre, was passiert ist und welches Prinzip dahintersteckt.",
+    "phPrecipitate": "Niederschlag bildet sich",
+    "phGas": "Gasentwicklung",
+    "phColor": "Farbänderung",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "KI-Versuchsleiter",
+    "empty": "Stellen Sie mir jederzeit eine Frage, oder ich melde mich, sobald eine Reaktion auf der Arbeitsfläche ausgelöst wird."
+  },
+  "workbench": {
+    "view2d": "2D-Ansicht",
+    "view3d": "3D-Experimentiertisch",
+    "view3dRefined": "3D-Experimentiertisch ★",
+    "sceneHint": "Ziehen zum Drehen · Scrollen zum Zoomen"
+  },
+  "category": {
+    "ACID_BASE": "Säure-Base-Reaktionen",
+    "ORGANIC": "Organische Chemie",
+    "THERMODYNAMICS": "Thermodynamik",
+    "REDOX": "Redoxreaktionen",
+    "PRECIPITATION": "Fällungsreaktionen",
+    "GAS": "Gaspräparation",
+    "ELECTROCHEM": "Elektrochemie",
+    "METAL": "Metallaktivität",
+    "ANALYSIS": "Analytik",
+    "COORDINATION": "Komplexchemie"
+  },
+  "difficulty": {
+    "EASY": "Einsteiger",
+    "MEDIUM": "Fortgeschritten",
+    "HARD": "Experte"
+  },
+  "locale": {
+    "switchLabel": "Oberflächensprache wechseln",
+    "searchPlaceholder": "Sprache suchen…",
+    "noMatch": "Keine passende Sprache",
+    "groupFull": "Hauptsprachen",
+    "groupBasic": "Weitere Sprachen",
+    "groupBasicHint": "Enthält vollständige Versuchsinhalte und Sprachkommentare; Übersetzung ist maschinell erstellt"
+  },
+  "nav": {
+    "catalog": "Versuchsbibliothek",
+    "sessions": "Meine Sitzungen",
+    "home": "Startseite"
+  },
+  "errors": {
+    "noActivity": "Für dieses Experiment wurden noch keine Aktionen aufgezeichnet. Führen Sie zuerst einen Versuch am Labortisch durch, bevor Sie den Bericht erstellen.",
+    "reportFailed": "Berichterstellung fehlgeschlagen",
+    "tutorUnavailable": "KI-Tutordienst nicht verfügbar",
+    "unknown": "Unbekannter Fehler"
+  },
+  "shelf": {
+    "title": "Reagenzregal",
+    "taken": "{dose} {unit} entnommen",
+    "takeSome": "Tropfen / Menge entnehmen",
+    "take": "{unit} entnehmen",
+    "specIndicator": "Indikator",
+    "specGas": "Gas",
+    "specBulk": "Nach Bedarf entnehmen",
+    "specSolution": "Lösung",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Reine Flüssigkeit ρ={density} g/mL",
+    "specLiquid": "Flüssigkeit",
+    "specSolid": "Feststoff, p.a."
+  },
+  "op": {
+    "stir": {
+      "label": "Rühren",
+      "effect": "Mit dem Glasstab rühren – der Feststoff löst sich schneller und die Mischung wird homogener",
+      "hint": "Rühren beschleunigt Lösung und Wärmeübertragung und gleicht lokale Konzentrationsunterschiede aus, sodass der Messwert die Gesamtlösung repräsentiert"
+    },
+    "shake": {
+      "label": "Schütteln",
+      "effect": "Durch Schütteln werden die Reagenzien gründlich durchmischt",
+      "hint": "Im Reagenzglas mit wenig Flüssigkeit wird durch Schütteln (nicht Rühren) gemischt – Öffnung dabei von Personen weghalten"
+    },
+    "heat": {
+      "label": "Erhitzen",
+      "effect": "Spirituslampe entzünden und erhitzen – die Systemtemperatur steigt",
+      "hint": "Bei den meisten Reaktionen beschleunigt Wärmezufuhr die Reaktionsgeschwindigkeit; endotherme Reaktionen erfordern kontinuierliches Erhitzen"
+    },
+    "cool": {
+      "label": "Kühlen",
+      "effect": "Wärmequelle entfernen und auf natürliche Temperatur abkühlen lassen",
+      "hint": "Abkühlen senkt die Löslichkeit – ein Standardschritt zur Kristallisation und Produktgewinnung"
+    },
+    "settle": {
+      "label": "Stehenlassen",
+      "effect": "Kurz stehenlassen – Niederschlag setzt sich ab, Phasentrennung wird deutlicher",
+      "hint": "Sedimentation und Phasentrennung brauchen Zeit; erst danach lässt sich beurteilen, ob die Oberphase klar ist"
+    },
+    "read": {
+      "label": "Ablesen",
+      "effect": "Aktuellen Messwert ablesen",
+      "hint": "Messwert auf Augenhöhe mit der Skala ablesen; jeden Wert in die Datentabelle eintragen, um Mittelwert und Fehler berechnen zu können"
+    }
+  }
+}
