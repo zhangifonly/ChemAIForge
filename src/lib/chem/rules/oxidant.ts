@@ -8,35 +8,54 @@ import { hasAnyFormula, isConcentrated } from "./helpers";
 
 export const oxidantRules: Reaction[] = [
   {
+    // 高锰酸钾法必须与二氧化锰法分开：原先三种氧化剂共用一条规则、统一标
+    // requiresHeat，而规则自己的 build 里就写着"高锰酸钾常温即可、无需加热" ——
+    // 那句描述永远走不到，且「常温制氯气」这个实验在界面上永远制不出气。
+    // 氧化性强弱本就是这两法的对比看点，规则层面也该分开表达。
+    id: "kmno4-concentrated-hcl-chlorine",
+    name: "高锰酸钾常温制氯气",
+    match: (inputs) =>
+      hasAnyFormula(inputs, ["KMnO4"]) && isConcentrated(inputs, "HCl"),
+    build: () => ({
+      products: [
+        { formula: "Cl2", name: "氯气", category: "gas" as const },
+        { formula: "MnCl2", name: "氯化锰", category: "salt" as const },
+        { formula: "H2O", name: "水", category: "water" as const },
+      ],
+      producesGas: true,
+      producesPrecipitate: false,
+      colorChange: true,
+      thermal: "exothermic" as const,
+      phTrend: "increase" as const,
+      equation: "2KMnO₄ + 16HCl(浓) → 2KCl + 2MnCl₂ + 5Cl₂↑ + 8H₂O",
+      description:
+        "高锰酸钾氧化性极强，常温即可氧化浓盐酸放出黄绿色氯气，无需加热 —— 与二氧化锰法必须加热恰成对照。",
+    }),
+  },
+  {
     id: "mno2-concentrated-hcl-chlorine",
     name: "实验室制氯气",
     requiresHeat: true,
     // 只有浓盐酸才被氧化出氯气，稀盐酸不行；这是浓度决定反应能否发生的
     // 典型例子，故必须读试剂名里的「浓」字
     match: (inputs) =>
-      hasAnyFormula(inputs, ["MnO2", "KMnO4", "KClO3"]) && isConcentrated(inputs, "HCl"),
-    build: (inputs) => {
-      const usesKmno4 = hasAnyFormula(inputs, ["KMnO4"]);
-      return {
-        products: [
-          { formula: "Cl2", name: "氯气", category: "gas" as const },
-          { formula: "MnCl2", name: "氯化锰", category: "salt" as const },
-          { formula: "H2O", name: "水", category: "water" as const },
-        ],
-        producesGas: true,
-        producesPrecipitate: false,
-        // 黄绿色氯气充满容器是该实验最直接的成功标志
-        colorChange: true,
-        thermal: "exothermic" as const,
-        phTrend: "increase" as const,
-        equation: usesKmno4
-          ? "2KMnO₄ + 16HCl(浓) → 2KCl + 2MnCl₂ + 5Cl₂↑ + 8H₂O"
-          : "MnO₂ + 4HCl(浓) --Δ--> MnCl₂ + Cl₂↑ + 2H₂O",
-        description: usesKmno4
-          ? "高锰酸钾氧化性极强，常温即可氧化浓盐酸放出黄绿色氯气，无需加热。"
-          : "加热条件下二氧化锰把浓盐酸氧化，放出黄绿色氯气，须用饱和食盐水除杂并碱液吸收尾气。",
-      };
-    },
+      hasAnyFormula(inputs, ["MnO2", "KClO3"]) && isConcentrated(inputs, "HCl"),
+    build: () => ({
+      products: [
+        { formula: "Cl2", name: "氯气", category: "gas" as const },
+        { formula: "MnCl2", name: "氯化锰", category: "salt" as const },
+        { formula: "H2O", name: "水", category: "water" as const },
+      ],
+      producesGas: true,
+      producesPrecipitate: false,
+      // 黄绿色氯气充满容器是该实验最直接的成功标志
+      colorChange: true,
+      thermal: "exothermic" as const,
+      phTrend: "increase" as const,
+      equation: "MnO₂ + 4HCl(浓) --Δ--> MnCl₂ + Cl₂↑ + 2H₂O",
+      description:
+        "加热条件下二氧化锰把浓盐酸氧化，放出黄绿色氯气，须用饱和食盐水除杂并碱液吸收尾气。",
+    }),
   },
   {
     id: "kclo3-decompose",
