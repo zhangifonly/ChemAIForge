@@ -9,7 +9,7 @@ vi.mock("./sessionClient", () => ({
   completeSessionRemote: vi.fn(),
 }));
 
-import { useLabStore } from "./labStore";
+import { totalVolume, useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
 import { HEAT_THRESHOLD } from "@/lib/chem/engine";
 import { appendMeasurementRemote, appendStepRemote } from "./sessionClient";
@@ -21,6 +21,8 @@ beforeEach(() => {
     contents: [],
     result: null,
     readings: { ph: 7, temperature: 25 },
+    trace: [],
+    startedAt: null,
     sessionId: null,
     experimentId: null,
     completed: false,
@@ -225,5 +227,220 @@ describe("静默期的反应结果可被订阅方识别为演示", () => {
     const st = useLabStore.getState();
     expect(st.result?.reacted).toBe(true); // 画面照常演示
     expect(st.silent).toBe(true); // 但订阅方据此跳过自动提问
+  });
+});
+
+// 只记「加」不记「减」，会话就是一份只增不减的流水：学生把试剂拿出来再混合，
+// AI 报告仍按原来的组合去分析，误差分析对着一个没发生过的反应写。
+describe("移除试剂同样计入会话记录", () => {
+  it("移除会上报一条 remove，detail 与 add 对齐", async () => {
+    useLabStore.getState().initSession("exp-remove");
+    await Promise.resolve();
+    useLabStore.getState().addReagent(S("盐酸"));
+    vi.mocked(appendStepRemote).mockClear();
+
+    useLabStore.getState().removeReagent("HCl");
+
+    expect(appendStepRemote).toHaveBeenCalledTimes(1);
+    const [, step] = vi.mocked(appendStepRemote).mock.calls[0];
+    expect(step.action).toBe("remove");
+    expect(step.detail).toMatchObject({ formula: "HCl" });
+    expect(typeof step.detail?.name).toBe("string");
+    expect(useLabStore.getState().contents).toEqual([]);
+  });
+
+  it("移除容器里不存在的试剂不上报、不改状态", async () => {
+    useLabStore.getState().initSession("exp-remove-noop");
+    await Promise.resolve();
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().mix();
+    const before = useLabStore.getState();
+    vi.mocked(appendStepRemote).mockClear();
+
+    useLabStore.getState().removeReagent("NaOH");
+
+    expect(appendStepRemote).not.toHaveBeenCalled();
+    // 未命中时连 result 都不该被清掉（清了等于凭空丢掉已算出的现象）
+    expect(useLabStore.getState().result).toBe(before.result);
+    expect(useLabStore.getState().contents).toEqual(before.contents);
+  });
+
+  it("讲解重放静默期的移除不写进会话", async () => {
+    useLabStore.getState().initSession("exp-remove-silent");
+    await Promise.resolve();
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().setSilent(true);
+    vi.mocked(appendStepRemote).mockClear();
+
+    useLabStore.getState().removeReagent("HCl");
+
+    expect(appendStepRemote).not.toHaveBeenCalled();
+    expect(useLabStore.getState().contents).toEqual([]);
+  });
+});
+
+describe("pH 读数按容器内容物估算", () => {
+  // 原先 readings.ph 是常量 7，加什么试剂都不动：往烧杯倒稀盐酸，面板照样 7.0。
+  // 501 个实验里 257 个混合前就偏离中性 2 个 pH 以上。3D 的 pH 计走 estimatePh，
+  // 两个视图口径不一致，学生无从判断哪个是真的。
+  it("加入强酸后读数立刻显酸性，不再停在 7.0", () => {
+    useLabStore.getState().addReagent(S("盐酸"));
+    expect(useLabStore.getState().readings.ph).toBeLessThan(3);
+  });
+
+  it("加入强碱后读数立刻显碱性", () => {
+    useLabStore.getState().addReagent(S("氢氧化钠"));
+    expect(useLabStore.getState().readings.ph).toBeGreaterThan(11);
+  });
+  it("移除试剂后 pH 退回，不停在移除前的读数", () => {
+    useLabStore.getState().addReagent(S("盐酸"));
+    expect(useLabStore.getState().readings.ph).toBeLessThan(3);
+    useLabStore.getState().removeReagent("HCl");
+    expect(useLabStore.getState().readings.ph).toBeCloseTo(7, 1);
+  });
+
+  it("反应后的趋势偏移以反应前的估算值为基准，不是以 7 为基准", () => {
+    // 稀盐酸(约1.2) + 锌粒：酸被消耗 phTrend=increase。
+    // 以 7 为基准会跳到 10 —— 把一杯酸液报成强碱，与「石蕊变红」自相矛盾。
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().addReagent(S("锌"));
+    useLabStore.getState().mix();
+    const ph = useLabStore.getState().readings.ph;
+    expect(ph).toBeGreaterThan(1.2); // 确实往上走了
+    expect(ph).toBeLessThan(7); // 但没越过中性变成碱
+  });
+
+  it("混合未发生反应时读数仍按内容物给，而不是保持中性", () => {
+    // 反应不发生 ≠ 杯里是中性水
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().addReagent(S("氯化钠"));
+    useLabStore.getState().mix();
+    expect(useLabStore.getState().readings.ph).toBeLessThan(3);
+  });
+
+  it("上报的测量点用的是同一个 pH，不会与面板显示脱节", async () => {
+    useLabStore.getState().initSession("exp-ph-report");
+    await Promise.resolve();
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().addReagent(S("锌"));
+    vi.mocked(appendMeasurementRemote).mockClear();
+    useLabStore.getState().mix();
+    const reported = vi.mocked(appendMeasurementRemote).mock.calls.at(-1)?.[1].ph;
+    expect(reported).toBe(useLabStore.getState().readings.ph);
+  });
+});
+
+describe("定量取用", () => {
+  it("不传用量时按规格默认值（溶液 10 mL / 固体 2 g）", () => {
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().addReagent(S("锌粒"));
+    const [hcl, zn] = useLabStore.getState().contents;
+    expect({ dose: hcl.dose, unit: hcl.spec.unit }).toEqual({ dose: 10, unit: "mL" });
+    expect({ dose: zn.dose, unit: zn.spec.unit }).toEqual({ dose: 2, unit: "g" });
+  });
+
+  it("同一试剂重复取用是累加，不是被忽略", () => {
+    // 真实实验里"再加 5 mL"是常规操作；原先第二次调用整个被丢掉，
+    // 容器里永远只有第一次那份量，定量实验无从进行。
+    useLabStore.getState().addReagent(S("盐酸"), 20);
+    useLabStore.getState().addReagent(S("盐酸"), 5);
+    const c = useLabStore.getState().contents;
+    expect(c).toHaveLength(1);
+    expect(c[0].dose).toBe(25);
+  });
+
+  it("物质的量按浓度与体积算出，并传给引擎判断过量", () => {
+    // 25 mL × 1.0 mol/L = 0.025 mol
+    useLabStore.getState().addReagent(S("盐酸"), 25);
+    expect(useLabStore.getState().contents[0].amount).toBeCloseTo(0.025, 6);
+  });
+
+  it("指示剂没有物质的量，amount 保持未定义而不是 0", () => {
+    // 0 会被引擎当成"加了但一点没有"，报告里也会出现"酚酞 0 mol"这种数据
+    useLabStore.getState().addReagent(S("酚酞"));
+    expect(useLabStore.getState().contents[0].amount).toBeUndefined();
+  });
+
+  it("会话记录里带上用量与规格", async () => {
+    useLabStore.getState().initSession("exp-dose");
+    await Promise.resolve();
+    vi.mocked(appendStepRemote).mockClear();
+    useLabStore.getState().addReagent(S("氢氧化钠"), 25);
+    const detail = vi.mocked(appendStepRemote).mock.calls.at(-1)?.[1].detail;
+    expect(detail).toMatchObject({
+      formula: "NaOH",
+      用量: "25 mL",
+      规格: "1 mol/L",
+      物质的量: "0.0250 mol",
+    });
+  });
+
+  it("液体总体积只计溶液与纯液体，固体不计", () => {
+    useLabStore.getState().addReagent(S("盐酸"), 30);
+    useLabStore.getState().addReagent(S("乙醇"), 10);
+    useLabStore.getState().addReagent(S("锌粒"), 5);
+    expect(totalVolume(useLabStore.getState().contents)).toBe(40);
+  });
+});
+
+describe("过程曲线采样", () => {
+  it("每次取用 / 调温 / 混合都留一个采样点，并带操作标记", () => {
+    const s = useLabStore.getState;
+    s().addReagent(S("盐酸"), 25);
+    s().addReagent(S("氢氧化钠"), 25);
+    s().mix();
+    const marks = s().trace.map((p) => p.mark);
+    expect(marks).toEqual(["加盐酸", "加氢氧化钠", "混合"]);
+  });
+
+  it("采样点记录容器液体总体积，随取用增长", () => {
+    useLabStore.getState().addReagent(S("盐酸"), 25);
+    useLabStore.getState().addReagent(S("蒸馏水"), 15);
+    expect(useLabStore.getState().trace.map((p) => p.volume)).toEqual([25, 40]);
+  });
+
+  it("温度相同时不重复采样，避免滑杆停在同一格刷出一串点", () => {
+    useLabStore.getState().setTemperature(60);
+    const n = useLabStore.getState().trace.length;
+    useLabStore.getState().setTemperature(60);
+    useLabStore.getState().setTemperature(60);
+    expect(useLabStore.getState().trace.length).toBe(n);
+  });
+
+  it("静默期（讲解重放）不采样，学生自己的过程不被假点淹没", () => {
+    useLabStore.getState().setSilent(true);
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().setTemperature(80);
+    useLabStore.getState().mix();
+    expect(useLabStore.getState().trace).toEqual([]);
+  });
+
+  it("换实验与清空重做都归零曲线", async () => {
+    useLabStore.getState().addReagent(S("盐酸"));
+    expect(useLabStore.getState().trace.length).toBeGreaterThan(0);
+    useLabStore.getState().reset();
+    expect(useLabStore.getState().trace).toEqual([]);
+
+    useLabStore.getState().addReagent(S("盐酸"));
+    useLabStore.getState().initSession("exp-trace-switch");
+    await Promise.resolve();
+    expect(useLabStore.getState().trace).toEqual([]);
+    expect(useLabStore.getState().startedAt).toBeNull();
+  });
+
+  it("record 在未登录（无会话）时也采样，专用实验台的曲线不能依赖登录", () => {
+    // sessionId 为 null 时原先直接 return，滴定台这类专用面板的读数一个都留不下
+    expect(useLabStore.getState().sessionId).toBeNull();
+    useLabStore.getState().record("加半滴", undefined, { ph: 8.4, temperature: 25 });
+    expect(useLabStore.getState().trace).toMatchObject([
+      { ph: 8.4, temperature: 25, mark: "加半滴" },
+    ]);
+  });
+
+  it("采样点数有上限，长过程只保留近期，避免折线画上千个点", () => {
+    for (let i = 0; i < 300; i += 1) {
+      useLabStore.getState().setTemperature(20 + (i % 60));
+    }
+    expect(useLabStore.getState().trace.length).toBeLessThanOrEqual(240);
   });
 });

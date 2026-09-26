@@ -3,24 +3,36 @@
 // 3D 实验台通用基础元件：实验室台面、试管架、细长玻璃试管、通用液柱。
 // 统一坐标系：本文件所有元件以 y=0 为台面，竖直向上为正；试管竖直插在架中。
 // 试管/试管架用程序化几何（真实 glTF 模型接入参见历史烧杯做法）。
+import { LabRoom } from "./LabRoom";
 
 // —— 统一尺寸常量（供各场景对齐液体/金属/气泡） ——
 export const TUBE_R = 0.2; // 试管内壁半径（细长）
 export const TUBE_FLOOR = 0.16; // 试管内底（液体/沉淀堆积起点）
 export const TUBE_RIM_Y = 2.0; // 试管口高度
 
-// 实验室台面（大桌面）+ 背景墙
+// 实验室台面 + 环境（瓷砖墙、试剂搁板、背景器皿见 LabRoom）。
+// 台面用深色环氧树脂板：实验台的通行材质（耐酸碱、耐热），也让浅色溶液与玻璃
+// 在深底上轮廓分明。原先的米色平面在强光下接近白色，透明器皿几乎被"吃掉"。
+// 做成有厚度的板而不是一张平面，台沿倒边在低视角下能看出这是一张桌子。
 export function LabBench() {
   return (
     <group>
-      <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
-        <planeGeometry args={[14, 10]} />
-        <meshStandardMaterial color="#d9d2c4" roughness={0.85} metalness={0.05} />
+      <mesh position={[0, -0.06, 0.1]} receiveShadow>
+        <boxGeometry args={[32, 0.12, 6.6]} />
+        <meshPhysicalMaterial
+          color="#30363c"
+          roughness={0.38}
+          metalness={0.05}
+          clearcoat={0.35}
+          clearcoatRoughness={0.4}
+        />
       </mesh>
-      <mesh position={[0, 3, -3.2]} receiveShadow>
-        <planeGeometry args={[16, 9]} />
-        <meshStandardMaterial color="#c2cdd6" roughness={1} />
+      {/* 台沿浅色封边：给深色台面一条轮廓线 */}
+      <mesh position={[0, -0.06, 3.41]}>
+        <boxGeometry args={[32, 0.13, 0.02]} />
+        <meshStandardMaterial color="#8a949c" roughness={0.5} metalness={0.3} />
       </mesh>
+      <LabRoom />
     </group>
   );
 }

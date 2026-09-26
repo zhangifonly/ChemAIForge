@@ -7,6 +7,8 @@ import {
   type ReactionResult,
   type Substance,
 } from "@/lib/chem/engine";
+import { estimatePh } from "@/lib/chem/phasePlan";
+import { amountOf, reagentSpec, type ReagentSpec } from "@/lib/chem/reagentSpec";
 import {
   appendMeasurementRemote,
   appendStepRemote,
@@ -18,12 +20,44 @@ import {
 export interface ContainerItem extends Substance {
   // 同名试剂去重用的稳定 key
   key: string;
+  // 累计取用量（溶液/液体 mL，固体 g）；同一试剂多次取用累加
+  dose: number;
+  // 取用规格（浓度/密度/摩尔质量），供面板显示与定量计算
+  spec: ReagentSpec;
+}
+
+/** 容器内液体总体积（mL）：溶液与纯液体计体积，固体不计 */
+export function totalVolume(contents: ContainerItem[]): number {
+  return contents.reduce(
+    (v, c) =>
+      c.spec.phase === "solution" || c.spec.phase === "liquid" ? v + c.dose : v,
+    0,
+  );
 }
 
 // 画布读数：随操作变化的实时 pH 与温度
 export interface LabReadings {
   ph: number;
   temperature: number;
+}
+
+/**
+ * 过程记录的一个采样点。
+ *
+ * 为什么单独加一条序列而不是扩 LabReadings：readings 是"当前值"，被 2D/3D 面板、
+ * AI 上下文、会话上报共同消费，扩字段会牵动全部调用点。而专业实验缺的是"过程" ——
+ * 中和热要看温度-时间曲线找最高点，气体制备要看体积-时间判反应速率，
+ * 单个瞬时值再多几个通道也画不出曲线。两者是不同的东西，分开存。
+ */
+export interface TracePoint {
+  /** 相对实验开始的秒数 */
+  t: number;
+  ph: number;
+  temperature: number;
+  /** 容器内液体总体积（mL），随取用增加 */
+  volume: number;
+  /** 该点对应的操作标签，用于在曲线上标注关键节点 */
+  mark?: string;
 }
 
 interface LabState {
@@ -33,6 +67,10 @@ interface LabState {
   result: ReactionResult | null;
   // 实时读数
   readings: LabReadings;
+  // 过程曲线的采样点序列（按时间递增）
+  trace: TracePoint[];
+  // 实验开始时刻（首次采样时确定），用于算相对秒数
+  startedAt: number | null;
   // 当前实验会话 id（未建立 / 未登录则为 null，记录为旁路增强不阻塞交互）
   sessionId: string | null;
   // 会话绑定的实验 id：本 store 是模块级单例，切换实验时靠它识别"换了一个实验"
@@ -55,8 +93,12 @@ interface LabState {
   setSilent: (on: boolean) => void;
   // 绑定实验并创建会话（画布挂载时调用，幂等：已有会话则跳过）
   initSession: (experimentId: string) => void;
-  // 拖入一种试剂
-  addReagent: (s: Substance) => void;
+  /**
+   * 取用一种试剂。dose 省略时按规格默认量（溶液 10 mL / 固体 2 g）——
+   * 讲解重放与专用实验台的既有调用点不必关心用量，新面板则传精确值。
+   * 同一试剂重复取用是累加，不是忽略：真实实验里"再加 5 mL"是常规操作。
+   */
+  addReagent: (s: Substance, dose?: number) => void;
   // 从容器移除一种试剂（按化学式）
   removeReagent: (formula: string) => void;
   // 调节体系温度（加热 / 冷却）：直接设定温度读数，作为下次反应的基准
@@ -82,6 +124,36 @@ interface LabState {
 const INITIAL_READINGS: LabReadings = { ph: 7, temperature: 25 };
 
 /**
+ * 曲线采样点上限。
+ * 加热是连续滑杆、滴加可以点上百次，不设上限会让数组无限增长并把 SVG 折线
+ * 画成上千个点（渲染卡顿且看不出形状）。超限时丢最旧的点，保留近期过程。
+ */
+const TRACE_LIMIT = 240;
+
+/**
+ * 追加一个采样点。纯函数，返回新序列。
+ * 相同时刻（同一秒内的连续操作）不合并 —— 中和热测定里"混合瞬间"前后两点
+ * 的温差正是要测的东西，合并会把它抹掉。
+ */
+function sample(
+  prev: TracePoint[],
+  startedAt: number,
+  readings: LabReadings,
+  contents: ContainerItem[],
+  mark?: string,
+): TracePoint[] {
+  const point: TracePoint = {
+    t: Math.round(((Date.now() - startedAt) / 1000) * 10) / 10,
+    ph: readings.ph,
+    temperature: readings.temperature,
+    volume: Math.round(totalVolume(contents) * 100) / 100,
+    mark,
+  };
+  const next = [...prev, point];
+  return next.length > TRACE_LIMIT ? next.slice(next.length - TRACE_LIMIT) : next;
+}
+
+/**
  * 取可上报的会话 id：没有会话、或正处于讲解重放的静默期，都返回 null。
  * 所有旁路记录都经这一道，避免逐处遗漏 silent 判断。
  */
@@ -89,14 +161,32 @@ function reportTo(s: { sessionId: string | null; silent: boolean }): string | nu
   return s.sessionId && !s.silent ? s.sessionId : null;
 }
 
+/**
+ * 容器当前内容对应的 pH 基准。
+ *
+ * 必须按内容物估算，不能拿 7 当起点：原先 readings.ph 是常量 7，加什么试剂都不动，
+ * 于是往烧杯里倒稀盐酸、读数面板照样显示 7.0 —— 501 个实验里 257 个混合前就偏离
+ * 中性 2 个 pH 以上（盐酸 1.2、氨水 11.1、碳酸钠 9.2）。3D 的 pH 计走的是
+ * estimatePh(contents)，同一个实验切个视图读数就换一套，学生无从判断哪个是真的。
+ * 这两个视图共用 estimatePh，口径才统一。
+ */
+function basePh(contents: Substance[]): number {
+  return Math.round(estimatePh(contents) * 10) / 10;
+}
+
 // 根据引擎结果推导读数变化（趋势映射为具体数值，便于可视化）
 function deriveReadings(
   prev: LabReadings,
   result: ReactionResult,
+  contents: Substance[],
 ): LabReadings {
-  let ph = prev.ph;
-  if (result.phTrend === "increase") ph = Math.min(14, prev.ph + 3);
-  else if (result.phTrend === "decrease") ph = Math.max(0, prev.ph - 3);
+  // 反应后的 pH 以「反应前内容物的估算值」为基准做趋势偏移，而不是以 7 为基准。
+  // 稀盐酸(1.2)加锌粒产氢、酸被消耗 → phTrend=increase，应该是 1.2 往上走到 4.2，
+  // 而不是从 7 跳到 10 —— 后者把一杯酸液报成强碱，与右侧「石蕊变红」自相矛盾。
+  const start = basePh(contents);
+  let ph = start;
+  if (result.phTrend === "increase") ph = Math.min(14, start + 3);
+  else if (result.phTrend === "decrease") ph = Math.max(0, start - 3);
   else if (result.phTrend === "neutral") ph = 7;
 
   let temperature = prev.temperature;
@@ -114,6 +204,8 @@ export const useLabStore = create<LabState>((set, get) => ({
   contents: [],
   result: null,
   readings: INITIAL_READINGS,
+  trace: [],
+  startedAt: null,
   sessionId: null,
   experimentId: null,
   completed: false,
@@ -152,6 +244,9 @@ export const useLabStore = create<LabState>((set, get) => ({
       contents: [],
       result: null,
       readings: INITIAL_READINGS,
+      // 曲线必须随实验清空：不清的话新实验一打开就带着上个实验的温度曲线
+      trace: [],
+      startedAt: null,
       energized: false,
       // 静默标志必须复位：讲解重放到一半切走实验，标志会卡在 true，
       // 新实验里学生自己的操作从此一条都记不上
@@ -165,36 +260,105 @@ export const useLabStore = create<LabState>((set, get) => ({
     });
   },
 
-  addReagent: (s) =>
+  addReagent: (s, dose) =>
     set((state) => {
-      // 同化学式只保留一条，避免重复拖入堆叠
-      if (state.contents.some((c) => c.formula === s.formula)) return state;
-      const item: ContainerItem = { ...s, key: `${s.formula}-${Date.now()}` };
-      // 旁路记录拖入步骤（失败静默忽略）
+      const spec = reagentSpec(s.formula, s.category);
+      const add = dose ?? spec.defaultDose;
+      const existing = state.contents.find((c) => c.formula === s.formula);
+      // 同化学式累加用量而非新增一条：容器里"盐酸"只该有一项，但可以有 15 mL
+      const nextDose = (existing?.dose ?? 0) + add;
+      // amount 传给引擎判断过量/不足；bulk 与指示剂无物质的量，保持 undefined
+      const amount = amountOf(spec, nextDose) ?? undefined;
+      const item: ContainerItem = {
+        ...s,
+        amount,
+        key: existing?.key ?? `${s.formula}-${Date.now()}`,
+        dose: nextDose,
+        spec,
+      };
+      // 旁路记录取用步骤（失败静默忽略）。用量必须进 detail：
+      // 报告里"加入盐酸"与"加入 25.00 mL 0.1 mol/L 盐酸"是两种档次的实验记录。
       const sid = reportTo(state);
       if (sid) {
         appendStepRemote(sid, {
           action: "add",
-          detail: { formula: s.formula, name: s.name },
+          detail: {
+            formula: s.formula,
+            name: s.name,
+            用量: `${add} ${spec.unit}`,
+            规格: spec.label,
+            ...(amount !== undefined
+              ? { 物质的量: `${amount.toFixed(4)} mol` }
+              : {}),
+          },
           at: new Date().toISOString(),
         });
       }
-      // 拖入新试剂后清空旧结果，等待重新混合
-      return { contents: [...state.contents, item], result: null };
+      // 取用后清空旧结果，等待重新混合
+      const next = existing
+        ? state.contents.map((c) => (c.formula === s.formula ? item : c))
+        : [...state.contents, item];
+      // pH 读数随内容物即时更新：混合前就该看到「倒进去的是酸」
+      const readings = { ...state.readings, ph: basePh(next) };
+      // 讲解重放期间不采样：一趟播放会把曲线灌成几十个假点，学生自己做的过程被淹没
+      const startedAt = state.startedAt ?? Date.now();
+      return {
+        contents: next,
+        result: null,
+        readings,
+        startedAt: state.silent ? state.startedAt : startedAt,
+        trace: state.silent
+          ? state.trace
+          : sample(state.trace, startedAt, readings, next, `加${s.name}`),
+      };
     }),
 
   removeReagent: (formula) =>
-    set((state) => ({
-      contents: state.contents.filter((c) => c.formula !== formula),
-      // 容器变化后清空旧结果，等待重新混合
-      result: null,
-    })),
+    set((state) => {
+      const target = state.contents.find((c) => c.formula === formula);
+      // 容器里没这一项就什么都不做，避免点击竞态记出一条不存在的移除
+      if (!target) return state;
+      // 移除必须和 add 一样上报：只记加不记减，会话里就是一份只增不减的流水，
+      // 学生把 A 拿出来再混合，报告仍按 A+B 去分析，误差分析对着一个
+      // 根本没发生的反应写。detail 与 add 对齐，便于报告按化学式配对。
+      const sid = reportTo(state);
+      if (sid) {
+        appendStepRemote(sid, {
+          action: "remove",
+          detail: { formula: target.formula, name: target.name },
+          at: new Date().toISOString(),
+        });
+      }
+      const rest = state.contents.filter((c) => c.formula !== formula);
+      const readings = { ...state.readings, ph: basePh(rest) };
+      const startedAt = state.startedAt ?? Date.now();
+      return {
+        contents: rest,
+        // 容器变化后清空旧结果，等待重新混合
+        result: null,
+        // 把试剂拿出来，pH 也要跟着退回去，否则移除强酸后读数还停在 1.2
+        readings,
+        startedAt: state.silent ? state.startedAt : startedAt,
+        trace: state.silent
+          ? state.trace
+          : sample(state.trace, startedAt, readings, rest, `移除${target.name}`),
+      };
+    }),
 
   setTemperature: (t) => {
     const next = Math.max(0, Math.min(100, Math.round(t)));
-    const { readings, result, contents } = get();
+    const { readings, result, contents, silent, trace } = get();
     const sessionId = reportTo(get());
-    set({ readings: { ...readings, temperature: next } });
+    if (next === readings.temperature) return; // 值未变不采样，避免滑杆同格重复触发
+    const nextReadings = { ...readings, temperature: next };
+    const startedAt = get().startedAt ?? Date.now();
+    // 温度是唯一会连续变化的读数，曲线主要靠它成形（中和热的温度-时间曲线即此）
+    set({
+      readings: nextReadings,
+      ...(silent
+        ? {}
+        : { startedAt, trace: sample(trace, startedAt, nextReadings, contents) }),
+    });
     // 只在跨越加热阈值时记一步，不记每一次滑动：2D 是连续滑杆，
     // 逐格上报能刷出上百条"调温"把有意义的步骤挤出 500 条上限。
     // 加热与否是化学上唯一有判据意义的分界，报告要的正是这个。
@@ -220,10 +384,24 @@ export const useLabStore = create<LabState>((set, get) => ({
     // 原先只传 contents，界面上的"点燃酒精灯"按钮对反应结果毫无影响 ——
     // 提示语写着"调高温度（部分反应需加热）"，实际调了也一样，是句空话。
     const result = react(contents, { temperature: readings.temperature });
+    // 没反应也要按内容物给读数：反应不发生 ≠ 杯里是中性水
     const nextReadings = result.reacted
-      ? deriveReadings(readings, result)
-      : readings;
-    set({ result, readings: nextReadings });
+      ? deriveReadings(readings, result, contents)
+      : { ...readings, ph: basePh(contents) };
+    const { silent, trace } = get();
+    const startedAt = get().startedAt ?? Date.now();
+    set({
+      result,
+      readings: nextReadings,
+      // 混合点必须标注：中和热测定看的就是混合前后那一段陡升，
+      // 曲线上没有标记，学生分不清哪个峰是反应造成的
+      ...(silent
+        ? {}
+        : {
+            startedAt,
+            trace: sample(trace, startedAt, nextReadings, contents, "混合"),
+          }),
+    });
     // 旁路记录混合步骤与读数快照
     if (sessionId) {
       const at = new Date().toISOString();
@@ -240,6 +418,9 @@ export const useLabStore = create<LabState>((set, get) => ({
         ph: nextReadings.ph,
         temperature: nextReadings.temperature,
         at,
+        volume: Math.round(totalVolume(contents) * 100) / 100,
+        // 与 trace 上的标记同名：混合是体系改动点，它前后的读数不构成平行测定
+        mark: "混合",
       });
     }
   },
@@ -252,10 +433,28 @@ export const useLabStore = create<LabState>((set, get) => ({
         at: new Date().toISOString(),
       });
     }
-    set({ contents: [], result: null, readings: INITIAL_READINGS, energized: false });
+    set({
+      contents: [],
+      result: null,
+      readings: INITIAL_READINGS,
+      // 清空重做时曲线也要归零：留着上一轮的曲线，"多次测量"就分不清哪条是这一轮的
+      trace: [],
+      startedAt: null,
+      energized: false,
+    });
   },
 
   record: (action, detail, readings) => {
+    // 采样与会话上报解耦：没登录（sessionId 为空）时曲线仍要能画出来，
+    // 否则未登录用户的专用实验台读数面板永远是空的。
+    const state = get();
+    if (readings && !state.silent) {
+      const startedAt = state.startedAt ?? Date.now();
+      set({
+        startedAt,
+        trace: sample(state.trace, startedAt, readings, state.contents, action),
+      });
+    }
     const sessionId = reportTo(get());
     if (!sessionId) return;
     const at = new Date().toISOString();
@@ -267,6 +466,10 @@ export const useLabStore = create<LabState>((set, get) => ({
         ph: readings.ph,
         temperature: readings.temperature,
         at,
+        // 带上体积与动作标记，AI 报告才能复现实验台数据表的那套统计：
+        // 靠 mark 分出哪些是「读数」、体系在何处被改动，靠 volume 参与定量算式。
+        volume: Math.round(totalVolume(state.contents) * 100) / 100,
+        mark: action,
       });
     }
   },

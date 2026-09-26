@@ -3,6 +3,7 @@
 // 电解槽可视化：电源 + 双电极 + 电解液。完全由 electrolyze() 的放电结果驱动——
 // 阴极析金属 / 出气泡、阳极出气泡 / 溶解、铜离子析出时溶液变浅。本组件不含化学规则。
 import { electrolyze } from "@/lib/chem/electrolysis";
+import { useTranslations } from "next-intl";
 
 // 电解液底色（仅可视化）
 const ELECTROLYTE_COLOR: Record<string, { top: string; bottom: string }> = {
@@ -27,6 +28,7 @@ export function ElectrolysisCell({
   inertAnode?: boolean;
   powered?: boolean;
 }) {
+  const t = useTranslations("device");
   const result = electrolyze(electrolyte, { inertAnode });
   const base = ELECTROLYTE_COLOR[electrolyte] ?? { top: "#dcefff", bottom: "#a9d8f5" };
   // 铜离子析出 → 通电后溶液变浅
@@ -39,7 +41,7 @@ export function ElectrolysisCell({
   const anodeFill = ANODE_GAS_FILL[result?.anode.product ?? ""] ?? "#ffffff";
 
   return (
-    <svg width="200" height="244" viewBox="0 0 220 244" role="img" aria-label="电解槽" className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.16)]">
+    <svg width="200" height="244" viewBox="0 0 220 244" role="img" aria-label={t("electrolysisCell")} className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.16)]">
       <defs>
         <linearGradient id="ec-liquid" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={liquid.top} />
@@ -51,11 +53,11 @@ export function ElectrolysisCell({
       </defs>
 
       {/* 电源 + 端子 + 导线 */}
-      <rect x="74" y="14" width="72" height="26" rx="5" fill="#e7edf2" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
+      <rect x="74" y="14" width="72" height="26" rx="5" fill="#e7edf2" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
       <text x="86" y="33" fontSize="16" fontWeight="bold" fill="#c0392b">−</text>
       <text x="127" y="32" fontSize="15" fontWeight="bold" fill="#2c3e50">+</text>
-      <path d="M86 40 L86 58" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
-      <path d="M134 40 L134 58" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
+      <path d="M86 40 L86 58" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
+      <path d="M134 40 L134 58" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
       {/* 通电指示：导线高亮 */}
       {powered && (
         <>
@@ -89,8 +91,8 @@ export function ElectrolysisCell({
       {anodeGas && <ElectrodeBubbles x={136} fill={anodeFill} />}
 
       {/* 烧杯轮廓 */}
-      <path d="M40 92 L40 196 A60 13 0 0 0 160 196 L160 92" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
-      <ellipse cx="100" cy="92" rx="60" ry="12" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
+      <path d="M40 92 L40 196 A60 13 0 0 0 160 196 L160 92" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
+      <ellipse cx="100" cy="92" rx="60" ry="12" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
     </svg>
   );
 }

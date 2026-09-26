@@ -3,6 +3,7 @@
 // 原电池 / 腐蚀可视化：两金属电极 + 电流计 + 电解液。完全由 galvanicCell() 结果驱动——
 // 负极活泼金属溶解、正极析氢冒泡或吸氧、电流计偏转、电子流向高亮。不含化学规则。
 import { galvanicCell, type GalvanicResult } from "@/lib/chem/galvanic";
+import { useTranslations } from "next-intl";
 
 // 电极金属配色（仅可视化）
 const METAL_FILL: Record<string, string> = {
@@ -20,12 +21,13 @@ export function GalvanicCell({
   electrolyte: { formula: string; name: string };
   connected?: boolean;
 }) {
+  const t = useTranslations("device");
   const r: GalvanicResult | null = galvanicCell(metals, electrolyte);
   if (!r) return null;
   const hydrogen = connected && r.positive.kind === "hydrogen";
 
   return (
-    <svg width="200" height="244" viewBox="0 0 220 244" role="img" aria-label="原电池" className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.16)]">
+    <svg width="200" height="244" viewBox="0 0 220 244" role="img" aria-label={t("galvanicCell")} className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.16)]">
       <defs>
         <linearGradient id="gv-liquid" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#dcefff" />
@@ -37,13 +39,13 @@ export function GalvanicCell({
       </defs>
 
       {/* 电流计 G + 指针（接通后偏转） */}
-      <circle cx="110" cy="24" r="15" fill="#ffffff" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
+      <circle cx="110" cy="24" r="15" fill="#ffffff" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
       <text x="110" y="29" textAnchor="middle" fontSize="13" fontWeight="bold" className="fill-foreground/70">G</text>
       <line x1="110" y1="24" x2={connected ? 119 : 110} y2={connected ? 15 : 10} stroke="#c0392b" strokeWidth="2" className="transition-all duration-500" />
 
       {/* 导线 */}
-      <path d="M84 56 L84 24 L95 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
-      <path d="M125 24 L136 24 L136 56" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" />
+      <path d="M84 56 L84 24 L95 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
+      <path d="M125 24 L136 24 L136 56" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" />
       {/* 电子流向（负极 → 正极），接通后高亮流动 */}
       {connected && (
         <text x="98" y="13" fontSize="9" fill="#2f7d4f">
@@ -82,8 +84,8 @@ export function GalvanicCell({
       )}
 
       {/* 烧杯轮廓 */}
-      <path d="M40 92 L40 196 A60 13 0 0 0 160 196 L160 92" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
-      <ellipse cx="100" cy="92" rx="60" ry="12" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
+      <path d="M40 92 L40 196 A60 13 0 0 0 160 196 L160 92" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
+      <ellipse cx="100" cy="92" rx="60" ry="12" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
     </svg>
   );
 }
