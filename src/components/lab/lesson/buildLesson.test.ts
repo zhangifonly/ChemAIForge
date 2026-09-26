@@ -8,14 +8,20 @@ import {
   usesConductivity,
 } from "../vesselGeom";
 import { buildLesson } from "./buildLesson";
+import { plainT } from "@/lib/i18n/plainT";
+import zhMessages from "../../../../messages/zh.json";
 import { chooseVessel, planRig } from "@/lib/chem/scenePlan";
 import { react } from "@/lib/chem/engine";
+
+// 用中文词条跑测试：断言里的文案判据（"取用"、"加热"等）仍按中文校验，
+// 与改造前一致 —— 这些测试守的是讲解结构，不是某个语种的译文
+const t = plainT(zhMessages, "lesson");
 
 describe("buildLesson 为每个实验生成合理讲解", () => {
   it.each(allExperiments.map((e) => [e.slug, e] as const))(
     "%s",
     (_slug, exp) => {
-      const steps = buildLesson(exp);
+      const steps = buildLesson(exp, t);
       const electrochem =
         isElectrolysisSetup(exp.apparatus) ||
         isGalvanicSetup(exp.apparatus) ||
@@ -25,11 +31,11 @@ describe("buildLesson 为每个实验生成合理讲解", () => {
       expect(steps.length).toBeGreaterThanOrEqual(4);
 
       // 首步为原理且清空容器
-      expect(steps[0].phase).toBe("原理");
+      expect(steps[0].phase).toBe("theory");
       expect(steps[0].action).toEqual({ kind: "reset" });
 
       // 必有一个操作阶段步骤
-      expect(steps.some((s) => s.phase === "操作")).toBe(true);
+      expect(steps.some((s) => s.phase === "operate")).toBe(true);
 
       // 混合类实验恰有一个混合步骤；电化学实验无混合步骤
       const mixSteps = steps.filter((s) => s.action?.kind === "mix");
@@ -57,7 +63,7 @@ describe("讲解里的容器名与 3D 场景一致", () => {
     for (const exp of allExperiments) {
       const app = exp.apparatus ?? [];
       const want = NAME[chooseVessel(app, planRig(app).kind)];
-      const text = buildLesson(exp)
+      const text = buildLesson(exp, t)
         .map((s) => s.narration)
         .join("");
       for (const other of Object.values(NAME)) {
@@ -89,7 +95,7 @@ describe("现象口播取自引擎实际结果", () => {
       const keys = exp.probe?.reagentKeys ?? exp.reagents.slice(0, 3);
       const r = react(keys.map(resolveSubstance), exp.probe?.heated ? { heated: true } : {});
       if (!r.reacted) continue;
-      const text = buildLesson(exp).find((s) => s.id === "observe")?.narration ?? "";
+      const text = buildLesson(exp, t).find((s) => s.id === "observe")?.narration ?? "";
       if (r.producesGas && !text.includes("气泡")) bad.push(`${exp.slug} 漏了产气`);
       if (r.producesPrecipitate && !text.includes("沉淀")) bad.push(`${exp.slug} 漏了沉淀`);
       if (r.thermal === "exothermic" && !text.includes("放出热量"))

@@ -1,8 +1,10 @@
 // 实验分步讲解（借鉴 mathviz 的场景化口播）：每一步对应一句讲解 + 一个驱动
 // 实验台的动作。播放器按步执行动作，让立体烧杯随讲解自动演示。
 
-// 步骤所属阶段（用于显示阶段标签）
-export type LessonPhase = "原理" | "准备" | "操作" | "现象" | "结论";
+// 步骤所属阶段。
+// 取值用英文键而非中文：它既是类型标识又要显示给用户，写成中文就等于
+// 把显示文案钉死在类型里 —— 日语界面下无从翻译。显示文案走 lesson.phase* 词条。
+export type LessonPhase = "theory" | "prep" | "operate" | "observe" | "conclude";
 
 // 驱动实验台的动作：清空 / 取用试剂 / 加热 / 混合 / 通电；现象与结论步骤无动作
 export type LessonAction =

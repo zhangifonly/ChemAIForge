@@ -7,22 +7,34 @@ import { allExperiments } from "@/data/experiments";
 import { useTutorBus } from "@/components/ai/tutorBus";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
-import { buildLesson } from "./buildLesson";
-import { audioSrc, type VoiceRole } from "./audioKey";
+import { buildLesson, type LessonContent } from "./buildLesson";
+import { audioSrc, hasVoice, type VoiceGender } from "./audioKey";
+import { estimateNarrationMs, speechLang } from "./speechTiming";
 import { HEAT_THRESHOLD } from "@/lib/chem/engine";
+import { useLocale, useTranslations } from "next-intl";
 
 const PHASE_STYLE: Record<string, string> = {
-  原理: "bg-brand-500/12 text-brand-600 dark:text-brand-300",
-  准备: "bg-sky-500/12 text-sky-600 dark:text-sky-300",
-  操作: "bg-amber-500/12 text-amber-600 dark:text-amber-300",
-  现象: "bg-violet-500/12 text-violet-600 dark:text-violet-300",
-  结论: "bg-emerald-500/12 text-emerald-600 dark:text-emerald-300",
+  theory: "bg-brand-500/12 text-brand-600 dark:text-brand-300",
+  prep: "bg-sky-500/12 text-sky-600 dark:text-sky-300",
+  operate: "bg-amber-500/12 text-amber-600 dark:text-amber-300",
+  observe: "bg-violet-500/12 text-violet-600 dark:text-violet-300",
+  conclude: "bg-emerald-500/12 text-emerald-600 dark:text-emerald-300",
 };
 
-export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
+export function LessonPlayer({
+  experimentSlug,
+  content = {},
+}: {
+  experimentSlug: string;
+  /** 本地化的实验描述 / 目标 / 术语译名，由服务端页面注入（客户端不能 await 装载） */
+  content?: LessonContent;
+}) {
+  const t = useTranslations("lesson");
+  const locale = useLocale();
+  const tPhase = useTranslations("lesson.phase");
   const steps = useMemo(() => {
     const seed = allExperiments.find((e) => e.slug === experimentSlug);
-    return seed ? buildLesson(seed) : [];
+    return seed ? buildLesson(seed, (k, v) => t(k, v), content) : [];
   }, [experimentSlug]);
 
   const { reset, addReagent, mix, setEnergized, setTemperature } = useLabStore();
@@ -45,7 +57,9 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
   // 语音讲解：静音开关、倍速、音色（晓晓女声 / 云希男声，借鉴 mathviz）
   const [muted, setMuted] = useState(false);
   const [rate, setRate] = useState(1);
-  const [voice, setVoice] = useState<VoiceRole>("xiaoxiao");
+  // 按性别而非具体音色名选：60 个语种的音色名各不相同，
+  // 界面上学生要选的本来也只是"男声/女声"
+  const [voice, setVoice] = useState<VoiceGender>("female");
 
   // 确定性重放：从头执行到当前步，保证烧杯状态与讲解严格一致。
   //
@@ -113,8 +127,8 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       clearTimeout(watchdog);
       watchdog = window.setTimeout(advance, ms);
     };
-    // 拿不到音频时长时按字数估算播放时长（中文约每字 260ms，随倍速缩放）
-    const estimateMs = () => Math.max(4000, (text.length / rate) * 260);
+    // 拿不到音频时长时按字数估算（按文字系统区分系数，见 speechTiming）
+    const estimateMs = () => estimateNarrationMs(text, rate);
 
     // 回退：浏览器语音合成（音质较差，仅当 mp3 不可用时）
     const speakFallback = () => {
@@ -130,7 +144,9 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       }
       synth.cancel();
       const u = new SpeechSynthesisUtterance(text);
-      u.lang = "zh-CN";
+      // 必须跟随当前语言：写死 zh-CN 会让浏览器用中文发音去念日文、德文，
+      // 读出来的东西没人听得懂。51 个 basic 语种全靠这条回退路径出声。
+      u.lang = speechLang(locale);
       u.rate = rate;
       u.onend = advance;
       synth.speak(u);
@@ -138,48 +154,91 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       cleanup = () => synth.cancel();
     };
 
-    // 优先：预生成 mp3
-    const audio = new Audio(audioSrc(text, voice));
-    audio.playbackRate = rate;
-    audio.onended = advance;
-    audio.onerror = () => {
-      if (!cancelled) speakFallback();
+    /**
+     * 中间一级：请服务端按需合成。
+     *
+     * 预生成的 mp3 只覆盖中文（57 语种 × 双声共 8.8 GB，放不进仓库也放不进
+     * 部署机），其余语种靠这条路出声。合成约 1.6 秒，故播完当前一步就预取
+     * 下一步（见 prefetch），听起来是连续的。
+     * 服务端说 501（无音色）或 503（繁忙）就继续退到浏览器语音。
+     */
+    const synthViaServer = async () => {
+      if (fellBack || cancelled) return;
+      // 没有音色的语种服务端必回 501，直接走浏览器语音，省一次往返
+      if (!hasVoice(locale)) {
+        speakFallback();
+        return;
+      }
+      try {
+        const res = await fetch("/api/tts", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ text, locale, gender: voice }),
+        });
+        if (!res.ok) throw new Error(String(res.status));
+        const blob = await res.blob();
+        if (cancelled || fellBack) return;
+        playAudio(URL.createObjectURL(blob), true);
+      } catch {
+        speakFallback();
+      }
     };
-    // mp3 播到一半卡住时 onended 与 onerror 都不会再触发（播放已经开始过），
-    // 没有兜底就永久停在这一步、而按钮还显示"播放中"。另两条路径本来就有
-    // 定时器兜底，唯独这条没有。
-    // 时长已知就按真实长度算（留 3 秒余量，绝不能早于音频自然结束），否则按字数估。
-    // loadedmetadata 与 play() 谁先谁后不定，故两处共用一个函数：后执行的那次
-    // 总能用上更准的 duration，不会把已校准的值覆盖回粗糙的估算。
-    const armPlaybackWatchdog = () => {
-      if (fellBack) return;
-      armWatchdog(
-        Number.isFinite(audio.duration)
-          ? (audio.duration / rate) * 1000 + 3000
-          : estimateMs() + 3000,
-      );
-    };
-    audio.onloadedmetadata = armPlaybackWatchdog;
-    audio
-      .play()
-      .then(() => {
-        armPlaybackWatchdog();
-        cleanup = () => {
-          audio.pause();
-          audio.src = "";
-        };
-      })
-      .catch(() => {
-        if (!cancelled) speakFallback();
+
+    // 统一的播放装配：静态 mp3 与服务端合成的 blob 共用
+    function playAudio(src: string, isBlob = false) {
+      const audio = new Audio(src);
+      audio.playbackRate = rate;
+      audio.onended = advance;
+      audio.onerror = () => {
+        if (cancelled) return;
+        // 静态文件不存在时走服务端合成；blob 都播不了就只能靠浏览器语音
+        if (isBlob) speakFallback();
+        else void synthViaServer();
+      };
+      const armPlaybackWatchdog = () => {
+        if (fellBack) return;
+        armWatchdog(
+          Number.isFinite(audio.duration)
+            ? (audio.duration / rate) * 1000 + 3000
+            : estimateMs() + 3000,
+        );
+      };
+      audio.onloadedmetadata = armPlaybackWatchdog;
+      audio.play().then(armPlaybackWatchdog).catch(() => {
+        if (cancelled) return;
+        if (isBlob) speakFallback();
+        else void synthViaServer();
       });
+      cleanup = () => {
+        // 必须解绑：不解绑的话已被替换掉的音频播完仍会 advance 一次，
+        // 讲解会凭空跳步
+        audio.onended = null;
+        audio.onerror = null;
+        audio.onloadedmetadata = null;
+        audio.pause();
+        if (isBlob) URL.revokeObjectURL(src);
+      };
+    }
+
+    // 优先：预生成的静态 mp3（中文已全量生成）。取不到就走服务端按需合成。
+    playAudio(audioSrc(text, voice, locale));
+
+    // 预取下一步：按需合成要约 1.6 秒，播这一步时先把下一句备好，
+    // 翻页时就能直接命中服务端缓存（实测 4ms）。
+    // 只预取、不播放，失败静默忽略 —— 它只是优化，不该影响当前播放。
+    const nextStep = steps[index + 1];
+    if (nextStep && !muted && hasVoice(locale)) {
+      void fetch("/api/tts", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ text: nextStep.narration, locale, gender: voice }),
+      }).catch(() => {});
+    }
 
     return () => {
       cancelled = true;
       clearTimeout(watchdog);
-      audio.onended = null;
-      audio.onerror = null;
-      audio.onloadedmetadata = null;
-      audio.pause();
+      // 音频句柄由 playAudio 持有，停止与释放 blob 都在它设的 cleanup 里
       cleanup();
     };
   }, [playing, index, muted, rate, voice, steps]);
@@ -210,9 +269,9 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
       <div className="flex items-center justify-between">
         <h2 className="flex items-center gap-2 text-sm font-semibold text-foreground/75">
           <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
-          实验讲解
+          {t("cardTitle")}
         </h2>
-        <span className="text-xs tabular-nums text-foreground/45">
+        <span className="text-xs tabular-nums text-foreground/65">
           {index + 1} / {steps.length}
         </span>
       </div>
@@ -223,7 +282,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
           <span
             className={`rounded-full px-2 py-0.5 text-xs font-medium ${PHASE_STYLE[step.phase]}`}
           >
-            {step.phase}
+            {tPhase(step.phase)}
           </span>
           <span className="text-sm font-medium">{step.title}</span>
         </div>
@@ -236,12 +295,12 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
             useTutorBus
               .getState()
               .ask(
-                `讲解到「${step.title}」这一步：${step.narration} 请结合此刻烧杯里的现象与读数，简明讲解其中的化学原理与方程式。`,
+                t("askTutor", { title: step.title, narration: step.narration }),
               )
           }
           className="mt-1 inline-flex w-fit items-center gap-1 rounded-full border border-brand-400/40 bg-brand-500/5 px-3 py-1 text-xs font-medium text-brand-600 transition-colors hover:bg-brand-500/12 dark:text-brand-300"
         >
-          🤖 让导师讲讲这一步
+          🤖 {t("askTutorButton")}
         </button>
       </div>
 
@@ -262,41 +321,57 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
 
       {/* 控制条 */}
       <div className="flex items-center justify-center gap-2">
-        <CtrlButton onClick={() => go(index - 1)} disabled={index === 0} label="上一步">
+        <CtrlButton onClick={() => go(index - 1)} disabled={index === 0} label={t("prev")}>
           ‹
         </CtrlButton>
         <button
           type="button"
           onClick={togglePlay}
           className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-brand-500 to-brand-600 text-white shadow-soft transition-transform hover:scale-105 active:scale-95"
-          title={playing ? "暂停" : "播放"}
+          title={playing ? t("pause") : t("play")}
         >
           {playing ? "❚❚" : "▶"}
         </button>
         <CtrlButton
           onClick={() => go(index + 1)}
           disabled={index >= steps.length - 1}
-          label="下一步"
+          label={t("next")}
         >
           ›
         </CtrlButton>
       </div>
 
-      {/* 语音：静音开关 + 音色（晓晓♀/云希♂）+ 倍速 */}
-      <div className="flex flex-wrap items-center justify-center gap-2 text-xs">
+      {/* 语音：静音开关 + 音色（女声 / 男声）+ 倍速。
+          edge-tts 没有音色的语种（亚美尼亚语、旁遮普语、菲律宾语）不显示音色选择：
+          那里只能靠浏览器内置语音，多数系统也没有这几种，选男声女声都不会出声。
+          如实告诉用户"本语言暂无语音、讲解按字幕自动推进"，比给一组点了没反应的按钮好 */}
+      {!hasVoice(locale) ? (
+        <p className="text-center text-[11px] text-foreground/65">{t("noVoice")}</p>
+      ) : null}
+      {/* 旁遮普语语音来自 CC-BY-SA 4.0 模型，许可要求署名（见 THIRD_PARTY_NOTICES.md） */}
+      {locale === "pa" ? (
+        <p className="text-center text-[10px] text-foreground/65">
+          Voice: VITS Open Bible — Punjabi (CC BY-SA 4.0)
+        </p>
+      ) : null}
+      <div
+        className={`flex flex-wrap items-center justify-center gap-2 text-xs ${
+          hasVoice(locale) ? "" : "hidden"
+        }`}
+      >
         <button
           type="button"
           onClick={() => setMuted((m) => !m)}
           className="flex items-center gap-1 rounded-full border border-foreground/15 px-2.5 py-1 text-foreground/70 transition-colors hover:border-brand-400/50 hover:bg-brand-500/5"
-          title={muted ? "开启语音讲解" : "关闭语音讲解"}
+          title={muted ? t("voiceOn") : t("voiceOff")}
         >
-          {muted ? "🔇 已静音" : "🔊 语音讲解"}
+          {muted ? t("muted") : t("voiceLabel")}
         </button>
         {/* 音色切换 */}
         <div className="flex items-center gap-1 rounded-full bg-foreground/5 p-0.5">
           {([
-            ["xiaoxiao", "晓晓♀"],
-            ["yunxi", "云希♂"],
+            ["female", t("voiceFemale")],
+            ["male", t("voiceMale")],
           ] as const).map(([v, label]) => (
             <button
               key={v}
@@ -305,7 +380,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
               className={`rounded-full px-2 py-0.5 transition-colors ${
                 voice === v
                   ? "bg-brand-500 text-white"
-                  : "text-foreground/55 hover:text-foreground/80"
+                  : "text-foreground/65 hover:text-foreground/80"
               }`}
             >
               {label}
@@ -321,7 +396,7 @@ export function LessonPlayer({ experimentSlug }: { experimentSlug: string }) {
               className={`rounded-full px-2 py-0.5 tabular-nums transition-colors ${
                 rate === s
                   ? "bg-brand-500 text-white"
-                  : "text-foreground/55 hover:text-foreground/80"
+                  : "text-foreground/65 hover:text-foreground/80"
               }`}
             >
               {s}×

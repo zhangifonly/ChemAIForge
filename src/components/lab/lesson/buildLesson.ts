@@ -16,12 +16,43 @@ import { conductivity } from "@/lib/chem/conductivity";
 import { react } from "@/lib/chem/engine";
 import { chooseVessel, planRig } from "@/lib/chem/scenePlan";
 
-/** 容器的中文称呼，用于口播 */
-const VESSEL_NAME: Record<string, string> = {
-  beaker: "烧杯",
-  tube: "试管",
-  flask: "锥形瓶",
-};
+/**
+ * 讲解文案的取词函数。
+ *
+ * buildLesson 保持纯函数、由调用方注入取词函数，而不是自己去读词条：
+ * 它有三个调用方 —— 服务端的详情页、客户端的播放器、Node 里的 TTS 生成脚本，
+ * 三者取词条的方式各不相同（getTranslations / useTranslations / 直接读 JSON）。
+ * 让它只依赖一个 (key, vars) => string，三方都能满足，也仍然可测。
+ */
+export type LessonT = (key: string, vars?: Record<string, string | number>) => string;
+
+/**
+ * 该实验的本地化内容与术语译名。
+ *
+ * 口播里有三处直接取自实验数据，词条翻译覆盖不到它们：
+ *   - description 与 objectives —— 译文在 content/<locale>.json；
+ *   - reagents 的中文名 —— 它是引擎匹配键不能改，展示时换成术语表里的译名。
+ * 不传则一律用中文原文，与改造前行为一致。
+ */
+export interface LessonContent {
+  description?: string;
+  objectives?: string[];
+  /** 中文试剂名 → 该语种译名 */
+  terms?: Record<string, string>;
+  /**
+   * 引擎现象文本 → 该语种译文（电解两极观察、原电池电子流向、导电性说明）。
+   * 这些句子由引擎运行时产出，词条覆盖不到；不传则按中文原样拼进口播。
+   */
+  phrases?: Record<string, string>;
+}
+
+/** 按 content.phrases 翻译一句引擎输出，查不到原样返回 */
+function ph(content: LessonContent, text: string): string {
+  return content.phrases?.[text] ?? text;
+}
+
+/** 3D 选型给出的器皿种类（与 scenePlan.chooseVessel 的取值一致） */
+type VesselKind = "beaker" | "tube" | "flask";
 
 /**
  * 讲解里提到的容器必须与 3D 里真正画出来的那个一致。
@@ -31,9 +62,27 @@ const VESSEL_NAME: Record<string, string> = {
  * 其中 54 个更在同一段讲解里先说烧杯、再说试管、又说烧杯，自相矛盾。
  * 这里复用 3D 完全相同的推导（planRig + chooseVessel），两边不可能再对不上。
  */
-function vesselName(exp: ExperimentSeed): string {
+function vesselKind(exp: ExperimentSeed): VesselKind {
   const apparatus = exp.apparatus ?? [];
-  return VESSEL_NAME[chooseVessel(apparatus, planRig(apparatus).kind)] ?? "烧杯";
+  const kind = chooseVessel(apparatus, planRig(apparatus).kind);
+  return kind === "tube" || kind === "flask" ? kind : "beaker";
+}
+
+/**
+ * 取「带器皿的整句」而不是拿器皿名去填占位符。
+ *
+ * 句子与器皿名分开翻译再拼接，在有格变化或后置词的语言里会出错：亚美尼亚语拼成
+ * 「Բաժակ-ի」（大写名词 + 连字符硬接格尾），德语缺冠词，英语是 "add it to Erlenmeyer Flask"。
+ * 器皿只有 3 种、涉及的句子只有 3 句，故每种组合都整句翻译（词条键 narrTake_flask 等，
+ * 由 scripts/i18n-inline-vessel.mjs 生成），让译者一次处理好变格与冠词。
+ */
+function vesselSentence(
+  t: LessonT,
+  sentence: "narrTake" | "narrHeat" | "narrMix",
+  kind: VesselKind,
+  vars?: Record<string, string>,
+): string {
+  return t(`${sentence}_${kind}`, vars);
 }
 
 /**
@@ -58,19 +107,19 @@ function actualPhenomena(exp: ExperimentSeed, reagents: string[]): ReactionExpec
   };
 }
 
-// 把现象四元组铺成一句口播
-function describePhenomena(e?: ReactionExpectation): string {
-  if (!e || !e.reacted)
-    return "仔细观察体系，留意是否出现颜色、气泡或温度的变化。";
+// 把现象四元组铺成一句口播。
+// 分隔符走词条而非写死"，"：各语言的列举标点不同（英语用逗号加 and、
+// 日语用读点），把中文顿号硬编码进来，译文读起来就是中文腔的外语。
+function describePhenomena(e: ReactionExpectation | undefined, t: LessonT): string {
+  if (!e || !e.reacted) return t("observeGeneric");
   const parts: string[] = [];
-  if (e.gas) parts.push("有气泡不断逸出");
-  if (e.precipitate) parts.push("溶液变浑浊并生成沉淀");
-  if (e.colorChange) parts.push("溶液颜色发生明显变化");
-  if (e.thermal === "exothermic") parts.push("同时放出热量、温度升高");
-  else if (e.thermal === "endothermic") parts.push("同时吸收热量、温度下降");
-  if (parts.length === 0)
-    return "反应正在发生，注意观察 pH 与温度读数的变化。";
-  return `可以看到${parts.join("，")}。`;
+  if (e.gas) parts.push(t("partGas"));
+  if (e.precipitate) parts.push(t("partPrecipitate"));
+  if (e.colorChange) parts.push(t("partColor"));
+  if (e.thermal === "exothermic") parts.push(t("partExo"));
+  else if (e.thermal === "endothermic") parts.push(t("partEndo"));
+  if (parts.length === 0) return t("observeReacting");
+  return t("phenomenaList", { parts: parts.join(t("joinComma")) });
 }
 
 // 选定参与演示的试剂：优先用探针试剂（保证能反应），否则取前若干种
@@ -80,18 +129,20 @@ function pickReagents(exp: ExperimentSeed): string[] {
 }
 
 // 结论步骤（实验目标），电化学与混合讲解共用
-function summaryStep(exp: ExperimentSeed): LessonStep | null {
+function summaryStep(exp: ExperimentSeed, t: LessonT, content: LessonContent): LessonStep | null {
   if (!exp.objectives.length) return null;
   return {
     id: "summary",
-    phase: "结论",
-    title: "实验小结",
-    narration: `通过本实验，你将${exp.objectives.join("；")}。`,
+    phase: "conclude",
+    title: t("titleSummary"),
+    narration: t("summary", {
+      objectives: (content.objectives ?? exp.objectives).join(t("joinSemicolon")),
+    }),
   };
 }
 
 // 电解实验讲解：依放电顺序描述两极现象
-function electrolysisLesson(exp: ExperimentSeed): LessonStep[] | null {
+function electrolysisLesson(exp: ExperimentSeed, t: LessonT, content: LessonContent): LessonStep[] | null {
   if (!isElectrolysisSetup(exp.apparatus)) return null;
   const electrolyte = exp.reagents
     .map((r) => resolveSubstance(r).formula)
@@ -100,67 +151,70 @@ function electrolysisLesson(exp: ExperimentSeed): LessonStep[] | null {
   const er = electrolyze(electrolyte, { inertAnode: isInertAnode(exp.apparatus) });
   if (!er) return null;
   const steps: LessonStep[] = [
-    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
-    { id: "setup", phase: "准备", title: "连接装置", narration: "将电极插入电解液，分别与直流电源的正、负极相连。" },
-    { id: "power", phase: "操作", title: "接通电源", narration: "接通直流电源，开始电解，注意观察两极变化。", action: { kind: "energize" } },
+    { id: "intro", phase: "theory", title: t("titlePrinciple"), narration: content.description ?? exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "prep", title: t("titleConnect"), narration: t("narrSetupElectrode") },
+    { id: "power", phase: "operate", title: t("titlePowerOn"), narration: t("narrPowerOn"), action: { kind: "energize" } },
     {
       id: "observe",
-      phase: "现象",
-      title: "两极现象",
-      narration: `${er.cathode.observation}；${er.anode.observation}${er.colorFades ? "；溶液蓝色逐渐变浅" : ""}。`,
+      phase: "observe",
+      title: t("titleElectrodes"),
+      narration: `${ph(content, er.cathode.observation)}${t("joinSemicolon")}${ph(content, er.anode.observation)}${er.colorFades ? t("electrodesFading") : ""}${t("sentenceEnd")}`,
     },
   ];
-  const s = summaryStep(exp);
+  const s = summaryStep(exp, t, content);
   if (s) steps.push(s);
   return steps;
 }
 
 // 原电池 / 腐蚀讲解：依金属活动性描述正负极
-function galvanicLesson(exp: ExperimentSeed): LessonStep[] | null {
+function galvanicLesson(exp: ExperimentSeed, t: LessonT, content: LessonContent): LessonStep[] | null {
   if (!isGalvanicSetup(exp.apparatus)) return null;
   const metals = exp.reagents
     .map((r) => resolveSubstance(r))
     .filter((s) => isGalvanicMetal(s.formula));
   if (metals.length === 0) return null;
   const acid = exp.reagents.map((r) => resolveSubstance(r)).find((s) => s.category === "acid");
-  const electrolyte = acid ?? { formula: "NaCl", name: "食盐水" };
+  const electrolyte = acid ?? { formula: "NaCl", name: t("brine") };
   const gr = galvanicCell(metals.map((m) => m.formula), electrolyte);
   if (!gr) return null;
   const steps: LessonStep[] = [
-    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
-    { id: "setup", phase: "准备", title: "连接电路", narration: "用导线将两电极经电流计相连，插入电解质溶液。" },
-    { id: "connect", phase: "操作", title: "接通电路", narration: "接通电路，观察电流计指针是否偏转。", action: { kind: "energize" } },
+    { id: "intro", phase: "theory", title: t("titlePrinciple"), narration: content.description ?? exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "prep", title: t("titleConnectCircuit"), narration: t("narrSetupCircuit") },
+    { id: "connect", phase: "operate", title: t("titleConnectOn"), narration: t("narrConnectOn"), action: { kind: "energize" } },
     {
       id: "observe",
-      phase: "现象",
-      title: "两极现象",
-      narration: `${gr.negative.observation}；${gr.positive.observation}；${gr.electronFlow}。`,
+      phase: "observe",
+      title: t("titleElectrodes"),
+      narration:
+        [gr.negative.observation, gr.positive.observation, gr.electronFlow]
+          .map((x) => ph(content, x))
+          .join(t("joinSemicolon")) + t("sentenceEnd"),
     },
   ];
-  const s = summaryStep(exp);
+  const s = summaryStep(exp, t, content);
   if (s) steps.push(s);
   return steps;
 }
 
 // 导电性对比讲解：强 / 弱电解质灯泡亮度对比
-function conductivityLesson(exp: ExperimentSeed): LessonStep[] | null {
+function conductivityLesson(exp: ExperimentSeed, t: LessonT, content: LessonContent): LessonStep[] | null {
   if (!usesConductivity(exp.apparatus)) return null;
   const solutions = exp.reagents
     .map((r) => resolveSubstance(r))
     .filter((s) => s.category !== "metal" && s.category !== "other");
   if (solutions.length === 0) return null;
   const steps: LessonStep[] = [
-    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
-    { id: "setup", phase: "准备", title: "连接装置", narration: "将相同浓度的溶液分别接入带灯泡的电极电路。" },
-    { id: "power", phase: "操作", title: "通电检测", narration: "接通电路，比较各溶液中灯泡的明暗。", action: { kind: "energize" } },
+    { id: "intro", phase: "theory", title: t("titlePrinciple"), narration: content.description ?? exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "prep", title: t("titleConnect"), narration: t("narrSetupConduct") },
+    { id: "power", phase: "operate", title: t("titleConductTest"), narration: t("narrConductTest"), action: { kind: "energize" } },
     {
       id: "observe",
-      phase: "现象",
-      title: "导电性对比",
-      narration: solutions.map((s) => conductivity(s).note).join(""),
+      phase: "observe",
+      title: t("titleConductCompare"),
+      narration: solutions.map((s) => ph(content, conductivity(s).note)).join(t("sentenceJoin")),
     },
   ];
-  const s = summaryStep(exp);
+  const s = summaryStep(exp, t, content);
   if (s) steps.push(s);
   return steps;
 }
@@ -168,41 +222,45 @@ function conductivityLesson(exp: ExperimentSeed): LessonStep[] | null {
 // 通用电化学兜底：装置判定为电解 / 原电池 / 导电，但无法被精细引擎建模
 // （如熔盐电解、燃料电池、外加电流保护）。仍属电化学，须走通电讲解而非混合，
 // 否则会错误地生成「混合反应」步骤。
-function genericElectrochemLesson(exp: ExperimentSeed): LessonStep[] | null {
+function genericElectrochemLesson(exp: ExperimentSeed, t: LessonT, content: LessonContent): LessonStep[] | null {
   const isElectrolysis = isElectrolysisSetup(exp.apparatus);
   const isGalvanic = isGalvanicSetup(exp.apparatus);
   if (!isElectrolysis && !isGalvanic && !usesConductivity(exp.apparatus)) return null;
-  const verb = isElectrolysis ? "接通直流电源，开始电解" : "接通电路";
+  const verb = isElectrolysis ? t("verbElectrolysis") : t("verbCircuit");
   const steps: LessonStep[] = [
-    { id: "intro", phase: "原理", title: "实验原理", narration: exp.description, action: { kind: "reset" } },
-    { id: "setup", phase: "准备", title: "连接装置", narration: "按电路图连接电极与电源／测量仪表，插入电解质。" },
-    { id: "power", phase: "操作", title: verb, narration: `${verb}，注意观察两极及仪表的变化。`, action: { kind: "energize" } },
-    { id: "observe", phase: "现象", title: "两极现象", narration: describePhenomena(exp.probe?.expect) },
+    { id: "intro", phase: "theory", title: t("titlePrinciple"), narration: content.description ?? exp.description, action: { kind: "reset" } },
+    { id: "setup", phase: "prep", title: t("titleConnect"), narration: t("narrSetupGeneric") },
+    { id: "power", phase: "operate", title: verb, narration: t("narrRigOn", { verb }), action: { kind: "energize" } },
+    { id: "observe", phase: "observe", title: t("titleElectrodes"), narration: describePhenomena(exp.probe?.expect, t) },
   ];
-  const s = summaryStep(exp);
+  const s = summaryStep(exp, t, content);
   if (s) steps.push(s);
   return steps;
 }
 
-export function buildLesson(exp: ExperimentSeed): LessonStep[] {
+export function buildLesson(
+  exp: ExperimentSeed,
+  t: LessonT,
+  content: LessonContent = {},
+): LessonStep[] {
   // 电化学实验：生成模式对应的讲解（通电 / 接通电路 + 真实两极现象）
   const electro =
-    electrolysisLesson(exp) ??
-    galvanicLesson(exp) ??
-    conductivityLesson(exp) ??
-    genericElectrochemLesson(exp);
+    electrolysisLesson(exp, t, content) ??
+    galvanicLesson(exp, t, content) ??
+    conductivityLesson(exp, t, content) ??
+    genericElectrochemLesson(exp, t, content);
   if (electro) return electro;
 
   const steps: LessonStep[] = [];
   const reagents = pickReagents(exp);
-  const vessel = vesselName(exp);
+  const vessel = vesselKind(exp);
 
   // 原理：实验描述
   steps.push({
     id: "intro",
-    phase: "原理",
-    title: "实验原理",
-    narration: exp.description,
+    phase: "theory",
+    title: t("titlePrinciple"),
+    narration: content.description ?? exp.description,
     action: { kind: "reset" },
   });
 
@@ -210,9 +268,11 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
   reagents.forEach((r, i) => {
     steps.push({
       id: `add-${i}`,
-      phase: "准备",
-      title: `取用${r}`,
-      narration: `取用${r}，加入${vessel}中。`,
+      phase: "prep",
+      // 试剂名取术语表译名：r 本身是引擎匹配键（中文），不能改，
+      // 但口播里该说学生看得懂的名字
+      title: t("titleTake", { reagent: content.terms?.[r] ?? r }),
+      narration: vesselSentence(t, "narrTake", vessel, { reagent: content.terms?.[r] ?? r }),
       action: { kind: "add", reagent: r },
     });
   });
@@ -223,9 +283,9 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
   if (needHeat) {
     steps.push({
       id: "heat",
-      phase: "操作",
-      title: "点燃酒精灯",
-      narration: `点燃酒精灯给${vessel}加热 —— 这个反应必须在受热条件下才能进行。`,
+      phase: "operate",
+      title: t("titleHeat"),
+      narration: vesselSentence(t, "narrHeat", vessel),
       action: { kind: "heat" },
     });
   }
@@ -233,31 +293,25 @@ export function buildLesson(exp: ExperimentSeed): LessonStep[] {
   // 操作：混合
   steps.push({
     id: "mix",
-    phase: "操作",
-    title: "混合反应",
+    phase: "operate",
+    title: t("titleMix"),
     narration: needHeat
-      ? "受热后将试剂充分混合，反应随即开始。"
-      : `将${vessel}中的试剂充分混合，反应随即开始。`,
+      ? t("narrMixHeated")
+      : vesselSentence(t, "narrMix", vessel),
     action: { kind: "mix" },
   });
 
   // 现象：由探针描述
   steps.push({
     id: "observe",
-    phase: "现象",
-    title: "观察现象",
-    narration: describePhenomena(actualPhenomena(exp, reagents)),
+    phase: "observe",
+    title: t("titleObserve"),
+    narration: describePhenomena(actualPhenomena(exp, reagents), t),
   });
 
-  // 结论：实验目标
-  if (exp.objectives.length) {
-    steps.push({
-      id: "summary",
-      phase: "结论",
-      title: "实验小结",
-      narration: `通过本实验，你将${exp.objectives.join("；")}。`,
-    });
-  }
+  // 结论：实验目标（与电化学讲解共用 summaryStep）
+  const summary = summaryStep(exp, t, content);
+  if (summary) steps.push(summary);
 
   return steps;
 }
