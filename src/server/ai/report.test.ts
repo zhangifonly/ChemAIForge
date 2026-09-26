@@ -214,3 +214,27 @@ describe("parseReportText", () => {
     expect(r.improvements).toEqual(["有效建议"]);
   });
 });
+
+describe("报告 JSON 容错解析", () => {
+  const body = (c: string) =>
+    JSON.stringify({ conclusion: c, errorAnalysis: "x", improvements: ["y"], knowledgeAssessment: "z" });
+
+  it("德语 „…“ 里未转义的直引号不再让整份报告失败", () => {
+    // 模型原样输出：„exotherm" 收尾的 " 没有转义，它让 JSON 在这里断开
+    const text =
+      '{"conclusion":"Die Reaktion ist „exotherm" und setzt Wärme frei.","errorAnalysis":"x","improvements":["y"],"knowledgeAssessment":"z"}';
+    expect(parseReportText(text).conclusion).toBe('Die Reaktion ist „exotherm" und setzt Wärme frei.');
+  });
+
+  it("JSON 前后夹解释文字也能取出", () => {
+    expect(parseReportText(`Hier ist der Bericht:\n${body("ok")}\nViel Erfolg!`).conclusion).toBe("ok");
+  });
+
+  it("代码围栏包裹也能取出", () => {
+    expect(parseReportText("```json\n" + body("ok") + "\n```").conclusion).toBe("ok");
+  });
+
+  it("正常 JSON 不受影响，已转义的引号保持原样", () => {
+    expect(parseReportText(body('he said "hi"')).conclusion).toBe('he said "hi"');
+  });
+});

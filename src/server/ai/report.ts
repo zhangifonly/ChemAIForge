@@ -89,7 +89,12 @@ function buildSystemPrompt(locale: string): string {
   const language = localeMeta(locale).englishName;
   return [
     "你是一位资深化学实验导师，负责在虚拟实验结束后为学生生成结构化评估报告。",
-    `Write ALL output in ${language}. 语气专业且鼓励，结合实验目标、操作步骤与测量读数客观分析。`,
+    // 输出语言要放在最前、说两遍、并点明"输入是中文也照样"：实测只写一句
+    // "Write ALL output in German" 时，被其后十几行中文指令与中文实验数据压过去，
+    // 德语界面生成的报告通篇是中文。
+    `OUTPUT LANGUAGE: ${language}. Every string value in the JSON must be written in ${language}.`,
+    `The instructions and experiment data below are in Chinese; that does not change the output language — still write in ${language}.`,
+    "语气专业且鼓励，结合实验目标、操作步骤与测量读数客观分析。",
     // 学生在实验台上已经看到了带具体数字的数据表，报告若只写「读数存在波动」等于把结论丢掉
     "已给出的定量统计（平均值、相对平均偏差、数据一致性判定）必须原样引用到误差分析中，",
     "不得回避具体数字改写成定性描述，也不得自行编造未给出的数值。",
@@ -101,6 +106,8 @@ function buildSystemPrompt(locale: string): string {
     '  "improvements": ["改进建议1", "改进建议2"],',
     '  "knowledgeAssessment": "对学生相关知识点掌握程度的评估"',
     "}",
+    // 结尾再重申一次：长提示词里靠后的约束更容易被遵守
+    `Reminder: all JSON string values in ${language}.`,
   ].join("\n");
 }
 
@@ -185,15 +192,80 @@ function normalizeImprovement(x: unknown): string | null {
 }
 
 // 容错解析模型文本为结构化报告：剥离可能的代码块标记后 JSON.parse 并校验关键字段
+/**
+ * 取回复中第一个完整 JSON 对象：按括号配对，跳过字符串里的括号。
+ * 模型偶尔在 JSON 前后加解释或代码围栏，只剥首尾围栏不够。
+ */
+function firstJsonObject(text: string): string {
+  const start = text.indexOf("{");
+  if (start < 0) return text;
+  let depth = 0;
+  let inStr = false;
+  let esc = false;
+  for (let i = start; i < text.length; i++) {
+    const c = text[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === "\\") esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === "{") depth++;
+    else if (c === "}" && --depth === 0) return text.slice(start, i + 1);
+  }
+  return text.slice(start);
+}
+
+/**
+ * 修复字符串值里未转义的直引号。
+ *
+ * 德语报告常写 „…"：那个收尾的 " 就是 JSON 的字符串定界符，模型没转义，
+ * JSON 当场断开 —— 实测德语报告因此整份生成失败，日语、阿拉伯语用自己的引号则无事。
+ * 判断规则：一个 " 若后面紧跟的不是 JSON 结构字符（, } ] : 或空白后接这些），
+ * 它就不是定界符而是正文里的引号，转义掉。
+ */
+function repairJsonQuotes(json: string): string {
+  let out = "";
+  let inStr = false;
+  let esc = false;
+  for (let i = 0; i < json.length; i++) {
+    const c = json[i];
+    if (!inStr) {
+      if (c === '"') inStr = true;
+      out += c;
+      continue;
+    }
+    if (esc) {
+      esc = false;
+      out += c;
+      continue;
+    }
+    if (c === "\\") {
+      esc = true;
+      out += c;
+      continue;
+    }
+    if (c === '"') {
+      const rest = json.slice(i + 1).trimStart();
+      const closes = rest === "" || /^[,}\]:]/.test(rest);
+      if (closes) {
+        inStr = false;
+        out += c;
+      } else {
+        out += '\\"';
+      }
+      continue;
+    }
+    out += c;
+  }
+  return out;
+}
+
 export function parseReportText(text: string): ExperimentReport {
-  const cleaned = text
-    .trim()
-    .replace(/^```(?:json)?/i, "")
-    .replace(/```$/, "")
-    .trim();
   let obj: Record<string, unknown>;
   try {
-    obj = JSON.parse(cleaned) as Record<string, unknown>;
+    obj = JSON.parse(repairJsonQuotes(firstJsonObject(text))) as Record<string, unknown>;
   } catch {
     throw new Error("AI 返回的报告不是合法 JSON，无法解析。");
   }
