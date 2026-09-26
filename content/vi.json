@@ -2665,7 +2665,7 @@
   },
   "colorimetric-iron": {
     "title": "Xác định hàm lượng sắt bằng phương pháp so màu",
-    "description": "Dựa vào phản ứng giữa sắt(III) clorua và kali thioxianat tạo phức màu đỏ máu, lập thang màu chuẩn rồi đo bằng máy quang phổ hấp thụ (máy đo quang) để xác định hàm lượng sắt trong dung dịch.",
+    "description": "Dựa vào phản ứng giữa sắt(III) clorua và kali thioxianat tạo phức màu đỏ máu, lập thang màu chuẩn rồi đo bằng máy quang phổ hấp thụ để xác định hàm lượng sắt trong dung dịch.",
     "objectives": [
       "Nắm vững phương pháp phân tích so màu",
       "Xây dựng đường chuẩn",
@@ -2961,8 +2961,8 @@
     ]
   },
   "chlorine-lime-bleaching-powder": {
-    "title": "Điều chế bột tẩy trắng từ khí clo và nước vôi đục (sữa vôi)",
-    "description": "Dẫn khí clo vào nước vôi đục (sữa vôi), hệ huyền phù hấp thụ khí clo làm màu vàng lục biến mất, thu được bột tẩy trắng có thành phần hoạt tính là canxi hipoclorit.",
+    "title": "Điều chế bột tẩy trắng từ khí clo và nước vôi đục",
+    "description": "Dẫn khí clo vào nước vôi đục, hệ huyền phù hấp thụ khí clo làm màu vàng lục biến mất, thu được bột tẩy trắng có thành phần hoạt tính là canxi hipoclorit.",
     "objectives": [
       "Hiểu nguyên tắc sản xuất bột tẩy trắng trong công nghiệp",
       "Nhận biết canxi hipoclorit là thành phần hoạt tính của bột tẩy trắng",

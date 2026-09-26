@@ -1603,7 +1603,7 @@
   },
   "nh3-tail-gas-absorption": {
     "title": "Dokazivanje amonijevog plina i apsorpcija repnog plina",
-    "description": "Amonijev plin pripravlja se zagrijavanjem smjese amonijevog klorida i kalcijevog hidroksida te dokazuje navlaženim lakmusovim papirom. Na izlaznom kraju staklena cijev (za odvođenje plina) postavlja se blizu površine destilirane vode kako bi se apsorbirao repni plin i istodobno spriječilo uvlačenje tekućine.",
+    "description": "Amonijev plin pripravlja se zagrijavanjem smjese amonijevog klorida i kalcijevog hidroksida te dokazuje navlaženim lakmusovim papirom. Na izlaznom kraju staklena cijev za odvođenje plina postavlja se blizu površine destilirane vode kako bi se apsorbirao repni plin i istodobno spriječilo uvlačenje tekućine.",
     "objectives": [
       "Usvojiti metodu dokazivanja amonijevog plina",
       "Naučiti apsorpciju repnog plina koji se lako otapa u vodi",

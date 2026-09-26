@@ -649,7 +649,7 @@
   },
   "ethanol-sodium": {
     "title": "Reakcija etanola s natrijumom (metalom)",
-    "description": "Kada se natrijum (metal) ubaci u bezvodani etanol, polako se oslobađa vodonik. Poređenjem s reakcijom natrijuma s vodom uočava se razlika u intenzitetu reakcije i upoznaje se pojam aktivnog vodonika hidroksilne grupe.",
+    "description": "Kada se natrijum metal ubaci u bezvodani etanol, polako se oslobađa vodonik. Poređenjem s reakcijom natrijuma s vodom uočava se razlika u intenzitetu reakcije i upoznaje se pojam aktivnog vodonika hidroksilne grupe.",
     "objectives": [
       "Upoznati reaktivnost hidroksilne grupe",
       "Uporediti brzine reakcija",
@@ -1036,7 +1036,7 @@
   },
   "molten-salt-electrolysis": {
     "title": "Elektroliza rastopljenog natrijum-hlorida",
-    "description": "Elektrolizom rastopljenog natrijum-hlorida na visokoj temperaturi dobija se natrijum (metal) na katodi i oslobađa se hlor na anodi, čime se upoznaje postupak dobijanja reaktivnih metala.",
+    "description": "Elektrolizom rastopljenog natrijum-hlorida na visokoj temperaturi dobija se natrijum metal na katodi i oslobađa se hlor na anodi, čime se upoznaje postupak dobijanja reaktivnih metala.",
     "objectives": [
       "Upoznati elektrolizu rastopljene soli",
       "Razumeti postupak dobijanja natrijuma",
@@ -1261,7 +1261,7 @@
   },
   "silver-ammonia-fresh-prep": {
     "title": "Pravilna priprava srebro-amonijačnog rastvora",
-    "description": "U rastvor srebro-nitrata se kap po kap dodaje amonijak-voda (amonijačna voda) sve dok se talog upravo ne rastvori, čime se dobija bistar srebro-amonijačni rastvor; naglašava se da se mora koristiti svežepripremljen.",
+    "description": "U rastvor srebro-nitrata se kap po kap dodaje amonijačna voda sve dok se talog upravo ne rastvori, čime se dobija bistar srebro-amonijačni rastvor; naglašava se da se mora koristiti svežepripremljen.",
     "objectives": [
       "Savladati postupak priprave",
       "Razumeti značaj odmerene količine amonijaka",
@@ -1387,7 +1387,7 @@
   },
   "strong-acid-weak-base-titration": {
     "title": "Titracija jake kiseline sa slabom bazom",
-    "description": "Standardnom hlorovodoničnom kiselinom titruje se amonijak-voda (amonijačna voda); budući da je tačka ekvivalencije kisela, kao indikator se koristi metil-oranž, čime se usvaja postupak izbora indikatora pri titraciji jake kiseline sa slabom bazom.",
+    "description": "Standardnom hlorovodoničnom kiselinom titruje se amonijačna voda; budući da je tačka ekvivalencije kisela, kao indikator se koristi metil-oranž, čime se usvaja postupak izbora indikatora pri titraciji jake kiseline sa slabom bazom.",
     "objectives": [
       "Razumeti zašto je tačka ekvivalencije pri titraciji jake kiseline slabom bazom kisela",
       "Usvojiti kriterijume za izbor indikatora",
@@ -2017,7 +2017,7 @@
   },
   "sodium-potassium-water-compare": {
     "title": "Poređenje intenziteta reakcija natrijuma i kalijuma s vodom",
-    "description": "Natrijum (metal) i kalijum (metal) ubacuju se zasebno u vodu obojenu fenolftalein-om; kalijum reaguje intenzivnije i lakše se pali. Na osnovu zapaženih pojava utvrđuje se redosled aktivnosti metala.",
+    "description": "Natrijum (metal) i kalijum metal ubacuju se zasebno u vodu obojenu fenolftalein-om; kalijum reaguje intenzivnije i lakše se pali. Na osnovu zapaženih pojava utvrđuje se redosled aktivnosti metala.",
     "objectives": [
       "Uporediti intenzitet reakcija",
       "Poređati metale prema aktivnosti",
@@ -3529,7 +3529,7 @@
   },
   "thermite-iron-oxide-weld": {
     "title": "Aluminotermijska redukcija gvožđe(III)-oksida",
-    "description": "Magnezijumska traka za paljenje pali mešavinu aluminijum (prah) i gvožđe(III)-oksida; reakcija oslobađa zaslepljujuću belu svetlost, a rastopljeno gvožđe se hladi u metalne kapljice — ovo je metoda koja se koristi za terensko zavarivanje šinskih spojeva.",
+    "description": "Magnezijumska traka za paljenje pali mešavinu aluminijum prah i gvožđe(III)-oksida; reakcija oslobađa zaslepljujuću belu svetlost, a rastopljeno gvožđe se hladi u metalne kapljice — ovo je metoda koja se koristi za terensko zavarivanje šinskih spojeva.",
     "objectives": [
       "Posmatrati visoku temperaturu i rastopljeni metal pri aluminotermijskoj reakciji",
       "Razumeti poreklo jake redukcione sposobnosti aluminijuma",
@@ -3538,7 +3538,7 @@
   },
   "thermite-copper-oxide": {
     "title": "Aluminotermijska reakcija redukcije bakar(II)-oksida aluminijumom",
-    "description": "Mešavina aluminijum (prah) i crnog bakar(II)-oksida, kada se upali, burno oslobađa toplotu i izlučuje crvenkasto-ljubičasti bakar, što neposredno pokazuje da je aluminijum znatno aktivniji metal od bakra.",
+    "description": "Mešavina aluminijum prah i crnog bakar(II)-oksida, kada se upali, burno oslobađa toplotu i izlučuje crvenkasto-ljubičasti bakar, što neposredno pokazuje da je aluminijum znatno aktivniji metal od bakra.",
     "objectives": [
       "Posmatrati redukciju crnog bakar(II)-oksida do crvenkasto-ljubičastog bakra",
       "Uporediti redukcionu sposobnost aluminijuma i bakra",
@@ -4330,7 +4330,7 @@
   },
   "tin-copper-sulfate-galvanic": {
     "title": "Verifikacija razlike potencijala kalaja i bakra reakcijom zamene",
-    "description": "Kada se kalaj (pločica) uroni u rastvor bakar(II)-sulfata, postepeno se izlučuje crveni bakar uz blago oslobađanje toplote; reakcija teče sporije nego kod cinka, što odražava slabiju pogonsku silu pri manjoj razlici potencijala.",
+    "description": "Kada se kalaj pločica uroni u rastvor bakar(II)-sulfata, postepeno se izlučuje crveni bakar uz blago oslobađanje toplote; reakcija teče sporije nego kod cinka, što odražava slabiju pogonsku silu pri manjoj razlici potencijala.",
     "objectives": [
       "Uporediti brzine reakcije pri različitim razlikama potencijala",
       "Razumeti uticaj elektromotorne sile na pogonsku silu reakcije",
@@ -4339,7 +4339,7 @@
   },
   "cadmium-copper-sulfate-galvanic": {
     "title": "Verifikacija razlike potencijala kadmijuma i bakra reakcijom zamene",
-    "description": "Kada se kadmijum (pločica) uroni u rastvor bakar(II)-sulfata, izlučuje se crveni bakar uz oslobađanje toplote; kako se kadmijum koristi kao materijal negativne elektrode nikl-kadmijumskih baterija, ovaj eksperiment ilustruje njegovu sklonost ka otpuštanju elektrona.",
+    "description": "Kada se kadmijum pločica uroni u rastvor bakar(II)-sulfata, izlučuje se crveni bakar uz oslobađanje toplote; kako se kadmijum koristi kao materijal negativne elektrode nikl-kadmijumskih baterija, ovaj eksperiment ilustruje njegovu sklonost ka otpuštanju elektrona.",
     "objectives": [
       "Potvrditi položaj kadmijuma u nizu aktivnosti metala",
       "Povezati izbor materijala negativne elektrode sa nikl-kadmijumskim baterijama",
@@ -4483,7 +4483,7 @@
   },
   "cadmium-silver-nitrate-displacement": {
     "title": "Taloženje srebra u obliku dendrita zamenom srebro-nitrata kadmijumom",
-    "description": "Kada se kadmijum (pločica) uroni u rastvor srebro-nitrata, na njenoj površini rastu srebrnobeli dendriti uz oslobađanje toplote. Zbog velike razlike potencijala između kadmijuma i srebra, taloženje je brže nego u sistemu olovo–srebro.",
+    "description": "Kada se kadmijum pločica uroni u rastvor srebro-nitrata, na njenoj površini rastu srebrnobeli dendriti uz oslobađanje toplote. Zbog velike razlike potencijala između kadmijuma i srebra, taloženje je brže nego u sistemu olovo–srebro.",
     "objectives": [
       "Posmatranje morfologije dendrita nastalih zamenom kadmijuma srebrom",
       "Poređenje brzine taloženja pri različitim razlikama potencijala",

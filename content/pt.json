@@ -883,7 +883,7 @@
   },
   "iron-electrochemical-corrosion": {
     "title": "Corrosão eletroquímica do ferro",
-    "description": "Simula-se a corrosão por absorção de oxigénio em aço utilizando solução de cloreto de sódio (sal de cozinha), com hexacianoferrato(III) de potássio como indicador para visualizar a micropilha de corrosão.",
+    "description": "Simula-se a corrosão por absorção de oxigénio em aço utilizando solução de cloreto de sódio, com hexacianoferrato(III) de potássio como indicador para visualizar a micropilha de corrosão.",
     "objectives": [
       "Reconhecer a corrosão por absorção de oxigénio",
       "Compreender o funcionamento da micropilha",
@@ -991,7 +991,7 @@
   },
   "oxygen-absorption-corrosion": {
     "title": "Investigação da Corrosão do Aço por Absorção de Oxigênio",
-    "description": "Colocando pregos de ferro numa solução de cloreto de sódio (sal de cozinha) neutra, observa-se, ao fim de algum tempo, a subida do nível do líquido no tubo condutor de gás, o que demonstra que a corrosão por absorção de oxigênio consome o oxigênio do sistema.",
+    "description": "Colocando pregos de ferro numa solução de cloreto de sódio neutra, observa-se, ao fim de algum tempo, a subida do nível do líquido no tubo condutor de gás, o que demonstra que a corrosão por absorção de oxigênio consome o oxigênio do sistema.",
     "objectives": [
       "Reconhecer a corrosão por absorção de oxigênio",
       "Comparar com a corrosão por desprendimento de hidrogênio",
@@ -3160,7 +3160,7 @@
   },
   "silver-sulfide-tarnish": {
     "title": "Sulfeto de prata e escurecimento de objetos de prata",
-    "description": "O nitrato de prata reage com o sulfeto de sódio formando um precipitado negro de sulfeto de prata, que é precisamente a causa química do escurecimento de joias e objetos de prata em contacto prolongado com substâncias sulfuradas; a recuperação do brilho pode ser realizada recorrendo a folha de alumínio e solução de cloreto de sódio (sal de cozinha).",
+    "description": "O nitrato de prata reage com o sulfeto de sódio formando um precipitado negro de sulfeto de prata, que é precisamente a causa química do escurecimento de joias e objetos de prata em contacto prolongado com substâncias sulfuradas; a recuperação do brilho pode ser realizada recorrendo a folha de alumínio e solução de cloreto de sódio.",
     "objectives": [
       "Observar a formação do precipitado negro de sulfeto de prata",
       "Explicar a causa do escurecimento de objetos de prata",
@@ -3339,7 +3339,7 @@
     ]
   },
   "sodium-burning-chlorine": {
-    "title": "Combustão do sódio em cloro com formação de cloreto de sódio (sal de cozinha)",
+    "title": "Combustão do sódio em cloro com formação de cloreto de sódio",
     "description": "O sódio fundido entra em combustão vigorosa em cloro, emitindo chama amarela e produzindo abundante fumo branco, constituído por minúsculos cristais de cloreto de sódio.",
     "objectives": [
       "Observar a chama amarela e o fumo branco resultantes da combustão do sódio em cloro",

@@ -2017,7 +2017,7 @@
   },
   "sodium-potassium-water-compare": {
     "title": "Porovnanie reaktivity sodíka a draslíka s vodou",
-    "description": "Kovový sodík a draslík (kov) sa postupne vložia do vody s pridaným fenolftaleínom; draslík reaguje prudšie a ľahšie sa vznieti. Na základe pozorovaných javov sa zoradí reaktivita oboch kovov.",
+    "description": "Kovový sodík a draslík sa postupne vložia do vody s pridaným fenolftaleínom; draslík reaguje prudšie a ľahšie sa vznieti. Na základe pozorovaných javov sa zoradí reaktivita oboch kovov.",
     "objectives": [
       "Porovnať intenzitu reakcií sodíka a draslíka s vodou",
       "Zoradiť kovy podľa reaktivity",

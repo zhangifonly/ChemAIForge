@@ -10,7 +10,7 @@
   },
   "hcl-naoh-neutralization": {
     "title": "Misura del calore di neutralizzazione tra acido cloridrico e idrossido di sodio",
-    "description": "Si misura il calore di neutralizzazione della reazione tra acido cloridrico e idrossido di sodio in un calorimetro a contenitore termico (vaso Dewar), al fine di comprendere le variazioni energetiche associate alle reazioni esotermiche.",
+    "description": "Si misura il calore di neutralizzazione della reazione tra acido cloridrico e idrossido di sodio in un calorimetro a contenitore termico Dewar, al fine di comprendere le variazioni energetiche associate alle reazioni esotermiche.",
     "objectives": [
       "Misurare il calore di neutralizzazione",
       "Comprendere le reazioni esotermiche",
@@ -2350,7 +2350,7 @@
   },
   "metal-acid-exothermic": {
     "title": "Effetto termico della reazione tra un metallo e un acido",
-    "description": "Granuli di zinco vengono fatti reagire con acido solforico diluito all'interno di un contenitore termico (vaso Dewar); si registra contemporaneamente lo sviluppo di gas e l'aumento della temperatura della soluzione, evidenziando il carattere esotermico della reazione.",
+    "description": "Granuli di zinco vengono fatti reagire con acido solforico diluito all'interno di un contenitore termico Dewar; si registra contemporaneamente lo sviluppo di gas e l'aumento della temperatura della soluzione, evidenziando il carattere esotermico della reazione.",
     "objectives": [
       "Misurare il calore sviluppato dalla reazione",
       "Correlare la produzione di gas all'innalzamento della temperatura",
@@ -4105,7 +4105,7 @@
   },
   "magnesium-hydrochloric-calorimetry": {
     "title": "Determinazione calorimetrica del calore di reazione tra magnesio e acido cloridrico",
-    "description": "Immergendo il nastro di magnesio nell'acido cloridrico si osserva un'intensa liberazione di idrogeno e un rapido aumento di temperatura; raccogliendo i dati di incremento termico mediante un contenitore termico (vaso Dewar) è possibile ricavare il calore di reazione per unità di quantità di sostanza.",
+    "description": "Immergendo il nastro di magnesio nell'acido cloridrico si osserva un'intensa liberazione di idrogeno e un rapido aumento di temperatura; raccogliendo i dati di incremento termico mediante un contenitore termico Dewar è possibile ricavare il calore di reazione per unità di quantità di sostanza.",
     "objectives": [
       "Misurare il calore sviluppato nella reazione tra un metallo e un acido",
       "Calcolare il calore di reazione per unità di quantità di sostanza",

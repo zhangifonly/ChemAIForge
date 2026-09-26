@@ -1998,8 +1998,8 @@
     ]
   },
   "potassium-water": {
-    "title": "Reagimi i kalium (metal) me ujin",
-    "description": "Kur kalium (metal) hidhet në ujë me fenolftaleinë, reagimi është më i furishëm se ai i natriumit: metali notон, shkrihet, nxjerr tinguj dhe digjet me flakë vjollcë, ndërsa tretësira kthehet në të kuqe.",
+    "title": "Reagimi i kalium metal me ujin",
+    "description": "Kur kalium metal hidhet në ujë me fenolftaleinë, reagimi është më i furishëm se ai i natriumit: metali notон, shkrihet, nxjerr tinguj dhe digjet me flakë vjollcë, ndërsa tretësira kthehet në të kuqe.",
     "objectives": [
       "Vëzhgimi i reagimit të furishëm",
       "Njohja e formimit të bazës së fortë",
@@ -2017,7 +2017,7 @@
   },
   "sodium-potassium-water-compare": {
     "title": "Krahasimi i intensitetit të reagimit të natriumit dhe kaliumit me ujin",
-    "description": "Natrium metalik dhe kalium (metal) hidhen veçmas në ujë me fenolftaleinë; kaliumi reagon më intensivisht dhe ndizet më lehtë. Bazuar në fenomenet e vërejtura, metalet radhiten sipas aktivitetit kimik.",
+    "description": "Natrium metalik dhe kalium metal hidhen veçmas në ujë me fenolftaleinë; kaliumi reagon më intensivisht dhe ndizet më lehtë. Bazuar në fenomenet e vërejtura, metalet radhiten sipas aktivitetit kimik.",
     "objectives": [
       "Krahasimi i intensitetit të reagimit",
       "Radhitja e aktivitetit kimik të metaleve",
@@ -2116,7 +2116,7 @@
   },
   "iron-oxygen-burning": {
     "title": "Djegia e hekurit në oksigjen",
-    "description": "Fletë hekuri e nxehur futet në një shishe për mbledhjen e gazit të mbushur me oksigjen dhe digjet me intensitet të madh duke hedhur shkëndija, duke formuar trioksid tetrahekuri (oksid hekuri(II,III)) të zi në gjendje të ngurtë.",
+    "description": "Fletë hekuri e nxehur futet në një shishe për mbledhjen e gazit të mbushur me oksigjen dhe digjet me intensitet të madh duke hedhur shkëndija, duke formuar trioksid tetrahekuri të zi në gjendje të ngurtë.",
     "objectives": [
       "Vëzhgoni hedhjen e shkëndijave",
       "Njihni produktin e djegies",
@@ -2908,7 +2908,7 @@
   },
   "iron-wire-oxygen-sparks": {
     "title": "Djegia e telit të hekurit në oksigjen me shkëndija",
-    "description": "Teli i hekurit spiralor, me një shkrepëse të lidhur në majë, futet ndezur në shishen e oksigjenit; ai djeg furishëm me shkëndija, gjeneron trioksid tetrahekuri (oksid hekuri(II,III)) të zi, ndërsa fundi i shishes duhet të mbulohet me rërë të imët.",
+    "description": "Teli i hekurit spiralor, me një shkrepëse të lidhur në majë, futet ndezur në shishen e oksigjenit; ai djeg furishëm me shkëndija, gjeneron trioksid tetrahekuri të zi, ndërsa fundi i shishes duhet të mbulohet me rërë të imët.",
     "objectives": [
       "Të vëzhgohet djegia e fuqishme e hekurit në oksigjen të pastër",
       "Të kuptohet ndikimi i përqendrimit të oksigjenit në intensitetin e djegies",

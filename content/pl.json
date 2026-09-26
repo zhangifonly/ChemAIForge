@@ -1998,17 +1998,17 @@
     ]
   },
   "potassium-water": {
-    "title": "Reakcja potas (metal) z wodą",
-    "description": "Po wrzuceniu potas (metal) do wody z dodatkiem fenoloftaleina reakcja przebiega gwałtowniej niż w przypadku sód: metal unosi się na powierzchni, topiąc się i spalając fioletowym płomieniem, a roztwór zabarwia się na czerwono.",
+    "title": "Reakcja potas metaliczny z wodą",
+    "description": "Po wrzuceniu potas metaliczny do wody z dodatkiem fenoloftaleina reakcja przebiega gwałtowniej niż w przypadku sód: metal unosi się na powierzchni, topiąc się i spalając fioletowym płomieniem, a roztwór zabarwia się na czerwono.",
     "objectives": [
       "obserwowanie gwałtownego przebiegu reakcji",
       "zrozumienie powstawania mocnej zasady",
-      "porównywanie aktywności potas (metal) i sód"
+      "porównywanie aktywności potas metaliczny i sód"
     ]
   },
   "calcium-water": {
-    "title": "Reakcja wapń (metal) z wodą",
-    "description": "Po umieszczeniu wapń (metal) w wodzie z dodatkiem fenoloftaleina metal równomiernie wydziela wodór i wytwarza wodorotlenek wapnia, zabarwiając roztwór na czerwono; reakcja przebiega łagodniej niż w przypadku sód.",
+    "title": "Reakcja wapń metaliczny z wodą",
+    "description": "Po umieszczeniu wapń metaliczny w wodzie z dodatkiem fenoloftaleina metal równomiernie wydziela wodór i wytwarza wodorotlenek wapnia, zabarwiając roztwór na czerwono; reakcja przebiega łagodniej niż w przypadku sód.",
     "objectives": [
       "obserwowanie ciągłego wydzielania gazu",
       "zrozumienie powstawania słabo rozpuszczalnej zasady",
@@ -2017,7 +2017,7 @@
   },
   "sodium-potassium-water-compare": {
     "title": "Porównanie gwałtowności reakcji sodu i potasu z wodą",
-    "description": "Sód metaliczny i potas (metal) wprowadza się kolejno do wody z dodatkiem fenoloftaleiny; potas reaguje gwałtowniej i łatwiej ulega zapaleniu. Na podstawie obserwacji szereguje się aktywność metali.",
+    "description": "Sód metaliczny i potas metaliczny wprowadza się kolejno do wody z dodatkiem fenoloftaleiny; potas reaguje gwałtowniej i łatwiej ulega zapaleniu. Na podstawie obserwacji szereguje się aktywność metali.",
     "objectives": [
       "Porównanie gwałtowności przebiegu reakcji",
       "Ułożenie szeregu aktywności metali",

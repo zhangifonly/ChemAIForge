@@ -46,7 +46,7 @@
   },
   "limewater-co2": {
     "title": "Falcelinta carbon dioxide (CO₂) iyo Biyo gaashaan ah",
-    "description": "Carbon dioxide (CO₂) ayaa laguugu nafaynayaa Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) oo saafi ah, waxaana la arkaa sida uu u dhufo, taasoo lagu baranayo habka tijaabinta carbon dioxide (CO₂).",
+    "description": "Carbon dioxide (CO₂) ayaa laguugu nafaynayaa Biyo gaashaan ah oo saafi ah, waxaana la arkaa sida uu u dhufo, taasoo lagu baranayo habka tijaabinta carbon dioxide (CO₂).",
     "objectives": [
       "Bartida tijaabinta CO₂",
       "Fahamka falcelinta aasaasiga iyo oksiidyada aashidda ah",
@@ -55,7 +55,7 @@
   },
   "carbonate-acid-identify": {
     "title": "Tijaabinta Kaarboonaydka",
-    "description": "aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa loo isticmaalaa in lagu aqoonsado sodium carbonate (Na₂CO₃) adkaatay, iyadoo la xaqiijinayo kaarboonaydka iyada oo ku saleysan gaaska soo baxa ee Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) dhufinaya.",
+    "description": "aashitada hidroklorikada oo la wasakheeyay ayaa loo isticmaalaa in lagu aqoonsado sodium carbonate (Na₂CO₃) adkaatay, iyadoo la xaqiijinayo kaarboonaydka iyada oo ku saleysan gaaska soo baxa ee Biyo gaashaan ah dhufinaya.",
     "objectives": [
       "Bartida tijaabinta kaarboonaydka",
       "La socodsiinta muuqaalka soo saarista gaaska",
@@ -91,7 +91,7 @@
   },
   "antacid-stomach": {
     "title": "Baaritaanka Daawaynta Aashidda Caloosha",
-    "description": "Isticmaal Aluminiyam haydroокsiid iyo sodium bicarbonate (NaHCO₃) si loo demi-galiyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ee u eg aashidda caloosha, si loo xidho xidhiidhka u dhexeeya daawada iyo dheelitirka aashit-alkaline.",
+    "description": "Isticmaal Aluminiyam haydroокsiid iyo sodium bicarbonate (NaHCO₃) si loo demi-galiyo aashitada hidroklorikada oo la wasakheeyay ee u eg aashidda caloosha, si loo xidho xidhiidhka u dhexeeya daawada iyo dheelitirka aashit-alkaline.",
     "objectives": [
       "Garo mabda'a daawada ka hortagta aashidda",
       "La soco hannaanka demi-galinta",
@@ -118,7 +118,7 @@
   },
   "co2-preparation": {
     "title": "Diyaarinta Laboratoriga ee carbon dioxide (CO₂)",
-    "description": "Samee carbon dioxide (CO₂) adiga oo isticmaalaya calcium carbonate (marble) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), oo aad ku bartid qalabka soo saarista iyo uruurinta gaaska.",
+    "description": "Samee carbon dioxide (CO₂) adiga oo isticmaalaya calcium carbonate (marble) iyo aashitada hidroklorikada oo la wasakheeyay, oo aad ku bartid qalabka soo saarista iyo uruurinta gaaska.",
     "objectives": [
       "Fahmo mabaadi'da diyaarinta CO₂",
       "Baro habka uruurinta oo hawada lagu baddelo oo kor loo qaado",
@@ -135,8 +135,8 @@
     ]
   },
   "h2-from-zinc": {
-    "title": "Soo Saarka gaaska hydrogen (hydrogen gas) ee graniyuulada zinc iyo aashito sulfuric ah (H₂SO₄)",
-    "description": "Ku samee gaaska hydrogen (hydrogen gas) adiga oo isticmaalaya graniyuulada zinc iyo aashito sulfuric ah (H₂SO₄) oo la wasakheeyay, kadibna xaqiiji gubashada hydrogen-ka iyo tijaabada cod-qararka ah.",
+    "title": "Soo Saarka gaaska hydrogen ee graniyuulada zinc iyo aashito sulfuric ah (H₂SO₄)",
+    "description": "Ku samee gaaska hydrogen adiga oo isticmaalaya graniyuulada zinc iyo aashito sulfuric ah (H₂SO₄) oo la wasakheeyay, kadibna xaqiiji gubashada hydrogen-ka iyo tijaabada cod-qararka ah.",
     "objectives": [
       "Fahmo diyaarinta haidrojiin",
       "Xaqiiji nadiifnimada hydrogen-ka",
@@ -145,11 +145,11 @@
   },
   "nh3-preparation": {
     "title": "Diyaarinta Gaaska Ammonia iyo Tijaabada Biyaha La Buufinayo",
-    "description": "Ammonium chloride (NH₄Cl) iyo calcium hydroxide waa la kululaynayaa si loo sameeyo gaaska ammonia (ammonia gas), ka dibna waxaa la fuliyaa tijaabada caanka ah ee biyaha la buufinayo si loo arko sida gaaskan ugu dhaqso badan u milma biyaha.",
+    "description": "Ammonium chloride (NH₄Cl) iyo calcium hydroxide waa la kululaynayaa si loo sameeyo gaaska ammonia, ka dibna waxaa la fuliyaa tijaabada caanka ah ee biyaha la buufinayo si loo arko sida gaaskan ugu dhaqso badan u milma biyaha.",
     "objectives": [
-      "Awood u yeelashada diyaarinta gaaska ammonia (ammonia gas)",
+      "Awood u yeelashada diyaarinta gaaska ammonia",
       "Fahanka mabaadi'da tijaabada biyaha la buufinayo",
-      "Xaqiijinta gaaska ammonia (ammonia gas)"
+      "Xaqiijinta gaaska ammonia"
     ]
   },
   "so2-preparation": {
@@ -163,7 +163,7 @@
   },
   "h2s-preparation": {
     "title": "Diyaarinta iyo Xaqiijinta Hydrogen Sulfide",
-    "description": "Birta(II) sulfiiد waxaa lala falceliyaa aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) si loo sameeyo hydrogen sulfide; waxaa la bartaa urta ukunta oo kale iyo awoodda yaraynta xooggan ee gaaskan — si gaar ah waa la fiiriyaa hawada gudaha.",
+    "description": "Birta(II) sulfiiد waxaa lala falceliyaa aashitada hidroklorikada oo la wasakheeyay si loo sameeyo hydrogen sulfide; waxaa la bartaa urta ukunta oo kale iyo awoodda yaraynta xooggan ee gaaskan — si gaar ah waa la fiiriyaa hawada gudaha.",
     "objectives": [
       "Awood u yeelashada diyaarinta H₂S",
       "Ogaanshaha sunta gaaskan",
@@ -172,7 +172,7 @@
   },
   "co2-baking-soda": {
     "title": "Kululaynta Sodium Bicarbonate iyo Barbardhigga Soo-saarka Gaaska",
-    "description": "Waxaa la barbardhigaa falcelinta sodium bicarbonate (NaHCO₃) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) si loo fahmo mabaadi'da kiimikada ee loo adeegsado sodium bicarbonate (NaHCO₃) xagga khamiirka cuntada.",
+    "description": "Waxaa la barbardhigaa falcelinta sodium bicarbonate (NaHCO₃) iyo aashitada hidroklorikada oo la wasakheeyay si loo fahmo mabaadi'da kiimikada ee loo adeegsado sodium bicarbonate (NaHCO₃) xagga khamiirka cuntada.",
     "objectives": [
       "Daawashada dhacdada soo-saarka gaaska",
       "Xidhiidhinta farsamo iyo nolosha maalinlaha ah",
@@ -181,7 +181,7 @@
   },
   "ammonia-fountain-hcl": {
     "title": "Isdhexgalka Gaaska Ammonia iyo Hydrogen Chloride — Qoobka Cad",
-    "description": "Ul dhalo ah oo lagu dhuftay xalliga amooniyaaka oo xooggan (concentrated ammonia solution) iyo ul dhalo ah oo lagu dhuftay hydrochloric acid dhumuc badan (concentrated hydrochloric acid) waa la wada dhawaansiiyaa, ka dibna waxaa la daawadaa sameynta qoobka cad ee ammonium chloride (NH₄Cl) si loo garto falcelinta u dhaxaysa labada gaas.",
+    "description": "Ul dhalo ah oo lagu dhuftay xalliga amooniyaaka oo xooggan iyo ul dhalo ah oo lagu dhuftay hydrochloric acid dhumuc badan waa la wada dhawaansiiyaa, ka dibna waxaa la daawadaa sameynta qoobka cad ee ammonium chloride (NH₄Cl) si loo garto falcelinta u dhaxaysa labada gaas.",
     "objectives": [
       "Daawashada dhacdada qoobka cad",
       "Fahamka falcelinta u dhaxaysa gaasaska",
@@ -190,10 +190,10 @@
   },
   "carbonate-thermal": {
     "title": "Baadhitaanka Kala-qaybsanaanta Amooniyam baykaabonayt",
-    "description": "Amooniyam baykaabonayt waa la kululaynayaa si loo arko sida si buuxda ugu kala-qaybsanayso gaaska ammonia (ammonia gas), biyo, iyo carbon dioxide (CO₂), taas oo lagu fahamayo sifooyinka shilanka aan xasilloonayn ee ah.",
+    "description": "Amooniyam baykaabonayt waa la kululaynayaa si loo arko sida si buuxda ugu kala-qaybsanayso gaaska ammonia, biyo, iyo carbon dioxide (CO₂), taas oo lagu fahamayo sifooyinka shilanka aan xasilloonayn ee ah.",
     "objectives": [
       "Daawashada gaaska ka soo baxa kala-qaybsanaanta",
-      "Xaqiijinta gaaska ammonia (ammonia gas) iyo CO₂",
+      "Xaqiijinta gaaska ammonia iyo CO₂",
       "Ogaanshaha aan xasilloonaynta shilanka amooniyamka"
     ]
   },
@@ -217,7 +217,7 @@
   },
   "chlorine-preparation": {
     "title": "Diyaarinta Gaaska Chlorine Xarunta Cilmi-baarista",
-    "description": "Gaaska chlorine (Cl₂) waxaa lagu soo saaraa annagoo kuleylina manganese(IV) oxide (MnO₂) iyo hydrochloric acid dhumuc badan (concentrated hydrochloric acid), ka dibna waxaa la xaqiijiyaa awooda caddaynta iyo saamaynta xanaaqsan (hawlgalka waxaa lagu fuliyaa cabbirada hawada (fume cupboard)).",
+    "description": "Gaaska chlorine (Cl₂) waxaa lagu soo saaraa annagoo kuleylina manganese(IV) oxide (MnO₂) iyo hydrochloric acid dhumuc badan, ka dibna waxaa la xaqiijiyaa awooda caddaynta iyo saamaynta xanaaqsan (hawlgalka waxaa lagu fuliyaa cabbirada hawada).",
     "objectives": [
       "Ku xirfadeyso diyaarinta gaaska chlorine (Cl₂)",
       "Xaqiiji awooda caddaynta gaaska",
@@ -253,9 +253,9 @@
   },
   "feoh3-precipitation": {
     "title": "Diyaarinta birta(III) hiidrooksaydka",
-    "description": "Marka xalka iron(III) chloride (FeCl₃) la falaceliso sodium hydroxide (NaOH), waxaa ka dhasha birta(III) hiidrooksaydka (iron(III) hydroxide) midab cas-bunni ah leh, taasoo caddaynaysa astaamaha birta heerka saddexaad.",
+    "description": "Marka xalka iron(III) chloride (FeCl₃) la falaceliso sodium hydroxide (NaOH), waxaa ka dhasha birta(III) hiidrooksaydka midab cas-bunni ah leh, taasoo caddaynaysa astaamaha birta heerka saddexaad.",
     "objectives": [
-      "Diyaari birta(III) hiidrooksaydka (iron(III) hydroxide)",
+      "Diyaari birta(III) hiidrooksaydka",
       "La soco dhalashada midabka cas-bunniga ah",
       "Kala gaar heerarka oxidation ee bir (Fe)"
     ]
@@ -361,7 +361,7 @@
   },
   "halogen-displacement-br-i": {
     "title": "Bromine ayaa beddelaysa iodine (I₂)",
-    "description": "Marka la daro xal bromine ah (Br₂ biyood) xalka potassium iodide (KI), bromine (Br₂) ayaa bedelaya iodine (I₂); natiijtadana waxaa lagu xaqiijiyaa xabag (xoogaa) oo u roga midab buluug, si loo barbardhigo awoodda oxidation ee bromine (Br₂) iyo iodine (I₂).",
+    "description": "Marka la daro xal bromine ah Br₂ xalka potassium iodide (KI), bromine (Br₂) ayaa bedelaya iodine (I₂); natiijtadana waxaa lagu xaqiijiyaa xabag oo u roga midab buluug, si loo barbardhigo awoodda oxidation ee bromine (Br₂) iyo iodine (I₂).",
     "objectives": [
       "Xaqiijinta firfircoonida bromine (Br₂) iyo iodine (I₂)",
       "Indho-indheynta midabka buluuga ah ee xabagta (xoogaa) markay la kulanto iodine (I₂)",
@@ -370,7 +370,7 @@
   },
   "iodine-starch": {
     "title": "Falcelinta midabka iodine (I₂) iyo xabagta (xoogaa)",
-    "description": "La daawo falcelinta astaan ah ee iodine (I₂) markuu la kulmo xabag (xoogaa), taas oo u rota midab buluug mugdi ah; waxaana loo isticmaalaa baaritaanka iodine (I₂) iyo go'aasamida dhamaadka xisaabta iodometric.",
+    "description": "La daawo falcelinta astaan ah ee iodine (I₂) markuu la kulmo xabag, taas oo u rota midab buluug mugdi ah; waxaana loo isticmaalaa baaritaanka iodine (I₂) iyo go'aasamida dhamaadka xisaabta iodometric.",
     "objectives": [
       "La daawasho midabka buluuga astaan u ah",
       "Fahmida aasaaska cilmiga ah ee muujinta midabka",
@@ -378,8 +378,8 @@
     ]
   },
   "so2-bromine-water": {
-    "title": "Sulfur dioxide ayaa nadiifiya xal bromine ah (Br₂ biyood)",
-    "description": "Marka sulfur dioxide la buuxiyo xal bromine ah (Br₂ biyood), midabka oranjigu way baaba'daa, taas oo xaqiijinaysa awoodda reduction ee sulfur dioxide ee aan lahayn awoodda dhadhan-baabi'inta (bleaching).",
+    "title": "Sulfur dioxide ayaa nadiifiya xal bromine ah Br₂",
+    "description": "Marka sulfur dioxide la buuxiyo xal bromine ah Br₂, midabka oranjigu way baaba'daa, taas oo xaqiijinaysa awoodda reduction ee sulfur dioxide ee aan lahayn awoodda dhadhan-baabi'inta (bleaching).",
     "objectives": [
       "Garan awoodda reduction ee SO₂",
       "Kala soocida awoodda reduction iyo awoodda dhadhan-baabi'inta",
@@ -397,7 +397,7 @@
   },
   "copper-nitric-acid": {
     "title": "Falcelinta naxaas (Cu) iyo aashito nitric ah (HNO₃)",
-    "description": "Naxaas (Cu) marka uu falceliya aashitada naytareetka oo la wasakheeyay (dilute nitric acid) ayaa xal buluug-cagaaran la'eg ah soo saara oo gaas sii daayaa; waxaana lagu gartaa awoodda oxidation ee xooggan ee aashito nitric ah (HNO₃) (hawlgalka waa in si fiican loo hawaynaa).",
+    "description": "Naxaas (Cu) marka uu falceliya aashitada naytareetka oo la wasakheeyay ayaa xal buluug-cagaaran la'eg ah soo saara oo gaas sii daayaa; waxaana lagu gartaa awoodda oxidation ee xooggan ee aashito nitric ah (HNO₃) (hawlgalka waa in si fiican loo hawaynaa).",
     "objectives": [
       "Garan awoodda oxidation ee aashito nitric ah (HNO₃)",
       "La daawasho gaaska soo baxa iyo beddelashada midabka",
@@ -424,7 +424,7 @@
   },
   "iodine-clock": {
     "title": "Falcelinta saacadda iodine (I₂)",
-    "description": "Iodine (I₂) ee ay soo saarto falcelinta hydrogen peroxide (H₂O₂) iyo potassium iodide (KI) ayaa joogtayn la'aanta u rogaysa sodium thiosulfate (Na₂S₂O₃); marka sodium thiosulfate (Na₂S₂O₃) dhammaado, iodine (I₂) ayaa si degdeg ah u kordhaa oo la xiriirta xabag (xoogaa) si uu xalku si kedis ah ugu rogo midab buluug, taas oo lagu ogaanayo muddada horumarka (induction period) iyo xawliga falcelinta.",
+    "description": "Iodine (I₂) ee ay soo saarto falcelinta hydrogen peroxide (H₂O₂) iyo potassium iodide (KI) ayaa joogtayn la'aanta u rogaysa sodium thiosulfate (Na₂S₂O₃); marka sodium thiosulfate (Na₂S₂O₃) dhammaado, iodine (I₂) ayaa si degdeg ah u kordhaa oo la xiriirta xabag si uu xalku si kedis ah ugu rogo midab buluug, taas oo lagu ogaanayo muddada horumarka (induction period) iyo xawliga falcelinta.",
     "objectives": [
       "La daawasho muujinta saacadda iodine (I₂)",
       "Fahmida muddada horumarinta (induction period)",
@@ -451,11 +451,11 @@
   },
   "metal-activity-acid": {
     "title": "Baaritaanka Tartanka Firfircoonida Biraha",
-    "description": "Waxaa la barbardhigaa xoogga falcelinta magnesium, zinc, iyo bir (Fe) markay kula falceliyaan aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) iyagoo soo saara gaaska hydrogen (hydrogen gas), si loo qeexo nidaamka firfircoonida biraha.",
+    "description": "Waxaa la barbardhigaa xoogga falcelinta magnesium, zinc, iyo bir (Fe) markay kula falceliyaan aashitada hidroklorikada oo la wasakheeyay iyagoo soo saara gaaska hydrogen, si loo qeexo nidaamka firfircoonida biraha.",
     "objectives": [
       "Barbardhig xoogga falcelinta",
       "Qeex nidaamka firfircoonida",
-      "Tijaabi gaaska hydrogen (hydrogen gas)"
+      "Tijaabi gaaska hydrogen"
     ]
   },
   "iron-copper-sulfate": {
@@ -469,7 +469,7 @@
   },
   "copper-silver-nitrate": {
     "title": "Naxaasta u Beddesho Lacagta ee ku Jirta Xalka Silver Nitrate",
-    "description": "Xadhigga naxaasta (copper wire) ayaa lagu dhex geliyaa xalka silver nitrate (AgNO₃); dusha sare waxaa ka baxda geed Lacag (silfar) ah oo cad, xalku wuxuu u beddelmaa buluug, taasoo muujinaysa falcelinta beddelka iyo koritaanka uumiyaha.",
+    "description": "Xadhigga naxaasta (copper wire) ayaa lagu dhex geliyaa xalka silver nitrate (AgNO₃); dusha sare waxaa ka baxda geed Lacag ah oo cad, xalku wuxuu u beddelmaa buluug, taasoo muujinaysa falcelinta beddelka iyo koritaanka uumiyaha.",
     "objectives": [
       "Fiiri koritaanka geedka lacagta",
       "Faham falcelinta beddelka",
@@ -482,7 +482,7 @@
     "objectives": [
       "Fiiri shan muuqaal oo muhiim ah",
       "Garo soo saarista saldhiga xooggan",
-      "Faham sida loo keydiyo birta sodium (sodium metal)"
+      "Faham sida loo keydiyo birta sodium"
     ]
   },
   "iron-rusting": {
@@ -496,7 +496,7 @@
   },
   "aluminum-acid-base": {
     "title": "Baaritaanka Laba-dhinacnimada Aluminium",
-    "description": "Xaashi aluminium ah ayaa kala geliya aashito hydrochloric ah (HCl) iyo Xalka soodyam hаydrooksiiد; labadooduba waxay soo saaraan gaaska hydrogen (hydrogen gas), taasoo muujinaysa in aluminium uu kula falceliyo labadaba aashitada iyo saldhiga.",
+    "description": "Xaashi aluminium ah ayaa kala geliya aashito hydrochloric ah (HCl) iyo Xalka soodyam hаydrooksiiد; labadooduba waxay soo saaraan gaaska hydrogen, taasoo muujinaysa in aluminium uu kula falceliyo labadaba aashitada iyo saldhiga.",
     "objectives": [
       "Garo laba-dhinacnimada aluminium",
       "Barbardhig soo saarista gaaska",
@@ -550,7 +550,7 @@
   },
   "copper-ammonia-complex": {
     "title": "Abuurista ion-ka isu-xidhka ah ee naxaas-ammoniya",
-    "description": "Marka xal ammoniya ah (NH₃ biyood) si tartiib tartiib ah loogu shubo xalka copper(II) sulfate (CuSO₄), marka hore waxaa samaysma foorar buluug ah, ka dibna wuxuu ku dhexmilmaa xal buluug gudud ah oo naxaas-ammoniya ah.",
+    "description": "Marka xal ammoniya ah NH₃ si tartiib tartiib ah loogu shubo xalka copper(II) sulfate (CuSO₄), marka hore waxaa samaysma foorar buluug ah, ka dibna wuxuu ku dhexmilmaa xal buluug gudud ah oo naxaas-ammoniya ah.",
     "objectives": [
       "La socoshada milmidda foorarka",
       "Garanaanta ion-ka isu-xidhka ah",
@@ -577,7 +577,7 @@
   },
   "silver-ammonia-prep": {
     "title": "Diyaarinta Xalka Silfar-Ammoniya",
-    "description": "Silfar nitrate (AgNO₃) ayaa lagu shubtaa xal ammoniya ah (NH₃ biyood) ilaa dallaaladda ay si buuxda u milmaan, si loo diyaarsado xalka silfar-ammoniya (Tollens' reagent) oo loo isticmaalo hubinta kooxda aldehyde.",
+    "description": "Silfar nitrate (AgNO₃) ayaa lagu shubtaa xal ammoniya ah NH₃ ilaa dallaaladda ay si buuxda u milmaan, si loo diyaarsado xalka silfar-ammoniya (Tollens' reagent) oo loo isticmaalo hubinta kooxda aldehyde.",
     "objectives": [
       "Diyaarinta xalka silfar-ammoniya",
       "Fahamka milmidda xiriirka koordineeshanka",
@@ -604,7 +604,7 @@
   },
   "prussian-blue": {
     "title": "Sameynta Prussian Blue",
-    "description": "Ionka iron(II) wuxuu ku falceliyaa potassium hexacyanoferrate(III) (potassium ferricyanide) si uu u sameeyo rasaas buluug ah, taasoo ogeysiinaysa sameynta tiindhaha caanka ah ee Prussian Blue waxaana loo isticmaalaa hubinta ionka iron(II).",
+    "description": "Ionka iron(II) wuxuu ku falceliyaa potassium hexacyanoferrate(III) si uu u sameeyo rasaas buluug ah, taasoo ogeysiinaysa sameynta tiindhaha caanka ah ee Prussian Blue waxaana loo isticmaalaa hubinta ionka iron(II).",
     "objectives": [
       "Garanshaha Prussian Blue",
       "Hubinta ionka iron(II)",
@@ -613,7 +613,7 @@
   },
   "ester-synthesis": {
     "title": "Sameynta Ethyl Acetate (CH₃COOC₂H₅)",
-    "description": "Aashito acetic ah (CH₃COOH) iyo ethanol (C₂H₅OH) waxay falceliyaan aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo matalaysa katalaysatarka si loo sameeyo ethyl acetate (CH₃COOC₂H₅) oo udgoon udgoon miro ah, taasoo ah tusaale wanaagsan oo falcelinta esterification.",
+    "description": "Aashito acetic ah (CH₃COOH) iyo ethanol (C₂H₅OH) waxay falceliyaan aashito sulfuric ah oo xooggan H₂SO₄ oo matalaysa katalaysatarka si loo sameeyo ethyl acetate (CH₃COOC₂H₅) oo udgoon udgoon miro ah, taasoo ah tusaale wanaagsan oo falcelinta esterification.",
     "objectives": [
       "Ku xidhiidhinta falcelinta esterification",
       "Fahamka katalaysadda iyo bixitaanka biyaha",
@@ -640,7 +640,7 @@
   },
   "ethylene-bromine": {
     "title": "Ethylene (C₂H₄) oo Caddaynaya Xalka Bromine ah",
-    "description": "Marka ethylene (C₂H₄) lagu qariyo xal bromine ah (Br₂ biyood), midabka oranjigu wuu baaba'aa, taasoo xaqiijinaysa falcelinta ku-darista ee xidhiidhka labanlaabka ah ee carbon-carbon.",
+    "description": "Marka ethylene (C₂H₄) lagu qariyo xal bromine ah Br₂, midabka oranjigu wuu baaba'aa, taasoo xaqiijinaysa falcelinta ku-darista ee xidhiidhka labanlaabka ah ee carbon-carbon.",
     "objectives": [
       "Garanshaha falcelinta ku-darista",
       "Kala-soocidda dheecaanka dabiiciga ah iyo aan dabiiciga ahayn",
@@ -649,16 +649,16 @@
   },
   "ethanol-sodium": {
     "title": "Falcelinta Ethanol iyo Sodium",
-    "description": "Marka birta sodium (sodium metal) la dhigo ethanol (C₂H₅OH) aan biyo lahayn, ayaa gaaska hydrogen (hydrogen gas) si tartiib ah u soo baxa. Tijaabadani waxay nala barbardhigaysaa xoogga falcelinta biyaha, si aan u fahano firfircoonida hydrogen-ka ku jira kooxda hydroxyl.",
+    "description": "Marka birta sodium la dhigo ethanol (C₂H₅OH) aan biyo lahayn, ayaa gaaska hydrogen si tartiib ah u soo baxa. Tijaabadani waxay nala barbardhigaysaa xoogga falcelinta biyaha, si aan u fahano firfircoonida hydrogen-ka ku jira kooxda hydroxyl.",
     "objectives": [
       "Fahamka falcelinta kooxda hydroxyl",
       "Barbardhigga xawaaraha falcelinta",
-      "Xaqiijinta gaaska hydrogen (hydrogen gas)"
+      "Xaqiijinta gaaska hydrogen"
     ]
   },
   "phenol-bromine-water": {
     "title": "Falcelinta Phenol iyo Xalka Bromine ah",
-    "description": "Marka xal bromine ah (Br₂ biyood) la ku daraa xalka phenol, waxaa soo baxa cirib cad oo tribromophenol ah. Tijaabadani waxay xaqiijinaysaa falcelinta beddelka ee ku dhacda giraanta benzene (C₆H₆) marka kooxda hydroxyl ay firfircooniso.",
+    "description": "Marka xal bromine ah Br₂ la ku daraa xalka phenol, waxaa soo baxa cirib cad oo tribromophenol ah. Tijaabadani waxay xaqiijinaysaa falcelinta beddelka ee ku dhacda giraanta benzene (C₆H₆) marka kooxda hydroxyl ay firfircooniso.",
     "objectives": [
       "Fahamka falcelinta beddelka (substitution reaction)",
       "Daawashada ciribta cad",
@@ -667,9 +667,9 @@
   },
   "starch-iodine-test": {
     "title": "Tijaabada Xabagta (xoogaa)",
-    "description": "Xalka iodine (I₂) ayaa loo isticmaalaa in lagu xaqiijiyo joogitaanka xabag (xoogaa) cuntada ku jirta. Haddii midabku u beddelo buluug, waxay muujinaysaa in xabag (xoogaa) jirto, taasoo xidid la leh falanqaynta kiimikaadka cuntada.",
+    "description": "Xalka iodine (I₂) ayaa loo isticmaalaa in lagu xaqiijiyo joogitaanka xabag cuntada ku jirta. Haddii midabku u beddelo buluug, waxay muujinaysaa in xabag jirto, taasoo xidid la leh falanqaynta kiimikaadka cuntada.",
     "objectives": [
-      "Xaqiijinta joogitaanka xabag (xoogaa)",
+      "Xaqiijinta joogitaanka xabag",
       "Daawashada isbeddelka midabka",
       "Xiriirka tijaabada iyo falanqaynta cuntada maalinlaha ah"
     ]
@@ -688,7 +688,7 @@
     "description": "Xadhigga naxaasta (copper wire) marka la kulaaliyo ayaa falcelinta oxidation-ka ethanol (C₂H₅OH) u dhexaadiya, iyagoo soo saara acetaldehyde (CH₃CHO). Xadhigga naxaasta (copper wire) wuxuu midabkiisu u wareegaa madow ilaa cas oo dib u noqon, taasoo muujinaysa sida maadda-dhexaadku u shaqeyso.",
     "objectives": [
       "Fahamka oxidation-ka maaddo-dhexaad leh",
-      "Daawashada isbeddelka midabka xadhigga naxaasta (copper wire)",
+      "Daawashada isbeddelka midabka xadhigga naxaasta",
       "Fahamka wareegga maadda-dhexaadka (catalyst cycle)"
     ]
   },
@@ -802,7 +802,7 @@
   },
   "chloride-identification": {
     "title": "Baarista Tayada Ee Ionka Chloride",
-    "description": "Silver nitrate (AgNO₃) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa loo isticmaalaa in lagu xaqiijiyo joogitaanka ionka chloride xalka, kaas oo lagu caddeynayo cad-cad oo aan ku dhegin aashitada.",
+    "description": "Silver nitrate (AgNO₃) iyo aashitada hidroklorikada oo la wasakheeyay ayaa loo isticmaalaa in lagu xaqiijiyo joogitaanka ionka chloride xalka, kaas oo lagu caddeynayo cad-cad oo aan ku dhegin aashitada.",
     "objectives": [
       "Ku xirfeyso habka saxda ah ee lagu baaro ionka chloride",
       "Baadi-goo waxyaabaha wax ku dheefi kara natiijooyinka baarista",
@@ -811,7 +811,7 @@
   },
   "sulfate-identification": {
     "title": "Baarista Tayada Ee Ionka Sulfate",
-    "description": "Barium chloride (BaCl₂) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa loo isticmaalaa in lagu xaqiijiyo ionka sulfate, kaas oo lagu caddeynayo cad-cad aan ku dhegin aashitada.",
+    "description": "Barium chloride (BaCl₂) iyo aashitada hidroklorikada oo la wasakheeyay ayaa loo isticmaalaa in lagu xaqiijiyo ionka sulfate, kaas oo lagu caddeynayo cad-cad aan ku dhegin aashitada.",
     "objectives": [
       "Ku xirfeyso habka saxda ah ee lagu baaro ionka sulfate",
       "Baadi-goo saamaynta ionka carbonate ee wax ku dheefi karta",
@@ -820,11 +820,11 @@
   },
   "carbonate-identification": {
     "title": "Baarista Tayada Ee Ionka Carbonate",
-    "description": "Aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) iyo Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) ayaa loo isticmaalaa in lagu xaqiijiyo ionka carbonate; xaqiijinta waxay ku tiirsan tahay soo bixitaanka gaaska iyo daahitaanka Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد).",
+    "description": "Aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) iyo Biyo gaashaan ah ayaa loo isticmaalaa in lagu xaqiijiyo ionka carbonate; xaqiijinta waxay ku tiirsan tahay soo bixitaanka gaaska iyo daahitaanka Biyo gaashaan ah.",
     "objectives": [
       "Ku xirfeyso habka saxda ah ee lagu baaro ionka carbonate",
       "Ogow oo diiwaangeli soo bixitaanka gaaska inta lagu jiro falka",
-      "Xaqiiji joogitaanka CO₂ iyadoo la isticmaalayo Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد)"
+      "Xaqiiji joogitaanka CO₂ iyadoo la isticmaalayo Biyo gaashaan ah"
     ]
   },
   "fe3-identification": {
@@ -838,10 +838,10 @@
   },
   "ammonium-identification": {
     "title": "Baarista Ionka Ammonium",
-    "description": "Cusbada ammonium marka lagu daro sodium hydroxide (NaOH) oo la kululeeyo ayaa sii daaya gaaska ammonia (ammonia gas), kaas oo warqadda litmus ee cas (red litmus paper) oo qoyan u beddela buluug, taasoo xaqiijinaysa joogitaanka ionka ammonium.",
+    "description": "Cusbada ammonium marka lagu daro sodium hydroxide (NaOH) oo la kululeeyo ayaa sii daaya gaaska ammonia, kaas oo warqadda litmus ee cas oo qoyan u beddela buluug, taasoo xaqiijinaysa joogitaanka ionka ammonium.",
     "objectives": [
       "Ku xirfeyso habka saxda ah ee lagu baaro ionka ammonium",
-      "Xaqiiji joogitaanka gaaska ammonia (ammonia gas) iyadoo la isticmaalayo warqadda litmus ee cas (red litmus paper) oo qoyan",
+      "Xaqiiji joogitaanka gaaska ammonia iyadoo la isticmaalayo warqadda litmus ee cas oo qoyan",
       "Faham shuruudaha kiimikaadka ee gaaska soo baxa"
     ]
   },
@@ -883,7 +883,7 @@
   },
   "iron-electrochemical-corrosion": {
     "title": "Karbaashida Elektrokiimikaadka ee Birta",
-    "description": "Xalliga cusbitada (salt water / brine) ayaa loo isticmaalaa in lagu muujiyo sida birtu (Fe) u nuugto oksijiinta oo ay u cararto, waxaana lagu daabacaa potassium hexacyanoferrate(III) (potassium ferricyanide) si loo eego batarida micro-ah ee karbaashida.",
+    "description": "Xalliga cusbitada (salt water / brine) ayaa loo isticmaalaa in lagu muujiyo sida birtu (Fe) u nuugto oksijiinta oo ay u cararto, waxaana lagu daabacaa potassium hexacyanoferrate(III) si loo eego batarida micro-ah ee karbaashida.",
     "objectives": [
       "Garan karbaashida nuugida oksijiinta",
       "Fahmi batarida micro-ah",
@@ -919,7 +919,7 @@
   },
   "electrolysis-water": {
     "title": "Tijaabada Kala-qaybinta Biyaha",
-    "description": "Biyuhu waxaa lagu kala-qaybiyaa xalliga aashito sulfuric ah (H₂SO₄) oo diiwaangashan; kathoodka ayaa soo saara gaaska hydrogen (hydrogen gas), anoodka ayaa soo saara ogsijiin (O₂), xajmigooduna yahay qiyaastii 2∶1.",
+    "description": "Biyuhu waxaa lagu kala-qaybiyaa xalliga aashito sulfuric ah (H₂SO₄) oo diiwaangashan; kathoodka ayaa soo saara gaaska hydrogen, anoodka ayaa soo saara ogsijiin (O₂), xajmigooduna yahay qiyaastii 2∶1.",
     "objectives": [
       "Xaqiiji qaabka biyaha",
       "Qor falcelinta cutubka",
@@ -928,7 +928,7 @@
   },
   "electrolysis-nacl-solution": {
     "title": "Kala-qaybinta Xalliga Cusbitada Dareenka leh",
-    "description": "Markaad kala-qaybiso xalliga sodium chloride (NaCl) oo dareeni ah, kathoodka ayaa soo saara gaaska hydrogen (hydrogen gas), anoodka ayaa soo saara gaaska chlorine (Cl₂), aagga kathoodkana waxaa ku samaysmaya sodium hydroxide (NaOH).",
+    "description": "Markaad kala-qaybiso xalliga sodium chloride (NaCl) oo dareeni ah, kathoodka ayaa soo saara gaaska hydrogen, anoodka ayaa soo saara gaaska chlorine (Cl₂), aagga kathoodkana waxaa ku samaysmaya sodium hydroxide (NaOH).",
     "objectives": [
       "Garan warshadaha chlor-alkali",
       "Qor falcelinta cutubka",
@@ -955,7 +955,7 @@
   },
   "electroplating-silver": {
     "title": "Tijaabada Dahadhinta Lacagta (Silfarka)",
-    "description": "Shayga la dahadhinayo waxaa loo isticmaalaa kathood, Lacag (silfar) ayaana loo isticmaalaa anood, xalligana wuxuu ka kooban yahay cusbitada silfarka. Tijaabadani waxay sharaxaysaa sida lakabka dahadhinta loo sameeyo.",
+    "description": "Shayga la dahadhinayo waxaa loo isticmaalaa kathood, Lacag ayaana loo isticmaalaa anood, xalligana wuxuu ka kooban yahay cusbitada silfarka. Tijaabadani waxay sharaxaysaa sida lakabka dahadhinta loo sameeyo.",
     "objectives": [
       "Faham mabaadi'da dahadhinta",
       "Xukun cufnaanta lakabka dahadhinta",
@@ -973,16 +973,16 @@
   },
   "daniell-cell": {
     "title": "Unugga Koronteed ee Daniell",
-    "description": "Xaashi zinc ah ayaa lagu dhejiyaa zinc sulfate, xaashi naxaas ahna ayaa lagu dhejiyaa copper(II) sulfate (CuSO₄), labadana waxaa ku xidha buundada cusbitada (salt bridge) si loo samaystaa unug koronteed caanka ah, kadibna waxaa la qiyaasaa xoogga koronto-kicinta (EMF).",
+    "description": "Xaashi zinc ah ayaa lagu dhejiyaa zinc sulfate, xaashi naxaas ahna ayaa lagu dhejiyaa copper(II) sulfate (CuSO₄), labadana waxaa ku xidha buundada cusbitada si loo samaystaa unug koronteed caanka ah, kadibna waxaa la qiyaasaa xoogga koronto-kicinta (EMF).",
     "objectives": [
       "Aqoonsi unugga koronteed ee laba-dareerood ah",
-      "Faham hawsha buundada cusbitada (salt bridge)",
+      "Faham hawsha buundada cusbitada",
       "Qiyaas xoogga koronto-kicinta (EMF)"
     ]
   },
   "iron-carbon-galvanic-corrosion": {
     "title": "Cunsuridda Unugga Koronteed ee Bir-Carboon",
-    "description": "Marka bir (Fe) iyo carboon lagu daro aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), waxaa la sameeystaa unug koronteed oo bir (Fe) ku shaqaynaysa anood, taasina waxay dedejisaa milmida birta. Tijaabadani waxay sharaxaysaa cunsuridda hydrogen-saarista ee xadidka.",
+    "description": "Marka bir (Fe) iyo carboon lagu daro aashitada hidroklorikada oo la wasakheeyay, waxaa la sameeystaa unug koronteed oo bir (Fe) ku shaqaynaysa anood, taasina waxay dedejisaa milmida birta. Tijaabadani waxay sharaxaysaa cunsuridda hydrogen-saarista ee xadidka.",
     "objectives": [
       "Aqoonsi cunsuridda hydrogen-saarista",
       "Faham unugga koronteed ee micro ah",
@@ -991,7 +991,7 @@
   },
   "oxygen-absorption-corrosion": {
     "title": "Baaritaanka Cunsuridda Ogsijiin-Nuugista ee Xadidka",
-    "description": "Musmaaro bir ah ayaa lagu dhejiyaa xalliga cusbitada (salt water / brine) oo aan aashito lahayn, kadib muddo ka dib, dareeraha ku jira tuubo gaadhsiinta gaaska ayaa kor u kacaya, taasina waxay caddeynaysaa in cunsuridda ogsijiin-nuugista ay isticmaasho ogsijiin (O₂).",
+    "description": "Musmaaro bir ah ayaa lagu dhejiyaa xalliga cusbitada oo aan aashito lahayn, kadib muddo ka dib, dareeraha ku jira tuubo gaadhsiinta gaaska ayaa kor u kacaya, taasina waxay caddeynaysaa in cunsuridda ogsijiin-nuugista ay isticmaasho ogsijiin (O₂).",
     "objectives": [
       "Aqoonsi cunsuridda ogsijiin-nuugista",
       "Is-barbardhig cunsuridda hydrogen-saarista",
@@ -1009,7 +1009,7 @@
   },
   "dry-cell-dissection": {
     "title": "Baaritaanka Dhismaha Baatarida Engegan",
-    "description": "Waxaa la bixiyaa baatarida zinc-manganese ee engegan si loo baaro; waxaa lagu gartaa kutubta zinc ee anoodka taban, usha kaarboonka (carbon rod) ee katoodka togan, iyo cajiinka elektirooleedka, si loo fahmo mabda'a baatarida hal-isticmaalka ah.",
+    "description": "Waxaa la bixiyaa baatarida zinc-manganese ee engegan si loo baaro; waxaa lagu gartaa kutubta zinc ee anoodka taban, usha kaarboonka ee katoodka togan, iyo cajiinka elektirooleedka, si loo fahmo mabda'a baatarida hal-isticmaalka ah.",
     "objectives": [
       "Garan dhismaha baatarida engegan",
       "Aqoonsiga maaddooyinka anoodka iyo katoodka",
@@ -1027,7 +1027,7 @@
   },
   "conductivity-electrolyte": {
     "title": "Gudbinta Korontada Xalaalada Elektirooleedka",
-    "description": "Waxaa qalabka gudbinta korontada (electrical conductivity apparatus) lagu barbar dhigaa gudbinta korontada xalaalada sodium chloride (NaCl), aashito hydrochloric ah (HCl), iyo Sukroos, si loo garto elektiroleetka iyo aan-elektiroleetka.",
+    "description": "Waxaa qalabka gudbinta korontada lagu barbar dhigaa gudbinta korontada xalaalada sodium chloride (NaCl), aashito hydrochloric ah (HCl), iyo Sukroos, si loo garto elektiroleetka iyo aan-elektiroleetka.",
     "objectives": [
       "Kala soocida elektiroleetka",
       "Garanshaha gudbinta ioniga ee korontada",
@@ -1036,7 +1036,7 @@
   },
   "molten-salt-electrolysis": {
     "title": "Elektrolisiska Milicsan ee Sodium Chloride (NaCl)",
-    "description": "Waxaa heer-kulul sare lagu elektrolise-garaa sodium chloride (NaCl) ee milicsan; katoodka waxaa laga helaa birta sodium (sodium metal), anoodkana waxaa ka soo baxa gaaska chlorine (Cl₂), si loo fahmo habka refinaynta biraha firfircoon.",
+    "description": "Waxaa heer-kulul sare lagu elektrolise-garaa sodium chloride (NaCl) ee milicsan; katoodka waxaa laga helaa birta sodium, anoodkana waxaa ka soo baxa gaaska chlorine (Cl₂), si loo fahmo habka refinaynta biraha firfircoon.",
     "objectives": [
       "Garanshaha elektrolisiska milicsan",
       "Fahmida refinaynta sodium",
@@ -1054,7 +1054,7 @@
   },
   "lead-acid-battery": {
     "title": "Baaritaanka Baatarida Rasaas-Aashito",
-    "description": "Waxaa la baaraa isbeddelada maaddada elektiroodka iyo xoojinta aashito sulfuric ah (H₂SO₄) xilliga shidaalinta iyo shuqulinta baatarida rasaasta (lead), si loo fahmo baatarida dib-u-shuqulinta ah.",
+    "description": "Waxaa la baaraa isbeddelada maaddada elektiroodka iyo xoojinta aashito sulfuric ah (H₂SO₄) xilliga shidaalinta iyo shuqulinta baatarida rasaasta, si loo fahmo baatarida dib-u-shuqulinta ah.",
     "objectives": [
       "Garanshaha baatarida dib-u-shuqulinta ah",
       "Fahmida mabda'a shidaalinta iyo shuqulinta",
@@ -1063,7 +1063,7 @@
   },
   "concentration-cell": {
     "title": "Unugga Korontada ee Kala-Xoojiinta",
-    "description": "Laba elektirood lacag ah (silver electrode) ayaa lagu dhex gelin karaa xalaalado silver nitrate (AgNO₃) oo kala xoog duwan, kuwaas oo ay buundada cusbitada (salt bridge) isku xiddo, si ay u soo saarto faragelin korontadeed, loona fahmo unugga korontada ee kala-xoojiinta.",
+    "description": "Laba elektirood lacag ah (silver electrode) ayaa lagu dhex gelin karaa xalaalado silver nitrate (AgNO₃) oo kala xoog duwan, kuwaas oo ay buundada cusbitada isku xiddo, si ay u soo saarto faragelin korontadeed, loona fahmo unugga korontada ee kala-xoojiinta.",
     "objectives": [
       "Garanshaha unugga korontada ee kala-xoojiinta",
       "Fahmida saamaynta xoojiinta ee korontada",
@@ -1126,7 +1126,7 @@
   },
   "silver-electrolytic-cleaning": {
     "title": "Soo celinta lacagta kloriidhka iyadoo la isticmaalayo elektrolysis",
-    "description": "Lacag (silfar) madoobaatay iyo warqadda aluminium (aluminium foil) ayaa lagu dhigaa xal kulul sodium carbonate (Na₂CO₃) si loo dhiso unug galvanic ah, kaas oo silver sulfide (Ag₂S) ku beddelaa Lacag (silfar) safi ah.",
+    "description": "Lacag madoobaatay iyo warqadda aluminium ayaa lagu dhigaa xal kulul sodium carbonate (Na₂CO₃) si loo dhiso unug galvanic ah, kaas oo silver sulfide (Ag₂S) ku beddelaa Lacag safi ah.",
     "objectives": [
       "Barashada soo celinta unugga galvanic",
       "Fahamka mabda'a xakamaynta sadaamka",
@@ -1135,7 +1135,7 @@
   },
   "electrolysis-ki-solution": {
     "title": "Elektrolysis-ka xalka potassium iodide (KI)",
-    "description": "Marka la elektrolaysiyo xal potassium iodide (KI), anoodka ayaa keena iodine (I₂) oo xabag (xoogaa) u beddelaysa midab buluug, halka kathoodka uu soo saaro gaaska hydrogen (hydrogen gas) oo phenolphthalein cas u galaayo, taasoo si cad u muujinaysa wax soo saarka labada qudhun.",
+    "description": "Marka la elektrolaysiyo xal potassium iodide (KI), anoodka ayaa keena iodine (I₂) oo xabag u beddelaysa midab buluug, halka kathoodka uu soo saaro gaaska hydrogen oo phenolphthalein cas u galaayo, taasoo si cad u muujinaysa wax soo saarka labada qudhun.",
     "objectives": [
       "Go'aaminta wax soo saarka elektrolysis",
       "Hubinta iodine (I₂) ee anoodka",
@@ -1144,7 +1144,7 @@
   },
   "silver-ammonia-complex-dissolve": {
     "title": "Xalinta lacagta kloriidhka ee xal ammoniya ah iyo soo celintaeda aashito nitric ah",
-    "description": "Gu'uurka cad ee lacagta kloriidhka (silver chloride) marka lagu daro xal ammoniya ah (NH₃ biyood) ayuu ku dhalaanshaa isaga oo sameynaya ion-ka muraayadaha silver-ammoniya, marka dib lagu daro aashito nitric ah (HNO₃) ayaa mar kale gu'uurku soo noqdaa.",
+    "description": "Gu'uurka cad ee lacagta kloriidhka marka lagu daro xal ammoniya ah NH₃ ayuu ku dhalaanshaa isaga oo sameynaya ion-ka muraayadaha silver-ammoniya, marka dib lagu daro aashito nitric ah (HNO₃) ayaa mar kale gu'uurku soo noqdaa.",
     "objectives": [
       "Barashada xalinta isuduwidda",
       "Fahamka xasilloonida ion-ka muraayadaha",
@@ -1153,7 +1153,7 @@
   },
   "copper-ammonia-deep-blue": {
     "title": "copper(II) sulfate (CuSO₄) iyo xal ammoniya ah oo xad dhaafaya",
-    "description": "Marka xal ammoniya ah (NH₃ biyood) lagu daro xalka copper(II) sulfate (CuSO₄), markii hore waxaa soo baxa falaggayn buluug ah; marka xal ammoniya ah (NH₃ biyood) xad dhaafto, falaggaynta waxay ku milantaa iyo la samaysaa ion-ka naxaas-amooniya ee buluug-mudow ah.",
+    "description": "Marka xal ammoniya ah NH₃ lagu daro xalka copper(II) sulfate (CuSO₄), markii hore waxaa soo baxa falaggayn buluug ah; marka xal ammoniya ah NH₃ xad dhaafto, falaggaynta waxay ku milantaa iyo la samaysaa ion-ka naxaas-amooniya ee buluug-mudow ah.",
     "objectives": [
       "La socod falcelinta horeba falaggaynta ka dib milanaanta",
       "Aqoonsi ion-ka naxaas-amooniya (copper-ammonia complex ion)",
@@ -1162,7 +1162,7 @@
   },
   "agi-ammonia-insoluble": {
     "title": "Barbar-dhigga milanaanta lacagta kloriidhka, silver bromide (AgBr), iyo Silfar(I) aayodiiد ee xal ammoniya ah",
-    "description": "Waxaa la barbardhigaa milanaanta lacagta kloriidhka (silver chloride), silver bromide (AgBr), iyo Silfar(I) aayodiiد marka la geliyo xal ammoniya ah (NH₃ biyood), si loo fahmо xeerka isbeddelka qiimaha lahjadda milanaanta (Ksp) ee halide-yada silfarka.",
+    "description": "Waxaa la barbardhigaa milanaanta lacagta kloriidhka, silver bromide (AgBr), iyo Silfar(I) aayodiiد marka la geliyo xal ammoniya ah NH₃, si loo fahmо xeerka isbeddelka qiimaha lahjadda milanaanta (Ksp) ee halide-yada silfarka.",
     "objectives": [
       "Barbardhig milanaanta xaaladaha kala duwan",
       "La xiriir qiimaha Ksp",
@@ -1216,7 +1216,7 @@
   },
   "zinc-ammonia-complex": {
     "title": "Samaysemida ion-ka zinc-ammonia complex",
-    "description": "Marka xal ammoniya ah (NH₃ biyood) lagu daro xalka zinc sulfate, markii hore waxaa soo baxa falaggayn cad oo ah sinkyga hiidrooksaydka (zinc hydroxide); marka xal ammoniya ah (NH₃ biyood) xad dhaafto, falaggaynta waxay ku milantaa xalka, oo la samayso ion-ka zinc-ammonia complex.",
+    "description": "Marka xal ammoniya ah NH₃ lagu daro xalka zinc sulfate, markii hore waxaa soo baxa falaggayn cad oo ah sinkyga hiidrooksaydka; marka xal ammoniya ah NH₃ xad dhaafto, falaggaynta waxay ku milantaa xalka, oo la samayso ion-ka zinc-ammonia complex.",
     "objectives": [
       "Daawado milanaanta falaggaynta",
       "Aqoonsi ion-ka zinc-ammonia complex",
@@ -1243,7 +1243,7 @@
   },
   "copper-chloride-complex-color": {
     "title": "Isbeddelka Midabka Xiriirka Chloro-naxaas (Cu)",
-    "description": "Marka hydrochloric acid dhumuc badan (concentrated hydrochloric acid) lagu daro xalka copper(II) sulfate (CuSO₄), ayaa xiriir chloro-naxaas oo midabkiisu yahay jaalle-cagaaran samaysma, laakiin marka la nadiifiyo biyaha ayuu dib ugu noqdaa buluug.",
+    "description": "Marka hydrochloric acid dhumuc badan lagu daro xalka copper(II) sulfate (CuSO₄), ayaa xiriir chloro-naxaas oo midabkiisu yahay jaalle-cagaaran samaysma, laakiin marka la nadiifiyo biyaha ayuu dib ugu noqdaa buluug.",
     "objectives": [
       "La eeg midabka xiriirka",
       "Faham beddelka ligand",
@@ -1252,7 +1252,7 @@
   },
   "starch-iodine-complex": {
     "title": "Midabka Xiriirka Xabag (xoogaa)-iodine (I₂)",
-    "description": "iodine (I₂) ay la samaysaa xabag (xoogaa) waxay abuuraan xiriir buluug ah, kaas oo midabkiisu baaba'o marka la kululeeyo oo dib u soo noqdo marka la qaboojiyiyo, taasoo muujinaysa falcelinta midab-muujinta ee soo-noqnoqota.",
+    "description": "iodine (I₂) ay la samaysaa xabag waxay abuuraan xiriir buluug ah, kaas oo midabkiisu baaba'o marka la kululeeyo oo dib u soo noqdo marka la qaboojiyiyo, taasoo muujinaysa falcelinta midab-muujinta ee soo-noqnoqota.",
     "objectives": [
       "La eeg abuurista xiriirka buluuga ah",
       "Faham sida midab-muujintu u soo-noqoto",
@@ -1264,7 +1264,7 @@
     "description": "Xal ammoniya ah (NH₃ biyood) ayaa tali-tali loogu daraa silver nitrate (AgNO₃) ilaa dareeraha uu si buuxda u milmo, si loo helo xal silver-ammonia oo cad, kuwaas oo la xusay in la isticmaalo isla markiiba lagu diyaariyo.",
     "objectives": [
       "Ku caawishan diyaarinta saxda ah",
-      "Faham muhiimadda xal ammoniya ah (NH₃ biyood) ee ku filan",
+      "Faham muhiimadda xal ammoniya ah NH₃ ee ku filan",
       "Gaar ahaan gado waxyeelada ka timid kaydin dheer"
     ]
   },
@@ -1297,7 +1297,7 @@
   },
   "nickel-ammonia-complex": {
     "title": "Sameynta Nickel-Ammonia Complex Ion",
-    "description": "Marka xal ammoniya ah (NH₃ biyood) oo xad dhaaf ah lagu daro xalka nickel(II) chloride, midabku wuxuu ka bedelaa cagaar ilaa buluug-guduud, taasoo muujinaysa sameysamay nickel-ammonia complex ion. Tijaabadani waxay baraysa xiriirka laxaadka ee niikal.",
+    "description": "Marka xal ammoniya ah NH₃ oo xad dhaaf ah lagu daro xalka nickel(II) chloride, midabku wuxuu ka bedelaa cagaar ilaa buluug-guduud, taasoo muujinaysa sameysamay nickel-ammonia complex ion. Tijaabadani waxay baraysa xiriirka laxaadka ee niikal.",
     "objectives": [
       "U fiirso isbedelka midabka",
       "Garo nickel-ammonia complex ion",
@@ -1306,7 +1306,7 @@
   },
   "hexacyanoferrate-color": {
     "title": "Xasilloonida Bir-Cyanide Complex Ions",
-    "description": "Barbardhig midabka xalka botaasiyamka ferrosayanaaydka (potassium ferrocyanide / potassium hexacyanoferrate(II)) iyo xalka potassium hexacyanoferrate(III) (potassium ferricyanide), si loo fahmo labada nooc ee cyanide complex ions ee bir (Fe) iyo xaaladooda oxidation.",
+    "description": "Barbardhig midabka xalka botaasiyamka hexacyanoferrate(II) iyo xalka potassium hexacyanoferrate(III), si loo fahmo labada nooc ee cyanide complex ions ee bir (Fe) iyo xaaladooda oxidation.",
     "objectives": [
       "Kala saaro labada complex ion",
       "Xidh xiriirka u dhexeeya oxidation state-ka bir (Fe) iyo complex ions-ka",
@@ -1315,7 +1315,7 @@
   },
   "turnbull-blue": {
     "title": "Sameynta Turnbull's Blue",
-    "description": "Marka Fe²⁺ ions ay ku falgeliso potassium hexacyanoferrate(III) (potassium ferricyanide), waxaa samaasama raashin buluug ah oo loo yaqaan Turnbull's blue, kaas oo loo adeegsado baaritaanka Fe²⁺ ions.",
+    "description": "Marka Fe²⁺ ions ay ku falgeliso potassium hexacyanoferrate(III), waxaa samaasama raashin buluug ah oo loo yaqaan Turnbull's blue, kaas oo loo adeegsado baaritaanka Fe²⁺ ions.",
     "objectives": [
       "Baari Fe²⁺ ions adoo adeegsanaya dallacsiinta muuqaalka",
       "Barbardhig Turnbull's blue iyo Prussian blue",
@@ -1391,7 +1391,7 @@
     "objectives": [
       "Fahami sababta dhamaadka titration aasidda xoogga leh ee aasaasiga daciifka ah uu u leeyahay aashitanimo",
       "Fahmo aasaaska doorashada tilmaamaha",
-      "Xisaabi xoogga xal ammoniya ah (NH₃ biyood)"
+      "Xisaabi xoogga xal ammoniya ah NH₃"
     ]
   },
   "weak-acid-strong-base-titration": {
@@ -1432,7 +1432,7 @@
   },
   "common-ion-ammonia": {
     "title": "Baaritaanka Saameynta Ion-ka Wadaagga ah",
-    "description": "Marka ammonium chloride (NH₄Cl) lagu daro xal ammoniya ah (NH₃ biyood) oo lagu daray phenolphthalein, midabka guduudka ayaa fududaada, taas oo muujinaysa in saameynta ion-ka wadaagga ah ay xanibayso kala bixinta xal ammoniya ah (NH₃ biyood).",
+    "description": "Marka ammonium chloride (NH₄Cl) lagu daro xal ammoniya ah NH₃ oo lagu daray phenolphthalein, midabka guduudka ayaa fududaada, taas oo muujinaysa in saameynta ion-ka wadaagga ah ay xanibayso kala bixinta xal ammoniya ah NH₃.",
     "objectives": [
       "Fahami saameynta ion-ka wadaagga ah",
       "Falanqee jihada guurida dheelitirka kala bixinta",
@@ -1441,7 +1441,7 @@
   },
   "ammonia-weak-base": {
     "title": "Asaasiga Daciifka ah ee Xal Ammoniya",
-    "description": "pH-ga xal ammoniya ah (NH₃ biyood) iyo Xalka soodyam hаydrooksiiد oo isla xoogga leh ayaa la barbar dhigaa, si loo fahmo sida xal ammoniya ah (NH₃ biyood) si qayb ahaan u kala goosato ionada, taasoo ka dhigaysa asaas daciif ah.",
+    "description": "pH-ga xal ammoniya ah NH₃ iyo Xalka soodyam hаydrooksiiد oo isla xoogga leh ayaa la barbar dhigaa, si loo fahmo sida xal ammoniya ah NH₃ si qayb ahaan u kala goosato ionada, taasoo ka dhigaysa asaas daciif ah.",
     "objectives": [
       "Kala sooca asaasiga xooggan iyo asaasiga daciifka",
       "Fahmo sida elektrolyte daciifku si qayb ahaan u kala goosado ionada",
@@ -1468,7 +1468,7 @@
   },
   "magnesium-oxide-acid": {
     "title": "Falcelinta Magnesium Oxide iyo Aashitada",
-    "description": "Magnesium oxide (MgO) oo cad ah ayaa ku milma aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) si loo sameeyo xal magnesium chloride, taasoo muujinaysa falcelinta dhex marta oxide asaasiga iyo aashitada.",
+    "description": "Magnesium oxide (MgO) oo cad ah ayaa ku milma aashitada hidroklorikada oo la wasakheeyay si loo sameeyo xal magnesium chloride, taasoo muujinaysa falcelinta dhex marta oxide asaasiga iyo aashitada.",
     "objectives": [
       "Gaar u yaqaan falcelinta oxide asaasiga iyo aashitada",
       "Daawo sida walaxda adag u milmayso",
@@ -1495,29 +1495,29 @@
   },
   "h2-flammability-purity": {
     "title": "Hubinta Nadiifnimada iyo Gubidda Gaaska Hydrogen",
-    "description": "Graniyuulada zinc ayaa lala falcelinaayaa aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) si loo soo saaro gaaska hydrogen (hydrogen gas); marka hore tuubo tijaabo yar ayaa loo isticmaalaa hubinta nadiifnimada (cod qaraar oo adag baa laga maqlaa), markaasna markuu nadiif noqdo ayaa la shidaa dabku, oo muujiya olol buluug-cad ah.",
+    "description": "Graniyuulada zinc ayaa lala falcelinaayaa aashitada hidroklorikada oo la wasakheeyay si loo soo saaro gaaska hydrogen; marka hore tuubo tijaabo yar ayaa loo isticmaalaa hubinta nadiifnimada (cod qaraar oo adag baa laga maqlaa), markaasna markuu nadiif noqdo ayaa la shidaa dabku, oo muujiya olol buluug-cad ah.",
     "objectives": [
-      "Ku xirfad bixi habka hubinta nadiifnimada gaaska hydrogen (hydrogen gas)",
-      "Daawso olosha degdegga ah ee buluug-caddaan ah ee gaaska hydrogen (hydrogen gas)",
+      "Ku xirfad bixi habka hubinta nadiifnimada gaaska hydrogen",
+      "Daawso olosha degdegga ah ee buluug-caddaan ah ee gaaska hydrogen",
       "Fahmo muhiimadda hubinta nadiifnimada ka hor shidista gaas qarxa kara"
     ]
   },
   "h2-reduce-cuo": {
     "title": "Hydrogen oo Dhimaya Copper(II) Oxide",
-    "description": "Gaaska hydrogen (hydrogen gas) oo engegan ayaa laga gudubiyaa copper(II) oxide oo la kululeeyo; walaxda adag ayaa ka beddeshaa midab madow ilaa guduud, tuubbadana dhinaceeda afka ah ayaa biyo ka soo baxa, taasoo muujinaysa awood dhimista gaaska hydrogen (hydrogen gas).",
+    "description": "Gaaska hydrogen (hydrogen gas) oo engegan ayaa laga gudubiyaa copper(II) oxide oo la kululeeyo; walaxda adag ayaa ka beddeshaa midab madow ilaa guduud, tuubbadana dhinaceeda afka ah ayaa biyo ka soo baxa, taasoo muujinaysa awood dhimista gaaska hydrogen.",
     "objectives": [
-      "Xaqiiji awooda dhimista ee gaaska hydrogen (hydrogen gas)",
+      "Xaqiiji awooda dhimista ee gaaska hydrogen",
       "Daawso isbedelka midabka markuu copper(II) oxide u rogmado naxaas (Cu)",
       "Ku xirfad bixi habka shaqada: marka hore gaaska gudbi markaasna kuleyl sii, marka hore laambadda qaad markaasna gaaska jooji"
     ]
   },
   "h2-from-aluminum": {
-    "title": "Samaynta gaaska hydrogen (hydrogen gas) adigoo isticmaalaya aluminium iyo Xalka soodyam hаydrooksiiد",
-    "description": "Xaashi aluminium ah ayaa lala falceliyaa Xalka soodyam hаydrooksiiد si loo soo saaro gaaska hydrogen (hydrogen gas). Tijaabadani waxay muujinaysaa sida biraha firfircoon ay kula falceliyaan labadaba aashitooyinka iyo asaasyada xooggan.",
+    "title": "Samaynta gaaska hydrogen adigoo isticmaalaya aluminium iyo Xalka soodyam hаydrooksiiد",
+    "description": "Xaashi aluminium ah ayaa lala falceliyaa Xalka soodyam hаydrooksiiد si loo soo saaro gaaska hydrogen. Tijaabadani waxay muujinaysaa sida biraha firfircoon ay kula falceliyaan labadaba aashitooyinka iyo asaasyada xooggan.",
     "objectives": [
-      "Ku bartid sida biraha iyo asaasyada ay ugu sameeyaan gaaska hydrogen (hydrogen gas)",
+      "Ku bartid sida biraha iyo asaasyada ay ugu sameeyaan gaaska hydrogen",
       "Barbardhig sida aluminium ula falceliyaa aashitooyinka marka loo eego sida uu ula falceliyaa asaasyada",
-      "Xoojin ururinta gaaska hydrogen (hydrogen gas) hab-biyoodka (displacement method)"
+      "Xoojin ururinta gaaska hydrogen hab-biyoodka (displacement method)"
     ]
   },
   "o2-from-kmno4": {
@@ -1557,12 +1557,12 @@
     ]
   },
   "co2-from-sodium-carbonate": {
-    "title": "Soo-saarka carbon dioxide (CO₂) adigoo isticmaalaya sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid)",
-    "description": "Falcelinta sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa si degdeg ah u soo saarta carbon dioxide (CO₂). Falcelintu waxay ka kulul tahay walxaha adka ee qaabka xabadda ah, waana la cabbiri karaa Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) oo la isticmaalo.",
+    "title": "Soo-saarka carbon dioxide (CO₂) adigoo isticmaalaya sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay",
+    "description": "Falcelinta sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay ayaa si degdeg ah u soo saarta carbon dioxide (CO₂). Falcelintu waxay ka kulul tahay walxaha adka ee qaabka xabadda ah, waana la cabbiri karaa Biyo gaashaan ah oo la isticmaalo.",
     "objectives": [
       "Ku bartid sida kaarboonaatku ula falceliyaa aashitooyinka si loo soo saaro carbon dioxide (CO₂)",
       "Barbardhig xawliga falcelinta kaarboonaatada kala duwan",
-      "Isticmaal Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) si aad u cabirto carbon dioxide (CO₂)"
+      "Isticmaal Biyo gaashaan ah si aad u cabirto carbon dioxide (CO₂)"
     ]
   },
   "co2-react-naoh": {
@@ -1576,16 +1576,16 @@
   },
   "co2-drying-purification": {
     "title": "Nadiifinta iyo engejinta carbon dioxide (CO₂)",
-    "description": "Carbon dioxide (CO₂) laga soo saaro calcium carbonate iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) waxaa ku jira aashito hydrochloric ah (HCl) iyo uumi biyo. Marka hore waxaa loo gudbinaayaa xalka sodium bicarbonate (NaHCO₃) oo dhumuc leh si aashito hydrochloric ah (HCl) laga saaro, ka dibna waxaa loo engejiyaa aashito sulfuric ah oo xooggan (H₂SO₄ concentrated).",
+    "description": "Carbon dioxide (CO₂) laga soo saaro calcium carbonate iyo aashitada hidroklorikada oo la wasakheeyay waxaa ku jira aashito hydrochloric ah (HCl) iyo uumi biyo. Marka hore waxaa loo gudbinaayaa xalka sodium bicarbonate (NaHCO₃) oo dhumuc leh si aashito hydrochloric ah (HCl) laga saaro, ka dibna waxaa loo engejiyaa aashito sulfuric ah oo xooggan H₂SO₄.",
     "objectives": [
       "Faham xididka wasakhaha ku jira natiijada soo-saarka gaaska",
-      "Ku bartid isticmaalka dhalo nadiifinta gaaska si wasakhaha looga nadiifiyo iyo engejinta aashito sulfuric ah oo xooggan (H₂SO₄ concentrated)",
+      "Ku bartid isticmaalka dhalo nadiifinta gaaska si wasakhaha looga nadiifiyo iyo engejinta aashito sulfuric ah oo xooggan H₂SO₄",
       "Caddee jihada xidhmada saxda ah ee dhalo nadiifinta gaaska oo ah gal-dheer bax-gaaban"
     ]
   },
   "hcl-preparation": {
     "title": "Samaynta Gaaska Hydrogen Chloride Sheybaarka",
-    "description": "Gaaska hydrogen chloride waxaa lagu sameeya annagoo kuleylina sodium chloride (NaCl) adag iyo aashito sulfuric ah oo xooggan (H₂SO₄ concentrated), kadibna waxaa la arkaa cad-cad ka dhasha hawada qoyan, markaasaa biyo lagu dareysaa si loo helo aashito hydrochloric ah (HCl).",
+    "description": "Gaaska hydrogen chloride waxaa lagu sameeya annagoo kuleylina sodium chloride (NaCl) adag iyo aashito sulfuric ah oo xooggan H₂SO₄, kadibna waxaa la arkaa cad-cad ka dhasha hawada qoyan, markaasaa biyo lagu dareysaa si loo helo aashito hydrochloric ah (HCl).",
     "objectives": [
       "Fahamka mabda'a ah ee aashitada aan ka bixin (non-volatile) oo loo isticmaalayo samaynta aashitada ka bixa (volatile)",
       "Garan kalsoonida xoogga badan ee hydrogen chloride uu ku milma biyaha iyo astaantiisa aashidda",
@@ -1594,29 +1594,29 @@
   },
   "nh3-from-ammonium-sulfate": {
     "title": "Samaynta Gaaska Ammonia Annagoo Isticmaalaya Amooniyam sulfeет iyo Calcium Hydroxide",
-    "description": "Amooniyam sulfeет iyo calcium hydroxide (Ca(OH)₂) waa la isku dhafaa oo la kuleyliyaa si loo samaynto gaaska ammonia (ammonia gas); warqadda litmus ee cas (red litmus paper) oo qoyan ayaa loo isticmaalaa hubinta, waxaana la baranayaa sifo guud ee bilaashka ammonia ee kuleylinta cusbileyda amooniyam iyo xalka aashidda.",
+    "description": "Amooniyam sulfeет iyo calcium hydroxide Ca(OH)₂ waa la isku dhafaa oo la kuleyliyaa si loo samaynto gaaska ammonia; warqadda litmus ee cas oo qoyan ayaa loo isticmaalaa hubinta, waxaana la baranayaa sifo guud ee bilaashka ammonia ee kuleylinta cusbileyda amooniyam iyo xalka aashidda.",
     "objectives": [
-      "Bartid habka samaynta gaaska ammonia (ammonia gas) annagoo reacshiga cusbileyda amooniyam iyo xaalufiyeyaasha (alkalis) isticmaalaya",
-      "Hubinta gaaska ammonia (ammonia gas) annagoo isticmaalaya warqadda litmus ee cas (red litmus paper) oo qoyan",
+      "Bartid habka samaynta gaaska ammonia annagoo reacshiga cusbileyda amooniyam iyo xaalufiyeyaasha (alkalis) isticmaalaya",
+      "Hubinta gaaska ammonia annagoo isticmaalaya warqadda litmus ee cas oo qoyan",
       "Fahanka sababta afka tuubo tijaabo loo hoos jeedinayo si looga hortago dib-u-socoshada biyaha qaboow ee ku soo dagi karta"
     ]
   },
   "nh3-tail-gas-absorption": {
     "title": "Hubinta Gaaska Ammonia iyo Xannibaadda Gaaske Dhambe",
-    "description": "Gaaska ammonia (ammonia gas) waxaa lagu sameyaa annagoo kuleylina ammonium chloride (NH₄Cl) iyo calcium hydroxide (Ca(OH)₂); warqadda litmus oo qoyan ayaa loo isticmaalaa hubinta, halka tuubo gaadhsiinta gaaska dhambaasha ku xidhan tahay oo la soo dhowaynayo dusha biyo distilled ah si loo xannibaado oo looga hortago dib-u-socoshada.",
+    "description": "Gaaska ammonia (ammonia gas) waxaa lagu sameyaa annagoo kuleylina ammonium chloride (NH₄Cl) iyo calcium hydroxide Ca(OH)₂; warqadda litmus oo qoyan ayaa loo isticmaalaa hubinta, halka tuubo gaadhsiinta gaaska dhambaasha ku xidhan tahay oo la soo dhowaynayo dusha biyo distilled ah si loo xannibaado oo looga hortago dib-u-socoshada.",
     "objectives": [
-      "Bartid hababka hubinta gaaska ammonia (ammonia gas)",
+      "Bartid hababka hubinta gaaska ammonia",
       "Barasho habka xannibaadda gaaske si fudud uu ku milma biyaha",
       "Fahanka sida ay u shaqeyso qalab ka hortagga dib-u-socoshada (anti-suckback device)"
     ]
   },
   "chlorine-oxidize-ki": {
     "title": "Falcelinta Beddelka ee Gaaska Chlorine (Cl₂) iyo Potassium Iodide (KI)",
-    "description": "Marka gaaska chlorine (Cl₂) lagu gudbiyo xalka potassium iodide (KI) oo ka kooban xabag (xoogaa), xalka wuxuu noqdaa buluug, taasoo caddeyneeysa in gaaska chlorine (Cl₂) uu iodine (I₂) ka beddelay xalka, sidaasna waxaa la xaqiijiyaa in awoodda oxidation ee chlorine ay ka weyn tahay ta iodine (I₂).",
+    "description": "Marka gaaska chlorine (Cl₂) lagu gudbiyo xalka potassium iodide (KI) oo ka kooban xabag, xalka wuxuu noqdaa buluug, taasoo caddeyneeysa in gaaska chlorine (Cl₂) uu iodine (I₂) ka beddelay xalka, sidaasna waxaa la xaqiijiyaa in awoodda oxidation ee chlorine ay ka weyn tahay ta iodine (I₂).",
     "objectives": [
       "Xaqiijinta awoodda xooggan ee oxidation ee gaaska chlorine (Cl₂)",
       "Fahamka tartanka beddelka ee halogens iyo taxanaha awoodda oxidation",
-      "Bartid isticmaalka xabag (xoogaa) hubinta iodine (I₂) xidhmada"
+      "Bartid isticmaalka xabag hubinta iodine (I₂) xidhmada"
     ]
   },
   "chlorine-bleaching-mechanism": {
@@ -1657,7 +1657,7 @@
   },
   "feoh2-air-oxidation": {
     "title": "Sameynta Bir(II) Hiidrooksaydka iyo Isbeddelka Midabkiisa",
-    "description": "Markii iron(II) sulfate (FeSO₄) la falgalo sodium hydroxide (NaOH), ayaa markii hore la sameeyaa birta(III) hiidrooksaydka (iron(III) hydroxide) cad, kaas oo hawada ku degdeg ah u beddelma midab cagaar-cirro ah, ugu dambayntana u rogo midab casaan-bunni ah oo birta(III) hiidrooksaydka (iron(III) hydroxide) gaar ah.",
+    "description": "Markii iron(II) sulfate (FeSO₄) la falgalo sodium hydroxide (NaOH), ayaa markii hore la sameeyaa birta(III) hiidrooksaydka cad, kaas oo hawada ku degdeg ah u beddelma midab cagaar-cirro ah, ugu dambayntana u rogo midab casaan-bunni ah oo birta(III) hiidrooksaydka gaar ah.",
     "objectives": [
       "Sameynta birta(II) hiidrooksaydka",
       "Observation-ka isbeddelka midabka ee xilliga kala duwan",
@@ -1666,7 +1666,7 @@
   },
   "agcl-light-darkening": {
     "title": "Isbeddelka Midabka Lacagta Kloriidhka (Silver Chloride) Markii Iftiin Lagu Dhaco",
-    "description": "Markii silver nitrate (AgNO₃) la falgalo Botaasiyam kloriiد, ayaa la helaa dacal cad oo ah lacagta kloriidhka (silver chloride); markii iftiinka lagu dhaco ayuu si tartiib tartiib ah u noqdaa midab dambas-cad, taas oo muujineysa xasaasiyada halyoodka silfar ee iftiinka.",
+    "description": "Markii silver nitrate (AgNO₃) la falgalo Botaasiyam kloriiد, ayaa la helaa dacal cad oo ah lacagta kloriidhka; markii iftiinka lagu dhaco ayuu si tartiib tartiib ah u noqdaa midab dambas-cad, taas oo muujineysa xasaasiyada halyoodka silfar ee iftiinka.",
     "objectives": [
       "Observation-ka sameynta dacalka cad",
       "Garan xasaasiyada halyoodka silfar ee iftiinka",
@@ -1675,7 +1675,7 @@
   },
   "halide-fractional-precipitation": {
     "title": "Dacalinta Tallaabooyinka ah ee Halide Aniyoonada",
-    "description": "Markii silver nitrate (AgNO₃) si tartiib tartiib ah loogu kordhiyo qulqulka isku-darka ah ee sodium chloride (NaCl), potassium bromide, iyo potassium iodide (KI), ayaa kala-soocida dacalka u dhacaa sida ku habboon qiimaha ksp: marka hore silfar(I) aayodiiد (oranjo), ka dibna silver bromide (AgBr) (jaallo-cad), ugu dambayntana lacagta kloriidhka (silver chloride) cad.",
+    "description": "Markii silver nitrate (AgNO₃) si tartiib tartiib ah loogu kordhiyo qulqulka isku-darka ah ee sodium chloride (NaCl), potassium bromide, iyo potassium iodide (KI), ayaa kala-soocida dacalka u dhacaa sida ku habboon qiimaha ksp: marka hore silfar(I) aayodiiد (oranjo), ka dibna silver bromide (AgBr) (jaallo-cad), ugu dambayntana lacagta kloriidhka cad.",
     "objectives": [
       "Fahamka mabda'a dacalinta tallaabooyinka ah",
       "Barbar-dhigga qiimayaasha ksp ee halyoodka silfar",
@@ -1684,7 +1684,7 @@
   },
   "common-ion-effect-agcl": {
     "title": "Saamaynta Ion-ka Wadaagga ah ee ku Timaada Xalka Lacagta Kloriidhka (Silver Chloride)",
-    "description": "Waxaa la samaynayaa dacal ah lacagta kloriidhka (silver chloride) adoo isticmaalaya silver nitrate (AgNO₃) iyo sodium chloride (NaCl), ka dibna waxaa lagu kordhiyaa aashito hydrochloric ah (HCl) si loo bidhaamiyo ion-ka kloriidhka, taas oo muujineysa sida saamaynta ion-ka wadaagga ah u yareeyo kala-milmida lacagta kloriidhka (silver chloride).",
+    "description": "Waxaa la samaynayaa dacal ah lacagta kloriidhka adoo isticmaalaya silver nitrate (AgNO₃) iyo sodium chloride (NaCl), ka dibna waxaa lagu kordhiyaa aashito hydrochloric ah (HCl) si loo bidhaamiyo ion-ka kloriidhka, taas oo muujineysa sida saamaynta ion-ka wadaagga ah u yareeyo kala-milmida lacagta kloriidhka.",
     "objectives": [
       "Garanshaha saamaynta ion-ka wadaagga ah",
       "Falanqaynta dheelitirnaanta kala-milmida dacalka",
@@ -1729,9 +1729,9 @@
   },
   "feoh3-ignition-oxide": {
     "title": "Birta(III) hiidrooksaydka gubasho si loo sameeyo birta(III) oksiidka",
-    "description": "iron(III) chloride (FeCl₃) waxay ka falcelisaa sodium hydroxide (NaOH) si ay u soo saarto talaalka cas-bunni ah ee birta(III) hiidrooksaydka (iron(III) hydroxide), kaas oo shaandhaynta ka dib la gubo oo u beddelo birta(III) oksiidka (iron(III) oxide) midabkiisu cas-bunni yahay.",
+    "description": "iron(III) chloride (FeCl₃) waxay ka falcelisaa sodium hydroxide (NaOH) si ay u soo saarto talaalka cas-bunni ah ee birta(III) hiidrooksaydka, kaas oo shaandhaynta ka dib la gubo oo u beddelo birta(III) oksiidka (iron(III) oxide) midabkiisu cas-bunni yahay.",
     "objectives": [
-      "Soo saarida birta(III) hiidrooksaydka (iron(III) hydroxide)",
+      "Soo saarida birta(III) hiidrooksaydka",
       "Indho indheynta kala-jabinta gubasho",
       "Aqoonsiga sida loo sameeyo birta(III) oksiidka (iron(III) oxide)"
     ]
@@ -1747,7 +1747,7 @@
   },
   "sequential-anion-detection": {
     "title": "Baaris kala-sooc ah oo chloride iyo sulfate",
-    "description": "Xalka isku-darka ah ee ka kooban sodium chloride (NaCl) iyo sodium sulfate (Na₂SO₄), waxaa ugu horrayn xoogaa barium chloride (BaCl₂) oo dheeraad ah lagu daraa si loo saafo sulfate, ka dibna shaandhaynta waxaa lagu baaraa ionka chloride adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay (dilute nitric acid).",
+    "description": "Xalka isku-darka ah ee ka kooban sodium chloride (NaCl) iyo sodium sulfate (Na₂SO₄), waxaa ugu horrayn xoogaa barium chloride (BaCl₂) oo dheeraad ah lagu daraa si loo saafo sulfate, ka dibna shaandhaynta waxaa lagu baaraa ionka chloride adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay.",
     "objectives": [
       "Naqshadeynta qorshaha kala-soocida iyo baarista",
       "Ka saridda khalkhalka sulfate",
@@ -1765,7 +1765,7 @@
   },
   "copper-hydroxide-anion-independence": {
     "title": "Isbarbardhigga naxaas-ملحyada kala duwan ee loo sameeyo Naxaas(II) hаydrooksiiد",
-    "description": "Marka copper(II) sulfate (CuSO₄), copper(II) chloride, iyo copper(II) nitrate (Cu(NO₃)₂) midkasta lala falceliyo sodium hydroxide (NaOH), dhammaan waxay soo saaraan Naxaas(II) hаydrooksiiد midabkiisu buluug yahay oo isku mid ah, taasoo xaqiijinaysa in talaalku uu go'an yahay ionka naxaas (Cu).",
+    "description": "Marka copper(II) sulfate (CuSO₄), copper(II) chloride, iyo copper(II) nitrate Cu(NO₃)₂ midkasta lala falceliyo sodium hydroxide (NaOH), dhammaan waxay soo saaraan Naxaas(II) hаydrooksiiد midabkiisu buluug yahay oo isku mid ah, taasoo xaqiijinaysa in talaalku uu go'an yahay ionka naxaas (Cu).",
     "objectives": [
       "Isbarbardhigga falcelinta noocyada kala duwan ee mlaxda naxaas",
       "Fahanka dabeecadda falcelinta ionic",
@@ -1774,7 +1774,7 @@
   },
   "seawater-magnesium-extraction": {
     "title": "Ku-dayashada soo-saarka magnesium badda",
-    "description": "Ku-dayashada hababka soo-saarka magnesium ee badda, waxaa lagu daraa calcium hydroxide (Ca(OH)₂) xalka magnesium chloride si loo sameeyo talaal cad oo magnesium hydroxide ah.",
+    "description": "Ku-dayashada hababka soo-saarka magnesium ee badda, waxaa lagu daraa calcium hydroxide Ca(OH)₂ xalka magnesium chloride si loo sameeyo talaal cad oo magnesium hydroxide ah.",
     "objectives": [
       "Fahmida habka soo-saarka magnesium ee badda",
       "Soo saarida magnesium hydroxide",
@@ -1792,7 +1792,7 @@
   },
   "ferrous-ferric-hydroxide-comparison": {
     "title": "Isbarbardhigga hiidrooksaydyada bir (Fe) ee labada qiimo",
-    "description": "iron(II) sulfate (FeSO₄) iyo iron(III) chloride (FeCl₃) midkasta lala falceliyo sodium hydroxide (NaOH), waxaa la isbarbardhigaa birta(II) hiidrooksaydka cad ee si deg-deg ah midabka u beddela iyo birta(III) hiidrooksaydka (iron(III) hydroxide) cas-bunni ah.",
+    "description": "iron(II) sulfate (FeSO₄) iyo iron(III) chloride (FeCl₃) midkasta lala falceliyo sodium hydroxide (NaOH), waxaa la isbarbardhigaa birta(II) hiidrooksaydka cad ee si deg-deg ah midabka u beddela iyo birta(III) hiidrooksaydka cas-bunni ah.",
     "objectives": [
       "Isbarbardhigga labada qiimo ee bir (Fe)",
       "Indho indheynta kala duwanaanshaha midabka talaalka",
@@ -1800,8 +1800,8 @@
     ]
   },
   "baso4-from-nitrate": {
-    "title": "Sameynta BaSO₄ adigoo isticmaalaya barium nitrate (Ba(NO₃)₂)",
-    "description": "Botaasiyam sulfeet waxaa lagu daraa barium nitrate (Ba(NO₃)₂) si loo sameeyo rajo cad oo BaSO₄ ah oo aan ku dhalalin aashitada naytareetka oo la wasakheeyay (dilute nitric acid).",
+    "title": "Sameynta BaSO₄ adigoo isticmaalaya barium nitrate Ba(NO₃)₂",
+    "description": "Botaasiyam sulfeet waxaa lagu daraa barium nitrate Ba(NO₃)₂ si loo sameeyo rajo cad oo BaSO₄ ah oo aan ku dhalalin aashitada naytareetka oo la wasakheeyay.",
     "objectives": [
       "Sameynta BaSO₄",
       "Garanshaha sida birta barium loo isticmaalo xaqiijinta ion-ka sulfate",
@@ -1818,8 +1818,8 @@
     ]
   },
   "kmno4-fecl2": {
-    "title": "Potassium permanganate (KMnO₄) oo oxidizing-gareeya birta(II) kloriidhka (iron(II) chloride)",
-    "description": "Marka potassium permanganate (KMnO₄) oo aashito leh lagu dhibto xalka birta(II) kloriidhka (iron(II) chloride), midabka guduudka-jeexjeexan ayaa baaba'a oo midabka cagaarka fudud wuxuu u rogo bunni-huruud, taas oo muujinaysa awoodda oxidizing ee potassium permanganate (KMnO₄) uu u leeyahay adeegga Fe²⁺ u rogidda Fe³⁺.",
+    "title": "Potassium permanganate (KMnO₄) oo oxidizing-gareeya birta(II) kloriidhka",
+    "description": "Marka potassium permanganate (KMnO₄) oo aashito leh lagu dhibto xalka birta(II) kloriidhka, midabka guduudka-jeexjeexan ayaa baaba'a oo midabka cagaarka fudud wuxuu u rogo bunni-huruud, taas oo muujinaysa awoodda oxidizing ee potassium permanganate (KMnO₄) uu u leeyahay adeegga Fe²⁺ u rogidda Fe³⁺.",
     "objectives": [
       "Daawashada baaba'ida midabka guduudda-jeexjeexan",
       "Garanshaha sida Fe²⁺ loo oxidizing-gareeyay",
@@ -1854,17 +1854,17 @@
     ]
   },
   "thiosulfate-iodine-titration": {
-    "title": "Titration-ka sodium thiosulfate (Na₂S₂O₃) iyo xal iodine ah (I₂ biyood) (habka iodometric)",
-    "description": "Xalka caadiga ah ee sodium thiosulfate (Na₂S₂O₃) waxaa loo isticmaalaa titration-ka xal iodine ah (I₂ biyood); marka dhamaadka uu dhowaan yahay, xabag (xoogaa) ayaa lagu daraa si uu midab buluug u muujiyo, titration-kana waxaa lagu soo gabagabeeyaa marka midabka buluuga ah uu si sax ah u baaba'o, taas oo siinaysa garashada heerka tirada ee habka iodometric.",
+    "title": "Titration-ka sodium thiosulfate (Na₂S₂O₃) iyo xal iodine ah I₂ (habka iodometric)",
+    "description": "Xalka caadiga ah ee sodium thiosulfate (Na₂S₂O₃) waxaa loo isticmaalaa titration-ka xal iodine ah I₂; marka dhamaadka uu dhowaan yahay, xabag ayaa lagu daraa si uu midab buluug u muujiyo, titration-kana waxaa lagu soo gabagabeeyaa marka midabka buluuga ah uu si sax ah u baaba'o, taas oo siinaysa garashada heerka tirada ee habka iodometric.",
     "objectives": [
       "Garashada habka iodometric",
-      "Isticmaalka xabag (xoogaa) si loo muujiyo dhamaadka",
+      "Isticmaalka xabag si loo muujiyo dhamaadka",
       "Xisaabinta xadka iodine (I₂)"
     ]
   },
   "h2o2-oxidize-ki": {
     "title": "Hydrogen peroxide (H₂O₂) oo oxidizing-gareeya potassium iodide (KI)",
-    "description": "Xaalad aashito ah, hydrogen peroxide (H₂O₂) waxay oxidizing-gareysaa potassium iodide (KI) si loo sameeyo iodine (I₂); marka xabag (xoogaa) lagu daro xalka, midab buluug ayaa soo muuqdaa, taas oo muujinaysa awoodda oxidizing ee hydrogen peroxide (H₂O₂).",
+    "description": "Xaalad aashito ah, hydrogen peroxide (H₂O₂) waxay oxidizing-gareysaa potassium iodide (KI) si loo sameeyo iodine (I₂); marka xabag lagu daro xalka, midab buluug ayaa soo muuqdaa, taas oo muujinaysa awoodda oxidizing ee hydrogen peroxide (H₂O₂).",
     "objectives": [
       "Daawashada soo baxa midabka buluuga ah",
       "Garanshaha awoodda oxidizing ee hydrogen peroxide (H₂O₂)",
@@ -1873,7 +1873,7 @@
   },
   "bromine-fe2-oxidation": {
     "title": "Bromine oo kala-saaraya ionka iron(II)",
-    "description": "Marka xal bromine ah (Br₂ biyood) lagu daro xalka iron(II) sulfate (FeSO₄), midabka oranji ayaa baaba'a; markaas potassium thiocyanate (KSCN) ayaa lagu dara si loo hubiyo in ionka iron(II) loo beddelay iron(III) ion.",
+    "description": "Marka xal bromine ah Br₂ lagu daro xalka iron(II) sulfate (FeSO₄), midabka oranji ayaa baaba'a; markaas potassium thiocyanate (KSCN) ayaa lagu dara si loo hubiyo in ionka iron(II) loo beddelay iron(III) ion.",
     "objectives": [
       "La'aanshaha midabka ee oxidation-ka la arko",
       "Isticmaalka iftiiminta midabka si loo hubiyo iron(III) ion",
@@ -1890,8 +1890,8 @@
     ]
   },
   "copper-concentrated-sulfuric-acid": {
-    "title": "Naxaas (Cu) iyo aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo falceliya",
-    "description": "Marka xaashi naxaas ah la kululeeyo oo ay la jirto aashito sulfuric ah oo xooggan (H₂SO₄ concentrated), ayaa soo baxa gaas ur xun leh, xalka na aad u buluugaado, taasoo muujinaysa awoodda oxidation-ka xooggan ee aashito sulfuric ah oo xooggan — falcelintaas waa in gudaha hawada loo sameeyo.",
+    "title": "Naxaas (Cu) iyo aashito sulfuric ah oo xooggan H₂SO₄ oo falceliya",
+    "description": "Marka xaashi naxaas ah la kululeeyo oo ay la jirto aashito sulfuric ah oo xooggan H₂SO₄, ayaa soo baxa gaas ur xun leh, xalka na aad u buluugaado, taasoo muujinaysa awoodda oxidation-ka xooggan ee aashito sulfuric ah oo xooggan — falcelintaas waa in gudaha hawada loo sameeyo.",
     "objectives": [
       "Awoodda oxidation-ka ee aashito sulfuric ah oo xooggan la garto",
       "Soo baxa gaaska iyo buluugaanshaha xalka la arko",
@@ -1899,8 +1899,8 @@
     ]
   },
   "silver-nitric-acid": {
-    "title": "Lacag (silfar) iyo aashito nitric ah (HNO₃) oo falceliya",
-    "description": "Marka Lacag (silfar) ay la falceliso aashitada naytareetka oo la wasakheeyay (dilute nitric acid), ayaa soo baxa xal midab la'aan ah iyo gaas, taasoo muujinaysa awoodda oxidation-ka xooggan ee aashito nitric ah (HNO₃) oo ku habboon in ay dhaliso macdanta gaabiga ah ee Lacag (silfar) — falcelintaas waa in gudaha hawada loo sameeyo.",
+    "title": "Lacag iyo aashito nitric ah (HNO₃) oo falceliya",
+    "description": "Marka Lacag ay la falceliso aashitada naytareetka oo la wasakheeyay, ayaa soo baxa xal midab la'aan ah iyo gaas, taasoo muujinaysa awoodda oxidation-ka xooggan ee aashito nitric ah (HNO₃) oo ku habboon in ay dhaliso macdanta gaabiga ah ee Lacag — falcelintaas waa in gudaha hawada loo sameeyo.",
     "objectives": [
       "Awoodda oxidation-ka ee aashito nitric ah (HNO₃) la garto",
       "Soo baxa gaaska la arko",
@@ -1909,16 +1909,16 @@
   },
   "halogen-displacement-cl-i": {
     "title": "Chlorine oo bedelaya iodine (I₂)",
-    "description": "Marka biyo chlorine ah (chlorine water) lagu daro xalka potassium iodide (KI), ayaa iodine (I₂) soo baxa; markaas marka xabag (xoogaa) lagu daro, midab buluug ah ayaa ka muuqda, taasoo xaqiijinaysa in awoodda oxidation-ka ee chlorine ay ka xoogsan tahay tan iodine (I₂).",
+    "description": "Marka biyo chlorine ah lagu daro xalka potassium iodide (KI), ayaa iodine (I₂) soo baxa; markaas marka xabag lagu daro, midab buluug ah ayaa ka muuqda, taasoo xaqiijinaysa in awoodda oxidation-ka ee chlorine ay ka xoogsan tahay tan iodine (I₂).",
     "objectives": [
       "Firfircoonida chlorine iyo iodine (I₂) la xaqiijiyo",
-      "La arko buluugaanshaha iodine-xabag (xoogaa)",
+      "La arko buluugaanshaha iodine-xabag",
       "Xeerka bedelashada la fahmo"
     ]
   },
   "halogen-oxidizing-power": {
     "title": "Is barbardhigga awoodda oxidation-ka ee halogennada",
-    "description": "Biyo chlorine ah (chlorine water) ayaa loo isticmaalaa in laga bedelo bromine (Br₂) xalka potassium bromide, xal bromine ah (Br₂ biyood) na waxaa lagu beddelaa iodine (I₂) xalka potassium iodide (KI); adoo isticmaalaya xabag (xoogaa) in la muujiyo midabka, ayaa la soo koobaa xeerka hoos-u-dhaca awoodda oxidation-ka ee chlorine ilaa bromine (Br₂) ilaa iodine (I₂).",
+    "description": "Biyo chlorine ah (chlorine water) ayaa loo isticmaalaa in laga bedelo bromine (Br₂) xalka potassium bromide, xal bromine ah Br₂ na waxaa lagu beddelaa iodine (I₂) xalka potassium iodide (KI); adoo isticmaalaya xabag in la muujiyo midabka, ayaa la soo koobaa xeerka hoos-u-dhaca awoodda oxidation-ka ee chlorine ilaa bromine (Br₂) ilaa iodine (I₂).",
     "objectives": [
       "Awoodda oxidation-ka ee halogennada la is barbardhigo",
       "Tijaabo barbardhig ah la naqshadeeyay",
@@ -1927,7 +1927,7 @@
   },
   "fe3-iodide-oxidation": {
     "title": "Iron(III) ion oo kala-saaraya iodide ion",
-    "description": "Marka potassium iodide (KI) lagu daro xalka iron(III) chloride (FeCl₃), midabka bunni-jaallaha ah ayaa sii xoqnaada iyo iodine (I₂) ayaa soo baxa; marka xabag (xoogaa) lagu daro, midab buluug ah ayaa ka muuqda, taasoo xaqiijinaysa in Fe³⁺ uu awood u leeyahay in uu iodide ion kala saaro.",
+    "description": "Marka potassium iodide (KI) lagu daro xalka iron(III) chloride (FeCl₃), midabka bunni-jaallaha ah ayaa sii xoqnaada iyo iodine (I₂) ayaa soo baxa; marka xabag lagu daro, midab buluug ah ayaa ka muuqda, taasoo xaqiijinaysa in Fe³⁺ uu awood u leeyahay in uu iodide ion kala saaro.",
     "objectives": [
       "Awoodda oxidation-ka ee Fe³⁺ la garto",
       "La arko soo baxa iodine (I₂)",
@@ -1935,8 +1935,8 @@
     ]
   },
   "sulfite-iodine-reduction": {
-    "title": "Sodium sulfite (Na₂SO₃) oo baabi'inaya midabka xal iodine ah (I₂ biyood)",
-    "description": "Marka sodium sulfite (Na₂SO₃) lagu daro xalka buluuga ah ee iodine-xabag (xoogaa), midabka buluuga ah ayaa baaba'a, taasoo xaqiijinaysa in awoodda yaraynta ee sodium sulfite (Na₂SO₃) ay iodine (I₂) u beddesho iodide ion.",
+    "title": "Sodium sulfite (Na₂SO₃) oo baabi'inaya midabka xal iodine ah I₂",
+    "description": "Marka sodium sulfite (Na₂SO₃) lagu daro xalka buluuga ah ee iodine-xabag, midabka buluuga ah ayaa baaba'a, taasoo xaqiijinaysa in awoodda yaraynta ee sodium sulfite (Na₂SO₃) ay iodine (I₂) u beddesho iodide ion.",
     "objectives": [
       "Awoodda yaraynta ee xoogaa sulfite la garto",
       "La arko baaba'ista midabka buluuga ah",
@@ -1963,7 +1963,7 @@
   },
   "iodine-thiosulfate-decolor": {
     "title": "Falcelinta Iodine (I₂) iyo Sodium Thiosulfate (Na₂S₂O₃)",
-    "description": "Marka sodium thiosulfate (Na₂S₂O₃) lagu dhibto xalka buluug-madow ee iodine (I₂) iyo xabag (xoogaa), midabka buluugga ah si degdeg ah ayuu baaba'aa, taasoo muujinaysa awoodda yaraynta ee sodium thiosulfate (Na₂S₂O₃) marka ay yareyso iodine (I₂), waxayna aasaas u tahay habka titrimetric ee iodometric.",
+    "description": "Marka sodium thiosulfate (Na₂S₂O₃) lagu dhibto xalka buluug-madow ee iodine (I₂) iyo xabag, midabka buluugga ah si degdeg ah ayuu baaba'aa, taasoo muujinaysa awoodda yaraynta ee sodium thiosulfate (Na₂S₂O₃) marka ay yareyso iodine (I₂), waxayna aasaas u tahay habka titrimetric ee iodometric.",
     "objectives": [
       "La soco baaba'ida midabka buluugga ah",
       "Faham awoodda yaraynta ee sodium thiosulfate (Na₂S₂O₃)",
@@ -1972,16 +1972,16 @@
   },
   "zinc-sulfuric-hydrogen": {
     "title": "Soo Saarka Gaaska Hydrogen (hydrogen gas) Adoo Isticmaalaya Graniyuulada Zinc iyo Aashito Sulfuric ah (H₂SO₄) oo La Wasakheeyay",
-    "description": "Graniyuulada zinc marka ay falceliso aashito sulfuric ah (H₂SO₄) oo la wasakheeyay, xarafka sare ayaa si joogto ah uga soo baxa xumbo oo ah gaaska hydrogen (hydrogen gas) waxaana soo baxa kulyl, taasoo muujinaysa mabda'a soo saarka hydrogen-ka ee shaybaarka.",
+    "description": "Graniyuulada zinc marka ay falceliso aashito sulfuric ah (H₂SO₄) oo la wasakheeyay, xarafka sare ayaa si joogto ah uga soo baxa xumbo oo ah gaaska hydrogen waxaana soo baxa kulyl, taasoo muujinaysa mabda'a soo saarka hydrogen-ka ee shaybaarka.",
     "objectives": [
       "La soco soo baxa gasaska iyo kulaylka",
-      "Xaqiiji gaaska hydrogen (hydrogen gas)",
+      "Xaqiiji gaaska hydrogen",
       "Qor isla-simaha kiimikada ee falcelinta"
     ]
   },
   "magnesium-hydrochloric-acid": {
     "title": "Falcelinta Xarig Maqniisiyam ah iyo Aashito Hydrochloric ah (HCl)",
-    "description": "Marka xarig maqniisiyam ah la rido aashito hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), si deg-deg ah ayuu u xumbiiraa gaaska hydrogen (hydrogen gas) waxaana tuubo tijaabo si cad u kulushaa, taasoo muujinaysa xawaaraha falcelinta ee birta firfircoon marka ay la kulmayso aashito.",
+    "description": "Marka xarig maqniisiyam ah la rido aashito hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), si deg-deg ah ayuu u xumbiiraa gaaska hydrogen waxaana tuubo tijaabo si cad u kulushaa, taasoo muujinaysa xawaaraha falcelinta ee birta firfircoon marka ay la kulmayso aashito.",
     "objectives": [
       "La soco soo baxa xumbo badan oo degdeg ah",
       "Dareemid soo baxa kulaylka falcelinta",
@@ -1990,11 +1990,11 @@
   },
   "lead-hydrochloric-slow": {
     "title": "Falcelinta Gaabista ah ee Xaashi Rasaas ah iyo Aashito Hydrochloric ah (HCl)",
-    "description": "Marka xaashi rasaas ah la dhigo aashito hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), xumbo yar oo gaas ah ayaa si tartiib ah uga soo baxa, xarafkana waxaa ka samaysmaya dabool ah chloride rasaas ah oo aan si fudud ku dhalalin biyo, taasoo muujinaysa inay rasaasta (lead) adag tahay firfircoonida.",
+    "description": "Marka xaashi rasaas ah la dhigo aashito hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), xumbo yar oo gaas ah ayaa si tartiib ah uga soo baxa, xarafkana waxaa ka samaysmaya dabool ah chloride rasaas ah oo aan si fudud ku dhalalin biyo, taasoo muujinaysa inay rasaasta adag tahay firfircoonida.",
     "objectives": [
       "La soco gaabiska falcelinta",
       "Faham sida xarafka loo gaabsado",
-      "Go'aan ku samee booska rasaasta (lead) jadwalka firfircoonida biraha"
+      "Go'aan ku samee booska rasaasta jadwalka firfircoonida biraha"
     ]
   },
   "potassium-water": {
@@ -2008,7 +2008,7 @@
   },
   "calcium-water": {
     "title": "Falcelinta Birta Calcium (Ca) iyo Biyo",
-    "description": "Marka birta calcium (Ca) la dhigo biyo lagu daray phenolphthalein, si xasilloon ayuu gaaska hydrogen (hydrogen gas) uga soo baxaa waxaana soo baxa calcium hydroxide (Ca(OH)₂) oo xalka u rida midabka casaanka phenolphthalein, falcelintu hase yeeshee way ka qabow tahay ta sodium.",
+    "description": "Marka birta calcium (Ca) la dhigo biyo lagu daray phenolphthalein, si xasilloon ayuu gaaska hydrogen uga soo baxaa waxaana soo baxa calcium hydroxide Ca(OH)₂ oo xalka u rida midabka casaanka phenolphthalein, falcelintu hase yeeshee way ka qabow tahay ta sodium.",
     "objectives": [
       "La soco soo baxa gaaska joogto ah",
       "Faham soo saarka xaasidaha yaraanta lagu dhalalinayaa",
@@ -2053,7 +2053,7 @@
   },
   "zinc-silver-nitrate": {
     "title": "Zinc-ku wuxuu ka beddelaa Lacagta (silfar) silver nitrate (AgNO₃)",
-    "description": "Graniyuulada zinc ayaa lagu dhex ridiaa xalka silver nitrate (AgNO₃); laamo-laamo cad oo Lacag (silfar) ah ayaa soo baxa dusha, xalka midabkiisuna wuxuu ka beddelaa midab la'aanta ilaa xal leh saldhig zinc, taasoo xaqiijinaysa in zinc uu Lacag (silfar) ka firfircoon yahay.",
+    "description": "Graniyuulada zinc ayaa lagu dhex ridiaa xalka silver nitrate (AgNO₃); laamo-laamo cad oo Lacag ah ayaa soo baxa dusha, xalka midabkiisuna wuxuu ka beddelaa midab la'aanta ilaa xal leh saldhig zinc, taasoo xaqiijinaysa in zinc uu Lacag ka firfircoon yahay.",
     "objectives": [
       "Indho-indheynta koritaanka laamo-laamo Lacagta (silfar)",
       "Fahamka falcelinta beddelka",
@@ -2070,8 +2070,8 @@
     ]
   },
   "copper-dilute-nitric-acid": {
-    "title": "Falcelinta naxaas (Cu) iyo aashitada naytareetka oo la wasakheeyay (dilute nitric acid)",
-    "description": "Xaashi naxaas ah ayaa ku dhex milmaa aashitada naytareetka oo la wasakheeyay (dilute nitric acid) waxayna soo saartaa xal buluug ah oo copper(II) nitrate (Cu(NO₃)₂) iyo gaas nitrogen monoxide oo midabla'aan ah oo marka hawada la kulmo u beddelma cas-osman, taasoo noo muujinaysa awoodda oxidation-ka ee aashito nitric ah (HNO₃).",
+    "title": "Falcelinta naxaas (Cu) iyo aashitada naytareetka oo la wasakheeyay",
+    "description": "Xaashi naxaas ah ayaa ku dhex milmaa aashitada naytareetka oo la wasakheeyay waxayna soo saartaa xal buluug ah oo copper(II) nitrate Cu(NO₃)₂ iyo gaas nitrogen monoxide oo midabla'aan ah oo marka hawada la kulmo u beddelma cas-osman, taasoo noo muujinaysa awoodda oxidation-ka ee aashito nitric ah (HNO₃).",
     "objectives": [
       "Indho-indheynta buluunaanshaha xalka",
       "Fahamka isbeddelka midabka gaaska",
@@ -2089,7 +2089,7 @@
   },
   "iron-oxide-hydrochloric": {
     "title": "Xididka bir ee ku milma aashitada hidroklorikada",
-    "description": "Iron(III) oxide midabka casaan-buniga ah ayaa si tartiib tartiib ah ugu milma aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), waxaana ka soo baxa xal huruud ah, taasoo muujinaysa falcelinta oxiidka birta ee aashidda ah ee soo saarta milixda.",
+    "description": "Iron(III) oxide midabka casaan-buniga ah ayaa si tartiib tartiib ah ugu milma aashitada hidroklorikada oo la wasakheeyay, waxaana ka soo baxa xal huruud ah, taasoo muujinaysa falcelinta oxiidka birta ee aashidda ah ee soo saarta milixda.",
     "objectives": [
       "La daawado sida walxu u milmayso oo xalku u huruudaado",
       "La fahmo mabda'a nadiifinta xididka bir",
@@ -2107,7 +2107,7 @@
   },
   "magnesium-oxide-hydrochloric": {
     "title": "Dabeecadda alkaline oxide ee magnesium oxide (MgO)",
-    "description": "magnesium oxide (MgO) midabka cad ah ayaa ku milma aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), waxaana ka soo baxa xal magnesium chloride ah oo midab la'aan, taasoo muujinaysa falcelinta oksiidyada alkaline ee aashidda.",
+    "description": "magnesium oxide (MgO) midabka cad ah ayaa ku milma aashitada hidroklorikada oo la wasakheeyay, waxaana ka soo baxa xal magnesium chloride ah oo midab la'aan, taasoo muujinaysa falcelinta oksiidyada alkaline ee aashidda.",
     "objectives": [
       "La daawado milmida walxda adeyga ah",
       "La aqoonsado oksiidyada alkaline",
@@ -2116,7 +2116,7 @@
   },
   "iron-oxygen-burning": {
     "title": "Birta (Fe) oo ku gubanaysa ogsijiin (O₂)",
-    "description": "xaashi bir ah oo kulul ayaa la gelinayaa dhalo uruurinta gaaska oo buuxda ogsijiin (O₂), waxayna si xoogan u gubi jirtaa oo dhinacyo walba uga baxa dab-ciidamada, waxaana ka soo baxa birta oksiidka (iron(II,III) oxide / Fe₃O₄) oo ah walax adeyg madow ah.",
+    "description": "xaashi bir ah oo kulul ayaa la gelinayaa dhalo uruurinta gaaska oo buuxda ogsijiin (O₂), waxayna si xoogan u gubi jirtaa oo dhinacyo walba uga baxa dab-ciidamada, waxaana ka soo baxa birta oksiidka Fe₃O₄ oo ah walax adeyg madow ah.",
     "objectives": [
       "La daawado baraaqda dab-ciidamada",
       "La aqoonsado waxa gubashuhu soo saarto",
@@ -2134,7 +2134,7 @@
   },
   "sodium-copper-sulfate-solution": {
     "title": "Birta sodium (sodium metal) oo la gelinayo xal copper(II) sulfate (CuSO₄)",
-    "description": "birta sodium (sodium metal) markii la geliyo xal copper(II) sulfate (CuSO₄), waxay horta si xoogan ula falcelisaa biyaha oo soo saartaa gaaska hydrogen (hydrogen gas) oo soo saartaa sodium hydroxide (NaOH), ka dibna waxay la falcelisaa copper(II) sulfate (CuSO₄) oo soo saartaa rasaas buluug ah; sodium ma beddelo naxaasta.",
+    "description": "birta sodium markii la geliyo xal copper(II) sulfate (CuSO₄), waxay horta si xoogan ula falcelisaa biyaha oo soo saartaa gaaska hydrogen oo soo saartaa sodium hydroxide (NaOH), ka dibna waxay la falcelisaa copper(II) sulfate (CuSO₄) oo soo saartaa rasaas buluug ah; sodium ma beddelo naxaasta.",
     "objectives": [
       "La daawado soo saarida gaaska iyo rasaasta buluugta ah",
       "La fahmo sida sodium ugu horrayn biyaha ula falceliso",
@@ -2152,7 +2152,7 @@
   },
   "formic-acid-silver-mirror": {
     "title": "Falcelinta muruska lacagta ee Aasidda foormiik",
-    "description": "Aasidda foormiik waxay leedahay koox aldehyde ah, marka la kululeeyo hammaan biyo oo ay la jirto xalka silver-ammonium, waxay soo saartaa muruus Lacag (silfar) oo dhalaalaya darbiyada tuubada, taasoo caddaynaysa in Aasidda foormiik leedahay awood ikhtizaalka. Xalka silver-ammonium waxaa loo diyaariyaa silver nitrate (AgNO₃) iyo xal ammoniya ah (NH₃ biyood) si is-dhaf ah.",
+    "description": "Aasidda foormiik waxay leedahay koox aldehyde ah, marka la kululeeyo hammaan biyo oo ay la jirto xalka silver-ammonium, waxay soo saartaa muruus Lacag oo dhalaalaya darbiyada tuubada, taasoo caddaynaysa in Aasidda foormiik leedahay awood ikhtizaalka. Xalka silver-ammonium waxaa loo diyaariyaa silver nitrate (AgNO₃) iyo xal ammoniya ah NH₃ si is-dhaf ah.",
     "objectives": [
       "La aqoonsado awoodda ikhtizaalka ee Aasidda foormiik",
       "La daawado sida muruuska lacagtu u samaysmo",
@@ -2161,16 +2161,16 @@
   },
   "formic-acid-methyl-ester": {
     "title": "Sameynta Methyl Formate",
-    "description": "Aasidda foormiik iyo Metaanol ayaa esterification ku dhacda marka la isticmaalo aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo ah catalyst iyo kulaylka, waxayna sameysaa methyl formate oo ur macaan leh; tijaabadani waxay baraysa esterification ee ka dhex jirta carboxylic acid iyo alcohol.",
+    "description": "Aasidda foormiik iyo Metaanol ayaa esterification ku dhacda marka la isticmaalo aashito sulfuric ah oo xooggan H₂SO₄ oo ah catalyst iyo kulaylka, waxayna sameysaa methyl formate oo ur macaan leh; tijaabadani waxay baraysa esterification ee ka dhex jirta carboxylic acid iyo alcohol.",
     "objectives": [
       "Ku xirfadeyso falcelinta esterification",
-      "Fahmo sida aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) u shaqeyso oo uu catalyst iyo dehydration agent u yahay",
+      "Fahmo sida aashito sulfuric ah oo xooggan H₂SO₄ u shaqeyso oo uu catalyst iyo dehydration agent u yahay",
       "Gaar u yeel fikradda falcelinta soo-noqonaysa (reversible reaction)"
     ]
   },
   "acetic-acid-methyl-ester": {
     "title": "Sameynta Methyl Acetate",
-    "description": "Aashito acetic ah (CH₃COOH) iyo Metaanol ayaa aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo catalyst ah ku isticmaalaan esterification si ay u sameeyaan methyl acetate; marka la barbardhigo ethyl acetate (CH₃COOC₂H₅), waxaa cad sida kala duwan ee esterification-ka ee alcohols kala duwan.",
+    "description": "Aashito acetic ah (CH₃COOH) iyo Metaanol ayaa aashito sulfuric ah oo xooggan H₂SO₄ oo catalyst ah ku isticmaalaan esterification si ay u sameeyaan methyl acetate; marka la barbardhigo ethyl acetate (CH₃COOC₂H₅), waxaa cad sida kala duwan ee esterification-ka ee alcohols kala duwan.",
     "objectives": [
       "Xooji fahamka falcelinta esterification",
       "U barbardhig ester-yada ka soo baxa alcohols kala duwan",
@@ -2206,7 +2206,7 @@
   },
   "glucose-silver-mirror": {
     "title": "Falcelinta Silver Mirror ee Glukoos",
-    "description": "Glukoos waxaa ku jira koox aldehyde ah, marka hammaan biyo lagu kululeeyo xalka silver-ammonia (kaas oo ka samaysan silver nitrate (AgNO₃) iyo xal ammoniya ah (NH₃ biyood)), waxaa ku dhaca dabaqad lacag (silfar) oo dhalaalaysa oo muujinaysa hoos-u-dhigitaanka (reducing property) ee Glukoos.",
+    "description": "Glukoos waxaa ku jira koox aldehyde ah, marka hammaan biyo lagu kululeeyo xalka silver-ammonia (kaas oo ka samaysan silver nitrate (AgNO₃) iyo xal ammoniya ah NH₃), waxaa ku dhaca dabaqad lacag (silfar) oo dhalaalaysa oo muujinaysa hoos-u-dhigitaanka (reducing property) ee Glukoos.",
     "objectives": [
       "Xaqiiji joogitaanka Glukoos adiga oo isticmaalaya falcelinta silver mirror",
       "La socodsii samaysmaha dabaqadda lacag (silfar)",
@@ -2251,16 +2251,16 @@
   },
   "starch-hydrolysis": {
     "title": "Kaarbalka Xabag (xoogaa) iyo Hubinta Natiijada",
-    "description": "Xabag (xoogaa) ayaa hammaan biyo gudahood lagu kaarbalaa aashito sulfuric ah (H₂SO₄) oo dillaacan oo u hiiliya falcelinta, waxaana loo badalaa Glukoos; ka dib markii sodium hydroxide (NaOH) la isticmaalaa si loo dheelitiro, xalal lacag-ammoniya ah oo ka kooban Lacag (silfar) iyo xal ammoniya ah (NH₃ biyood) ayaa lagu daraa hubinta, haddii muuqaal lacag (silfar mirror) la arko, waxay caddaynaysaa in Glukoos la sameeyay. Xalka lacag-ammoniya ah waxaa laga diyaarinayaa silver nitrate (AgNO₃) iyo xal ammoniya ah (NH₃ biyood).",
+    "description": "Xabag (xoogaa) ayaa hammaan biyo gudahood lagu kaarbalaa aashito sulfuric ah (H₂SO₄) oo dillaacan oo u hiiliya falcelinta, waxaana loo badalaa Glukoos; ka dib markii sodium hydroxide (NaOH) la isticmaalaa si loo dheelitiro, xalal lacag-ammoniya ah oo ka kooban Lacag iyo xal ammoniya ah NH₃ ayaa lagu daraa hubinta, haddii muuqaal lacag (silfar mirror) la arko, waxay caddaynaysaa in Glukoos la sameeyay. Xalka lacag-ammoniya ah waxaa laga diyaarinayaa silver nitrate (AgNO₃) iyo xal ammoniya ah NH₃.",
     "objectives": [
-      "Garan kaarbalka xabag (xoogaa)",
+      "Garan kaarbalka xabag",
       "Ku mahaarida hubinta ka dib dheelitirka",
       "Xaqiijinta natiijada kaarbalka"
     ]
   },
   "starch-hydrolysis-iodine": {
     "title": "Hubinta Kaarbalka Xabag (xoogaa) Adoo Isticmaalaya iodine (I₂)",
-    "description": "Xabag (xoogaa) ayaa lagu kaarbalaa aashito sulfuric ah (H₂SO₄) oo dillaacan; dhex-dhexaadka, specimen ayaa la qaataa, sodium hydroxide (NaOH) ayaa loo daraa dheelitirka ka dibna xal iodine ah (I₂ biyood) ayaa lagu darsaa — haddaan midab buluug ah soo muuqan, waxay caddaynaysaa in xabag (xoogaa) si buuxda u kaarbalamay.",
+    "description": "Xabag (xoogaa) ayaa lagu kaarbalaa aashito sulfuric ah (H₂SO₄) oo dillaacan; dhex-dhexaadka, specimen ayaa la qaataa, sodium hydroxide (NaOH) ayaa loo daraa dheelitirka ka dibna xal iodine ah I₂ ayaa lagu darsaa — haddaan midab buluug ah soo muuqan, waxay caddaynaysaa in xabag si buuxda u kaarbalamay.",
     "objectives": [
       "La socodsiinta socodka kaarbalka",
       "Ku mahaarida habka hubinta ee iodine (I₂)",
@@ -2295,8 +2295,8 @@
     ]
   },
   "iodine-extraction-ccl4": {
-    "title": "Kala-soocida xal iodine ah (I₂ biyood) Adoo Isticmaalaya Kaarboon tetrakloriiد",
-    "description": "Markii Kaarboon tetrakloriiد lagu daraa xal iodine ah (I₂ biyood) oo la garaaco ka dibna la nasto, iodine (I₂) ayaa u guurta lakabka hoose ee Kaarboon tetrakloriiد oo muujinaya midab guduud-baaruur ah, labada xaloodna way kala soocmaan; waxaa la baranayaa hawlgalka qaadashada iyo kala-soocida.",
+    "title": "Kala-soocida xal iodine ah I₂ Adoo Isticmaalaya Kaarboon tetrakloriiد",
+    "description": "Markii Kaarboon tetrakloriiد lagu daraa xal iodine ah I₂ oo la garaaco ka dibna la nasto, iodine (I₂) ayaa u guurta lakabka hoose ee Kaarboon tetrakloriiد oo muujinaya midab guduud-baaruur ah, labada xaloodna way kala soocmaan; waxaa la baranayaa hawlgalka qaadashada iyo kala-soocida.",
     "objectives": [
       "Garan mabaadi'da qaadashada",
       "Ku mahaarida hawlgalka kala-soocida xaloolaha",
@@ -2323,11 +2323,11 @@
   },
   "ethanol-dehydration-ethylene": {
     "title": "Soo Saarista ethylene (C₂H₄) iyo Xaqiijintisa",
-    "description": "Ethanol (C₂H₅OH) waxaa lala kululeeyaa aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) ilaa ku dhawaad 170 °C si loo sameeyo falcel baabi'inta (elimination reaction) oo keenta soo saarista ethylene (C₂H₄). Gaaska soo baxa waxaa la mariyaa xal bromine ah (Br₂ biyood) kaasoo midabkiisu caddaanaa, taasoo xaqiijinaysa soo saarista ethylene (C₂H₄).",
+    "description": "Ethanol (C₂H₅OH) waxaa lala kululeeyaa aashito sulfuric ah oo xooggan H₂SO₄ ilaa ku dhawaad 170 °C si loo sameeyo falcel baabi'inta (elimination reaction) oo keenta soo saarista ethylene (C₂H₄). Gaaska soo baxa waxaa la mariyaa xal bromine ah Br₂ kaasoo midabkiisu caddaanaa, taasoo xaqiijinaysa soo saarista ethylene (C₂H₄).",
     "objectives": [
       "Garanshaha falcelka baabi'inta (elimination reaction)",
       "Bartida xukumida heerkulka si loo saaro ethylene (C₂H₄)",
-      "Adeegsiga xal bromine ah (Br₂ biyood) si loo xaqiijiyo natiijada"
+      "Adeegsiga xal bromine ah Br₂ si loo xaqiijiyo natiijada"
     ]
   },
   "hess-law-verification": {
@@ -2458,7 +2458,7 @@
   },
   "iodine-clock-reaction": {
     "title": "Cabbirka Xawliga Falcelinta «Saacadda Iodine»",
-    "description": "Hydrogen peroxide (H₂O₂) xaaladda aashitada ah ayuu oxidize-gareeya potassium iodide (KI) si looga soo saaro iodine (I₂), taas oo sodium thiosulfate (Na₂S₂O₃) u isticmaasho; marka sodium thiosulfate (Na₂S₂O₃) dhammaado, xabag (xoogaa) si kedis ah ayay u bulaacowdaa, taas oo xawliga falcelinta lagu cabbiro.",
+    "description": "Hydrogen peroxide (H₂O₂) xaaladda aashitada ah ayuu oxidize-gareeya potassium iodide (KI) si looga soo saaro iodine (I₂), taas oo sodium thiosulfate (Na₂S₂O₃) u isticmaasho; marka sodium thiosulfate (Na₂S₂O₃) dhammaado, xabag si kedis ah ayay u bulaacowdaa, taas oo xawliga falcelinta lagu cabbiro.",
     "objectives": [
       "La soco falcelinta saacadda (clock reaction)",
       "Cabbir xawliga falcelinta",
@@ -2539,7 +2539,7 @@
   },
   "silver-ion-identification": {
     "title": "Hubinta ion-ka lacagta (silfar)",
-    "description": "Marka la darayo sodium chloride (NaCl) xalka silver nitrate (AgNO₃), waxaa samaysmaya lacagta kloriidhka (silver chloride) oo cad oo ku milmi waaya aashitada naytareetka oo la wasakheeyay (dilute nitric acid), taasoo xaqiijinaysa joogitaanka ion-ka Lacag (silfar).",
+    "description": "Marka la darayo sodium chloride (NaCl) xalka silver nitrate (AgNO₃), waxaa samaysmaya lacagta kloriidhka oo cad oo ku milmi waaya aashitada naytareetka oo la wasakheeyay, taasoo xaqiijinaysa joogitaanka ion-ka Lacag.",
     "objectives": [
       "Bartida hubinta Ag⁺",
       "La socodsiinta waxyaabaha cadaan ah ee samaysmaya",
@@ -2548,7 +2548,7 @@
   },
   "bromide-identification": {
     "title": "Hubinta ion-ka bromide-ka",
-    "description": "Adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay (dilute nitric acid) ayaa la hubin karaa ion-ka bromide-ka; waxaa samaysmaya silver bromide (AgBr) oo jaalle-cad ah oo aashitada ku milmi waaya, taasoo xaqiijinaysa joogitaankiisa.",
+    "description": "Adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay ayaa la hubin karaa ion-ka bromide-ka; waxaa samaysmaya silver bromide (AgBr) oo jaalle-cad ah oo aashitada ku milmi waaya, taasoo xaqiijinaysa joogitaankiisa.",
     "objectives": [
       "Bartida hubinta Br⁻",
       "La socodsiinta raasabka jaalle-cad ah",
@@ -2557,7 +2557,7 @@
   },
   "iodide-identification": {
     "title": "Hubinta ion-ka iodide-ka",
-    "description": "Adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay (dilute nitric acid) ayaa la hubin karaa ion-ka iodide-ka; waxaa samaysmaya Silfar(I) aayodiiد oo jaalle ah oo aashitada ku milmi waaya, taasoo xaqiijinaysa joogitaankiisa.",
+    "description": "Adoo isticmaalaya silver nitrate (AgNO₃) iyo aashitada naytareetka oo la wasakheeyay ayaa la hubin karaa ion-ka iodide-ka; waxaa samaysmaya Silfar(I) aayodiiد oo jaalle ah oo aashitada ku milmi waaya, taasoo xaqiijinaysa joogitaankiisa.",
     "objectives": [
       "Bartida hubinta I⁻",
       "La socodsiinta raasabka jaalle ah",
@@ -2575,7 +2575,7 @@
   },
   "sulfite-identification": {
     "title": "Hubinta xididdada aashitada sulfite-ka",
-    "description": "Marka la darayo barium chloride (BaCl₂) xalka sodium sulfite (Na₂SO₃), waxaa samaysmaya raasab cad; markay ku soo dhacdo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) raasabku wuu milmaa waxaana soo baxaya gaas xun u urta, taasoo xaqiijinaysa joogitaanka xididdada sulfite-ka.",
+    "description": "Marka la darayo barium chloride (BaCl₂) xalka sodium sulfite (Na₂SO₃), waxaa samaysmaya raasab cad; markay ku soo dhacdo aashitada hidroklorikada oo la wasakheeyay raasabku wuu milmaa waxaana soo baxaya gaas xun u urta, taasoo xaqiijinaysa joogitaanka xididdada sulfite-ka.",
     "objectives": [
       "Bartida hubinta xididdada sulfite",
       "Kala soocida xididdada sulfate iyo xididdada sulfite",
@@ -2583,8 +2583,8 @@
     ]
   },
   "iodine-starch-test": {
-    "title": "Hubinta iodine (I₂) adoo isticmaalaya xabag (xoogaa)",
-    "description": "Marka la darayo xal xabag (xoogaa) ah xal iodine ah (I₂ biyood), xalku isla markiiba wuxuu noqdaa buluug, taasoo muujinaysa falcelinta midabka ee u dhaxaysa iodine (I₂) iyo xabag (xoogaa), kaas oo si xasaasi ah loogu isticmaalo hubinta iodine (I₂).",
+    "title": "Hubinta iodine (I₂) adoo isticmaalaya xabag",
+    "description": "Marka la darayo xal xabag ah xal iodine ah I₂, xalku isla markiiba wuxuu noqdaa buluug, taasoo muujinaysa falcelinta midabka ee u dhaxaysa iodine (I₂) iyo xabag, kaas oo si xasaasi ah loogu isticmaalo hubinta iodine (I₂).",
     "objectives": [
       "Bartida hubinta iodine (I₂)",
       "La socodsiinta dabeecadda buluug-noqoshada",
@@ -2602,29 +2602,29 @@
   },
   "gas-ammonia-identification": {
     "title": "Baarista Gaaska Ammonia (Ammonia Gas)",
-    "description": "Ammonium chloride (NH₄Cl) ayaa lagu darsaa sodium hydroxide (NaOH) oo yar la kululeeyo si loo soo saaro gaaska ammonia (ammonia gas), kaasoo warqadda litmus ee cas (red litmus paper) oo qoyan isu beddesho buluug, taasoo caddeynaysa jirka gaaska ammonia (ammonia gas).",
+    "description": "Ammonium chloride (NH₄Cl) ayaa lagu darsaa sodium hydroxide (NaOH) oo yar la kululeeyo si loo soo saaro gaaska ammonia, kaasoo warqadda litmus ee cas oo qoyan isu beddesho buluug, taasoo caddeynaysa jirka gaaska ammonia.",
     "objectives": [
-      "Ku soo laab baarista gaaska ammonia (ammonia gas)",
-      "La socosho isbeddelka warqadda litmus ee cas (red litmus paper) oo cagaaran noqonaysa",
+      "Ku soo laab baarista gaaska ammonia",
+      "La socosho isbeddelka warqadda litmus ee cas oo cagaaran noqonaysa",
       "Faham falcelinta mlaxda ammonium iyo xeryaha aasaaska ah"
     ]
   },
   "gas-hydrogen-identification": {
     "title": "Baarista Gaaska Hydrogen (Hydrogen Gas)",
-    "description": "Graniyuulada zinc ayaa lala falcelisaa aashito sulfuric ah (H₂SO₄) oo la wasakheeyay si loo soo saaro gaaska hydrogen (hydrogen gas), marka la shido ayuu abaar dhawaaqa khafiifka ah soo saaraa, kaas oo caddeynaya jirka gaaska hydrogen (hydrogen gas) iyo nadiifnimadiisa.",
+    "description": "Graniyuulada zinc ayaa lala falcelisaa aashito sulfuric ah (H₂SO₄) oo la wasakheeyay si loo soo saaro gaaska hydrogen, marka la shido ayuu abaar dhawaaqa khafiifka ah soo saaraa, kaas oo caddeynaya jirka gaaska hydrogen iyo nadiifnimadiisa.",
     "objectives": [
-      "Ku soo laab baarista gaaska hydrogen (hydrogen gas)",
+      "Ku soo laab baarista gaaska hydrogen",
       "Aqoonso dhawaaqa abaarka",
       "Faham hawsha xaqiijinta nadiifnimada gaaska"
     ]
   },
   "gas-chlorine-identification": {
     "title": "Baarista Gaaska Chlorine (Cl₂)",
-    "description": "Gaaska chlorine (Cl₂) ee ku jira biyo chlorine ah (chlorine water) ayaa potassium iodide (KI) oksidaystaa si loo soo saaro iodine (I₂), ka dib xabag (xoogaa) ayaa midab buluug ah muujiya, taasoo caddeynaysa xoogga oksidaynta gaaska chlorine (Cl₂) iyo jirkiisa.",
+    "description": "Gaaska chlorine (Cl₂) ee ku jira biyo chlorine ah ayaa potassium iodide (KI) oksidaystaa si loo soo saaro iodine (I₂), ka dib xabag ayaa midab buluug ah muujiya, taasoo caddeynaysa xoogga oksidaynta gaaska chlorine (Cl₂) iyo jirkiisa.",
     "objectives": [
       "Ku soo laab baarista gaaska chlorine (Cl₂)",
       "Faham sida oksidaystu u beddeshaa iodine (I₂)",
-      "La socosho sida xabag (xoogaa) u buluugowdo"
+      "La socosho sida xabag u buluugowdo"
     ]
   },
   "flame-test-sodium-potassium": {
@@ -2665,7 +2665,7 @@
   },
   "colorimetric-iron": {
     "title": "Cabbirka Bir (Fe) Adigoo Isticmaalaya Midabka",
-    "description": "Iron(III) chloride (FeCl₃) iyo potassium thiocyanate (KSCN) way isku dhex galaan oo midab cas oo dhiig u eg soo saara; ka dib markii heerarka caadiga ah la diyaariyo, spectrophotometer (qalabka cabbirka iftiinka) ayaa loo isticmaalaa in la cabbiro tiro bir ah oo xalka ku jirta.",
+    "description": "Iron(III) chloride (FeCl₃) iyo potassium thiocyanate (KSCN) way isku dhex galaan oo midab cas oo dhiig u eg soo saara; ka dib markii heerarka caadiga ah la diyaariyo, spectrophotometer ayaa loo isticmaalaa in la cabbiro tiro bir ah oo xalka ku jirta.",
     "objectives": [
       "Fahamka habka falanqaynta midabka (colorimetric analysis)",
       "Sawirka khadka caadiga ah (standard curve) ee cabbirka",
@@ -2683,7 +2683,7 @@
   },
   "mixture-anion-identification": {
     "title": "Ganacsiga Anion-yada ku Jira Isku-darka",
-    "description": "Xalka ka kooban sodium chloride (NaCl), sodium sulfate (Na₂SO₄), iyo sodium carbonate (Na₂CO₃) ayaa si talaabo-talaabo ah loo falanqayaa adigoo isticmaalaya aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), barium chloride (BaCl₂), silver nitrate (AgNO₃), iyo aashito nitric ah (HNO₃) si looga garto anion-yada ku jira.",
+    "description": "Xalka ka kooban sodium chloride (NaCl), sodium sulfate (Na₂SO₄), iyo sodium carbonate (Na₂CO₃) ayaa si talaabo-talaabo ah loo falanqayaa adigoo isticmaalaya aashitada hidroklorikada oo la wasakheeyay, barium chloride (BaCl₂), silver nitrate (AgNO₃), iyo aashito nitric ah (HNO₃) si looga garto anion-yada ku jira.",
     "objectives": [
       "Naqshadaynta qorshaha falanqaynta nidaamiga ah",
       "Xalinta isbabaysiga is-carqaladaynta tijaabada",
@@ -2692,7 +2692,7 @@
   },
   "ion-coexistence-test": {
     "title": "Tijaabada Ogaanshaha Waa-la-jiri-karta Ion-yada",
-    "description": "Isku-dhafka copper(II) sulfate (CuSO₄) iyo sodium hydroxide (NaOH), barium chloride (BaCl₂) iyo sodium sulfate (Na₂SO₄), sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa la tijaabiyaa si loo ogaado iyagoo la daawanayo taangaynta ama soo baxitaanka gaaska, loona garto ion-yada xalka ku wada jiri kari waaya.",
+    "description": "Isku-dhafka copper(II) sulfate (CuSO₄) iyo sodium hydroxide (NaOH), barium chloride (BaCl₂) iyo sodium sulfate (Na₂SO₄), sodium carbonate (Na₂CO₃) iyo aashitada hidroklorikada oo la wasakheeyay ayaa la tijaabiyaa si loo ogaado iyagoo la daawanayo taangaynta ama soo baxitaanka gaaska, loona garto ion-yada xalka ku wada jiri kari waaya.",
     "objectives": [
       "Fahamka shuruudaha ion-yada wada jirista",
       "Daawashada taangaynta iyo soo baxitaanka gaaska tijaabada",
@@ -2700,7 +2700,7 @@
     ]
   },
   "koh-hcl-neutralization": {
-    "title": "Baadilka potassium hydroxide iyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid)",
+    "title": "Baadilka potassium hydroxide iyo aashitada hidroklorikada oo la wasakheeyay",
     "description": "Aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa si tartiib ah ugu xidiqda xalka potassium hydroxide oo lagu daray phenolphthalein; daqiiqadda midabka cas baaba'o ayaa la qorayaa iyo kac-kulaylka heerkulka, si loo fahmo dabeecadda kulaylka-soo-saarka ee falcelinta baadilka.",
     "objectives": [
       "Daawashada isbedelka deg-degga ah ee muujiyaha marka aashitada xooggani baadisho alkali xoogga ah",
@@ -2728,7 +2728,7 @@
   },
   "acetic-ammonia-weak-weak": {
     "title": "Baadilka Aashitada Daciifka ah iyo Alkali-ga Daciifka ah",
-    "description": "Aashito acetic ah (CH₃COOH) iyo xal ammoniya ah (NH₃ biyood) ayaa isku dhafma; labada electrolyte oo daciif ah ayaa is-dhiirrigeliya kordhinta ionization-kooda oo si buuxda isu baadiyaan, waxaana soo baxa ammonium acetate oo xalliisu u dhow yahay dhexdhexaadnimada, taasoo pH-miis lagu xaqiijinayo.",
+    "description": "Aashito acetic ah (CH₃COOH) iyo xal ammoniya ah NH₃ ayaa isku dhafma; labada electrolyte oo daciif ah ayaa is-dhiirrigeliya kordhinta ionization-kooda oo si buuxda isu baadiyaan, waxaana soo baxa ammonium acetate oo xalliisu u dhow yahay dhexdhexaadnimada, taasoo pH-miis lagu xaqiijinayo.",
     "objectives": [
       "Fahamka sida aashitada daciifka ah iyo alkali-ga daciifka ah isugu dhiirrigeliyaan ionization-kooda",
       "Xaqiijinta in xalka ammonium acetate uu dhow yahay dhexdhexaadnimada",
@@ -2737,7 +2737,7 @@
   },
   "potassium-carbonate-acid-gas": {
     "title": "Falcelka gaaska ee botaasiyamka kaarbooneetka iyo aashitada hidroklorikada oo la wasakheeyay",
-    "description": "Markii aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) lagu soo daro botaasiyamka kaarbooneetka (potassium carbonate) oo adag, waxaa si xoogan u soo baxa xumbaale midab la'aanta ah oo kulyl soo saara; gaaska la soo saaro markii loo gudbiyo biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) ayuu muujiyaa in uu yahay carbon dioxide (CO₂).",
+    "description": "Markii aashitada hidroklorikada oo la wasakheeyay lagu soo daro botaasiyamka kaarbooneetka oo adag, waxaa si xoogan u soo baxa xumbaale midab la'aanta ah oo kulyl soo saara; gaaska la soo saaro markii loo gudbiyo biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) ayuu muujiyaa in uu yahay carbon dioxide (CO₂).",
     "objectives": [
       "La eego sida kaarboonaytku si xoogan ugu soo saaro gaaska markuu la kulmo aashito",
       "Lagu qabsado habka lagu xaqiijiyo carbon dioxide (CO₂)",
@@ -2746,7 +2746,7 @@
   },
   "ammonium-bicarbonate-acid": {
     "title": "Falcelka laba-dhinacaadka ah ee Amooniyam baykaabonayt iyo aashitada",
-    "description": "Amooniyam baykaabonayt markuu la kulmo aashito hydrochloric ah (HCl), isla markiiba wuxuu soo saaraa carbon dioxide (CO₂); isla walaxdaasna markii la kululeeyo waxay kala burburaan oo soo saartaa gaaska ammonia (ammonia gas), taas oo u ah muujin toos ah oo ah in labadaba «xididdada amooniyamka iyo baykaabonaytka» ay yihiin kuwo aan xasiloonayn.",
+    "description": "Amooniyam baykaabonayt markuu la kulmo aashito hydrochloric ah (HCl), isla markiiba wuxuu soo saaraa carbon dioxide (CO₂); isla walaxdaasna markii la kululeeyo waxay kala burburaan oo soo saartaa gaaska ammonia, taas oo u ah muujin toos ah oo ah in labadaba «xididdada amooniyamka iyo baykaabonaytka» ay yihiin kuwo aan xasiloonayn.",
     "objectives": [
       "La eego sida Amooniyam baykaabonayt ugu soo saaro gaaska markuu la kulmo aashito",
       "Lagu fahmo in labadabaملح amooniyamka iyo baykaabonaytka aysan ahayn kuwo xasilooni",
@@ -2755,7 +2755,7 @@
   },
   "aluminum-hydroxide-acid-dissolve": {
     "title": "Aluminiyam hаydrooksiid ku milmida aashitada",
-    "description": "Aluminiyam hаydrooksiid cad oo adag markii lagu daro aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), wuxuu si tartiib ah ugu milmaa oo nidaamku noqdaa mid cad oo kulylbax leh; tan waxaa lala barbardhigaa milmidiisa alkaliga xoogga leh si loo muujiyo dabeecadda laba-dhinacaadka.",
+    "description": "Aluminiyam hаydrooksiid cad oo adag markii lagu daro aashitada hidroklorikada oo la wasakheeyay, wuxuu si tartiib ah ugu milmaa oo nidaamku noqdaa mid cad oo kulylbax leh; tan waxaa lala barbardhigaa milmidiisa alkaliga xoogga leh si loo muujiyo dabeecadda laba-dhinacaadka.",
     "objectives": [
       "La eego habka alkaliga aan milmin ee ku milma aashitada xoogga leh",
       "Lagu fahmo dhinaca alkaliga ah ee Aluminiyam hаydrooksiid",
@@ -2764,7 +2764,7 @@
   },
   "calcium-oxide-acid-heat": {
     "title": "Kulylbaxida xoogga leh ee calcium oxide (CaO) iyo aashitada hidroklorikada oo la wasakheeyay",
-    "description": "Markii calcium oxide (CaO) la galiyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), si dhakhso ah ayuu ugu milmaa oo heerkulku si degdeg ah u kacaa, taas oo muujinaysa in falcelka oxide-ka alkaliga ah iyo aashitada uu kulyl ka sii baxo mid ka badan kulayl-neefsiga caadiga ah.",
+    "description": "Markii calcium oxide (CaO) la galiyo aashitada hidroklorikada oo la wasakheeyay, si dhakhso ah ayuu ugu milmaa oo heerkulku si degdeg ah u kacaa, taas oo muujinaysa in falcelka oxide-ka alkaliga ah iyo aashitada uu kulyl ka sii baxo mid ka badan kulayl-neefsiga caadiga ah.",
     "objectives": [
       "La eego falcelka kulylbaxida ah ee oxide-ka alkaliga ah iyo aashitada",
       "Loo barbardhigo saameynta kulaylka ee calcium oxide (CaO) markii biyo lagu daro iyo markii aashito lagu daro",
@@ -2773,7 +2773,7 @@
   },
   "alumina-acid-slow-dissolve": {
     "title": "Habka gaabis ah ee Aluminiyam ooksiid ku milma aashitada",
-    "description": "Aluminiyam ooksiid oo budo ah markii la galiyo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid), milmidiisu si cad ayey u gaabisaa; waxay u baahan tahay kululayn iyo wareejin si uu nidaamku u noqdo mid cad, taas oo muujinaysa in qaab-dhismeedkiisu yahay mid adag oo xasilloon oo kimikada ku xoog badan.",
+    "description": "Aluminiyam ooksiid oo budo ah markii la galiyo aashitada hidroklorikada oo la wasakheeyay, milmidiisu si cad ayey u gaabisaa; waxay u baahan tahay kululayn iyo wareejin si uu nidaamku u noqdo mid cad, taas oo muujinaysa in qaab-dhismeedkiisu yahay mid adag oo xasilloon oo kimikada ku xoog badan.",
     "objectives": [
       "La eego gaabiska milmida Aluminiyam ooksiid",
       "Lagu fahmo saamaynta qaab-dhismeedka kristalka ee xawliga falcelka",
@@ -2808,10 +2808,10 @@
     ]
   },
   "sulfuric-ammonia-fertilizer": {
-    "title": "Soo-saarka Amooniyam Sulfeeт adigoo isticmaalaya aashito sulfuric ah (H₂SO₄) iyo gaaska ammonia (ammonia gas)",
+    "title": "Soo-saarka Amooniyam Sulfeeт adigoo isticmaalaya aashito sulfuric ah (H₂SO₄) iyo gaaska ammonia",
     "description": "Xalka ammoniya ah (NH₃ biyood) ayaa si tartiib tartiib ah loogu daraa aashito sulfuric ah (H₂SO₄) oo la wasakheeyay, taasoo kulaylka sii daaysa oo soo-saarta Amooniyam sulfeeт; ka dib markii la qalajiyaa ayaa dhalaalayaasha cad la helo, waxayna tahay dariiqa ugu caansan ee warshadaha bacriminta nitrogen-ka lagu hagaajiyo.",
     "objectives": [
-      "Fahamka muhiimadda warshadeed ee aashidu ku leedahay nuugista gaaska ammonia (ammonia gas)",
+      "Fahamka muhiimadda warshadeed ee aashidu ku leedahay nuugista gaaska ammonia",
       "La socodsiga kulaylka soo-baxa ee neetralizaadka iyo dhalaalaynta crystalline-ka",
       "Xisaabinta wax-soo-saarka theoretical-ka ee Amooniyam sulfeeт la soo-saaro"
     ]
@@ -2853,11 +2853,11 @@
     ]
   },
   "ammonium-sulfate-base-ammonia": {
-    "title": "Amooniyam sulfeeт iyo aasaasku oo gaaska ammonia (ammonia gas) soo saara marka la kululeeyaa",
-    "description": "Amooniyam sulfeeт marka la isku daro Xalka soodyam hаydrooksiiد oo marka yar la kululeeyaa, ayaa sii daaya gaaska ammonia (ammonia gas) ee ur daran, taasoo warqadda litmus ee cas (red litmus paper) oo qoyan u beddeshaa buluug, waxayna u adeegta hubinta ملحyada ammonium.",
+    "title": "Amooniyam sulfeeт iyo aasaasku oo gaaska ammonia soo saara marka la kululeeyaa",
+    "description": "Amooniyam sulfeeт marka la isku daro Xalka soodyam hаydrooksiiد oo marka yar la kululeeyaa, ayaa sii daaya gaaska ammonia ee ur daran, taasoo warqadda litmus ee cas oo qoyan u beddeshaa buluug, waxayna u adeegta hubinta ملحyada ammonium.",
     "objectives": [
       "Bartida habka hubinta ملحyada ammonium",
-      "La socodsiga sida gaaska ammonia (ammonia gas) uu warqadda litmus ee cas (red litmus paper) oo qoyan u beddelo buluug",
+      "La socodsiga sida gaaska ammonia uu warqadda litmus ee cas oo qoyan u beddelo buluug",
       "Sharaxaada sababta aan bacriminta nitrogen-ka ah ee ammonium loo isku wadin bacriminta alkaline ah"
     ]
   },
@@ -2872,7 +2872,7 @@
   },
   "sodium-sulfite-acid-so2": {
     "title": "Sodium sulfite (Na₂SO₃) iyo aashitada oo sulfur dioxide soo-saara",
-    "description": "Sodium sulfite (Na₂SO₃) marka la kulmo aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) ayaa sii daaya sulfur dioxide oo ur daran, kaasoo kala-midabeynta fuchsine baabbi'iya; waxayna tahay habka fudud ee xannaanada shaybaarka lagu soo-saaro yar yar oo sulfur dioxide ah.",
+    "description": "Sodium sulfite (Na₂SO₃) marka la kulmo aashitada hidroklorikada oo la wasakheeyay ayaa sii daaya sulfur dioxide oo ur daran, kaasoo kala-midabeynta fuchsine baabbi'iya; waxayna tahay habka fudud ee xannaanada shaybaarka lagu soo-saaro yar yar oo sulfur dioxide ah.",
     "objectives": [
       "Bartida falcelinta gas-soo-saarka ee ملحyada sulfite marka la kulmo aashitada",
       "Aqoonsiga awoodda caddaynta ee sulfur dioxide",
@@ -2881,9 +2881,9 @@
   },
   "aluminum-naoh-hydrogen": {
     "title": "Laba-dhinacnimada Aluminium: Falcelinta Kaadiga Xoogga ah oo Soo Saarta Hydrogen",
-    "description": "Marka xaashi aluminium ah la dhigo Xalka soodyam hаydrooksiiد, ayaa gaaska hydrogen (hydrogen gas) si joogto ah u soo baxa oo kulaylna soo baxa, taas oo muujinaysa in aluminium labada dhinac leeyahay — waxay ku milmaysaa labadaba asiidhka iyo kaadiga xoogga ah, kaas oo ah caddayn toos ah oo ah birta labada-dhinac.",
+    "description": "Marka xaashi aluminium ah la dhigo Xalka soodyam hаydrooksiiد, ayaa gaaska hydrogen si joogto ah u soo baxa oo kulaylna soo baxa, taas oo muujinaysa in aluminium labada dhinac leeyahay — waxay ku milmaysaa labadaba asiidhka iyo kaadiga xoogga ah, kaas oo ah caddayn toos ah oo ah birta labada-dhinac.",
     "objectives": [
-      "Indho-indheynta falcelinta aluminium iyo kaadiga xoogga ah ee soo saarta gaaska hydrogen (hydrogen gas)",
+      "Indho-indheynta falcelinta aluminium iyo kaadiga xoogga ah ee soo saarta gaaska hydrogen",
       "Fahamka muujinta labada-dhinac ee aluminium",
       "Is-barbardhigga kala-duwanaanshaha xawaaraha falcelinta aluminium marka uu la fal-galo asiidhka iyo kaadiga"
     ]
@@ -2908,7 +2908,7 @@
   },
   "iron-wire-oxygen-sparks": {
     "title": "Xadhig Birta (Fe) oo Darar-darar ku Gubanaya Ogsijiin (O₂)",
-    "description": "Marka xadhig birta (Fe) oo wareegsan lana shido kibriid lagu xidho dhamaadkiisa la galiyo dhalo uruurinta gaaska oo ogsijiin (O₂) ah, ayaa gubashadu si xoogan u dhacaa oo dararku kor u baxaa, isagoo sameynaya birta oksiidka (iron(II,III) oxide / Fe₃O₄) madow ah; hoosta dhalada waa in ciid lagu daadsho si dhalada hoose loogu ilaalin karo.",
+    "description": "Marka xadhig birta (Fe) oo wareegsan lana shido kibriid lagu xidho dhamaadkiisa la galiyo dhalo uruurinta gaaska oo ogsijiin (O₂) ah, ayaa gubashadu si xoogan u dhacaa oo dararku kor u baxaa, isagoo sameynaya birta oksiidka Fe₃O₄ madow ah; hoosta dhalada waa in ciid lagu daadsho si dhalada hoose loogu ilaalin karo.",
     "objectives": [
       "Indho-indheynta gubidda xoogga ah ee bir (Fe) ogsijiin (O₂) nadiif ah",
       "Fahamka saamaynta xoogga ogsijiin-ka ku leh xawaaraha gubashada",
@@ -2917,9 +2917,9 @@
   },
   "charcoal-oxygen-white-glow": {
     "title": "Xaabo (Charcoal) oo Gubanaya Ogsijiin (O₂)",
-    "description": "Marka xaabo (charcoal) cas-cas loo galiyo ogsijiin (O₂), ayaa iftiinka cad soo baxa; ka dib marka la shido, marka Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) nadiif ah lagu rido dhalooyada la qarxiyo ayay neefto madowdaa, taas oo xaqiijinaysa in badeecadda la soo saaro ay tahay carbon dioxide (CO₂).",
+    "description": "Marka xaabo cas-cas loo galiyo ogsijiin (O₂), ayaa iftiinka cad soo baxa; ka dib marka la shido, marka Biyo gaashaan ah nadiif ah lagu rido dhalooyada la qarxiyo ayay neefto madowdaa, taas oo xaqiijinaysa in badeecadda la soo saaro ay tahay carbon dioxide (CO₂).",
     "objectives": [
-      "Indho-indheynta gubidda cad ee xaabo (charcoal) ogsijiin (O₂) nadiif ah",
+      "Indho-indheynta gubidda cad ee xaabo ogsijiin (O₂) nadiif ah",
       "Xaqiijinta badeecadda carboon dioxide (CO₂) ee la soo saaray",
       "Is-barbardhigga muuqaalka guban-ka hawada iyo ogsijiin (O₂) nadiif ah"
     ]
@@ -2928,16 +2928,16 @@
     "title": "Gaaska Hydrogen (Hydrogen Gas) oo Si Degdeg ah Ogsijiin (O₂) ku Gubanaya",
     "description": "Gaaska hydrogen (hydrogen gas) ka dib markii safinaad lagu xaqiijiyey, ayuu si xasilloon ugu gubaa ogsijiin (O₂) isagoo soo saranaya dab buluug-cad ah; marka koob kiimikaad qoyan oo qabow lagu dhajiyo, ayaa biyo la arki karaa oo ku uruuranaya derbigga gudaha.",
     "objectives": [
-      "Indho-indheynta dab-ka buluug-cad ee gaaska hydrogen (hydrogen gas)",
+      "Indho-indheynta dab-ka buluug-cad ee gaaska hydrogen",
       "Xaqiijinta in badeecadda tahay biyo adoo eegaya dhibicyada biyaha",
-      "Xoogga saarista muhiimadda xaqiijinta nadaafadda gaaska hydrogen (hydrogen gas) ka hor intaan la shidin"
+      "Xoogga saarista muhiimadda xaqiijinta nadaafadda gaaska hydrogen ka hor intaan la shidin"
     ]
   },
   "hydrogen-reduce-fe2o3": {
     "title": "Gaaska Hydrogen (Hydrogen Gas) oo Yareyneya iron(III) oxide",
-    "description": "Marka gaaska hydrogen (hydrogen gas) engegsan la marsho iron(III) oxide cas-huruud ah oo la kululeysiiyey, ayaa walaxda adag si tartiib ah u madoobaataa oo dhibicyo biyo ah oo koob kiimikaad ah ku muuqdaan dhamaadka tuubbada; habka saxda ah waa in marka hore gaaska la mariyo ka dib qabashada nalka kululaynta.",
+    "description": "Marka gaaska hydrogen engegsan la marsho iron(III) oxide cas-huruud ah oo la kululeysiiyey, ayaa walaxda adag si tartiib ah u madoobaataa oo dhibicyo biyo ah oo koob kiimikaad ah ku muuqdaan dhamaadka tuubbada; habka saxda ah waa in marka hore gaaska la mariyo ka dib qabashada nalka kululaynta.",
     "objectives": [
-      "Xaqiijinta awoodda yaraynta ee gaaska hydrogen (hydrogen gas)",
+      "Xaqiijinta awoodda yaraynta ee gaaska hydrogen",
       "Indho-indheynta isbeddel-midabka ee iron(III) oxide markay yaraato",
       "Bartida nidaamka hawlgalka si looga hortago qarxida"
     ]
@@ -2970,26 +2970,26 @@
     ]
   },
   "ammonia-water-fountain": {
-    "title": "Tijaabada biyaha boodda ee gaaska ammonia (ammonia gas)",
-    "description": "Marka dhalo af wareegsan oo buuxda gaaska ammonia (ammonia gas) lagu xidho biyo, gaaska ayaa si sahlan ugu dhalaala biyaha, cadaadiska gudaha dhalada ayaa si deg-deg ah hoos ugu dhaca, biyuhuna waxaa ku soo rida cadaadiska jawiga si ay u sameeyaan biyaha boodda; marka phenolphthalein lagu daro, xalku guduud ayuu noqdaa.",
+    "title": "Tijaabada biyaha boodda ee gaaska ammonia",
+    "description": "Marka dhalo af wareegsan oo buuxda gaaska ammonia lagu xidho biyo, gaaska ayaa si sahlan ugu dhalaala biyaha, cadaadiska gudaha dhalada ayaa si deg-deg ah hoos ugu dhaca, biyuhuna waxaa ku soo rida cadaadiska jawiga si ay u sameeyaan biyaha boodda; marka phenolphthalein lagu daro, xalku guduud ayuu noqdaa.",
     "objectives": [
       "Fahamka mabaadi'da cadaadiska ee tijaabada biyaha boodda",
       "Xaqiijinta in xal amooniyaaka ah (NH₃ biyood) uu yahay aasaasi",
-      "Aqoonsiga dabeecadda gaaska ammonia (ammonia gas) ee si aad ah ugu dhalaasha biyaha"
+      "Aqoonsiga dabeecadda gaaska ammonia ee si aad ah ugu dhalaasha biyaha"
     ]
   },
   "ammonia-hcl-white-smoke": {
     "title": "Gaaska ammonia (ammonia gas) iyo gaaska chlorine (Cl₂) hydrogen chloride waxay sameeyaan ceeryaan cad",
-    "description": "Laba ul dhalo ah oo kala mid la duuftay xalliga amooniyaaka oo xooggan (concentrated ammonia solution) iyo hydrochloric acid dhumuc badan (concentrated hydrochloric acid) marka la isugu dhowaado, hawada dhexdeeda ayaa si deg-deg ah u soo baxa ceeryaan cad oo badan oo ah ammonium chloride (NH₄Cl); tani waa muujinta caanka ah ee loo isticmaalo laba-dhinacba si ay is-cadeeyaan.",
+    "description": "Laba ul dhalo ah oo kala mid la duuftay xalliga amooniyaaka oo xooggan iyo hydrochloric acid dhumuc badan marka la isugu dhowaado, hawada dhexdeeda ayaa si deg-deg ah u soo baxa ceeryaan cad oo badan oo ah ammonium chloride (NH₄Cl); tani waa muujinta caanka ah ee loo isticmaalo laba-dhinacba si ay is-cadeeyaan.",
     "objectives": [
       "La socoshada falcelinta u dhaxeysa labada gaas ee soo saareysa ceeryaanka cad ee adag",
-      "Bartida habka loo isticmaalo gaaska ammonia (ammonia gas) iyo hydrogen chloride inay is-cadeeyaan",
+      "Bartida habka loo isticmaalo gaaska ammonia iyo hydrogen chloride inay is-cadeeyaan",
       "Kala soocida mafhumyada ceeryaanka cad iyo ceeryaanka cagaaran"
     ]
   },
   "copper-air-heating-black": {
     "title": "Naxaas (Cu) marka la kululeeyo hawada ayuu madow noqdaa",
-    "description": "Xaashi naxaas ah midabka guduudan marka la gaabiyo laambad alkohol, dusha korkeeda ayay si tartiib ah u madowdaa oo la samaysaa copper(II) oxide; marka dib gaaska hydrogen (hydrogen gas) lagu marsado, waxay dib ugu noqotaa midabka guduud, taasoo samaysa wareegga oxidation-reduction.",
+    "description": "Xaashi naxaas ah midabka guduudan marka la gaabiyo laambad alkohol, dusha korkeeda ayay si tartiib ah u madowdaa oo la samaysaa copper(II) oxide; marka dib gaaska hydrogen lagu marsado, waxay dib ugu noqotaa midabka guduud, taasoo samaysa wareegga oxidation-reduction.",
     "objectives": [
       "La socoshada isbedelka midabka marka naxaas (Cu) uu ogsijiin (O₂) ku soo oxidaan",
       "Aqoonsiga oxiidka labada walxood ee naxaasta",
@@ -3007,16 +3007,16 @@
   },
   "sodium-oxygen-peroxide": {
     "title": "Birta sodium (sodium metal) marka ogsijiin (O₂) la gubo waxay samaysaa sodium peroxide",
-    "description": "Birta sodium (sodium metal) marka hawada caadiga ah si tartiib ah loo oxideeyo, kaliya ayaa la heli karaa soodiyamka oksiidka (sodium oxide) cad; laakiin marka la kululeeyo oo la shito, waxaa soo baxa olol jaalle ah oo la samaysaa sodium peroxide midabka jaalle-caddaanka ah, taasoo caddaynaysa in xaaladaha falcelinta ay go'aankeeda ku leedahay soo saaraha.",
+    "description": "Birta sodium (sodium metal) marka hawada caadiga ah si tartiib ah loo oxideeyo, kaliya ayaa la heli karaa soodiyamka oksiidka cad; laakiin marka la kululeeyo oo la shito, waxaa soo baxa olol jaalle ah oo la samaysaa sodium peroxide midabka jaalle-caddaanka ah, taasoo caddaynaysa in xaaladaha falcelinta ay go'aankeeda ku leedahay soo saaraha.",
     "objectives": [
       "Fahamka saamaynta xaaladaha falcelinta ee soo saaraha",
-      "La socoshada oollka jaalle ee gubashada birta sodium (sodium metal)",
+      "La socoshada oollka jaalle ee gubashada birta sodium",
       "Bartida habka saxda ah ee lagu qaato oo lagu keydsado biraha firfircoon"
     ]
   },
   "sodium-sulfide-acid-h2s": {
     "title": "Sodium sulfide (sodium sulfide, Na₂S) iyo aashito samaysta gaaska hydrogen sulfide",
-    "description": "Solid-ka sodium sulfide (sodium sulfide, Na₂S) marka la siiyo aashito sulfuric ah (H₂SO₄) dillacsan, waxaa soo baxa gaas hydrogen sulfide ah oo udgoon sida ukunta qudhuntay; gaaska marka la geliyo xal copper(II) sulfate (CuSO₄), waxaa la samaysaa rasaas madow ah, hawshana waa in laga qabtaa gol hawo-mareenka leh.",
+    "description": "Solid-ka sodium sulfide Na₂S marka la siiyo aashito sulfuric ah (H₂SO₄) dillacsan, waxaa soo baxa gaas hydrogen sulfide ah oo udgoon sida ukunta qudhuntay; gaaska marka la geliyo xal copper(II) sulfate (CuSO₄), waxaa la samaysaa rasaas madow ah, hawshana waa in laga qabtaa gol hawo-mareenka leh.",
     "objectives": [
       "Bartida habka tijaabada ee lagu sameeyo gaaska hydrogen sulfide",
       "Isticmaalka milixda biraha culus si loo xaqiijiyo gaaska hydrogen sulfide",
@@ -3043,9 +3043,9 @@
   },
   "ammonia-nitric-acid-smoke": {
     "title": "Gaaska ammonia (ammonia gas) iyo aashito nitric ah (HNO₃) oo soo saara Amooniyam nayitrееt oo ah qiiq cad",
-    "description": "Gaaska ka uumi kara xalliga amooniyaaka oo xooggan (concentrated ammonia solution) iyo Aasidda nayitariik ah oo dhumuc leh marka ay isku kulmaan ayay soo saaraan qiiq cad oo ah Amooniyam nayitrееt; falcalinta waxay soo daaysaa kulaylka, waxayna u tahay muuqaal yar oo tilmaamaya habka warshadaha lagu sameeyo bacriminta ammonium nitrate.",
+    "description": "Gaaska ka uumi kara xalliga amooniyaaka oo xooggan iyo Aasidda nayitariik ah oo dhumuc leh marka ay isku kulmaan ayay soo saaraan qiiq cad oo ah Amooniyam nayitrееt; falcalinta waxay soo daaysaa kulaylka, waxayna u tahay muuqaal yar oo tilmaamaya habka warshadaha lagu sameeyo bacriminta ammonium nitrate.",
     "objectives": [
-      "Daawashada falcalinta qiiqa oo u dhaxaysa aashitada la kari karo iyo gaaska ammonia (ammonia gas)",
+      "Daawashada falcalinta qiiqa oo u dhaxaysa aashitada la kari karo iyo gaaska ammonia",
       "Xiriirinta habka warshadaha lagu sameeyo bacrimaha ammonium nitrate",
       "Fahamka ah in qiiqa cad uu yahay muraayadaha yaryar ee kursiga hawo ku jira"
     ]
@@ -3078,12 +3078,12 @@
     ]
   },
   "ammonium-chloride-lime-ammonia": {
-    "title": "Ammonium chloride (NH₄Cl) iyo baaruuda gaashaan oo la kululeeyay si loo sameeyo gaaska ammonia (ammonia gas)",
-    "description": "Marka ammonium chloride (NH₄Cl) iyo baaruuda gaashaan la isku qaso la kululeeyona, ayaa gaaska ammonia (ammonia gas) soo baxa; falcalintu waxay u baahan tahay kululayn joogto ah sababtoo ah waxay nuugtaa kulaylka; tani waa habka caadiga ah ee sheybaarka lagu sameeyo gaaska ammonia (ammonia gas).",
+    "title": "Ammonium chloride (NH₄Cl) iyo baaruuda gaashaan oo la kululeeyay si loo sameeyo gaaska ammonia",
+    "description": "Marka ammonium chloride (NH₄Cl) iyo baaruuda gaashaan la isku qaso la kululeeyona, ayaa gaaska ammonia soo baxa; falcalintu waxay u baahan tahay kululayn joogto ah sababtoo ah waxay nuugtaa kulaylka; tani waa habka caadiga ah ee sheybaarka lagu sameeyo gaaska ammonia.",
     "objectives": [
-      "Bartid habka sheybaarka lagu sameeyo gaaska ammonia (ammonia gas)",
-      "Fahamka sababta oo ah in lagu ururiyo gaaska ammonia (ammonia gas) hab hawo-ka-erida hoos-u-jeedda",
-      "Bartid tijaabinta iyo qalajinta gaaska ammonia (ammonia gas)"
+      "Bartid habka sheybaarka lagu sameeyo gaaska ammonia",
+      "Fahamka sababta oo ah in lagu ururiyo gaaska ammonia hab hawo-ka-erida hoos-u-jeedda",
+      "Bartid tijaabinta iyo qalajinta gaaska ammonia"
     ]
   },
   "lead-iodide-golden-rain": {
@@ -3097,16 +3097,16 @@
   },
   "silver-carbonate-precipitate": {
     "title": "Sameynta iyo Kala-jabinta Lacagta Kaarbooneetka",
-    "description": "Silver nitrate (AgNO₃) iyo sodium carbonate (Na₂CO₃) waxay sameeyaan xad-dhaafka cad ee lacagta kaarbooneetka (silver carbonate), kaas oo kulaylka ama iftiinka ku kala jabaya oo madoobaada, taasoo muujinaysa in cusbitada lacagtu guud ahaan aan xasilloonayn.",
+    "description": "Silver nitrate (AgNO₃) iyo sodium carbonate (Na₂CO₃) waxay sameeyaan xad-dhaafka cad ee lacagta kaarbooneetka, kaas oo kulaylka ama iftiinka ku kala jabaya oo madoobaada, taasoo muujinaysa in cusbitada lacagtu guud ahaan aan xasilloonayn.",
     "objectives": [
-      "Daawashada sameynta lacagta kaarbooneetka (silver carbonate)",
+      "Daawashada sameynta lacagta kaarbooneetka",
       "Aqoonsiga xasilloon-la'aanta cusbitada lacagta",
-      "Qorista isla-sameynta ionka ee sameynta lacagta kaarbooneetka (silver carbonate)"
+      "Qorista isla-sameynta ionka ee sameynta lacagta kaarbooneetka"
     ]
   },
   "barium-carbonate-vs-sulfate": {
     "title": "Barbaraadinta Kala-dhaqnaanta Aashitada ee Barium Carbonate iyo Barium Sulfate",
-    "description": "Sodium carbonate (Na₂CO₃) iyo sodium sulfate (Na₂SO₄) waxaa si gooni-gooni ah loogu daraa barium nitrate (Ba(NO₃)₂) si loo sameeyo laba xad-dhaaf oo cad, kadibna waxaa lagu daraa aashitada naytareetka oo la wasakheeyay (dilute nitric acid): barium carbonate wuu dhalaalaa isagoo gaas soo saara, halka barium sulfate uusan dhalalin, taasoo kala soocida u oggolanaysa.",
+    "description": "Sodium carbonate (Na₂CO₃) iyo sodium sulfate (Na₂SO₄) waxaa si gooni-gooni ah loogu daraa barium nitrate Ba(NO₃)₂ si loo sameeyo laba xad-dhaaf oo cad, kadibna waxaa lagu daraa aashitada naytareetka oo la wasakheeyay: barium carbonate wuu dhalaalaa isagoo gaas soo saara, halka barium sulfate uusan dhalalin, taasoo kala soocida u oggolanaysa.",
     "objectives": [
       "Sameynta laba xad-dhaaf oo cad oo barium ah",
       "Adeegsiga kala-dhaqnaanta aashitada si loo kala sooco kaarbooneetka iyo sulfate",
@@ -3124,10 +3124,10 @@
   },
   "zinc-hydroxide-amphoteric": {
     "title": "Kala-dhaqnaanta Laba-geesoodka ee Sinkyga Hiidrooksaydka (Zinc Hydroxide)",
-    "description": "Zinc sulfate oo lagu daro sodium hydroxide (NaOH) oo yar wuxuu sameeya xad-dhaaf cad oo sinkyga hiidrooksaydka (zinc hydroxide) ah, markii aasalka dheeraadka ah lagu siiyo wuxuu dib u dhalaalaadaa, taasoo muujinaysa dabeecadda laba-geesoodka ah oo la mid ah ta aluminium.",
+    "description": "Zinc sulfate oo lagu daro sodium hydroxide (NaOH) oo yar wuxuu sameeya xad-dhaaf cad oo sinkyga hiidrooksaydka ah, markii aasalka dheeraadka ah lagu siiyo wuxuu dib u dhalaalaadaa, taasoo muujinaysa dabeecadda laba-geesoodka ah oo la mid ah ta aluminium.",
     "objectives": [
       "Daawashada xad-dhaafka horeba u sameeya kadibna u dhalaalaa",
-      "Aqoonsiga laba-geesoodka sinkyga hiidrooksaydka (zinc hydroxide)",
+      "Aqoonsiga laba-geesoodka sinkyga hiidrooksaydka",
       "Barbaraadinta astaanta hiidrooksaydka zinc iyo aluminium"
     ]
   },
@@ -3142,7 +3142,7 @@
   },
   "nickel-hydroxide-green": {
     "title": "Xad-dhaafka Cagaarka Tufaaxda ah ee Niikelka Hiidrooksaydka (Nickel(II) Hydroxide)",
-    "description": "Xalliga nickel(II) chloride markii aasalka lagu daro wuxuu sameeya xad-dhaaf cagaar-tufaax ah oo niikelka hiidrooksaydka (nickel(II) hydroxide) ah, taasoo ah astaanta muhiimka ah ee aqoonsiga tayada ee ionka niikel, waxaana sidoo kale looga faa'iidaystaa agabka kutubta togan ee baatariiga nickel-hydrogen.",
+    "description": "Xalliga nickel(II) chloride markii aasalka lagu daro wuxuu sameeya xad-dhaaf cagaar-tufaax ah oo niikelka hiidrooksaydka(II) ah, taasoo ah astaanta muhiimka ah ee aqoonsiga tayada ee ionka niikel, waxaana sidoo kale looga faa'iidaystaa agabka kutubta togan ee baatariiga nickel-hydrogen.",
     "objectives": [
       "Daawashada sameynta xad-dhaafka cagaarka-tufaaxda ah",
       "Bartida astaanta tayada ee ionka niikel",
@@ -3151,7 +3151,7 @@
   },
   "copper-sulfide-black": {
     "title": "Xad-dhaafka Madow ee Copper Sulfide",
-    "description": "Xalliga copper(II) sulfate (CuSO₄) markii sodium sulfide (sodium sulfide, Na₂S) lagu daro wuxuu si deg-deg ah u sameeya copper sulfide madow oo aad u aan dhalaalin, xataa markii aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) lagu daro ma dhalaalo, taasoo muujinaysa in alaabadeeda solubility-product ay aad u yar tahay.",
+    "description": "Xalliga copper(II) sulfate (CuSO₄) markii sodium sulfide Na₂S lagu daro wuxuu si deg-deg ah u sameeya copper sulfide madow oo aad u aan dhalaalin, xataa markii aashitada hidroklorikada oo la wasakheeyay lagu daro ma dhalaalo, taasoo muujinaysa in alaabadeeda solubility-product ay aad u yar tahay.",
     "objectives": [
       "Daawashada sameynta xad-dhaafka madow ee copper sulfide",
       "Fahamka ah in xad-dhaafyada solubility-product-koodu aad u yar yahay aysan ku dhalalin aashitada xoogga leh",
@@ -3160,18 +3160,18 @@
   },
   "silver-sulfide-tarnish": {
     "title": "Silver Sulfide iyo Madoobaadka Dheefshiidka Lacagta",
-    "description": "Silver nitrate (AgNO₃) markii uu la kulmo sodium sulfide (sodium sulfide, Na₂S) wuxuu sameeya silver sulfide (Ag₂S) madow, taasoo ah sababta kiimikada ee lacagta xidmaddu marka muddo lagu reebo walxaha ku jira sulfar u madoobaato; warqadda aluminium (aluminium foil) iyo xalliga cusbitada (salt water / brine) waxaa loo isticmaali karaa soo-celinta.",
+    "description": "Silver nitrate (AgNO₃) markii uu la kulmo sodium sulfide Na₂S wuxuu sameeya silver sulfide (Ag₂S) madow, taasoo ah sababta kiimikada ee lacagta xidmaddu marka muddo lagu reebo walxaha ku jira sulfar u madoobaato; warqadda aluminium iyo xalliga cusbitada waxaa loo isticmaali karaa soo-celinta.",
     "objectives": [
       "Daawashada sameynta silver sulfide (Ag₂S) madow",
       "Sharaxaadda sababta madoobaadka dheefshiidka lacagta",
-      "Naqshadaynta habka electrokiimikada ee warqadda aluminium (aluminium foil) ee nadiifinta khaynka"
+      "Naqshadaynta habka electrokiimikada ee warqadda aluminium ee nadiifinta khaynka"
     ]
   },
   "lead-sulfide-detection": {
     "title": "Ogaanshaha Ioniga Rasaasta Adoo Isticmaalaya Barqada Sulfide-ka",
-    "description": "Biyaha qashinka ah ee ka kooban rasaasta markaa lagu daro sodium sulfide (sodium sulfide, Na₂S) ayaa si xidid ah loo soo saaro barqo madow oo sulfide ah. Habkani waa mid aad u xasaasi ah, waxaana loo isticmaalaa si caadi ah daaweynta biyaha qashinka ee macadanta culus.",
+    "description": "Biyaha qashinka ah ee ka kooban rasaasta markaa lagu daro sodium sulfide Na₂S ayaa si xidid ah loo soo saaro barqo madow oo sulfide ah. Habkani waa mid aad u xasaasi ah, waxaana loo isticmaalaa si caadi ah daaweynta biyaha qashinka ee macadanta culus.",
     "objectives": [
-      "Ku bartid tijaabinta ioniga rasaasta (lead) adoo isticmaalaya sulfide-ka",
+      "Ku bartid tijaabinta ioniga rasaasta adoo isticmaalaya sulfide-ka",
       "Fahmid sida habka barqada sulfide-ku u daweeyso biyaha qashinka ee macadanta culus",
       "Aqoonsiga waxyeellada wasakhda rasaasta"
     ]
@@ -3196,10 +3196,10 @@
   },
   "silver-phosphate-yellow": {
     "title": "Barqada Jaallaha ah ee Silver Phosphate",
-    "description": "Markaa sodium phosphate la kulmaan silver nitrate (AgNO₃), ayaa barqo huruud ah oo silver phosphate ah soo baxa, oo ka dhammaanaysa Lacag (silfar) iyo phosphate. Barqadaasi waxay ku milmi kartaa aashitada naytareetka oo la wasakheeyay (dilute nitric acid), taasi oo ah farqi muhiim ah oo loo garan karo phosphate ion-ka marka la barbardhigo halogen ion-yada.",
+    "description": "Markaa sodium phosphate la kulmaan silver nitrate (AgNO₃), ayaa barqo huruud ah oo silver phosphate ah soo baxa, oo ka dhammaanaysa Lacag iyo phosphate. Barqadaasi waxay ku milmi kartaa aashitada naytareetka oo la wasakheeyay, taasi oo ah farqi muhiim ah oo loo garan karo phosphate ion-ka marka la barbardhigo halogen ion-yada.",
     "objectives": [
       "La socodsii soo saarista barqada jaallaha ah ee silver phosphate",
-      "U isticmaal aashitada naytareetka oo la wasakheeyay (dilute nitric acid) si aad uga soocdo silver phosphate iyo silver halide",
+      "U isticmaal aashitada naytareetka oo la wasakheeyay si aad uga soocdo silver phosphate iyo silver halide",
       "Ku bartid tijaabinta munaasabadda ee phosphate ion-ka"
     ]
   },
@@ -3214,7 +3214,7 @@
   },
   "zinc-sulfide-white": {
     "title": "Barqada Cad ee Zinc Sulfide",
-    "description": "Markaa zinc sulfate lagu daro sodium sulfide (sodium sulfide, Na₂S), ayaa barqo cad oo zinc sulfide ah soo baxa. Midabkeeda cad ayaa si cad uga duwan midabka mugdiga ah ee sulfide-yada macadanta culus ee kale, taasi oo u ogolaanaysa in ay loo isticmaalo kala-soocidda kooxaha cation-yada.",
+    "description": "Markaa zinc sulfate lagu daro sodium sulfide Na₂S, ayaa barqo cad oo zinc sulfide ah soo baxa. Midabkeeda cad ayaa si cad uga duwan midabka mugdiga ah ee sulfide-yada macadanta culus ee kale, taasi oo u ogolaanaysa in ay loo isticmaalo kala-soocidda kooxaha cation-yada.",
     "objectives": [
       "La socodsii soo saarista barqada cad ee zinc sulfide",
       "Barbar dhig midabada kala duwan ee barqooyinka sulfide",
@@ -3232,7 +3232,7 @@
   },
   "lead-sulfate-white": {
     "title": "Barqada Cad ee Sulfate Rasaasta",
-    "description": "Markaa lead(II) nitrate lagu daro sodium sulfate (Na₂SO₄), ayaa barqo cad oo rasaasta (lead) sulfate ah soo baxa. Walxahan ayaa ku dhejinaya labada kutubka bataariga lead-acid-ka xilliga shaqada, taasi oo ah sababta tooska ah ee gaabiska bataariga.",
+    "description": "Markaa lead(II) nitrate lagu daro sodium sulfate (Na₂SO₄), ayaa barqo cad oo rasaasta sulfate ah soo baxa. Walxahan ayaa ku dhejinaya labada kutubka bataariga lead-acid-ka xilliga shaqada, taasi oo ah sababta tooska ah ee gaabiska bataariga.",
     "objectives": [
       "La socodsii soo saarista sulfate rasaasta",
       "Xidhiidhi walxaha soo saarma iyo waxyaabaha ka soo baxa shaqada bataariga lead-acid",
@@ -3268,7 +3268,7 @@
   },
   "silver-sulfate-slightly-soluble": {
     "title": "Dhacdada Xoogga-yar-Millaynta Silver Sulfate",
-    "description": "Lacag (silfar) nitrate oo xooggan ayaa baruur cad oo silver sulfate ah ku samaysa oo kaliya marka la isticmaalo sodium sulfate (Na₂SO₄) oo xooggan, halkii xalyada dabacsan ma samaystaan baruur, taasoo si cad u muujinaysa in «xoogga-yar-millaynta» ay u dhaxayso millaynta iyo aan-millaynta.",
+    "description": "Lacag nitrate oo xooggan ayaa baruur cad oo silver sulfate ah ku samaysa oo kaliya marka la isticmaalo sodium sulfate (Na₂SO₄) oo xooggan, halkii xalyada dabacsan ma samaystaan baruur, taasoo si cad u muujinaysa in «xoogga-yar-millaynta» ay u dhaxayso millaynta iyo aan-millaynta.",
     "objectives": [
       "Fahamka ku-tiirsanaanshaha xoogga xalka ee walxaha xoogga-yar-milla",
       "Is-barbardhigga dhacdooyinka xaaladaha labada xal ee dabacsan iyo xooggan",
@@ -3277,25 +3277,25 @@
   },
   "lead-chloride-hot-water": {
     "title": "Millaynta Chloride-ka Raasaasta Biyaha Kulul",
-    "description": "Lead(II) nitrate markay la falgasho sodium chloride (NaCl) waxay samaystaa baruur cad oo rasaasta (lead) chloride ah, kaas oo kulaylku milliyo oo dhaqso ah, markaana qaboowgu dib u keeno muruqyo yaryar oo qaab irbad ah, taasoo ka dhigaysa tusaale gaar ah oo millaynta ay aad uga badesho kuleylka.",
+    "description": "Lead(II) nitrate markay la falgasho sodium chloride (NaCl) waxay samaystaa baruur cad oo rasaasta chloride ah, kaas oo kulaylku milliyo oo dhaqso ah, markaana qaboowgu dib u keeno muruqyo yaryar oo qaab irbad ah, taasoo ka dhigaysa tusaale gaar ah oo millaynta ay aad uga badesho kuleylka.",
     "objectives": [
       "Indho-indheynta millaynta baruurta kulaylka saameeysa iyo dib u soo muuqashadeeda qaboowga",
       "Fahamka ku-tiirsanaanshaha millaynta heerkulka",
-      "Is-barbardhigga farqiga millaynta rasaasta (lead) chloride iyo lacagta kloriidhka (silver chloride)"
+      "Is-barbardhigga farqiga millaynta rasaasta chloride iyo lacagta kloriidhka"
     ]
   },
   "mno2-concentrated-hcl-chlorine": {
     "title": "Diyaarinta Gaaska Chlorine (Cl₂) Adoo Isticmaalaya Manganese(IV) Oxide iyo Hydrochloric Acid Dhumuc Badan",
-    "description": "Marka la kululeeyo isku-darka manganese(IV) oxide (MnO₂) iyo hydrochloric acid dhumuc badan (concentrated hydrochloric acid), waxaa la arkaa gaaska chlorine (Cl₂) oo huruud-cagaar ah oo ka baxaya, taasoo fahamsiinaysa doorka go'aansiga ee xoogga xalka ku leeyahay falgashadda oksidhiinta-ho'siinta.",
+    "description": "Marka la kululeeyo isku-darka manganese(IV) oxide (MnO₂) iyo hydrochloric acid dhumuc badan, waxaa la arkaa gaaska chlorine (Cl₂) oo huruud-cagaar ah oo ka baxaya, taasoo fahamsiinaysa doorka go'aansiga ee xoogga xalka ku leeyahay falgashadda oksidhiinta-ho'siinta.",
     "objectives": [
       "Bartida mabaadi'da iyo qalabka labo-guri ee diyaarinta gaaska chlorine (Cl₂) ee shaybaarka",
-      "Fahamka sababta aashitada hidroklorikada oo la wasakheeyay (dilute hydrochloric acid) aysan uga oksidhikayn karin manganese(IV) oxide (MnO₂)",
+      "Fahamka sababta aashitada hidroklorikada oo la wasakheeyay aysan uga oksidhikayn karin manganese(IV) oxide (MnO₂)",
       "Barashadda isticmaalka xalka aasaasiga ah si loo nuugsado gaaska chlorine (Cl₂) ee dambiga ah"
     ]
   },
   "kmno4-concentrated-hcl-chlorine": {
     "title": "Diyaarinta Gaaska Chlorine (Cl₂) Adoo Isticmaalaya Potassium Permanganate (KMnO₄) iyo Hydrochloric Acid Dhumuc Badan Heerkulka Qolka",
-    "description": "Awooda oksidhiinta potassium permanganate (KMnO₄) waa aad uga xoog badan tahay tan manganese(IV) oxide (MnO₂), markaa marka hydrochloric acid dhumuc badan (concentrated hydrochloric acid) la saaraa heerkulka qolka ayaa si isla-markiiba ah gaaska chlorine (Cl₂) u soo baxa iyada oon kulaylku loo baahnayn, taasoo sahlaysa is-barbardhigga labada habood.",
+    "description": "Awooda oksidhiinta potassium permanganate (KMnO₄) waa aad uga xoog badan tahay tan manganese(IV) oxide (MnO₂), markaa marka hydrochloric acid dhumuc badan la saaraa heerkulka qolka ayaa si isla-markiiba ah gaaska chlorine (Cl₂) u soo baxa iyada oon kulaylku loo baahnayn, taasoo sahlaysa is-barbardhigga labada habood.",
     "objectives": [
       "Is-barbardhigga xoogga oksidhiinta potassium permanganate (KMnO₄) iyo manganese(IV) oxide (MnO₂)",
       "Bartida qaabka diyaarinta gaaska chlorine (Cl₂) ee aan kulaylka u baahnayn",
@@ -3313,11 +3313,11 @@
   },
   "iron-burning-chlorine": {
     "title": "Birta oo ku guban gaaska chlorine (Cl₂) waxayna soo saartaa iron(III) chloride (FeCl₃)",
-    "description": "Marka xadhig birta (Fe) oo gubanaya la geliyo dharka gaaska chlorine (Cl₂), waxay si xoogan u gubataa oo ay soo saartaa qiiq bunni ah. Walxaha la soo saaro waa iron(III) chloride (FeCl₃) ee ma aha birta(II) kloriidhka (iron(II) chloride), taasoo muujinaysa in gaaska chlorine (Cl₂) birta u oksideeyo heerka ugu sarreeya.",
+    "description": "Marka xadhig birta (Fe) oo gubanaya la geliyo dharka gaaska chlorine (Cl₂), waxay si xoogan u gubataa oo ay soo saartaa qiiq bunni ah. Walxaha la soo saaro waa iron(III) chloride (FeCl₃) ee ma aha birta(II) kloriidhka, taasoo muujinaysa in gaaska chlorine (Cl₂) birta u oksideeyo heerka ugu sarreeya.",
     "objectives": [
       "La socdo qiiqda bunni-madow ee ka soo baxa markii birta ku gubanayso gaaska chlorine (Cl₂)",
       "Faham sida xoogga oksideerayaasha u go'aamiyaa heerka valence ee natiijada",
-      "Bar-bar dhig falcelinta birta (Fe) ee la gaaska chlorine (Cl₂) iyo ta la aashito hydrochloric ah (HCl) oo kaliya soo saarta birta(II) kloriidhka (iron(II) chloride)"
+      "Bar-bar dhig falcelinta birta (Fe) ee la gaaska chlorine (Cl₂) iyo ta la aashito hydrochloric ah (HCl) oo kaliya soo saarta birta(II) kloriidhka"
     ]
   },
   "copper-burning-chlorine": {
@@ -3348,21 +3348,21 @@
     ]
   },
   "zinc-concentrated-sulfuric-so2": {
-    "title": "Graniyuulada zinc oo la gaashito sulfuric ah oo xooggan (H₂SO₄ concentrated) soo saara sulfur dioxide",
-    "description": "Markii graniyuulada zinc la geliyo aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo la kululeeyay, waxa la soo saaraa sulfur dioxide oo ur xun leh, ee ma aha gaaska hydrogen (hydrogen gas). Tani waxay muujinaysaa in aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) ay oksidaynta ka heshiinayso sulfur (S) oo helaya elektaroon.",
+    "title": "Graniyuulada zinc oo la gaashito sulfuric ah oo xooggan H₂SO₄ soo saara sulfur dioxide",
+    "description": "Markii graniyuulada zinc la geliyo aashito sulfuric ah oo xooggan H₂SO₄ oo la kululeeyay, waxa la soo saaraa sulfur dioxide oo ur xun leh, ee ma aha gaaska hydrogen. Tani waxay muujinaysaa in aashito sulfuric ah oo xooggan H₂SO₄ ay oksidaynta ka heshiinayso sulfur (S) oo helaya elektaroon.",
     "objectives": [
-      "Bar-bar dhig farqiga u dhexeeya gaaska ay graniyuulada zinc ka soo saarto aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) iyo ta la dhumicday",
-      "Faham in xoogga oksidaynta aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) uu ka yimaado S(+6)",
+      "Bar-bar dhig farqiga u dhexeeya gaaska ay graniyuulada zinc ka soo saarto aashito sulfuric ah oo xooggan H₂SO₄ iyo ta la dhumicday",
+      "Faham in xoogga oksidaynta aashito sulfuric ah oo xooggan H₂SO₄ uu ka yimaado S(+6)",
       "Baro sida loo nuugsado sulfur dioxide adoo isticmaalaya xal alkaline ah"
     ]
   },
   "zinc-dilute-sulfuric-hydrogen": {
-    "title": "Tijaabada meesha labaad: graniyuulada zinc oo la aashito sulfuric ah oo la dhumiciyay soo saarta gaaska hydrogen (hydrogen gas)",
-    "description": "Graniyuulada zinc markay la falceliso aashito sulfuric ah oo la dhumiciyay, waxay kaliya soo saartaa gaaska hydrogen (hydrogen gas) oo aan midab lahayn oo aan ur lahayn. Tijaabadani waxay si cad ula barbardhigaysaa kooxda aashito sulfuric ah oo xooggan (H₂SO₄ concentrated), taasoo iftiimaysa sida xoogga dhumicdu u beddesho dabeecadda asaasiga ah ee falcelinta.",
+    "title": "Tijaabada meesha labaad: graniyuulada zinc oo la aashito sulfuric ah oo la dhumiciyay soo saarta gaaska hydrogen",
+    "description": "Graniyuulada zinc markay la falceliso aashito sulfuric ah oo la dhumiciyay, waxay kaliya soo saartaa gaaska hydrogen oo aan midab lahayn oo aan ur lahayn. Tijaabadani waxay si cad ula barbardhigaysaa kooxda aashito sulfuric ah oo xooggan H₂SO₄, taasoo iftiimaysa sida xoogga dhumicdu u beddesho dabeecadda asaasiga ah ee falcelinta.",
     "objectives": [
-      "La socdo muuqaalka soo saarka gaaska hydrogen (hydrogen gas) marka aashito sulfuric ah oo la dhumiciyay la gaashito graniyuulada zinc",
-      "Ku tijuuri gaaska hydrogen (hydrogen gas) hab gubashada",
-      "Faham farqiga asaasiga ah u dhexeeya xoogga oksidaynta aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) iyo ta la dhumiciyay"
+      "La socdo muuqaalka soo saarka gaaska hydrogen marka aashito sulfuric ah oo la dhumiciyay la gaashito graniyuulada zinc",
+      "Ku tijuuri gaaska hydrogen hab gubashada",
+      "Faham farqiga asaasiga ah u dhexeeya xoogga oksidaynta aashito sulfuric ah oo xooggan H₂SO₄ iyo ta la dhumiciyay"
     ]
   },
   "zinc-concentrated-nitric-no2": {
@@ -3375,11 +3375,11 @@
     ]
   },
   "zinc-dilute-nitric-no": {
-    "title": "Graniyuulada zinc oo la aashitada naytareetka oo la wasakheeyay (dilute nitric acid) soo saarta NO oo aan midab lahayn",
-    "description": "Markii aashitada naytareetka oo la wasakheeyay (dilute nitric acid) la gaashito graniyuulada zinc, waxa la soo saaraa NO oo aan midab lahayn. Hase yeeshee, markuu NO ka baxo tuubo gaadhsiinta gaaska oo uu la kulmo hawada, wuu u beddelaa bunni-cas isla markiiba. Tani waa habka caadiga ah ee lagu garto NO.",
+    "title": "Graniyuulada zinc oo la aashitada naytareetka oo la wasakheeyay soo saarta NO oo aan midab lahayn",
+    "description": "Markii aashitada naytareetka oo la wasakheeyay la gaashito graniyuulada zinc, waxa la soo saaraa NO oo aan midab lahayn. Hase yeeshee, markuu NO ka baxo tuubo gaadhsiinta gaaska oo uu la kulmo hawada, wuu u beddelaa bunni-cas isla markiiba. Tani waa habka caadiga ah ee lagu garto NO.",
     "objectives": [
       "La socdo sida NO uu ugu beddelayo bunni-cas marka uu ka baxo dharka oo uu la kulmo hawada",
-      "Faham in natiijada yaryaynta aashitada naytareetka oo la wasakheeyay (dilute nitric acid) ay tahay NO",
+      "Faham in natiijada yaryaynta aashitada naytareetka oo la wasakheeyay ay tahay NO",
       "Baro sida biyaha looga ururiyo NO oo aan ku milmin biyo, iyadoo la isticmaalayo hab-qafaafida biyaha"
     ]
   },
@@ -3394,7 +3394,7 @@
   },
   "fe3-oxidize-sulfide-sulfur": {
     "title": "Ayoonaadka iron(III) wuxuu soo-saaraa salphuur",
-    "description": "Markii iron(III) chloride (FeCl₃) lagu dhufo xalka sodium sulfide (sodium sulfide, Na₂S), kuma samaysmo wax ir-ir ah oo iron sulfide ah, halkii waxaa soo baxa salphuur jaalle-caddaan ah, xalku na cagaar-fudud noqdaa, taas oo caddaynaysa in Fe³⁺ uu awood sare u leeyahay oksidayn marka loo eego S.",
+    "description": "Markii iron(III) chloride (FeCl₃) lagu dhufo xalka sodium sulfide Na₂S, kuma samaysmo wax ir-ir ah oo iron sulfide ah, halkii waxaa soo baxa salphuur jaalle-caddaan ah, xalku na cagaar-fudud noqdaa, taas oo caddaynaysa in Fe³⁺ uu awood sare u leeyahay oksidayn marka loo eego S.",
     "objectives": [
       "La socod soo-baxa salphuurka jaalle-caddaanka ah",
       "Fahami sababta oksidayn-kabarka uu u mudnaado ka hor ka beddelka laba-jibbaaran",
@@ -3403,16 +3403,16 @@
   },
   "hypochlorite-iodide-oxidation": {
     "title": "Bleach-ku wuxuu oksideeya ayoonaadka iodide",
-    "description": "Markii bleach-ka guriga lagu dhufo xalka potassium iodide (KI) iyo xabag (xoogaa), isla markiiba wuxuu u bedelaa buluug, taas oo muujinaysa in hypochlorite leedahay awood xooggan oo oksidayn ah, kaas oo ah aasaaska kiimikada nadiifinta iyo dilida jeermiska.",
+    "description": "Markii bleach-ka guriga lagu dhufo xalka potassium iodide (KI) iyo xabag, isla markiiba wuxuu u bedelaa buluug, taas oo muujinaysa in hypochlorite leedahay awood xooggan oo oksidayn ah, kaas oo ah aasaaska kiimikada nadiifinta iyo dilida jeermiska.",
     "objectives": [
-      "La socod beddelka buluugga xabag (xoogaa) oo ah calaamad soo-saarka iodine (I₂)",
+      "La socod beddelka buluugga xabag oo ah calaamad soo-saarka iodine (I₂)",
       "Fahami awood-oksidaynta hypochlorite",
       "Xidh mabda'ahan falcelinta maaddooyinka nadiifinta ee maalinlaha ah"
     ]
   },
   "iodine-thiosulfate-endpoint": {
     "title": "Dhamaadka titraadka sodium thiosulfate ee nidaamka iodometric",
-    "description": "Markii lagu tiriyo sodium thiosulfate (Na₂S₂O₃) xalka iodine (I₂) ee xabag (xoogaa) ku jirto, dhamaadka ayaa gaadhay marka midabka buluuggu baaba'o oo badh-daqiiqo gudihiis uusan soo noqon, taas oo ah hawl-gal caadi ah oo falanqaynta tiradeed.",
+    "description": "Markii lagu tiriyo sodium thiosulfate (Na₂S₂O₃) xalka iodine (I₂) ee xabag ku jirto, dhamaadka ayaa gaadhay marka midabka buluuggu baaba'o oo badh-daqiiqo gudihiis uusan soo noqon, taas oo ah hawl-gal caadi ah oo falanqaynta tiradeed.",
     "objectives": [
       "Qabso sida loo go'aamiyo dhamaadka nidaamka iodometric",
       "Fahami doorka sodium thiosulfate (Na₂S₂O₃) ee kabarka tiradeed",
@@ -3421,7 +3421,7 @@
   },
   "methane-oxygen-combustion": {
     "title": "Gubitaanka methane (CH₄) ee ogsijiin (O₂)",
-    "description": "Markii methane (CH₄) lagu shito ogsijiin (O₂), waxay saartaa olol buluug-fudud ah; koob kiimikaad oo qoyan oo qabow lagu hayo waxaa ku soo baxa dhibco biyo ah, xalka Biyo gaashaan ah (xalka kaalshiyam hаydrooksiiد) na wuu ceeryaamaa, taas oo caddaynaysa in soo-saarka ka kooban yahay kaarboon iyo haydroojiinka.",
+    "description": "Markii methane (CH₄) lagu shito ogsijiin (O₂), waxay saartaa olol buluug-fudud ah; koob kiimikaad oo qoyan oo qabow lagu hayo waxaa ku soo baxa dhibco biyo ah, xalka Biyo gaashaan ah na wuu ceeryaamaa, taas oo caddaynaysa in soo-saarka ka kooban yahay kaarboon iyo haydroojiinka.",
     "objectives": [
       "La socod olólka buluug-fudud ee gubitaanka methane (CH₄)",
       "U isticmaal laba-tallaabo ah si aad u xaqiijiso soo-saarka CO₂ iyo H₂O",
@@ -3448,10 +3448,10 @@
   },
   "zinc-oxygen-blue-green": {
     "title": "Gubitaanka budo zinc ee ogsijiin (O₂)",
-    "description": "Markii budo zinc lagu shito ogsijiin (O₂), waxay soo-saartaa iftiinka buluug-cagaaran, waxaana soo-baxa budo cad oo sinkyga oksiidka (zinc oxide) ah; sinkyga oksiidka (zinc oxide) caddaanku waa astaanta caadiga ah ee dhawrista qorraxda iyo rinjiyaynta.",
+    "description": "Markii budo zinc lagu shito ogsijiin (O₂), waxay soo-saartaa iftiinka buluug-cagaaran, waxaana soo-baxa budo cad oo sinkyga oksiidka ah; sinkyga oksiidka caddaanku waa astaanta caadiga ah ee dhawrista qorraxda iyo rinjiyaynta.",
     "objectives": [
       "La socod iftiinka buluug-cagaaran ee gubitaanka zinc",
-      "Aqoonsi muuqaalka iyo isticmaalka sinkyga oksiidka (zinc oxide)",
+      "Aqoonsi muuqaalka iyo isticmaalka sinkyga oksiidka",
       "Barbar dhig kala-duwanaanshiyaha midabka olólka macdanta kala duwan"
     ]
   },
@@ -3487,7 +3487,7 @@
     "description": "Marku sodium peroxide jaalle-fudud ah biyo lagu rido, si xoogan ayuu kuleyl u sii daayaa oo ogsijiin (O₂) wuxuu soo saara, xabo qori oo dhalaal leh ayaana mar labaad dab qaadata; haddaana phenolphthalein lagu daro, midabku wuxuu cas noqdaa ka dibna dib u caddaanaa, taasoo sharraxaysa mabda'a agabka keenta ogsijiin.",
     "objectives": [
       "La sooco dhacdooyinka u dhexeeya sodium peroxide iyo biyo markay ogsijiin sii daayaan",
-      "Kala sooc farqiga u dhexeeya falceliyaha sodium, soodiyamka oksiidka (sodium oxide), iyo sodium peroxide marka ogsijiin la samaynayo",
+      "Kala sooc farqiga u dhexeeya falceliyaha sodium, soodiyamka oksiidka, iyo sodium peroxide marka ogsijiin la samaynayo",
       "Fahmo sababta phenolphthalein uu marka hore cas noqdo ka dibna dib u caddaado"
     ]
   },
@@ -3505,7 +3505,7 @@
     "description": "Soodiyamka oksiidka (sodium oxide) marku biyo la midoobo si toos ah ayuu sodium hydroxide (NaOH) u samaystaa, kuleyl ayaa soo baxa laakiin ogsijiin (O₂) ma sii daayaan; tijaabadani waxay si cad ula barbardhigtaa sodium peroxide, iyagoo xoojinaya farqiga u dhexeeya valence-yada oksijiinta.",
     "objectives": [
       "La sooco midowga oksaydka aasaasiga ah iyo biyo",
-      "Barbardhig sida sodium peroxide ogsijiin (O₂) u sii daayo iyo sida soodiyamka oksiidka (sodium oxide) uusan gaas sii dayn",
+      "Barbardhig sida sodium peroxide ogsijiin (O₂) u sii daayo iyo sida soodiyamka oksiidka uusan gaas sii dayn",
       "Fahmo sida valence-ka oksijiinta u go'aamiso nooca falcelinta"
     ]
   },
@@ -3522,9 +3522,9 @@
     "title": "Sinkyga oksiidka (zinc oxide) oo laba-geesoodka ah oo labada dhinac ku dhalaala",
     "description": "Sinkyga oksiidka (zinc oxide) marku si gooni ah ugu daro aashito hydrochloric ah (HCl) iyo sodium hydroxide (NaOH) labadaba ayuu ku dhalaala, taasoo muujinaysa inuu la mid yahay Aluminiyam ooksiid marka loo eego dabeecadda laba-geesoodka ah, waxaana kaloo uu ahaa unugga firfircoon ee khudradda qoraxda ka difaaca.",
     "objectives": [
-      "Xaqiiji dabeecadda laba-geesoodka ah ee sinkyga oksiidka (zinc oxide)",
+      "Xaqiiji dabeecadda laba-geesoodka ah ee sinkyga oksiidka",
       "Barbardhig xiriirka zinc iyo aluminium ee jadwalka xulqiyaadka",
-      "Aqoonso isticmaalka maalintii ah ee sinkyga oksiidka (zinc oxide)"
+      "Aqoonso isticmaalka maalintii ah ee sinkyga oksiidka"
     ]
   },
   "thermite-iron-oxide-weld": {
@@ -3547,16 +3547,16 @@
   },
   "magnetite-acid-dissolve": {
     "title": "Birta oksiidka (iron(II,III) oxide / Fe₃O₄) oo ku Dhalaala Aashito Hydrochloric ah (HCl)",
-    "description": "Birta oksiidka (iron(II,III) oxide / Fe₃O₄) oo madow oo bir-jiidashada leh ayaa ku dhalaala aashito hydrochloric ah (HCl) si loo helo xal isku-dhafan oo ka kooban birta laba-valente iyo saddex-valente, kuwaasoo kala la garto adiga oo adeegsanaya Botaasiyam thayosayanayt iyo potassium hexacyanoferrate(III) (potassium ferricyanide).",
+    "description": "Birta oksiidka (iron(II,III) oxide / Fe₃O₄) oo madow oo bir-jiidashada leh ayaa ku dhalaala aashito hydrochloric ah (HCl) si loo helo xal isku-dhafan oo ka kooban birta laba-valente iyo saddex-valente, kuwaasoo kala la garto adiga oo adeegsanaya Botaasiyam thayosayanayt iyo potassium hexacyanoferrate(III).",
     "objectives": [
-      "La socoshada dhalaalaynta birta oksiidka (iron(II,III) oxide / Fe₃O₄) ee bir-jiidashada leh",
+      "La socoshada dhalaalaynta birta oksiidka Fe₃O₄ ee bir-jiidashada leh",
       "Fahamka sida Fe₃O₄ uu u leeyahay laba nooc oo valente ah oo bir ah",
       "Barasho tijaabada kala soocida birta laba-valente iyo saddex-valente"
     ]
   },
   "iron-hydroxide-acid-dissolve": {
     "title": "Birta(III) hiidrooksaydka (iron(III) hydroxide) oo ku Dhalaala Aashitada si Dib loogu Helo Biyo-milicda Birta",
-    "description": "Markaad ku dartid aashito sulfuric ah (H₂SO₄) xaddiga birta(III) hiidrooksaydka (iron(III) hydroxide) ee casaan-bunni ah, wuu dhalaалаа oo noqdaa xal bunni-huruud ah, taasoo muujinaysa in xaddida iyo milicda ay is-u-beddeli karaan, waxaana kani ka mid yahay wareegga birta.",
+    "description": "Markaad ku dartid aashito sulfuric ah (H₂SO₄) xaddiga birta(III) hiidrooksaydka ee casaan-bunni ah, wuu dhalaалаа oo noqdaa xal bunni-huruud ah, taasoo muujinaysa in xaddida iyo milicda ay is-u-beddeli karaan, waxaana kani ka mid yahay wareegga birta.",
     "objectives": [
       "La socoshada sida xaddidda casaan-bunni ahi u dhalaanto oo u noqoto bunni-huruud",
       "Fahamka is-u-beddelka xaddidda iyo milicda",
@@ -3568,16 +3568,16 @@
     "description": "Xaddidda Naxaas(II) hаydrooksiiد ee buluug ah ayaa si degdeg ah ugu dhalaalaaya aashito hydrochloric ah (HCl) oo noqota xal copper(II) chloride oo buluug-cagaar ah, isbeddelka qotodheerida buluugga ayaana tilmaamaya heerka horumarka falcelka.",
     "objectives": [
       "La socoshada dhalaalaynta xaddidda buluugga ah",
-      "Is-barbardhigga midabka ka soo baxa markaad dhalaaliso Naxaas(II) hаydrooksiiد marka la barbar dhigo birta(III) hiidrooksaydka (iron(III) hydroxide)",
+      "Is-barbardhigga midabka ka soo baxa markaad dhalaaliso Naxaas(II) hаydrooksiiد marka la barbar dhigo birta(III) hiidrooksaydka",
       "Barasho howlgalka dhalaalinta aashitada ee asaasyada aan la milmin"
     ]
   },
   "lead-silver-nitrate-tree": {
     "title": "«Geedka Lacagta» ee ka Dhasha Beddelka Rasaasta ee Lacagta",
-    "description": "Xaashi rasaas ah oo la dhigo xalka silver nitrate (AgNO₃) ayaa si tartiib tartiib ah uga baxaa kaabayaal jirooyin ah oo Lacag (silfar) ah oo muuqaalkoodu yahay geed, taasoo ah muuqaalka ugu quruxda badan ee falcelka beddelka.",
+    "description": "Xaashi rasaas ah oo la dhigo xalka silver nitrate (AgNO₃) ayaa si tartiib tartiib ah uga baxaa kaabayaal jirooyin ah oo Lacag ah oo muuqaalkoodu yahay geed, taasoo ah muuqaalka ugu quruxda badan ee falcelka beddelka.",
     "objectives": [
       "La socoshada koritaanka kaabayaasha geedka ee Lacagta (silfar)",
-      "Xaqiijinta in rasaasta (lead) ka firfircoon tahay Lacagta (silfar)",
+      "Xaqiijinta in rasaasta ka firfircoon tahay Lacagta (silfar)",
       "Fahamka sida kaabayaashu u kori jireen goobahaas xumaaday oo ah meesha ugu horraysa"
     ]
   },
@@ -3592,7 +3592,7 @@
   },
   "iron-silver-nitrate-displacement": {
     "title": "Birtu (Fe) u Beddeshaa Lacagta ee silver nitrate (AgNO₃)",
-    "description": "Xadhig birta (Fe) oo nadiif ah oo la geliyey xalka silver nitrate (AgNO₃) ayaa dusha sare ka soo baxa lakab Lacag (silfar) ah oo cad, xalkuna si tartiib tartiib ah ayuu u noqdaa cagaar-cad, taasoo muujinaysa in birtu (Fe) la oxideeyo oo noqoto aayonaadka laba-valente ee birta.",
+    "description": "Xadhig birta (Fe) oo nadiif ah oo la geliyey xalka silver nitrate (AgNO₃) ayaa dusha sare ka soo baxa lakab Lacag ah oo cad, xalkuna si tartiib tartiib ah ayuu u noqdaa cagaar-cad, taasoo muujinaysa in birtu (Fe) la oxideeyo oo noqoto aayonaadka laba-valente ee birta.",
     "objectives": [
       "La socoshada soo-bixitaanka Lacagta (silfar) iyo xalka oo noqonaya cagaar-cad",
       "Fahamka sida birtu (Fe) ay beddelka ku soo saarto aayonaadka laba-valente ee birta ee aan ahayn birta(III)",
@@ -3609,35 +3609,35 @@
     ]
   },
   "silver-chloride-ammonia-dissolve": {
-    "title": "Lacagta kloriidhka (silver chloride) ee ku milma xal ammoniya ah (NH₃ biyood)",
-    "description": "Markii xal ammoniya ah (NH₃ biyood) xad dhaaf ah lagu daro cabbirada cad ee lacagta kloriidhka (silver chloride), waxay si buuxda ugu milmaysaa xal daahir ah. Dheellitirka koordineeshanka ayaa silver ion-ka ka dhulmaya xaaladda adag.",
+    "title": "Lacagta kloriidhka (silver chloride) ee ku milma xal ammoniya ah NH₃",
+    "description": "Markii xal ammoniya ah NH₃ xad dhaaf ah lagu daro cabbirada cad ee lacagta kloriidhka, waxay si buuxda ugu milmaysaa xal daahir ah. Dheellitirka koordineeshanka ayaa silver ion-ka ka dhulmaya xaaladda adag.",
     "objectives": [
-      "La socod sida cabiradu cad u milmayso xal ammoniya ah (NH₃ biyood)",
+      "La socod sida cabiradu cad u milmayso xal ammoniya ah NH₃",
       "Fahm sida dheellitirka koordineeshanka u saarayso dheellitirka milmidda",
       "Baro shuruudaha lagu abuuro silver-ammoniya complex ion-ka"
     ]
   },
   "silver-bromide-ammonia-resist": {
-    "title": "Silver bromide (AgBr) oo aan ku milmin xal ammoniya ah (NH₃ biyood)",
-    "description": "Silver bromide (AgBr) ee midabkiisu huruud-cad yahay, xataa marka xal ammoniya ah (NH₃ biyood) xad dhaaf ah lagu daro, weli ma milmo. Tani waxay si adag uga duwan tahay lacagta kloriidhka (silver chloride), waxayna muujinaysaa in Ksp-ka yar yahay, milmidda ku adag tahay xataa koordineeshanka.",
+    "title": "Silver bromide (AgBr) oo aan ku milmin xal ammoniya ah NH₃",
+    "description": "Silver bromide (AgBr) ee midabkiisu huruud-cad yahay, xataa marka xal ammoniya ah NH₃ xad dhaaf ah lagu daro, weli ma milmo. Tani waxay si adag uga duwan tahay lacagta kloriidhka, waxayna muujinaysaa in Ksp-ka yar yahay, milmidda ku adag tahay xataa koordineeshanka.",
     "objectives": [
-      "Barbar dhig farqiga u dhexeeya lacagta kloriidhka (silver chloride) iyo silver bromide (AgBr) marka xal ammoniya ah (NH₃ biyood) la isticmaalo",
+      "Barbar dhig farqiga u dhexeeya lacagta kloriidhka iyo silver bromide (AgBr) marka xal ammoniya ah NH₃ la isticmaalo",
       "Fahm tartanka u dhexeeya Ksp iyo joogteynta dheellitirka koordineeshanka",
       "Baro xeerka hoos u dhaca milmidda ee halide-yada silver"
     ]
   },
   "silver-iodide-ammonia-resist": {
     "title": "Milmid la'aanta aadka u xoogga badan ee Silfar(I) aayodiiد",
-    "description": "Silfar(I) aayodiiد ee midabkiisu huruud yahay, xal ammoniya ah (NH₃ biyood) xad dhaaf ah laguma milmiyo, waxayna leedahay Ksp-ka ugu yar halide-yada silver dhammaan. Silfar(I) aayodiiد waxaa loo isticmaalaa da'da roobka macmal ah.",
+    "description": "Silfar(I) aayodiiد ee midabkiisu huruud yahay, xal ammoniya ah NH₃ xad dhaaf ah laguma milmiyo, waxayna leedahay Ksp-ka ugu yar halide-yada silver dhammaan. Silfar(I) aayodiiد waxaa loo isticmaalaa da'da roobka macmal ah.",
     "objectives": [
-      "Xaqiiji in Silfar(I) aayodiiد aan ku milmin xal ammoniya ah (NH₃ biyood)",
+      "Xaqiiji in Silfar(I) aayodiiد aan ku milmin xal ammoniya ah NH₃",
       "Kala sooc heerarka milmidda ee saddexda halide oo silver ah",
       "Ogow isticmaalka Silfar(I) aayodiiد ee da'da roobka macmal ah"
     ]
   },
   "silver-bromide-thiosulfate-fixing": {
     "title": "Milmidda silver bromide (AgBr) ee xalka hagaajinta (fixer)",
-    "description": "Silver bromide (AgBr) oo xal ammoniya ah (NH₃ biyood) ku adkaysatay, waxay ku milmaysaa xal midab la'aanta ah marka sodium thiosulfate (Na₂S₂O₃) la isticmaalo. Tani ayaa ah aasaaska kiimikada ee hagaajinta sawirrada madow-cad.",
+    "description": "Silver bromide (AgBr) oo xal ammoniya ah NH₃ ku adkaysatay, waxay ku milmaysaa xal midab la'aanta ah marka sodium thiosulfate (Na₂S₂O₃) la isticmaalo. Tani ayaa ah aasaaska kiimikada ee hagaajinta sawirrada madow-cad.",
     "objectives": [
       "La socod milmidda silver bromide (AgBr) ee ku dhacda xalka hagaajinta",
       "Barbar dhig awoodda koordineeshanka ee ammoniya iyo thiosulfate ion",
@@ -3654,35 +3654,35 @@
     ]
   },
   "silver-carbonate-ammonia-dissolve": {
-    "title": "Lacagta kaarbooneetka (silver carbonate) oo ku milma xal ammoniya ah (NH₃ biyood)",
-    "description": "Lacagta kaarbooneetka (silver carbonate) ee midabkiisu huruud-cad yahay waxay ku milmaysaa xal daahir midab la'aanta ah marka xal ammoniya ah (NH₃ biyood) la isticmaalo, taas oo ah hab milmid oo badanaa la iska indhatiraa marka silver-ammoniya xalka la diyaarinayo.",
+    "title": "Lacagta kaarbooneetka (silver carbonate) oo ku milma xal ammoniya ah NH₃",
+    "description": "Lacagta kaarbooneetka (silver carbonate) ee midabkiisu huruud-cad yahay waxay ku milmaysaa xal daahir midab la'aanta ah marka xal ammoniya ah NH₃ la isticmaalo, taas oo ah hab milmid oo badanaa la iska indhatiraa marka silver-ammoniya xalka la diyaarinayo.",
     "objectives": [
-      "La socod milmidda koordineeshanka ee lacagta kaarbooneetka (silver carbonate)",
+      "La socod milmidda koordineeshanka ee lacagta kaarbooneetka",
       "Barbar dhig sahalaanta milmiddiisa iyo ta halide-yada silver",
       "Baro hababka kala duwan ee diyaarinta xalka silver-ammoniya"
     ]
   },
   "copper-hydroxide-ammonia-deep-blue": {
-    "title": "Naxaas(II) hаydrooksiiد oo ku milma xal ammoniya ah (NH₃ biyood) xad dhaafka ah",
-    "description": "Cabirka buluugga ah ee Naxaas(II) hаydrooksiiد waxay ku milmaysaa xal daahir oo buluug-madow ah marka xal ammoniya ah (NH₃ biyood) xad dhaaf ah lagu daro. Isbedelka midabka ee buluug-fudud ilaa buluug-madow waa calaamadda ugu cad ee koordineeshanka.",
+    "title": "Naxaas(II) hаydrooksiiد oo ku milma xal ammoniya ah NH₃ xad dhaafka ah",
+    "description": "Cabirka buluugga ah ee Naxaas(II) hаydrooksiiد waxay ku milmaysaa xal daahir oo buluug-madow ah marka xal ammoniya ah NH₃ xad dhaaf ah lagu daro. Isbedelka midabka ee buluug-fudud ilaa buluug-madow waa calaamadda ugu cad ee koordineeshanka.",
     "objectives": [
       "La socod sida cabiradu u milmayso oo xalku u noqdo buluug-madow",
       "Fahm sida tetra-ammine copper(II) complex ion loo abuuro",
-      "Baro natiijooyinka kala duwan ee xal ammoniya ah (NH₃ biyood) yar iyo xad dhaafka ah"
+      "Baro natiijooyinka kala duwan ee xal ammoniya ah NH₃ yar iyo xad dhaafka ah"
     ]
   },
   "zinc-hydroxide-ammonia-dissolve": {
-    "title": "Sinkyga hiidrooksaydka (zinc hydroxide) oo ku dhalaalaaya xal ammoniya ah (NH₃ biyood)",
-    "description": "Sinkyga hiidrooksaydka (zinc hydroxide) midabkiisu caddaan yahay waxaana lagu milmi karaa labadaba aashito xooggan iyo xal ammoniya ah (NH₃ biyood); kan hore wuxuu ku dhacaa dabeecadda laba-geesoodka (amphoteric), kan dambe wuxuu ku dhacaa xiriirka koordineeshanka, labaduba waxay geeyaan isla natiijada.",
+    "title": "Sinkyga hiidrooksaydka (zinc hydroxide) oo ku dhalaalaaya xal ammoniya ah NH₃",
+    "description": "Sinkyga hiidrooksaydka (zinc hydroxide) midabkiisu caddaan yahay waxaana lagu milmi karaa labadaba aashito xooggan iyo xal ammoniya ah NH₃; kan hore wuxuu ku dhacaa dabeecadda laba-geesoodka (amphoteric), kan dambe wuxuu ku dhacaa xiriirka koordineeshanka, labaduba waxay geeyaan isla natiijada.",
     "objectives": [
-      "La eego sida raasibka caddaanka ah ugu dhalaalaayo xal ammoniya ah (NH₃ biyood)",
+      "La eego sida raasibka caddaanka ah ugu dhalaalaayo xal ammoniya ah NH₃",
       "Lagu kala sooco milmidda amphoteric iyo milmidda koordineeshanka",
       "Loo fahmo sida [Zn(NH₃)₄]²⁺ — ion-ka koordineeshanka afar-ammoniya leh — u samaysmo"
     ]
   },
   "nickel-hydroxide-ammonia-violet": {
-    "title": "Niikelka hiidrooksaydka (nickel(II) hydroxide) oo ku dhalaalaaya xal ammoniya ah (NH₃ biyood) una noqonaya buluug-guduud",
-    "description": "Niikelka hiidrooksaydka (nickel(II) hydroxide) ee midabkiisu cagaar yahay wuxuu ku dhalaalaayaa xal ammoniya ah (NH₃ biyood) oo xad-dhaafsan, wuxuuna sameeyaa xal buluug-guduud ah; midabka [Ni(NH₃)₆]²⁺ waa mid aad uga duwan raasibkii asalka ahaa.",
+    "title": "Niikelka hiidrooksaydka (nickel(II) hydroxide) oo ku dhalaalaaya xal ammoniya ah NH₃ una noqonaya buluug-guduud",
+    "description": "Niikelka hiidrooksaydka (nickel(II) hydroxide) ee midabkiisu cagaar yahay wuxuu ku dhalaalaayaa xal ammoniya ah NH₃ oo xad-dhaafsan, wuxuuna sameeyaa xal buluug-guduud ah; midabka [Ni(NH₃)₆]²⁺ waa mid aad uga duwan raasibkii asalka ahaa.",
     "objectives": [
       "La eego sida raasibka cagaarka ah ugu beddelo xal buluug-guduud ah",
       "Loo garanno ion-ka niikel-ammoniya leh ee leh lix meel koordineeshanka ah",
@@ -3717,8 +3717,8 @@
     ]
   },
   "lead-edta-masking": {
-    "title": "EDTA (ethylenediaminetetraacetic acid) oo masking ka samaysa ion-ka rasaasta (lead)",
-    "description": "Markii EDTA (ethylenediaminetetraacetic acid) lagu daro xalka lead(II) nitrate, rasaasta (lead) ayaa si adag ugu xidnaanaysa chelation-ka, markii xigana haddii sodium sulfide (sodium sulfide, Na₂S) lagu daro raasib madow ma samayn doono — taasoo ah nidaamka caadiga ah ee masking-ga ion-yada kaga filan.",
+    "title": "EDTA (ethylenediaminetetraacetic acid) oo masking ka samaysa ion-ka rasaasta",
+    "description": "Markii EDTA (ethylenediaminetetraacetic acid) lagu daro xalka lead(II) nitrate, rasaasta ayaa si adag ugu xidnaanaysa chelation-ka, markii xigana haddii sodium sulfide Na₂S lagu daro raasib madow ma samayn doono — taasoo ah nidaamka caadiga ah ee masking-ga ion-yada kaga filan.",
     "objectives": [
       "Loo fahmo habka shaqada ee masking agent",
       "Lagu barbardhigo farqiga u dhexeeya xaaladda EDTA (ethylenediaminetetraacetic acid) leh iyo ta aan lahayn marka jira raasib",
@@ -3763,7 +3763,7 @@
   },
   "copper-chloride-ammonia-blue": {
     "title": "Isku-xidka Xal Ammoniya ah (NH₃ biyood) iyo Copper(II) Chloride oo Buluug Qoto Dheer",
-    "description": "Xalka copper(II) chloride ee buluug-cagaarku markuu helaa xal ammoniya ah (NH₃ biyood) oo xad dhaaf ah ayuu u beddela buluug qoto dheer, taasoo muujinaysa sida ion-ka naxaas (Cu) kali ah uu ugu muuqdo laba midab oo kala duwan marka uu la xidmo khloorayda iyo ammoniyada.",
+    "description": "Xalka copper(II) chloride ee buluug-cagaarku markuu helaa xal ammoniya ah NH₃ oo xad dhaaf ah ayuu u beddela buluug qoto dheer, taasoo muujinaysa sida ion-ka naxaas (Cu) kali ah uu ugu muuqdo laba midab oo kala duwan marka uu la xidmo khloorayda iyo ammoniyada.",
     "objectives": [
       "La soco isbedelka buluug-cagaar ilaa buluug qoto dheer",
       "Barbar dhig midabka isku-xidka khloorayda iyo ta ammoniyada",
@@ -3771,8 +3771,8 @@
     ]
   },
   "copper-nitrate-ammonia-blue": {
-    "title": "Isku-xidka Xal Ammoniya ah (NH₃ biyood) iyo copper(II) nitrate (Cu(NO₃)₂)",
-    "description": "Xalka copper(II) nitrate (Cu(NO₃)₂) markuu helaa xal ammoniya ah (NH₃ biyood) oo xad dhaaf ah ayuu sidoo kale u beddela buluug qoto dheer, taasoo caddaynaysa in isku-xidka uu ku xidna ion-ka bartamaha iyo ligand-ka oo kaliya, halka ion-ka anion-ku uusan door muhiim ah ka qaadan.",
+    "title": "Isku-xidka Xal Ammoniya ah (NH₃ biyood) iyo copper(II) nitrate Cu(NO₃)₂",
+    "description": "Xalka copper(II) nitrate Cu(NO₃)₂ markuu helaa xal ammoniya ah NH₃ oo xad dhaaf ah ayuu sidoo kale u beddela buluug qoto dheer, taasoo caddaynaysa in isku-xidka uu ku xidna ion-ka bartamaha iyo ligand-ka oo kaliya, halka ion-ka anion-ku uusan door muhiim ah ka qaadan.",
     "objectives": [
       "Xaqiiji in anion-ku uusan saamayn midabka isku-xidka",
       "Adag samayska tetraamminecopper oo aad u fiirso shuruudaheeda",
@@ -3816,10 +3816,10 @@
     ]
   },
   "acetylene-bromine-addition": {
-    "title": "Kulminta acetylene (C₂H₂) iyo xal bromine ah (Br₂ biyood)",
-    "description": "Marka acetylene (C₂H₂) la geliyo xal bromine ah (Br₂ biyood), midabka oranji-jaallaha ah si deg-deg ah ayuu u baaba'aa oo aan gaas la sii dayn, sababo oo ah in xididdada saddexaad labojibbaar si joogto ah loo furo, taasoo kulminta acetylene (C₂H₂) ka dhigaysa laba jeer tan ethylene (C₂H₄).",
+    "title": "Kulminta acetylene (C₂H₂) iyo xal bromine ah Br₂",
+    "description": "Marka acetylene (C₂H₂) la geliyo xal bromine ah Br₂, midabka oranji-jaallaha ah si deg-deg ah ayuu u baaba'aa oo aan gaas la sii dayn, sababo oo ah in xididdada saddexaad labojibbaar si joogto ah loo furo, taasoo kulminta acetylene (C₂H₂) ka dhigaysa laba jeer tan ethylene (C₂H₄).",
     "objectives": [
-      "La socodsii baaba'ida xal bromine ah (Br₂ biyood) iyadoon gaas la sii dayn",
+      "La socodsii baaba'ida xal bromine ah Br₂ iyadoon gaas la sii dayn",
       "Is-barbar dhig awoodda kulminta xididdada saddexaad iyo tan laba-laabka",
       "Fahmi sida loo kala saaro kulminta iyo beddelashada"
     ]
@@ -3834,26 +3834,26 @@
     ]
   },
   "styrene-bromine-addition": {
-    "title": "Kulminta xididdada laba-laabka ee dhinaca styrene (C₆H₅CH=CH₂)",
-    "description": "Marka styrene (C₆H₅CH=CH₂) la soo dhibaaqo xal bromine ah (Br₂ biyood), midabku wuu baaba'aa; falcelinta waxay ka dhacday xididdada laba-laabka ee dhinaca, ee kuma dhicin giraanta benzene (C₆H₆), sidaas darteedna uma baahna katalaysar.",
+    "title": "Kulminta xididdada laba-laabka ee dhinaca styrene",
+    "description": "Marka styrene la soo dhibaaqo xal bromine ah Br₂, midabku wuu baaba'aa; falcelinta waxay ka dhacday xididdada laba-laabka ee dhinaca, ee kuma dhicin giraanta benzene (C₆H₆), sidaas darteedna uma baahna katalaysar.",
     "objectives": [
       "Xaqiiji in kulminta ka dhacday dhinaca ee kuma dhicin giraanta benzene (C₆H₆)",
-      "Is-barbar dhig farqiga u dhexeeya benzene (C₆H₆) iyo styrene (C₆H₅CH=CH₂) marka ay la kulmaan xal bromine ah (Br₂ biyood)",
+      "Is-barbar dhig farqiga u dhexeeya benzene (C₆H₆) iyo styrene marka ay la kulmaan xal bromine ah Br₂",
       "Fahmi firfircoowga xididdada laba-laabka ee nidaamka conjugated"
     ]
   },
   "ethylene-glycol-sodium-hydrogen": {
-    "title": "iithayleenka glaykoolka (ethylene glycol) iyo sodium si loo cabbiyo tirada hydroxyl-yada",
-    "description": "Marka iithayleenka glaykoolka (ethylene glycol) la falceliyo sodium, gaaska hydrogen (hydrogen gas) la soo saaro waa laba jeer kan alcohol khamaasiga ah ee xajmi siman, taasoo suurtogal ka dhigaysa in tirada hydroxyl-yada molekiulka laga garto tirada gaaska la soo saaray.",
+    "title": "iithayleenka glaykoolka iyo sodium si loo cabbiyo tirada hydroxyl-yada",
+    "description": "Marka iithayleenka glaykoolka la falceliyo sodium, gaaska hydrogen la soo saaro waa laba jeer kan alcohol khamaasiga ah ee xajmi siman, taasoo suurtogal ka dhigaysa in tirada hydroxyl-yada molekiulka laga garto tirada gaaska la soo saaray.",
     "objectives": [
       "U isticmaal tirada gaaska la soo saaray si aad u go'aamiso tirada hydroxyl-yada",
-      "Is-barbar dhig farqiga soo-saarka gaaska hydrogen (hydrogen gas) u dhexeeya alcohol khamaasiga ah iyo laba-hydroxyl ka ah",
-      "Ku xirfadeyso habka ururinta gaaska hydrogen (hydrogen gas) si tijaabo ah"
+      "Is-barbar dhig farqiga soo-saarka gaaska hydrogen u dhexeeya alcohol khamaasiga ah iyo laba-hydroxyl ka ah",
+      "Ku xirfadeyso habka ururinta gaaska hydrogen si tijaabo ah"
     ]
   },
   "glycerol-sodium-three-hydroxyl": {
     "title": "glycerol (C₃H₈O₃) iyo sodium: soo-saarka gaaska saddex-hydroxyl",
-    "description": "glycerol (C₃H₈O₃) waxaa ku jira saddex hydroxyl, marka la falceliyo sodium gaaska hydrogen (hydrogen gas) ee la soo saaro waa saddex jeer kan alcohol khamaasiga ah; xabagaha ayaa si joogto ah uga soo baxa dusha filimaha sodium laakiin si xooggan uma kacaan.",
+    "description": "glycerol (C₃H₈O₃) waxaa ku jira saddex hydroxyl, marka la falceliyo sodium gaaska hydrogen ee la soo saaro waa saddex jeer kan alcohol khamaasiga ah; xabagaha ayaa si joogto ah uga soo baxa dusha filimaha sodium laakiin si xooggan uma kacaan.",
     "objectives": [
       "Xaqiiji tirada gaaska la saadaaliyay ee alcohol saddex-hydroxyl ka ah",
       "Is-barbar dhig firfircoowga hydroxyl iyo tan biyaha",
@@ -3861,8 +3861,8 @@
     ]
   },
   "propanol-sodium-hydrogen": {
-    "title": "Probaanol iyo beddelashada sodium ee keenta gaaska hydrogen (hydrogen gas)",
-    "description": "Probaanol wuxuu si tartiib ah ula falceliyaa sodium isagoo soo saari gaaska hydrogen (hydrogen gas); silsilada carboonka oo dheer waxay yaraysaa firfircoowga hydroxyl, taasoo xabagaha ka dhigaysa mid ka tartiib baxaya nidaamyada alcohol silsilad gaaban.",
+    "title": "Probaanol iyo beddelashada sodium ee keenta gaaska hydrogen",
+    "description": "Probaanol wuxuu si tartiib ah ula falceliyaa sodium isagoo soo saari gaaska hydrogen; silsilada carboonka oo dheer waxay yaraysaa firfircoowga hydroxyl, taasoo xabagaha ka dhigaysa mid ka tartiib baxaya nidaamyada alcohol silsilad gaaban.",
     "objectives": [
       "La socodsii sida xawaaraha soo-saarka gaaska u gaabinayo marka silsilada carboonka ay dheeraaday",
       "Fahmi saamaynta kooxda hydrocarbon ee ku tiirsanaanta firfircoowga hydroxyl",
@@ -3870,8 +3870,8 @@
     ]
   },
   "aniline-bromine-white-precipitate": {
-    "title": "aniline (C₆H₅NH₂) iyo xal bromine ah (Br₂ biyood): beddelashada saddex-meelood",
-    "description": "Marka aniline (C₆H₅NH₂) la soo dhibaaqo xal bromine ah (Br₂ biyood), midabku si dhakhso ah ayuu u baaba'aa oo dallaco cad oo tribromoaniline ah ayaa ka dhacda, adoon katalaysar loo baahnayn; tani waxay muujinaysaa in kooxda amine ay giraanta benzene (C₆H₆) ka awood badan tahay hydroxyl firfircoowga dhanka.",
+    "title": "aniline (C₆H₅NH₂) iyo xal bromine ah Br₂: beddelashada saddex-meelood",
+    "description": "Marka aniline (C₆H₅NH₂) la soo dhibaaqo xal bromine ah Br₂, midabku si dhakhso ah ayuu u baaba'aa oo dallaco cad oo tribromoaniline ah ayaa ka dhacda, adoon katalaysar loo baahnayn; tani waxay muujinaysaa in kooxda amine ay giraanta benzene (C₆H₆) ka awood badan tahay hydroxyl firfircoowga dhanka.",
     "objectives": [
       "La socodsii soo-saarka dallacada cad ee beddelashada saddex-meelood ee heerkulka qolka",
       "Is-barbar dhig awoodda firfircoowga u dhexeysa kooxda amine iyo hydroxyl",
@@ -3880,7 +3880,7 @@
   },
   "benzaldehyde-silver-mirror": {
     "title": "falcelinta muraayadda lacagta ee benzaldehyde (C₆H₅CHO)",
-    "description": "Marka benzaldehyde (C₆H₅CHO) la kululeeyo xal ammoniya ah (NH₃ biyood) oo silver nitrate (AgNO₃) ku jiro adoo isticmaalaya hammaan biyo, darbiyada tuubada ayaa ka muuqanayaan lakab Lacag (silfar) oo dhalaalaya, taasoo xaqiijinaysa in kooxda aldehyde ee aromatic-ka ay sidoo kale leedahay dareen-rogashada. Xal ammoniya ah (NH₃ biyood) waxaa laga sameeyaa silver nitrate (AgNO₃) iyo xal ammoniya ah (NH₃ biyood).",
+    "description": "Marka benzaldehyde (C₆H₅CHO) la kululeeyo xal ammoniya ah NH₃ oo silver nitrate (AgNO₃) ku jiro adoo isticmaalaya hammaan biyo, darbiyada tuubada ayaa ka muuqanayaan lakab Lacag oo dhalaalaya, taasoo xaqiijinaysa in kooxda aldehyde ee aromatic-ka ay sidoo kale leedahay dareen-rogashada. Xal ammoniya ah (NH₃ biyood) waxaa laga sameeyaa silver nitrate (AgNO₃) iyo xal ammoniya ah NH₃.",
     "objectives": [
       "Ku xirfadeyso tallaabooyinka hawleedka ee falcelinta muraayadda lacagta",
       "Xaqiiji dareen-rogashada aldehyde aromatic ah",
@@ -3889,7 +3889,7 @@
   },
   "benzoic-acid-ethyl-ester": {
     "title": "Dhisidda Ethyl Benzoate",
-    "description": "benzoic acid (C₆H₅COOH) iyo ethanol (C₂H₅OH) ayaa falceliya aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) oo u shaqeysa katalayste si loo sameeyo ethyl benzoate oo udgoon udgoon miraha, walaxdana kuma milmayso biyo ee ayay sarreysa dareere.",
+    "description": "benzoic acid (C₆H₅COOH) iyo ethanol (C₂H₅OH) ayaa falceliya aashito sulfuric ah oo xooggan H₂SO₄ oo u shaqeysa katalayste si loo sameeyo ethyl benzoate oo udgoon udgoon miraha, walaxdana kuma milmayso biyo ee ayay sarreysa dareere.",
     "objectives": [
       "Ku bartid xaaladaha esterification-ka aashidaha aromatic ah",
       "Fahamid doorka qalabka dib-u-celinta (reflux)",
@@ -3916,7 +3916,7 @@
   },
   "acetic-acid-butyl-ester": {
     "title": "Dhisidda Butyl Acetate",
-    "description": "aashito acetic ah (CH₃COOH) iyo n-butanoolka (n-butanol) ayaa falceliya si loo sameeyo butyl acetate oo ah xaliye rinjiyeed oo caadi ah; boiling point-kiisu sarreeyaa waana in dib-u-celinta waqti dheer la sameeyaa.",
+    "description": "aashito acetic ah (CH₃COOH) iyo n-butanoolka ayaa falceliya si loo sameeyo butyl acetate oo ah xaliye rinjiyeed oo caadi ah; boiling point-kiisu sarreeyaa waana in dib-u-celinta waqti dheer la sameeyaa.",
     "objectives": [
       "Ku bartid sida loo sameeyo ester boiling point sarreeya adoo isticmaalaya reflux",
       "Fahamid xiriirka u dhexeeya boiling point iyo dhererka silsilada carbon-ka",
@@ -3925,7 +3925,7 @@
   },
   "sucrose-acid-hydrolysis": {
     "title": "Hydrolysis-ka Aashidka Sukroos",
-    "description": "Sukroos ayaa aashito sulfuric ah oo khafiif ah (H₂SO₄) oo u shaqeysa katalayste kula kululaynta hammaan biyo ku milma monosakariidhyo; dareeraha ayaa kasbada awood reduce ah oo lagu xaqiijin karo tijaabada Lacag (silfar).",
+    "description": "Sukroos ayaa aashito sulfuric ah oo khafiif ah (H₂SO₄) oo u shaqeysa katalayste kula kululaynta hammaan biyo ku milma monosakariidhyo; dareeraha ayaa kasbada awood reduce ah oo lagu xaqiijin karo tijaabada Lacag.",
     "objectives": [
       "Aqoonsiga hydrolysis-ka disaccharides",
       "Fahamid doorka katalayste-ka aashidka ah ee hydrolysis-ka",
@@ -3934,9 +3934,9 @@
   },
   "cellulose-acid-hydrolysis": {
     "title": "Hydrolysis-ka Aashidka Saylulooska",
-    "description": "Suufka shaydha laga saaro ayaa aashito sulfuric ah oo xooggan (H₂SO₄ concentrated) kula kululaynta muddo dheer si tartiib tartiib ah ugu milma Glukoos; tan ka adag hydrolysis-ka polysaccharides-ka caadiga ah, waxayna tahay dariiqa aasaasiga ah ee sukarrada laga sameeyo maadooyinka noolaha.",
+    "description": "Suufka shaydha laga saaro ayaa aashito sulfuric ah oo xooggan H₂SO₄ kula kululaynta muddo dheer si tartiib tartiib ah ugu milma Glukoos; tan ka adag hydrolysis-ka polysaccharides-ka caadiga ah, waxayna tahay dariiqa aasaasiga ah ee sukarrada laga sameeyo maadooyinka noolaha.",
     "objectives": [
-      "Barbar dhig adagtida hydrolysis-ka saylulooska (cellulose) iyo xabag (xoogaa)",
+      "Barbar dhig adagtida hydrolysis-ka saylulooska iyo xabag",
       "Fahamid sida qaab-dhismeedka crystalline-ka u carqaladeynayo hydrolysis-ka",
       "Aqoonsiga muhiimadda warshadeed ee sukarrada laga sameeyo maadooyinka noolaha"
     ]
@@ -3988,7 +3988,7 @@
   },
   "sodium-nitrate-dissolution-endotherm": {
     "title": "Soodiyamka naytareetka (sodium nitrate) ka dhalata qaboojinta marka la dhalaaliyo",
-    "description": "Marka soodiyamka naytareetka (sodium nitrate) biyo lagu darayo, heerkulku hoos ayuu u dhacaa. Tan oo la mid ah potassium nitrate (KNO₃) oo ah cusbada nitrate-ka, labaduba waxay muujinayaan in energy-da shabakadda crystalline-ka ee cusbada nitrate-ku guud ahaan ka sarayso energy-da hidration-ka.",
+    "description": "Marka soodiyamka naytareetka biyo lagu darayo, heerkulku hoos ayuu u dhacaa. Tan oo la mid ah potassium nitrate (KNO₃) oo ah cusbada nitrate-ka, labaduba waxay muujinayaan in energy-da shabakadda crystalline-ka ee cusbada nitrate-ku guud ahaan ka sarayso energy-da hidration-ka.",
     "objectives": [
       "Cabbirka qaboojinta ka dhalata dhalaalinta cusbada nitrate-ka",
       "Koobaynta saameynta anion-ka enthalpy of dissolution",
@@ -4105,7 +4105,7 @@
   },
   "magnesium-hydrochloric-calorimetry": {
     "title": "Qiyaasta kulaylka falcelinta xarig maqniisiyam ah iyo aashito hydrochloric ah (HCl)",
-    "description": "Marka xarig maqniisiyam ah la dhigo aashito hydrochloric ah (HCl), gaaska hydrogen (hydrogen gas) ayaa si xoog leh u soo baxa hana kulaylku si dhakhso ah u koro; biyihii kulaylka ilaalisa ayaa loo isticmaalaa in lagu ururiyo xogta koritaanka kulaylka si loo xisaabiyo kulaylka falcelinta ee unugga walxaha.",
+    "description": "Marka xarig maqniisiyam ah la dhigo aashito hydrochloric ah (HCl), gaaska hydrogen ayaa si xoog leh u soo baxa hana kulaylku si dhakhso ah u koro; biyihii kulaylka ilaalisa ayaa loo isticmaalaa in lagu ururiyo xogta koritaanka kulaylka si loo xisaabiyo kulaylka falcelinta ee unugga walxaha.",
     "objectives": [
       "Qiyaasta kulaylka soo baxa ee falcelinta bir-macdanta iyo aashitada",
       "U baddalida kulaylka falcelinta unugga walxaha",
@@ -4132,7 +4132,7 @@
   },
   "nickel-hydroxide-green-identification": {
     "title": "Aqoonsiga ion niikelka adoo ku tiirsanaya radka cagaaran ee weecidda",
-    "description": "Marka sodium hydroxide (NaOH) la soo dhejiyo xalka Niikel sulfeet, waxaa soo baxa weecid cagaar-tufaax ah oo ah niikelka hiidrooksaydka (nickel(II) hydroxide); astaamaha midabka ayaa si cad u muuqda, taasoo u sahleysa aqoonsiga tooska ah ee ion niikelka.",
+    "description": "Marka sodium hydroxide (NaOH) la soo dhejiyo xalka Niikel sulfeet, waxaa soo baxa weecid cagaar-tufaax ah oo ah niikelka hiidrooksaydka(II); astaamaha midabka ayaa si cad u muuqda, taasoo u sahleysa aqoonsiga tooska ah ee ion niikelka.",
     "objectives": [
       "Bartida aqoonsiga weecidda astaamaha midabka ee ion niikelka",
       "Barasho kala soocida bir-macdan-kala-guurka ee isla qoyskan adoo ku tiirsanaya midabka",
@@ -4159,7 +4159,7 @@
   },
   "silver-chromate-mohr-endpoint": {
     "title": "Tilmaamaha dhammaadka ee chromate silfar ee hab Mohr",
-    "description": "Marka potassium chromate loo isticmaalo tilmaame ah in lagu tiiriyo chloride, ka dib marka ion chloride dhammaato, ionka Lacag (silfar) iyo chromate ayaa waxay soo saaraan weecid cas-toob ah oo ah silver chromate, taasoo calaamad u ah in tiirinta dhamaatay.",
+    "description": "Marka potassium chromate loo isticmaalo tilmaame ah in lagu tiiriyo chloride, ka dib marka ion chloride dhammaato, ionka Lacag iyo chromate ayaa waxay soo saaraan weecid cas-toob ah oo ah silver chromate, taasoo calaamad u ah in tiirinta dhamaatay.",
     "objectives": [
       "Fahamka mabaadi'da tilmaamaha dhammaadka ee tiirinta weecidda",
       "Daawasho muuqaalka dhammaadka cas-toob ah",
@@ -4167,10 +4167,10 @@
     ]
   },
   "lead-chromate-yellow-identification": {
-    "title": "Aqoonsiga ion rasaasta (lead) adoo ku tiirsanaya weecidda huruud-dhalaalaysa",
-    "description": "Marka potassium chromate la soo dhejiyo xalka lead(II) nitrate, waxaa soo baxa weecid huruud-dhalaalaysa ah oo lead chromate ah — taasoo ah tiinta hore ee loo yaqaanno «chrome yellow» — islamarkaana ah calaamadda caadiga ah ee lagu garto ion rasaasta (lead).",
+    "title": "Aqoonsiga ion rasaasta adoo ku tiirsanaya weecidda huruud-dhalaalaysa",
+    "description": "Marka potassium chromate la soo dhejiyo xalka lead(II) nitrate, waxaa soo baxa weecid huruud-dhalaalaysa ah oo lead chromate ah — taasoo ah tiinta hore ee loo yaqaanno «chrome yellow» — islamarkaana ah calaamadda caadiga ah ee lagu garto ion rasaasta.",
     "objectives": [
-      "Bartida aqoonsiga ion rasaasta (lead) adoo isticmaalaya midabka chromate",
+      "Bartida aqoonsiga ion rasaasta adoo isticmaalaya midabka chromate",
       "Garan dabeecadda kiimikada ee tiinta chrome yellow",
       "Barasho shuruudaha farsamaynta qashinka bir-macdan-culus"
     ]
@@ -4186,7 +4186,7 @@
   },
   "strontium-sulfate-white-identification": {
     "title": "Kala-soocida qansaxa sulfate ah ee ayaanka strontiyamka",
-    "description": "Marka sodium sulfate (Na₂SO₄) la ku daro xalliyaanka strontium chloride (kloriidhka strontiyamka), ayaa samaysma qansax cad oo ah sulfate strontiyamka. Karboonka ka dhaleeceyntiisa waxay u dhexeysaa tan kaalsiymka iyo tan baariyamka, taasoo u oggolaanaysa in la sameeyo qansax-dejin tillaabo-tillaabo ah.",
+    "description": "Marka sodium sulfate (Na₂SO₄) la ku daro xalliyaanka strontium chloride, ayaa samaysma qansax cad oo ah sulfate strontiyamka. Karboonka ka dhaleeceyntiisa waxay u dhexeysaa tan kaalsiymka iyo tan baariyamka, taasoo u oggolaanaysa in la sameeyo qansax-dejin tillaabo-tillaabo ah.",
     "objectives": [
       "Bartida kala-soocida ayaanka strontiyamka adoo isticmaalaya sulfaatada",
       "Tartiibinta xallinta sulfaatada macdanta dhulka ee alkaline ah",
@@ -4195,7 +4195,7 @@
   },
   "strontium-carbonate-acid-soluble": {
     "title": "Samaynta qansaxa karbooneetka strontiyamka iyo xallintiisa aashitada ah",
-    "description": "Marka sodium carbonate (Na₂CO₃) la ku daro strontiyamka naytareetka (strontium nitrate), ayaa samaysma qansax cad oo karbooneet ah. Marka dib aashito la siiyo, qansaxu wuu dhalaalaa oo xumbo ayuu soo saara, taasoo laba tillaabood oo muuqata ku xaqiijinaysa in ay tahay karbooneet.",
+    "description": "Marka sodium carbonate (Na₂CO₃) la ku daro strontiyamka naytareetka, ayaa samaysma qansax cad oo karbooneet ah. Marka dib aashito la siiyo, qansaxu wuu dhalaalaa oo xumbo ayuu soo saara, taasoo laba tillaabood oo muuqata ku xaqiijinaysa in ay tahay karbooneet.",
     "objectives": [
       "Samaynta iyo xaqiijinta qansaxa karbooneetka strontiyamka",
       "Adeegsiga xallinta aashitada si loo hubiyo walxaha qansaxka",
@@ -4204,16 +4204,16 @@
   },
   "zinc-hydroxide-white-identification": {
     "title": "Qansaxa cad ee ayaanka sink-ga iyo xaqiijinta dabeecaddiisa laba-dhinacka ah",
-    "description": "Marka sodium hydroxide (NaOH) xaddi ku filan ah la ku daro zinc sulfate (sinkyga sulfeetka), ayaa samaysma qansax cad oo ah sinkyga hiidrooksaydka (zinc hydroxide). Haddii NaOH dheeraad ah la sii daro, qansaxu mar kale wuu dhalaalaa, taasoo muujinaysa dabeecadda laba-dhinacka ah — oo ah calaamadda aqoonsiga ayaanka sink-ga.",
+    "description": "Marka sodium hydroxide (NaOH) xaddi ku filan ah la ku daro zinc sulfate (sinkyga sulfeetka), ayaa samaysma qansax cad oo ah sinkyga hiidrooksaydka. Haddii NaOH dheeraad ah la sii daro, qansaxu mar kale wuu dhalaalaa, taasoo muujinaysa dabeecadda laba-dhinacka ah — oo ah calaamadda aqoonsiga ayaanka sink-ga.",
     "objectives": [
       "Bartida kala-soocida ayaanka sink-ga adoo isticmaalaya qansax-dejinta",
-      "Xaqiijinta xallinta laba-dhinacka ah ee sinkyga hiidrooksaydka (zinc hydroxide)",
+      "Xaqiijinta xallinta laba-dhinacka ah ee sinkyga hiidrooksaydka",
       "Fahanka muhiimadda xukumida xaddiga reagents-ka"
     ]
   },
   "silver-phosphate-yellow-identification": {
     "title": "Kala-soocida ayanaha fosfeetka adoo isticmaalaya lacagta dahabi-dhalaalaysa ee silver-ka",
-    "description": "Marka silver nitrate (AgNO₃) la ku daro xalliyaanka sodium phosphate (soodiyamka fosfeetka), ayaa samaysma qansax jaalle ah oo ah fosfeet Lacag (silfar). Qansaxan wuxuu ku dhalaalaa aashito nitric ah (HNO₃) oo la wasakheeyay, taasoo u oggolaanaysa in looga sooco lacagta kloriidhka (silver chloride) ee cad.",
+    "description": "Marka silver nitrate (AgNO₃) la ku daro xalliyaanka sodium phosphate (soodiyamka fosfeetka), ayaa samaysma qansax jaalle ah oo ah fosfeet Lacag. Qansaxan wuxuu ku dhalaalaa aashito nitric ah (HNO₃) oo la wasakheeyay, taasoo u oggolaanaysa in looga sooco lacagta kloriidhka ee cad.",
     "objectives": [
       "Bartida kala-soocida tayada ah ee ayanaha fosfeetka",
       "Adeegsiga xallinta aashitada si loo kala saaro qansaxyada silver-ka",
@@ -4222,7 +4222,7 @@
   },
   "lead-sulfide-black-identification": {
     "title": "Kala-soocida ayaanka sulfaydka adoo isticmaalaya gacmo-ridda madow ee rasaasta",
-    "description": "Marka lead(II) nitrate (rasaasta naytareetka) la ku daro xalliyaanka sodium sulfide (sodium sulfide, Na₂S), ayaa si dhakhso leh u samaysma qansax madow oo ah sulfide rasaasta. Midabku aad buu u qoto dheer yahay, xatta xaddiga yar oo ayaan sulfayd ah ayaa si cad u muuqda.",
+    "description": "Marka lead(II) nitrate (rasaasta naytareetka) la ku daro xalliyaanka sodium sulfide Na₂S, ayaa si dhakhso leh u samaysma qansax madow oo ah sulfide rasaasta. Midabku aad buu u qoto dheer yahay, xatta xaddiga yar oo ayaan sulfayd ah ayaa si cad u muuqda.",
     "objectives": [
       "Bartida kala-soocida xasaasiyad sare leh ee ayaanka sulfaydka",
       "Garan ficirka shaqada warqadaha baaritaanka sulfide rasaasta",
@@ -4280,12 +4280,12 @@
     "objectives": [
       "Bartaan habka standardization-ka iodometric",
       "Garashada dhammaadka marka midabku ka beddelo buniga-huruudda midab la'aanta",
-      "Fahamka waqtiga saxda ah ee ku darista xabag (xoogaa) ahaan tilmaame"
+      "Fahamka waqtiga saxda ah ee ku darista xabag ahaan tilmaame"
     ]
   },
   "ammonium-alkali-gas-endotherm": {
     "title": "Gaarista Gaaska Ammonia (Ammonia Gas) iyo Hoos u Dhaca Heerkulka",
-    "description": "Marka ammonium chloride (NH₄Cl) la isku daray sodium hydroxide (NaOH), waxaa soo baxa gaaska ammonia (ammonia gas) ee cufan waxaana heerkulku hoos u dhacaa; marka litmus cas oo qoyan uu u beddelo buluug, labada calaamadood waa xaqiijinaan ammonia.",
+    "description": "Marka ammonium chloride (NH₄Cl) la isku daray sodium hydroxide (NaOH), waxaa soo baxa gaaska ammonia ee cufan waxaana heerkulku hoos u dhacaa; marka litmus cas oo qoyan uu u beddelo buluug, labada calaamadood waa xaqiijinaan ammonia.",
     "objectives": [
       "Xaqiijinta ammonium root adoo isticmaalaya labada calaamadood: gaasku ka soo baxa iyo litmus-ku buluug noqonaysa",
       "Duubasho hoos u dhaca heerkulka falcelinta endothermic-ka",
@@ -4312,10 +4312,10 @@
   },
   "tin-silver-nitrate-galvanic": {
     "title": "Xaqiijinta Kala-duwanaanshaha Korontada ee Tin iyo Lacag (Silfar) Adoo Isticmaalaya Beddelka",
-    "description": "Marka Tin xaashi ah la dhigo xalka silver nitrate (AgNO₃), Lacag (silfar) ah oo xidid-xididka ah ayaa ka soo baxa dusha kulaylkuna kordhaa; tani waxay muujineysaa in korontada caadiga ah ee Tin xaashi ah ay ka hooseyso ta Lacag (silfar), sidaas awgeed Tin-ku wuxuu si iskiis ah u lumiyaa elektarooniyada.",
+    "description": "Marka Tin xaashi ah la dhigo xalka silver nitrate (AgNO₃), Lacag ah oo xidid-xididka ah ayaa ka soo baxa dusha kulaylkuna kordhaa; tani waxay muujineysaa in korontada caadiga ah ee Tin xaashi ah ay ka hooseyso ta Lacag, sidaas awgeed Tin-ku wuxuu si iskiis ah u lumiyaa elektarooniyada.",
     "objectives": [
       "Go'aaminta sarraynta korontada caadiga ah ee habka beddelka",
-      "Daawashada soo baxa fidooddiyada Lacag (silfar) iyo kulaylka",
+      "Daawashada soo baxa fidooddiyada Lacag iyo kulaylka",
       "Bartaan hindisaha diyaarinta biraha electrodes inta kahor tijaabada"
     ]
   },
@@ -4357,9 +4357,9 @@
   },
   "lead-copper-sulfate-galvanic": {
     "title": "Xaqiijinta Kala-duwanaanshaha Korontada ee Rasaas-Naxaas",
-    "description": "Marka xaashi rasaas ah la dhigo xalka copper(II) sulfate (CuSO₄), naxaas cas ayaa wejigeeda ka soo baxa kulaylna waa soo baxa; rasaasta (lead) waa walaxda taban ee baytariyada rasaas-aashito, tijaabadani waxay xoojinaysaa jiritaanka caadada luminta elektroonadeed.",
+    "description": "Marka xaashi rasaas ah la dhigo xalka copper(II) sulfate (CuSO₄), naxaas cas ayaa wejigeeda ka soo baxa kulaylna waa soo baxa; rasaasta waa walaxda taban ee baytariyada rasaas-aashito, tijaabadani waxay xoojinaysaa jiritaanka caadada luminta elektroonadeed.",
     "objectives": [
-      "Xaqiijinta in rasaasta (lead) ay ka hormarto naxaas (Cu) silsilada korontada",
+      "Xaqiijinta in rasaasta ay ka hormarto naxaas (Cu) silsilada korontada",
       "Xiriirinta doorka walaxda taban ee baytariyada rasaas-aashito",
       "Nidaaminta habboon ee xalalka rasaasta ka kooban"
     ]
@@ -4438,7 +4438,7 @@
   },
   "nickel-hydrochloric-hydrogen-electrode": {
     "title": "Dhaqdhaqaaqa electrode: Xaashi nickel ah iyo aashito hydrochloric ah (HCl) oo soo saara gaaska hydrogen",
-    "description": "Xaashi nickel ah iyo aashito hydrochloric ah (HCl) ayaa si tartiib ah uga soo baxa gaaska hydrogen (hydrogen gas) iyadoo kulaylku yar yahay, isbarbardhigga nickel iyo tin wuxuu u oggolaanayaa in la faahfaahiyo tartiibbiga potential-ka dhowr birood oo ku dhow hydrogen.",
+    "description": "Xaashi nickel ah iyo aashito hydrochloric ah (HCl) ayaa si tartiib ah uga soo baxa gaaska hydrogen iyadoo kulaylku yar yahay, isbarbardhigga nickel iyo tin wuxuu u oggolaanayaa in la faahfaahiyo tartiibbiga potential-ka dhowr birood oo ku dhow hydrogen.",
     "objectives": [
       "Faahfaahinta tartiibbiga potential-ka biraha ku dhow hydrogen",
       "Barbardhigga xawaaraha soo saarka hydrogen gas ee nickel iyo tin",
@@ -4483,7 +4483,7 @@
   },
   "cadmium-silver-nitrate-displacement": {
     "title": "Kaadmiyam oo beddelaya silver nitrate si loo arko qaabka laanlaanta crystalka",
-    "description": "Marka Kaadmiyam xaashi ah la dhigo xalka silver nitrate (AgNO₃), laanlaanyo lacag (silfar) ah oo qurxoon ayaa ka soo baxa, kulaylkuna soo baxaa. Farqiga korontada ee kaadmiyam-silver waa weyn yahay, markaa xawaaraha beddelku waa ka dhakhso badan yahay kooxda rasaasta (lead)-silver.",
+    "description": "Marka Kaadmiyam xaashi ah la dhigo xalka silver nitrate (AgNO₃), laanlaanyo lacag (silfar) ah oo qurxoon ayaa ka soo baxa, kulaylkuna soo baxaa. Farqiga korontada ee kaadmiyam-silver waa weyn yahay, markaa xawaaraha beddelku waa ka dhakhso badan yahay kooxda rasaasta-silver.",
     "objectives": [
       "Fiiri qaabka laanlaanta crystalka ee beddelka kaadmiyam-silver",
       "Is bar bar dhig xawaaraha soo baxa ee kooxaha leh farqiyada kala duwan ee korontada",

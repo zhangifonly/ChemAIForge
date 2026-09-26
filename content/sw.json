@@ -1998,7 +1998,7 @@
     ]
   },
   "potassium-water": {
-    "title": "Mmenyuko wa potasiamu (chuma) na maji",
+    "title": "Mmenyuko wa potasiamu ya chuma na maji",
     "description": "Potasiamu (chuma) inapoingizwa kwenye maji yenye fenolftaleini, mmenyuko wake ni mkali zaidi kuliko ule wa sodiamu: inaelea, inayeyuka, inatoa mlio na kuwasha mwali wa rangi ya zambarau, huku ufumbuzi ukibadilika kuwa nyekundu.",
     "objectives": [
       "Angalia mmenyuko mkali",
@@ -2017,7 +2017,7 @@
   },
   "sodium-potassium-water-compare": {
     "title": "Ulinganisho wa ukali wa mwitikio wa sodiamu na potasiamu na maji",
-    "description": "Sodiamu chuma na potasiamu (chuma) hutupwa tofauti ndani ya maji yenye fenolftaleini; potasiamu humenyuka kwa nguvu zaidi na huwaka moto kwa urahisi zaidi, hivyo matukio hayo hutumika kupanga utaratibu wa ushughulikiaji.",
+    "description": "Sodiamu chuma na potasiamu ya chuma hutupwa tofauti ndani ya maji yenye fenolftaleini; potasiamu humenyuka kwa nguvu zaidi na huwaka moto kwa urahisi zaidi, hivyo matukio hayo hutumika kupanga utaratibu wa ushughulikiaji.",
     "objectives": [
       "Kulinganisha ukali wa mwitikio",
       "Kupanga utaratibu wa ushughulikiaji",
