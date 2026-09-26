@@ -48,6 +48,21 @@ describe("界面词条", () => {
     expect(Object.keys(source).length).toBeGreaterThan(0);
   });
 
+  it.each(uiTargets)("%s 的译文里不夹汉字", (locale) => {
+    // 线上 60 语种巡检发现：立陶宛语讲解整句仍是中文、泰语「加热」按钮原样是汉字、
+    // 阿姆哈拉语标题夹着「實験」。现有守卫只看键是否齐全，不看值里有没有漏译的汉字。
+    // 日语本就用汉字，只查简体专有字与繁体「實」（日文作「実」）
+    const target = flatten(load(MESSAGES, locale));
+    const rx =
+      locale === "ja"
+        ? /[实验这们为说对时过还发进开关现样应将么级经图两从问题错读选动气测试结话请击實]/
+        : /[\u4e00-\u9fff]/;
+    const bad = Object.entries(target)
+      .filter(([, v]) => rx.test(v))
+      .map(([k, v]) => `${k}: ${v}`);
+    expect(bad, `${locale} 有夹汉字的词条`).toEqual([]);
+  });
+
   it.each(uiTargets)("%s 的键与源语言完全一致", (locale) => {
     expect(existsSync(join(MESSAGES, `${locale}.json`)), `${locale} 缺界面词条文件`).toBe(true);
     const target = flatten(load(MESSAGES, locale));

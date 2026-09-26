@@ -207,7 +207,7 @@
     "sentenceJoin": " ",
     "voiceFemale": "Moters balsas ♀",
     "voiceMale": "Vyro balsas ♂",
-    "narrRigOn": "{verb}，注意观察两极及仪表的变化。",
+    "narrRigOn": "{verb}, stebėkite pokyčius ties abiem elektrodais ir prietaisų rodmenis.",
     "verbElectrolysis": "Prijunkite nuolatinės srovės šaltinį ir pradėkite elektrolizę",
     "verbCircuit": "Uždarykite grandinę",
     "narrTake": "Paimkite {reagent} ir įdėkite į {vessel}.",
