@@ -127,11 +127,23 @@ function piperModelPath(rel: string): string {
  */
 async function runEngine(route: EngineRoute, text: string, out: string): Promise<void> {
   if (route.engine === "edge") {
-    await run("edge-tts", ["--voice", route.voice, "--text", text, "--write-media", out], {
-      timeout: TIMEOUT_MS,
-      killSignal: "SIGKILL",
-    });
-    return;
+    // 重试一次：微软的在线合成偶发失败（全 60 语种巡检时丹麦语返回 502，
+    // 立即重试即成功）。不重试的话，这一次抖动就变成学生那一步讲解没有声音。
+    // 只重试一次、间隔 800ms：再多就让请求拖到客户端超时，不如交给浏览器语音兜底
+    for (let attempt = 1; ; attempt++) {
+      try {
+        await run("edge-tts", ["--voice", route.voice, "--text", text, "--write-media", out], {
+          timeout: TIMEOUT_MS,
+          killSignal: "SIGKILL",
+        });
+        if (isValid(out)) return;
+        throw new Error("edge-tts 返回了空音频");
+      } catch (err) {
+        rmSync(out, { force: true });
+        if (attempt >= 2) throw err;
+        await new Promise((r) => setTimeout(r, 800));
+      }
+    }
   }
   const wav = `${out}.wav`;
   try {
