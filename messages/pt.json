@@ -153,7 +153,8 @@
     "backToDetail": "← Voltar aos Detalhes do Experimento",
     "backToCatalog": "← Voltar ao Catálogo de Experimentos",
     "labSuffix": "Bancada de Laboratório",
-    "labHint": "Clique ou arraste reagentes para o béquer e use «Misturar e Reagir» para observar os fenômenos; ou utilize «Explicação do Experimento» para uma demonstração automática passo a passo."
+    "labHint": "Clique ou arraste reagentes para o béquer e use «Misturar e Reagir» para observar os fenômenos; ou utilize «Explicação do Experimento» para uma demonstração automática passo a passo.",
+    "emptyContainerTouch": "Selecione a quantidade na estante de reagentes e toque em «Adicionar mL»"
   },
   "lesson": {
     "prev": "Passo Anterior",
@@ -379,7 +380,13 @@
     "completed": "Concluído",
     "inProgress": "Em andamento",
     "startedAt": "Iniciado em {time}",
-    "viewReport": "Ver relatório"
+    "viewReport": "Ver relatório",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "pageOf": "Página {page} / {pageCount} · {total} itens",
+    "emptyPrefix": "Nenhuma sessão encontrada. Acesse a",
+    "emptyLink": "Biblioteca de Experimentos",
+    "emptySuffix": "para iniciar um experimento."
   },
   "shelf": {
     "title": "Estante de reagentes",
@@ -437,6 +444,7 @@
     "view2d": "Esquema 2D",
     "view3d": "Bancada 3D",
     "view3dRefined": "Bancada 3D ★",
-    "sceneHint": "Arrastar para girar · Rolar para zoom"
+    "sceneHint": "Arrastar para girar · Rolar para zoom",
+    "sceneHintTouch": "Um dedo para girar · Dois dedos para ampliar"
   }
 }

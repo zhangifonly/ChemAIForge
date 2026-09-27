@@ -153,7 +153,8 @@
     "backToDetail": "← Terug naar experimentdetails",
     "backToCatalog": "← Terug naar experimentbibliotheek",
     "labSuffix": "Werkbank",
-    "labHint": "Klik of sleep reagentia in de beker en gebruik “Mengreactie” om verschijnselen te observeren; of gebruik “Experimentuitleg” voor een automatische stapsgewijze demonstratie."
+    "labHint": "Klik of sleep reagentia in de beker en gebruik “Mengreactie” om verschijnselen te observeren; of gebruik “Experimentuitleg” voor een automatische stapsgewijze demonstratie.",
+    "emptyContainerTouch": "Selecteer een hoeveelheid in het reagensenrek en tik op “Voeg mL toe”"
   },
   "lesson": {
     "prev": "Vorige stap",
@@ -379,7 +380,13 @@
     "completed": "Voltooid",
     "inProgress": "Bezig",
     "startedAt": "Gestart op {time}",
-    "viewReport": "Rapport bekijken"
+    "viewReport": "Rapport bekijken",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "pageOf": "Pagina {page} / {pageCount} · {total} items",
+    "emptyPrefix": "Geen experimentsessies gevonden, ga naar",
+    "emptyLink": "Experimentbibliotheek",
+    "emptySuffix": "om een experiment te starten."
   },
   "shelf": {
     "title": "Reagensrek",
@@ -437,6 +444,7 @@
     "view2d": "2D-schema",
     "view3d": "3D-werkbank",
     "view3dRefined": "3D-werkbank ★",
-    "sceneHint": "Sleep om te draaien · Scroll om te zoomen"
+    "sceneHint": "Sleep om te draaien · Scroll om te zoomen",
+    "sceneHintTouch": "Één vinger roteren · Twee vingers zoomen"
   }
 }

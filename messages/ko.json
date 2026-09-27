@@ -134,7 +134,8 @@
     "backToDetail": "← 실험 상세로 돌아가기",
     "backToCatalog": "← 실험 목록으로 돌아가기",
     "labSuffix": "실험대",
-    "labHint": "시약을 클릭하거나 컵에 드래그하여 “혼합 반응”으로 현상을 관찰하세요. “실험 해설”로 단계별 자동 시연도 가능합니다."
+    "labHint": "시약을 클릭하거나 컵에 드래그하여 “혼합 반응”으로 현상을 관찰하세요. “실험 해설”로 단계별 자동 시연도 가능합니다.",
+    "emptyContainerTouch": "시약 선반에서 용량을 선택한 후 「mL 추가」를 탭하세요"
   },
   "lesson": {
     "prev": "이전 단계",
@@ -315,7 +316,13 @@
     "completed": "완료됨",
     "inProgress": "진행 중",
     "startedAt": "{time}에 시작됨",
-    "viewReport": "보고서 보기"
+    "viewReport": "보고서 보기",
+    "prev": "이전 페이지",
+    "next": "다음 페이지",
+    "pageOf": "{page} / {pageCount} 페이지 · 총 {total}개",
+    "emptyPrefix": "실험 세션이 없습니다. ",
+    "emptyLink": "실험 라이브러리",
+    "emptySuffix": "에서 실험을 시작해 보세요."
   },
   "titration": {
     "stopcock": "콕 개도",
@@ -355,7 +362,8 @@
     "view2d": "2D 개요",
     "view3d": "3D 실험대",
     "view3dRefined": "3D 실험대 ★",
-    "sceneHint": "드래그로 회전 · 스크롤로 확대/축소"
+    "sceneHint": "드래그로 회전 · 스크롤로 확대/축소",
+    "sceneHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소"
   },
   "category": {
     "ACID_BASE": "산염기 반응",

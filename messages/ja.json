@@ -134,7 +134,8 @@
     "backToDetail": "← 実験詳細に戻る",
     "backToCatalog": "← 実験ライブラリに戻る",
     "labSuffix": "実験台",
-    "labHint": "試薬をクリックまたはドラッグしてビーカーに入れ、「混合反応」で現象を観察してください。「実験解説」で自動ステップ再生も可能です。"
+    "labHint": "試薬をクリックまたはドラッグしてビーカーに入れ、「混合反応」で現象を観察してください。「実験解説」で自動ステップ再生も可能です。",
+    "emptyContainerTouch": "試薬棚で量を選んでから「取 mL」をタップして追加"
   },
   "lesson": {
     "prev": "前のステップ",
@@ -315,7 +316,13 @@
     "completed": "完了",
     "inProgress": "進行中",
     "startedAt": "{time} に開始",
-    "viewReport": "レポートを見る"
+    "viewReport": "レポートを見る",
+    "prev": "前のページ",
+    "next": "次のページ",
+    "pageOf": "{page} / {pageCount} ページ · 全 {total} 件",
+    "emptyPrefix": "実験セッションがありません。",
+    "emptyLink": "実験ライブラリ",
+    "emptySuffix": "から実験を始めましょう。"
   },
   "titration": {
     "stopcock": "コック開度",
@@ -355,7 +362,8 @@
     "view2d": "2D 概略図",
     "view3d": "3D 実験台",
     "view3dRefined": "3D 実験台 ★",
-    "sceneHint": "ドラッグで回転 · ホイールでズーム"
+    "sceneHint": "ドラッグで回転 · ホイールでズーム",
+    "sceneHintTouch": "1本指で回転 · 2本指でズーム"
   },
   "category": {
     "ACID_BASE": "酸塩基反応",

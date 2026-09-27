@@ -153,7 +153,8 @@
     "backToDetail": "← Tilbake til forsøksdetaljer",
     "backToCatalog": "← Tilbake til forsøksbiblioteket",
     "labSuffix": "Laboratoriebenk",
-    "labHint": "Klikk eller dra reagenser i begeret, bruk «Blandings­reaksjon» for å observere fenomener, eller bruk «Forsøks­forklaring» for automatisk trinn-for-trinn-demonstrasjon."
+    "labHint": "Klikk eller dra reagenser i begeret, bruk «Blandings­reaksjon» for å observere fenomener, eller bruk «Forsøks­forklaring» for automatisk trinn-for-trinn-demonstrasjon.",
+    "emptyContainerTouch": "Velg mengde i reagenshyllen, trykk deretter «Ta mL» for å tilsette"
   },
   "lesson": {
     "prev": "Forrige trinn",
@@ -379,7 +380,13 @@
     "completed": "Fullført",
     "inProgress": "Pågår",
     "startedAt": "Startet {time}",
-    "viewReport": "Vis rapport"
+    "viewReport": "Vis rapport",
+    "prev": "Forrige",
+    "next": "Neste",
+    "pageOf": "Side {page} / {pageCount} · {total} oppføringer totalt",
+    "emptyPrefix": "Ingen eksperimentøkter ennå – gå til",
+    "emptyLink": "eksperimentbiblioteket",
+    "emptySuffix": "for å starte et eksperiment."
   },
   "shelf": {
     "title": "Reagenshylle",
@@ -437,6 +444,7 @@
     "view2d": "2D-skjematisk",
     "view3d": "3D-laboratorium",
     "view3dRefined": "3D-laboratorium ★",
-    "sceneHint": "Dra for å rotere · Scroll for å zoome"
+    "sceneHint": "Dra for å rotere · Scroll for å zoome",
+    "sceneHintTouch": "Én finger for å rotere · To fingre for å zoome"
   }
 }

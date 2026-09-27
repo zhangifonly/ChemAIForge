@@ -34,7 +34,7 @@ export default async function ExperimentDetailPage({
     <main id="main" className="mx-auto flex max-w-3xl flex-col gap-6 px-6 py-10 animate-fade-up">
       <Link
         href="/experiments"
-        className="text-sm text-foreground/60 transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+        className="-my-2 inline-block py-2 text-sm text-foreground/60 transition-colors hover:text-brand-600 dark:hover:text-brand-300"
       >
         {tLab("backToCatalog")}
       </Link>

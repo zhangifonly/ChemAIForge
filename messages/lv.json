@@ -153,7 +153,8 @@
     "backToDetail": "← Atpakaļ uz eksperimenta detaļām",
     "backToCatalog": "← Atpakaļ uz eksperimentu katalogu",
     "labSuffix": "Laboratorijas galds",
-    "labHint": "Noklikšķiniet vai velciet reaģentus krūzē, «Sajaukt» — novērojiet parādības; vai izmantojiet «Eksperimenta skaidrojumu» automātiskai soli pa solim demonstrācijai."
+    "labHint": "Noklikšķiniet vai velciet reaģentus krūzē, «Sajaukt» — novērojiet parādības; vai izmantojiet «Eksperimenta skaidrojumu» automātiskai soli pa solim demonstrācijai.",
+    "emptyContainerTouch": "Reaģentu plauktā izvēlieties daudzumu, pēc tam nospiediet «Ņemt mL»"
   },
   "lesson": {
     "prev": "Iepriekšējais solis",
@@ -379,7 +380,13 @@
     "completed": "Pabeigts",
     "inProgress": "Notiek",
     "startedAt": "Sākts {time}",
-    "viewReport": "Skatīt pārskatu"
+    "viewReport": "Skatīt pārskatu",
+    "prev": "Iepriekšējā",
+    "next": "Nākamā",
+    "pageOf": "{page} / {pageCount} lpp. · Kopā {total}",
+    "emptyPrefix": "Nav eksperimenta sesiju — dodieties uz",
+    "emptyLink": "Eksperimentu bibliotēku",
+    "emptySuffix": "un sāciet eksperimentu."
   },
   "shelf": {
     "title": "Reaģentu plaukts",
@@ -437,6 +444,7 @@
     "view2d": "2D shēma",
     "view3d": "3D darba galds",
     "view3dRefined": "3D darba galds ★",
-    "sceneHint": "Vilkt, lai rotētu · Ritenis, lai tuvinātu"
+    "sceneHint": "Vilkt, lai rotētu · Ritenis, lai tuvinātu",
+    "sceneHintTouch": "Viens pirksts — griešana · Divi pirksti — tālummaiņa"
   }
 }

@@ -134,7 +134,8 @@
     "backToDetail": "← Back to Experiment Details",
     "backToCatalog": "← Back to Catalog",
     "labSuffix": "Lab Bench",
-    "labHint": "Click or drag reagents into the beaker. Use “Mix & React” to observe results, or “Guided Walkthrough” for a step-by-step demonstration."
+    "labHint": "Click or drag reagents into the beaker. Use “Mix & React” to observe results, or “Guided Walkthrough” for a step-by-step demonstration.",
+    "emptyContainerTouch": "Select an amount on the reagent rack, then tap “Take mL” to add"
   },
   "lesson": {
     "prev": "Previous",
@@ -315,7 +316,13 @@
     "completed": "Completed",
     "inProgress": "In Progress",
     "startedAt": "Started at {time}",
-    "viewReport": "View report"
+    "viewReport": "View report",
+    "prev": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {pageCount} · {total} records",
+    "emptyPrefix": "No experiment sessions yet. Go to the",
+    "emptyLink": "Experiment Library",
+    "emptySuffix": "to start one."
   },
   "titration": {
     "stopcock": "Stopcock opening",
@@ -355,7 +362,8 @@
     "view2d": "2D Diagram",
     "view3d": "3D Workbench",
     "view3dRefined": "3D Workbench ★",
-    "sceneHint": "Drag to rotate · Scroll to zoom"
+    "sceneHint": "Drag to rotate · Scroll to zoom",
+    "sceneHintTouch": "One finger to rotate · Two fingers to zoom"
   },
   "category": {
     "ACID_BASE": "Acid-Base Reactions",

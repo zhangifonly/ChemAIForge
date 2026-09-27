@@ -153,7 +153,8 @@
     "backToDetail": "← Kthehu te detajet e eksperimentit",
     "backToCatalog": "← Kthehu te biblioteka e eksperimenteve",
     "labSuffix": "Bankë laboratori",
-    "labHint": "Klikoni ose tërhiqni reagentët në gotë, «Reaksion përzierjeje» për të vëzhguar fenomenet; ose përdorni «Shpjegimin e eksperimentit» për demonstrim automatik hap pas hapi."
+    "labHint": "Klikoni ose tërhiqni reagentët në gotë, «Reaksion përzierjeje» për të vëzhguar fenomenet; ose përdorni «Shpjegimin e eksperimentit» për demonstrim automatik hap pas hapi.",
+    "emptyContainerTouch": "Zgjidhni sasinë në raftin e reagentëve, pastaj trokitni «Merr mL» për të shtuar"
   },
   "lesson": {
     "prev": "Hapi i mëparshëm",
@@ -379,7 +380,13 @@
     "completed": "Përfunduar",
     "inProgress": "Në progres",
     "startedAt": "Filluar më {time}",
-    "viewReport": "Shiko raportin"
+    "viewReport": "Shiko raportin",
+    "prev": "Faqja e mëparshme",
+    "next": "Faqja tjetër",
+    "pageOf": "Faqja {page} / {pageCount} · Gjithsej {total} rekorde",
+    "emptyPrefix": "Nuk ka sesione eksperimentesh, shko te",
+    "emptyLink": "Biblioteka e eksperimenteve",
+    "emptySuffix": "dhe fillo një eksperiment."
   },
   "shelf": {
     "title": "Rafti i reagentëve",
@@ -437,6 +444,7 @@
     "view2d": "Skemë 2D",
     "view3d": "Tryezë 3D",
     "view3dRefined": "Tryezë 3D ★",
-    "sceneHint": "Tërhiq për të rrotulluar · Rrotë për të zmadhuar"
+    "sceneHint": "Tërhiq për të rrotulluar · Rrotë për të zmadhuar",
+    "sceneHintTouch": "Një gisht për rrotullim · Dy gishta për zmadhim"
   }
 }

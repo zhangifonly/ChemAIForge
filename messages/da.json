@@ -153,7 +153,8 @@
     "backToDetail": "← Tilbage til forsøgsdetaljer",
     "backToCatalog": "← Tilbage til forsøgsbibliotek",
     "labSuffix": "Laboratoriebord",
-    "labHint": "Klik eller træk reagenser i bægeret, og brug “Bland og reager” for at observere; vælg “Forsøgsgennemgang” for automatisk trinvis demonstration."
+    "labHint": "Klik eller træk reagenser i bægeret, og brug “Bland og reager” for at observere; vælg “Forsøgsgennemgang” for automatisk trinvis demonstration.",
+    "emptyContainerTouch": "Vælg mængde i reagenshylden, tryk derefter på “Tag mL”"
   },
   "lesson": {
     "prev": "Forrige trin",
@@ -379,7 +380,13 @@
     "completed": "Afsluttet",
     "inProgress": "I gang",
     "startedAt": "Startet {time}",
-    "viewReport": "Se rapport"
+    "viewReport": "Se rapport",
+    "prev": "Forrige",
+    "next": "Næste",
+    "pageOf": "Side {page} / {pageCount} · {total} poster i alt",
+    "emptyPrefix": "Ingen eksperimentsessioner endnu – gå til",
+    "emptyLink": "Eksperimentbibliotek",
+    "emptySuffix": "og start et eksperiment."
   },
   "shelf": {
     "title": "Reagenshylde",
@@ -437,6 +444,7 @@
     "view2d": "2D-diagram",
     "view3d": "3D-arbejdsbord",
     "view3dRefined": "3D-arbejdsbord ★",
-    "sceneHint": "Træk for at rotere · Scroll for at zoome"
+    "sceneHint": "Træk for at rotere · Scroll for at zoome",
+    "sceneHintTouch": "Én finger roterer · To fingre zoomer"
   }
 }

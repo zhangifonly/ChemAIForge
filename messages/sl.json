@@ -232,7 +232,8 @@
     "backToDetail": "← Nazaj na podrobnosti poskusa",
     "backToCatalog": "← Nazaj na seznam poskusov",
     "labSuffix": "Delovna miza",
-    "labHint": "Kliknite ali povlecite reagent v čašo, nato «Zmešaj in reagiraj» za opazovanje; ali uporabite «Razlago poskusa» za samodejno vodeno demonstracijo."
+    "labHint": "Kliknite ali povlecite reagent v čašo, nato «Zmešaj in reagiraj» za opazovanje; ali uporabite «Razlago poskusa» za samodejno vodeno demonstracijo.",
+    "emptyContainerTouch": "Na stojalu izberite količino, nato tapnite »Dodaj mL«"
   },
   "locale": {
     "switchLabel": "Zamenjaj jezik vmesnika",
@@ -379,7 +380,13 @@
     "completed": "Zaključeno",
     "inProgress": "V teku",
     "startedAt": "Začeto ob {time}",
-    "viewReport": "Odpri poročilo"
+    "viewReport": "Odpri poročilo",
+    "prev": "Prejšnja",
+    "next": "Naslednja",
+    "pageOf": "Stran {page} / {pageCount} · skupaj {total}",
+    "emptyPrefix": "Ni eksperimentalnih sej – pojdite v",
+    "emptyLink": "knjižnico eksperimentov",
+    "emptySuffix": "in začnite eksperiment."
   },
   "shelf": {
     "title": "Polica z reagenti",
@@ -437,6 +444,7 @@
     "view2d": "2D Prikaz",
     "view3d": "3D Delovna Miza",
     "view3dRefined": "3D Delovna Miza ★",
-    "sceneHint": "Povleci za vrtenje · Kolesce za povečavo"
+    "sceneHint": "Povleci za vrtenje · Kolesce za povečavo",
+    "sceneHintTouch": "En prst: vrtenje · Dva prsta: povečava"
   }
 }

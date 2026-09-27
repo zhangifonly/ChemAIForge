@@ -153,7 +153,8 @@
     "backToDetail": "← Grįžti į eksperimento informaciją",
     "backToCatalog": "← Grįžti į eksperimentų biblioteką",
     "labSuffix": "Laboratorinis stalas",
-    "labHint": "Spustelėkite arba nuvilkite reagentą į stiklinę ir stebėkite „Maišymo reakciją“; taip pat galite naudoti „Eksperimento paaiškinimą“ automatinei žingsnis po žingsnio demonstracijai."
+    "labHint": "Spustelėkite arba nuvilkite reagentą į stiklinę ir stebėkite „Maišymo reakciją“; taip pat galite naudoti „Eksperimento paaiškinimą“ automatinei žingsnis po žingsnio demonstracijai.",
+    "emptyContainerTouch": "Reagentų lentynoje pasirinkite kiekį, tada spustelėkite „Paimti mL“"
   },
   "lesson": {
     "prev": "Ankstesnis žingsnis",
@@ -379,7 +380,13 @@
     "completed": "Baigta",
     "inProgress": "Vykdoma",
     "startedAt": "Pradėta {time}",
-    "viewReport": "Žiūrėti ataskaitą"
+    "viewReport": "Žiūrėti ataskaitą",
+    "prev": "Ankstesnis",
+    "next": "Kitas",
+    "pageOf": "{page} / {pageCount} puslapis · Iš viso: {total}",
+    "emptyPrefix": "Eksperimentų sesijų nėra – eikite į",
+    "emptyLink": "Eksperimentų biblioteką",
+    "emptySuffix": "ir pradėkite eksperimentą."
   },
   "shelf": {
     "title": "Reagentų lentyna",
@@ -437,6 +444,7 @@
     "view2d": "2D schema",
     "view3d": "3D laboratorija",
     "view3dRefined": "3D laboratorija ★",
-    "sceneHint": "Vilkite norėdami pasukti · slinkite norėdami priartinti"
+    "sceneHint": "Vilkite norėdami pasukti · slinkite norėdami priartinti",
+    "sceneHintTouch": "Vienu pirštu – sukti · Dviem – keisti mastelį"
   }
 }

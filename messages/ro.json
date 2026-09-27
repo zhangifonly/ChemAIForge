@@ -232,7 +232,8 @@
     "backToDetail": "← Înapoi la detalii experiment",
     "backToCatalog": "← Înapoi la biblioteca de experimente",
     "labSuffix": "Bancă de lucru",
-    "labHint": "Faceți clic sau trageți reactivi în pahar, folosiți «Reacție de amestecare» pentru a observa fenomenele; sau utilizați «Explicație experiment» pentru demonstrație automată pas cu pas."
+    "labHint": "Faceți clic sau trageți reactivi în pahar, folosiți «Reacție de amestecare» pentru a observa fenomenele; sau utilizați «Explicație experiment» pentru demonstrație automată pas cu pas.",
+    "emptyContainerTouch": "Selectați cantitatea din raft, apoi atingeți „Adaugă mL”"
   },
   "locale": {
     "switchLabel": "Schimbați limba interfeței",
@@ -379,7 +380,13 @@
     "completed": "Finalizat",
     "inProgress": "În desfășurare",
     "startedAt": "Început la {time}",
-    "viewReport": "Vezi raportul"
+    "viewReport": "Vezi raportul",
+    "prev": "Pagina anterioară",
+    "next": "Pagina următoare",
+    "pageOf": "Pagina {page} / {pageCount} · {total} înregistrări",
+    "emptyPrefix": "Nicio sesiune de laborator. Mergeți la",
+    "emptyLink": "Biblioteca de experimente",
+    "emptySuffix": "pentru a începe un experiment."
   },
   "shelf": {
     "title": "Raft de reactivi",
@@ -437,6 +444,7 @@
     "view2d": "Schemă 2D",
     "view3d": "Bancă de lucru 3D",
     "view3dRefined": "Bancă de lucru 3D ★",
-    "sceneHint": "Trageți pentru rotire · Scroll pentru zoom"
+    "sceneHint": "Trageți pentru rotire · Scroll pentru zoom",
+    "sceneHintTouch": "Un deget pentru rotire · Două degete pentru zoom"
   }
 }

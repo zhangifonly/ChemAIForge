@@ -160,7 +160,7 @@ export function TitrationLab({ reagents = [] }: { reagents?: string[] }) {
         autoRotate={false}
         minDistance={4.5}
         maxDistance={15}
-        className="h-[640px]"
+        className="h-[420px] sm:h-[520px] lg:h-[640px]"
         hint="拖拽旋转 · 滚轮缩放 · 拖动旋塞控制滴速"
       >
         {/* 搁板瓶签：Provider 须在 Canvas 内部，Context 不跨两个 reconciler */}

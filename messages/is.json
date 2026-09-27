@@ -153,7 +153,8 @@
     "backToDetail": "← Til baka í tilraunalýsingu",
     "backToCatalog": "← Til baka í tilraunasafn",
     "labSuffix": "Tilraunaborð",
-    "labHint": "Smelltu eða dragðu hráefni í bikarinn, veldu „Blandbragðverkun“ til að fylgjast með fyrirbærunum; eða notaðu „Tilraunaskýring“ fyrir sjálfvirka skref-fyrir-skref kynningu."
+    "labHint": "Smelltu eða dragðu hráefni í bikarinn, veldu „Blandbragðverkun“ til að fylgjast með fyrirbærunum; eða notaðu „Tilraunaskýring“ fyrir sjálfvirka skref-fyrir-skref kynningu.",
+    "emptyContainerTouch": "Veldu magn í efnahillunni og ýttu á „Taka mL“ til að bæta við"
   },
   "lesson": {
     "prev": "Fyrra skref",
@@ -379,7 +380,13 @@
     "completed": "Lokið",
     "inProgress": "í gangi",
     "startedAt": "Hófst {time}",
-    "viewReport": "Skoða skýrslu"
+    "viewReport": "Skoða skýrslu",
+    "prev": "Fyrri síða",
+    "next": "Næsta síða",
+    "pageOf": "Síða {page} / {pageCount} · {total} færslur",
+    "emptyPrefix": "Engar tilraunalotур, farðu í",
+    "emptyLink": "Tilraunasafn",
+    "emptySuffix": "og byrjaðu tilraun."
   },
   "shelf": {
     "title": "Efnahillur",
@@ -437,6 +444,7 @@
     "view2d": "2D skýringarmynd",
     "view3d": "3D tilraunaborð",
     "view3dRefined": "3D tilraunaborð ★",
-    "sceneHint": "Dragðu til að snúa · skrunahjól til að þysja"
+    "sceneHint": "Dragðu til að snúa · skrunahjól til að þysja",
+    "sceneHintTouch": "Einn fingur til að snúa · Tveir fingrar til að þysja"
   }
 }

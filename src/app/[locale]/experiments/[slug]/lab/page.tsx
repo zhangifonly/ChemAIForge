@@ -27,22 +27,24 @@ export default async function ExperimentLabPage({
   const lessonI18n = await lessonContent(params.slug, params.locale);
 
   return (
-    <main id="main" className="mx-auto flex max-w-[1600px] flex-col gap-6 px-4 py-8 animate-fade-up sm:px-6">
+    <main id="main" className="mx-auto flex max-w-[1600px] flex-col gap-4 px-4 py-5 animate-fade-up sm:gap-6 sm:px-6 sm:py-8">
       <Link
         href={`/experiments/${experiment.slug}`}
-        className="text-sm text-foreground/60 transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+        className="-my-2 inline-block w-fit py-2 text-sm text-foreground/65 transition-colors hover:text-brand-600 dark:hover:text-brand-300"
       >
         {t("backToDetail")}
       </Link>
 
       <header className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold tracking-tight">
+        <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
           {exp.title} <span className="text-foreground/65">·</span>{" "}
           <span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent">
             {t("labSuffix")}
           </span>
         </h1>
-        <p className="text-sm text-foreground/60">
+        {/* 说明里的「拖拽」在触屏上不成立（HTML5 拖放不支持手指），且手机首屏寸土寸金：
+            触屏设备不显示，桌面照旧 */}
+        <p className="text-sm text-foreground/65 [@media(pointer:coarse)]:hidden">
           {t("labHint")}
         </p>
       </header>
@@ -64,7 +66,9 @@ export default async function ExperimentLabPage({
         </div>
         <div className="flex flex-col gap-6 xl:sticky xl:top-6 xl:self-start">
           <LessonPlayer experimentSlug={experiment.slug} content={lessonI18n} />
-          <div className="h-[460px]">
+          {/* 手机上用视口高度的 70%：固定 460px 在小屏上与输入法弹起后的可视区域冲突，
+              输入框会被键盘挡住；宽屏右栏仍固定 460px */}
+          <div className="h-[70dvh] max-h-[460px] min-h-[320px] xl:h-[460px]">
             <TutorChat experimentSlug={experiment.slug} />
           </div>
         </div>

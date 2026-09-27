@@ -153,7 +153,8 @@
     "backToDetail": "← Takaisin kokeen tietoihin",
     "backToCatalog": "← Takaisin kokeluetteloon",
     "labSuffix": "Laboratoriopöytä",
-    "labHint": "Klikkaa tai vedä reagensseja astiaan ja valitse “Sekoitusreaktio” havaintoja varten; voit myös käyttää “Kokeen selitystä” automaattiseen vaiheistukseen."
+    "labHint": "Klikkaa tai vedä reagensseja astiaan ja valitse “Sekoitusreaktio” havaintoja varten; voit myös käyttää “Kokeen selitystä” automaattiseen vaiheistukseen.",
+    "emptyContainerTouch": "Valitse määrä reagenttitelineestä ja napauta “Lisää mL”"
   },
   "lesson": {
     "prev": "Edellinen",
@@ -379,7 +380,13 @@
     "completed": "Valmis",
     "inProgress": "Käynnissä",
     "startedAt": "Aloitettu {time}",
-    "viewReport": "Näytä raportti"
+    "viewReport": "Näytä raportti",
+    "prev": "Edellinen",
+    "next": "Seuraava",
+    "pageOf": "Sivu {page} / {pageCount} · yhteensä {total} merkintää",
+    "emptyPrefix": "Ei kokeistuntoja – siirry",
+    "emptyLink": "kokeiden kirjastoon",
+    "emptySuffix": "aloittaaksesi kokeen."
   },
   "shelf": {
     "title": "Reagenssihylly",
@@ -437,6 +444,7 @@
     "view2d": "2D-kaavio",
     "view3d": "3D-työpöytä",
     "view3dRefined": "3D-työpöytä ★",
-    "sceneHint": "Pyöritä vetämällä · Zoomaa vierittämällä"
+    "sceneHint": "Pyöritä vetämällä · Zoomaa vierittämällä",
+    "sceneHintTouch": "Yksi sormi: pyöritä · Kaksi sormea: zoomaa"
   }
 }

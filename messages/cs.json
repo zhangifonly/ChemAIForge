@@ -153,7 +153,8 @@
     "backToDetail": "← Zpět na detail experimentu",
     "backToCatalog": "← Zpět do knihovny experimentů",
     "labSuffix": "Laboratorní stůl",
-    "labHint": "Klikněte nebo přetáhněte reagencii do kádinky a pomocí „Smíchání a reakce“ pozorujte jevy; nebo použijte „Výklad experimentu“ pro automatickou krokovou demonstraci."
+    "labHint": "Klikněte nebo přetáhněte reagencii do kádinky a pomocí „Smíchání a reakce“ pozorujte jevy; nebo použijte „Výklad experimentu“ pro automatickou krokovou demonstraci.",
+    "emptyContainerTouch": "Vyberte množství na stojanu a klepněte na „Přidat mL“"
   },
   "lesson": {
     "prev": "Předchozí krok",
@@ -379,7 +380,13 @@
     "completed": "Dokončeno",
     "inProgress": "Probíhá",
     "startedAt": "Zahájeno {time}",
-    "viewReport": "Zobrazit zprávu"
+    "viewReport": "Zobrazit zprávu",
+    "prev": "Předchozí",
+    "next": "Další",
+    "pageOf": "Strana {page} / {pageCount} · celkem {total} záznamů",
+    "emptyPrefix": "Žádné relace. Přejděte do",
+    "emptyLink": "knihovny experimentů",
+    "emptySuffix": "a zahajte experiment."
   },
   "shelf": {
     "title": "Reagenční police",
@@ -437,6 +444,7 @@
     "view2d": "2D schéma",
     "view3d": "3D pracovní stůl",
     "view3dRefined": "3D pracovní stůl ★",
-    "sceneHint": "Táhnutím otočte · kolečkem přibližte"
+    "sceneHint": "Táhnutím otočte · kolečkem přibližte",
+    "sceneHintTouch": "Otočení jedním prstem · přiblížení dvěma prsty"
   }
 }

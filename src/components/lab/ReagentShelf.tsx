@@ -49,7 +49,11 @@ export function ReagentShelf({
         <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
         {t("title")}
       </h2>
-      <ul className="flex flex-col gap-2">
+      {/* 手机上横向滑动：竖排时 3 瓶试剂就占掉 700px，台面被推到首屏之外，
+          学生打开实验台只看到一列卡片。横排后整架只占一行，台面紧跟其后。
+          不把试剂架挪到台面下方：那样它会落在操作栏、曲线、数据表之后，
+          取一次试剂要滚到页底、再滚回来看烧杯 */}
+      <ul className="-mx-1 flex snap-x snap-mandatory gap-2 overflow-x-auto px-1 pb-1 lg:mx-0 lg:snap-none lg:flex-col lg:overflow-visible lg:px-0 lg:pb-0">
         {entries.map((e) => {
           const taken = contents.find((c) => c.formula === e.formula);
           const dose = doses[e.label] ?? e.spec.defaultDose;
@@ -57,7 +61,7 @@ export function ReagentShelf({
           return (
             <li
               key={e.label}
-              className="rounded-xl border border-foreground/10 bg-surface/60 p-2.5"
+              className="w-[15rem] shrink-0 snap-start rounded-xl border border-foreground/10 bg-surface/60 p-2.5 lg:w-auto lg:shrink"
             >
               {/* 瓶身 + 瓶签 */}
               <div className="flex items-center gap-2">
@@ -86,7 +90,7 @@ export function ReagentShelf({
                 <button
                   type="button"
                   onClick={() => onTake(e, e.spec.defaultDose)}
-                  className="mt-2 w-full rounded-lg border border-brand-500/30 bg-brand-500/10 py-1 text-xs font-medium text-brand-700 transition hover:bg-brand-500/20 dark:text-brand-300"
+                  className="mt-2 w-full rounded-lg border border-brand-500/30 bg-brand-500/10 py-2 text-xs font-medium lg:py-1 text-brand-700 transition hover:bg-brand-500/20 dark:text-brand-300"
                 >
                   {t("takeSome")}
                 </button>
@@ -99,7 +103,7 @@ export function ReagentShelf({
                         type="button"
                         aria-pressed={dose === d}
                         onClick={() => setDoses((p) => ({ ...p, [e.label]: d }))}
-                        className={`flex-1 py-1 text-[11px] tabular-nums transition ${
+                        className={`flex-1 py-2 text-xs tabular-nums transition lg:py-1 lg:text-[11px] ${
                           dose === d
                             ? "bg-brand-500 font-semibold text-white"
                             : "bg-surface/40 text-foreground/65 hover:bg-foreground/5"
@@ -118,14 +122,14 @@ export function ReagentShelf({
                         ? undefined
                         : `${dose} ${e.spec.unit} → ${mol.toFixed(4)} mol`
                     }
-                    className="shrink-0 rounded-lg bg-brand-500 px-2 py-1 text-[11px] font-semibold text-white transition hover:bg-brand-600"
+                    className="shrink-0 rounded-lg bg-brand-500 px-3 py-2 text-xs font-semibold text-white transition hover:bg-brand-600 lg:px-2 lg:py-1 lg:text-[11px]"
                   >
                     {t("take", { unit: e.spec.unit })}
                   </button>
                 </div>
               )}
               {mol !== null ? (
-                <p className="mt-1 text-[10px] tabular-nums text-foreground/65">
+                <p className="mt-1 text-[11px] tabular-nums text-foreground/65">
                   n = {mol.toFixed(4)} mol
                 </p>
               ) : null}

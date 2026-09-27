@@ -40,3 +40,13 @@ describe("从模型回复取 JSON", () => {
     expect(() => sliceFirstObject('{"a":"1","b":"2')).toThrow("不完整");
   });
 });
+
+describe("德语引号", () => {
+  it("„…\" 的收尾直引号未转义时仍能正确取出（17 个欧洲语种曾因此同时失败）", () => {
+    const text = '```json\n{"a":"Tippen Sie auf „entnehmen mL" zum Hinzufügen","b":"Seite {page}"}\n```';
+    expect(extractJson(text)).toEqual({
+      a: 'Tippen Sie auf „entnehmen mL" zum Hinzufügen',
+      b: "Seite {page}",
+    });
+  });
+});

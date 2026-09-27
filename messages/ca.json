@@ -153,7 +153,8 @@
     "backToDetail": "← Tornar als detalls",
     "backToCatalog": "← Tornar al catàleg",
     "labSuffix": "Taula de laboratori",
-    "labHint": "Feu clic o arrossegueu reactius al got, «Barreja i reacció» per observar els fenòmens; o useu «Explicació» per a la demostració automàtica pas a pas."
+    "labHint": "Feu clic o arrossegueu reactius al got, «Barreja i reacció» per observar els fenòmens; o useu «Explicació» per a la demostració automàtica pas a pas.",
+    "emptyContainerTouch": "Seleccioneu la quantitat al prestatge de reactius i premeu «Afegir mL»"
   },
   "lesson": {
     "prev": "Pas anterior",
@@ -379,7 +380,13 @@
     "completed": "Completat",
     "inProgress": "En curs",
     "startedAt": "Iniciat a les {time}",
-    "viewReport": "Veure l'informe"
+    "viewReport": "Veure l'informe",
+    "prev": "Pàgina anterior",
+    "next": "Pàgina següent",
+    "pageOf": "Pàgina {page} / {pageCount} · {total} registres",
+    "emptyPrefix": "No hi ha sessions d'experiment, aneu a",
+    "emptyLink": "Biblioteca d'experiments",
+    "emptySuffix": "per iniciar un experiment."
   },
   "shelf": {
     "title": "Prestatge de reactius",
@@ -437,6 +444,7 @@
     "view2d": "Vista 2D",
     "view3d": "Taula 3D",
     "view3dRefined": "Taula 3D ★",
-    "sceneHint": "Arrossega per girar · Roda per zoom"
+    "sceneHint": "Arrossega per girar · Roda per zoom",
+    "sceneHintTouch": "Un dit per girar · Dos dits per ampliar"
   }
 }

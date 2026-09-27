@@ -258,7 +258,7 @@ export function LabCanvas({
   return (
     <div className="grid gap-6 lg:grid-cols-[248px_minmax(0,1fr)]">
       {/* —— 试剂面板 —— */}
-      <aside className="flex flex-col gap-3">
+      <aside className="flex min-w-0 flex-col gap-3">
         <ReagentShelf
           entries={shelf}
           contents={contents}
@@ -294,7 +294,7 @@ export function LabCanvas({
           }}
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
-          className={`relative flex min-h-[380px] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl border px-6 pb-5 pt-16 transition-colors lg:min-h-[480px] ${
+          className={`relative flex min-h-[320px] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl border px-4 pb-5 pt-16 transition-colors sm:min-h-[380px] sm:px-6 lg:min-h-[480px] ${
             dragOver
               ? "border-brand-400 bg-brand-500/8"
               : "border-foreground/12 bg-gradient-to-b from-slate-100 via-slate-50 to-surface dark:from-slate-900 dark:via-slate-900/70 dark:to-surface"
@@ -303,9 +303,9 @@ export function LabCanvas({
           {/* 台面：一条带高光的实验桌面，器皿立在上面而不是悬浮在卡片里。
               高度对齐器皿底座：SVG 底部留有 44/244 的火焰区，按 260 / 340px 两档
               器皿高度折算，桌面线正好落在杯底投影处 */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[112px] lg:h-[130px] border-t border-foreground/10 bg-gradient-to-b from-foreground/[0.06] to-foreground/[0.02]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[98px] sm:h-[112px] lg:h-[130px] border-t border-foreground/10 bg-gradient-to-b from-foreground/[0.06] to-foreground/[0.02]" />
           <ReadingHud className="absolute start-4 top-4 z-10" />
-          <div className="relative z-[1] flex items-end justify-center gap-2 [&_svg]:h-[260px] [&_svg]:w-auto lg:[&_svg]:h-[340px]">
+          <div className="relative z-[1] flex items-end justify-center gap-2 [&_svg]:h-[220px] [&_svg]:w-auto sm:[&_svg]:h-[260px] lg:[&_svg]:h-[340px]">
             {!deliverySetup && !flameSetup && (
               <Glassware
                 kind={vessel}
@@ -329,7 +329,9 @@ export function LabCanvas({
           <div className="relative z-[1] flex min-h-[2rem] flex-wrap items-center justify-center gap-2">
             {contents.length === 0 ? (
               <p className="text-xs text-foreground/65">
-                {t("emptyContainer")}
+                {/* 触屏没有拖放，「或拖拽试剂至此」是做不到的操作 */}
+                <span className="[@media(pointer:coarse)]:hidden">{t("emptyContainer")}</span>
+                <span className="hidden [@media(pointer:coarse)]:inline">{t("emptyContainerTouch")}</span>
               </p>
             ) : (
               contents.map((c) => (

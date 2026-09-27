@@ -14,7 +14,7 @@ export default async function HomePage() {
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-500" />
           {t("badge")}
         </span>
-        <h1 className="text-5xl font-bold leading-[1.05] sm:text-7xl">
+        <h1 className="break-words text-4xl font-bold leading-[1.1] [hyphens:auto] sm:text-5xl sm:leading-[1.05] md:text-7xl">
           {t("heroLine1")}
           <br />
           <span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-transparent dark:from-brand-300 dark:to-brand-500">

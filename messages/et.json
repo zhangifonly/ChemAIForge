@@ -153,7 +153,8 @@
     "backToDetail": "← Tagasi katse juurde",
     "backToCatalog": "← Tagasi kataloogi",
     "labSuffix": "Laborialus",
-    "labHint": "Klõpsa või lohista reagent klaasi, vali „Segamisreaktsioon“ ja jälgi nähtusi; või kasuta „Katse selgitust“ automaatseks sammhaaval demonstratsiooniks."
+    "labHint": "Klõpsa või lohista reagent klaasi, vali „Segamisreaktsioon“ ja jälgi nähtusi; või kasuta „Katse selgitust“ automaatseks sammhaaval demonstratsiooniks.",
+    "emptyContainerTouch": "Vali kogus reagendiriiulilt ja puuduta „Võta mL“ lisamiseks"
   },
   "lesson": {
     "prev": "Eelmine samm",
@@ -379,7 +380,13 @@
     "completed": "Lõpetatud",
     "inProgress": "Pooleli",
     "startedAt": "Alustatud: {time}",
-    "viewReport": "Vaata aruannet"
+    "viewReport": "Vaata aruannet",
+    "prev": "Eelmine",
+    "next": "Järgmine",
+    "pageOf": "Lk {page} / {pageCount} · kokku {total} kirjet",
+    "emptyPrefix": "Katseseansse pole, mine",
+    "emptyLink": "katseteeki",
+    "emptySuffix": "ja alusta katset."
   },
   "shelf": {
     "title": "Reagendiriiul",
@@ -437,6 +444,7 @@
     "view2d": "2D skeem",
     "view3d": "3D töölaud",
     "view3dRefined": "3D töölaud ★",
-    "sceneHint": "Lohistage pööramiseks · Kerige suurendamiseks"
+    "sceneHint": "Lohistage pööramiseks · Kerige suurendamiseks",
+    "sceneHintTouch": "Ühe sõrmega pööramine · kahe sõrmega suurendamine"
   }
 }

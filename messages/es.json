@@ -134,7 +134,8 @@
     "backToDetail": "← Volver al detalle del experimento",
     "backToCatalog": "← Volver al catálogo",
     "labSuffix": "Mesa de laboratorio",
-    "labHint": "Haz clic o arrastra reactivos al vaso, usa «Mezclar y reaccionar» para observar los fenómenos; o emplea «Explicación del experimento» para la demostración automática paso a paso."
+    "labHint": "Haz clic o arrastra reactivos al vaso, usa «Mezclar y reaccionar» para observar los fenómenos; o emplea «Explicación del experimento» para la demostración automática paso a paso.",
+    "emptyContainerTouch": "Selecciona la cantidad en el estante y pulsa «Tomar mL» para añadir"
   },
   "lesson": {
     "prev": "Paso anterior",
@@ -315,7 +316,13 @@
     "completed": "Completado",
     "inProgress": "En curso",
     "startedAt": "Iniciada el {time}",
-    "viewReport": "Ver informe"
+    "viewReport": "Ver informe",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "pageOf": "Página {page} / {pageCount} · {total} registros",
+    "emptyPrefix": "No hay sesiones de laboratorio, ve a",
+    "emptyLink": "Biblioteca de experimentos",
+    "emptySuffix": "para comenzar un experimento."
   },
   "titration": {
     "stopcock": "Apertura de llave de paso",
@@ -355,7 +362,8 @@
     "view2d": "Vista 2D",
     "view3d": "Banco 3D",
     "view3dRefined": "Banco 3D ★",
-    "sceneHint": "Arrastrar para rotar · rueda para zoom"
+    "sceneHint": "Arrastrar para rotar · rueda para zoom",
+    "sceneHintTouch": "Un dedo para rotar · Dos dedos para hacer zoom"
   },
   "category": {
     "ACID_BASE": "Reacciones ácido-base",

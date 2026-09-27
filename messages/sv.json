@@ -232,7 +232,8 @@
     "backToDetail": "← Tillbaka till försöksdetaljer",
     "backToCatalog": "← Tillbaka till försökskatalogen",
     "labSuffix": "Labbänk",
-    "labHint": "Klicka eller dra ett reagens till bägaren och välj “Blandningsreaktion” för att observera; använd “Försöksgenomgång” för automatisk steg-för-steg-demonstration."
+    "labHint": "Klicka eller dra ett reagens till bägaren och välj “Blandningsreaktion” för att observera; använd “Försöksgenomgång” för automatisk steg-för-steg-demonstration.",
+    "emptyContainerTouch": "Välj mängd i reagenshyllan och tryck på “Ta mL” för att tillsätta"
   },
   "locale": {
     "switchLabel": "Byt gränssnittsspråk",
@@ -379,7 +380,13 @@
     "completed": "Slutfört",
     "inProgress": "Pågående",
     "startedAt": "Startad {time}",
-    "viewReport": "Visa rapport"
+    "viewReport": "Visa rapport",
+    "prev": "Föregående",
+    "next": "Nästa",
+    "pageOf": "Sida {page} / {pageCount} · {total} poster totalt",
+    "emptyPrefix": "Inga experimentsessioner ännu – gå till",
+    "emptyLink": "Experimentbiblioteket",
+    "emptySuffix": "för att starta ett experiment."
   },
   "shelf": {
     "title": "Reagenshylla",
@@ -437,6 +444,7 @@
     "view2d": "2D-schema",
     "view3d": "3D-labbstation",
     "view3dRefined": "3D-labbstation ★",
-    "sceneHint": "Dra för att rotera · Scrolla för att zooma"
+    "sceneHint": "Dra för att rotera · Scrolla för att zooma",
+    "sceneHintTouch": "Ett finger: rotera · Två fingrar: zooma"
   }
 }

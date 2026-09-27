@@ -106,6 +106,30 @@ export async function listSessionsByUser(
   return rows.map(toDTO).filter(hasActivity);
 }
 
+/**
+ * 分页版本。「我的会话」页必须分页：平台去登录后所有访客共用一个用户，
+ * 线上已有 1500 个有操作的会话，一次全渲染是 13 万像素高的页面，手机上加载与滚动都卡顿。
+ *
+ * 过滤（hasActivity）仍在应用层做（理由见上），所以先取全量再切片；
+ * 全量只是轻量的行读取，瓶颈在渲染而不在这里。
+ */
+export async function listSessionsPage(
+  userId: string,
+  page: number,
+  pageSize: number,
+): Promise<{ items: SessionDTO[]; total: number; page: number; pageCount: number }> {
+  const all = await listSessionsByUser(userId);
+  const pageCount = Math.max(1, Math.ceil(all.length / pageSize));
+  // 越界页码夹到合法范围：手改 URL 成 ?page=999 时显示最后一页，而不是一片空白
+  const p = Math.min(Math.max(1, Math.floor(page) || 1), pageCount);
+  return {
+    items: all.slice((p - 1) * pageSize, p * pageSize),
+    total: all.length,
+    page: p,
+    pageCount,
+  };
+}
+
 // 向会话追加一条操作步骤（读写均在应用层序列化 JSON）
 // 用 withSessionLock 串行化：「读出→改→写回」非原子，客户端连点会并发 PATCH，
 // 不排队的话后写的请求会覆盖先写的那条步骤，记录静默丢失。

@@ -232,7 +232,8 @@
     "backToDetail": "← Quay lại chi tiết thí nghiệm",
     "backToCatalog": "← Quay lại thư viện thí nghiệm",
     "labSuffix": "Bàn thí nghiệm",
-    "labHint": "Nhấp hoặc kéo hoá chất vào cốc, chọn “Phản ứng trộn” để quan sát hiện tượng; hoặc dùng “Hướng dẫn thí nghiệm” để tự động trình diễn từng bước."
+    "labHint": "Nhấp hoặc kéo hoá chất vào cốc, chọn “Phản ứng trộn” để quan sát hiện tượng; hoặc dùng “Hướng dẫn thí nghiệm” để tự động trình diễn từng bước.",
+    "emptyContainerTouch": "Chọn lượng dùng trên giá hóa chất rồi nhấn “Lấy mL” để thêm vào"
   },
   "locale": {
     "switchLabel": "Chuyển ngôn ngữ giao diện",
@@ -379,7 +380,13 @@
     "completed": "Đã hoàn thành",
     "inProgress": "Đang tiến hành",
     "startedAt": "Bắt đầu lúc {time}",
-    "viewReport": "Xem báo cáo"
+    "viewReport": "Xem báo cáo",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "pageOf": "Trang {page} / {pageCount} · Tổng {total} mục",
+    "emptyPrefix": "Chưa có phiên thí nghiệm, hãy vào",
+    "emptyLink": "Thư viện thí nghiệm",
+    "emptySuffix": "để bắt đầu một thí nghiệm."
   },
   "shelf": {
     "title": "Giá hóa chất",
@@ -437,6 +444,7 @@
     "view2d": "Sơ đồ 2D",
     "view3d": "Bàn thí nghiệm 3D",
     "view3dRefined": "Bàn thí nghiệm 3D ★",
-    "sceneHint": "Kéo để xoay · Cuộn để thu phóng"
+    "sceneHint": "Kéo để xoay · Cuộn để thu phóng",
+    "sceneHintTouch": "Một ngón xoay · Hai ngón thu phóng"
   }
 }
