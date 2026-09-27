@@ -153,7 +153,8 @@
     "backToDetail": "← Kembali ke Butiran Eksperimen",
     "backToCatalog": "← Kembali ke Katalog Eksperimen",
     "labSuffix": "Meja Makmal",
-    "labHint": "Klik atau seret reagen ke dalam bikar, “Tindak Balas Campuran” untuk memerhati fenomena; atau gunakan “Panduan Eksperimen” untuk demonstrasi langkah demi langkah secara automatik."
+    "labHint": "Klik atau seret reagen ke dalam bikar, “Tindak Balas Campuran” untuk memerhati fenomena; atau gunakan “Panduan Eksperimen” untuk demonstrasi langkah demi langkah secara automatik.",
+    "emptyContainerTouch": "Pilih isi di rak reagen, lalu ketik “Ambil mL” untuk menambah"
   },
   "lesson": {
     "prev": "Langkah Sebelum",
@@ -379,7 +380,13 @@
     "completed": "Selesai",
     "inProgress": "Sedang berjalan",
     "startedAt": "Dimulakan pada {time}",
-    "viewReport": "Lihat laporan"
+    "viewReport": "Lihat laporan",
+    "prev": "Sebelumnya",
+    "next": "Seterusnya",
+    "pageOf": "Halaman {page} / {pageCount} · Jumlah {total} rekod",
+    "emptyPrefix": "Tiada sesi makmal, pergi ke",
+    "emptyLink": "Perpustakaan Eksperimen",
+    "emptySuffix": "untuk memulakan eksperimen."
   },
   "shelf": {
     "title": "Rak reagen",
@@ -437,6 +444,7 @@
     "view2d": "Skema 2D",
     "view3d": "Meja Lab 3D",
     "view3dRefined": "Meja Lab 3D ★",
-    "sceneHint": "Seret untuk putar · Skrol untuk zum"
+    "sceneHint": "Seret untuk putar · Skrol untuk zum",
+    "sceneHintTouch": "Satu jari untuk putar · Dua jari untuk zum"
   }
 }

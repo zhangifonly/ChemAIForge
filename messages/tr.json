@@ -232,7 +232,8 @@
     "backToDetail": "← Deney Detayına Dön",
     "backToCatalog": "← Deney Kitaplığına Dön",
     "labSuffix": "Deney Tezgâhı",
-    "labHint": "Reaktifi kaba tıklayın veya sürükleyin, «Karıştır» ile tepkimeyi gözlemleyin; adım adım otomatik demo için «Deney Anlatımı»nı kullanabilirsiniz."
+    "labHint": "Reaktifi kaba tıklayın veya sürükleyin, «Karıştır» ile tepkimeyi gözlemleyin; adım adım otomatik demo için «Deney Anlatımı»nı kullanabilirsiniz.",
+    "emptyContainerTouch": "Reaktif rafından miktarı seçtikten sonra «mL al» düğmesine dokunun"
   },
   "locale": {
     "switchLabel": "Arayüz dilini değiştir",
@@ -379,7 +380,13 @@
     "completed": "Tamamlandı",
     "inProgress": "Devam ediyor",
     "startedAt": "{time} tarihinde başladı",
-    "viewReport": "Raporu görüntüle"
+    "viewReport": "Raporu görüntüle",
+    "prev": "Önceki",
+    "next": "Sonraki",
+    "pageOf": "Sayfa {page} / {pageCount} · Toplam {total} kayıt",
+    "emptyPrefix": "Henüz deney oturumu yok, ",
+    "emptyLink": "Deney Kitaplığı",
+    "emptySuffix": "bir deney başlatın."
   },
   "shelf": {
     "title": "Reaktif rafı",
@@ -437,6 +444,7 @@
     "view2d": "2B Şema",
     "view3d": "3B Deney Tezgâhı",
     "view3dRefined": "3B Deney Tezgâhı ★",
-    "sceneHint": "Döndürmek için sürükleyin · Yakınlaştırmak için kaydırın"
+    "sceneHint": "Döndürmek için sürükleyin · Yakınlaştırmak için kaydırın",
+    "sceneHintTouch": "Tek parmak: döndür · İki parmak: yakınlaştır"
   }
 }

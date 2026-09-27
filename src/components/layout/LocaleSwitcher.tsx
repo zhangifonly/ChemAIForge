@@ -66,10 +66,13 @@ export default function LocaleSwitcher() {
         // 用户找不到切换入口。改用品牌色描边与浅底，让它在导航栏里一眼可见。
         // 不用 bg-surface/60：--surface 是十六进制变量，Tailwind 的 /60 透明度修饰对它不生效，
         // 实际渲染成完全透明
-        className="flex items-center gap-2 rounded-full border border-brand-500/40 bg-brand-500/10 px-3.5 py-1.5 text-sm font-medium text-brand-700 transition-colors hover:border-brand-500/70 hover:bg-brand-500/15 dark:text-brand-200"
+        className="flex items-center gap-1.5 rounded-full border border-brand-500/40 bg-brand-500/10 px-3 py-1.5 text-sm font-medium sm:gap-2 sm:px-3.5 text-brand-700 transition-colors hover:border-brand-500/70 hover:bg-brand-500/15 dark:text-brand-200"
       >
         <span aria-hidden className="text-base leading-none">🌐</span>
-        <span>{current.nativeName}</span>
+        {/* 手机上只显示语言代码（如 RU、HY）：「Հայերեն」「ქართული」这类自称名
+            加上图标与箭头要一百多像素，挤掉导航链接。面板里仍列全名 */}
+        <span className="uppercase sm:hidden">{current.code}</span>
+        <span className="hidden sm:inline">{current.nativeName}</span>
         <span aria-hidden className="hidden text-xs opacity-60 sm:inline">
           ▾
         </span>
@@ -158,11 +161,11 @@ function Group({
 }) {
   return (
     <div className="py-1">
-      <p className="px-3 pb-1 pt-1.5 text-[10px] font-medium uppercase tracking-wider text-foreground/65">
+      <p className="px-3 pb-1 pt-1.5 text-[11px] sm:text-[10px] font-medium uppercase tracking-wider text-foreground/65">
         {label}
       </p>
       {hint ? (
-        <p className="px-3 pb-1 text-[10px] leading-snug text-foreground/65">{hint}</p>
+        <p className="px-3 pb-1 text-[11px] sm:text-[10px] leading-snug text-foreground/65">{hint}</p>
       ) : null}
       {children}
     </div>
@@ -200,7 +203,7 @@ function Option({
       <span>{name}</span>
       {/* 英文名并列显示：自称名认不出时还有个参照 */}
       {english !== name ? (
-        <span className="text-[10px] text-foreground/65">{english}</span>
+        <span className="text-[11px] sm:text-[10px] text-foreground/65">{english}</span>
       ) : null}
       {active ? (
         <span aria-hidden className="ms-auto text-brand-500">

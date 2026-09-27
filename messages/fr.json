@@ -134,7 +134,8 @@
     "backToDetail": "← Retour aux détails de l'expérience",
     "backToCatalog": "← Retour au catalogue",
     "labSuffix": "Paillasse",
-    "labHint": "Cliquez ou faites glisser les réactifs dans le bécher, puis «Réaction de mélange» pour observer les phénomènes ; ou utilisez «Explication guidée» pour une démonstration automatique étape par étape."
+    "labHint": "Cliquez ou faites glisser les réactifs dans le bécher, puis «Réaction de mélange» pour observer les phénomènes ; ou utilisez «Explication guidée» pour une démonstration automatique étape par étape.",
+    "emptyContainerTouch": "Sélectionnez le volume dans le portoir, puis appuyez sur «Prélever mL»"
   },
   "lesson": {
     "prev": "Étape précédente",
@@ -315,7 +316,13 @@
     "completed": "Terminée",
     "inProgress": "En cours",
     "startedAt": "Démarrée le {time}",
-    "viewReport": "Voir le rapport"
+    "viewReport": "Voir le rapport",
+    "prev": "Page précédente",
+    "next": "Page suivante",
+    "pageOf": "Page {page} / {pageCount} · {total} entrées",
+    "emptyPrefix": "Aucune session, rendez-vous à la",
+    "emptyLink": "Bibliothèque d'expériences",
+    "emptySuffix": "pour démarrer une expérience."
   },
   "titration": {
     "stopcock": "Ouverture du robinet",
@@ -355,7 +362,8 @@
     "view2d": "Vue 2D",
     "view3d": "Paillasse 3D",
     "view3dRefined": "Paillasse 3D ★",
-    "sceneHint": "Glisser pour pivoter · molette pour zoomer"
+    "sceneHint": "Glisser pour pivoter · molette pour zoomer",
+    "sceneHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer"
   },
   "category": {
     "ACID_BASE": "Réactions acido-basiques",

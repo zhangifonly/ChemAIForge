@@ -153,7 +153,8 @@
     "backToDetail": "← 返回实验详情",
     "backToCatalog": "← 返回实验库",
     "labSuffix": "实验台",
-    "labHint": "点击或拖拽试剂入杯、「混合反应」观察现象；也可用「实验讲解」自动分步演示。"
+    "labHint": "点击或拖拽试剂入杯、「混合反应」观察现象；也可用「实验讲解」自动分步演示。",
+    "emptyContainerTouch": "在试剂架选好用量后点「取 mL」加入"
   },
   "lesson": {
     "prev": "上一步",
@@ -379,7 +380,13 @@
     "completed": "已完成",
     "inProgress": "进行中",
     "startedAt": "开始于 {time}",
-    "viewReport": "查看报告"
+    "viewReport": "查看报告",
+    "prev": "上一页",
+    "next": "下一页",
+    "pageOf": "第 {page} / {pageCount} 页 · 共 {total} 条",
+    "emptyPrefix": "暂无实验会话，去",
+    "emptyLink": "实验库",
+    "emptySuffix": "开始一次实验吧。"
   },
   "shelf": {
     "title": "试剂架",
@@ -437,6 +444,7 @@
     "view2d": "2D 示意",
     "view3d": "3D 实验台",
     "view3dRefined": "3D 实验台 ★",
-    "sceneHint": "拖拽旋转 · 滚轮缩放"
+    "sceneHint": "拖拽旋转 · 滚轮缩放",
+    "sceneHintTouch": "单指旋转 · 双指缩放"
   }
 }

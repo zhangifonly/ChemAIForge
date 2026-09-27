@@ -34,7 +34,7 @@ export function SceneShell({
   autoRotate = true,
   minDistance = 3.5,
   maxDistance = 9,
-  className = "h-[520px]",
+  className = "h-[360px] sm:h-[440px] lg:h-[520px]",
   hint,
   fov = 40,
 }: SceneShellProps) {

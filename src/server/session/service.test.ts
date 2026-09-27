@@ -24,6 +24,7 @@ import {
   createSession,
   getSession,
   listSessionsByUser,
+  listSessionsPage,
   saveReport,
 } from "./service";
 import { pendingLockCount } from "./serialize";
@@ -274,5 +275,45 @@ describe("并发追加的串行化", () => {
     // 清理挂在 next 的 then 上，让出一轮微任务再断言
     await new Promise((r) => setTimeout(r, 0));
     expect(pendingLockCount()).toBe(0);
+  });
+});
+
+describe("listSessionsPage", () => {
+  // 25 个有操作的会话，时间递减；外加 1 个空会话，验证分页前已剔除
+  const active = Array.from({ length: 25 }, (_, i) =>
+    row({
+      id: `s${i}`,
+      startedAt: new Date(Date.UTC(2026, 0, 1, 0, 25 - i)),
+      steps: JSON.stringify([{ action: "add", at: "2026-01-01T00:00:00.000Z" }]),
+    }),
+  );
+
+  beforeEach(() => {
+    findMany.mockResolvedValue([...active, row({ id: "empty" })]);
+  });
+
+  it("按页切片，并报告总数与页数（空会话不计入）", async () => {
+    const r = await listSessionsPage("u", 1, 10);
+    expect(r.items.map((s) => s.id)).toEqual(active.slice(0, 10).map((x) => x.id));
+    expect(r.total).toBe(25);
+    expect(r.pageCount).toBe(3);
+  });
+
+  it("最后一页只含余下的条目", async () => {
+    const r = await listSessionsPage("u", 3, 10);
+    expect(r.items).toHaveLength(5);
+    expect(r.page).toBe(3);
+  });
+
+  it("越界或非法页码夹到合法范围，而不是返回空页", async () => {
+    expect((await listSessionsPage("u", 999, 10)).page).toBe(3);
+    expect((await listSessionsPage("u", 0, 10)).page).toBe(1);
+    expect((await listSessionsPage("u", Number.NaN, 10)).page).toBe(1);
+  });
+
+  it("没有会话时页数为 1、列表为空", async () => {
+    findMany.mockResolvedValue([]);
+    const r = await listSessionsPage("u", 1, 10);
+    expect(r).toMatchObject({ items: [], total: 0, page: 1, pageCount: 1 });
   });
 });

@@ -232,7 +232,8 @@
     "backToDetail": "← Ku laabo faahfaahinta tijaabada",
     "backToCatalog": "← Ku laabo maktabadda tijaabada",
     "labSuffix": "Miiska Shaybaarka",
-    "labHint": "Guji ama jiid walxaha koobka, “Isku-darida falcelinta” si aad u daagtid; ama isticmaal “Sharaxaada tijaabada” si talaabo-talaabow ah."
+    "labHint": "Guji ama jiid walxaha koobka, “Isku-darida falcelinta” si aad u daagtid; ama isticmaal “Sharaxaada tijaabada” si talaabo-talaabow ah.",
+    "emptyContainerTouch": "Ka dooro xaddiga ku jira xaanadda walxaha ka dibna taabo «Qaado mL» si aad u gasho"
   },
   "locale": {
     "switchLabel": "Beddel luqadda xaaladda",
@@ -379,7 +380,13 @@
     "completed": "La dhammaystiray",
     "inProgress": "Socda",
     "startedAt": "Bilaabay {time}",
-    "viewReport": "Arag warbixinta"
+    "viewReport": "Arag warbixinta",
+    "prev": "Bogga hore",
+    "next": "Bogga xiga",
+    "pageOf": "Bog {page} / {pageCount} · Wadarta {total}",
+    "emptyPrefix": "Wax falanqayn ah ma jiraan, aad",
+    "emptyLink": "Maktabadda Tijaabada",
+    "emptySuffix": "si aad tijaabo u bilowdo."
   },
   "shelf": {
     "title": "Raafka daroogooyinka",
@@ -437,6 +444,7 @@
     "view2d": "Muuqaal 2D",
     "view3d": "Miiska Shaybaarka 3D",
     "view3dRefined": "Miiska Shaybaarka 3D ★",
-    "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso"
+    "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso",
+    "sceneHintTouch": "Farta hal gelin si aad wax u wareejiso · Laba far si aad u weyneyso"
   }
 }

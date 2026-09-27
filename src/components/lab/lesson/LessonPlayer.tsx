@@ -312,8 +312,8 @@ export function LessonPlayer({
             type="button"
             onClick={() => go(i)}
             title={`${s.phase} · ${s.title}`}
-            className={`h-1.5 flex-1 rounded-full transition-colors ${
-              i <= index ? "bg-brand-500" : "bg-foreground/12 hover:bg-foreground/25"
+            className={`relative h-5 flex-1 rounded-full before:absolute before:inset-x-0 before:top-1/2 before:h-1.5 before:-translate-y-1/2 before:rounded-full before:transition-colors ${
+              i <= index ? "before:bg-brand-500" : "before:bg-foreground/12 hover:before:bg-foreground/25"
             }`}
           />
         ))}
@@ -350,7 +350,7 @@ export function LessonPlayer({
       ) : null}
       {/* 旁遮普语语音来自 CC-BY-SA 4.0 模型，许可要求署名（见 THIRD_PARTY_NOTICES.md） */}
       {locale === "pa" ? (
-        <p className="text-center text-[10px] text-foreground/65">
+        <p className="text-center text-[11px] sm:text-[10px] text-foreground/65">
           Voice: VITS Open Bible — Punjabi (CC BY-SA 4.0)
         </p>
       ) : null}
@@ -362,7 +362,7 @@ export function LessonPlayer({
         <button
           type="button"
           onClick={() => setMuted((m) => !m)}
-          className="flex items-center gap-1 rounded-full border border-foreground/15 px-2.5 py-1 text-foreground/70 transition-colors hover:border-brand-400/50 hover:bg-brand-500/5"
+          className="flex items-center gap-1 rounded-full border border-foreground/15 px-3 py-1.5 text-foreground/70 sm:px-2.5 sm:py-1 transition-colors hover:border-brand-400/50 hover:bg-brand-500/5"
           title={muted ? t("voiceOn") : t("voiceOff")}
         >
           {muted ? t("muted") : t("voiceLabel")}
@@ -377,7 +377,7 @@ export function LessonPlayer({
               key={v}
               type="button"
               onClick={() => setVoice(v)}
-              className={`rounded-full px-2 py-0.5 transition-colors ${
+              className={`rounded-full px-2.5 py-1.5 transition-colors sm:px-2 sm:py-0.5 ${
                 voice === v
                   ? "bg-brand-500 text-white"
                   : "text-foreground/65 hover:text-foreground/80"
@@ -393,7 +393,7 @@ export function LessonPlayer({
               key={s}
               type="button"
               onClick={() => setRate(s)}
-              className={`rounded-full px-2 py-0.5 tabular-nums transition-colors ${
+              className={`rounded-full px-2.5 py-1.5 tabular-nums transition-colors sm:px-2 sm:py-0.5 ${
                 rate === s
                   ? "bg-brand-500 text-white"
                   : "text-foreground/65 hover:text-foreground/80"

@@ -134,7 +134,8 @@
     "backToDetail": "← Zurück zur Experimentübersicht",
     "backToCatalog": "← Zurück zur Experimentbibliothek",
     "labSuffix": "Labortisch",
-    "labHint": "Reagenzien per Klick oder Drag & Drop in den Becher geben, mit „Reaktion starten“ das Ergebnis beobachten; oder „Versuchsanleitung“ für eine automatische Schritt-für-Schritt-Demonstration nutzen."
+    "labHint": "Reagenzien per Klick oder Drag & Drop in den Becher geben, mit „Reaktion starten“ das Ergebnis beobachten; oder „Versuchsanleitung“ für eine automatische Schritt-für-Schritt-Demonstration nutzen.",
+    "emptyContainerTouch": "Menge im Reagenzregal wählen, dann „… mL entnehmen“ tippen"
   },
   "lesson": {
     "prev": "Vorheriger Schritt",
@@ -315,7 +316,13 @@
     "completed": "Abgeschlossen",
     "inProgress": "In Bearbeitung",
     "startedAt": "Gestartet um {time}",
-    "viewReport": "Bericht anzeigen"
+    "viewReport": "Bericht anzeigen",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "pageOf": "Seite {page} / {pageCount} · {total} Einträge",
+    "emptyPrefix": "Keine Experimentsitzungen vorhanden. Zur ",
+    "emptyLink": "Experimentbibliothek",
+    "emptySuffix": "wechseln und ein Experiment starten."
   },
   "titration": {
     "stopcock": "Hahnöffnung",
@@ -355,7 +362,8 @@
     "view2d": "2D-Ansicht",
     "view3d": "3D-Experimentiertisch",
     "view3dRefined": "3D-Experimentiertisch ★",
-    "sceneHint": "Ziehen zum Drehen · Scrollen zum Zoomen"
+    "sceneHint": "Ziehen zum Drehen · Scrollen zum Zoomen",
+    "sceneHintTouch": "Ein Finger: Drehen · Zwei Finger: Zoomen"
   },
   "category": {
     "ACID_BASE": "Säure-Base-Reaktionen",

@@ -106,7 +106,7 @@ export function ProcessChart({ trace }: { trace: TracePoint[] }) {
                 <line x1={PAD.l} y1={y} x2={W - PAD.r} y2={y}
                   stroke="currentColor" strokeOpacity={0.08} />
                 <text x={PAD.l - 5} y={y + 3} textAnchor="end"
-                  className="fill-current text-[9px] opacity-40 tabular-nums">
+                  className="fill-current text-[11px] sm:text-[9px] opacity-40 tabular-nums">
                   {v.toFixed(0)}
                 </text>
               </g>
@@ -133,7 +133,7 @@ export function ProcessChart({ trace }: { trace: TracePoint[] }) {
               r={3.5} fill={ch.color} />
           ) : null}
           <text x={W - PAD.r} y={H - 6} textAnchor="end"
-            className="fill-current text-[9px] opacity-40 tabular-nums">
+            className="fill-current text-[11px] sm:text-[9px] opacity-40 tabular-nums">
             {tMax.toFixed(0)} s
           </text>
         </svg>

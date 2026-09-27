@@ -232,7 +232,8 @@
     "backToDetail": "← Rudi kwa Maelezo ya Majaribio",
     "backToCatalog": "← Rudi kwenye Maktaba ya Majaribio",
     "labSuffix": "Meza ya Majaribio",
-    "labHint": "Bonyeza au buruta vitendanishi kwenye kikombe, “Mchanganyiko wa Majibu” uangalie matukio; unaweza pia kutumia “Maelezo ya Majaribio” kuonyesha hatua kwa hatua kiotomatiki."
+    "labHint": "Bonyeza au buruta vitendanishi kwenye kikombe, “Mchanganyiko wa Majibu” uangalie matukio; unaweza pia kutumia “Maelezo ya Majaribio” kuonyesha hatua kwa hatua kiotomatiki.",
+    "emptyContainerTouch": "Chagua kiasi kwenye rafu ya vitendanishi kisha gonga「Chukua mL」kuongeza"
   },
   "locale": {
     "switchLabel": "Badilisha lugha ya kiolesura",
@@ -379,7 +380,13 @@
     "completed": "Imekamilika",
     "inProgress": "Inaendelea",
     "startedAt": "Ilianza saa {time}",
-    "viewReport": "Angalia ripoti"
+    "viewReport": "Angalia ripoti",
+    "prev": "Kurasa iliyotangulia",
+    "next": "Kurasa inayofuata",
+    "pageOf": "Ukurasa {page} / {pageCount} · Jumla {total}",
+    "emptyPrefix": "Hakuna kipindi cha maabara, nenda",
+    "emptyLink": "Maktaba ya Majaribio",
+    "emptySuffix": "uanze jaribio."
   },
   "shelf": {
     "title": "Rafu ya vitendanishi",
@@ -437,6 +444,7 @@
     "view2d": "Mchoro wa 2D",
     "view3d": "Meza ya Maabara ya 3D",
     "view3dRefined": "Meza ya Maabara ya 3D ★",
-    "sceneHint": "Buruta kuzungusha · Gurudumu kukuza"
+    "sceneHint": "Buruta kuzungusha · Gurudumu kukuza",
+    "sceneHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza"
   }
 }

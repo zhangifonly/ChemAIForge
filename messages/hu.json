@@ -153,7 +153,8 @@
     "backToDetail": "← Vissza a kísérlet részleteihez",
     "backToCatalog": "← Vissza a kísérletárhoz",
     "labSuffix": "Laborasztal",
-    "labHint": "Kattintson vagy húzzon reagenst a pohárba, majd a „Keverési reakció” gombbal figyelje meg a jelenségeket; vagy használja a „Kísérleti magyarázat” funkciót az automatikus lépésenkénti bemutatóhoz."
+    "labHint": "Kattintson vagy húzzon reagenst a pohárba, majd a „Keverési reakció” gombbal figyelje meg a jelenségeket; vagy használja a „Kísérleti magyarázat” funkciót az automatikus lépésenkénti bemutatóhoz.",
+    "emptyContainerTouch": "Válasszon mennyiséget a reagensállványon, majd érintse meg a „Bevitel mL” gombot"
   },
   "lesson": {
     "prev": "Előző lépés",
@@ -379,7 +380,13 @@
     "completed": "Befejezve",
     "inProgress": "Folyamatban",
     "startedAt": "Kezdés: {time}",
-    "viewReport": "Jelentés megtekintése"
+    "viewReport": "Jelentés megtekintése",
+    "prev": "Előző oldal",
+    "next": "Következő oldal",
+    "pageOf": "{page} / {pageCount}. oldal · összesen {total} bejegyzés",
+    "emptyPrefix": "Nincs kísérleti munkamenet – látogasson el a",
+    "emptyLink": "kísérletkönyvtárba",
+    "emptySuffix": "és kezdjen egy kísérletet."
   },
   "shelf": {
     "title": "Vegyszerállvány",
@@ -437,6 +444,7 @@
     "view2d": "2D nézet",
     "view3d": "3D munkaasztal",
     "view3dRefined": "3D munkaasztal ★",
-    "sceneHint": "Húzással forgatható · Görgővel nagyítható"
+    "sceneHint": "Húzással forgatható · Görgővel nagyítható",
+    "sceneHintTouch": "Egy ujjal forgatás · két ujjal nagyítás"
   }
 }

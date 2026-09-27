@@ -232,7 +232,8 @@
     "backToDetail": "← Späť na detail experimentu",
     "backToCatalog": "← Späť do katalógu experimentov",
     "labSuffix": "Pracovný stôl",
-    "labHint": "Kliknite alebo presuňte reagent do pohára, spustite „Miešanie reakcie“ a sledujte javy; alebo použite „Výklad experimentu“ na automatické krokovanie."
+    "labHint": "Kliknite alebo presuňte reagent do pohára, spustite „Miešanie reakcie“ a sledujte javy; alebo použite „Výklad experimentu“ na automatické krokovanie.",
+    "emptyContainerTouch": "Vyberte množstvo na stojane a stlačte „Pridať mL“"
   },
   "locale": {
     "switchLabel": "Prepnúť jazyk rozhrania",
@@ -379,7 +380,13 @@
     "completed": "Dokončené",
     "inProgress": "Prebieha",
     "startedAt": "Začaté {time}",
-    "viewReport": "Zobraziť správu"
+    "viewReport": "Zobraziť správu",
+    "prev": "Predchádzajúca",
+    "next": "Nasledujúca",
+    "pageOf": "Strana {page} / {pageCount} · Celkom {total}",
+    "emptyPrefix": "Žiadne experimentálne sedenia. Prejdite do",
+    "emptyLink": "Knižnice experimentov",
+    "emptySuffix": "a spustite experiment."
   },
   "shelf": {
     "title": "Regál s reagenciami",
@@ -437,6 +444,7 @@
     "view2d": "2D schéma",
     "view3d": "3D pracovisko",
     "view3dRefined": "3D pracovisko ★",
-    "sceneHint": "Ťahom otočte · kolieskom priblížte"
+    "sceneHint": "Ťahom otočte · kolieskom priblížte",
+    "sceneHintTouch": "Otočenie jedným prstom · Priblíženie dvoma prstami"
   }
 }

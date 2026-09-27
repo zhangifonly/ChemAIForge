@@ -232,7 +232,8 @@
     "backToDetail": "← Bumalik sa Detalye ng Eksperimento",
     "backToCatalog": "← Bumalik sa Katalogo ng Eksperimento",
     "labSuffix": "Bench ng Lab",
-    "labHint": "I-click o i-drag ang reagent sa baso, “Paghalo-Reaksyon” para mapansin ang phenomena; o gamitin ang “Paliwanag ng Eksperimento” para sa awtomatikong hakbang-hakbang na demo."
+    "labHint": "I-click o i-drag ang reagent sa baso, “Paghalo-Reaksyon” para mapansin ang phenomena; o gamitin ang “Paliwanag ng Eksperimento” para sa awtomatikong hakbang-hakbang na demo.",
+    "emptyContainerTouch": "Pumili ng dami sa reagent rack at pindutin ang «Kumuha ng mL» para idagdag"
   },
   "locale": {
     "switchLabel": "Palitan ang wika ng interface",
@@ -379,7 +380,13 @@
     "completed": "Natapos na",
     "inProgress": "Isinasagawa",
     "startedAt": "Nagsimula sa {time}",
-    "viewReport": "Tingnan ang ulat"
+    "viewReport": "Tingnan ang ulat",
+    "prev": "Nakaraan",
+    "next": "Susunod",
+    "pageOf": "Pahina {page} / {pageCount} · {total} kabuuang tala",
+    "emptyPrefix": "Wala pang eksperimentong sesyon, pumunta sa",
+    "emptyLink": "Aklatan ng Eksperimento",
+    "emptySuffix": "para magsimula ng eksperimento."
   },
   "shelf": {
     "title": "Istante ng reagent",
@@ -437,6 +444,7 @@
     "view2d": "2D Diagram",
     "view3d": "3D Lab Table",
     "view3dRefined": "3D Lab Table ★",
-    "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom"
+    "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom",
+    "sceneHintTouch": "Isang daliri para i-rotate · Dalawang daliri para i-zoom"
   }
 }

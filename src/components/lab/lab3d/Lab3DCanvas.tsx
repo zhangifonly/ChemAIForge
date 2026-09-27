@@ -227,13 +227,15 @@ function Lab3DGeneric({
     <div className="grid gap-6 lg:grid-cols-[248px_minmax(0,1fr)]">
       {/* 试剂架 + 装置操作。试剂架与 2D 共用：原先这里是一排纯文字按钮，
           点一下按默认量整瓶倒入，切到 3D 就没了取用量与瓶签规格 */}
-      <aside className="flex flex-col gap-2">
+      <aside className="flex min-w-0 flex-col gap-2">
         <ReagentShelf
           entries={shelfEntries(reagents, terms)}
           contents={contents}
           onTake={(e, dose) => addReagent(resolveSubstance(e.label), dose)}
         />
-        <div className="mt-2 flex flex-col gap-2">
+        {/* 手机上两列网格：竖排 5 个整宽按钮会再把 3D 画布往下推 300px；
+            宽屏侧栏只有 248px，仍单列 */}
+        <div className="mt-2 grid grid-cols-2 gap-2 lg:flex lg:flex-col">
           {/* 装置开关：电解 / 原电池 / 焰色 / 水浴 / 蒸馏 / 过滤 都靠"启动装置"驱动现象 */}
           {needsSwitch && (
             <button
@@ -247,7 +249,7 @@ function Lab3DGeneric({
                 if (HEATING_RIGS.has(rigKind)) setTemperature(on ? HEAT_THRESHOLD + 20 : 25);
               }}
               disabled={contents.length < 1}
-              className="rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
+              className="col-span-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-3 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40 lg:py-2"
             >
               {energized ? offLabel : onLabel}
             </button>
@@ -257,7 +259,7 @@ function Lab3DGeneric({
               type="button"
               onClick={mix}
               disabled={contents.length < 2}
-              className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
+              className="col-span-2 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40 lg:py-2"
             >
               {t("mix")}
             </button>
@@ -303,7 +305,7 @@ function Lab3DGeneric({
           {completed && sessionId ? (
             <Link
               href={`/sessions/${sessionId}/report`}
-              className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow"
+              className="col-span-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-3 py-2.5 text-center text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow lg:py-2"
             >
               {t("viewReport")}
             </Link>

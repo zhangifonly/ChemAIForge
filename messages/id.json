@@ -153,7 +153,8 @@
     "backToDetail": "← Kembali ke Detail Percobaan",
     "backToCatalog": "← Kembali ke Katalog Percobaan",
     "labSuffix": "Meja Lab",
-    "labHint": "Klik atau seret reagen ke dalam gelas, lalu “Campur Reaksi” untuk mengamati fenomena; atau gunakan “Panduan Percobaan” untuk demonstrasi langkah demi langkah otomatis."
+    "labHint": "Klik atau seret reagen ke dalam gelas, lalu “Campur Reaksi” untuk mengamati fenomena; atau gunakan “Panduan Percobaan” untuk demonstrasi langkah demi langkah otomatis.",
+    "emptyContainerTouch": "Pilih takaran di rak reagen lalu ketuk “Ambil mL” untuk menambahkan"
   },
   "lesson": {
     "prev": "Langkah Sebelumnya",
@@ -379,7 +380,13 @@
     "completed": "Selesai",
     "inProgress": "Sedang berlangsung",
     "startedAt": "Dimulai pada {time}",
-    "viewReport": "Lihat laporan"
+    "viewReport": "Lihat laporan",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya",
+    "pageOf": "Hal. {page} / {pageCount} · Total {total} entri",
+    "emptyPrefix": "Belum ada sesi eksperimen, buka",
+    "emptyLink": "Perpustakaan Eksperimen",
+    "emptySuffix": "untuk memulai eksperimen."
   },
   "shelf": {
     "title": "Rak Reagen",
@@ -437,6 +444,7 @@
     "view2d": "Diagram 2D",
     "view3d": "Meja Lab 3D",
     "view3dRefined": "Meja Lab 3D ★",
-    "sceneHint": "Seret untuk memutar · Gulir untuk memperbesar"
+    "sceneHint": "Seret untuk memutar · Gulir untuk memperbesar",
+    "sceneHintTouch": "Satu jari untuk memutar · Dua jari untuk memperbesar"
   }
 }

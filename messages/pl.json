@@ -153,7 +153,8 @@
     "backToDetail": "← Wróć do szczegółów doświadczenia",
     "backToCatalog": "← Wróć do biblioteki doświadczeń",
     "labSuffix": "Stanowisko laboratoryjne",
-    "labHint": "Kliknij lub przeciągnij odczynnik do zlewki i wybierz «Reakcja mieszania», aby obserwować zjawiska; możesz też użyć «Objaśnienia doświadczenia» do automatycznej prezentacji krok po kroku."
+    "labHint": "Kliknij lub przeciągnij odczynnik do zlewki i wybierz «Reakcja mieszania», aby obserwować zjawiska; możesz też użyć «Objaśnienia doświadczenia» do automatycznej prezentacji krok po kroku.",
+    "emptyContainerTouch": "Wybierz ilość na stojaku odczynników, a następnie stuknij „Pobierz mL”"
   },
   "lesson": {
     "prev": "Poprzedni krok",
@@ -379,7 +380,13 @@
     "completed": "Zakończono",
     "inProgress": "W toku",
     "startedAt": "Rozpoczęto {time}",
-    "viewReport": "Zobacz raport"
+    "viewReport": "Zobacz raport",
+    "prev": "Poprzednia",
+    "next": "Następna",
+    "pageOf": "Strona {page} / {pageCount} · Łącznie: {total}",
+    "emptyPrefix": "Brak sesji laboratoryjnych — przejdź do",
+    "emptyLink": "Biblioteki eksperymentów",
+    "emptySuffix": "i rozpocznij eksperyment."
   },
   "shelf": {
     "title": "Półka odczynników",
@@ -437,6 +444,7 @@
     "view2d": "Schemat 2D",
     "view3d": "Stół laboratoryjny 3D",
     "view3dRefined": "Stół laboratoryjny 3D ★",
-    "sceneHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć"
+    "sceneHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć",
+    "sceneHintTouch": "Jeden palec: obrót · Dwa palce: zoom"
   }
 }

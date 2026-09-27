@@ -232,7 +232,8 @@
     "backToDetail": "← Назад на детаље експеримента",
     "backToCatalog": "← Назад на каталог",
     "labSuffix": "Радни сто",
-    "labHint": "Кликните или превуците реагенс у чашу, па изаберите „Реакција мешањем“ да посматрате; или користите „Водич кроз експеримент“ за аутоматску демонстрацију корак по корак."
+    "labHint": "Кликните или превуците реагенс у чашу, па изаберите „Реакција мешањем“ да посматрате; или користите „Водич кроз експеримент“ за аутоматску демонстрацију корак по корак.",
+    "emptyContainerTouch": "Izaberite količinu na polici reagenasa, zatim pritisnite „Uzmi mL“"
   },
   "locale": {
     "switchLabel": "Промени језик интерфејса",
@@ -379,7 +380,13 @@
     "completed": "Završeno",
     "inProgress": "U toku",
     "startedAt": "Započeto {time}",
-    "viewReport": "Prikaži izveštaj"
+    "viewReport": "Prikaži izveštaj",
+    "prev": "Prethodna",
+    "next": "Sledeća",
+    "pageOf": "Strana {page} / {pageCount} · ukupno {total}",
+    "emptyPrefix": "Nema eksperimentalnih sesija — idite na",
+    "emptyLink": "Biblioteku eksperimenata",
+    "emptySuffix": "i pokrenite eksperiment."
   },
   "shelf": {
     "title": "Polica sa reagensima",
@@ -437,6 +444,7 @@
     "view2d": "2D prikaz",
     "view3d": "3D radni sto",
     "view3dRefined": "3D radni sto ★",
-    "sceneHint": "Prevucite za rotaciju · Skrolujte za zum"
+    "sceneHint": "Prevucite za rotaciju · Skrolujte za zum",
+    "sceneHintTouch": "Jedan prst: rotacija · Dva prsta: zum"
   }
 }

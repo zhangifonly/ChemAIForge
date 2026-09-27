@@ -153,7 +153,8 @@
     "backToDetail": "← Torna ai dettagli dell'esperimento",
     "backToCatalog": "← Torna al catalogo esperimenti",
     "labSuffix": "Banco di laboratorio",
-    "labHint": "Fai clic o trascina i reagenti nel beaker, usa «Reazione di miscelazione» per osservare i fenomeni; oppure usa «Spiegazione guidata» per la dimostrazione automatica passo per passo."
+    "labHint": "Fai clic o trascina i reagenti nel beaker, usa «Reazione di miscelazione» per osservare i fenomeni; oppure usa «Spiegazione guidata» per la dimostrazione automatica passo per passo.",
+    "emptyContainerTouch": "Seleziona la quantità nel rack dei reagenti, poi tocca «Preleva mL» per aggiungere"
   },
   "lesson": {
     "prev": "Passo precedente",
@@ -379,7 +380,13 @@
     "completed": "Completato",
     "inProgress": "In corso",
     "startedAt": "Iniziato il {time}",
-    "viewReport": "Visualizza rapporto"
+    "viewReport": "Visualizza rapporto",
+    "prev": "Pagina precedente",
+    "next": "Pagina successiva",
+    "pageOf": "Pagina {page} / {pageCount} · {total} elementi",
+    "emptyPrefix": "Nessuna sessione di laboratorio. Vai alla",
+    "emptyLink": "Libreria esperimenti",
+    "emptySuffix": "per iniziare un esperimento."
   },
   "shelf": {
     "title": "Scaffale reagenti",
@@ -437,6 +444,7 @@
     "view2d": "Schema 2D",
     "view3d": "Banco 3D",
     "view3dRefined": "Banco 3D ★",
-    "sceneHint": "Trascina per ruotare · Scorri per ingrandire"
+    "sceneHint": "Trascina per ruotare · Scorri per ingrandire",
+    "sceneHintTouch": "Un dito per ruotare · Due dita per ingrandire"
   }
 }
