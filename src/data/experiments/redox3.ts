@@ -30,8 +30,10 @@ export const redox3Experiments: ExperimentSeed[] = [
     apparatus: ["圆底烧瓶", "分液漏斗", "集气瓶", "导管", "铁架台"],
     objectives: ["比较高锰酸钾与二氧化锰的氧化性强弱", "掌握无需加热的制氯气方案", "规范处理有毒尾气"],
     estimatedMinutes: 35,
+    // heated 必须是 false：本实验的看点就是"高锰酸钾氧化性强到常温即可放氯气"，
+    // 标题与学习目标都写着无需加热。标成需加热等于把这个对比实验的结论讲反了
     probe: { reagentKeys: ["高锰酸钾", "浓盐酸"],
-      heated: true, expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
+      expect: { reacted: true, gas: true, colorChange: true, thermal: "exothermic" } },
   },
   {
     slug: "kclo3-mno2-oxygen",
@@ -79,7 +81,7 @@ export const redox3Experiments: ExperimentSeed[] = [
     category: C.REDOX,
     difficulty: D.HARD,
     reagents: ["氢气", "氯气"],
-    apparatus: ["集气瓶", "尖嘴导管", "铁架台"],
+    apparatus: ["集气瓶", "尖嘴导管", "铁架台", "火柴"],
     objectives: ["观察苍白色火焰与瓶口白雾", "理解光照下该反应会爆炸的危险性", "联系工业合成盐酸的工艺"],
     estimatedMinutes: 25,
     probe: { reagentKeys: ["氢气", "氯气"],
@@ -201,7 +203,7 @@ export const redox3Experiments: ExperimentSeed[] = [
     category: C.REDOX,
     difficulty: D.EASY,
     reagents: ["甲烷", "氧气", "石灰水"],
-    apparatus: ["尖嘴导管", "烧杯", "集气瓶", "铁架台"],
+    apparatus: ["尖嘴导管", "烧杯", "集气瓶", "铁架台", "火柴"],
     objectives: ["观察甲烷燃烧的淡蓝色火焰", "用两步检验确认产物为 CO₂ 与 H₂O", "理解烃完全燃烧的通式"],
     estimatedMinutes: 25,
     probe: { reagentKeys: ["甲烷", "氧气"],
@@ -214,7 +216,7 @@ export const redox3Experiments: ExperimentSeed[] = [
     category: C.REDOX,
     difficulty: D.MEDIUM,
     reagents: ["一氧化碳", "氧气", "石灰水"],
-    apparatus: ["尖嘴导管", "集气瓶", "烧杯", "铁架台"],
+    apparatus: ["尖嘴导管", "集气瓶", "烧杯", "铁架台", "火柴"],
     objectives: ["观察一氧化碳燃烧的蓝色火焰", "验证产物为二氧化碳", "认识一氧化碳中毒的机理与防范"],
     estimatedMinutes: 25,
     probe: { reagentKeys: ["一氧化碳", "氧气"],

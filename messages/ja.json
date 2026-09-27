@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "メインコンテンツへスキップ"
+  },
+  "dataTable": {
+    "title": "データ記録表",
+    "emptyHint": "「読み取り」をクリックして測定値を記録",
+    "recorded": "このグループの記録：{count} 回",
+    "recordedNeedMore": "このグループの記録：{count} 回（並行測定は最低 2 回必要）",
+    "emptyBody": "定量実験では繰り返し測定して平均をとる。「読み取り」をクリックするたびに 1 行追加されます。",
+    "colIndex": "番号",
+    "colTime": "時刻 / s",
+    "colTemperature": "温度 / ℃",
+    "colPh": "pH",
+    "colVolume": "体積 / mL",
+    "rowMean": "グループ平均",
+    "rowDeviation": "相対偏差",
+    "worstDeviation": "最大相対偏差 {value}%：",
+    "verdictGood": "データの一致性は良好です。計算に使用できます。",
+    "verdictFair": "偏差がやや大きいです。読み取り時の視線が目盛りと平行か、系が安定しているか確認してください。",
+    "verdictPoor": "偏差が大きすぎます。原因を特定してから並行測定をやり直してください。そのまま平均をとらないでください。"
+  },
+  "site": {
+    "title": "ChemAIForge · AI バーチャル化学実験室",
+    "description": "ブラウザで化学実験：試薬をドラッグして反応を観察し、AI チューターの指導を受けながら実験レポートを自動生成。"
+  },
+  "catalog": {
+    "title": "実験ライブラリ",
+    "empty": "条件に一致する実験はありません。",
+    "searchPlaceholder": "実験名を検索…",
+    "searchLabel": "実験を検索",
+    "filterCategory": "カテゴリで絞り込む",
+    "allCategories": "すべてのカテゴリ",
+    "filterDifficulty": "難易度で絞り込む",
+    "allDifficulties": "すべての難易度",
+    "objectives": "実験目標",
+    "reagents": "必要な試薬",
+    "apparatus": "必要な器具",
+    "subtitle": "実験を選択して、バーチャルラボでの操作を開始してください。",
+    "estimatedMinutes": "{minutes} 分",
+    "startLab": "実験台へ →"
+  },
+  "chart": {
+    "temperature": "温度",
+    "ph": "pH",
+    "volume": "体積",
+    "ariaLabel": "{label}の時間変化グラフ、現在値 {value}",
+    "measureAria": "測定値の時間変化折れ線グラフ、全 {count} 件、pH 範囲 0〜14、温度範囲 0〜100 ℃",
+    "title": "プロセス曲線",
+    "current": "現在値",
+    "peak": "ピーク値",
+    "samples": "サンプル {count} 点",
+    "channelTemp": "温度",
+    "channelPh": "pH",
+    "channelVolume": "体積",
+    "empty": "操作を開始するとグラフがここに表示されます"
+  },
+  "deck": {
+    "readings": "実験台メーター読数",
+    "temperature": "温度",
+    "volume": "体積",
+    "ph": "pH",
+    "operations": "実験操作",
+    "needReagent": "先に試薬を取り出してください",
+    "inOrder": "実際の手順に沿って操作してください"
+  },
+  "device": {
+    "glassware": "実験器具",
+    "electrolysisCell": "電解槽",
+    "galvanicCell": "ガルバニ電池",
+    "flameTest": "炎色反応装置",
+    "gasCollection": "水上置換集気装置",
+    "gasDelivery": "導気吸収装置",
+    "conductivity": "溶液導電性比較装置",
+    "strongBright": "強・明亮",
+    "weakDim": "弱・微亮",
+    "nonNone": "非・不亮"
+  },
+  "electro": {
+    "conductivityDesc": "同一濃度での溶液の導電性を比較します（電球の明るさがイオン濃度を反映）。",
+    "conductivityActive": "通電検査中：電球が明るいほど導電性が強い",
+    "conductivityIdle": "「通電検査」をクリックして各溶液の導電性を比較する",
+    "conductivityOn": "💡 通電検査",
+    "powerOff": "電源オフ",
+    "electrolyteInert": "電解液：{name}（{formula}）・陽極不活性（炭素）",
+    "electrolyteActive": "電解液：{name}（{formula}）・陽極活性（銅）",
+    "electrolysisActive": "電気分解中…",
+    "electrolysisIdle": "「通電」をクリックして電気分解を開始し、両極の現象を観察する",
+    "copperFading": "溶液：青色が徐々に薄くなる（銅イオンが消費される）",
+    "powerOn": "⚡ 通電",
+    "brine": "食塩水",
+    "electrolyte": "電解質：{name}",
+    "cellActive": "回路接続中、電流計が振れ、電池が放電中…",
+    "cellIdle": "「回路を接続」をクリックして電流計の振れと両極の現象を観察する",
+    "cellOn": "🔌 回路を接続",
+    "cellOff": "回路を切断",
+    "cathode": "陰極（−）",
+    "anode": "陽極（＋）",
+    "negative": "負極",
+    "positive": "正極"
+  },
+  "home": {
+    "labTitle": "インタラクティブ実験台",
+    "labDesc": "試薬をビーカーにドラッグすると、反応エンジンが色変化・気泡・沈殿・温度変化をリアルタイムで判定します。",
+    "tutorTitle": "AI 実験チューター",
+    "tutorDesc": "原理や操作についていつでも質問でき、キャンバスで重要な反応が起きた際にはチューターが解説と安全上の注意を自動で提示します。",
+    "reportTitle": "スマート実験レポート",
+    "reportDesc": "実験全体の測定値グラフをまとめ、考察・誤差分析・改善提案・知識評価を自動生成します。",
+    "badge": "AI 搭載バーチャル化学実験室",
+    "heroLine1": "ブラウザで",
+    "heroLine2": "本格的な化学実験",
+    "heroDesc": "試薬をドラッグして色変化や気泡を観察し、いつでも AI チューターに質問できます。実験終了後は構造化レポートを自動生成。{count} 件の検証済み実験を安全に繰り返し実施できます。",
+    "ctaCatalog": "実験ライブラリを見る →",
+    "ctaSessions": "マイセッション"
+  },
+  "lab": {
+    "mix": "混合反応",
+    "reset": "容器を空にする",
+    "clear": "クリア",
+    "complete": "実験を完了する",
+    "completed": "実験完了",
+    "viewReport": "実験レポートを見る →",
+    "removeItem": "クリックして削除",
+    "conditions": "系の条件",
+    "temperature": "系の温度",
+    "reagentShelf": "試薬棚",
+    "apparatusList": "器具一覧",
+    "emptyContainer": "左の試薬棚で量を指定して取り出すか、試薬をここにドラッグしてください",
+    "absorbent": "吸収液",
+    "apparatus": "器具",
+    "addReagent": "{name}を追加",
+    "removeReagent": "{name}を削除",
+    "mixAction": "混合",
+    "backToDetail": "← 実験詳細に戻る",
+    "backToCatalog": "← 実験ライブラリに戻る",
+    "labSuffix": "実験台",
+    "labHint": "試薬をクリックまたはドラッグしてビーカーに入れ、「混合反応」で現象を観察してください。「実験解説」で自動ステップ再生も可能です。"
+  },
+  "lesson": {
+    "prev": "前のステップ",
+    "pause": "一時停止",
+    "play": "再生",
+    "next": "次のステップ",
+    "voiceOn": "音声解説をオンにする",
+    "voiceOff": "音声解説をオフにする",
+    "muted": "🔇 ミュート中",
+    "askTutor": "「{title}」のステップについて：{narration} この時点でビーカー内に見られる現象と原理を合わせて説明してください。",
+    "phase": {
+      "theory": "原理",
+      "prep": "準備",
+      "operate": "操作",
+      "observe": "現象",
+      "conclude": "結論"
+    },
+    "voiceLabel": "🔊 音声解説",
+    "vesselBeaker": "ビーカー",
+    "vesselTube": "試験管",
+    "vesselFlask": "三角フラスコ",
+    "observeGeneric": "系全体をよく観察し、色・気泡・温度の変化に注意してください。",
+    "observeReacting": "反応が進行中です。pH と温度の読み取り値の変化に注目してください。",
+    "phenomenaList": "{parts}が確認できます。",
+    "partGas": "気泡が継続的に発生している",
+    "partPrecipitate": "溶液が白濁し沈殿が生成している",
+    "partColor": "溶液の色が明らかに変化している",
+    "partExo": "同時に熱が放出され温度が上昇している",
+    "partEndo": "同時に熱が吸収され温度が低下している",
+    "titlePrinciple": "実験原理",
+    "titleSummary": "実験まとめ",
+    "titleConnect": "装置の接続",
+    "titleConnectCircuit": "回路の接続",
+    "titlePowerOn": "電源を入れる",
+    "titleConnectOn": "回路を閉じる",
+    "titleConductTest": "通電テスト",
+    "titleElectrodes": "両極の現象",
+    "titleConductCompare": "導電性の比較",
+    "titleTake": "{reagent}を取る",
+    "titleHeat": "アルコールランプに点火する",
+    "titleMix": "混合・反応",
+    "titleObserve": "現象を観察する",
+    "summary": "この実験を通じて、{objectives}。",
+    "narrSetupElectrode": "電極を電解液に挿入し、直流電源の正極・負極にそれぞれ接続してください。",
+    "narrPowerOn": "直流電源を入れて電気分解を開始し、両極の変化に注目してください。",
+    "narrSetupCircuit": "導線を使って二つの電極を電流計を経由して接続し、電解質溶液に挿入してください。",
+    "narrConnectOn": "回路を閉じて、電流計の針が振れるかどうかを確認してください。",
+    "narrSetupConduct": "同じ濃度の溶液をそれぞれ、電球付きの電極回路に接続してください。",
+    "narrConductTest": "回路を接続し、各溶液中の電球の明るさを比較する。",
+    "narrSetupGeneric": "回路図に従って電極と電源／測定器を接続し、電解質を挿入する。",
+    "narrRigOn": "{verb}し、両極および測定器の変化を注意深く観察する。",
+    "verbElectrolysis": "直流電源を接続し、電気分解を開始する",
+    "verbCircuit": "回路を接続する",
+    "narrTake": "{reagent}を取り、{vessel}に加える。",
+    "narrHeat": "アルコールランプに点火して{vessel}を加熱する — この反応は加熱条件下でのみ進行する。",
+    "narrMixHeated": "加熱後に試薬を十分に混合すると、反応が直ちに始まる。",
+    "narrMix": "{vessel}内の試薬を十分に混合すると、反応が直ちに始まる。",
+    "electrodesFading": "；溶液の青色が徐々に薄くなる",
+    "brine": "食塩水",
+    "joinComma": "、",
+    "joinSemicolon": "；",
+    "outlineTitle": "実験解説アウトライン",
+    "outlineHint": "実験台に入ったら「実験解説 ▶」をクリックすると、ステップごとに自動デモが進みます。",
+    "cardTitle": "実験解説",
+    "askTutorButton": "この手順をチューターに説明してもらう",
+    "sentenceJoin": "",
+    "sentenceEnd": "。",
+    "voiceFemale": "女声 ♀",
+    "voiceMale": "男声 ♂",
+    "noVoice": "この言語の音声はまだ利用できません。解説は字幕に合わせて自動的に進みます。",
+    "narrTake_beaker": "{reagent}を取り、ビーカーに加えます。",
+    "narrTake_tube": "{reagent}を取り、試験管に加えます。",
+    "narrTake_flask": "{reagent}を取り、三角フラスコに加えます。",
+    "narrHeat_beaker": "アルコールランプに火をつけてビーカーを加熱します――この反応は加熱条件下でのみ進行します。",
+    "narrHeat_tube": "アルコールランプに火をつけて試験管を加熱します――この反応は加熱条件下でのみ進行します。",
+    "narrHeat_flask": "アルコールランプに火をつけて三角フラスコを加熱します――この反応は加熱条件下でのみ進行します。",
+    "narrMix_beaker": "ビーカー内の試薬をよく混合すると、反応がすぐに始まります。",
+    "narrMix_tube": "試験管内の試薬をよく混合すると、反応がすぐに始まります。",
+    "narrMix_flask": "三角フラスコ内の試薬をよく混合すると、反応がすぐに始まります。"
+  },
+  "quant": {
+    "verdictGood": "データの一致性は良好で、計算に使用できます",
+    "verdictFair": "偏差がやや大きいです。読み取り視線とシステムの安定性を確認してください",
+    "verdictPoor": "偏差が大きすぎます。原因を特定してから並行測定をやり直してください",
+    "meanPh": "平均 pH",
+    "meanTemp": "平均温度",
+    "meanVolume": "平均体積",
+    "group": "第 {no} グループ",
+    "readings": "{count} 回の読み取り",
+    "finalGroup": "このグループを結論の根拠とする",
+    "singleReading": "測定が 1 回のみのため、相対偏差を計算できません（規定では並行測定を最低 2 回行うことが必要です）",
+    "worstDeviation": "最大相対平均偏差 {value}%",
+    "groupNote": "システムが採取・混合・加熱されるたびに新しいグループが開始されます。グループをまたいだ読み取りは並行測定とはみなされないため、グループごとに集計します。",
+    "noReadings": "今回の実験では「読み取り」操作による測定記録がないため、平均値と相対偏差を計算できません。定量実験では、同一システム状態で最低 2 回の読み取りを繰り返してください。"
+  },
+  "report": {
+    "conclusion": "実験結論",
+    "errorAnalysis": "誤差分析",
+    "improvements": "改善提案",
+    "noImprovements": "現時点で改善提案はありません。",
+    "knowledge": "知識習得度評価",
+    "empty": "（内容なし）",
+    "measurements": "測定読み取り値",
+    "quantData": "定量データ",
+    "noMeasurements": "今回の実験では読み取り値が記録されていません。",
+    "generating": "AI が実験データを分析中…",
+    "regenerate": "レポートを再生成",
+    "generate": "実験レポートを生成",
+    "generateFailed": "生成失敗（{status}）",
+    "notGenerated": "レポートはまだ生成されていません。AIが今回の操作手順と測定値をもとに、結論・誤差分析・改善提案・習熟度評価を提示します。",
+    "noActivity": "この実験にはまだ操作の記録がないため、レポートを生成できません。",
+    "backToLab": "実験台に戻って実際に操作する →",
+    "title": "実験レポート",
+    "generatedAt": "{time} に生成"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "電源を入れる",
+      "off": "電源を切る"
+    },
+    "cell": {
+      "on": "回路を接続する",
+      "off": "回路を切断する"
+    },
+    "flameTest": {
+      "on": "アルコールランプに点火",
+      "off": "アルコールランプを消火"
+    },
+    "waterBath": {
+      "on": "湯浴加熱を開始",
+      "off": "湯浴加熱を停止"
+    },
+    "distillation": {
+      "on": "蒸留を開始",
+      "off": "蒸留を停止"
+    },
+    "filtration": {
+      "on": "ろ過を開始",
+      "off": "ろ過を停止"
+    },
+    "calorimeter": {
+      "on": "撹拌・測温を開始",
+      "off": "撹拌を停止"
+    },
+    "gasCollect": {
+      "on": "気体の捕集を開始",
+      "off": "捕集を停止"
+    },
+    "titration": {
+      "on": "コックを開いて滴下",
+      "off": "コックを閉じる"
+    },
+    "syringe": {
+      "on": "ピストンを押して加圧",
+      "off": "ピストンを引いて減圧"
+    },
+    "phMeter": {
+      "on": "pH計をオン",
+      "off": "pH計をオフ"
+    },
+    "evaporation": {
+      "on": "アルコールランプに点火して蒸発",
+      "off": "アルコールランプを消火"
+    },
+    "pressureDrop": {
+      "on": "キャップを締めて振とう",
+      "off": "キャップを緩める"
+    },
+    "heat": {
+      "on": "アルコールランプに点火して加熱",
+      "off": "加熱を停止"
+    }
+  },
+  "sessions": {
+    "title": "マイセッション",
+    "subtitle": "過去の実験記録を確認してレポートを開く",
+    "unknownExperiment": "不明な実験",
+    "completed": "完了",
+    "inProgress": "進行中",
+    "startedAt": "{time} に開始",
+    "viewReport": "レポートを見る"
+  },
+  "titration": {
+    "stopcock": "コック開度",
+    "buretteReading": "ビュレット読み取り",
+    "phMeter": "pH計",
+    "unfilled": "未充填",
+    "strongBase": "強塩基性",
+    "weakBase": "弱塩基性 · 変色域",
+    "nearNeutral": "中性付近",
+    "acidExcess": "酸性 · 過剰",
+    "endpointOk": "終点合格",
+    "overshoot": "滴下過剰",
+    "notYet": "終点未達（ピンク残存）",
+    "justFaded": "ちょうど脱色",
+    "keyPoints": "操作のポイント",
+    "takeAnalyte": "まず被測定液を取る →",
+    "dragStopcock": "← コックをドラッグして滴定開始",
+    "openness": "開度 {pct}% · 左右ドラッグで調整"
+  },
+  "tutor": {
+    "placeholder": "質問を入力…",
+    "replying": "返信中…",
+    "send": "送信",
+    "unknownError": "不明なエラー",
+    "requestFailed": "リクエスト失敗（{status}）",
+    "askHeat": "試薬を混合しても現象が観察されませんでした。この反応には加熱が必要と表示されています。なぜこの反応が加熱条件下でのみ進行するのか説明してください。",
+    "askObserved": "反応 {equation}{phenomena} が観察されました。何が起きているのか、またその原理を説明してください。",
+    "phPrecipitate": "沈殿生成",
+    "phGas": "気体が発生",
+    "phColor": "色変化が起こる",
+    "listJoin": "、",
+    "eqWrap": "（{equation}）",
+    "title": "AI 実験チューター",
+    "empty": "いつでも質問してください。キャンバスで反応が起きた際にもこちらから案内します。"
+  },
+  "workbench": {
+    "view2d": "2D 概略図",
+    "view3d": "3D 実験台",
+    "view3dRefined": "3D 実験台 ★",
+    "sceneHint": "ドラッグで回転 · ホイールでズーム"
+  },
+  "category": {
+    "ACID_BASE": "酸塩基反応",
+    "ORGANIC": "有機化学",
+    "THERMODYNAMICS": "熱力学",
+    "REDOX": "酸化還元",
+    "PRECIPITATION": "沈殿・複分解",
+    "GAS": "気体生成",
+    "ELECTROCHEM": "電気化学",
+    "METAL": "金属活動性",
+    "ANALYSIS": "分析・検出",
+    "COORDINATION": "錯体呈色"
+  },
+  "difficulty": {
+    "EASY": "入門",
+    "MEDIUM": "応用",
+    "HARD": "発展"
+  },
+  "locale": {
+    "switchLabel": "表示言語を切替",
+    "searchPlaceholder": "言語を検索…",
+    "noMatch": "一致する言語がありません",
+    "groupFull": "主要言語",
+    "groupBasic": "その他の言語",
+    "groupBasicHint": "完全な実験内容と音声解説を含み、翻訳は機械翻訳です"
+  },
+  "nav": {
+    "catalog": "実験ライブラリ",
+    "sessions": "マイセッション",
+    "home": "ホーム"
+  },
+  "errors": {
+    "noActivity": "今回の実験にはまだ操作記録がありません。レポートを生成する前に、実験台で実際に操作してください。",
+    "reportFailed": "レポートの生成に失敗しました",
+    "tutorUnavailable": "AI チューターサービスに異常が発生しました",
+    "unknown": "不明なエラー"
+  },
+  "shelf": {
+    "title": "試薬棚",
+    "taken": "{dose} {unit} 取得済み",
+    "takeSome": "滴下 / 適量取得",
+    "take": "{unit} 取得",
+    "specIndicator": "指示薬",
+    "specGas": "気体",
+    "specBulk": "適量取得",
+    "specSolution": "溶液",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "純液体 ρ={density} g/mL",
+    "specLiquid": "液体",
+    "specSolid": "固体 特級"
+  },
+  "op": {
+    "stir": {
+      "label": "撹拌",
+      "effect": "ガラス棒で撹拌し、溶質の溶解を促進して均一に混合する",
+      "hint": "撹拌により溶解と熱伝達が促進され、局所濃度が均一化されて読数が全体を反映するようになる"
+    },
+    "shake": {
+      "label": "振とう",
+      "effect": "振とうして試薬を十分に接触させる",
+      "hint": "試験管内の液量が少ない場合は撹拌でなく振とうで混合する。管口を人のいない方向に向けて持つこと"
+    },
+    "heat": {
+      "label": "加熱",
+      "effect": "アルコールランプに点火して加熱し、系の温度を上昇させる",
+      "hint": "多くの反応は昇温により促進される。吸熱反応は継続的な加熱なしには進行しない"
+    },
+    "cool": {
+      "label": "冷却",
+      "effect": "熱源を取り除き自然冷却して温度を下げる",
+      "hint": "冷却により溶解度が低下し、結晶析出と生成物回収の標準的な手順となる"
+    },
+    "settle": {
+      "label": "静置",
+      "effect": "しばらく静置して沈殿を沈降させ、液体の層分離を明確にする",
+      "hint": "沈殿と層分離には時間が必要。静置後に上澄み液が澄明かどうかを判断する"
+    },
+    "read": {
+      "label": "読み取り",
+      "effect": "現在の読数を記録する",
+      "hint": "目線を目盛りと水平にして読む。毎回の読数をデータ表に記録して初めて平均値と誤差を算出できる"
+    }
+  }
+}

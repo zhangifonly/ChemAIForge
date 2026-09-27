@@ -75,13 +75,31 @@ describe("getSession / listSessionsByUser", () => {
   });
 
   it("按 userId 倒序列出会话", async () => {
-    findMany.mockResolvedValue([row()]);
+    findMany.mockResolvedValue([row({ steps: JSON.stringify([{ action: "add", at: "t" }]) })]);
     const list = await listSessionsByUser("user-1");
     expect(list).toHaveLength(1);
     expect(findMany).toHaveBeenCalledWith({
       where: { userId: "user-1" },
       orderBy: { startedAt: "desc" },
     });
+  });
+
+  // 打开实验页就建会话，只看一眼就走也会留一条。本地库 277 条里 212 条是空的，
+  // 不过滤的话「我的会话」整屏都是点进去什么也没有的「进行中」。
+  it("只打开过页面的空会话不列出", async () => {
+    findMany.mockResolvedValue([
+      row({ id: "empty" }),
+      row({ id: "stepped", steps: JSON.stringify([{ action: "add", at: "t" }]) }),
+      row({ id: "measured", measurements: JSON.stringify([{ ph: 7, temperature: 25, at: "t" }]) }),
+    ]);
+    const ids = (await listSessionsByUser("user-1")).map((s) => s.id);
+    expect(ids).toEqual(["stepped", "measured"]);
+  });
+
+  it("已有报告的会话即使没有步骤也保留，不能让报告从列表里消失", async () => {
+    const report = { conclusion: "c", errorAnalysis: "", improvements: [], knowledgeAssessment: "", generatedAt: "t" };
+    findMany.mockResolvedValue([row({ id: "reported", report: JSON.stringify(report) })]);
+    expect((await listSessionsByUser("user-1")).map((s) => s.id)).toEqual(["reported"]);
   });
 });
 

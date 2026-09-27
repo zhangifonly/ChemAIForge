@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Gå til hovedindhold"
+  },
+  "catalog": {
+    "title": "Eksperimentbibliotek",
+    "empty": "Ingen eksperimenter matcher kriterierne.",
+    "searchPlaceholder": "Søg efter eksperimentnavn…",
+    "searchLabel": "Søg eksperimenter",
+    "filterCategory": "Filtrer efter kategori",
+    "allCategories": "Alle kategorier",
+    "filterDifficulty": "Filtrer efter sværhedsgrad",
+    "allDifficulties": "Alle sværhedsgrader",
+    "objectives": "Eksperimentmål",
+    "reagents": "Nødvendige reagenser",
+    "apparatus": "Nødvendigt udstyr",
+    "subtitle": "Vælg et eksperiment for at åbne det virtuelle laboratorium.",
+    "estimatedMinutes": "Ca. {minutes} minutter",
+    "startLab": "Start eksperiment →"
+  },
+  "category": {
+    "ACID_BASE": "Syre-base-reaktioner",
+    "ORGANIC": "Organisk kemi",
+    "THERMODYNAMICS": "Termodynamik",
+    "REDOX": "Redoxreaktioner",
+    "PRECIPITATION": "Bundfældning og dobbeltreaktion",
+    "GAS": "Gasfremstilling",
+    "ELECTROCHEM": "Elektrokemi",
+    "METAL": "Metalaktivitet",
+    "ANALYSIS": "Analytisk prøvning",
+    "COORDINATION": "Koordinationsfarvning"
+  },
+  "chart": {
+    "temperature": "Temperatur",
+    "ph": "pH",
+    "volume": "Volumen",
+    "ariaLabel": "Kurve for {label} over tid, aktuel værdi {value}",
+    "measureAria": "Linjediagram over måleaflæsninger over tid, {count} aflæsninger i alt, pH-skala 0 til 14, temperaturskala 0 til 100 ℃",
+    "title": "Proceskurve",
+    "current": "Aktuel",
+    "peak": "Toppunkt",
+    "samples": "{count} prøvepunkter",
+    "channelTemp": "Temperatur",
+    "channelPh": "pH",
+    "channelVolume": "Volumen",
+    "empty": "Kurven over tid vises her, når forsøget er startet"
+  },
+  "dataTable": {
+    "title": "Datalogtabel",
+    "emptyHint": "Tryk på “Aflæs” for at registrere en måling",
+    "recorded": "Gruppen har registreret {count} målinger",
+    "recordedNeedMore": "Gruppen har registreret {count} målinger (mindst 2 parallelmålinger kræves)",
+    "emptyBody": "Gentag målinger og beregn gennemsnittet i kvantitative forsøg; hver “Aflæs” tilføjer én række her.",
+    "colIndex": "Nr.",
+    "colTime": "Tid / s",
+    "colTemperature": "Temperatur / ℃",
+    "colPh": "pH",
+    "colVolume": "Volumen / mL",
+    "rowMean": "Gruppegennemsnit",
+    "rowDeviation": "Relativ afvigelse",
+    "worstDeviation": "Største relative afvigelse {value}%:",
+    "verdictGood": "Datakonsistensen er god og kan bruges til beregning.",
+    "verdictFair": "Afvigelsen er for stor – kontrollér, om aflæsningen sker i øjenhøjde med skalaen, og om systemet er stabiliseret.",
+    "verdictPoor": "Afvigelsen er for stor. Find årsagen og gentag parallelmålingerne – beregn ikke gennemsnittet direkte."
+  },
+  "deck": {
+    "readings": "Instrumentaflæsninger på arbejdsbord",
+    "temperature": "Temperatur",
+    "volume": "Volumen",
+    "ph": "pH",
+    "operations": "Forsøgshandlinger",
+    "needReagent": "Hent først et reagens",
+    "inOrder": "Følg den faktiske trinrækkefølge"
+  },
+  "device": {
+    "glassware": "Laboratorieglas",
+    "electrolysisCell": "Elektrolysecelle",
+    "galvanicCell": "Galvanisk celle",
+    "flameTest": "Flammefarveapparat",
+    "gasCollection": "Gasopsamling ved vandfortrængning",
+    "gasDelivery": "Gasledning og absorption",
+    "conductivity": "Sammenligning af ledningsevne",
+    "strongBright": "Stærk · lys",
+    "weakDim": "Svag · svagt lys",
+    "nonNone": "Ingen · slukket"
+  },
+  "difficulty": {
+    "EASY": "Begynder",
+    "MEDIUM": "Øvet",
+    "HARD": "Udfordring"
+  },
+  "electro": {
+    "conductivityDesc": "Sammenlign opløsningers ledningsevne ved samme koncentration (lysstyrken afspejler ionkoncentrationen).",
+    "conductivityActive": "Spændingtest aktiv: jo lysere pæren, jo bedre ledningsevne",
+    "conductivityIdle": "Klik på “Spændingstest” for at sammenligne opløsningernes ledningsevne",
+    "conductivityOn": "💡 Spændingstest",
+    "powerOff": "Afbryd strøm",
+    "electrolyteInert": "Elektrolyt: {name}（{formula}）· inert anode (kulstof)",
+    "electrolyteActive": "Elektrolyt: {name}（{formula}）· aktiv anode (kobber)",
+    "electrolysisActive": "Elektrolyse i gang…",
+    "electrolysisIdle": "Klik på “Tilslut strøm” for at starte elektrolysen og observer elektroderne",
+    "copperFading": "Opløsning: den blå farve blegner gradvist (kobberioner forbruges)",
+    "powerOn": "⚡ Tilslut strøm",
+    "brine": "Saltopløsning",
+    "electrolyte": "Elektrolyt: {name}",
+    "cellActive": "Kredsløb sluttet, galvanometer udslår, galvanisk celle aflader…",
+    "cellIdle": "Klik på “Slut kredsløb” og observer galvanometerudslag og elektroderne",
+    "cellOn": "🔌 Slut kredsløb",
+    "cellOff": "Afbryd kredsløbet",
+    "cathode": "Katode (−)",
+    "anode": "Anode (＋)",
+    "negative": "Negativ pol",
+    "positive": "Positiv pol"
+  },
+  "errors": {
+    "noActivity": "Der er ingen handlinger registreret for dette forsøg. Udfør forsøget på laboratoriebordet, før du genererer rapporten.",
+    "reportFailed": "Rapportgenerering mislykkedes",
+    "tutorUnavailable": "AI-tutortjenesten er utilgængelig",
+    "unknown": "Ukendt fejl"
+  },
+  "home": {
+    "labTitle": "Interaktivt laboratoriebord",
+    "labDesc": "Træk reagenser ned i bægerglas — reaktionsmotoren vurderer i realtid farveændringer, bobler, bundfald og temperaturudsving. Det du ser, er det du får.",
+    "tutorTitle": "AI-laboratorietutor",
+    "tutorDesc": "Stil spørgsmål om principper og fremgangsmåder når som helst. Når en nøglereaktion udløses på canvasset, giver tutoren proaktivt forklaringer og sikkerhedsvejledning.",
+    "reportTitle": "Intelligent laboratorierrapport",
+    "reportDesc": "Opsummerer hele forsøgets måledata, og genererer automatisk konklusioner, fejlanalyse, forbedringsforslag og faglig evaluering.",
+    "badge": "AI-drevet virtuelt kemilaboratorium",
+    "heroLine1": "Direkte i browseren",
+    "heroLine2": "udfør rigtige kemiforsøg",
+    "heroDesc": "Træk reagenser, observer farveændringer og bobler, spørg AI-tutoren når som helst, og få en struktureret rapport genereret automatisk ved forsøgets afslutning. {count} validerede forsøg — sikkert og reproducerbart.",
+    "ctaCatalog": "Gennemse forsøgsbiblioteket →",
+    "ctaSessions": "Mine sessioner"
+  },
+  "lab": {
+    "mix": "Bland og reager",
+    "reset": "Tøm beholder",
+    "clear": "Ryd",
+    "complete": "Afslut forsøg",
+    "completed": "Forsøg afsluttet",
+    "viewReport": "Se laboratorierapporten →",
+    "removeItem": "Klik for at fjerne",
+    "conditions": "Systembetingelser",
+    "temperature": "Systemtemperatur",
+    "reagentShelf": "Reagenthylde",
+    "apparatusList": "Apparatur",
+    "emptyContainer": "Vælg mængde på reagenthylden til venstre, eller træk reagenset hertil",
+    "absorbent": "Absorptionsvæske",
+    "apparatus": "Instrument",
+    "addReagent": "Tilsæt {name}",
+    "removeReagent": "Fjern {name}",
+    "mixAction": "Bland",
+    "backToDetail": "← Tilbage til forsøgsdetaljer",
+    "backToCatalog": "← Tilbage til forsøgsbibliotek",
+    "labSuffix": "Laboratoriebord",
+    "labHint": "Klik eller træk reagenser i bægeret, og brug “Bland og reager” for at observere; vælg “Forsøgsgennemgang” for automatisk trinvis demonstration."
+  },
+  "lesson": {
+    "prev": "Forrige trin",
+    "pause": "Pause",
+    "play": "Afspil",
+    "next": "Næste trin",
+    "voiceOn": "Aktivér stemmeforklaring",
+    "voiceOff": "Deaktivér stemmeforklaring",
+    "muted": "🔇 Lydløs",
+    "askTutor": "Gennemgang af trinnet “”{title}“”: {narration} Forklar kort de kemiske principper og reaktionsligninger ud fra de aktuelle fænomener og aflæsninger i bægeret.",
+    "phase": {
+      "theory": "Princip",
+      "prep": "Forberedelse",
+      "operate": "Udførelse",
+      "observe": "Observation",
+      "conclude": "Konklusion"
+    },
+    "voiceLabel": "🔊 Stemmeforklaring",
+    "vesselBeaker": "Bæger",
+    "vesselTube": "Reagensglas",
+    "vesselFlask": "Erlenmeyerkolbe",
+    "observeGeneric": "Observér systemet nøje, og læg mærke til eventuelle ændringer i farve, bobler eller temperatur.",
+    "observeReacting": "Reaktionen er i gang – følg ændringerne i pH og temperaturaflæsningerne.",
+    "phenomenaList": "Man kan observere {parts}.",
+    "partGas": "bobler der løbende undviger",
+    "partPrecipitate": "opløsningen bliver uklar og der dannes bundfald",
+    "partColor": "opløsningens farve ændrer sig tydeligt",
+    "partExo": "samtidig frigives varme og temperaturen stiger",
+    "partEndo": "samtidig absorberes varme og temperaturen falder",
+    "titlePrinciple": "Forsøgsprincip",
+    "titleSummary": "Forsøgsresumé",
+    "titleConnect": "Tilslut apparatur",
+    "titleConnectCircuit": "Tilslut kredsløb",
+    "titlePowerOn": "Tænd strømforsyningen",
+    "titleConnectOn": "Luk kredsløbet",
+    "titleConductTest": "Test ledningsevne",
+    "titleElectrodes": "Fænomener ved elektroderne",
+    "titleConductCompare": "Sammenlign ledningsevne",
+    "titleTake": "Tag {reagent}",
+    "titleHeat": "Tænd spritlampen",
+    "titleMix": "Bland og reager",
+    "titleObserve": "Observér fænomener",
+    "summary": "Gennem dette forsøg vil du {objectives}.",
+    "narrSetupElectrode": "Indsæt elektroderne i elektrolytten, og forbind dem til henholdsvis plus- og minuspolen på jævnstrømsforsyningen.",
+    "narrPowerOn": "Tænd jævnstrømsforsyningen for at starte elektrolysen, og observér ændringerne ved begge elektroder.",
+    "narrSetupCircuit": "Forbind de to elektroder via et galvanometer med ledninger, og nedsænk dem i elektrolytopløsningen.",
+    "narrConnectOn": "Luk kredsløbet, og observér om galvanometerudslaget afviger.",
+    "narrSetupConduct": "Tilslut opløsninger med samme koncentration hver især til et elektrodkredsløb med en pære.",
+    "narrConductTest": "Luk kredsløbet, og sammenlign lysstyrken i pærerne for de forskellige opløsninger.",
+    "narrSetupGeneric": "Forbind elektroder og strømforsyning/måleinstrumenter efter kredsløbsdiagrammet, og indsæt elektrolytten.",
+    "narrRigOn": "{verb}, og observer ændringerne ved elektroderne og instrumenterne.",
+    "verbElectrolysis": "Tilslut jævnstrømskilden og start elektrolysen",
+    "verbCircuit": "Slut kredsløbet",
+    "narrTake": "Tag {reagent} og tilsæt det til {vessel}.",
+    "narrHeat": "Tænd spritlampen og varm {vessel} op — reaktionen kræver opvarmning.",
+    "narrMixHeated": "Bland reagenserne grundigt efter opvarmning; reaktionen starter straks.",
+    "narrMix": "Bland reagenserne i {vessel} grundigt; reaktionen starter straks.",
+    "electrodesFading": "; opløsningens blå farve aftager gradvist",
+    "brine": "saltopløsning",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Forsøgsvejledning – oversigt",
+    "outlineHint": "På laboratoriebordet kan du klikke på “Forsøgsvejledning ▶” for trinvis automatisk demonstration.",
+    "cardTitle": "Forsøgsvejledning",
+    "askTutorButton": "Lad vejlederen forklare dette trin",
+    "sentenceJoin": " ",
+    "voiceFemale": "Kvinde ♀",
+    "voiceMale": "Mand ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Der er ingen stemme til dette sprog – forklaringen fremføres automatisk via undertekster.",
+    "narrTake_beaker": "Tag {reagent} og tilsæt det til bægerglaset.",
+    "narrTake_tube": "Tag {reagent} og tilsæt det til reagensrøret.",
+    "narrTake_flask": "Tag {reagent} og tilsæt det til erlenmeyerkolben.",
+    "narrHeat_beaker": "Tænd spritlampen og varm bægerglaset op — denne reaktion kan kun finde sted under opvarmning.",
+    "narrHeat_tube": "Tænd spritlampen og varm reagensrøret op — denne reaktion kan kun finde sted under opvarmning.",
+    "narrHeat_flask": "Tænd spritlampen og varm erlenmeyerkolben op — denne reaktion kan kun finde sted under opvarmning.",
+    "narrMix_beaker": "Bland reagenserne i bægerglaset grundigt — reaktionen begynder straks.",
+    "narrMix_tube": "Bland reagenserne i reagensrøret grundigt — reaktionen begynder straks.",
+    "narrMix_flask": "Bland reagenserne i erlenmeyerkolben grundigt — reaktionen begynder straks."
+  },
+  "locale": {
+    "switchLabel": "Skift sprog",
+    "searchPlaceholder": "Søg efter sprog…",
+    "noMatch": "Ingen matchende sprog",
+    "groupFull": "Hovedsprog",
+    "groupBasic": "Andre sprog",
+    "groupBasicHint": "Indeholder fuldt laboratorieindhold og stemmeguide; oversættelse er maskinoversat"
+  },
+  "nav": {
+    "catalog": "Forsøgsbibliotek",
+    "sessions": "Mine sessioner",
+    "home": "Startside"
+  },
+  "op": {
+    "stir": {
+      "label": "Rør",
+      "effect": "Rør med glasstav; opløsningshastighed øges og blandingen bliver mere ensartet",
+      "hint": "Omrøring fremskynder opløsning og varmeoverførsel og udjævner lokale koncentrationsforskelle, så aflæsningen repræsenterer hele blandingen"
+    },
+    "shake": {
+      "label": "Ryst",
+      "effect": "Ryst for at blande; reagenserne kommer i god kontakt",
+      "hint": "Reagensglas indeholder lidt væske og blandes ved at ryste (ikke røre); hold om toppen og peg væk fra andre"
+    },
+    "heat": {
+      "label": "Opvarm",
+      "effect": "Tænd spritlampen og opvarm – systemets temperatur stiger",
+      "hint": "De fleste reaktioner fremskyndes ved opvarmning; endoterme reaktioner kræver vedvarende varmetilførsel"
+    },
+    "cool": {
+      "label": "Afkøl",
+      "effect": "Fjern varmekilden og lad systemet afkøle naturligt – temperaturen falder",
+      "hint": "Afkøling sænker opløseligheden og er standardtrinnet til krystallisering og produktopsamling"
+    },
+    "settle": {
+      "label": "Lad stå",
+      "effect": "Lad systemet stå et øjeblik – bundfald sænker sig og væskelag adskilles tydeligere",
+      "hint": "Bundfald og lagdeling kræver tid; først efter hvile kan det vurderes, om den øverste klare fase er klar"
+    },
+    "read": {
+      "label": "Aflæs",
+      "effect": "Registrér den aktuelle aflæsning",
+      "hint": "Aflæs med øjet i niveau med skalastregen; noter hver aflæsning i datatabellen for at beregne middelværdi og afvigelse"
+    }
+  },
+  "quant": {
+    "verdictGood": "God datakonsistens – kan bruges til beregning",
+    "verdictFair": "Afvigelsen er for stor – kontrollér aflæsningsvinklen og systemets stabilitet",
+    "verdictPoor": "Afvigelsen er uacceptabelt stor – find årsagen og gentag parallelmålingerne",
+    "meanPh": "Middel-pH",
+    "meanTemp": "Middeltemperatur",
+    "meanVolume": "Middelvolumen",
+    "group": "Gruppe {no}",
+    "readings": "{count} aflæsninger",
+    "finalGroup": "Konklusionen baseres på denne gruppe",
+    "singleReading": "Kun 1 måling – relativ afvigelse kan ikke beregnes (standarden kræver mindst 2 parallelmålinger)",
+    "worstDeviation": "Størst relativ middelafvigelse {value}%",
+    "groupNote": "Hver gang systemet udtages / blandes / opvarmes, startes en ny gruppe – aflæsninger på tværs af grupper udgør ikke parallelmålinger og opgøres derfor separat.",
+    "noReadings": "Der er ikke foretaget nogen «Aflæs»-registreringer i dette forsøg, så middelværdi og relativ afvigelse kan ikke beregnes. Kvantitative forsøg kræver mindst 2 gentagne aflæsninger under samme systemtilstand."
+  },
+  "report": {
+    "conclusion": "Forsøgskonklusion",
+    "errorAnalysis": "Fejlanalyse",
+    "improvements": "Forbedringsforslag",
+    "noImprovements": "Ingen forbedringsforslag.",
+    "knowledge": "Vurdering af faglig forståelse",
+    "empty": "（ingen indhold）",
+    "measurements": "Måleaflæsninger",
+    "quantData": "Kvantitative data",
+    "noMeasurements": "Der blev ikke registreret nogen aflæsninger i dette forsøg.",
+    "generating": "AI analyserer forsøgsdata…",
+    "regenerate": "Generer rapport igen",
+    "generate": "Generer forsøgsrapport",
+    "generateFailed": "Generering mislykkedes ({status})",
+    "notGenerated": "Rapporten er endnu ikke genereret. AI vil på baggrund af forsøgets trin og måleaflæsninger give konklusioner, fejlanalyse, forbedringsforslag og en vurdering af læringsudbytte.",
+    "noActivity": "Der er ingen handlingsregistreringer for dette forsøg – rapporten kan ikke genereres endnu.",
+    "backToLab": "Tilbage til laboratoriet og prøv selv →",
+    "title": "Forsøgsrapport",
+    "generatedAt": "Genereret {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Tilslut strømforsyning",
+      "off": "Afbryd strømforsyning"
+    },
+    "cell": {
+      "on": "Luk kredsløbet",
+      "off": "Åbn kredsløbet"
+    },
+    "flameTest": {
+      "on": "Tænd spritlampe",
+      "off": "Sluk spritlampe"
+    },
+    "waterBath": {
+      "on": "Start vandbadsopvarmning",
+      "off": "Stop vandbadsopvarmning"
+    },
+    "distillation": {
+      "on": "Start destillation",
+      "off": "Stop destillation"
+    },
+    "filtration": {
+      "on": "Start filtrering",
+      "off": "Stop filtrering"
+    },
+    "calorimeter": {
+      "on": "Start omrøring og temperaturmåling",
+      "off": "Stop omrøring"
+    },
+    "gasCollect": {
+      "on": "Start gasopsamling",
+      "off": "Stop opsamling"
+    },
+    "titration": {
+      "on": "Åbn hane og dryp til",
+      "off": "Luk hanen"
+    },
+    "syringe": {
+      "on": "Tryk stemplet ind for at øge trykket",
+      "off": "Træk stemplet ud for at reducere trykket"
+    },
+    "phMeter": {
+      "on": "Tænd pH-meter",
+      "off": "Sluk pH-meter"
+    },
+    "evaporation": {
+      "on": "Antænd spritbrænderen for at fordampe",
+      "off": "Sluk spritbrænderen"
+    },
+    "pressureDrop": {
+      "on": "Skru låget fast og ryst",
+      "off": "Løsn låget"
+    },
+    "heat": {
+      "on": "Antænd spritbrænderen for at varme op",
+      "off": "Stop opvarmning"
+    }
+  },
+  "sessions": {
+    "title": "Mine sessioner",
+    "subtitle": "Se historiske forsøgsregistreringer og åbn de tilhørende rapporter",
+    "unknownExperiment": "Ukendt forsøg",
+    "completed": "Afsluttet",
+    "inProgress": "I gang",
+    "startedAt": "Startet {time}",
+    "viewReport": "Se rapport"
+  },
+  "shelf": {
+    "title": "Reagenshylde",
+    "taken": "{dose} {unit} udtaget",
+    "takeSome": "Dryp / tag passende mængde",
+    "take": "Tag {unit}",
+    "specIndicator": "Indikator",
+    "specGas": "Gas",
+    "specBulk": "Tag passende mængde",
+    "specSolution": "Opløsning",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Rent flydende stof ρ={density} g/mL",
+    "specLiquid": "Flydende stof",
+    "specSolid": "Fast stof – analytisk ren"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtuelt Kemilaboratorium",
+    "description": "Udfør kemiforsøg i browseren: træk reagenser, observér reaktioner, få vejledning af en AI-tutor, og generér laboratorierrapporter automatisk."
+  },
+  "titration": {
+    "stopcock": "Hanens åbning",
+    "buretteReading": "Buretalæsning",
+    "phMeter": "pH-meter",
+    "unfilled": "Ikke fyldt",
+    "strongBase": "Stærkt basisk",
+    "weakBase": "Svagt basisk · farveomslag-zone",
+    "nearNeutral": "Næsten neutralt",
+    "acidExcess": "Surt · overskredet",
+    "endpointOk": "Ækvivalenspunkt nået",
+    "overshoot": "Overdoseret",
+    "notYet": "Endnu ikke ved endepunktet (lyserød ikke forsvundet)",
+    "justFaded": "Netop forsvundet",
+    "keyPoints": "Betjeningspunkter",
+    "takeAnalyte": "Tag først analytten →",
+    "dragStopcock": "← Træk hanen for at starte titrering",
+    "openness": "Åbning {pct}% · hold nede og træk til venstre/højre"
+  },
+  "tutor": {
+    "placeholder": "Skriv dit spørgsmål…",
+    "replying": "Svarer…",
+    "send": "Send",
+    "unknownError": "Ukendt fejl",
+    "requestFailed": "Anmodning mislykkedes ({status})",
+    "askHeat": "Jeg blandede reagenserne, men observerede ingen reaktion. Vejledningen siger, at denne reaktion kræver opvarmning. Forklar hvorfor reaktionen kun kan forløbe under opvarmning.",
+    "askObserved": "Jeg observerede netop reaktionen {equation}{phenomena} – kan du forklare, hvad der skete, og hvilket princip der ligger bag?",
+    "phPrecipitate": "der dannes et bundfald",
+    "phGas": "der udvikles gas",
+    "phColor": "der sker en farveændring",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Laboratorievejleder",
+    "empty": "Stil mig spørgsmål når som helst, eller udfør en reaktion på lærredet, så giver jeg dig et tip."
+  },
+  "workbench": {
+    "view2d": "2D-diagram",
+    "view3d": "3D-arbejdsbord",
+    "view3dRefined": "3D-arbejdsbord ★",
+    "sceneHint": "Træk for at rotere · Scroll for at zoome"
+  }
+}

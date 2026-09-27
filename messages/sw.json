@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Hatua Iliyotangulia",
+    "pause": "Simamisha",
+    "play": "Cheza",
+    "next": "Hatua Inayofuata",
+    "voiceOn": "Washa Maelezo ya Sauti",
+    "voiceOff": "Zima Maelezo ya Sauti",
+    "muted": "🔇 Kimya",
+    "askTutor": "Maelezo ya hatua ya “{title}”: {narration} Tafadhali eleza kwa ufupi kanuni za kemikali na milinganyo kulingana na matukio na usomaji unaoonekana kwenye beaker sasa hivi.",
+    "phase": {
+      "theory": "Kanuni",
+      "prep": "Maandalizi",
+      "operate": "Uendeshaji",
+      "observe": "Matukio",
+      "conclude": "Hitimisho"
+    },
+    "voiceLabel": "🔊 Maelezo ya Sauti",
+    "vesselBeaker": "Beaker",
+    "vesselTube": "Bomba la Majaribio",
+    "vesselFlask": "Chupa ya Konical",
+    "observeGeneric": "Angalia mfumo kwa makini, kumbuka mabadiliko ya rangi, mapovu, au joto.",
+    "observeReacting": "Mmenyuko unafanyika, angalia mabadiliko ya pH na usomaji wa joto.",
+    "phenomenaList": "Unaweza kuona {parts}.",
+    "partGas": "mapovu yanayotoka bila kukoma",
+    "partPrecipitate": "myeyusho unakuwa na ukungu na mchanga unaoundwa",
+    "partColor": "rangi ya myeyusho inabadilika wazi",
+    "partExo": "joto linatolewa wakati huo huo, halijoto inapanda",
+    "partEndo": "joto linafyonzwa wakati huo huo, halijoto inashuka",
+    "titlePrinciple": "Kanuni ya Majaribio",
+    "titleSummary": "Muhtasari wa Majaribio",
+    "titleConnect": "Unganisha Kifaa",
+    "titleConnectCircuit": "Unganisha Mzunguko",
+    "titlePowerOn": "Washa Umeme",
+    "titleConnectOn": "Funga Mzunguko",
+    "titleConductTest": "Jaribio la Uendeshaji",
+    "titleElectrodes": "Matukio ya Elektrodi Mbili",
+    "titleConductCompare": "Ulinganisho wa Uendeshaji",
+    "titleTake": "Chukua {reagent}",
+    "titleHeat": "Washa Taa ya Pombe",
+    "titleMix": "Changanya Mmenyuko",
+    "titleObserve": "Angalia Matukio",
+    "summary": "Kupitia jaribio hili, utaweza {objectives}.",
+    "narrSetupElectrode": "Ingiza elektrodi kwenye elektroliti, uunganishe na nguzo chanya na hasi za chanzo cha DC.",
+    "narrPowerOn": "Washa chanzo cha DC, anza elektrolisisi, angalia mabadiliko ya elektrodi mbili.",
+    "narrSetupCircuit": "Unganisha elektrodi mbili kupitia galvanomita kwa waya, kisha ziingize kwenye myeyusho wa elektroliti.",
+    "narrConnectOn": "Funga mzunguko, angalia kama mkono wa galvanomita unakengeuka.",
+    "narrSetupConduct": "Unganisha myeyusho wa mkusanyiko sawa kwenye mzunguko wa elektrodi wenye balbu.",
+    "narrConductTest": "Funga mzunguko, linganisha mwangaza wa balbu katika myeyusho mbalimbali.",
+    "narrSetupGeneric": "Unganisha elektrodi na chanzo cha umeme/kipimo kulingana na mchoro wa mzunguko, kisha ingiza elektroliti.",
+    "narrRigOn": "{verb}，angalia mabadiliko ya elektrodi na vipimo.",
+    "verbElectrolysis": "Washa umeme wa DC, anza elektrolisisi",
+    "verbCircuit": "Funga mzunguko wa umeme",
+    "narrTake": "Chukua {reagent}, ongeza kwenye {vessel}.",
+    "narrHeat": "Washa taa ya pombe ili kupasha {vessel} joto — majibu haya yanafanyika tu chini ya joto.",
+    "narrMixHeated": "Baada ya kupashwa joto, changanya vizuri vitendanishi; majibu yanaanza mara moja.",
+    "narrMix": "Changanya vizuri vitendanishi vilivyo ndani ya {vessel}; majibu yanaanza mara moja.",
+    "electrodesFading": "؛ rangi ya bluu ya ufumbuzi inapungua polepole",
+    "brine": "maji ya chumvi",
+    "joinComma": "، ",
+    "joinSemicolon": "؛ ",
+    "outlineTitle": "Muhtasari wa Maelezo ya Majaribio",
+    "outlineHint": "Ukiingia kwenye meza ya majaribio, bofya “Maelezo ya Majaribio ▶” kwa onyesho la hatua kwa hatua.",
+    "cardTitle": "Maelezo ya Majaribio",
+    "askTutorButton": "Mwambie mkufunzi aelezee hatua hii",
+    "sentenceEnd": ".",
+    "voiceFemale": "Sauti ya Kike ♀",
+    "voiceMale": "Sauti ya Kiume ♂",
+    "noVoice": "Lugha hii haina sauti; maelezo yatasonga mbele kiotomatiki kwa manukuu.",
+    "narrTake_beaker": "Chukua {reagent}, uiongeze kwenye birika.",
+    "narrTake_tube": "Chukua {reagent}, uiongeze kwenye bomba la majaribio.",
+    "narrTake_flask": "Chukua {reagent}, uiongeze kwenye chupa ya konasi.",
+    "narrHeat_beaker": "Washa taa ya pombe ili kupasha joto birika — majibu haya lazima yafanyike chini ya hali ya joto.",
+    "narrHeat_tube": "Washa taa ya pombe ili kupasha joto bomba la majaribio — majibu haya lazima yafanyike chini ya hali ya joto.",
+    "narrHeat_flask": "Washa taa ya pombe ili kupasha joto chupa ya konasi — majibu haya lazima yafanyike chini ya hali ya joto.",
+    "narrMix_beaker": "Changanya vizuri vitendanishi vilivyomo kwenye birika, na majibu yataanza mara moja.",
+    "narrMix_tube": "Changanya vizuri vitendanishi vilivyomo kwenye bomba la majaribio, na majibu yataanza mara moja.",
+    "narrMix_flask": "Changanya vizuri vitendanishi vilivyomo kwenye chupa ya konasi, na majibu yataanza mara moja."
+  },
+  "a11y": {
+    "skipToMain": "Ruka hadi maudhui makuu"
+  },
+  "catalog": {
+    "title": "Maktaba ya Majaribio",
+    "empty": "Hakuna majaribio yanayolingana na vigezo.",
+    "searchPlaceholder": "Tafuta jina la jaribio…",
+    "searchLabel": "Tafuta jaribio",
+    "filterCategory": "Chuja kwa kategoria",
+    "allCategories": "Kategoria zote",
+    "filterDifficulty": "Chuja kwa ugumu",
+    "allDifficulties": "Viwango vyote vya ugumu",
+    "objectives": "Malengo ya jaribio",
+    "reagents": "Vitendanishi vinavyohitajika",
+    "apparatus": "Vifaa vinavyohitajika",
+    "subtitle": "Chagua jaribio ili uingie kwenye maabara ya mtandaoni uanze kufanya kazi.",
+    "estimatedMinutes": "Takriban dakika {minutes}",
+    "startLab": "Anza jaribio →"
+  },
+  "category": {
+    "ACID_BASE": "Mmenyuko wa asidi-msingi",
+    "ORGANIC": "Kemia ya kikaboni",
+    "THERMODYNAMICS": "Thermodynamics",
+    "REDOX": "Oksidesheni-upunguzaji",
+    "PRECIPITATION": "Mchakato wa mvua ya kemikali",
+    "GAS": "Utengenezaji wa gesi",
+    "ELECTROCHEM": "Elektrokemia",
+    "METAL": "Utendaji wa metali",
+    "ANALYSIS": "Uchambuzi na upimaji",
+    "COORDINATION": "Uratibu wa rangi"
+  },
+  "chart": {
+    "temperature": "Joto",
+    "ph": "pH",
+    "volume": "Ujazo",
+    "ariaLabel": "Grafu ya {label} kwa wakati, sasa hivi {value}",
+    "measureAria": "Grafu ya mstari ya vipimo kwa wakati, jumla ya vipimo {count}, kipimo cha pH 0 hadi 14, kipimo cha joto 0 hadi 100 ℃",
+    "title": "Grafu ya Mchakato",
+    "current": "Sasa hivi",
+    "peak": "Kilele",
+    "samples": "Sampuli {count}",
+    "channelTemp": "Joto",
+    "channelPh": "pH",
+    "channelVolume": "Ujazo",
+    "empty": "Grafu ya mabadiliko kwa wakati itaonekana hapa baada ya kuanza operesheni"
+  },
+  "dataTable": {
+    "title": "Jedwali la Kumbukumbu za Data",
+    "emptyHint": "Bonyeza “Soma” kurekodi kipimo kimoja",
+    "recorded": "Kikundi hiki kimerekodi mara {count}",
+    "recordedNeedMore": "Kikundi hiki kimerekodi mara {count} (vipimo vya sambamba vinahitaji angalau 2)",
+    "emptyBody": "Majaribio ya kiasi yanahitaji vipimo vilivyorudiwa ili kupata wastani; kila kubonyeza “Soma” kutaacha mstari mmoja hapa.",
+    "colIndex": "Na.",
+    "colTime": "Wakati / s",
+    "colTemperature": "Joto / ℃",
+    "colPh": "pH",
+    "colVolume": "Ujazo / mL",
+    "rowMean": "Wastani wa Kikundi",
+    "rowDeviation": "Upotovu wa Jamaa",
+    "worstDeviation": "Upotovu mkubwa zaidi wa jamaa {value}%:",
+    "verdictGood": "Uthabiti wa data ni mzuri; unaweza kutumika kwa mahesabu.",
+    "verdictFair": "Upotovu ni mkubwa kidogo — angalia kama macho yako yako sawasawa na alama za kipimo na kama mfumo umesimama.",
+    "verdictPoor": "Upotovu ni mkubwa sana — tafuta sababu kisha rudia vipimo vya sambamba; usichukue wastani moja kwa moja."
+  },
+  "deck": {
+    "readings": "Usomaji wa Vifaa vya Maabara",
+    "temperature": "Joto",
+    "volume": "Ujazo",
+    "ph": "pH",
+    "operations": "Shughuli za Majaribio",
+    "needReagent": "Chukua kitendanishi kwanza",
+    "inOrder": "Fuata mpangilio wa hatua halisi"
+  },
+  "device": {
+    "glassware": "Vyombo vya maabara",
+    "electrolysisCell": "Seli ya elektrolisisi",
+    "galvanicCell": "Seli ya galvani",
+    "flameTest": "Kifaa cha jaribio la mwali",
+    "gasCollection": "Kifaa cha kukusanya gesi kwa maji",
+    "gasDelivery": "Kifaa cha kuongoza na kunyonya gesi",
+    "conductivity": "Ulinganisho wa uendeshaji wa umeme wa ufumbuzi",
+    "strongBright": "Nguvu · Mwanga mkali",
+    "weakDim": "Dhaifu · Mwanga hafifu",
+    "nonNone": "Sifaeneshi · Haiwaki"
+  },
+  "difficulty": {
+    "EASY": "Mwanzo",
+    "MEDIUM": "Wastani",
+    "HARD": "Changamoto"
+  },
+  "electro": {
+    "conductivityDesc": "Linganisha uendeshaji wa umeme wa ufumbuzi wenye mkusanyiko sawa (mwangaza wa balbu unaonyesha mkusanyiko wa ioni).",
+    "conductivityActive": "Upimaji wa umeme unaendelea: balbu ikiwa na mwanga mkali zaidi, uendeshaji ni bora zaidi",
+    "conductivityIdle": "Bonyeza “Pima umeme” kulinganisha uendeshaji wa ufumbuzi kila mmoja",
+    "conductivityOn": "💡 Pima umeme",
+    "powerOff": "Zima umeme",
+    "electrolyteInert": "Elektroliti: {name} ({formula}) · Anodi ya kawaida (kaboni)",
+    "electrolyteActive": "Elektroliti: {name} ({formula}) · Anodi tendaji (shaba)",
+    "electrolysisActive": "Elektrolisisi inaendelea…",
+    "electrolysisIdle": "Bonyeza “Washa umeme” kuanza elektrolisisi, angalia matukio kwenye nguzo mbili",
+    "copperFading": "Ufumbuzi: bluu inafifiwa polepole (ioni za shaba zinatumiwa)",
+    "powerOn": "⚡ Washa umeme",
+    "brine": "Maji ya chumvi",
+    "electrolyte": "Elektroliti: {name}",
+    "cellActive": "Mzunguko umefungwa, galvanomita inakengeuka, seli ya galvani inachaji…",
+    "cellIdle": "Bonyeza “Funga mzunguko” kuangalia mkengeuko wa galvanomita na matukio kwenye nguzo mbili",
+    "cellOn": "🔌 Funga mzunguko",
+    "cellOff": "Zima mzunguko",
+    "cathode": "Kathodi (−)",
+    "anode": "Anodi (＋)",
+    "negative": "Nguzo hasi",
+    "positive": "Nguzo chanya"
+  },
+  "errors": {
+    "noActivity": "Hakuna operesheni yoyote iliyorekodiwa katika majaribio haya. Fanya jaribio kwenye meza ya kazi kwanza, kisha uzalishe ripoti.",
+    "reportFailed": "Uzalishaji wa ripoti umeshindwa",
+    "tutorUnavailable": "Huduma ya mwalimu wa AI haipatikani",
+    "unknown": "Hitilafu isiyojulikana"
+  },
+  "home": {
+    "labTitle": "Meza ya Majaribio ya Mwingiliano",
+    "labDesc": "Buruta vitendanishi kwenye bikari, injini ya majibu huamua mabadiliko ya rangi, Bubbles, mashapo na mabadiliko ya joto kwa wakati halisi — unachokiona ndicho unachopata.",
+    "tutorTitle": "Mwalimu wa Majaribio wa AI",
+    "tutorDesc": "Uliza maswali kuhusu kanuni na uendeshaji wakati wowote. Mwalimu atatoa maelezo na vidokezo vya usalama moja kwa moja unapofanyika majibu muhimu.",
+    "reportTitle": "Ripoti ya Majaribio ya Akili",
+    "reportDesc": "Inakusanya mikondo ya usomaji wa jaribio lote, kisha inazalisha kiotomatiki hitimisho, uchambuzi wa makosa, mapendekezo ya uboreshaji na tathmini ya maarifa.",
+    "badge": "Maabara ya Kemikali ya Kawaida Inayoendeshwa na AI",
+    "heroLine1": "Kwenye kivinjari chako",
+    "heroLine2": "Fanya majaribio ya kemikali halisi",
+    "heroDesc": "Buruta vitendanishi, angalia mabadiliko ya rangi na Bubbles, uliza mwalimu wa AI wakati wowote — ripoti iliyopangwa vizuri inazalishwa kiotomatiki mwishoni mwa jaribio. Majaribio {count} yaliyothibitishwa, salama na yanayoweza kurudiwa.",
+    "ctaCatalog": "Vinjari katalogi ya majaribio →",
+    "ctaSessions": "Vikao vyangu"
+  },
+  "lab": {
+    "mix": "Changanya majibu",
+    "reset": "Futa chombo",
+    "clear": "Futa",
+    "complete": "Maliza jaribio",
+    "completed": "Jaribio limekamilika",
+    "viewReport": "Tazama ripoti ya jaribio →",
+    "removeItem": "Bonyeza kuondoa",
+    "conditions": "Hali za mfumo",
+    "temperature": "Joto la mfumo",
+    "reagentShelf": "Rafu ya Vitendanishi",
+    "apparatusList": "Orodha ya Vifaa",
+    "emptyContainer": "Chagua kiasi kutoka kwenye rafu ya vitendanishi upande wa kushoto, au buruta kitendanishi hapa",
+    "absorbent": "Kioevu cha Kunyonya",
+    "apparatus": "Kifaa",
+    "addReagent": "Ongeza {name}",
+    "removeReagent": "Ondoa {name}",
+    "mixAction": "Changanya",
+    "backToDetail": "← Rudi kwa Maelezo ya Majaribio",
+    "backToCatalog": "← Rudi kwenye Maktaba ya Majaribio",
+    "labSuffix": "Meza ya Majaribio",
+    "labHint": "Bonyeza au buruta vitendanishi kwenye kikombe, “Mchanganyiko wa Majibu” uangalie matukio; unaweza pia kutumia “Maelezo ya Majaribio” kuonyesha hatua kwa hatua kiotomatiki."
+  },
+  "locale": {
+    "switchLabel": "Badilisha lugha ya kiolesura",
+    "searchPlaceholder": "Tafuta lugha…",
+    "noMatch": "Hakuna lugha inayolingana",
+    "groupFull": "Lugha kuu",
+    "groupBasic": "Lugha zingine",
+    "groupBasicHint": "Ina maudhui kamili ya maabara na maelezo ya sauti; tafsiri ni ya mashine"
+  },
+  "nav": {
+    "catalog": "Maktaba ya Majaribio",
+    "sessions": "Vikao Vyangu",
+    "home": "Ukurasa wa Nyumbani"
+  },
+  "op": {
+    "stir": {
+      "label": "Koroga",
+      "effect": "Koroga kwa fimbo ya kioo; umumunyifu unaharakisha na mchanganyiko unakuwa sawa zaidi",
+      "hint": "Kukoroga kunaharakisha umumunyifu na uhamishaji joto, na pia kusawazisha mkusanyiko wa ndani — ndipo usomaji unawakilisha jumla"
+    },
+    "shake": {
+      "label": "Tikisa",
+      "effect": "Tikisa ili kuchanganya vizuri; vitendanishi vinawasiliana kikamilifu",
+      "hint": "Kioevu kidogo ndani ya bomba la majaribio; changanya kwa kutikisa (si kukoroga) — shika mdomo wa bomba ukielekeza mbali na watu"
+    },
+    "heat": {
+      "label": "Pasha moto",
+      "effect": "Washa taa ya pombe kupasha moto; joto la mfumo linaongezeka",
+      "hint": "Athari nyingi huharakishwa na joto; athari za endothermic zinahitaji kupashwa moto bila kukoma"
+    },
+    "cool": {
+      "label": "Poza",
+      "effect": "Ondoa chanzo cha joto; mfumo hupoa polepole",
+      "hint": "Kupoza hupunguza umumunyifu — hatua ya kawaida katika uhabikishaji na ukusanyaji wa bidhaa"
+    },
+    "settle": {
+      "label": "Acha itulie",
+      "effect": "Acha kwa muda mfupi; mashazo hushuka na tabaka za kioevu hutofautiana vizuri",
+      "hint": "Mashazo na tabaka zinahitaji muda; baada ya kutulia ndipo unaweza kuhukumu uangavu wa kioevu cha juu"
+    },
+    "read": {
+      "label": "Soma kipimo",
+      "effect": "Rekodi kipimo cha sasa",
+      "hint": "Soma kipimo kwa macho sawa na kiwango; ingiza kila kipimo kwenye jedwali ili uweze kukokotoa wastani na kosa"
+    }
+  },
+  "quant": {
+    "verdictGood": "Uthabiti wa data ni mzuri; inafaa kutumika katika mahesabu",
+    "verdictFair": "Upotevu ni mkubwa; angalia mwelekeo wa macho wakati wa kusoma na utulivu wa mfumo",
+    "verdictPoor": "Upotevu ni mkubwa sana; tafuta sababu kisha rudia vipimo vya sambamba",
+    "meanPh": "pH ya wastani",
+    "meanTemp": "Joto la wastani",
+    "meanVolume": "Ujazo wa wastani",
+    "group": "Kikundi cha {no}",
+    "readings": "Masomo {count}",
+    "finalGroup": "Hitimisho linategemea kikundi hiki",
+    "singleReading": "Kipimo 1 tu; haiwezekani kukokotoa upotevu wa jamaa (kanuni zinahitaji vipimo vya sambamba angalau 2)",
+    "worstDeviation": "Upotevu wa wastani wa jamaa wa juu zaidi {value}%",
+    "groupNote": "Kila mara mfumo unapochukuliwa / kuchanganywa / kupashwa moto, kikundi kipya huanza; vipimo kutoka vikundi tofauti si vipimo vya sambamba, kwa hivyo vinafafanuliwa tofauti.",
+    "noReadings": "Hakuna rekodi ya kipimo iliyoachwa na operesheni ya “Soma kipimo” katika jaribio hili; haiwezekani kukokotoa wastani au upotevu wa jamaa. Jaribio la kiasi linahitaji kusoma mara angalau 2 katika hali moja ya mfumo."
+  },
+  "report": {
+    "conclusion": "Hitimisho la jaribio",
+    "errorAnalysis": "Uchambuzi wa makosa",
+    "improvements": "Mapendekezo ya kuboresha",
+    "noImprovements": "Hakuna mapendekezo kwa sasa.",
+    "knowledge": "Tathmini ya Ufahamu wa Dhana",
+    "empty": "(Hakuna maudhui)",
+    "measurements": "Usomaji wa Vipimo",
+    "quantData": "Data ya Kiasi",
+    "noMeasurements": "Hakuna usomaji wowote uliorekodiwa katika jaribio hili.",
+    "generating": "AI inachambua data ya jaribio…",
+    "regenerate": "Tengeneza Ripoti Upya",
+    "generate": "Tengeneza Ripoti ya Jaribio",
+    "generateFailed": "Imeshindwa kutoa ({status})",
+    "notGenerated": "Ripoti bado haijatengenezwa. AI itatoa hitimisho, uchambuzi wa makosa, mapendekezo ya uboreshaji, na tathmini ya ufahamu kulingana na hatua za jaribio hili na usomaji wa vipimo.",
+    "noActivity": "Jaribio hili bado halina rekodi yoyote ya shughuli; ripoti haiwezi kutolewa kwa sasa.",
+    "backToLab": "Rudi kwenye meza ya maabara ujaribu mwenyewe →",
+    "title": "Ripoti ya Jaribio",
+    "generatedAt": "Imetolewa {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Washa umeme",
+      "off": "Zima umeme"
+    },
+    "cell": {
+      "on": "Funga mzunguko",
+      "off": "Fungua mzunguko"
+    },
+    "flameTest": {
+      "on": "Washa taa ya alkoholi",
+      "off": "Zima taa ya alkoholi"
+    },
+    "waterBath": {
+      "on": "Anza kupasha maji",
+      "off": "Simamisha kupasha maji"
+    },
+    "distillation": {
+      "on": "Anza kunereka",
+      "off": "Simamisha kunereka"
+    },
+    "filtration": {
+      "on": "Anza kuchuja",
+      "off": "Simamisha kuchuja"
+    },
+    "calorimeter": {
+      "on": "Anza kukoroga na kupima joto",
+      "off": "Simamisha kukoroga"
+    },
+    "gasCollect": {
+      "on": "Anza kukusanya gesi",
+      "off": "Simamisha kukusanya gesi"
+    },
+    "titration": {
+      "on": "Fungua kokotoo uongeze tone kwa tone",
+      "off": "Funga kokotoo"
+    },
+    "syringe": {
+      "on": "Bonyeza pistoni kuongeza shinikizo",
+      "off": "Vuta pistoni kupunguza shinikizo"
+    },
+    "phMeter": {
+      "on": "Washa kipima pH",
+      "off": "Zima kipima pH"
+    },
+    "evaporation": {
+      "on": "Washa taa ya alkoholi kuvapisha",
+      "off": "Zima taa ya alkoholi"
+    },
+    "pressureDrop": {
+      "on": "Funga kizibo utikise",
+      "off": "Legeza kizibo"
+    },
+    "heat": {
+      "on": "Washa taa ya alkoholi kupasha joto",
+      "off": "Simamisha kupasha joto"
+    }
+  },
+  "sessions": {
+    "title": "Vikao Vyangu",
+    "subtitle": "Angalia rekodi za majaribio ya awali na ufikie ripoti husika",
+    "unknownExperiment": "Jaribio lisilojulikana",
+    "completed": "Imekamilika",
+    "inProgress": "Inaendelea",
+    "startedAt": "Ilianza saa {time}",
+    "viewReport": "Angalia ripoti"
+  },
+  "shelf": {
+    "title": "Rafu ya vitendanishi",
+    "taken": "Imechukuliwa {dose} {unit}",
+    "takeSome": "Dondosha / chukua kiasi kinachofaa",
+    "take": "Chukua {unit}",
+    "specIndicator": "Kiashiria",
+    "specGas": "Gesi",
+    "specBulk": "Chukua kiasi kinachofaa",
+    "specSolution": "Ufumbuzi",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Kioevu safi ρ={density} g/mL",
+    "specLiquid": "Kioevu",
+    "specSolid": "Imara · Safi ya Uchanganuzi"
+  },
+  "site": {
+    "title": "ChemAIForge · Maabara ya Kemikali ya AI",
+    "description": "Fanya majaribio ya kemikali kwenye kivinjari: buruta vitendanishi, angalia athari, pata mwongozo wa mshauri wa AI, na uzalishe ripoti za majaribio kiotomatiki."
+  },
+  "titration": {
+    "stopcock": "Ufunguzi wa bomba",
+    "buretteReading": "Usomaji wa bureti",
+    "phMeter": "Kipimo cha pH",
+    "unfilled": "Bado hujajazwa",
+    "strongBase": "Msingi kali",
+    "weakBase": "Msingi dhaifu · Eneo la kubadilika rangi",
+    "nearNeutral": "Karibu na upande wowote",
+    "acidExcess": "Tindikali · Imezidi",
+    "endpointOk": "Hatua ya mwisho imefikiwa",
+    "overshoot": "Imezidi kidogo",
+    "notYet": "Bado haijafika hatua ya mwisho (waridi haujapotea)",
+    "justFaded": "Imepotea hivi sasa",
+    "keyPoints": "Mambo muhimu ya uendeshaji",
+    "takeAnalyte": "Kwanza chukua kioevu cha kupima →",
+    "dragStopcock": "← Buruta bomba uanze kutiririsha",
+    "openness": "Ufunguzi {pct}% · Shikilia na buruta kushoto au kulia"
+  },
+  "tutor": {
+    "placeholder": "Andika swali lako…",
+    "replying": "Inajibu…",
+    "send": "Tuma",
+    "unknownError": "Hitilafu isiyojulikana",
+    "requestFailed": "Ombi limeshindwa ({status})",
+    "askHeat": "Nilichanganya vitendanishi lakini sikuona jambo lolote. Kidokezo kinasema mmenyuko huu unahitaji joto. Tafadhali eleza kwa nini mmenyuko huu lazima ufanyike chini ya hali ya joto.",
+    "askObserved": "Nimeona mmenyuko {equation}{phenomena}, tafadhali nisaidie kueleza kilichotokea na kanuni yake ni nini?",
+    "phPrecipitate": "Mchanga umeundwa",
+    "phGas": "Gesi imezalishwa",
+    "phColor": "Mabadiliko ya rangi yametokea",
+    "listJoin": "، ",
+    "eqWrap": "({equation})",
+    "title": "Mshauri wa Maabara wa AI",
+    "empty": "Niulize swali lolote wakati wowote, au nitakuarifu mara tu mmenyuko unapoanzishwa kwenye turubai."
+  },
+  "workbench": {
+    "view2d": "Mchoro wa 2D",
+    "view3d": "Meza ya Maabara ya 3D",
+    "view3dRefined": "Meza ya Maabara ya 3D ★",
+    "sceneHint": "Buruta kuzungusha · Gurudumu kukuza"
+  }
+}

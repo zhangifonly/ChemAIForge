@@ -3,8 +3,14 @@
 //   要求模型仅返回结构化 JSON（结论/误差分析/改进建议/知识点掌握评估）。
 // generateReport：非流式调用 Claude，解析并校验返回的结构化报告。
 import type { ExperimentDTO } from "@/types/experiment";
-import type { ExperimentReport, SessionDTO } from "@/server/session/types";
+import type {
+  ExperimentReport,
+  SessionDTO,
+  SessionMeasurement,
+} from "@/server/session/types";
 import { getClaudeApiConfig } from "./config";
+import { localeMeta, SOURCE_LOCALE } from "@/lib/i18n/locales";
+import { summarizeQuantitative } from "./quantSummary";
 
 const DEFAULT_MAX_TOKENS = 1500;
 const DEFAULT_TIMEOUT_MS = 60000;
@@ -43,15 +49,20 @@ function summarizeMeasurements(session: SessionDTO): string {
     `最低 ${Math.min(...xs).toFixed(2)} / 最高 ${Math.max(...xs).toFixed(2)}`;
   // 区间统计按全量算，只有明细截断
   const { shown, omitted } = recent(session.measurements);
-  const lines = shown.map(
-    (m, i) =>
-      `${i + 1 + omitted}. [${m.at}] pH=${m.ph.toFixed(2)}　温度=${m.temperature.toFixed(2)}℃`,
-  );
+  const lines = shown.map((m, i) => measurementLine(m, i + 1 + omitted));
   return [
     `共 ${session.measurements.length} 条读数。pH 区间：${range(phs)}；温度区间：${range(temps)}。`,
     omitted > 0 ? `明细（已省略较早的 ${omitted} 条，以下为最近 ${shown.length} 条）：` : "明细：",
     ...lines,
   ].join("\n");
+}
+
+// 单条明细：带上体积与动作标记，模型才能看出哪条是主动读数、哪条是混合顺带的快照
+function measurementLine(m: SessionMeasurement, no: number): string {
+  const parts = [`pH=${m.ph.toFixed(2)}`, `温度=${m.temperature.toFixed(2)}℃`];
+  if (m.volume !== undefined) parts.push(`体积=${m.volume.toFixed(2)}mL`);
+  const mark = m.mark ? `　动作：${m.mark}` : "";
+  return `${no}. [${m.at}] ${parts.join("　")}${mark}`;
 }
 
 // 汇总操作步骤序列
@@ -70,18 +81,33 @@ function summarizeSteps(session: SessionDTO): string {
 }
 
 // 构造资深化学导师评估 system prompt，约束模型仅输出结构化 JSON
-function buildSystemPrompt(): string {
+//
+// 输出语言跟随界面语言：学生在日语界面里做实验，报告也该是日语。
+// 用英文语言名指示模型（"in Japanese"）而不是用该语言自己写指令 ——
+// 前者对 60 个语种都能一致生效，后者要先有 60 份指令译文才能开始。
+function buildSystemPrompt(locale: string): string {
+  const language = localeMeta(locale).englishName;
   return [
     "你是一位资深化学实验导师，负责在虚拟实验结束后为学生生成结构化评估报告。",
-    "请用简体中文撰写，语气专业且鼓励，结合实验目标、操作步骤与测量读数客观分析。",
+    // 输出语言要放在最前、说两遍、并点明"输入是中文也照样"：实测只写一句
+    // "Write ALL output in German" 时，被其后十几行中文指令与中文实验数据压过去，
+    // 德语界面生成的报告通篇是中文。
+    `OUTPUT LANGUAGE: ${language}. Every string value in the JSON must be written in ${language}.`,
+    `The instructions and experiment data below are in Chinese; that does not change the output language — still write in ${language}.`,
+    "语气专业且鼓励，结合实验目标、操作步骤与测量读数客观分析。",
+    // 学生在实验台上已经看到了带具体数字的数据表，报告若只写「读数存在波动」等于把结论丢掉
+    "已给出的定量统计（平均值、相对平均偏差、数据一致性判定）必须原样引用到误差分析中，",
+    "不得回避具体数字改写成定性描述，也不得自行编造未给出的数值。",
     "你必须只返回一个 JSON 对象，禁止包含 Markdown 代码块标记或任何额外文字。",
     "JSON 结构如下（字段含义）：",
     "{",
     '  "conclusion": "实验结论概述（是否达成目标、关键现象）",',
-    '  "errorAnalysis": "误差分析（读数波动、操作偏差及可能成因）",',
+    '  "errorAnalysis": "误差分析（必须引用给定的平均值与相对平均偏差具体数字，再分析成因）",',
     '  "improvements": ["改进建议1", "改进建议2"],',
     '  "knowledgeAssessment": "对学生相关知识点掌握程度的评估"',
     "}",
+    // 结尾再重申一次：长提示词里靠后的约束更容易被遵守
+    `Reminder: all JSON string values in ${language}.`,
   ].join("\n");
 }
 
@@ -108,6 +134,10 @@ function buildUserContent(
     "【测量读数】",
     summarizeMeasurements(session),
     "",
+    // 放在明细之后：先给原始数据，再给已经算好的结论，模型不必自己去做算术
+    "【定量统计（已按实验台数据表的口径算好，请直接引用）】",
+    summarizeQuantitative(session.measurements),
+    "",
     "请基于以上信息生成结构化实验报告 JSON。",
   ].join("\n");
 }
@@ -117,11 +147,13 @@ export function buildReportPrompt(
   experiment: ExperimentDTO,
   session: SessionDTO,
   maxTokens = DEFAULT_MAX_TOKENS,
+  // 默认源语言：未传语言的旧调用方（含测试）行为不变
+  locale: string = SOURCE_LOCALE,
 ): ReportRequestBody {
   const { model } = getClaudeApiConfig();
   return {
     model,
-    system: buildSystemPrompt(),
+    system: buildSystemPrompt(locale),
     max_tokens: maxTokens,
     messages: [{ role: "user", content: buildUserContent(experiment, session) }],
   };
@@ -138,31 +170,135 @@ function extractText(data: unknown): string {
     .join("");
 }
 
+/**
+ * 归一化一条改进建议。
+ *
+ * 模型被要求返回字符串数组，但实际常给 `[{ "建议": "…", "理由": "…" }]` 这类对象。
+ * 原先一律 String(x)，对象就变成 "[object Object]" 直接渲染到报告页上 ——
+ * 学生看到的改进建议是一行乱码。拿不出可读文本时返回 null，由调用方丢弃，
+ * 宁可少一条建议也不摆一行垃圾。
+ */
+function normalizeImprovement(x: unknown): string | null {
+  if (typeof x === "string") return x.trim() || null;
+  if (typeof x === "number" || typeof x === "boolean") return String(x);
+  if (x && typeof x === "object" && !Array.isArray(x)) {
+    // 取对象里的字符串字段拼起来（键名可能是"建议"/"suggestion"/"detail"，不作假设）
+    const parts = Object.values(x as Record<string, unknown>)
+      .filter((v): v is string => typeof v === "string" && v.trim().length > 0)
+      .map((v) => v.trim());
+    return parts.length ? parts.join("：") : null;
+  }
+  return null;
+}
+
 // 容错解析模型文本为结构化报告：剥离可能的代码块标记后 JSON.parse 并校验关键字段
-function parseReportText(text: string): ExperimentReport {
-  const cleaned = text
-    .trim()
-    .replace(/^```(?:json)?/i, "")
-    .replace(/```$/, "")
-    .trim();
+/**
+ * 取回复中第一个完整 JSON 对象：按括号配对，跳过字符串里的括号。
+ * 模型偶尔在 JSON 前后加解释或代码围栏，只剥首尾围栏不够。
+ */
+function firstJsonObject(text: string): string {
+  const start = text.indexOf("{");
+  if (start < 0) return text;
+  let depth = 0;
+  let inStr = false;
+  let esc = false;
+  for (let i = start; i < text.length; i++) {
+    const c = text[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === "\\") esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === "{") depth++;
+    else if (c === "}" && --depth === 0) return text.slice(start, i + 1);
+  }
+  return text.slice(start);
+}
+
+/**
+ * 修复字符串值里未转义的直引号。
+ *
+ * 德语报告常写 „…"：那个收尾的 " 就是 JSON 的字符串定界符，模型没转义，
+ * JSON 当场断开 —— 实测德语报告因此整份生成失败，日语、阿拉伯语用自己的引号则无事。
+ * 判断规则：一个 " 若后面紧跟的不是 JSON 结构字符（, } ] : 或空白后接这些），
+ * 它就不是定界符而是正文里的引号，转义掉。
+ */
+function repairJsonQuotes(json: string): string {
+  let out = "";
+  let inStr = false;
+  let esc = false;
+  for (let i = 0; i < json.length; i++) {
+    const c = json[i];
+    if (!inStr) {
+      if (c === '"') inStr = true;
+      out += c;
+      continue;
+    }
+    if (esc) {
+      esc = false;
+      out += c;
+      continue;
+    }
+    if (c === "\\") {
+      esc = true;
+      out += c;
+      continue;
+    }
+    if (c === '"') {
+      const rest = json.slice(i + 1).trimStart();
+      const closes = rest === "" || /^[,}\]:]/.test(rest);
+      if (closes) {
+        inStr = false;
+        out += c;
+      } else {
+        out += '\\"';
+      }
+      continue;
+    }
+    out += c;
+  }
+  return out;
+}
+
+export function parseReportText(text: string): ExperimentReport {
   let obj: Record<string, unknown>;
   try {
-    obj = JSON.parse(cleaned) as Record<string, unknown>;
+    obj = JSON.parse(repairJsonQuotes(firstJsonObject(text))) as Record<string, unknown>;
   } catch {
     throw new Error("AI 返回的报告不是合法 JSON，无法解析。");
   }
   const improvements = Array.isArray(obj.improvements)
-    ? (obj.improvements as unknown[]).map((x) => String(x))
+    ? (obj.improvements as unknown[])
+        .map(normalizeImprovement)
+        .filter((s): s is string => s !== null)
     : [];
+  const conclusion = typeof obj.conclusion === "string" ? obj.conclusion : "";
+  const errorAnalysis =
+    typeof obj.errorAnalysis === "string" ? obj.errorAnalysis : "";
+  const knowledgeAssessment =
+    typeof obj.knowledgeAssessment === "string" ? obj.knowledgeAssessment : "";
+
+  // 四项全空 = 这段 JSON 根本不是一份报告（模型返回了顶层数组、外面又包了一层
+  // { "report": {…} }、或在 JSON 前后夹了解释文字）。逐字段回退空串本是容错，
+  // 但全空时它把"解析失败"伪装成了"生成成功"：报告被存库、页面从「尚未生成」
+  // 变成四个「（暂无内容）」，学生得自己看出不对再去点重新生成。
+  // 上游返回空内容、JSON 解析失败都会抛错，唯独这一档漏了 —— 补齐。
+  if (
+    !conclusion.trim() &&
+    !errorAnalysis.trim() &&
+    !knowledgeAssessment.trim() &&
+    improvements.length === 0
+  ) {
+    throw new Error("AI 返回的报告缺少全部关键字段，无法解析。");
+  }
+
   return {
-    conclusion: typeof obj.conclusion === "string" ? obj.conclusion : "",
-    errorAnalysis:
-      typeof obj.errorAnalysis === "string" ? obj.errorAnalysis : "",
+    conclusion,
+    errorAnalysis,
     improvements,
-    knowledgeAssessment:
-      typeof obj.knowledgeAssessment === "string"
-        ? obj.knowledgeAssessment
-        : "",
+    knowledgeAssessment,
     generatedAt: new Date().toISOString(),
   };
 }
@@ -173,9 +309,10 @@ export async function generateReport(
   experiment: ExperimentDTO,
   session: SessionDTO,
   timeoutMs = DEFAULT_TIMEOUT_MS,
+  locale: string = SOURCE_LOCALE,
 ): Promise<ExperimentReport> {
   const { baseUrl, apiKey } = getClaudeApiConfig();
-  const body = buildReportPrompt(experiment, session);
+  const body = buildReportPrompt(experiment, session, undefined, locale);
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);

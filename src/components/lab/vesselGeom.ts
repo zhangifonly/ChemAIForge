@@ -124,3 +124,16 @@ export function isGalvanicSetup(apparatus: string[]): boolean {
 export function usesConductivity(apparatus: string[]): boolean {
   return /电导率|导电性/.test(apparatus.join(" "));
 }
+
+/**
+ * 实验是否配有外部热源。
+ * 用来决定画不画杯底那盏酒精灯：没配热源的实验（如中和热测定，仪器只有量热计、
+ * 温度计、量筒、搅拌棒）即使体系温度升高，也不该凭空多出一件加热仪器 ——
+ * 中和热测定反而要求绝热，画上火焰是把实验原理讲反了。
+ * 关键词与 operations.ts 的 heat 规则保持一致，两处对"有没有热源"的判断才不会打架。
+ */
+export function hasHeatSource(apparatus: string[]): boolean {
+  return /酒精灯|水浴|电炉|石棉网|坩埚|蒸发皿|加热|电热|燃烧匙|喷灯|马弗炉|火柴|燃着的木条/.test(
+    apparatus.join(" "),
+  );
+}

@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Önceki Adım",
+    "pause": "Duraklat",
+    "play": "Oynat",
+    "next": "Sonraki Adım",
+    "voiceOn": "Sesli Anlatımı Aç",
+    "voiceOff": "Sesli Anlatımı Kapat",
+    "muted": "🔇 Sessiz",
+    "askTutor": "«{title}» adımında: {narration} Bu andaki kaptaki gözlemler ve okumalarla birlikte kimyasal ilkeleri ve denklemleri kısaca açıklayın.",
+    "phase": {
+      "theory": "İlke",
+      "prep": "Hazırlık",
+      "operate": "İşlem",
+      "observe": "Gözlem",
+      "conclude": "Sonuç"
+    },
+    "voiceLabel": "🔊 Sesli Anlatım",
+    "vesselBeaker": "Beher",
+    "vesselTube": "Deney Tüpü",
+    "vesselFlask": "Erlen Maycr Şişesi",
+    "observeGeneric": "Sistemi dikkatlice gözlemleyin; renk, kabarcık veya sıcaklık değişikliği olup olmadığına dikkat edin.",
+    "observeReacting": "Reaksiyon devam ediyor; pH ve sıcaklık okumalarındaki değişimleri gözlemleyin.",
+    "phenomenaList": "{parts} gözlemlendi.",
+    "partGas": "sürekli gaz kabarcıkları çıkıyor",
+    "partPrecipitate": "çözelti bulanıklaşıyor ve çökelti oluşuyor",
+    "partColor": "çözeltinin rengi belirgin biçimde değişiyor",
+    "partExo": "aynı zamanda ısı açığa çıkıyor ve sıcaklık yükseliyor",
+    "partEndo": "aynı zamanda ısı emiliyor ve sıcaklık düşüyor",
+    "titlePrinciple": "Deney İlkesi",
+    "titleSummary": "Deney Özeti",
+    "titleConnect": "Düzeneği Bağla",
+    "titleConnectCircuit": "Devreyi Bağla",
+    "titlePowerOn": "Gücü Aç",
+    "titleConnectOn": "Devreyi Kapat",
+    "titleConductTest": "İletkenlik Testi",
+    "titleElectrodes": "Elektrot Gözlemleri",
+    "titleConductCompare": "İletkenlik Karşılaştırması",
+    "titleTake": "{reagent} Al",
+    "titleHeat": "Alkol Lambasını Yak",
+    "titleMix": "Karıştırarak Tepkimeye Sok",
+    "titleObserve": "Gözlem Yap",
+    "summary": "Bu deney aracılığıyla {objectives}.",
+    "narrSetupElectrode": "Elektrotları elektrolite daldırın ve DC güç kaynağının pozitif ile negatif kutuplarına bağlayın.",
+    "narrPowerOn": "DC güç kaynağını açın, elektrolizi başlatın ve elektrot değişimlerini dikkatlice gözlemleyin.",
+    "narrSetupCircuit": "İki elektrotu iletkenlerle galvanometreye bağlayın ve elektrolit çözeltisine daldırın.",
+    "narrConnectOn": "Devreyi kapatın ve galvanometre ibresinin sapıp sapmadığını gözlemleyin.",
+    "narrSetupConduct": "Aynı konsantrasyondaki çözeltileri ayrı ayrı ampullü elektrot devrelerine bağlayın.",
+    "narrConductTest": "Devreyi kapatın ve her çözeltideki ampulün parlaklığını karşılaştırın.",
+    "narrSetupGeneric": "Devre şemasına göre elektrotları güç kaynağına ve ölçüm aletlerine bağlayın, ardından elektrolitik maddeyi yerleştirin.",
+    "narrRigOn": "{verb}, iki elektrot ile göstergelerdeki değişimi dikkatle izleyin.",
+    "verbElectrolysis": "Doğru akım kaynağını bağlayın ve elektrolize başlayın",
+    "verbCircuit": "Devreyi bağlayın",
+    "narrTake": "{reagent} alın ve {vessel} içine ekleyin.",
+    "narrHeat": "{vessel} ısıtmak için ispirto lambасını yakın — bu tepkime yalnızca ısı altında gerçekleşir.",
+    "narrMixHeated": "Isındıktan sonra reaktifleri iyice karıştırın; tepkime hemen başlar.",
+    "narrMix": "{vessel} içindeki reaktifleri iyice karıştırın; tepkime hemen başlar.",
+    "electrodesFading": "; çözeltinin mavi rengi giderek solar",
+    "brine": "tuzlu su",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Deney Açıklama Taslağı",
+    "outlineHint": "Deney masasına girdikten sonra adım adım otomatik gösterim için “Deney Açıklaması ▶” düğmesine tıklayın.",
+    "cardTitle": "Deney Açıklaması",
+    "askTutorButton": "Eğitmenden bu adımı açıklamasını isteyin",
+    "sentenceEnd": ".",
+    "voiceFemale": "Kadın sesi ♀",
+    "voiceMale": "Erkek sesi ♂",
+    "noVoice": "Bu dil için ses mevcut değil; anlatım altyazılarla otomatik ilerleyecek.",
+    "narrTake_beaker": "{reagent} alın ve beherin içine ekleyin.",
+    "narrTake_tube": "{reagent} alın ve tüpün içine ekleyin.",
+    "narrTake_flask": "{reagent} alın ve erlenmayerin içine ekleyin.",
+    "narrHeat_beaker": "Ispirtolu ocağı yakarak beheri ısıtın — bu tepkime ancak ısıtma koşullarında gerçekleşebilir.",
+    "narrHeat_tube": "Ispirtolu ocağı yakarak tüpü ısıtın — bu tepkime ancak ısıtma koşullarında gerçekleşebilir.",
+    "narrHeat_flask": "Ispirtolu ocağı yakarak erlenmayeri ısıtın — bu tepkime ancak ısıtma koşullarında gerçekleşebilir.",
+    "narrMix_beaker": "Beherdeki reaktifleri iyice karıştırın; tepkime hemen başlayacaktır.",
+    "narrMix_tube": "Tüpteki reaktifleri iyice karıştırın; tepkime hemen başlayacaktır.",
+    "narrMix_flask": "Erlenmayerdeki reaktifleri iyice karıştırın; tepkime hemen başlayacaktır."
+  },
+  "a11y": {
+    "skipToMain": "Ana içeriğe geç"
+  },
+  "catalog": {
+    "title": "Deney Kütüphanesi",
+    "empty": "Uygun deney bulunamadı.",
+    "searchPlaceholder": "Deney adı ara…",
+    "searchLabel": "Deney ara",
+    "filterCategory": "Kategoriye göre filtrele",
+    "allCategories": "Tüm kategoriler",
+    "filterDifficulty": "Zorluğa göre filtrele",
+    "allDifficulties": "Tüm zorluklar",
+    "objectives": "Deney hedefleri",
+    "reagents": "Gerekli reaktifler",
+    "apparatus": "Gerekli aletler",
+    "subtitle": "Sanal laboratuvara girmek için bir deney seçin.",
+    "estimatedMinutes": "Tahminen {minutes} dakika",
+    "startLab": "Deneyi başlat →"
+  },
+  "category": {
+    "ACID_BASE": "Asit-Baz reaksiyonları",
+    "ORGANIC": "Organik kimya",
+    "THERMODYNAMICS": "Termodinamik",
+    "REDOX": "Oksidasyon-indirgeme",
+    "PRECIPITATION": "Çökelme-çift ayrışma",
+    "GAS": "Gaz hazırlama",
+    "ELECTROCHEM": "Elektrokimya",
+    "METAL": "Metal aktivitesi",
+    "ANALYSIS": "Analitik test",
+    "COORDINATION": "Koordinasyon renk reaksiyonu"
+  },
+  "chart": {
+    "temperature": "Sıcaklık",
+    "ph": "pH",
+    "volume": "Hacim",
+    "ariaLabel": "{label} zamana bağlı değişim eğrisi, güncel değer {value}",
+    "measureAria": "Ölçüm değerlerinin zamana bağlı çizgi grafiği, toplam {count} okuma, pH aralığı 0–14, sıcaklık aralığı 0–100 ℃",
+    "title": "Süreç Eğrisi",
+    "current": "Güncel",
+    "peak": "Tepe",
+    "samples": "{count} nokta örneklendi",
+    "channelTemp": "Sıcaklık",
+    "channelPh": "pH",
+    "channelVolume": "Hacim",
+    "empty": "İşlem başladıktan sonra zamana bağlı eğri burada görünür"
+  },
+  "dataTable": {
+    "title": "Veri Kayıt Tablosu",
+    "emptyHint": "Bir ölçüm kaydetmek için «Oku» düğmesine tıklayın",
+    "recorded": "Bu grupta {count} kayıt alındı",
+    "recordedNeedMore": "Bu grupta {count} kayıt alındı (paralel ölçüm en az 2 kez yapılmalı)",
+    "emptyBody": "Kantitatif deneylerde tekrarlı ölçüm alıp ortalama hesaplayın; her «Oku» işlemi bu tabloya bir satır ekler.",
+    "colIndex": "No.",
+    "colTime": "Zaman / s",
+    "colTemperature": "Sıcaklık / ℃",
+    "colPh": "pH",
+    "colVolume": "Hacim / mL",
+    "rowMean": "Grup Ortalaması",
+    "rowDeviation": "Bağıl Sapma",
+    "worstDeviation": "Maksimum bağıl sapma {value}%:",
+    "verdictGood": "Veri tutarlılığı iyi, hesaplama için kullanılabilir.",
+    "verdictFair": "Sapma yüksek; okuma sırasında göz hizasının skalayla aynı olup olmadığını ve sistemin dengeye ulaşıp ulaşmadığını kontrol edin.",
+    "verdictPoor": "Sapma çok yüksek; nedeni belirledikten sonra paralel ölçümü tekrarlayın, doğrudan ortalama almayın."
+  },
+  "deck": {
+    "readings": "Tezgah Cihazı Okumaları",
+    "temperature": "Sıcaklık",
+    "volume": "Hacim",
+    "ph": "pH",
+    "operations": "Deney İşlemleri",
+    "needReagent": "Önce reaktifi alın",
+    "inOrder": "Gerçek adım sırasına göre işlem yapın"
+  },
+  "device": {
+    "glassware": "Laboratuvar Camları",
+    "electrolysisCell": "Elektroliz Hücresi",
+    "galvanicCell": "Galvanik Pil",
+    "flameTest": "Alev Testi Düzeneği",
+    "gasCollection": "Su Yerinden Etme ile Gaz Toplama",
+    "gasDelivery": "Gaz İletim ve Absorpsiyon Düzeneği",
+    "conductivity": "Çözelti İletkenlik Karşılaştırması",
+    "strongBright": "Güçlü · Parlak",
+    "weakDim": "Zayıf · Soluk",
+    "nonNone": "Yok · Işıksız"
+  },
+  "difficulty": {
+    "EASY": "Başlangıç",
+    "MEDIUM": "Orta",
+    "HARD": "İleri"
+  },
+  "electro": {
+    "conductivityDesc": "Aynı konsantrasyonda çözeltilerin iletkenliğini karşılaştırın (ampul parlaklığı iyon konsantrasyonunu yansıtır).",
+    "conductivityActive": "İletkenlik testi aktif: ampul ne kadar parlaksa iletkenlik o kadar güçlüdür",
+    "conductivityIdle": "Çözeltilerin iletkenliğini karşılaştırmak için «İletkenlik Testi»ne tıklayın",
+    "conductivityOn": "💡 İletkenlik Testi",
+    "powerOff": "Gücü Kes",
+    "electrolyteInert": "Elektrolit: {name} ({formula}) · İnert anot (karbon)",
+    "electrolyteActive": "Elektrolit: {name} ({formula}) · Aktif anot (bakır)",
+    "electrolysisActive": "Elektroliz devam ediyor…",
+    "electrolysisIdle": "Elektrolizi başlatmak için «Gücü Aç»a tıklayın ve elektrot tepkimelerini gözlemleyin",
+    "copperFading": "Çözelti: mavi renk giderek açılıyor (bakır iyonları tüketiliyor)",
+    "powerOn": "⚡ Gücü Aç",
+    "brine": "Tuzlu Su",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Devre kapalı, galvanometre sapıyor, galvanik pil deşarj oluyor…",
+    "cellIdle": "Galvanometre sapmasını ve elektrot tepkimelerini gözlemlemek için «Devreyi Kapat»a tıklayın",
+    "cellOn": "🔌 Devreyi Kapat",
+    "cellOff": "Devreyi Kes",
+    "cathode": "Katot (−)",
+    "anode": "Anot (＋)",
+    "negative": "Negatif Kutup",
+    "positive": "Pozitif Kutup"
+  },
+  "errors": {
+    "noActivity": "Bu deney için henüz hiçbir işlem kaydedilmedi. Rapor oluşturmadan önce deney tezgâhında en az bir işlem gerçekleştirin.",
+    "reportFailed": "Rapor oluşturulamadı",
+    "tutorUnavailable": "AI rehber hizmetinde bir sorun oluştu",
+    "unknown": "Bilinmeyen hata"
+  },
+  "home": {
+    "labTitle": "Etkileşimli Deney Tezgâhı",
+    "labDesc": "Reaktifleri behere sürükleyin; reaksiyon motoru renk değişimini, kabarcıkları, çökeltiyi ve sıcaklık değişimini anında hesaplar — gördüğünüz sonuç gerçektir.",
+    "tutorTitle": "AI Deney Rehberi",
+    "tutorDesc": "İlke ve işlemler hakkında istediğiniz zaman soru sorun; tuval üzerinde kritik bir reaksiyon tetiklendiğinde rehber açıklama ve güvenlik uyarısı sunar.",
+    "reportTitle": "Akıllı Deney Raporu",
+    "reportDesc": "Tüm deneyin okuma eğrilerini derler; sonuç, hata analizi, iyileştirme önerileri ve kavram değerlendirmesini otomatik olarak oluşturur.",
+    "badge": "Yapay Zeka Destekli Sanal Kimya Laboratuvarı",
+    "heroLine1": "Tarayıcınızda",
+    "heroLine2": "Gerçek Kimya Deneyleri Yapın",
+    "heroDesc": "Reaktifleri sürükleyin, renk değişimlerini ve kabarcıkları gözlemleyin, AI rehberinize istediğiniz zaman sorun — deney bitince yapılandırılmış rapor otomatik oluşturulur. Doğrulanmış {count} deney, güvenli ve tekrarlanabilir.",
+    "ctaCatalog": "Deney Kataloğuna Göz At →",
+    "ctaSessions": "Oturumlarım"
+  },
+  "lab": {
+    "mix": "Karıştır ve Tepkiet",
+    "reset": "Kabı Boşalt",
+    "clear": "Temizle",
+    "complete": "Deneyi Tamamla",
+    "completed": "Deney Tamamlandı",
+    "viewReport": "Deney Raporunu Görüntüle →",
+    "removeItem": "Kaldırmak için tıklayın",
+    "conditions": "Sistem Koşulları",
+    "temperature": "Sistem Sıcaklığı",
+    "reagentShelf": "Reaktif Rafı",
+    "apparatusList": "Alet Listesi",
+    "emptyContainer": "Sol taraftaki reaktif rafından miktar seçip alın veya reaktifi buraya sürükleyin",
+    "absorbent": "Emici Sıvı",
+    "apparatus": "Alet",
+    "addReagent": "{name} Ekle",
+    "removeReagent": "{name} Kaldır",
+    "mixAction": "Karıştır",
+    "backToDetail": "← Deney Detayına Dön",
+    "backToCatalog": "← Deney Kitaplığına Dön",
+    "labSuffix": "Deney Tezgâhı",
+    "labHint": "Reaktifi kaba tıklayın veya sürükleyin, «Karıştır» ile tepkimeyi gözlemleyin; adım adım otomatik demo için «Deney Anlatımı»nı kullanabilirsiniz."
+  },
+  "locale": {
+    "switchLabel": "Arayüz dilini değiştir",
+    "searchPlaceholder": "Dil ara…",
+    "noMatch": "Eşleşen dil bulunamadı",
+    "groupFull": "Ana diller",
+    "groupBasic": "Diğer diller",
+    "groupBasicHint": "Tam deney içeriği ve sesli anlatım içerir; çeviriler makine çevirisidir"
+  },
+  "nav": {
+    "catalog": "Deney Kütüphanesi",
+    "sessions": "Oturumlarım",
+    "home": "Ana Sayfa"
+  },
+  "op": {
+    "stir": {
+      "label": "Karıştır",
+      "effect": "Cam baget ile karıştırın; çözünen madde daha hızlı çözülür ve karışım daha homojen olur",
+      "hint": "Karıştırma, çözünmeyi ve ısı transferini hızlandırır; yerel konsantrasyon farklılıklarını gidererek ölçümün bütünü temsil etmesini sağlar"
+    },
+    "shake": {
+      "label": "Çalkalа",
+      "effect": "Çalkalayarak karıştırın; reaktifler tam temas sağlar",
+      "hint": "Tüpteki sıvı azdır; çalkalayarak (karıştırmadan) homojenleştirin, tüp ağzını insanlardan uzak tutun"
+    },
+    "heat": {
+      "label": "Isıtma",
+      "effect": "Alkol lambası yakılarak ısıtılır, sistem sıcaklığı yükselir",
+      "hint": "Çoğu reaksiyon ısıyla hızlanır; endotermik reaksiyonlar sürekli ısıtma gerektirir"
+    },
+    "cool": {
+      "label": "Soğutma",
+      "effect": "Isı kaynağı kaldırılır, doğal soğuma ile sıcaklık düşer",
+      "hint": "Soğutma çözünürlüğü azaltır; kristalizasyon ve ürün toplama için standart adımdır"
+    },
+    "settle": {
+      "label": "Bekleme",
+      "effect": "Kısa süre beklenerek çökelti dibe çöker, sıvı katmanları belirginleşir",
+      "hint": "Çökelme ve katmanlaşma zaman alır; üst fazın berrak olup olmadığı ancak bekledikten sonra değerlendirilebilir"
+    },
+    "read": {
+      "label": "Okuma",
+      "effect": "Mevcut değer kaydedilir",
+      "hint": "Göz skalaya paralel hizalanarak okunur; her okuma veri tablosuna kaydedilmelidir, aksi hâlde ortalama ve hata hesaplanamaz"
+    }
+  },
+  "quant": {
+    "verdictGood": "Veri tutarlılığı iyi, hesaplama için kullanılabilir",
+    "verdictFair": "Sapma yüksek; okuma açısını ve sistemin kararlılığını kontrol edin",
+    "verdictPoor": "Sapma çok yüksek; neden araştırılıp paralel ölçümler tekrarlanmalıdır",
+    "meanPh": "Ortalama pH",
+    "meanTemp": "Ortalama sıcaklık",
+    "meanVolume": "Ortalama hacim",
+    "group": "{no}. grup",
+    "readings": "{count} okuma",
+    "finalGroup": "Sonuç bu gruba göre belirlenir",
+    "singleReading": "Yalnızca 1 ölçüm yapıldı; göreli sapma hesaplanamaz (standartlar en az 2 paralel ölçüm gerektirir)",
+    "worstDeviation": "En yüksek göreli ortalama sapma {value}%",
+    "groupNote": "Sistem her kullanıldığında, karıştırıldığında veya ısıtıldığında yeni bir grup başlatılır; gruplar arası okumalar paralel ölçüm sayılmaz ve ayrı ayrı istatistik yapılır.",
+    "noReadings": "Bu deneyde “Okuma” işlemi kullanılmadığından ölçüm kaydı oluşturulmadı; ortalama ve göreli sapma hesaplanamaz. Kantitatif deneylerde aynı sistem durumunda en az 2 kez tekrar okuma yapılmalıdır."
+  },
+  "report": {
+    "conclusion": "Deney Sonucu",
+    "errorAnalysis": "Hata Analizi",
+    "improvements": "İyileştirme Önerileri",
+    "noImprovements": "Şu an için iyileştirme önerisi bulunmamaktadır.",
+    "knowledge": "Bilgi Noktası Değerlendirmesi",
+    "empty": "(İçerik yok)",
+    "measurements": "Ölçüm Okumaları",
+    "quantData": "Sayısal Veriler",
+    "noMeasurements": "Bu deney için hiçbir okuma kaydedilmedi.",
+    "generating": "AI deney verilerini analiz ediyor…",
+    "regenerate": "Raporu Yeniden Oluştur",
+    "generate": "Deney Raporu Oluştur",
+    "generateFailed": "Oluşturma başarısız ({status})",
+    "notGenerated": "Henüz rapor oluşturulmadı. AI, bu deneyin işlem adımlarına ve ölçüm okumalarına dayanarak sonuç, hata analizi, iyileştirme önerileri ve bilgi değerlendirmesi sunacaktır.",
+    "noActivity": "Bu deneyde henüz hiçbir işlem kaydedilmedi; rapor şu an oluşturulamıyor.",
+    "backToLab": "Deney masasına dön ve dene →",
+    "title": "Deney Raporu",
+    "generatedAt": "{time} tarihinde oluşturuldu"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Güç Bağla",
+      "off": "Güç Kes"
+    },
+    "cell": {
+      "on": "Devreyi Kapat",
+      "off": "Devreyi Aç"
+    },
+    "flameTest": {
+      "on": "Alkol Lambasını Yak",
+      "off": "Alkol Lambасını Söndür"
+    },
+    "waterBath": {
+      "on": "Su Banyosu Isıtmayı Başlat",
+      "off": "Su Banyosu Isıtmayı Durdur"
+    },
+    "distillation": {
+      "on": "Damıtmayı Başlat",
+      "off": "Damıtmayı Durdur"
+    },
+    "filtration": {
+      "on": "Filtrelemeyi Başlat",
+      "off": "Filtrelemeyi Durdur"
+    },
+    "calorimeter": {
+      "on": "Karıştırma ve Sıcaklık Ölçümünü Başlat",
+      "off": "Karıştırmayı Durdur"
+    },
+    "gasCollect": {
+      "on": "Gaz Toplamayı Başlat",
+      "off": "Gaz Toplamayı Durdur"
+    },
+    "titration": {
+      "on": "Musluğu açarak damlatın",
+      "off": "Musluğu kapatın"
+    },
+    "syringe": {
+      "on": "Pistonu iterek basınç uygulayın",
+      "off": "Pistonu geri çekerek basıncı azaltın"
+    },
+    "phMeter": {
+      "on": "pH metreyi açın",
+      "off": "pH metreyi kapatın"
+    },
+    "evaporation": {
+      "on": "İspirtoyu yakarak buharlaştırın",
+      "off": "İspirtoyu söndürün"
+    },
+    "pressureDrop": {
+      "on": "Kapağı sıkıştırarak çalkalayın",
+      "off": "Kapağı gevşetin"
+    },
+    "heat": {
+      "on": "İspirtoyu yakarak ısıtın",
+      "off": "Isıtmayı durdurun"
+    }
+  },
+  "sessions": {
+    "title": "Oturumlarım",
+    "subtitle": "Geçmiş deney kayıtlarını görüntüleyin ve ilgili raporlara erişin",
+    "unknownExperiment": "Bilinmeyen deney",
+    "completed": "Tamamlandı",
+    "inProgress": "Devam ediyor",
+    "startedAt": "{time} tarihinde başladı",
+    "viewReport": "Raporu görüntüle"
+  },
+  "shelf": {
+    "title": "Reaktif rafı",
+    "taken": "{dose} {unit} alındı",
+    "takeSome": "Damlatın / uygun miktarda alın",
+    "take": "{unit} alın",
+    "specIndicator": "İndikatör",
+    "specGas": "Gaz",
+    "specBulk": "Uygun miktarda alın",
+    "specSolution": "Çözelti",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Saf sıvı ρ={density} g/mL",
+    "specLiquid": "Sıvı",
+    "specSolid": "Katı · Analitik saflık"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Sanal Kimya Laboratuvarı",
+    "description": "Tarayıcıda kimya deneyleri yapın: reaktifleri sürükleyin, reaksiyonları gözlemleyin, AI rehberinden yardım alın ve otomatik deney raporları oluşturun."
+  },
+  "titration": {
+    "stopcock": "Musluk açıklığı",
+    "buretteReading": "Büret okuma değeri",
+    "phMeter": "pH metre",
+    "unfilled": "Doldurulmadı",
+    "strongBase": "Güçlü bazik",
+    "weakBase": "Zayıf bazik · Renk değişim bölgesi",
+    "nearNeutral": "Nötre yakın",
+    "acidExcess": "Asidik · Fazla eklendi",
+    "endpointOk": "Eşdeğerlik noktası geçerli",
+    "overshoot": "Aşım",
+    "notYet": "Eşdeğerlik noktasına ulaşılmadı (pembe solmadı)",
+    "justFaded": "Tam soldu",
+    "keyPoints": "Operasyon notları",
+    "takeAnalyte": "Önce analiti alın →",
+    "dragStopcock": "← Titrasyonu başlatmak için musluğu sürükleyin",
+    "openness": "Açıklık {pct}% · Sürüklemek için basılı tutun"
+  },
+  "tutor": {
+    "placeholder": "Sorunuzu yazın…",
+    "replying": "Yanıtlanıyor…",
+    "send": "Gönder",
+    "unknownError": "Bilinmeyen hata",
+    "requestFailed": "İstek başarısız ({status})",
+    "askHeat": "Reaktifleri karıştırdıktan sonra herhangi bir değişim gözlemlemedim; ipucu bu reaksiyonun ısıtma gerektirdiğini belirtiyor. Bu reaksiyonun neden yalnızca ısıtma koşullarında gerçekleşebildiğini açıklar mısınız?",
+    "askObserved": "Az önce {equation}{phenomena} reaksiyonunu gözlemledim. Ne olduğunu ve arkasındaki prensibi açıklar mısınız?",
+    "phPrecipitate": "çökelti oluştu",
+    "phGas": "gaz üretildi",
+    "phColor": "renk değişimi gerçekleşti",
+    "listJoin": "、",
+    "eqWrap": "({equation})",
+    "title": "AI Deney Danışmanı",
+    "empty": "İstediğiniz zaman soru sorabilirsiniz; tuvalde bir reaksiyon başlatıldığında sizi uyaracağım."
+  },
+  "workbench": {
+    "view2d": "2B Şema",
+    "view3d": "3B Deney Tezgâhı",
+    "view3dRefined": "3B Deney Tezgâhı ★",
+    "sceneHint": "Döndürmek için sürükleyin · Yakınlaştırmak için kaydırın"
+  }
+}

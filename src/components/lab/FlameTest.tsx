@@ -5,8 +5,10 @@
 
 // 焰色数据在 lib/chem/flameColor.ts，与 3D 焰色装置共用一份，避免两视图颜色不一致
 import { flameColor } from "@/lib/chem/flameColor";
+import { useTranslations } from "next-intl";
 
 export function FlameTest({ sample }: { sample?: string }) {
+  const t = useTranslations("device");
   const hit = flameColor(sample);
 
   return (
@@ -15,7 +17,7 @@ export function FlameTest({ sample }: { sample?: string }) {
       height="244"
       viewBox="0 0 200 244"
       role="img"
-      aria-label="焰色反应装置"
+      aria-label={t("flameTest")}
       className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.14)]"
     >
       <defs>
@@ -39,11 +41,11 @@ export function FlameTest({ sample }: { sample?: string }) {
       </g>
 
       {/* 铂丝（从右上斜插入火焰，蘸取样品端在焰中） */}
-      <path d="M168 56 L132 92 L108 108" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/55" strokeLinecap="round" />
+      <path d="M168 56 L132 92 L108 108" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-foreground/65" strokeLinecap="round" />
       <circle cx="108" cy="108" r="3" fill="#c0612f" />
 
       {/* 酒精灯（灯身 + 灯芯 + 灯帽口） */}
-      <g className="text-foreground/55">
+      <g className="text-foreground/65">
         <path d="M78 196 Q78 168 90 162 L110 162 Q122 168 122 196 A22 8 0 0 1 78 196 Z" fill="rgba(214,238,236,0.2)" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" />
         <rect x="92" y="150" width="16" height="14" rx="2" fill="#cdd8e4" stroke="currentColor" strokeWidth="2" />
         <line x1="100" y1="150" x2="100" y2="150" stroke="#8a5a2c" strokeWidth="3" />

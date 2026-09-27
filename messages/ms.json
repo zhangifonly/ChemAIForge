@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Langkau ke kandungan utama"
+  },
+  "catalog": {
+    "title": "Pustaka Eksperimen",
+    "empty": "Tiada eksperimen yang memenuhi kriteria.",
+    "searchPlaceholder": "Cari nama eksperimen…",
+    "searchLabel": "Cari eksperimen",
+    "filterCategory": "Tapis mengikut kategori",
+    "allCategories": "Semua kategori",
+    "filterDifficulty": "Tapis mengikut kesukaran",
+    "allDifficulties": "Semua peringkat kesukaran",
+    "objectives": "Objektif eksperimen",
+    "reagents": "Reagen yang diperlukan",
+    "apparatus": "Radas yang diperlukan",
+    "subtitle": "Pilih eksperimen untuk memasuki makmal maya dan mula beroperasi.",
+    "estimatedMinutes": "Anggaran {minutes} minit",
+    "startLab": "Mulakan eksperimen →"
+  },
+  "category": {
+    "ACID_BASE": "Tindak balas asid-bes",
+    "ORGANIC": "Kimia organik",
+    "THERMODYNAMICS": "Termodinamik",
+    "REDOX": "Pengoksidaan-penurunan",
+    "PRECIPITATION": "Pemendakan dan metathesis",
+    "GAS": "Penyediaan gas",
+    "ELECTROCHEM": "Elektrokimia",
+    "METAL": "Keaktifan logam",
+    "ANALYSIS": "Analisis dan pengujian",
+    "COORDINATION": "Koordinasi dan pewarnaan"
+  },
+  "chart": {
+    "temperature": "Suhu",
+    "ph": "pH",
+    "volume": "Isipadu",
+    "ariaLabel": "Graf {label} berbanding masa, nilai semasa {value}",
+    "measureAria": "Carta garis bacaan ukuran berbanding masa, {count} bacaan, julat pH 0 hingga 14, julat suhu 0 hingga 100 ℃",
+    "title": "Lengkung Proses",
+    "current": "Semasa",
+    "peak": "Puncak",
+    "samples": "Sampel {count} titik",
+    "channelTemp": "Suhu",
+    "channelPh": "pH",
+    "channelVolume": "Isipadu",
+    "empty": "Lengkung perubahan masa akan dipaparkan di sini selepas operasi dimulakan"
+  },
+  "dataTable": {
+    "title": "Jadual Rekod Data",
+    "emptyHint": "Klik “Baca” untuk merekod satu pengukuran",
+    "recorded": "Kumpulan ini telah merekod {count} kali",
+    "recordedNeedMore": "Kumpulan ini telah merekod {count} kali (pengukuran selari sekurang-kurangnya 2 kali)",
+    "emptyBody": "Eksperimen kuantitatif memerlukan pengukuran berulang untuk mendapatkan purata; setiap klik “Baca” akan meninggalkan satu baris di sini.",
+    "colIndex": "No.",
+    "colTime": "Masa / s",
+    "colTemperature": "Suhu / ℃",
+    "colPh": "pH",
+    "colVolume": "Isipadu / mL",
+    "rowMean": "Purata Kumpulan",
+    "rowDeviation": "Sisihan Relatif",
+    "worstDeviation": "Sisihan relatif maksimum {value}%:",
+    "verdictGood": "Konsistensi data baik, boleh digunakan untuk pengiraan.",
+    "verdictFair": "Sisihan agak besar, semak sama ada pandangan selari dengan skala semasa membaca dan sama ada sistem telah stabil.",
+    "verdictPoor": "Sisihan terlalu besar, kenal pasti punca sebelum mengulangi pengukuran selari — jangan ambil purata secara terus."
+  },
+  "deck": {
+    "readings": "Bacaan Instrumen Meja Makmal",
+    "temperature": "Suhu",
+    "volume": "Isipadu",
+    "ph": "pH",
+    "operations": "Operasi Eksperimen",
+    "needReagent": "Ambil reagen dahulu",
+    "inOrder": "Ikut urutan langkah sebenar"
+  },
+  "device": {
+    "glassware": "Alat kaca makmal",
+    "electrolysisCell": "Sel elektrolisis",
+    "galvanicCell": "Sel galvani",
+    "flameTest": "Peranti ujian nyalaan",
+    "gasCollection": "Peranti pengumpulan gas sesaran air",
+    "gasDelivery": "Peranti penghantaran dan penyerapan gas",
+    "conductivity": "Perbandingan kekonduksian larutan",
+    "strongBright": "Kuat · Cerah",
+    "weakDim": "Lemah · Samar",
+    "nonNone": "Tiada · Tidak menyala"
+  },
+  "difficulty": {
+    "EASY": "Asas",
+    "MEDIUM": "Pertengahan",
+    "HARD": "Cabaran"
+  },
+  "electro": {
+    "conductivityDesc": "Bandingkan kekonduksian larutan pada kepekatan yang sama (kecerahan mentol mencerminkan kepekatan ion).",
+    "conductivityActive": "Pengesanan arus aktif: mentol lebih cerah menunjukkan kekonduksian lebih tinggi",
+    "conductivityIdle": "Ketik “Uji Arus” untuk membandingkan kekonduksian setiap larutan",
+    "conductivityOn": "💡 Uji Arus",
+    "powerOff": "Putus Arus",
+    "electrolyteInert": "Elektrolit: {name}（{formula}）· Anod lengai (karbon)",
+    "electrolyteActive": "Elektrolit: {name}（{formula}）· Anod aktif (kuprum)",
+    "electrolysisActive": "Elektrolisis sedang berlaku…",
+    "electrolysisIdle": "Ketik “Hidupkan Arus” untuk memulakan elektrolisis dan perhatikan fenomena pada kedua-dua elektrod",
+    "copperFading": "Larutan: warna biru semakin pudar (ion kuprum habis terpakai)",
+    "powerOn": "⚡ Hidupkan Arus",
+    "brine": "Air garam",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Litar disambung, galvanometer menyimpang, sel galvani sedang nyahcas…",
+    "cellIdle": "Ketik “Sambung Litar” untuk perhatikan simpangan galvanometer dan fenomena pada kedua-dua elektrod",
+    "cellOn": "🔌 Sambung Litar",
+    "cellOff": "Litar diputuskan",
+    "cathode": "Katod (−)",
+    "anode": "Anod (＋)",
+    "negative": "Kutub negatif",
+    "positive": "Kutub positif"
+  },
+  "errors": {
+    "noActivity": "Tiada rekod operasi untuk eksperimen ini. Lakukan eksperimen di meja makmal dahulu sebelum menjana laporan.",
+    "reportFailed": "Penjanaan laporan gagal",
+    "tutorUnavailable": "Perkhidmatan tutor AI tidak tersedia",
+    "unknown": "Ralat tidak diketahui"
+  },
+  "home": {
+    "labTitle": "Meja Makmal Interaktif",
+    "labDesc": "Seret reagen ke dalam bikar — enjin tindak balas mengesan perubahan warna, gelembung, mendakan dan suhu secara masa nyata. Apa yang anda lihat itulah yang berlaku.",
+    "tutorTitle": "Tutor Makmal AI",
+    "tutorDesc": "Tanya prinsip atau prosedur pada bila-bila masa. Apabila tindak balas utama dicetuskan di kanvas, tutor akan memberi penjelasan dan amaran keselamatan secara proaktif.",
+    "reportTitle": "Laporan Eksperimen Pintar",
+    "reportDesc": "Merumuskan lengkung bacaan sepanjang eksperimen, lalu menjana kesimpulan, analisis ralat, cadangan penambahbaikan dan penilaian poin ilmu secara automatik.",
+    "badge": "Makmal Kimia Maya Dikuasai AI",
+    "heroLine1": "Terus dalam pelayar,",
+    "heroLine2": "lakukan eksperimen kimia sebenar",
+    "heroDesc": "Seret reagen, perhatikan perubahan warna dan gelembung, tanya tutor AI bila-bila masa, dan laporan berstruktur dijana automatik selepas eksperimen. {count} eksperimen yang telah disahkan — selamat dan boleh diulang.",
+    "ctaCatalog": "Layari Katalog Eksperimen →",
+    "ctaSessions": "Sesi Saya"
+  },
+  "lab": {
+    "mix": "Tindak Balas Campuran",
+    "reset": "Kosongkan Bekas",
+    "clear": "Kosongkan",
+    "complete": "Tamatkan Eksperimen",
+    "completed": "Eksperimen Selesai",
+    "viewReport": "Lihat Laporan Eksperimen →",
+    "removeItem": "Klik untuk alih keluar",
+    "conditions": "Keadaan Sistem",
+    "temperature": "Suhu Sistem",
+    "reagentShelf": "Rak Reagen",
+    "apparatusList": "Senarai Radas",
+    "emptyContainer": "Pilih kuantiti dari rak reagen di sebelah kiri, atau seret reagen ke sini",
+    "absorbent": "Larutan Penyerap",
+    "apparatus": "Radas",
+    "addReagent": "Tambah {name}",
+    "removeReagent": "Buang {name}",
+    "mixAction": "Campurkan",
+    "backToDetail": "← Kembali ke Butiran Eksperimen",
+    "backToCatalog": "← Kembali ke Katalog Eksperimen",
+    "labSuffix": "Meja Makmal",
+    "labHint": "Klik atau seret reagen ke dalam bikar, “Tindak Balas Campuran” untuk memerhati fenomena; atau gunakan “Panduan Eksperimen” untuk demonstrasi langkah demi langkah secara automatik."
+  },
+  "lesson": {
+    "prev": "Langkah Sebelum",
+    "pause": "Jeda",
+    "play": "Main",
+    "next": "Langkah Seterusnya",
+    "voiceOn": "Hidupkan Panduan Suara",
+    "voiceOff": "Matikan Panduan Suara",
+    "muted": "🔇 Diredamkan",
+    "askTutor": "Panduan pada langkah “{title}”: {narration} Berdasarkan fenomena dan bacaan semasa dalam bikar, terangkan secara ringkas prinsip kimia dan persamaan yang terlibat.",
+    "phase": {
+      "theory": "Prinsip",
+      "prep": "Persediaan",
+      "operate": "Operasi",
+      "observe": "Fenomena",
+      "conclude": "Kesimpulan"
+    },
+    "voiceLabel": "🔊 Panduan Suara",
+    "vesselBeaker": "Bikar",
+    "vesselTube": "Tabung Uji",
+    "vesselFlask": "Kelalang kon",
+    "observeGeneric": "Perhatikan sistem dengan teliti; cari sebarang perubahan warna, gelembung, atau suhu.",
+    "observeReacting": "Tindak balas sedang berlaku; perhatikan perubahan bacaan pH dan suhu.",
+    "phenomenaList": "Dapat dilihat {parts}.",
+    "partGas": "gelembung gas terus keluar",
+    "partPrecipitate": "larutan menjadi keruh dan mendakan terbentuk",
+    "partColor": "warna larutan berubah dengan ketara",
+    "partExo": "haba dibebaskan dan suhu meningkat",
+    "partEndo": "haba diserap dan suhu menurun",
+    "titlePrinciple": "Prinsip Eksperimen",
+    "titleSummary": "Rumusan Eksperimen",
+    "titleConnect": "Sambung Radas",
+    "titleConnectCircuit": "Sambung Litar",
+    "titlePowerOn": "Hidupkan Bekalan Kuasa",
+    "titleConnectOn": "Tutup Litar",
+    "titleConductTest": "Uji Kekonduksian",
+    "titleElectrodes": "Fenomena di Kedua-dua Elektrod",
+    "titleConductCompare": "Perbandingan Kekonduksian",
+    "titleTake": "Ambil {reagent}",
+    "titleHeat": "Nyalakan Lampu Alkohol",
+    "titleMix": "Campurkan untuk Bertindak Balas",
+    "titleObserve": "Perhatikan Fenomena",
+    "summary": "Melalui eksperimen ini, anda akan {objectives}.",
+    "narrSetupElectrode": "Masukkan elektrod ke dalam elektrolit, kemudian sambungkan masing-masing ke terminal positif dan negatif bekalan kuasa arus terus.",
+    "narrPowerOn": "Hidupkan bekalan kuasa arus terus untuk memulakan elektrolisis; perhatikan perubahan di kedua-dua elektrod.",
+    "narrSetupCircuit": "Gunakan wayar untuk menyambungkan kedua-dua elektrod melalui galvanometer, kemudian masukkan ke dalam larutan elektrolit.",
+    "narrConnectOn": "Tutup litar dan perhatikan sama ada penunjuk galvanometer terpesong.",
+    "narrSetupConduct": "Sambungkan larutan yang mempunyai kepekatan yang sama masing-masing ke dalam litar elektrod bersama mentol.",
+    "narrConductTest": "Tutup litar dan bandingkan kecerahan mentol dalam setiap larutan.",
+    "narrSetupGeneric": "Sambungkan elektrod dan bekalan kuasa/alat pengukur mengikut gambar rajah litar, kemudian masukkan elektrolit.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Suara wanita ♀",
+    "voiceMale": "Suara lelaki ♂",
+    "narrRigOn": "{verb}，perhatikan perubahan pada kedua-dua elektrod dan meter.",
+    "verbElectrolysis": "Sambungkan bekalan arus terus, mulakan elektrolisis",
+    "verbCircuit": "Sambungkan litar",
+    "narrTake": "Ambil {reagent}, masukkan ke dalam {vessel}.",
+    "narrHeat": "Nyalakan lampu alkohol untuk memanaskan {vessel} — tindak balas ini memerlukan pemanasan.",
+    "narrMixHeated": "Selepas dipanaskan, campurkan reagen dengan sempurna, tindak balas terus bermula.",
+    "narrMix": "Campurkan reagen dalam {vessel} dengan sempurna, tindak balas terus bermula.",
+    "electrodesFading": "; warna biru larutan beransur-ansur pudar",
+    "brine": "air garam",
+    "joinComma": "，",
+    "joinSemicolon": "；",
+    "outlineTitle": "Garis Panduan Penerangan Eksperimen",
+    "outlineHint": "Selepas memasuki meja eksperimen, klik “Penerangan Eksperimen ▶” untuk demonstrasi automatik langkah demi langkah.",
+    "cardTitle": "Penerangan Eksperimen",
+    "askTutorButton": "Minta tutor terangkan langkah ini",
+    "sentenceEnd": "。",
+    "noVoice": "Tiada suara untuk bahasa ini, penerangan akan maju secara automatik mengikut sari kata.",
+    "narrTake_beaker": "Ambil {reagent} dan masukkan ke dalam bikar.",
+    "narrTake_tube": "Ambil {reagent} dan masukkan ke dalam tabung uji.",
+    "narrTake_flask": "Ambil {reagent} dan masukkan ke dalam kelalang kon.",
+    "narrHeat_beaker": "Nyalakan lampu alkohol untuk memanaskan bikar — tindak balas ini mesti berlaku dalam keadaan dipanaskan.",
+    "narrHeat_tube": "Nyalakan lampu alkohol untuk memanaskan tabung uji — tindak balas ini mesti berlaku dalam keadaan dipanaskan.",
+    "narrHeat_flask": "Nyalakan lampu alkohol untuk memanaskan kelalang kon — tindak balas ini mesti berlaku dalam keadaan dipanaskan.",
+    "narrMix_beaker": "Campurkan reagen di dalam bikar dengan sepenuhnya, dan tindak balas pun bermula.",
+    "narrMix_tube": "Campurkan reagen di dalam tabung uji dengan sepenuhnya, dan tindak balas pun bermula.",
+    "narrMix_flask": "Campurkan reagen di dalam kelalang kon dengan sepenuhnya, dan tindak balas pun bermula."
+  },
+  "locale": {
+    "switchLabel": "Tukar bahasa antara muka",
+    "searchPlaceholder": "Cari bahasa…",
+    "noMatch": "Tiada bahasa yang sepadan",
+    "groupFull": "Bahasa utama",
+    "groupBasic": "Bahasa lain",
+    "groupBasicHint": "Mengandungi kandungan makmal lengkap dan ulasan suara; terjemahan oleh mesin"
+  },
+  "nav": {
+    "catalog": "Pustaka Eksperimen",
+    "sessions": "Sesi Saya",
+    "home": "Laman Utama"
+  },
+  "op": {
+    "stir": {
+      "label": "Kacau",
+      "effect": "Kacau dengan rod kaca, mempercepatkan pelarutan zat terlarut dan campuran menjadi lebih seragam",
+      "hint": "Kacau mempercepatkan pelarutan dan pemindahan haba, serta meratakan kepekatan setempat agar bacaan mewakili keseluruhan sistem"
+    },
+    "shake": {
+      "label": "Goncang",
+      "effect": "Goncang untuk meratakan campuran, memastikan reagen bersentuhan sepenuhnya",
+      "hint": "Cecair dalam tabung uji sedikit; gunakan goncangan (bukan kacauan) untuk mencampurkan — pegang mulut tabung menghala ke arah yang selamat"
+    },
+    "heat": {
+      "label": "Panaskan",
+      "effect": "Nyalakan lampu alkohol untuk memanaskan, suhu sistem meningkat",
+      "hint": "Kebanyakan tindak balas dipercepat oleh suhu; tindak balas endotermik memerlukan pemanasan berterusan"
+    },
+    "cool": {
+      "label": "Sejukkan",
+      "effect": "Alihkan sumber haba dan biarkan sejuk secara semula jadi, suhu menurun",
+      "hint": "Penyejukan menurunkan keterlarutan — langkah biasa untuk pengkristalan dan pengumpulan hasil"
+    },
+    "settle": {
+      "label": "Pegun",
+      "effect": "Biarkan sebentar supaya mendakan turun dan lapisan cecair lebih jelas",
+      "hint": "Pemendakan dan pemisahan lapisan memerlukan masa; tentukan kejernihan cecair lapisan atas hanya selepas dipegunkan"
+    },
+    "read": {
+      "label": "Baca",
+      "effect": "Rekod bacaan semasa",
+      "hint": "Luruskan pandangan dengan skala semasa membaca; catat setiap bacaan ke dalam jadual data untuk mengira purata dan ralat"
+    }
+  },
+  "quant": {
+    "verdictGood": "Konsistensi data baik, boleh digunakan untuk pengiraan",
+    "verdictFair": "Sisihan agak besar, semak kedudukan pandangan semasa membaca dan kestabilan sistem",
+    "verdictPoor": "Sisihan terlalu besar, kenal pasti punca dan ulang pengukuran selari",
+    "meanPh": "pH purata",
+    "meanTemp": "Suhu purata",
+    "meanVolume": "Isipadu purata",
+    "group": "Kumpulan {no}",
+    "readings": "{count} bacaan",
+    "finalGroup": "Kesimpulan berdasarkan kumpulan ini",
+    "singleReading": "Hanya 1 pengukuran, sisihan relatif tidak dapat dikira (piawaian memerlukan sekurang-kurangnya 2 pengukuran selari)",
+    "worstDeviation": "Sisihan purata relatif maksimum {value}%",
+    "groupNote": "Kumpulan baru dibuka setiap kali sistem diambil / dicampurkan / dipanaskan; bacaan merentas kumpulan bukan pengukuran selari dan direkodkan secara berasingan.",
+    "noReadings": "Tiada rekod pengukuran menggunakan operasi “Baca” dalam eksperimen ini, purata dan sisihan relatif tidak dapat dikira. Eksperimen kuantitatif memerlukan bacaan berulang sekurang-kurangnya 2 kali dalam keadaan sistem yang sama."
+  },
+  "report": {
+    "conclusion": "Kesimpulan Eksperimen",
+    "errorAnalysis": "Analisis Ralat",
+    "improvements": "Cadangan Penambahbaikan",
+    "noImprovements": "Tiada cadangan penambahbaikan.",
+    "knowledge": "Penilaian Penguasaan Konsep",
+    "empty": "（Tiada kandungan）",
+    "measurements": "Bacaan Pengukuran",
+    "quantData": "Data Kuantitatif",
+    "noMeasurements": "Tiada bacaan direkodkan dalam eksperimen ini.",
+    "generating": "AI sedang menganalisis data eksperimen…",
+    "regenerate": "Jana Semula Laporan",
+    "generate": "Jana Laporan Eksperimen",
+    "generateFailed": "Penjanaan gagal ({status})",
+    "notGenerated": "Laporan belum dijana. AI akan menganalisis langkah operasi dan bacaan pengukuran eksperimen ini untuk memberikan kesimpulan, analisis ralat, cadangan penambahbaikan, dan penilaian penguasaan.",
+    "noActivity": "Tiada rekod operasi dalam eksperimen ini. Laporan tidak dapat dijana buat masa ini.",
+    "backToLab": "Kembali ke meja makmal untuk memulakan eksperimen →",
+    "title": "Laporan Eksperimen",
+    "generatedAt": "Dijana pada {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Sambung Bekalan Kuasa",
+      "off": "Putuskan Bekalan Kuasa"
+    },
+    "cell": {
+      "on": "Sambung Litar",
+      "off": "Putuskan Litar"
+    },
+    "flameTest": {
+      "on": "Nyalakan Lampu Alkohol",
+      "off": "Padamkan Lampu Alkohol"
+    },
+    "waterBath": {
+      "on": "Mulakan Pemanasan Rendaman Air",
+      "off": "Hentikan Pemanasan Rendaman Air"
+    },
+    "distillation": {
+      "on": "Mulakan Penyulingan",
+      "off": "Hentikan Penyulingan"
+    },
+    "filtration": {
+      "on": "Mulakan Penapisan",
+      "off": "Hentikan Penapisan"
+    },
+    "calorimeter": {
+      "on": "Mulakan Kacukan dan Pengukuran Suhu",
+      "off": "Hentikan pengacauan"
+    },
+    "gasCollect": {
+      "on": "Mula mengumpul gas",
+      "off": "Hentikan pengumpulan"
+    },
+    "titration": {
+      "on": "Buka injap titret",
+      "off": "Tutup injap titret"
+    },
+    "syringe": {
+      "on": "Tekan omboh untuk menambah tekanan",
+      "off": "Tarik omboh untuk mengurangkan tekanan"
+    },
+    "phMeter": {
+      "on": "Hidupkan meter pH",
+      "off": "Matikan meter pH"
+    },
+    "evaporation": {
+      "on": "Nyalakan lampu alkohol untuk penyejatan",
+      "off": "Padamkan lampu alkohol"
+    },
+    "pressureDrop": {
+      "on": "Ketatkan penutup botol dan goncangkan",
+      "off": "Longgarkan penutup botol"
+    },
+    "heat": {
+      "on": "Nyalakan lampu alkohol untuk pemanasan",
+      "off": "Hentikan pemanasan"
+    }
+  },
+  "sessions": {
+    "title": "Sesi Saya",
+    "subtitle": "Lihat rekod eksperimen lepas dan masuk ke laporan berkaitan",
+    "unknownExperiment": "Eksperimen tidak diketahui",
+    "completed": "Selesai",
+    "inProgress": "Sedang berjalan",
+    "startedAt": "Dimulakan pada {time}",
+    "viewReport": "Lihat laporan"
+  },
+  "shelf": {
+    "title": "Rak reagen",
+    "taken": "Telah diambil {dose} {unit}",
+    "takeSome": "Titiskan / ambil secukupnya",
+    "take": "Ambil {unit}",
+    "specIndicator": "Penunjuk",
+    "specGas": "Gas",
+    "specBulk": "Ambil secukupnya",
+    "specSolution": "Larutan",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Cecair tulen ρ={density} g/mL",
+    "specLiquid": "Cecair",
+    "specSolid": "Pepejal gred analitik"
+  },
+  "site": {
+    "title": "ChemAIForge · Makmal Kimia Maya AI",
+    "description": "Jalankan eksperimen kimia dalam pelayar: seret reagen, perhatikan tindak balas, dapatkan bimbingan tutor AI, dan jana laporan eksperimen secara automatik."
+  },
+  "titration": {
+    "stopcock": "Bukaan injap",
+    "buretteReading": "Bacaan buret",
+    "phMeter": "Meter pH",
+    "unfilled": "Belum diisi",
+    "strongBase": "Bes kuat",
+    "weakBase": "Bes lemah · zon perubahan warna",
+    "nearNeutral": "Hampir neutral",
+    "acidExcess": "Berasid · sudah berlebihan",
+    "endpointOk": "Titik akhir dicapai",
+    "overshoot": "Titis berlebihan",
+    "notYet": "Belum mencapai titik akhir (merah jambu belum pudar)",
+    "justFaded": "Baru sahaja pudar",
+    "keyPoints": "Perkara penting semasa operasi",
+    "takeAnalyte": "Ambil larutan analit dahulu →",
+    "dragStopcock": "← Seret injap untuk mulakan titratan",
+    "openness": "Bukaan {pct}% · tahan dan seret kiri kanan"
+  },
+  "tutor": {
+    "placeholder": "Taip soalan anda…",
+    "replying": "Sedang membalas…",
+    "send": "Hantar",
+    "unknownError": "Ralat tidak diketahui",
+    "requestFailed": "Permintaan gagal ({status})",
+    "askHeat": "Saya telah mencampurkan reagen tetapi tiada perubahan yang dapat diperhatikan. Petunjuk menyatakan tindak balas ini memerlukan pemanasan. Sila terangkan mengapa tindak balas ini mesti berlaku dalam keadaan dipanaskan.",
+    "askObserved": "Saya baru sahaja memerhati tindak balas {equation}{phenomena}. Boleh tolong terangkan apa yang berlaku dan apakah prinsipnya?",
+    "phPrecipitate": "Mendakan terbentuk",
+    "phGas": "menghasilkan gas",
+    "phColor": "berlaku perubahan warna",
+    "listJoin": ", ",
+    "eqWrap": "（{equation}）",
+    "title": "Tutor Eksperimen AI",
+    "empty": "Tanya saya bila-bila masa, atau saya akan memberi petunjuk setelah tindak balas dicetuskan di kanvas."
+  },
+  "workbench": {
+    "view2d": "Skema 2D",
+    "view3d": "Meja Lab 3D",
+    "view3dRefined": "Meja Lab 3D ★",
+    "sceneHint": "Seret untuk putar · Skrol untuk zum"
+  }
+}

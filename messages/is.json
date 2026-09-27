@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Fara í aðalinnihald"
+  },
+  "catalog": {
+    "title": "Tilraunasafn",
+    "empty": "Engar tilraunir passa við leitarskilyrðin.",
+    "searchPlaceholder": "Leita að tilraunaheiti…",
+    "searchLabel": "Leita að tilraun",
+    "filterCategory": "Sía eftir flokki",
+    "allCategories": "Allir flokkar",
+    "filterDifficulty": "Sía eftir erfiðleika",
+    "allDifficulties": "Allir erfiðleikaflokkar",
+    "objectives": "Markmið tilraunar",
+    "reagents": "Nauðsynleg hvarfefni",
+    "apparatus": "Nauðsynlegar búnaðar",
+    "subtitle": "Veldu tilraun til að hefja starfræna rannsóknarstofuna.",
+    "estimatedMinutes": "Áætlaður tími: {minutes} mínútur",
+    "startLab": "Hefja tilraun →"
+  },
+  "category": {
+    "ACID_BASE": "Sýru-basa hvarfar",
+    "ORGANIC": "Lífræn efnafræði",
+    "THERMODYNAMICS": "Hitafræði",
+    "REDOX": "Oxun-afoxun",
+    "PRECIPITATION": "Útfelling",
+    "GAS": "Gasmyndun",
+    "ELECTROCHEM": "Rafefnafræði",
+    "METAL": "Málmvirkni",
+    "ANALYSIS": "Greining og prófun",
+    "COORDINATION": "Hliðstæðulitun"
+  },
+  "chart": {
+    "temperature": "Hitastig",
+    "ph": "pH",
+    "volume": "Rúmmál",
+    "ariaLabel": "Ferill {label} yfir tíma, núverandi gildi {value}",
+    "measureAria": "Línurit af mæligildum yfir tíma, {count} mæligildi samtals, pH á bilinu 0 til 14, hitastig á bilinu 0 til 100 ℃",
+    "title": "Ferliskurvar",
+    "current": "Núverandi",
+    "peak": "Hágildi",
+    "samples": "{count} sýni tekin",
+    "channelTemp": "Hiti",
+    "channelPh": "pH",
+    "channelVolume": "Rúmmál",
+    "empty": "Eftir að aðgerð hefst birtast hér tímaháðar kurvar"
+  },
+  "dataTable": {
+    "title": "Gagnatafla",
+    "emptyHint": "Ýttu á „Lestur“ til að skrá mælingu",
+    "recorded": "Skráð {count} sinnum í þessum hópi",
+    "recordedNeedMore": "Skráð {count} sinnum í þessum hópi (samhliða mæling þarf að lágmarki 2 sinnum)",
+    "emptyBody": "Í megindlegum tilraunum skal endurtaka mælingar og taka meðaltal; hvert „Lestur“ bætir við línu hér.",
+    "colIndex": "Nr.",
+    "colTime": "Tími / s",
+    "colTemperature": "Hiti / ℃",
+    "colPh": "pH",
+    "colVolume": "Rúmmál / mL",
+    "rowMean": "Meðaltal hóps",
+    "rowDeviation": "Hlutfallsleg frávik",
+    "worstDeviation": "Mesta hlutfallslega frávik {value}%:",
+    "verdictGood": "Gagnasamræmi er gott, hægt er að nota til útreikninga.",
+    "verdictFair": "Frávik eru nokkur — athugaðu hvort augun séu í hæð við skalastrikin og hvort kerfið sé stöðugt.",
+    "verdictPoor": "Frávik eru of mikil. Finndu ástæðuna og endurtaktu samhliða mælingarnar áður en meðaltal er tekið."
+  },
+  "deck": {
+    "readings": "Lestur mælitækja á tilraunaborði",
+    "temperature": "Hiti",
+    "volume": "Rúmmál",
+    "ph": "pH",
+    "operations": "Tilraunaaðgerðir",
+    "needReagent": "Sæktu hvarfefni fyrst",
+    "inOrder": "Fylgdu raunverulegri skrefasetningarröð"
+  },
+  "device": {
+    "glassware": "Glæri",
+    "electrolysisCell": "Raflýsingarkar",
+    "galvanicCell": "Galvanísk fruma",
+    "flameTest": "Logaprófsbúnaður",
+    "gasCollection": "Gasasöfnun með vatnslokun",
+    "gasDelivery": "Gasaflutnings- og frásogsbúnaður",
+    "conductivity": "Samanburður á leiðni lausna",
+    "strongBright": "Sterk · björt",
+    "weakDim": "Veik · dauf",
+    "nonNone": "Engin · slökkt"
+  },
+  "difficulty": {
+    "EASY": "Byrjandi",
+    "MEDIUM": "Miðstig",
+    "HARD": "Áskorun"
+  },
+  "electro": {
+    "conductivityDesc": "Berðu saman leiðni lausna við sömu styrk (birtustig peruna endurspeglar jónastyrkinn).",
+    "conductivityActive": "Leiðniprófun í gangi: því bjártari pera, því meiri leiðni",
+    "conductivityIdle": "Smelltu á „Leiðniprófun“ til að bera saman leiðni lausnanna",
+    "conductivityOn": "💡 Leiðniprófun",
+    "powerOff": "Slökkva",
+    "electrolyteInert": "Rafgreypur: {name} ({formula}) · hlutlæg aðlóð (kolefni)",
+    "electrolyteActive": "Rafgreypur: {name} ({formula}) · virk aðlóð (kopar)",
+    "electrolysisActive": "Raflýsing í gangi…",
+    "electrolysisIdle": "Smelltu á „Kveikja“ til að hefja raflýsingu og fylgjast með fyrirbærum á báðum skautum",
+    "copperFading": "Lausn: blátt litist smám saman (kópareyjónur eyðast)",
+    "powerOn": "⚡ Kveikja",
+    "brine": "Saltvatn",
+    "electrolyte": "Rafgreypir: {name}",
+    "cellActive": "Rás lokuð, rafmælir víkur, galvanísk fruma að losa hleðslu…",
+    "cellIdle": "Smelltu á „Loka rás“ til að fylgjast með fráviki rafmælis og fyrirbærum á skautunum",
+    "cellOn": "🔌 Loka rás",
+    "cellOff": "Rás aftengd",
+    "cathode": "Katóða (−)",
+    "anode": "Anóða (＋)",
+    "negative": "Neikvæður póll",
+    "positive": "Jákvæður póll"
+  },
+  "errors": {
+    "noActivity": "Engar aðgerðir hafa verið skráðar í þessari tilraun. Framkvæmdu tilraunina á borðinu áður en skýrsla er búin til.",
+    "reportFailed": "Skýrslugerð mistókst",
+    "tutorUnavailable": "AI-leiðbeinandaþjónusta er ekki tiltæk",
+    "unknown": "Óþekkt villa"
+  },
+  "home": {
+    "labTitle": "Gagnvirkt tilraunaborð",
+    "labDesc": "Dragðu hvarfefni í bikarinn — hvarf-vélin greinir litabreytingar, loftbólur, botnfellingu og hitabreytingar í rauntíma.",
+    "tutorTitle": "AI-tilraunaleiðbeinandi",
+    "tutorDesc": "Spyrðu um meginreglur og framkvæmd hvenær sem er. Þegar lykilhvarf á striganum á sér stað gefur leiðbeinandinn skýringar og öryggisábendingar.",
+    "reportTitle": "Snjall tilraunaskýrsla",
+    "reportDesc": "Tekur saman mælingaferlar úr allri tilrauninni og býr sjálfkrafa til niðurstöður, villgreiningu, úrbótartillögur og þekkingarmat.",
+    "badge": "Gervirán efnafræðirannsóknarstofa knúin af AI",
+    "heroLine1": "Í vafranum",
+    "heroLine2": "gerðu raunverulegar efnatilraunir",
+    "heroDesc": "Dragðu hvarfefni, fylgstu með litabreytingum og loftbólum, spurðu AI-leiðbeinandann hvenær sem er — við lok tilraunar er skipulögð skýrsla búin til sjálfkrafa. {count} staðfestar tilraunir, öruggar og endurtækar.",
+    "ctaCatalog": "Skoða tilraunasafn →",
+    "ctaSessions": "Mínar lotur"
+  },
+  "lab": {
+    "mix": "Blanda og hvarfast",
+    "reset": "Tæma ílát",
+    "clear": "Hreinsa",
+    "complete": "Ljúka tilraun",
+    "completed": "Tilraun lokið",
+    "viewReport": "Skoða tilraunaskýrslu →",
+    "removeItem": "Smelltu til að fjarlægja",
+    "conditions": "Kerfisskilyrði",
+    "temperature": "Kerfishiti",
+    "reagentShelf": "Hráefnahillur",
+    "apparatusList": "Tækjabúnaður",
+    "emptyContainer": "Veldu magn á hráefnahillunum til vinstri og taktu til, eða dragðu hráefni hingað",
+    "absorbent": "Frásogsvökvi",
+    "apparatus": "Tæki",
+    "addReagent": "Bæta við {name}",
+    "removeReagent": "Fjarlægja {name}",
+    "mixAction": "Blanda",
+    "backToDetail": "← Til baka í tilraunalýsingu",
+    "backToCatalog": "← Til baka í tilraunasafn",
+    "labSuffix": "Tilraunaborð",
+    "labHint": "Smelltu eða dragðu hráefni í bikarinn, veldu „Blandbragðverkun“ til að fylgjast með fyrirbærunum; eða notaðu „Tilraunaskýring“ fyrir sjálfvirka skref-fyrir-skref kynningu."
+  },
+  "lesson": {
+    "prev": "Fyrra skref",
+    "pause": "Gera hlé",
+    "play": "Spila",
+    "next": "Næsta skref",
+    "voiceOn": "Kveikja á raddskýringu",
+    "voiceOff": "Slökkva á raddskýringu",
+    "muted": "🔇 Þagað",
+    "askTutor": "Skýring við skrefið „{title}“: {narration} Útskýrðu stuttlega efnafræðilegar meginreglur og jöfnur með tilliti til fyrirbæra og mælinga í bikarnum að þessum tíma.",
+    "phase": {
+      "theory": "Kenning",
+      "prep": "Undirbúningur",
+      "operate": "Framkvæmd",
+      "observe": "Fyrirbæri",
+      "conclude": "Niðurstaða"
+    },
+    "voiceLabel": "🔊 Raddskýring",
+    "vesselBeaker": "Bikar",
+    "vesselTube": "Prófröhr",
+    "vesselFlask": "Keilu-Erlenmeyer-flaska",
+    "observeGeneric": "Fylgstu vel með kerfinu og athugaðu hvort breytingar verði á lit, kúlum eða hitastigi.",
+    "observeReacting": "Hvarf á sér stað — fylgstu með breytingum á pH og hitastigsmælingargildum.",
+    "phenomenaList": "Sjá má {parts}.",
+    "partGas": "kúlur sem streyma stöðugt upp",
+    "partPrecipitate": "lausnin verður skýjuð og botnfall myndast",
+    "partColor": "litur lausnarinnar breytist greinilega",
+    "partExo": "hiti losnar jafnframt og hitastig hækkar",
+    "partEndo": "hiti gleypist jafnframt og hitastig lækkar",
+    "titlePrinciple": "Tilraunagrundvöllur",
+    "titleSummary": "Samantekt tilraunar",
+    "titleConnect": "Tengja búnað",
+    "titleConnectCircuit": "Tengja rás",
+    "titlePowerOn": "Kveikja á straumi",
+    "titleConnectOn": "Loka rásinni",
+    "titleConductTest": "Leiðniprófun",
+    "titleElectrodes": "Fyrirbæri við báðar skautir",
+    "titleConductCompare": "Samanburður á leiðni",
+    "titleTake": "Taka {reagent}",
+    "titleHeat": "Kveikja á spíritusbrenna",
+    "titleMix": "Blanda og hvarfa",
+    "titleObserve": "Fylgjast með fyrirbærum",
+    "summary": "Í þessari tilraun muntu {objectives}.",
+    "narrSetupElectrode": "Settu skautirnar í rafgreiningarvökvann og tengdu þær við jákvæðan og neikvæðan póla jafnstraumsgjafa.",
+    "narrPowerOn": "Kveiktu á jafnstraumsgjafanum til að hefja rafgreiningu og fylgstu vel með breytingum á báðum skautum.",
+    "narrSetupCircuit": "Tengdu báðar skautir saman í gegnum galvanometer með vírum og settu þær í rafleysnina.",
+    "narrConnectOn": "Lokaðu rásinni og athugaðu hvort nál galvanometersins víki til hliðar.",
+    "narrSetupConduct": "Tengdu lausnir af sömu styrk hver í sína skautarás með ljósaperu.",
+    "narrConductTest": "Lokaðu rásinni og berðu saman birtu ljósaperanna í hverri lausn.",
+    "narrSetupGeneric": "Tengdu skautir og aflgjafa/mælitæki samkvæmt rásaruppkönnun og settu inn rafleysni.",
+    "narrRigOn": "{verb}，fylgstu vel með breytingum á skautum og mælitækjum.",
+    "verbElectrolysis": "Tengdu jansstraum og byrjaðu rafgreininguna",
+    "verbCircuit": "Tengdu rásina",
+    "narrTake": "Taktu {reagent} og settu í {vessel}.",
+    "narrHeat": "Kveiktu á alkóhóllampa til að hita {vessel} — þessi efnahvarf krefst hita.",
+    "narrMixHeated": "Blandaðu hvarfefnunum vel saman eftir upphitun; hvarf hefst þegar í stað.",
+    "narrMix": "Blandaðu hvarfefnunum í {vessel} vel saman; hvarf hefst þegar í stað.",
+    "electrodesFading": "；blálitur lausnarinnar dvínar smám saman",
+    "brine": "saltvatn",
+    "joinComma": "，",
+    "joinSemicolon": "；",
+    "outlineTitle": "Útlínur tilraunaskýringar",
+    "outlineHint": "Á tilraunaborðinu geturðu smellt á „Tilraunaskýring ▶“ til að keyra sjálfvirka kynningu skref fyrir skref.",
+    "cardTitle": "Tilraunaskýring",
+    "askTutorButton": "Láttu leiðbeinanda útskýra þetta skref",
+    "sentenceJoin": " ",
+    "voiceFemale": "Kvenrödd ♀",
+    "voiceMale": "Karlrödd ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Ekkert raddlestur er í boði fyrir þetta tungumál; skýringarnar munu sjálfkrafa fylgja texta.",
+    "narrTake_beaker": "Taktu {reagent} og settu það í bækinn.",
+    "narrTake_tube": "Taktu {reagent} og settu það í prufurörið.",
+    "narrTake_flask": "Taktu {reagent} og settu það í keilubúninginn.",
+    "narrHeat_beaker": "Kveiktu á spíritusbrennaranum og hitaðu bækinn — þessi efnahvarf getur aðeins átt sér stað við hitun.",
+    "narrHeat_tube": "Kveiktu á spíritusbrennaranum og hitaðu prufurörið — þessi efnahvarf getur aðeins átt sér stað við hitun.",
+    "narrHeat_flask": "Kveiktu á spíritusbrennaranum og hitaðu keilubúninginn — þessi efnahvarf getur aðeins átt sér stað við hitun.",
+    "narrMix_beaker": "Blandaðu efnunum í bækinum vel saman — efnahvarfið hefst þegar í stað.",
+    "narrMix_tube": "Blandaðu efnunum í prufurörinu vel saman — efnahvarfið hefst þegar í stað.",
+    "narrMix_flask": "Blandaðu efnunum í keilubúningnum vel saman — efnahvarfið hefst þegar í stað."
+  },
+  "locale": {
+    "switchLabel": "Skipta um viðmótsmál",
+    "searchPlaceholder": "Leita að tungumáli…",
+    "noMatch": "Ekkert tungumál passar",
+    "groupFull": "Aðalmál",
+    "groupBasic": "Önnur mál",
+    "groupBasicHint": "Inniheldur fullt tilraunaefni og raddlegar skýringar; þýðing er vélræn"
+  },
+  "nav": {
+    "catalog": "Tilraunasafn",
+    "sessions": "Lotur mínar",
+    "home": "Forsíða"
+  },
+  "op": {
+    "stir": {
+      "label": "Hræra",
+      "effect": "Hrærðu með glersprota; leysing flýtist og blöndun verður jafnari",
+      "hint": "Hræring hraðar leysingu og varmaflutningi og jafnar staðbundna styrk, svo lestur sé dæmigerður fyrir heildina"
+    },
+    "shake": {
+      "label": "Hrista",
+      "effect": "Hristu til að blanda; hvarfefni komast í fulla snertingu",
+      "hint": "Þegar vökvi er lítill í prufuröri er blöndun með hristingu (ekki hræru); haltu röri með opið frá öðrum"
+    },
+    "heat": {
+      "label": "Hita",
+      "effect": "Kveikt er á spírituslampa og hitað; hitastig kerfisins hækkar",
+      "hint": "Flestir hvarfar hraðna við hækkað hitastig; endotermískir hvarfar krefjast stöðugrar hitunar"
+    },
+    "cool": {
+      "label": "Kæla",
+      "effect": "Hitagjafinn er fjarlægður og kerfið kólnar náttúrulega; hitastig lækkar",
+      "hint": "Kæling minnkar leysni; hefðbundin aðferð við kristöllun og söfnun afurða"
+    },
+    "settle": {
+      "label": "Láta standa",
+      "effect": "Látið standa stutta stund; botnfall sest og lagskipting vökvans verður skýrari",
+      "hint": "Botnfall og lagskipting þurfa tíma; ekki er hægt að meta hvort efri lögurinn er tær fyrr en eftir að hafa látið standa"
+    },
+    "read": {
+      "label": "Lesa gildi",
+      "effect": "Núverandi gildi skráð",
+      "hint": "Lesið þegar sjónlína er í línu við skala; skráðu hvert gildi í gagnatöflu til að reikna meðaltal og frávik"
+    }
+  },
+  "quant": {
+    "verdictGood": "Samræmi gagna er gott; hægt er að nota í útreikninga",
+    "verdictFair": "Frávik er of stort; athugaðu sjónlínu við lestur og hvort kerfið er stöðugt",
+    "verdictPoor": "Frávik er of mikið; leitaðu að ástæðu og endurtaktu hliðstæðar mælingar",
+    "meanPh": "Meðal pH",
+    "meanTemp": "Meðalhitastig",
+    "meanVolume": "Meðalrúmmál",
+    "group": "Hópur {no}",
+    "readings": "{count} lestur",
+    "finalGroup": "Niðurstaða byggir á þessum hópi",
+    "singleReading": "Aðeins 1 mæling; ekki hægt að reikna hlutfallslegt frávik (staðlar krefjast að minnsta kosti 2 hliðstæðra mælinga)",
+    "worstDeviation": "Mesta hlutfallslegt meðalfrávik {value}%",
+    "groupNote": "Í hvert sinn sem kerfið er tekið úr, blandað eða hitað hefst nýr hópur; lestur á milli hópa telst ekki sem hliðstæðar mælingar og eru því talin sérstaklega.",
+    "noReadings": "Engar mælingar voru skráðar með „Lesa gildi“ í þessari tilraun; ekki hægt að reikna meðaltal eða hlutfallslegt frávik. Magnbundnar tilraunir krefjast að minnsta kosti 2 endurtekinnar lestrar í sama kerfisástandi."
+  },
+  "report": {
+    "conclusion": "Niðurstaða tilraunar",
+    "errorAnalysis": "Villgreining",
+    "improvements": "Tillögur um úrbætur",
+    "noImprovements": "Engar tillögur um úrbætur.",
+    "knowledge": "Mat á þekkingu",
+    "empty": "（ekkert efni）",
+    "measurements": "Mæligildi",
+    "quantData": "Megindleg gögn",
+    "noMeasurements": "Engin gildi voru skráð í þessari tilraun.",
+    "generating": "Gervigreind er að greina tilraunagögn…",
+    "regenerate": "Endurgera skýrslu",
+    "generate": "Búa til tilraunaskýrslu",
+    "generateFailed": "Mistókst að búa til ({status})",
+    "notGenerated": "Skýrsla hefur ekki verið búin til. Gervigreind mun greina skref tilraunarinnar og mæligildi og gefa niðurstöður, villur, úrbætur og matið á námi.",
+    "noActivity": "Engar aðgerðir hafa verið skráðar í þessari tilraun; ekki er hægt að búa til skýrslu.",
+    "backToLab": "Fara aftur á tilraunabekkinn →",
+    "title": "Tilraunaskýrsla",
+    "generatedAt": "Búið til {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Tengja rafmagn",
+      "off": "Aftengja rafmagn"
+    },
+    "cell": {
+      "on": "Loka hringrás",
+      "off": "Opna hringrás"
+    },
+    "flameTest": {
+      "on": "Kveikja á spírituslampa",
+      "off": "Slökkva á spírituslampa"
+    },
+    "waterBath": {
+      "on": "Hefja vatnsbaðshitun",
+      "off": "Stöðva vatnsbaðshitun"
+    },
+    "distillation": {
+      "on": "Hefja eimingu",
+      "off": "Stöðva eimingu"
+    },
+    "filtration": {
+      "on": "Hefja síun",
+      "off": "Stöðva síun"
+    },
+    "calorimeter": {
+      "on": "Hefja hræring og hitamælingu",
+      "off": "Stöðva hræring"
+    },
+    "gasCollect": {
+      "on": "Hefja gasöflun",
+      "off": "Stöðva öflun"
+    },
+    "titration": {
+      "on": "Opna kranatappa og bæta við",
+      "off": "Loka krana"
+    },
+    "syringe": {
+      "on": "Þjappa stimpli til að auka þrýsting",
+      "off": "Draga stimpil til baka til að minnka þrýsting"
+    },
+    "phMeter": {
+      "on": "Kveikja á pH-mæli",
+      "off": "Slökkva á pH-mæli"
+    },
+    "evaporation": {
+      "on": "Kveikja á spírituslampa til uppgufunar",
+      "off": "Slökkva á spírituslampa"
+    },
+    "pressureDrop": {
+      "on": "Þétta lok og hrista",
+      "off": "Losa lok"
+    },
+    "heat": {
+      "on": "Kveikja á spírituslampa til hitunar",
+      "off": "Stöðva hitun"
+    }
+  },
+  "sessions": {
+    "title": "Lotur mínar",
+    "subtitle": "Skoða eldri tilraunaskrár og opna samsvarandi skýrslur",
+    "unknownExperiment": "Óþekkt tilraun",
+    "completed": "Lokið",
+    "inProgress": "í gangi",
+    "startedAt": "Hófst {time}",
+    "viewReport": "Skoða skýrslu"
+  },
+  "shelf": {
+    "title": "Efnahillur",
+    "taken": "{dose} {unit} tekið",
+    "takeSome": "Dreypa / taka hæfilegt magn",
+    "take": "Taka {unit}",
+    "specIndicator": "Vírir",
+    "specGas": "Gas",
+    "specBulk": "Taka hæfilegt magn",
+    "specSolution": "Lausn",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Hreinn vökvi ρ={density} g/mL",
+    "specLiquid": "Vökvi",
+    "specSolid": "Fast efni, greiningarhreint"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Sýndarmálefnastofa",
+    "description": "Gerðu efnafræðitilraunir í vafranum: dragðu hvarfefni, fylgstu með hvarfinu, fáðu leiðbeiningar frá AI-leiðbeinanda og láttu skýrslur myndast sjálfkrafa."
+  },
+  "titration": {
+    "stopcock": "Opnun krafa",
+    "buretteReading": "Lestur byrettu",
+    "phMeter": "pH-mælir",
+    "unfilled": "Tómt",
+    "strongBase": "Sterk base",
+    "weakBase": "Veik base · litbreytingarsvæði",
+    "nearNeutral": "Nálægt hlutlægu",
+    "acidExcess": "Súrt · umfram magn",
+    "endpointOk": "Endapunktur náðst",
+    "overshoot": "Of mikið bætt við",
+    "notYet": "Endapunkti ekki náð (bleikt ekki horfið)",
+    "justFaded": "Nákvæmlega horfið",
+    "keyPoints": "Lykilatriði",
+    "takeAnalyte": "Taktu fyrst sýnið →",
+    "dragStopcock": "← Dragðu krana til að hefja titrun",
+    "openness": "Opnun {pct}% · haltu inni og dragðu til hægri eða vinstri"
+  },
+  "tutor": {
+    "placeholder": "Skrifaðu spurninguna þína…",
+    "replying": "Svar er að koma…",
+    "send": "Senda",
+    "unknownError": "Óþekkt villa",
+    "requestFailed": "Beiðni mistókst ({status})",
+    "askHeat": "Ég blandaði saman hvarfefnum en sá engar breytingar. Ábending segir að þetta hvarf þurfi hita. Vinsamlegast skýrðu hvers vegna þetta hvarf getur aðeins farið fram við upphitun.",
+    "askObserved": "Ég sá nýlega hvarf {equation}{phenomena} — gætirðu hjálpað mér að skýra hvað gerðist og hvert meginreglan er?",
+    "phPrecipitate": "Boðfall myndast",
+    "phGas": "Gas myndast",
+    "phColor": "Litabreyting á sér stað",
+    "listJoin": "、",
+    "eqWrap": "({equation})",
+    "title": "AI Tilraunaleiðbeinandi",
+    "empty": "Spurðu mig hvenær sem er, eða ég mun gefa ábendingar þegar efnahvarf er ræst á vinnusvæðinu."
+  },
+  "workbench": {
+    "view2d": "2D skýringarmynd",
+    "view3d": "3D tilraunaborð",
+    "view3dRefined": "3D tilraunaborð ★",
+    "sceneHint": "Dragðu til að snúa · skrunahjól til að þysja"
+  }
+}

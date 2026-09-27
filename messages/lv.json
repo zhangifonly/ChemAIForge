@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Pāriet uz galveno saturu"
+  },
+  "catalog": {
+    "title": "Eksperimentu bibliotēka",
+    "empty": "Nav eksperimentu, kas atbilstu kritērijiem.",
+    "searchPlaceholder": "Meklēt eksperimenta nosaukumu…",
+    "searchLabel": "Meklēt eksperimentus",
+    "filterCategory": "Filtrēt pēc kategorijas",
+    "allCategories": "Visas kategorijas",
+    "filterDifficulty": "Filtrēt pēc grūtības",
+    "allDifficulties": "Visas grūtības pakāpes",
+    "objectives": "Eksperimenta mērķi",
+    "reagents": "Nepieciešamie reaģenti",
+    "apparatus": "Nepieciešamais aprīkojums",
+    "subtitle": "Izvēlieties eksperimentu, lai atvērtu virtuālo laboratoriju.",
+    "estimatedMinutes": "Aptuveni {minutes} min.",
+    "startLab": "Sākt eksperimentu →"
+  },
+  "category": {
+    "ACID_BASE": "Skābju-bāzu reakcijas",
+    "ORGANIC": "Organiskā ķīmija",
+    "THERMODYNAMICS": "Termodinamika",
+    "REDOX": "Oksidēšanās-reducēšanās",
+    "PRECIPITATION": "Nogulsnēšanās reakcijas",
+    "GAS": "Gāzu iegūšana",
+    "ELECTROCHEM": "Elektroķīmija",
+    "METAL": "Metālu aktivitāte",
+    "ANALYSIS": "Analītiskā pārbaude",
+    "COORDINATION": "Koordinācijas krāsoreakcijas"
+  },
+  "chart": {
+    "temperature": "Temperatūra",
+    "ph": "pH",
+    "volume": "Tilpums",
+    "ariaLabel": "{label} izmaiņu grafiks laikā, pašreizējā vērtība {value}",
+    "measureAria": "Mērījumu rādījumu līnijdiagramma laikā, kopā {count} rādījumi, pH skala 0 līdz 14, temperatūras skala 0 līdz 100 ℃",
+    "title": "Procesa līkne",
+    "current": "Pašreizējais",
+    "peak": "Maksimums",
+    "samples": "Paraugi: {count} punkti",
+    "channelTemp": "Temperatūra",
+    "channelPh": "pH",
+    "channelVolume": "Tilpums",
+    "empty": "Pēc darbības sākšanas šeit tiks rādīta laika līkne"
+  },
+  "dataTable": {
+    "title": "Datu reģistrācijas tabula",
+    "emptyHint": "Spied «Nolasīt», lai reģistrētu mērījumu",
+    "recorded": "Šajā grupā reģistrēts {count} reizes",
+    "recordedNeedMore": "Šajā grupā reģistrēts {count} reizes (paralēlajiem mērījumiem nepieciešams vismaz 2)",
+    "emptyBody": "Kvantitatīvos eksperimentos atkārtojiet mērījumus un aprēķiniet vidējo; katrs «Nolasīt» pievieno jaunu rindu.",
+    "colIndex": "Nr.",
+    "colTime": "Laiks / s",
+    "colTemperature": "Temperatūra / ℃",
+    "colPh": "pH",
+    "colVolume": "Tilpums / mL",
+    "rowMean": "Grupas vidējais",
+    "rowDeviation": "Relatīvā novirze",
+    "worstDeviation": "Lielākā relatīvā novirze {value}%:",
+    "verdictGood": "Datu konsekvence ir laba — piemērota aprēķiniem.",
+    "verdictFair": "Novirze ir palielināta — pārbaudiet, vai skats nolasot ir perpendikulārs skalai un vai sistēma ir stabilizējusies.",
+    "verdictPoor": "Novirze ir pārāk liela — noskaidrojiet cēloni un atkārtojiet paralēlos mērījumus; neizmantojiet vidējo vērtību tieši."
+  },
+  "deck": {
+    "readings": "Laboratorijas instrumentu rādījumi",
+    "temperature": "Temperatūra",
+    "volume": "Tilpums",
+    "ph": "pH",
+    "operations": "Eksperimenta darbības",
+    "needReagent": "Vispirms paņemiet reaģentu",
+    "inOrder": "Veiciet darbības faktiskajā soļu secībā"
+  },
+  "device": {
+    "glassware": "Laboratorijas trauki",
+    "electrolysisCell": "Elektrolīzes šūna",
+    "galvanicCell": "Galvaniskais elements",
+    "flameTest": "Liesmas krāsas reakcijas ierīce",
+    "gasCollection": "Gāzes savākšanas ierīce (ūdens izspiešana)",
+    "gasDelivery": "Gāzes novadīšanas un absorbcijas ierīce",
+    "conductivity": "Šķīdumu elektrovadītspējas salīdzinājums",
+    "strongBright": "Spēcīgs · spilgts",
+    "weakDim": "Vājš · blāvs",
+    "nonNone": "Nav · nespīd"
+  },
+  "difficulty": {
+    "EASY": "Ievads",
+    "MEDIUM": "Vidējs",
+    "HARD": "Izaicinājums"
+  },
+  "electro": {
+    "conductivityDesc": "Salīdzina šķīdumu elektrovadītspēju vienādā koncentrācijā (spuldzītes spilgtums atspoguļo jonu koncentrāciju).",
+    "conductivityActive": "Testēšana aktīva: jo spožāka spuldzīte, jo augstāka elektrovadītspēja",
+    "conductivityIdle": "Spiediet «Ieslēgt testu», lai salīdzinātu šķīdumu elektrovadītspēju",
+    "conductivityOn": "💡 Ieslēgt testu",
+    "powerOff": "Atslēgt strāvu",
+    "electrolyteInert": "Elektrolīts: {name}（{formula}）· anods inerts (ogleklis)",
+    "electrolyteActive": "Elektrolīts: {name}（{formula}）· anods aktīvs (varš)",
+    "electrolysisActive": "Elektrolīze notiek…",
+    "electrolysisIdle": "Spiediet «Ieslēgt strāvu», lai sāktu elektrolīzi un novērotu abu elektrodu parādības",
+    "copperFading": "Šķīdums: zilā krāsa pakāpeniski izgaist (vara joni tiek patērēti)",
+    "powerOn": "⚡ Ieslēgt strāvu",
+    "brine": "Sālsūdens",
+    "electrolyte": "Elektrolīts: {name}",
+    "cellActive": "Ķēde slēgta, galvanometrs novirzes, elements izlādējas…",
+    "cellIdle": "Spiediet «Slēgt ķēdi», lai novērotu galvanometra novirzi un elektrodu parādības",
+    "cellOn": "🔌 Slēgt ķēdi",
+    "cellOff": "Atvienot ķēdi",
+    "cathode": "Katods (−)",
+    "anode": "Anods (＋)",
+    "negative": "Negatīvais pols",
+    "positive": "Pozitīvais pols"
+  },
+  "errors": {
+    "noActivity": "Šajā eksperimentā vēl nav nevienas darbības. Veiciet darbības laboratorijas galdā un pēc tam ģenerējiet pārskatu.",
+    "reportFailed": "Pārskata ģenerēšana neizdevās",
+    "tutorUnavailable": "AI tutora pakalpojums nav pieejams",
+    "unknown": "Nezināma kļūda"
+  },
+  "home": {
+    "labTitle": "Interaktīvais laboratorijas galds",
+    "labDesc": "Ievelciet reaģentus mēģenē — reakciju dzinējs reāllaikā nosaka krāsas maiņu, burbuļus, nogulsnes un temperatūras izmaiņas. Tieši tas, ko redzat.",
+    "tutorTitle": "AI eksperimentu tutors",
+    "tutorDesc": "Jautājiet par principiem un darbībām jebkurā laikā. Kad audeklā tiek aktivizēta galvenā reakcija, tutors proaktīvi sniedz skaidrojumus un drošības norādījumus.",
+    "reportTitle": "Viedais eksperimenta pārskats",
+    "reportDesc": "Apkopo visa eksperimenta rādījumu līknes un automātiski ģenerē secinājumus, kļūdu analīzi, uzlabojumu ieteikumus un zināšanu novērtējumu.",
+    "badge": "AI vadīta virtuālā ķīmijas laboratorija",
+    "heroLine1": "Pārlūkprogrammā",
+    "heroLine2": "veiciet īstus ķīmijas eksperimentus",
+    "heroDesc": "Velciet reaģentus, vērojiet krāsas maiņu un burbuļus, jautājiet AI tutoram jebkurā laikā — eksperimenta beigās tiek automātiski ģenerēts strukturēts pārskats. {count} validēti eksperimenti, droši un atkārtojami.",
+    "ctaCatalog": "Pārlūkot eksperimentu bibliotēku →",
+    "ctaSessions": "Manas sesijas"
+  },
+  "lab": {
+    "mix": "Sajaukt un reaģēt",
+    "reset": "Iztīrīt trauku",
+    "clear": "Notīrīt",
+    "complete": "Pabeigt eksperimentu",
+    "completed": "Eksperiments pabeigts",
+    "viewReport": "Skatīt eksperimenta pārskatu →",
+    "removeItem": "Noklikšķiniet, lai noņemtu",
+    "conditions": "Sistēmas apstākļi",
+    "temperature": "Sistēmas temperatūra",
+    "reagentShelf": "Reaģentu plaukts",
+    "apparatusList": "Aparatūras saraksts",
+    "emptyContainer": "Kreisajā reaģentu plauktā izvēlieties daudzumu un paņemiet, vai arī velciet reaģentu šeit",
+    "absorbent": "Absorbcijas šķīdums",
+    "apparatus": "Aparatūra",
+    "addReagent": "Pievienot {name}",
+    "removeReagent": "Noņemt {name}",
+    "mixAction": "Sajaukt",
+    "backToDetail": "← Atpakaļ uz eksperimenta detaļām",
+    "backToCatalog": "← Atpakaļ uz eksperimentu katalogu",
+    "labSuffix": "Laboratorijas galds",
+    "labHint": "Noklikšķiniet vai velciet reaģentus krūzē, «Sajaukt» — novērojiet parādības; vai izmantojiet «Eksperimenta skaidrojumu» automātiskai soli pa solim demonstrācijai."
+  },
+  "lesson": {
+    "prev": "Iepriekšējais solis",
+    "pause": "Pauze",
+    "play": "Atskaņot",
+    "next": "Nākamais solis",
+    "voiceOn": "Ieslēgt balss skaidrojumu",
+    "voiceOff": "Izslēgt balss skaidrojumu",
+    "muted": "🔇 Skaņa izslēgta",
+    "askTutor": "Skaidrojums solim «{title}»: {narration} Lūdzu, īsi izskaidrojiet ķīmiskos principus un vienādojumus, ņemot vērā pašlaik krūzē redzamās parādības un rādījumus.",
+    "phase": {
+      "theory": "Princips",
+      "prep": "Sagatavošana",
+      "operate": "Darbība",
+      "observe": "Novērojumi",
+      "conclude": "Secinājums"
+    },
+    "voiceLabel": "🔊 Balss skaidrojums",
+    "vesselBeaker": "Krūze",
+    "vesselTube": "Mēģene",
+    "vesselFlask": "Koniskā kolba",
+    "observeGeneric": "Uzmanīgi novērojiet sistēmu — ievērojiet krāsas, burbuļu vai temperatūras izmaiņas.",
+    "observeReacting": "Reakcija norit — sekojiet pH un temperatūras rādījumu izmaiņām.",
+    "phenomenaList": "Var redzēt {parts}.",
+    "partGas": "nepārtrauktu burbuļu izdalīšanos",
+    "partPrecipitate": "šķīdums kļūst duļķains un veidojas nogulsnes",
+    "partColor": "šķīduma krāsa krasi mainās",
+    "partExo": "vienlaikus izdalās siltums un temperatūra paaugstinās",
+    "partEndo": "vienlaikus absorbējas siltums un temperatūra pazeminās",
+    "titlePrinciple": "Eksperimenta princips",
+    "titleSummary": "Eksperimenta kopsavilkums",
+    "titleConnect": "Savienot iekārtu",
+    "titleConnectCircuit": "Savienot ķēdi",
+    "titlePowerOn": "Ieslēgt barošanu",
+    "titleConnectOn": "Noslēgt ķēdi",
+    "titleConductTest": "Vadītspējas pārbaude",
+    "titleElectrodes": "Parādības pie elektrodiem",
+    "titleConductCompare": "Vadītspējas salīdzinājums",
+    "titleTake": "Ņemt {reagent}",
+    "titleHeat": "Aizdegt spirta lampu",
+    "titleMix": "Sajaukt reakcijai",
+    "titleObserve": "Novērot parādības",
+    "summary": "Šajā eksperimentā jūs {objectives}.",
+    "narrSetupElectrode": "Ievietojiet elektrodus elektrolītā un savienojiet tos attiecīgi ar līdzstrāvas avota pozitīvo un negatīvo polu.",
+    "narrPowerOn": "Ieslēdziet līdzstrāvas avotu, uzsākiet elektrolīzi un uzmanīgi novērojiet izmaiņas pie abiem elektrodiem.",
+    "narrSetupCircuit": "Ar vadiem savienojiet abus elektrodus caur galvanometru un ievietojiet tos elektrolīta šķīdumā.",
+    "narrConnectOn": "Noslēdziet ķēdi un novērojiet, vai galvanometra bultiņa novirzās.",
+    "narrSetupConduct": "Pievienojiet vienādas koncentrācijas šķīdumus atsevišķi elektrodu ķēdēm ar spuldzēm.",
+    "narrConductTest": "Noslēdziet ķēdi un salīdziniet spuldzīšu spilgtumu katrā šķīdumā.",
+    "narrSetupGeneric": "Saskaņā ar shēmu savienojiet elektrodus ar barošanas avotu un mērinstrumentiem, pēc tam ievietojiet elektrolītu.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Sievietes balss ♀",
+    "voiceMale": "Vīrieša balss ♂",
+    "narrRigOn": "{verb}; uzmanīgi vērojiet izmaiņas abos elektodos un instrumentos.",
+    "verbElectrolysis": "Pieslēgt līdzstrāvas barošanas avotu un sākt elektrolīzi",
+    "verbCircuit": "Noslēgt ķēdi",
+    "narrTake": "Paņemiet {reagent} un pievienojiet {vessel}.",
+    "narrHeat": "Aizdedziniet spirta lampu, lai uzsildītu {vessel} — šī reakcija iespējama tikai siltuma ietekmē.",
+    "narrMixHeated": "Pēc uzsildīšanas rūpīgi sajauciet reaģentus — reakcija sākas nekavējoties.",
+    "narrMix": "Rūpīgi sajauciet reaģentus {vessel} — reakcija sākas nekavējoties.",
+    "electrodesFading": "; šķīduma zilā krāsa pakāpeniski izgaist",
+    "brine": "nātrija hlorīda šķīdums",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Eksperimenta paskaidrojumu struktūra",
+    "outlineHint": "Eksperimenta galdā noklikšķiniet uz «Eksperimenta paskaidrojums ▶», lai palaistu automātisko demonstrāciju.",
+    "cardTitle": "Eksperimenta paskaidrojums",
+    "askTutorButton": "Lūgt pasniedzēju paskaidrot šo soli",
+    "sentenceEnd": ".",
+    "noVoice": "Šai valodai balss nav pieejama — paskaidrojums tiks rādīts kā subtitri.",
+    "narrTake_beaker": "Paņemiet {reagent} un pievienojiet to vārglāzei.",
+    "narrTake_tube": "Paņemiet {reagent} un pievienojiet to mēģenei.",
+    "narrTake_flask": "Paņemiet {reagent} un pievienojiet to kolbai.",
+    "narrHeat_beaker": "Aizdedziniet spirta lampu un uzsildiet vārglāzi — šī reakcija var notikt tikai sildīšanas apstākļos.",
+    "narrHeat_tube": "Aizdedziniet spirta lampu un uzsildiet mēģeni — šī reakcija var notikt tikai sildīšanas apstākļos.",
+    "narrHeat_flask": "Aizdedziniet spirta lampu un uzsildiet kolbu — šī reakcija var notikt tikai sildīšanas apstākļos.",
+    "narrMix_beaker": "Kārtīgi sajauciet reaģentus vārglāzē — reakcija sāksies nekavējoties.",
+    "narrMix_tube": "Kārtīgi sajauciet reaģentus mēģenē — reakcija sāksies nekavējoties.",
+    "narrMix_flask": "Kārtīgi sajauciet reaģentus kolbā — reakcija sāksies nekavējoties."
+  },
+  "locale": {
+    "switchLabel": "Mainīt saskarnes valodu",
+    "searchPlaceholder": "Meklēt valodu…",
+    "noMatch": "Nav atbilstošu valodu",
+    "groupFull": "Galvenās valodas",
+    "groupBasic": "Citas valodas",
+    "groupBasicHint": "Ietver pilnu eksperimenta saturu un balss komentārus; tulkojums ir mašīntulkojums"
+  },
+  "nav": {
+    "catalog": "Eksperimentu bibliotēka",
+    "sessions": "Manas sesijas",
+    "home": "Sākumlapa"
+  },
+  "op": {
+    "stir": {
+      "label": "Maisīt",
+      "effect": "Maisiet ar stikla nūjiņu — viela izšķīst ātrāk un maisījums kļūst viendabīgāks.",
+      "hint": "Maisīšana paātrina izšķīšanu un siltuma pārnesi, izlīdzina lokālo koncentrāciju — rādījums atspoguļo visu sistēmu"
+    },
+    "shake": {
+      "label": "Kratīšana",
+      "effect": "Kratīšana nodrošina reaģentu pilnīgu sajaukšanos",
+      "hint": "Mēģenē ir maz šķidruma — sajaukšanai krātiet (nemaisiet), turiet mēģeni ar atvērumu prom no cilvēkiem"
+    },
+    "heat": {
+      "label": "Sildīšana",
+      "effect": "Iededzina spirta lampu; sistēmas temperatūra paaugstinās",
+      "hint": "Lielākā daļā reakciju paaugstināta temperatūra paātrina procesu; endotermiskām reakcijām nepieciešama nepārtraukta sildīšana"
+    },
+    "cool": {
+      "label": "Dzesēšana",
+      "effect": "Noņem siltuma avotu; temperatūra dabīgi pazeminās",
+      "hint": "Dzesēšana samazina šķīdību — standarta solis kristalizācijai un produkta savākšanai"
+    },
+    "settle": {
+      "label": "Nostādināšana",
+      "effect": "Nostādina brīdi: nogulsnes nosēžas, šķidruma slāņi skaidrāk nošķiras",
+      "hint": "Nogulsnēšanai un slāņošanai vajadzīgs laiks; tikai pēc nostādināšanas var novērtēt, vai augšējais slānis ir dzidrs"
+    },
+    "read": {
+      "label": "Nolasīšana",
+      "effect": "Reģistrē pašreizējo rādījumu",
+      "hint": "Skatienam jābūt skalas līmenī; ierakstiet katru rādījumu datu tabulā, lai aprēķinātu vidējo vērtību un kļūdu"
+    }
+  },
+  "quant": {
+    "verdictGood": "Datu konsekvence ir laba, piemērota aprēķiniem",
+    "verdictFair": "Novirze ir palielināta — pārbaudiet nolasīšanas leņķi un sistēmas stabilitāti",
+    "verdictPoor": "Novirze ir pārāk liela — noskaidrojiet cēloni un atkārtojiet paralēlos mērījumus",
+    "meanPh": "Vidējais pH",
+    "meanTemp": "Vidējā temperatūra",
+    "meanVolume": "Vidējais tilpums",
+    "group": "{no}. grupa",
+    "readings": "{count} nolasījumi",
+    "finalGroup": "Secinājumi balstīti uz šo grupu",
+    "singleReading": "Tikai 1 mērījums — relatīvo novirzi nevar aprēķināt (standarts prasa vismaz 2 paralēlus mērījumus)",
+    "worstDeviation": "Lielākā relatīvā vidējā novirze {value}%",
+    "groupNote": "Katra ņemšana, sajaukšana vai sildīšana sāk jaunu grupu; nolasījumi no dažādām grupām nav paralēli mērījumi, tāpēc tie tiek uzskaitīti atsevišķi.",
+    "noReadings": "Šajā eksperimentā netika izmantota operācija «Nolasīšana», tāpēc nav mērījumu ierakstu un nevar aprēķināt vidējo vērtību vai relatīvo novirzi. Kvantitatīvam eksperimentam vienā un tajā pašā sistēmas stāvoklī jāveic vismaz 2 nolasījumi."
+  },
+  "report": {
+    "conclusion": "Eksperimenta secinājums",
+    "errorAnalysis": "Kļūdu analīze",
+    "improvements": "Uzlabojumu ieteikumi",
+    "noImprovements": "Pagaidām nav ieteikumu.",
+    "knowledge": "Zināšanu apguves novērtējums",
+    "empty": "(Satura nav)",
+    "measurements": "Mērījumu rādījumi",
+    "quantData": "Kvantitatīvie dati",
+    "noMeasurements": "Šajā eksperimentā nav reģistrēts neviens rādījums.",
+    "generating": "AI analizē eksperimenta datus…",
+    "regenerate": "Ģenerēt atskaiti atkārtoti",
+    "generate": "Ģenerēt eksperimenta atskaiti",
+    "generateFailed": "Ģenerēšana neizdevās ({status})",
+    "notGenerated": "Atskaite vēl nav ģenerēta. AI, pamatojoties uz šī eksperimenta darbību secību un mērījumu rādījumiem, sniegs secinājumus, kļūdu analīzi, uzlabojumu ieteikumus un apguves novērtējumu.",
+    "noActivity": "Šajā eksperimentā vēl nav nevienas darbības, tāpēc atskaiti pagaidām nevar ģenerēt.",
+    "backToLab": "Atgriezties laboratorijas darbgaldā →",
+    "title": "Eksperimenta atskaite",
+    "generatedAt": "Ģenerēts: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Ieslēgt barošanu",
+      "off": "Atvienot barošanu"
+    },
+    "cell": {
+      "on": "Savienot ķēdi",
+      "off": "Atvienot ķēdi"
+    },
+    "flameTest": {
+      "on": "Aizdegt spirta lampu",
+      "off": "Nodzēst spirta lampu"
+    },
+    "waterBath": {
+      "on": "Sākt ūdens vannas sildīšanu",
+      "off": "Apturēt ūdens vannas sildīšanu"
+    },
+    "distillation": {
+      "on": "Sākt destilāciju",
+      "off": "Apturēt destilāciju"
+    },
+    "filtration": {
+      "on": "Sākt filtrēšanu",
+      "off": "Apturēt filtrēšanu"
+    },
+    "calorimeter": {
+      "on": "Sākt maisīšanu un temperatūras mērīšanu",
+      "off": "Apturēt maisīšanu"
+    },
+    "gasCollect": {
+      "on": "Sākt gāzes savākšanu",
+      "off": "Apturēt savākšanu"
+    },
+    "titration": {
+      "on": "Atvērt krānu titrēšanai",
+      "off": "Aizvērt krānu"
+    },
+    "syringe": {
+      "on": "Spiest virzuli — palielināt spiedienu",
+      "off": "Vilkt virzuli — samazināt spiedienu"
+    },
+    "phMeter": {
+      "on": "Ieslēgt pH mērītāju",
+      "off": "Izslēgt pH mērītāju"
+    },
+    "evaporation": {
+      "on": "Aizdegt spirta lampu iztvaikošanai",
+      "off": "Nodzēst spirta lampu"
+    },
+    "pressureDrop": {
+      "on": "Pievelciet vāciņu un sakratiet",
+      "off": "Atskrūvēt vāciņu"
+    },
+    "heat": {
+      "on": "Aizdegt spirta lampu karsēšanai",
+      "off": "Apturēt karsēšanu"
+    }
+  },
+  "sessions": {
+    "title": "Manas sesijas",
+    "subtitle": "Skatīt eksperimentu vēsturi un atbilstošos pārskatus",
+    "unknownExperiment": "Nezināms eksperiments",
+    "completed": "Pabeigts",
+    "inProgress": "Notiek",
+    "startedAt": "Sākts {time}",
+    "viewReport": "Skatīt pārskatu"
+  },
+  "shelf": {
+    "title": "Reaģentu plaukts",
+    "taken": "Paņemts {dose} {unit}",
+    "takeSome": "Pilināt / paņemt nepieciešamo daudzumu",
+    "take": "Paņemt {unit}",
+    "specIndicator": "Indikators",
+    "specGas": "Gāze",
+    "specBulk": "Paņemt nepieciešamo daudzumu",
+    "specSolution": "Šķīdums",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Tīrs šķidrums ρ={density} g/mL",
+    "specLiquid": "Šķidrums",
+    "specSolid": "Cietviela, analītiski tīra"
+  },
+  "site": {
+    "title": "ChemAIForge · AI virtuālā ķīmijas laboratorija",
+    "description": "Veiciet ķīmijas eksperimentus pārlūkprogrammā: velciet reaģentus, vērojiet reakcijas, saņemiet AI mentora norādījumus un automātiski ģenerējiet eksperimentu pārskatus."
+  },
+  "titration": {
+    "stopcock": "Krāna atvērums",
+    "buretteReading": "Biretes rādījums",
+    "phMeter": "pH mērītājs",
+    "unfilled": "Nav piepildīts",
+    "strongBase": "Spēcīgi sārmains",
+    "weakBase": "Vāji sārmains · krāsas maiņas zona",
+    "nearNeutral": "Tuvu neitrālam",
+    "acidExcess": "Skābais · pārsniegts",
+    "endpointOk": "Ekvivalentpunkts sasniegts",
+    "overshoot": "Pārtitrets",
+    "notYet": "Vēl nav sasniegts ekvivalentpunkts (rozā krāsa nav izgaisusi)",
+    "justFaded": "Tikko izgaisa",
+    "keyPoints": "Darbības pamatelementi",
+    "takeAnalyte": "Vispirms paņemiet analītu →",
+    "dragStopcock": "← Velciet krānu, lai sāktu titrēšanu",
+    "openness": "Atvērums {pct}% · turiet un velciet pa kreisi vai pa labi"
+  },
+  "tutor": {
+    "placeholder": "Ievadiet savu jautājumu…",
+    "replying": "Atbild…",
+    "send": "Sūtīt",
+    "unknownError": "Nezināma kļūda",
+    "requestFailed": "Pieprasījums neizdevās ({status})",
+    "askHeat": "Sajaucot reaģentus, es nenovēroju nekādas izmaiņas. Norādījums liecina, ka šai reakcijai nepieciešama sildīšana. Lūdzu, izskaidrojiet, kāpēc šī reakcija var notikt tikai paaugstinātā temperatūrā.",
+    "askObserved": "Es tikko novēroju reakciju {equation}{phenomena}. Lūdzu, palīdziet izskaidrot, kas notika un kāds ir tās mehānisms.",
+    "phPrecipitate": "Veidojas nogulsnes",
+    "phGas": "izdala gāzi",
+    "phColor": "notika krāsas maiņa",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI laboratorijas tutors",
+    "empty": "Jautājiet jebkurā laikā, vai es paziņošu pēc reakcijas uz audekla."
+  },
+  "workbench": {
+    "view2d": "2D shēma",
+    "view3d": "3D darba galds",
+    "view3dRefined": "3D darba galds ★",
+    "sceneHint": "Vilkt, lai rotētu · Ritenis, lai tuvinātu"
+  }
+}

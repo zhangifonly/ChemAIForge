@@ -2,10 +2,14 @@
 
 // 3D 实验台画布：R3F Canvas + 灯光 + 轨道控制器，按 slug 选择 3D 场景。
 // 复用 labStore 状态与现有交互逻辑（加试剂/混合/清空），让 3D 与 2D 共享同一实验进程。
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { SceneShell } from "./SceneShell";
 import { useLabStore } from "../labStore";
 import { resolveSubstance } from "../reagents";
+import { ReagentShelf } from "../ReagentShelf";
+import { shelfEntries } from "../shelfEntries";
+import { InstrumentDeck, ReadingHud } from "../InstrumentDeck";
 import { IronCopperScene } from "./IronCopperScene";
 import { ZincAcidScene } from "./ZincAcidScene";
 import { PrecipitationScene } from "./PrecipitationScene";
@@ -21,6 +25,8 @@ import { GenericScene, VESSEL_VIEW } from "./GenericScene";
 import { planScene } from "@/lib/chem/scenePlan";
 import { HEAT_THRESHOLD } from "@/lib/chem/engine";
 import { has3D } from "./registry";
+import { BenchLabelsContext, BenchTermsContext } from "./LabRoom";
+import { usePhrase, useTerms } from "@/lib/i18n/PhenomenaProvider";
 
 // 加热阈值直接用引擎的 HEAT_THRESHOLD：3D 上"火焰亮起"与化学上"反应发生"
 // 必须是同一个门槛，各写一份迟早会漂移成"看着在烧但不反应"。
@@ -38,7 +44,7 @@ export default function Lab3DCanvas({
   apparatus?: string[];
 }) {
   // 酸碱中和滴定有独立的定量交互（旋塞开度/滴数/终点判定），单独成台
-  if (slug === "acid-base-titration") return <TitrationLab />;
+  if (slug === "acid-base-titration") return <TitrationLab reagents={reagents} />;
   return <Lab3DGeneric slug={slug} reagents={reagents} apparatus={apparatus} />;
 }
 
@@ -51,6 +57,10 @@ function Lab3DGeneric({
   reagents: string[];
   apparatus: string[];
 }) {
+  const t = useTranslations("lab");
+  const tRig = useTranslations("rig");
+  const phrase = usePhrase();
+  const terms = useTerms();
   const {
     contents,
     result,
@@ -85,23 +95,27 @@ function Lab3DGeneric({
   // 需要电源 / 电压表开关的装置：手写电化学场景 + 通用场景里的电解与原电池
   const rigKind = plan.rig.kind;
   const needsSwitch = isElectro || rigKind !== "none";
-  // 各装置的开关文案：让按钮说清"这一下会发生什么"
-  const SWITCH_LABEL: Record<string, [string, string]> = {
-    electrolysis: ["接通电源", "断开电源"],
-    cell: ["接通电路", "断开电路"],
-    "flame-test": ["点燃酒精灯", "熄灭酒精灯"],
-    "water-bath": ["开始水浴加热", "停止水浴加热"],
-    distillation: ["开始蒸馏", "停止蒸馏"],
-    filtration: ["开始过滤", "停止过滤"],
-    calorimeter: ["开始搅拌测温", "停止搅拌"],
-    "gas-collect": ["开始收集气体", "停止收集"],
-    titration: ["打开旋塞滴加", "关闭旋塞"],
-    syringe: ["压缩活塞加压", "拉回活塞减压"],
-    "ph-meter": ["打开 pH 计", "关闭 pH 计"],
-    evaporation: ["点燃酒精灯蒸发", "熄灭酒精灯"],
-    "pressure-drop": ["拧紧瓶盖振荡", "松开瓶盖"],
+  // 各装置的开关文案：让按钮说清"这一下会发生什么"。
+  // rig kind 是连字符命名（water-bath），词条键用驼峰（waterBath），此处做映射；
+  // 未登记的装置退回"接通电源"这对通用文案。
+  const RIG_KEY: Record<string, string> = {
+    electrolysis: "electrolysis",
+    cell: "cell",
+    "flame-test": "flameTest",
+    "water-bath": "waterBath",
+    distillation: "distillation",
+    filtration: "filtration",
+    calorimeter: "calorimeter",
+    "gas-collect": "gasCollect",
+    titration: "titration",
+    syringe: "syringe",
+    "ph-meter": "phMeter",
+    evaporation: "evaporation",
+    "pressure-drop": "pressureDrop",
   };
-  const [onLabel, offLabel] = SWITCH_LABEL[rigKind] ?? ["接通电源", "断开电源"];
+  const rigKey = RIG_KEY[rigKind] ?? "electrolysis";
+  const onLabel = tRig(`${rigKey}.on`);
+  const offLabel = tRig(`${rigKey}.off`);
 
   // 各实验在 Canvas 外计算派生状态后构造场景（规避 R3F 跨 reconciler 订阅失效）
   function renderScene() {
@@ -210,30 +224,15 @@ function Lab3DGeneric({
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-[180px_1fr]">
-      {/* 试剂 + 操作 */}
+    <div className="grid gap-6 lg:grid-cols-[248px_minmax(0,1fr)]">
+      {/* 试剂架 + 装置操作。试剂架与 2D 共用：原先这里是一排纯文字按钮，
+          点一下按默认量整瓶倒入，切到 3D 就没了取用量与瓶签规格 */}
       <aside className="flex flex-col gap-2">
-        <h3 className="text-sm font-semibold text-foreground/70">试剂</h3>
-        {reagents.map((label) => {
-          const inUse = contents.some(
-            (c) => c.formula === resolveSubstance(label).formula,
-          );
-          return (
-            <button
-              key={label}
-              type="button"
-              onClick={() => addReagent(resolveSubstance(label))}
-              className={`rounded-xl border px-3 py-2 text-left text-sm transition-all active:scale-[0.98] ${
-                inUse
-                  ? "border-brand-400/50 bg-brand-500/8"
-                  : "border-foreground/15 bg-surface/70 hover:border-brand-400/50"
-              }`}
-            >
-              {label}
-              {inUse ? " ✓" : ""}
-            </button>
-          );
-        })}
+        <ReagentShelf
+          entries={shelfEntries(reagents, terms)}
+          contents={contents}
+          onTake={(e, dose) => addReagent(resolveSubstance(e.label), dose)}
+        />
         <div className="mt-2 flex flex-col gap-2">
           {/* 装置开关：电解 / 原电池 / 焰色 / 水浴 / 蒸馏 / 过滤 都靠"启动装置"驱动现象 */}
           {needsSwitch && (
@@ -260,12 +259,16 @@ function Lab3DGeneric({
               disabled={contents.length < 2}
               className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow disabled:opacity-40"
             >
-              混合反应
+              {t("mix")}
             </button>
           )}
           {/* 加热：通用场景在器皿下点燃酒精灯。自带热源的装置由上面的装置开关
               一并管温度，这里就不再出第二个加热入口，免得两个按钮互相打架 */}
-          {!isElectro && !HEATING_RIGS.has(rigKind) && (
+          {/* 量热计装置不给加热入口：中和热、溶解热测定要求绝热，外部加热会
+              直接破坏测量原理（2D 那边同理不画酒精灯，见 vesselGeom.hasHeatSource）。
+              这里不能改用 hasHeatSource 一刀切 —— 制氯气、点燃氢气等 5 个实验
+              需要加热 / 点燃，但仪器清单没写热源，隐藏后它们在 3D 里就无法反应。 */}
+          {!isElectro && !HEATING_RIGS.has(rigKind) && rigKind !== "calorimeter" && (
             <button
               type="button"
               onClick={() => setTemperature(heating ? 25 : HEAT_THRESHOLD + 20)}
@@ -276,7 +279,7 @@ function Lab3DGeneric({
                   : "border-foreground/20 hover:border-amber-400/60"
               }`}
             >
-              {heating ? "🔥 停止加热" : "点燃酒精灯加热"}
+              {heating ? `🔥 ${tRig("heat.off")}` : tRig("heat.on")}
             </button>
           )}
           <button
@@ -284,7 +287,7 @@ function Lab3DGeneric({
             onClick={reset}
             className="rounded-xl border border-foreground/20 px-3 py-2 text-sm transition-colors hover:border-brand-400/50"
           >
-            清空
+            {t("clear")}
           </button>
           {/* 完成实验 + 报告出口：原先只有 2D 画布有，在 3D 下做完实验没法结束会话，
               会话状态永远停在"进行中"，AI 报告也无从生成。
@@ -295,29 +298,42 @@ function Lab3DGeneric({
             disabled={completed || !(isElectro ? energized : result)}
             className="rounded-xl border border-emerald-500/40 px-3 py-2 text-sm text-emerald-700 transition-colors hover:bg-emerald-500/10 disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
           >
-            {completed ? "实验已完成" : "完成实验"}
+            {completed ? t("completed") : t("complete")}
           </button>
           {completed && sessionId ? (
             <Link
               href={`/sessions/${sessionId}/report`}
               className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-3 py-2 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow"
             >
-              查看实验报告 →
+              {t("viewReport")}
             </Link>
           ) : null}
         </div>
         {result?.reacted && (
           <p className="mt-1 rounded-lg bg-emerald-500/10 px-3 py-2 text-xs text-emerald-700 dark:text-emerald-300">
-            {result.description}
+            {phrase(result.description)}
           </p>
         )}
       </aside>
 
-      {/* 3D 画布（灯光/环境/后处理统一由 SceneShell 提供） */}
-      {/* 通用场景按器皿造型取景（试管细高需拉远抬高），专用场景沿用各自默认 */}
-      <SceneShell {...(refined ? {} : VESSEL_VIEW[plan.vessel])} autoRotate={false}>
-        {renderScene()}
-      </SceneShell>
+      <section className="flex min-w-0 flex-col gap-4">
+        {/* 3D 画布（灯光/环境/后处理统一由 SceneShell 提供） */}
+        {/* 通用场景按器皿造型取景（试管细高需拉远抬高），专用场景沿用各自默认 */}
+        <div className="relative">
+          <SceneShell {...(refined ? {} : VESSEL_VIEW[plan.vessel])} autoRotate={false}>
+            {/* Provider 必须放在 Canvas 内部：Context 不跨 React 与 R3F 两个 reconciler */}
+            <BenchLabelsContext.Provider value={reagents}>
+              <BenchTermsContext.Provider value={terms}>
+              {renderScene()}
+            </BenchTermsContext.Provider>
+            </BenchLabelsContext.Provider>
+          </SceneShell>
+          {/* 仪表叠在场景一角，与 2D 台面同一套读数 */}
+          <ReadingHud className="absolute start-4 top-4 z-10" />
+        </div>
+        {/* 读数、曲线与数据表与 2D 共用同一份实验过程：切视图不丢记录 */}
+        <InstrumentDeck apparatus={apparatus} />
+      </section>
     </div>
   );
 }

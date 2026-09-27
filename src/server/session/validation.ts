@@ -8,10 +8,13 @@ export const sessionStepSchema = z.object({
 });
 
 // 单条读数记录校验
+// volume/mark 为可选：旧客户端与历史会话不带这两个字段，加成必填会让它们的上报全部 400。
 export const sessionMeasurementSchema = z.object({
   ph: z.number(),
   temperature: z.number(),
   at: z.string().min(1, "缺少时间戳"),
+  volume: z.number().nonnegative().optional(),
+  mark: z.string().min(1).optional(),
 });
 
 // POST /api/sessions 请求体：创建会话仅需实验标识

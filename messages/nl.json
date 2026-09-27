@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Naar hoofdinhoud"
+  },
+  "catalog": {
+    "title": "Experimentenbibliotheek",
+    "empty": "Geen experimenten gevonden.",
+    "searchPlaceholder": "Zoek op experimentnaam…",
+    "searchLabel": "Experimenten zoeken",
+    "filterCategory": "Filteren op categorie",
+    "allCategories": "Alle categorieën",
+    "filterDifficulty": "Filteren op moeilijkheidsgraad",
+    "allDifficulties": "Alle niveaus",
+    "objectives": "Doelstellingen",
+    "reagents": "Benodigde reagentia",
+    "apparatus": "Benodigde apparatuur",
+    "subtitle": "Kies een experiment om het virtuele laboratorium te starten.",
+    "estimatedMinutes": "Geschatte tijd: {minutes} min",
+    "startLab": "Experiment starten →"
+  },
+  "category": {
+    "ACID_BASE": "Zuur-basereacties",
+    "ORGANIC": "Organische chemie",
+    "THERMODYNAMICS": "Thermodynamica",
+    "REDOX": "Redoxreacties",
+    "PRECIPITATION": "Neerslagreacties",
+    "GAS": "Gasbereiding",
+    "ELECTROCHEM": "Elektrochemie",
+    "METAL": "Metaalreactiviteit",
+    "ANALYSIS": "Analyse en identificatie",
+    "COORDINATION": "Coördinatiekleur"
+  },
+  "chart": {
+    "temperature": "Temperatuur",
+    "ph": "pH",
+    "volume": "Volume",
+    "ariaLabel": "Grafiek van {label} over tijd, huidige waarde {value}",
+    "measureAria": "Lijndiagram van meetwaarden over tijd, {count} metingen, pH-bereik 0 tot 14, temperatuurbereik 0 tot 100 ℃",
+    "title": "Procesverloop",
+    "current": "Huidig",
+    "peak": "Piekwaarde",
+    "samples": "{count} meetpunten",
+    "channelTemp": "Temperatuur",
+    "channelPh": "pH",
+    "channelVolume": "Volume",
+    "empty": "Na de eerste handeling verschijnt hier de curve als functie van de tijd"
+  },
+  "dataTable": {
+    "title": "Gegevenstabel",
+    "emptyHint": "Klik op “Aflezen” om een meting vast te leggen",
+    "recorded": "{count} metingen in deze reeks",
+    "recordedNeedMore": "{count} metingen in deze reeks (parallelmeting vereist minimaal 2)",
+    "emptyBody": "Herhaal metingen bij kwantitatieve experimenten en neem het gemiddelde; elke klik op “Aflezen” voegt een rij toe.",
+    "colIndex": "Nr.",
+    "colTime": "Tijdstip / s",
+    "colTemperature": "Temperatuur / ℃",
+    "colPh": "pH",
+    "colVolume": "Volume / mL",
+    "rowMean": "Groepsgemiddelde",
+    "rowDeviation": "Relatieve afwijking",
+    "worstDeviation": "Maximale relatieve afwijking {value}%:",
+    "verdictGood": "Gegevens zijn consistent en geschikt voor berekening.",
+    "verdictFair": "Afwijking is aan de hoge kant — controleer of de blik bij het aflezen op schaallijnniveau was en of het systeem stabiel was.",
+    "verdictPoor": "Afwijking is te groot — stel de oorzaak vast en herhaal de parallelmeting; gebruik het gemiddelde niet zonder nader onderzoek."
+  },
+  "deck": {
+    "readings": "Instrumentaflezing op de werkbank",
+    "temperature": "Temperatuur",
+    "volume": "Volume",
+    "ph": "pH",
+    "operations": "Experimentele handelingen",
+    "needReagent": "Neem eerst een reagens",
+    "inOrder": "Volg de werkelijke volgorde van de stappen"
+  },
+  "device": {
+    "glassware": "Laboratoriumglaswerk",
+    "electrolysisCell": "Elektrolysecel",
+    "galvanicCell": "Galvanische cel",
+    "flameTest": "Vlamproefopstelling",
+    "gasCollection": "Gasopvang via waterverdringing",
+    "gasDelivery": "Gasafvoer- en absorptie-opstelling",
+    "conductivity": "Vergelijking geleidbaarheid oplossingen",
+    "strongBright": "Sterk · helder",
+    "weakDim": "Zwak · gedimd",
+    "nonNone": "Geen · onverlicht"
+  },
+  "difficulty": {
+    "EASY": "Basis",
+    "MEDIUM": "Gevorderd",
+    "HARD": "Uitdaging"
+  },
+  "electro": {
+    "conductivityDesc": "Vergelijk de geleidbaarheid van oplossingen bij gelijke concentratie (helderheid van de lamp weerspiegelt de ionenconcentratie).",
+    "conductivityActive": "Stroomtest actief: hoe helderder de lamp, hoe beter de geleidbaarheid",
+    "conductivityIdle": "Klik op “Stroomtest” om de geleidbaarheid van de oplossingen te vergelijken",
+    "conductivityOn": "💡 Stroomtest",
+    "powerOff": "Stroom uit",
+    "electrolyteInert": "Elektrolyt: {name} ({formula}) · inerte anode (koolstof)",
+    "electrolyteActive": "Elektrolyt: {name} ({formula}) · actieve anode (koper)",
+    "electrolysisActive": "Elektrolyse bezig…",
+    "electrolysisIdle": "Klik op “Stroom aan” om de elektrolyse te starten en de verschijnselen aan beide elektroden te observeren",
+    "copperFading": "Oplossing: blauwe kleur wordt geleidelijk lichter (koperionen worden verbruikt)",
+    "powerOn": "⚡ Stroom aan",
+    "brine": "Zoutwater",
+    "electrolyte": "Elektrolyt: {name}",
+    "cellActive": "Circuit gesloten, galvanometer geeft uitslag, galvanische cel ontlaadt…",
+    "cellIdle": "Klik op “Circuit sluiten” om de galvanometeruitslag en de verschijnselen aan beide elektroden te observeren",
+    "cellOn": "🔌 Circuit sluiten",
+    "cellOff": "Circuit verbroken",
+    "cathode": "Kathode (−)",
+    "anode": "Anode (＋)",
+    "negative": "Negatieve pool",
+    "positive": "Positieve pool"
+  },
+  "errors": {
+    "noActivity": "Er zijn nog geen handelingen geregistreerd voor dit experiment. Voer eerst een handeling uit op de proeftafel voordat u een rapport genereert.",
+    "reportFailed": "Rapport genereren mislukt",
+    "tutorUnavailable": "AI-tutorservice niet beschikbaar",
+    "unknown": "Onbekende fout"
+  },
+  "home": {
+    "labTitle": "Interactieve proeftafel",
+    "labDesc": "Sleep reagentia in het bekerglas — de reactie-engine berekent in realtime verkleuring, gasbellen, neerslag en temperatuurverandering. What you see is what you get.",
+    "tutorTitle": "AI-experimentbegeleider",
+    "tutorDesc": "Stel op elk moment vragen over theorie en procedure. Bij belangrijke reacties op het canvas geeft de begeleider proactief uitleg en veiligheidswaarschuwingen.",
+    "reportTitle": "Intelligent experimentrapport",
+    "reportDesc": "Vat alle meetcurven van het experiment samen en genereer automatisch conclusies, foutanalyse, verbeteringsadviezen en een kennisbeoordeling.",
+    "badge": "AI-aangedreven virtueel scheikunde­laboratorium",
+    "heroLine1": "Rechtstreeks in de browser",
+    "heroLine2": "echte scheikundige experimenten uitvoeren",
+    "heroDesc": "Sleep reagentia, observeer verkleuring en gasbellen, stel op elk moment vragen aan de AI-begeleider en ontvang automatisch een gestructureerd rapport na afloop. {count} geverifieerde experimenten — veilig en herhaalbaar.",
+    "ctaCatalog": "Experimentenbibliotheek →",
+    "ctaSessions": "Mijn sessies"
+  },
+  "lab": {
+    "mix": "Reactie mengen",
+    "reset": "Vat leegmaken",
+    "clear": "Wissen",
+    "complete": "Experiment afronden",
+    "completed": "Experiment voltooid",
+    "viewReport": "Experimentrapport bekijken →",
+    "removeItem": "Klik om te verwijderen",
+    "conditions": "Systeemcondities",
+    "temperature": "Systeemtemperatuur",
+    "reagentShelf": "Reagentschap",
+    "apparatusList": "Instrumenten",
+    "emptyContainer": "Selecteer een hoeveelheid in het reagentschap links en neem het op, of sleep een reagens hierheen",
+    "absorbent": "Absorptievloeistof",
+    "apparatus": "Instrument",
+    "addReagent": "{name} toevoegen",
+    "removeReagent": "{name} verwijderen",
+    "mixAction": "Mengen",
+    "backToDetail": "← Terug naar experimentdetails",
+    "backToCatalog": "← Terug naar experimentbibliotheek",
+    "labSuffix": "Werkbank",
+    "labHint": "Klik of sleep reagentia in de beker en gebruik “Mengreactie” om verschijnselen te observeren; of gebruik “Experimentuitleg” voor een automatische stapsgewijze demonstratie."
+  },
+  "lesson": {
+    "prev": "Vorige stap",
+    "pause": "Pauzeren",
+    "play": "Afspelen",
+    "next": "Volgende stap",
+    "voiceOn": "Gesproken uitleg inschakelen",
+    "voiceOff": "Gesproken uitleg uitschakelen",
+    "muted": "🔇 Gedempt",
+    "askTutor": "Uitleg bij stap “{title}”: {narration} Licht op basis van de verschijnselen en meetwaarden in de beker kort de chemische principes en vergelijkingen toe.",
+    "phase": {
+      "theory": "Principe",
+      "prep": "Voorbereiding",
+      "operate": "Uitvoering",
+      "observe": "Verschijnselen",
+      "conclude": "Conclusie"
+    },
+    "voiceLabel": "🔊 Gesproken uitleg",
+    "vesselBeaker": "Beker",
+    "vesselTube": "Reageerbuis",
+    "vesselFlask": "Erlenmeyer",
+    "observeGeneric": "Observeer het systeem nauwkeurig en let op kleur-, bel- of temperatuurveranderingen.",
+    "observeReacting": "De reactie is bezig — let op de pH- en temperatuurmetingen.",
+    "phenomenaList": "Er is te zien: {parts}.",
+    "partGas": "voortdurend ontsnapte gasbellen",
+    "partPrecipitate": "de oplossing wordt troebel en er vormt zich een neerslag",
+    "partColor": "de kleur van de oplossing verandert duidelijk",
+    "partExo": "tegelijk komt er warmte vrij en stijgt de temperatuur",
+    "partEndo": "tegelijk wordt er warmte geabsorbeerd en daalt de temperatuur",
+    "titlePrinciple": "Achtergrond",
+    "titleSummary": "Samenvatting",
+    "titleConnect": "Apparatuur aansluiten",
+    "titleConnectCircuit": "Schakeling aansluiten",
+    "titlePowerOn": "Voeding inschakelen",
+    "titleConnectOn": "Schakeling sluiten",
+    "titleConductTest": "Geleidingstest",
+    "titleElectrodes": "Verschijnselen aan de elektroden",
+    "titleConductCompare": "Geleidingsvermogen vergelijken",
+    "titleTake": "{reagent} afmeten",
+    "titleHeat": "Alcohollamp aansteken",
+    "titleMix": "Mengen en reageren",
+    "titleObserve": "Waarnemingen",
+    "summary": "Met dit experiment zul je {objectives}.",
+    "narrSetupElectrode": "Breng de elektroden aan in de elektrolyt en verbind ze met respectievelijk de positieve en negatieve pool van de gelijkstroombron.",
+    "narrPowerOn": "Schakel de gelijkstroombron in om de elektrolyse te starten en let op de veranderingen aan beide elektroden.",
+    "narrSetupCircuit": "Verbind de twee elektroden via een galvanometer met een draad en breng ze in de elektrolytoplossing.",
+    "narrConnectOn": "Sluit de schakeling en controleer of de wijzer van de galvanometer uitslaat.",
+    "narrSetupConduct": "Sluit oplossingen van gelijke concentratie aan op afzonderlijke elektrodeschakelingen met een gloeilamp.",
+    "narrConductTest": "Sluit de schakeling en vergelijk de helderheid van de gloeilamp in elke oplossing.",
+    "narrSetupGeneric": "Verbind de elektroden en voeding/meetinstrumenten volgens het schakelschema en breng de elektrolyt aan.",
+    "narrRigOn": "{verb}, let op de veranderingen aan de elektroden en de meters.",
+    "verbElectrolysis": "Schakel de gelijkstroombron in en start de elektrolyse",
+    "verbCircuit": "Sluit het circuit",
+    "narrTake": "Neem {reagent} en voeg het toe aan {vessel}.",
+    "narrHeat": "Steek de alcohollamp aan om {vessel} te verwarmen — deze reactie vereist verhitting.",
+    "narrMixHeated": "Meng de reagentia goed na verhitting; de reactie begint onmiddellijk.",
+    "narrMix": "Meng de reagentia in {vessel} goed; de reactie begint onmiddellijk.",
+    "electrodesFading": "; de blauwe kleur van de oplossing vervaagt geleidelijk",
+    "brine": "zoutwater",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Proefoverzicht",
+    "outlineHint": "Na het betreden van de werktafel kunt u op “Uitleg ▶” klikken voor een automatische stap-voor-stap demonstratie.",
+    "cardTitle": "Proefuitleg",
+    "askTutorButton": "Laat de tutor deze stap toelichten",
+    "sentenceJoin": " ",
+    "voiceFemale": "Vrouwenstem ♀",
+    "voiceMale": "Mannenstem ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Voor deze taal is geen spraak beschikbaar; de uitleg wordt automatisch via ondertitels doorgezet.",
+    "narrTake_beaker": "Neem {reagent} en voeg het toe aan de bekerglas.",
+    "narrTake_tube": "Neem {reagent} en voeg het toe aan het reageerbuis.",
+    "narrTake_flask": "Neem {reagent} en voeg het toe aan de erlenmeyer.",
+    "narrHeat_beaker": "Steek de alcohollamp aan om de bekerglas te verwarmen — deze reactie kan alleen plaatsvinden onder verhitte omstandigheden.",
+    "narrHeat_tube": "Steek de alcohollamp aan om het reageerbuis te verwarmen — deze reactie kan alleen plaatsvinden onder verhitte omstandigheden.",
+    "narrHeat_flask": "Steek de alcohollamp aan om de erlenmeyer te verwarmen — deze reactie kan alleen plaatsvinden onder verhitte omstandigheden.",
+    "narrMix_beaker": "Meng de reagentia in de bekerglas grondig, waarna de reactie onmiddellijk begint.",
+    "narrMix_tube": "Meng de reagentia in het reageerbuis grondig, waarna de reactie onmiddellijk begint.",
+    "narrMix_flask": "Meng de reagentia in de erlenmeyer grondig, waarna de reactie onmiddellijk begint."
+  },
+  "locale": {
+    "switchLabel": "Taal wisselen",
+    "searchPlaceholder": "Taal zoeken…",
+    "noMatch": "Geen overeenkomende taal",
+    "groupFull": "Primaire talen",
+    "groupBasic": "Overige talen",
+    "groupBasicHint": "Bevat volledige experimentinhoud en gesproken uitleg; vertaling is machinaal"
+  },
+  "nav": {
+    "catalog": "Experimentenbibliotheek",
+    "sessions": "Mijn sessies",
+    "home": "Startpagina"
+  },
+  "op": {
+    "stir": {
+      "label": "Roeren",
+      "effect": "Roer met een glazen staaf; het oplosmiddel lost sneller op en mengt gelijkmatiger",
+      "hint": "Roeren versnelt oplossen en warmteoverdracht, en egaliseer lokale concentratieverschillen zodat de meting de gehele oplossing vertegenwoordigt"
+    },
+    "shake": {
+      "label": "Schudden",
+      "effect": "Schud goed zodat de reagentia volledig mengen",
+      "hint": "Bij weinig vloeistof in een reageerbuis mengt u door te schudden (niet te roeren); houd de opening van de buis van anderen af"
+    },
+    "heat": {
+      "label": "Verwarmen",
+      "effect": "Steek de alcohollamp aan om te verwarmen; de temperatuur van het systeem stijgt",
+      "hint": "De meeste reacties verlopen sneller bij hogere temperatuur; endotherme reacties vereisen aanhoudende verwarming"
+    },
+    "cool": {
+      "label": "Afkoelen",
+      "effect": "Verwijder de warmtebron en laat het systeem afkoelen; de temperatuur daalt",
+      "hint": "Afkoelen verlaagt de oplosbaarheid en is een standaardstap bij kristallisatie en productverzameling"
+    },
+    "settle": {
+      "label": "Laten bezinken",
+      "effect": "Laat even staan zodat neerslag zinkt en vloeistoflagen duidelijker scheiden",
+      "hint": "Neerslag en fasescheiding kosten tijd; pas na bezinking kun je beoordelen of de bovenste vloeistof helder is"
+    },
+    "read": {
+      "label": "Aflezen",
+      "effect": "Noteer de huidige meting",
+      "hint": "Lees af op ooghoogte met de schaalverdeling; noteer elke meting in de datatabel om gemiddelde en fout te berekenen"
+    }
+  },
+  "quant": {
+    "verdictGood": "Goede gegevensconsistentie, geschikt voor berekeningen",
+    "verdictFair": "Afwijking te groot — controleer de afleeshoogte en de stabiliteit van het systeem",
+    "verdictPoor": "Afwijking te groot — onderzoek de oorzaak en herhaal de parallelle metingen",
+    "meanPh": "Gemiddelde pH",
+    "meanTemp": "Gemiddelde temperatuur",
+    "meanVolume": "Gemiddeld volume",
+    "group": "Groep {no}",
+    "readings": "{count} metingen",
+    "finalGroup": "Conclusie gebaseerd op deze groep",
+    "singleReading": "Slechts 1 meting — relatieve afwijking kan niet worden berekend (protocol vereist minimaal 2 parallelle metingen)",
+    "worstDeviation": "Maximale relatieve gemiddelde afwijking {value}%",
+    "groupNote": "Elke keer dat het systeem wordt bemonsterd, gemengd of verwarmd, start een nieuwe groep. Metingen uit verschillende groepen vormen geen parallelle bepalingen en worden daarom afzonderlijk verwerkt.",
+    "noReadings": "Er zijn in dit experiment geen meetrecords aangemaakt met de bewerking «Aflezen», waardoor gemiddelde en relatieve afwijking niet berekend kunnen worden. Bij een kwantitatief experiment dient u in dezelfde systeemtoestand minimaal 2 keer achtereen af te lezen."
+  },
+  "report": {
+    "conclusion": "Experimentele conclusie",
+    "errorAnalysis": "Foutanalyse",
+    "improvements": "Verbeterpunten",
+    "noImprovements": "Geen verbeterpunten.",
+    "knowledge": "Beoordeling kennisbeheersing",
+    "empty": "（geen inhoud）",
+    "measurements": "Meetwaarden",
+    "quantData": "Kwantitatieve gegevens",
+    "noMeasurements": "Er zijn geen meetwaarden geregistreerd tijdens dit experiment.",
+    "generating": "AI analyseert de experimentgegevens…",
+    "regenerate": "Rapport opnieuw genereren",
+    "generate": "Experimentrapport genereren",
+    "generateFailed": "Genereren mislukt ({status})",
+    "notGenerated": "Er is nog geen rapport gegenereerd. De AI geeft op basis van de uitgevoerde stappen en meetwaarden een conclusie, foutanalyse, verbeterpunten en een vaardigheidsbeoordeling.",
+    "noActivity": "Er zijn nog geen handelingen geregistreerd voor dit experiment; een rapport kan nog niet worden gegenereerd.",
+    "backToLab": "Terug naar de werkbank om zelf aan de slag te gaan →",
+    "title": "Experimentrapport",
+    "generatedAt": "Gegenereerd op {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Stroom inschakelen",
+      "off": "Stroom uitschakelen"
+    },
+    "cell": {
+      "on": "Circuit sluiten",
+      "off": "Circuit openen"
+    },
+    "flameTest": {
+      "on": "Alcohollamp aansteken",
+      "off": "Alcohollamp doven"
+    },
+    "waterBath": {
+      "on": "Waterbad starten",
+      "off": "Waterbad stoppen"
+    },
+    "distillation": {
+      "on": "Destillatie starten",
+      "off": "Destillatie stoppen"
+    },
+    "filtration": {
+      "on": "Filtratie starten",
+      "off": "Filtratie stoppen"
+    },
+    "calorimeter": {
+      "on": "Roeren en meten starten",
+      "off": "Roeren stoppen"
+    },
+    "gasCollect": {
+      "on": "Gasinzameling starten",
+      "off": "Inzameling stoppen"
+    },
+    "titration": {
+      "on": "Kraan openen en druppelen",
+      "off": "Kraan sluiten"
+    },
+    "syringe": {
+      "on": "Zuiger indrukken om druk op te bouwen",
+      "off": "Zuiger terugtrekken om druk te verlagen"
+    },
+    "phMeter": {
+      "on": "pH-meter inschakelen",
+      "off": "pH-meter uitschakelen"
+    },
+    "evaporation": {
+      "on": "Spirituslamp aansteken voor verdamping",
+      "off": "Spirituslamp doven"
+    },
+    "pressureDrop": {
+      "on": "Dop vastdraaien en schudden",
+      "off": "Dop losdraaien"
+    },
+    "heat": {
+      "on": "Spirituslamp aansteken voor verhitting",
+      "off": "Verhitting stoppen"
+    }
+  },
+  "sessions": {
+    "title": "Mijn sessies",
+    "subtitle": "Bekijk eerdere experimentrecords en open het bijbehorende rapport",
+    "unknownExperiment": "Onbekend experiment",
+    "completed": "Voltooid",
+    "inProgress": "Bezig",
+    "startedAt": "Gestart op {time}",
+    "viewReport": "Rapport bekijken"
+  },
+  "shelf": {
+    "title": "Reagensrek",
+    "taken": "{dose} {unit} afgenomen",
+    "takeSome": "Druppelen / passende hoeveelheid afnemen",
+    "take": "{unit} afnemen",
+    "specIndicator": "Indicator",
+    "specGas": "Gas",
+    "specBulk": "Passende hoeveelheid",
+    "specSolution": "Oplossing",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Zuivere vloeistof ρ={density} g/mL",
+    "specLiquid": "Vloeistof",
+    "specSolid": "Vaste stof, analysezuiver"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtueel Chemisch Laboratorium",
+    "description": "Voer scheikundeproeven uit in de browser: sleep reagentia, bekijk reacties, ontvang begeleiding van een AI-tutor en genereer automatisch labverslagen."
+  },
+  "titration": {
+    "stopcock": "Kraanstand",
+    "buretteReading": "Buretaflezing",
+    "phMeter": "pH-meter",
+    "unfilled": "Nog te vullen",
+    "strongBase": "Sterk basisch",
+    "weakBase": "Zwak basisch · omslaggebied",
+    "nearNeutral": "Bijna neutraal",
+    "acidExcess": "Zuur · overschot",
+    "endpointOk": "Eindpunt bereikt",
+    "overshoot": "Te veel gedruppeld",
+    "notYet": "Eindpunt nog niet bereikt (roze niet verdwenen)",
+    "justFaded": "Net ontkleurd",
+    "keyPoints": "Bedieningspunten",
+    "takeAnalyte": "Neem eerst de analyseoplossing →",
+    "dragStopcock": "← Sleep de kraan om te titreren",
+    "openness": "Stand {pct}% · houd ingedrukt en sleep links/rechts"
+  },
+  "tutor": {
+    "placeholder": "Stel uw vraag…",
+    "replying": "Bezig met antwoorden…",
+    "send": "Versturen",
+    "unknownError": "Onbekende fout",
+    "requestFailed": "Verzoek mislukt ({status})",
+    "askHeat": "Ik heb de reagentia gemengd maar geen reactie waargenomen. De hint geeft aan dat deze reactie verwarming vereist. Leg uit waarom deze reactie alleen onder verhitting kan plaatsvinden.",
+    "askObserved": "Ik heb zojuist reactie {equation}{phenomena} waargenomen. Kun je uitleggen wat er is gebeurd en wat het onderliggende principe is?",
+    "phPrecipitate": "neerslag gevormd",
+    "phGas": "gas ontwikkeld",
+    "phColor": "kleurverandering opgetreden",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI Lab-tutor",
+    "empty": "Stel me gerust een vraag, of ik geef een hint zodra je een reactie start op het canvas."
+  },
+  "workbench": {
+    "view2d": "2D-schema",
+    "view3d": "3D-werkbank",
+    "view3dRefined": "3D-werkbank ★",
+    "sceneHint": "Sleep om te draaien · Scroll om te zoomen"
+  }
+}

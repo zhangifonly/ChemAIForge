@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Pereiti į pagrindinį turinį"
+  },
+  "catalog": {
+    "title": "Eksperimentų biblioteka",
+    "empty": "Nėra eksperimentų, atitinkančių kriterijus.",
+    "searchPlaceholder": "Ieškoti eksperimento pavadinimo…",
+    "searchLabel": "Ieškoti eksperimento",
+    "filterCategory": "Filtruoti pagal kategoriją",
+    "allCategories": "Visos kategorijos",
+    "filterDifficulty": "Filtruoti pagal sudėtingumą",
+    "allDifficulties": "Visi sudėtingumai",
+    "objectives": "Eksperimento tikslai",
+    "reagents": "Reikalingi reagentai",
+    "apparatus": "Reikalinga įranga",
+    "subtitle": "Pasirinkite eksperimentą ir pradėkite darbą virtualiojoje laboratorijoje.",
+    "estimatedMinutes": "Apytiksliai {minutes} min.",
+    "startLab": "Pradėti eksperimentą →"
+  },
+  "category": {
+    "ACID_BASE": "Rūgščių ir bazių reakcijos",
+    "ORGANIC": "Organinė chemija",
+    "THERMODYNAMICS": "Termodinamika",
+    "REDOX": "Oksidacijos-redukcijos reakcijos",
+    "PRECIPITATION": "Nusodinimo reakcijos",
+    "GAS": "Dujų gamyba",
+    "ELECTROCHEM": "Elektrochemija",
+    "METAL": "Metalų aktyvumas",
+    "ANALYSIS": "Analizė ir identifikavimas",
+    "COORDINATION": "Kompleksiniai junginiai ir spalvų reakcijos"
+  },
+  "chart": {
+    "temperature": "Temperatūra",
+    "ph": "pH",
+    "volume": "Tūris",
+    "ariaLabel": "{label} kitimo laike kreivė, dabartinė reikšmė {value}",
+    "measureAria": "Matavimų rodmenų kitimo laike linijinis grafikas, iš viso {count} rodmenų, pH skalė 0–14, temperatūros skalė 0–100 ℃",
+    "title": "Proceso kreivė",
+    "current": "Dabartinė",
+    "peak": "Pikas",
+    "samples": "Campionai {count} tašk.",
+    "channelTemp": "Temperatūra",
+    "channelPh": "pH",
+    "channelVolume": "Tūris",
+    "empty": "Pradėjus darbą čia bus rodoma laiko kreivė"
+  },
+  "dataTable": {
+    "title": "Duomenų lentelė",
+    "emptyHint": "Spauskite „Nuskaityti“, kad įrašytumėte matavimą",
+    "recorded": "Šioje grupėje įrašyta {count} k.",
+    "recordedNeedMore": "Šioje grupėje įrašyta {count} k. (lygiagretūs matavimai – bent 2)",
+    "emptyBody": "Kiekybiniame eksperimente matavimus reikia kartoti ir skaičiuoti vidurkį; kiekvienas „Nuskaityti“ paspaudimas prideda eilutę.",
+    "colIndex": "Nr.",
+    "colTime": "Laikas / s",
+    "colTemperature": "Temperatūra / ℃",
+    "colPh": "pH",
+    "colVolume": "Tūris / mL",
+    "rowMean": "Grupės vidurkis",
+    "rowDeviation": "Santykinis nuokrypis",
+    "worstDeviation": "Didžiausias santykinis nuokrypis {value}%:",
+    "verdictGood": "Duomenų suderinamumas geras – tinka skaičiavimams.",
+    "verdictFair": "Nuokrypis per didelis – patikrinkite, ar akis buvo skalės lygyje ir ar sistema stabilizavosi.",
+    "verdictPoor": "Nuokrypis per didelis – išsiaiškinkite priežastį ir pakartokite lygiagrečius matavimus; neimkite tiesiog vidurkio."
+  },
+  "deck": {
+    "readings": "Stendo prietaisų parodymai",
+    "temperature": "Temperatūra",
+    "volume": "Tūris",
+    "ph": "pH",
+    "operations": "Laboratorinės operacijos",
+    "needReagent": "Pirmiausia paimkite reagentą",
+    "inOrder": "Atlikite veiksmus tikrąja procedūros tvarka"
+  },
+  "device": {
+    "glassware": "Laboratoriniai indai",
+    "electrolysisCell": "Elektrolizės celė",
+    "galvanicCell": "Galvaninis elementas",
+    "flameTest": "Liepsnos spalvos reakcijos įrenginys",
+    "gasCollection": "Dujų surinkimas vandens išstūmimo būdu",
+    "gasDelivery": "Dujų tiekimo ir absorbcijos įrenginys",
+    "conductivity": "Tirpalų laidumo palyginimas",
+    "strongBright": "Stiprus · ryškus",
+    "weakDim": "Silpnas · blausus",
+    "nonNone": "Nelaidus · nešviečia"
+  },
+  "difficulty": {
+    "EASY": "Pradedantysis",
+    "MEDIUM": "Pažengęs",
+    "HARD": "Iššūkis"
+  },
+  "electro": {
+    "conductivityDesc": "Lyginama vienodos koncentracijos tirpalų elektrinė laidumas (lemputės ryškumas atspindi jonų koncentraciją).",
+    "conductivityActive": "Tikrinama įjungus srovę: kuo ryškesnė lemputė, tuo didesnis laidumas",
+    "conductivityIdle": "Spustelėkite «Įjungti srovę», kad palygintumėte tirpalų laidumą",
+    "conductivityOn": "💡 Įjungti srovę",
+    "powerOff": "Išjungti srovę",
+    "electrolyteInert": "Elektrolitas: {name} ({formula}) · inertinis anodas (anglis)",
+    "electrolyteActive": "Elektrolitas: {name} ({formula}) · aktyvusis anodas (varis)",
+    "electrolysisActive": "Elektrolizė vyksta…",
+    "electrolysisIdle": "Spustelėkite «Įjungti srovę», kad pradėtumėte elektrolizę ir stebėtumėte reiškinius abiejuose elektroduose",
+    "copperFading": "Tirpalas: mėlyna spalva palaipsniui blėsta (vario jonai sunaudojami)",
+    "powerOn": "⚡ Įjungti srovę",
+    "brine": "Druskos tirpalas",
+    "electrolyte": "Elektrolitas: {name}",
+    "cellActive": "Grandinė uždaryta, galvanometras nukrypsta, elementas išsikrauna…",
+    "cellIdle": "Spustelėkite «Uždaryti grandinę», kad stebėtumėte galvanometro nukrypimą ir reiškinius abiejuose elektroduose",
+    "cellOn": "🔌 Uždaryti grandinę",
+    "cellOff": "Grandinė išjungta",
+    "cathode": "Katodas (−)",
+    "anode": "Anodas (＋)",
+    "negative": "Neigiamas polius",
+    "positive": "Teigiamas polius"
+  },
+  "errors": {
+    "noActivity": "Šiam eksperimentui dar nėra jokių veiksmų įrašų. Pirmiausia atlikite bandymą laboratorijoje, tada generuokite ataskaitą.",
+    "reportFailed": "Ataskaitos generavimas nepavyko",
+    "tutorUnavailable": "AI tutoriaus paslauga neveikia",
+    "unknown": "Nežinoma klaida"
+  },
+  "home": {
+    "labTitle": "Interaktyvi laboratorija",
+    "labDesc": "Įtempkite reagentus į stiklinę – reakcijų variklis realiuoju laiku nustato spalvos pokytį, burbuliukus, nuosėdas ir temperatūros kitimą.",
+    "tutorTitle": "AI eksperimentų tutorius",
+    "tutorDesc": "Klauskite apie principus ir procedūras bet kuriuo metu. Kai drobėje suaktyvinamos pagrindinės reakcijos, tutorius pats pateikia paaiškinimus ir saugos patarimus.",
+    "reportTitle": "Išmanioji eksperimento ataskaita",
+    "reportDesc": "Apibendrina viso eksperimento matavimų kreives ir automatiškai generuoja išvadas, paklaidos analizę, tobulinimo pasiūlymus ir žinių vertinimą.",
+    "badge": "Dirbtinio intelekto virtuali chemijos laboratorija",
+    "heroLine1": "Naršyklėje",
+    "heroLine2": "atlikite tikrus chemijos eksperimentus",
+    "heroDesc": "Vilkite reagentus, stebėkite spalvų pokyčius ir burbuliukus, bet kada klauskite AI tutoriaus – eksperimento pabaigoje automatiškai sugeneruojama struktūrizuota ataskaita. {count} patvirtintų eksperimentų, saugiai ir pakartojama.",
+    "ctaCatalog": "Naršyti eksperimentų katalogą →",
+    "ctaSessions": "Mano sesijos"
+  },
+  "lab": {
+    "mix": "Maišymo reakcija",
+    "reset": "Išvalyti indą",
+    "clear": "Išvalyti",
+    "complete": "Baigti eksperimentą",
+    "completed": "Eksperimentas baigtas",
+    "viewReport": "Peržiūrėti eksperimento ataskaitą →",
+    "removeItem": "Spustelėkite, kad pašalintumėte",
+    "conditions": "Sistemos sąlygos",
+    "temperature": "Sistemos temperatūra",
+    "reagentShelf": "Reagentų lentyna",
+    "apparatusList": "Įrangos sąrašas",
+    "emptyContainer": "Pasirinkite kiekį kairėje reagentų lentynoje ir paimkite, arba nuvilkite reagentą čia",
+    "absorbent": "Absorbcinė skystis",
+    "apparatus": "Įranga",
+    "addReagent": "Pridėti {name}",
+    "removeReagent": "Pašalinti {name}",
+    "mixAction": "Maišyti",
+    "backToDetail": "← Grįžti į eksperimento informaciją",
+    "backToCatalog": "← Grįžti į eksperimentų biblioteką",
+    "labSuffix": "Laboratorinis stalas",
+    "labHint": "Spustelėkite arba nuvilkite reagentą į stiklinę ir stebėkite „Maišymo reakciją“; taip pat galite naudoti „Eksperimento paaiškinimą“ automatinei žingsnis po žingsnio demonstracijai."
+  },
+  "lesson": {
+    "prev": "Ankstesnis žingsnis",
+    "pause": "Pauzė",
+    "play": "Paleisti",
+    "next": "Kitas žingsnis",
+    "voiceOn": "Įjungti balso paaiškinimą",
+    "voiceOff": "Išjungti balso paaiškinimą",
+    "muted": "🔇 Nutildyta",
+    "askTutor": "Paaiškinimas žingsniui „{title}“: {narration} Remdamiesi šiuo metu stiklinėje matomais reiškiniais ir rodmenimis, glaustai paaiškinkite cheminius principus ir lygtis.",
+    "phase": {
+      "theory": "Principas",
+      "prep": "Paruošimas",
+      "operate": "Operacija",
+      "observe": "Reiškiniai",
+      "conclude": "Išvada"
+    },
+    "voiceLabel": "🔊 Balso paaiškinimas",
+    "vesselBeaker": "Stiklinė",
+    "vesselTube": "Mėgintuvėlis",
+    "vesselFlask": "Kūginis kolbas",
+    "observeGeneric": "Atidžiai stebėkite sistemą – atkreipkite dėmesį į galimus spalvos, burbuliukų ar temperatūros pokyčius.",
+    "observeReacting": "Vyksta reakcija – stebėkite pH ir temperatūros rodmenų pokyčius.",
+    "phenomenaList": "Galima pastebėti {parts}.",
+    "partGas": "nuolat išsiskiriantys dujų burbuliukai",
+    "partPrecipitate": "tirpalas drumstėja ir susidaro nuosėdos",
+    "partColor": "tirpalo spalva ryškiai pasikeičia",
+    "partExo": "kartu išsiskiria šiluma ir temperatūra pakyla",
+    "partEndo": "kartu absorbuojama šiluma ir temperatūra krenta",
+    "titlePrinciple": "Eksperimento principas",
+    "titleSummary": "Eksperimento santrauka",
+    "titleConnect": "Prijungti įrenginį",
+    "titleConnectCircuit": "Sujungti grandinę",
+    "titlePowerOn": "Įjungti maitinimą",
+    "titleConnectOn": "Uždaryti grandinę",
+    "titleConductTest": "Laidumo patikrinimas",
+    "titleElectrodes": "Reiškiniai ant elektrodų",
+    "titleConductCompare": "Laidumo palyginimas",
+    "titleTake": "Paimti {reagent}",
+    "titleHeat": "Uždegti alkoholinę lempą",
+    "titleMix": "Sumaišyti reakcijai",
+    "titleObserve": "Stebėti reiškinius",
+    "summary": "Atlikę šį eksperimentą, jūs {objectives}.",
+    "narrSetupElectrode": "Įkiškite elektrodus į elektrolito tirpalą ir prijunkite juos atitinkamai prie nuolatinės srovės šaltinio teigiamojo ir neigiamojo poliaus.",
+    "narrPowerOn": "Įjunkite nuolatinės srovės šaltinį ir pradėkite elektrolizę – atidžiai stebėkite pokyčius abiejuose elektroduose.",
+    "narrSetupCircuit": "Laidais sujunkite abu elektrodus per galvanometrą ir įkiškite juos į elektrolito tirpalą.",
+    "narrConnectOn": "Uždarykite grandinę ir stebėkite, ar nukrypsta galvanometro rodyklė.",
+    "narrSetupConduct": "Įjunkite vienodo koncentracijos tirpalus atskirai į elektrodų grandines su lemputėmis.",
+    "narrConductTest": "Uždarykite grandinę ir palyginkite lempučių ryškumą skirtinguose tirpaluose.",
+    "narrSetupGeneric": "Pagal grandinės schemą sujunkite elektrodus su maitinimo šaltiniu ir matavimo prietaisais, tada įkiškite elektrolito.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Moters balsas ♀",
+    "voiceMale": "Vyro balsas ♂",
+    "narrRigOn": "{verb}, stebėkite pokyčius ties abiem elektrodais ir prietaisų rodmenis.",
+    "verbElectrolysis": "Prijunkite nuolatinės srovės šaltinį ir pradėkite elektrolizę",
+    "verbCircuit": "Uždarykite grandinę",
+    "narrTake": "Paimkite {reagent} ir įdėkite į {vessel}.",
+    "narrHeat": "Uždekite spiritinę lemputę ir kaitinkite {vessel} — ši reakcija vyksta tik kaitinimo sąlygomis.",
+    "narrMixHeated": "Įkaitinus reagentus gerai sumaišykite — reakcija prasideda nedelsiant.",
+    "narrMix": "Gerai sumaišykite reagentus {vessel} — reakcija prasideda nedelsiant.",
+    "electrodesFading": "; tirpalo mėlyna spalva palaipsniui blėsta",
+    "brine": "valgomosios druskos tirpalas",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Eksperimento paaiškinimo planas",
+    "outlineHint": "Patekę į laboratorijos stalą, spustelėkite „Eksperimento paaiškinimas ▶“, kad paleistumėte automatinę demonstraciją žingsnis po žingsnio.",
+    "cardTitle": "Eksperimento paaiškinimas",
+    "askTutorButton": "Paprašyti mokytojo paaiškinti šį žingsnį",
+    "sentenceEnd": ".",
+    "noVoice": "Šiai kalbai balso nėra — paaiškinimas bus rodomas tik subtitrais.",
+    "narrTake_beaker": "Paimkite {reagent} ir įpilkite į stiklinę.",
+    "narrTake_tube": "Paimkite {reagent} ir įpilkite į mėgintuvėlį.",
+    "narrTake_flask": "Paimkite {reagent} ir įpilkite į kūginę kolbą.",
+    "narrHeat_beaker": "Uždekite alkoholinę lempą ir kaitinkite stiklinę — ši reakcija gali vykti tik esant aukštai temperatūrai.",
+    "narrHeat_tube": "Uždekite alkoholinę lempą ir kaitinkite mėgintuvėlį — ši reakcija gali vykti tik esant aukštai temperatūrai.",
+    "narrHeat_flask": "Uždekite alkoholinę lempą ir kaitinkite kūginę kolbą — ši reakcija gali vykti tik esant aukštai temperatūrai.",
+    "narrMix_beaker": "Gerai sumaišykite reagentus stiklinėje — reakcija prasideda nedelsiant.",
+    "narrMix_tube": "Gerai sumaišykite reagentus mėgintuvėlyje — reakcija prasideda nedelsiant.",
+    "narrMix_flask": "Gerai sumaišykite reagentus kūginėje kolboje — reakcija prasideda nedelsiant."
+  },
+  "locale": {
+    "switchLabel": "Perjungti sąsajos kalbą",
+    "searchPlaceholder": "Ieškoti kalbos…",
+    "noMatch": "Atitinkančių kalbų nerasta",
+    "groupFull": "Pagrindinės kalbos",
+    "groupBasic": "Kitos kalbos",
+    "groupBasicHint": "Su pilnu eksperimento turiniu ir balso komentarais; vertimas atliktas mašininiu būdu"
+  },
+  "nav": {
+    "catalog": "Eksperimentų biblioteka",
+    "sessions": "Mano sesijos",
+    "home": "Pagrindinis"
+  },
+  "op": {
+    "stir": {
+      "label": "Maišyti",
+      "effect": "Maišykite stikline lazdele — tirpstamoji medžiaga ištirpsta greičiau ir mišinys tampa vienodesnis.",
+      "hint": "Maišymas pagreitina tirpimą ir šilumos perdavimą, taip pat išlygina vietinę koncentraciją – tik tada rodmuo atspindi visą sistemą"
+    },
+    "shake": {
+      "label": "Kratinėjimas",
+      "effect": "Kratinėjimas sumaišo reagentus, kad jie gerai susimaišytų",
+      "hint": "Mėgintuvėlyje skysčio mažai – maišoma kratinėjimu (ne maišykle); laikykite žiotimis nuo žmonių"
+    },
+    "heat": {
+      "label": "Kaitinimas",
+      "effect": "Uždegama spiritinė lemputė, sistemos temperatūra kyla",
+      "hint": "Dauguma reakcijų pagreitėja kaitinant; endoterminėms reakcijoms reikalingas nuolatinis kaitinimas"
+    },
+    "cool": {
+      "label": "Aušinimas",
+      "effect": "Šilumos šaltinis pašalinamas, temperatūra natūraliai krinta",
+      "hint": "Aušinimas mažina tirpumą – tai įprastas kristalizacijos ir produkto surinkimo žingsnis"
+    },
+    "settle": {
+      "label": "Nusistovėjimas",
+      "effect": "Trumpas nusistovėjimas leidžia nuosėdoms nusėsti ir sluoksniams aiškiau atsiskirti",
+      "hint": "Nuosėdoms nusėsti ir sluoksniams susidaryti reikia laiko; tik po nusistovėjimo galima vertinti, ar viršutinis sluoksnis skaidrus"
+    },
+    "read": {
+      "label": "Rodmens skaitymas",
+      "effect": "Užfiksuojamas dabartinis rodmuo",
+      "hint": "Skaitykite rodmenį akimis lygiu su skalės brūkšniu; įrašykite kiekvieną rodmenį į duomenų lentelę – tik tada galima skaičiuoti vidurkį ir paklaidą"
+    }
+  },
+  "quant": {
+    "verdictGood": "Duomenų suderinamumas geras, tinka skaičiavimams",
+    "verdictFair": "Nuokrypis per didelis – patikrinkite rodmenų skaitymo kampą ir sistemos stabilumą",
+    "verdictPoor": "Nuokrypis per didelis – išsiaiškinkite priežastį ir pakartokite lygiagretinius matavimus",
+    "meanPh": "Vidutinis pH",
+    "meanTemp": "Vidutinė temperatūra",
+    "meanVolume": "Vidutinis tūris",
+    "group": "{no} grupė",
+    "readings": "{count} rodmenys",
+    "finalGroup": "Išvada grindžiama šia grupe",
+    "singleReading": "Tik 1 matavimas – santykinio nuokrypio apskaičiuoti negalima (pagal normas reikia bent 2 lygiagrečių matavimų)",
+    "worstDeviation": "Didžiausias santykinis vidutinis nuokrypis {value}%",
+    "groupNote": "Kiekvieną kartą paėmus, sumaišius ar pakaitinus sistemą pradedama nauja grupė; skirtingų grupių rodmenys nelaikomi lygiagrečiais matavimais, todėl statistika skaičiuojama atskirai.",
+    "noReadings": "Šio eksperimento metu nebuvo naudota operacija „rodmens skaitymas“, todėl matavimų įrašų nėra – vidurkio ir santykinio nuokrypio apskaičiuoti negalima. Kiekybiniame eksperimente toje pačioje sistemos būsenoje reikia pakartoti rodmens skaitymą bent 2 kartus."
+  },
+  "report": {
+    "conclusion": "Eksperimento išvada",
+    "errorAnalysis": "Paklaidų analizė",
+    "improvements": "Patobulinimo pasiūlymai",
+    "noImprovements": "Patobulinimo pasiūlymų nėra.",
+    "knowledge": "Žinių įsisavinimo vertinimas",
+    "empty": "(turinio nėra)",
+    "measurements": "Matavimų rodmenys",
+    "quantData": "Kiekybiniai duomenys",
+    "noMeasurements": "Šio eksperimento metu jokių rodmenų neužregistruota.",
+    "generating": "AI analizuoja eksperimento duomenis…",
+    "regenerate": "Generuoti ataskaitą iš naujo",
+    "generate": "Generuoti eksperimento ataskaitą",
+    "generateFailed": "Generavimas nepavyko ({status})",
+    "notGenerated": "Ataskaita dar nesugeneruota. AI, remdamasis šio eksperimento veiksmų seka ir matavimų rodmenimis, pateiks išvadas, paklaidų analizę, patobulinimo pasiūlymus ir įsisavinimo vertinimą.",
+    "noActivity": "Šiame eksperimente neužfiksuota jokių veiksmų – ataskaitos sugeneruoti kol kas negalima.",
+    "backToLab": "Grįžti į laboratorijos stalą ir atlikti eksperimentą →",
+    "title": "Eksperimento ataskaita",
+    "generatedAt": "Sugeneruota: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Įjungti maitinimą",
+      "off": "Išjungti maitinimą"
+    },
+    "cell": {
+      "on": "Uždaryti grandinę",
+      "off": "Atidaryti grandinę"
+    },
+    "flameTest": {
+      "on": "Uždegti spiritinę lemputę",
+      "off": "Užgesinti spiritinę lemputę"
+    },
+    "waterBath": {
+      "on": "Pradėti kaitinti vandens vonioje",
+      "off": "Sustabdyti kaitinimą vandens vonioje"
+    },
+    "distillation": {
+      "on": "Pradėti distiliaciją",
+      "off": "Sustabdyti distiliaciją"
+    },
+    "filtration": {
+      "on": "Pradėti filtravimą",
+      "off": "Sustabdyti filtravimą"
+    },
+    "calorimeter": {
+      "on": "Pradėti maišymą ir temperatūros matavimą",
+      "off": "Sustabdyti maišymą"
+    },
+    "gasCollect": {
+      "on": "Pradėti rinkti dujas",
+      "off": "Sustabdyti rinkimą"
+    },
+    "titration": {
+      "on": "Atidaryti čiaupą titruoti",
+      "off": "Uždaryti čiaupą"
+    },
+    "syringe": {
+      "on": "Spausti stūmoklį slėgiui didinti",
+      "off": "Traukti stūmoklį slėgiui mažinti"
+    },
+    "phMeter": {
+      "on": "Įjungti pH matuoklį",
+      "off": "Išjungti pH matuoklį"
+    },
+    "evaporation": {
+      "on": "Uždegti spiritinę lemputę garinimui",
+      "off": "Užgesinti spiritinę lemputę"
+    },
+    "pressureDrop": {
+      "on": "Užsukti dangtelį ir kratyti",
+      "off": "Atsukti dangtelį"
+    },
+    "heat": {
+      "on": "Uždegti spiritinę lemputę kaitinimui",
+      "off": "Sustabdyti kaitinimą"
+    }
+  },
+  "sessions": {
+    "title": "Mano sesijos",
+    "subtitle": "Peržiūrėti eksperimentų istoriją ir atidaryti ataskaitas",
+    "unknownExperiment": "Nežinomas eksperimentas",
+    "completed": "Baigta",
+    "inProgress": "Vykdoma",
+    "startedAt": "Pradėta {time}",
+    "viewReport": "Žiūrėti ataskaitą"
+  },
+  "shelf": {
+    "title": "Reagentų lentyna",
+    "taken": "Paimta {dose} {unit}",
+    "takeSome": "Lašinti / paimti reikiamą kiekį",
+    "take": "Paimti {unit}",
+    "specIndicator": "Indikatorius",
+    "specGas": "Dujos",
+    "specBulk": "Paimti reikiamą kiekį",
+    "specSolution": "Tirpalas",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Grynasis skystis ρ={density} g/mL",
+    "specLiquid": "Skystis",
+    "specSolid": "Kieta medžiaga, analitinis grynumas"
+  },
+  "site": {
+    "title": "ChemAIForge · AI virtuali chemijos laboratorija",
+    "description": "Atlikite chemijos eksperimentus naršyklėje: vilkite reagentus, stebėkite reakcijas, gaukite AI tutoriaus pagalbą ir automatiškai generuokite eksperimentų ataskaitas."
+  },
+  "titration": {
+    "stopcock": "Čiaupas",
+    "buretteReading": "Biureto rodmuo",
+    "phMeter": "pH matuoklis",
+    "unfilled": "Nepripildyta",
+    "strongBase": "Stipriai šarminis",
+    "weakBase": "Silpnai šarminis · spalvos kitimo zona",
+    "nearNeutral": "Artimas neutraliam",
+    "acidExcess": "Rūgštinis · perteklius",
+    "endpointOk": "Ekvivalentiškumo taškas pasiektas",
+    "overshoot": "Pertitruota",
+    "notYet": "Ekvivalentiškumo taškas nepasiektas (rožinė nesišviesinusi)",
+    "justFaded": "Spalva ką tik išbluko",
+    "keyPoints": "Darbo reikalavimai",
+    "takeAnalyte": "Pirmiausia paimkite tiriamąjį tirpalą →",
+    "dragStopcock": "← Vilkite čiaupą, kad pradėtumėte titravimą",
+    "openness": "Atidarymas {pct}% · laikykite ir vilkite kairėn/dešinėn"
+  },
+  "tutor": {
+    "placeholder": "Įveskite savo klausimą…",
+    "replying": "Atsakoma…",
+    "send": "Siųsti",
+    "unknownError": "Nežinoma klaida",
+    "requestFailed": "Užklausa nepavyko ({status})",
+    "askHeat": "Sumaišiau reagentus, tačiau nepastebėjau jokių pokyčių. Užuomina teigia, kad ši reakcija reikalauja kaitinimo. Paaiškinkite, kodėl ši reakcija gali vykti tik kaitinant.",
+    "askObserved": "Ką tik stebėjau reakciją {equation}{phenomena}. Prašau paaiškinti, kas įvyko ir koks yra jos mechanizmas.",
+    "phPrecipitate": "Susidaro nuosėdos",
+    "phGas": "išsiskiria dujos",
+    "phColor": "keičiasi spalva",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "AI laboratorijos kuratorius",
+    "empty": "Klauskite bet kada arba sukelkite reakciją drobėje — aktyviai pateiksiu užuominų."
+  },
+  "workbench": {
+    "view2d": "2D schema",
+    "view3d": "3D laboratorija",
+    "view3dRefined": "3D laboratorija ★",
+    "sceneHint": "Vilkite norėdami pasukti · slinkite norėdami priartinti"
+  }
+}

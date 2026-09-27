@@ -39,7 +39,7 @@ export function ControlPanel({
               <span className="rounded-lg bg-brand-500/10 px-2.5 py-0.5 text-sm font-semibold tabular-nums text-brand-600 dark:text-brand-300">
                 {p.value.toFixed(decimals)}
                 {p.unit ? (
-                  <span className="ml-0.5 text-brand-500/70">{p.unit}</span>
+                  <span className="ms-0.5 text-brand-500/70">{p.unit}</span>
                 ) : null}
               </span>
             </div>
@@ -69,7 +69,7 @@ export function ControlPanel({
               />
             </div>
 
-            <div className="flex justify-between text-xs text-foreground/35">
+            <div className="flex justify-between text-xs text-foreground/65">
               <span>
                 {p.min}
                 {p.unit}

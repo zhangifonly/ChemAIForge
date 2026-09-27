@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Nakaraang Hakbang",
+    "pause": "I-pause",
+    "play": "I-play",
+    "next": "Susunod na Hakbang",
+    "voiceOn": "I-on ang Boses na Paliwanag",
+    "voiceOff": "I-off ang Boses na Paliwanag",
+    "muted": "🔇 Naka-mute",
+    "askTutor": "Hakbang na “”{title}“”: {narration} Batay sa kasalukuyang phenomena at pagbabasa sa baso, ipaliwanag nang maigi ang kemikal na prinsipyo at equation.",
+    "phase": {
+      "theory": "Prinsipyo",
+      "prep": "Paghahanda",
+      "operate": "Operasyon",
+      "observe": "Phenomena",
+      "conclude": "Konklusyon"
+    },
+    "voiceLabel": "🔊 Boses na Paliwanag",
+    "vesselBeaker": "Baso",
+    "vesselTube": "Test Tube",
+    "vesselFlask": "Conical Flask",
+    "observeGeneric": "Maingat na obserbahan ang sistema; bantayan kung may pagbabago sa kulay, bula, o temperatura.",
+    "observeReacting": "Nagaganap ang reaksyon; obserbahan ang mga pagbabago sa pH at temperatura.",
+    "phenomenaList": "Makikita ang {parts}.",
+    "partGas": "patuloy na lumalabas na mga bula ng gas",
+    "partPrecipitate": "nagiging malabo ang solusyon at nabubuo ang precipitate",
+    "partColor": "kapansin-pansing pagbabago ng kulay ng solusyon",
+    "partExo": "sabay na naglalabas ng init at tumataaas ang temperatura",
+    "partEndo": "sabay na sumasipsip ng init at bumababa ang temperatura",
+    "titlePrinciple": "Prinsipyo ng Eksperimento",
+    "titleSummary": "Buod ng Eksperimento",
+    "titleConnect": "Ikonekta ang Kagamitan",
+    "titleConnectCircuit": "Ikonekta ang Sirkuito",
+    "titlePowerOn": "I-on ang Kuryente",
+    "titleConnectOn": "Isara ang Sirkuito",
+    "titleConductTest": "Subukan ang Konduksyon",
+    "titleElectrodes": "Phenomena sa Dalawang Elektrodo",
+    "titleConductCompare": "Paghahambing ng Konduksyon",
+    "titleTake": "Kunin ang {reagent}",
+    "titleHeat": "Sindihan ang Alcohol Lamp",
+    "titleMix": "Pagsaluhin ang mga Reaktant",
+    "titleObserve": "Obserbahan ang Phenomena",
+    "summary": "Sa pamamagitan ng eksperimentong ito, ikaw ay {objectives}.",
+    "narrSetupElectrode": "Ipasok ang mga elektrodo sa elektrolito at ikonekta ang bawat isa sa positibo at negatibong terminal ng DC power supply.",
+    "narrPowerOn": "I-on ang DC power supply upang simulan ang electrolysis; obserbahan ang mga pagbabago sa dalawang elektrodo.",
+    "narrSetupCircuit": "Ikonekta ang dalawang elektrodo sa pamamagitan ng galvanometer gamit ang mga wire, at isawsaw sa solusyong elektrolito.",
+    "narrConnectOn": "Isara ang sirkuito at obserbahan kung nag-deflect ang pointer ng galvanometer.",
+    "narrSetupConduct": "Ikonekta ang mga solusyon ng parehong konsentrasyon nang isa-isa sa electrode circuit na may bombilya.",
+    "narrConductTest": "Isara ang sirkuito at ihambing ang liwanag ng bombilya sa bawat solusyon.",
+    "narrSetupGeneric": "Ikonekta ang mga elektrodo at power supply/measuring instruments ayon sa circuit diagram, at isawsaw sa elektrolito.",
+    "narrRigOn": "{verb}，obserbahan ang pagbabago sa dalawang elektrod at sa mga sukatan.",
+    "verbElectrolysis": "I-switch on ang DC power supply upang simulan ang electrolysis",
+    "verbCircuit": "Isara ang circuit",
+    "narrTake": "Kunin ang {reagent} at ilagay sa {vessel}.",
+    "narrHeat": "Sindihan ang alcohol lamp upang initin ang {vessel} — ang reaksyong ito ay nangyayari lamang sa ilalim ng init.",
+    "narrMixHeated": "Pagkatapos mainit, ihalo nang mabuti ang mga reagent; agad na magsisimula ang reaksyon.",
+    "narrMix": "Ihalo nang mabuti ang mga reagent sa {vessel}; agad na magsisimula ang reaksyon.",
+    "electrodesFading": "; unti-unting pumupulaw ang asul na kulay ng solusyon",
+    "brine": "tubig-alat",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Balangkas ng Paliwanag sa Eksperimento",
+    "outlineHint": "Pagpasok sa lab bench, pindutin ang “Paliwanag sa Eksperimento ▶” para sa awtomatikong hakbang-hakbang na demonstrasyon.",
+    "cardTitle": "Paliwanag sa Eksperimento",
+    "askTutorButton": "Ipaliliwanag ng tutor ang hakbang na ito",
+    "sentenceEnd": ".",
+    "voiceFemale": "Babaeng Boses ♀",
+    "voiceMale": "Lalaking Boses ♂",
+    "noVoice": "Walang available na boses para sa wikang ito; ang paliwanag ay awtomatikong magpapatuloy sa pamamagitan ng mga subtitle.",
+    "narrTake_beaker": "Kunin ang {reagent} at ilagay sa beaker.",
+    "narrTake_tube": "Kunin ang {reagent} at ilagay sa test tube.",
+    "narrTake_flask": "Kunin ang {reagent} at ilagay sa Erlenmeyer flask.",
+    "narrHeat_beaker": "Sindihan ang alcohol lamp upang painitan ang beaker — ang reaksyong ito ay kailangang mangyari sa ilalim ng init.",
+    "narrHeat_tube": "Sindihan ang alcohol lamp upang painitan ang test tube — ang reaksyong ito ay kailangang mangyari sa ilalim ng init.",
+    "narrHeat_flask": "Sindihan ang alcohol lamp upang painitan ang Erlenmeyer flask — ang reaksyong ito ay kailangang mangyari sa ilalim ng init.",
+    "narrMix_beaker": "Haluing mabuti ang mga reagent sa loob ng beaker, at magsisimula na ang reaksyon.",
+    "narrMix_tube": "Haluing mabuti ang mga reagent sa loob ng test tube, at magsisimula na ang reaksyon.",
+    "narrMix_flask": "Haluing mabuti ang mga reagent sa loob ng Erlenmeyer flask, at magsisimula na ang reaksyon."
+  },
+  "a11y": {
+    "skipToMain": "Lumaktaw sa pangunahing nilalaman"
+  },
+  "catalog": {
+    "title": "Aklatan ng Eksperimento",
+    "empty": "Walang eksperimentong tumutugma sa pamantayan.",
+    "searchPlaceholder": "Maghanap ng pangalan ng eksperimento…",
+    "searchLabel": "Maghanap ng eksperimento",
+    "filterCategory": "Salain ayon sa kategorya",
+    "allCategories": "Lahat ng kategorya",
+    "filterDifficulty": "Salain ayon sa kahirapan",
+    "allDifficulties": "Lahat ng antas ng kahirapan",
+    "objectives": "Layunin ng eksperimento",
+    "reagents": "Mga kinakailangang reagent",
+    "apparatus": "Mga kinakailangang kagamitan",
+    "subtitle": "Pumili ng eksperimento upang simulan ang virtual na laboratoryo.",
+    "estimatedMinutes": "Tinatayang {minutes} minuto",
+    "startLab": "Simulan ang eksperimento →"
+  },
+  "category": {
+    "ACID_BASE": "Reaksyong Asido-Base",
+    "ORGANIC": "Organikong Kimika",
+    "THERMODYNAMICS": "Thermodynamics",
+    "REDOX": "Oksidasyon-Reduksyon",
+    "PRECIPITATION": "Precipitation at Metathesis",
+    "GAS": "Paghahanda ng Gas",
+    "ELECTROCHEM": "Electrochemistry",
+    "METAL": "Aktibidad ng Metal",
+    "ANALYSIS": "Pagsusuri at Pagkilala",
+    "COORDINATION": "Koordinasyon at Pagkulay"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Dami",
+    "ariaLabel": "Kurba ng {label} sa paglipas ng panahon, kasalukuyang {value}",
+    "measureAria": "Grap ng mga pagbabasa ng sukat sa paglipas ng panahon, {count} pagbabasa, saklaw ng pH 0 hanggang 14, saklaw ng temperatura 0 hanggang 100 ℃",
+    "title": "Kurba ng Proseso",
+    "current": "Kasalukuyan",
+    "peak": "Tuktok",
+    "samples": "{count} puntos ng sampol",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Volum",
+    "empty": "Ipapakita ang kurba sa paglipas ng oras pagkatapos magsimula ng operasyon"
+  },
+  "dataTable": {
+    "title": "Talaan ng Data",
+    "emptyHint": "I-click ang “Basahin” upang itala ang isang sukat",
+    "recorded": "{count} beses nang naitala sa grupong ito",
+    "recordedNeedMore": "{count} beses nang naitala sa grupong ito (kailangan ng hindi bababa sa 2 parallel na pagsukat)",
+    "emptyBody": "Ulitin ang pagsukat para sa quantitative na eksperimento at kumuha ng average; bawat pag-click sa “Basahin” ay magdadagdag ng isang hilera dito.",
+    "colIndex": "Blg.",
+    "colTime": "Oras / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Volum / mL",
+    "rowMean": "Average ng Grupo",
+    "rowDeviation": "Relatibong Debyasyon",
+    "worstDeviation": "Pinakamataas na relatibong debyasyon {value}%:",
+    "verdictGood": "Magandang konsistensya ng data; angkop para sa kalkulasyon.",
+    "verdictFair": "Malaki ang debyasyon — suriin kung nakahanay ang tingin sa marka ng sukatan at kung stable na ang sistema.",
+    "verdictPoor": "Labis na malaki ang debyasyon — tukuyin ang sanhi at ulitin ang parallel na pagsukat; huwag direktang kumuha ng average."
+  },
+  "deck": {
+    "readings": "Mga Pagbabasa ng Instrumento sa Lab",
+    "temperature": "Temperatura",
+    "volume": "Volum",
+    "ph": "pH",
+    "operations": "Mga Operasyon sa Eksperimento",
+    "needReagent": "Kumuha muna ng reagent",
+    "inOrder": "Sundin ang tamang pagkakasunod-sunod ng mga hakbang"
+  },
+  "device": {
+    "glassware": "Mga kagamitang salamin",
+    "electrolysisCell": "Elektrolysis cell",
+    "galvanicCell": "Galvanic cell",
+    "flameTest": "Aparato para sa flame test",
+    "gasCollection": "Aparato para sa pagkolekta ng gas sa tubig",
+    "gasDelivery": "Aparato para sa paghahatid at pagsipsip ng gas",
+    "conductivity": "Paghahambing ng conductivity ng solusyon",
+    "strongBright": "Malakas · Maliwanag",
+    "weakDim": "Mahina · Malabo",
+    "nonNone": "Wala · Hindi nagliwanag"
+  },
+  "difficulty": {
+    "EASY": "Panimula",
+    "MEDIUM": "Intermediate",
+    "HARD": "Hamon"
+  },
+  "electro": {
+    "conductivityDesc": "Ikumpara ang conductivity ng mga solusyon sa parehong konsentrasyon (ang liwanag ng bombilya ay sumasalamin sa konsentrasyon ng ion).",
+    "conductivityActive": "Nagsusuri ng conductivity: mas maliwanag ang bombilya, mas malakas ang conductivity",
+    "conductivityIdle": "I-click ang “Suriin ang Conductivity” upang ikumpara ang conductivity ng bawat solusyon",
+    "conductivityOn": "💡 Suriin ang Conductivity",
+    "powerOff": "Patayin ang kuryente",
+    "electrolyteInert": "Electrolyte: {name} ({formula}) · Inert anode (carbon)",
+    "electrolyteActive": "Electrolyte: {name} ({formula}) · Active anode (tanso)",
+    "electrolysisActive": "Nagaganap ang electrolysis…",
+    "electrolysisIdle": "I-click ang “I-on ang Kuryente” upang simulan ang electrolysis at obserbahan ang mga reaksyon sa dalawang electrodo",
+    "copperFading": "Solusyon: unti-unting kumukupas ang asul (naubos ang mga ion ng tanso)",
+    "powerOn": "⚡ I-on ang Kuryente",
+    "brine": "Tubig-alat",
+    "electrolyte": "Electrolyte: {name}",
+    "cellActive": "Nakasabit ang circuit, gumagalaw ang galvanometer, nagdi-discharge ang galvanic cell…",
+    "cellIdle": "I-click ang “Ikonekta ang Circuit” upang obserbahan ang paggalaw ng galvanometer at mga reaksyon sa dalawang electrodo",
+    "cellOn": "🔌 Ikonekta ang Circuit",
+    "cellOff": "Idiskonekta ang Sirkito",
+    "cathode": "Katodo (−)",
+    "anode": "Anodo (＋)",
+    "negative": "Negatibong Polo",
+    "positive": "Positibong Polo"
+  },
+  "errors": {
+    "noActivity": "Wala pang naitalagang operasyon sa eksperimentong ito. Magsagawa muna ng hakbang sa lab bago bumuo ng ulat.",
+    "reportFailed": "Nabigo ang pagbuo ng ulat",
+    "tutorUnavailable": "Hindi available ang serbisyo ng AI Tutor",
+    "unknown": "Hindi kilalang error"
+  },
+  "home": {
+    "labTitle": "Interactive na Lab Table",
+    "labDesc": "I-drag ang mga reagent papunta sa beaker; tinutukoy ng reaction engine ang pagbabago ng kulay, bula, pag-upo, at temperatura nang real time — kung ano ang makikita, iyon ang mangyayari.",
+    "tutorTitle": "AI Lab Tutor",
+    "tutorDesc": "Magtanong tungkol sa prinsipyo at pamamaraan anumang oras. Kapag na-trigger ang mahahalagang reaksyon sa canvas, bibigyan ka agad ng tutor ng paliwanag at kaligtasang babala.",
+    "reportTitle": "Matalinong Lab Report",
+    "reportDesc": "Pinagsama-sama ang mga reading curve ng buong eksperimento; awtomatikong gumagawa ng konklusyon, pagsusuri ng error, mungkahi sa pagpapabuti, at pagtatasa ng kaalaman.",
+    "badge": "Virtual Chemistry Lab na Pinapagana ng AI",
+    "heroLine1": "Sa loob ng browser,",
+    "heroLine2": "Magsagawa ng Tunay na Chemistry Experiment",
+    "heroDesc": "Mag-drag ng mga reagent, obserbahan ang pagbabago ng kulay at bula, magtanong sa AI Tutor anumang oras — awtomatikong gumagawa ng structured na ulat pagkatapos ng eksperimento. {count} na na-verify na eksperimento, ligtas at paulit-ulit.",
+    "ctaCatalog": "Tingnan ang Experiment Library →",
+    "ctaSessions": "Aking mga Session"
+  },
+  "lab": {
+    "mix": "Paghaluin ang mga Reagent",
+    "reset": "Linisin ang Lalagyan",
+    "clear": "Linisin",
+    "complete": "Tapusin ang Eksperimento",
+    "completed": "Natapos na ang Eksperimento",
+    "viewReport": "Tingnan ang Lab Report →",
+    "removeItem": "I-click upang alisin",
+    "conditions": "Mga Kondisyon ng Sistema",
+    "temperature": "Temperatura ng Sistema",
+    "reagentShelf": "Istante ng Reagent",
+    "apparatusList": "Listahan ng Kagamitan",
+    "emptyContainer": "Pumili ng dami sa istante ng reagent sa kaliwa, o i-drag ang reagent dito",
+    "absorbent": "Absorbent na Likido",
+    "apparatus": "Kagamitan",
+    "addReagent": "Dagdagan ng {name}",
+    "removeReagent": "Alisin ang {name}",
+    "mixAction": "Haluin",
+    "backToDetail": "← Bumalik sa Detalye ng Eksperimento",
+    "backToCatalog": "← Bumalik sa Katalogo ng Eksperimento",
+    "labSuffix": "Bench ng Lab",
+    "labHint": "I-click o i-drag ang reagent sa baso, “Paghalo-Reaksyon” para mapansin ang phenomena; o gamitin ang “Paliwanag ng Eksperimento” para sa awtomatikong hakbang-hakbang na demo."
+  },
+  "locale": {
+    "switchLabel": "Palitan ang wika ng interface",
+    "searchPlaceholder": "Maghanap ng wika…",
+    "noMatch": "Walang katugmang wika",
+    "groupFull": "Pangunahing Wika",
+    "groupBasic": "Iba Pang Wika",
+    "groupBasicHint": "May kumpletong nilalaman ng eksperimento at voice-over; ang pagsasalin ay automated"
+  },
+  "nav": {
+    "catalog": "Aklatan ng Eksperimento",
+    "sessions": "Aking mga Session",
+    "home": "Home"
+  },
+  "op": {
+    "stir": {
+      "label": "Haluin",
+      "effect": "Haluin gamit ang glass rod upang mapabilis ang pagtunaw ng solute at mapagaan ang paghahalo",
+      "hint": "Pinabibilis ng paghahalo ang pagtunaw at paglipat ng init, at pinapantay ang lokal na konsentrasyon para maging kinatawan ng buong solusyon ang pagbabasa"
+    },
+    "shake": {
+      "label": "Iling",
+      "effect": "Ilingiling upang pagsabayin nang husto ang mga reagent",
+      "hint": "Kaunti ang likido sa test tube; haluin sa pamamagitan ng pag-alog (hindi pagpapakilos), hawakan ang bibig ng tubo palayo sa mga tao"
+    },
+    "heat": {
+      "label": "Painitin",
+      "effect": "Sindihan ang alcohol lamp para magpainit; tumataas ang temperatura ng sistema",
+      "hint": "Karamihang reaksyon ay nagbibilis sa mas mataas na temperatura; ang endothermic na reaksyon ay nangangailangan ng tuloy-tuloy na pag-init"
+    },
+    "cool": {
+      "label": "Palamigin",
+      "effect": "Alisin ang pinagkukunan ng init at hayaang lumamig nang natural; bumababa ang temperatura",
+      "hint": "Ang paglamig ay nagpapababa ng solubility; karaniwang hakbang sa crystallization at pagkolekta ng produkto"
+    },
+    "settle": {
+      "label": "Hayaang Tumayo",
+      "effect": "Hayaang tumayo sandali; mas malinaw na lumalabas ang pag-settle ng sediment at paghihiwalay ng layer",
+      "hint": "Ang pag-settle ng sediment at paghihiwalay ng layer ay nangangailangan ng oras; suriin kung malinaw ang supernatant pagkatapos na tumayo"
+    },
+    "read": {
+      "label": "Basahin",
+      "effect": "Itala ang kasalukuyang pagbabasa",
+      "hint": "Basahin nang nakaayon ang mata sa graduwasyon; itala ang bawat pagbabasa sa data table para makalkula ang average at error"
+    }
+  },
+  "quant": {
+    "verdictGood": "Magandang consistency ng data; maaaring gamitin sa pagkalkula",
+    "verdictFair": "Malaki ang deviasyon; suriin ang anggulo ng pagbabasa at katatagan ng sistema",
+    "verdictPoor": "Labis na malaki ang deviasyon; alamin ang dahilan at ulitin ang parallel na pagsukat",
+    "meanPh": "Average pH",
+    "meanTemp": "Average na Temperatura",
+    "meanVolume": "Average na Volume",
+    "group": "Grupo {no}",
+    "readings": "{count} pagbabasa",
+    "finalGroup": "Ang grupong ito ang batayan ng konklusyon",
+    "singleReading": "1 pagsukat lamang; hindi maaaring kalkulahin ang relative deviation (nangangailangan ang pamantayan ng hindi bababa sa 2 parallel na pagsukat)",
+    "worstDeviation": "Pinakamataas na relative average deviation {value}%",
+    "groupNote": "Bawat beses na ang sistema ay kinunan / pinagsama / pinainit ay nagsisimula ng bagong grupo; ang mga pagbabasa sa iba't ibang grupo ay hindi bumubuo ng parallel na pagsukat, kaya hiwalay ang istatistika.",
+    "noReadings": "Walang naitala na pagsukat gamit ang operasyong “Basahin” sa eksperimentong ito; hindi maaaring kalkulahin ang average at relative deviation. Para sa quantitative na eksperimento, ulitin ang pagbabasa nang hindi bababa sa 2 beses sa parehong estado ng sistema."
+  },
+  "report": {
+    "conclusion": "Konklusyon ng Eksperimento",
+    "errorAnalysis": "Pagsusuri ng Error",
+    "improvements": "Mga Mungkahi para sa Pagpapabuti",
+    "noImprovements": "Wala pang mungkahi sa pagpapabuti.",
+    "knowledge": "Pagtatasa ng Kaalaman",
+    "empty": "（Walang nilalaman）",
+    "measurements": "Mga Nasukat na Pagbabasa",
+    "quantData": "Dati ng Dami",
+    "noMeasurements": "Walang naitalang pagbabasa sa eksperimentong ito.",
+    "generating": "Sinusuri ng AI ang datos ng eksperimento…",
+    "regenerate": "Muling Buuin ang Ulat",
+    "generate": "Buuin ang Ulat ng Eksperimento",
+    "generateFailed": "Nabigong buuin ({status})",
+    "notGenerated": "Hindi pa nabubuo ang ulat. Batay sa mga hakbang at pagbabasa ng eksperimentong ito, magbibigay ang AI ng konklusyon, pagsusuri ng pagkakamali, mungkahi sa pagpapabuti, at pagtatasa ng kaalaman.",
+    "noActivity": "Walang naitalang operasyon sa eksperimentong ito; hindi mabubuo ang ulat sa ngayon.",
+    "backToLab": "Bumalik sa lab at subukang muli →",
+    "title": "Ulat ng Eksperimento",
+    "generatedAt": "Nabuo noong {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "I-on ang Kuryente",
+      "off": "I-off ang Kuryente"
+    },
+    "cell": {
+      "on": "Isara ang Sirkito",
+      "off": "Buksan ang Sirkito"
+    },
+    "flameTest": {
+      "on": "Sindihan ang Alcohol Lamp",
+      "off": "Patayin ang Alcohol Lamp"
+    },
+    "waterBath": {
+      "on": "Simulan ang Water Bath Heating",
+      "off": "Itigil ang Water Bath Heating"
+    },
+    "distillation": {
+      "on": "Simulan ang Distillation",
+      "off": "Itigil ang Distillation"
+    },
+    "filtration": {
+      "on": "Simulan ang Filtration",
+      "off": "Itigil ang Filtration"
+    },
+    "calorimeter": {
+      "on": "Simulan ang Paghalo at Pagsukat ng Temperatura",
+      "off": "Itigil ang Paghalo"
+    },
+    "gasCollect": {
+      "on": "Simulan ang Pag-iipon ng Gas",
+      "off": "Itigil ang Pag-iipon ng Gas"
+    },
+    "titration": {
+      "on": "Buksan ang stopcock para magpatulo",
+      "off": "Isara ang stopcock"
+    },
+    "syringe": {
+      "on": "Pindutin ang piston para magpresyon",
+      "off": "Bawiin ang piston para mabawasan ang presyon"
+    },
+    "phMeter": {
+      "on": "I-on ang pH meter",
+      "off": "I-off ang pH meter"
+    },
+    "evaporation": {
+      "on": "Sindihan ang alcohol lamp para sa evaporation",
+      "off": "Patayin ang alcohol lamp"
+    },
+    "pressureDrop": {
+      "on": "Higpitan ang takip at igulong",
+      "off": "Luwagan ang takip"
+    },
+    "heat": {
+      "on": "Sindihan ang alcohol lamp para magpainit",
+      "off": "Itigil ang pag-init"
+    }
+  },
+  "sessions": {
+    "title": "Aking mga Session",
+    "subtitle": "Tingnan ang kasaysayan ng eksperimento at ang kaukulang ulat",
+    "unknownExperiment": "Hindi kilalang eksperimento",
+    "completed": "Natapos na",
+    "inProgress": "Isinasagawa",
+    "startedAt": "Nagsimula sa {time}",
+    "viewReport": "Tingnan ang ulat"
+  },
+  "shelf": {
+    "title": "Istante ng reagent",
+    "taken": "Nakuha na ang {dose} {unit}",
+    "takeSome": "Magpatulo / kumuha ng kaunti",
+    "take": "Kumuha ng {unit}",
+    "specIndicator": "Indicator",
+    "specGas": "Gas",
+    "specBulk": "Kumuha ng angkop na dami",
+    "specSolution": "Solusyon",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Purong likido ρ={density} g/mL",
+    "specLiquid": "Likido",
+    "specSolid": "Solid · Analytical Grade"
+  },
+  "site": {
+    "title": "ChemAIForge · AI Virtual Chemistry Lab",
+    "description": "Magsagawa ng chemistry experiments sa browser: i-drag ang mga reagent, obserbahan ang mga reaksyon, kumuha ng gabay mula sa AI tutor, at awtomatikong bumuo ng lab report."
+  },
+  "titration": {
+    "stopcock": "Buksan ang Stopcock",
+    "buretteReading": "Burette Reading",
+    "phMeter": "pH Meter",
+    "unfilled": "Walang Laman",
+    "strongBase": "Matibay na Base",
+    "weakBase": "Mahinang Base · Zona ng Pagbabago ng Kulay",
+    "nearNeutral": "Malapit sa Neutral",
+    "acidExcess": "Asidiko · Labis Na",
+    "endpointOk": "Endpoint OK",
+    "overshoot": "Labis na Tinambakan",
+    "notYet": "Hindi Pa Umabot sa Endpoint (Hindi Pa Kumukupas ang Pink)",
+    "justFaded": "Bagong Kupas",
+    "keyPoints": "Mga Pangunahing Hakbang",
+    "takeAnalyte": "Kunin Muna ang Analyte →",
+    "dragStopcock": "← I-drag ang Stopcock para Magsimulang Mag-titrate",
+    "openness": "Buksan {pct}% · Pindutin at I-drag Pakaliwa o Pakanan"
+  },
+  "tutor": {
+    "placeholder": "Ilagay ang iyong tanong…",
+    "replying": "Nagrereply…",
+    "send": "Ipadala",
+    "unknownError": "Hindi Kilalang Error",
+    "requestFailed": "Nabigong Humiling ({status})",
+    "askHeat": "Pagkatapos kong ihalo ang mga reagent, walang naobserbahang nangyari. Sinasabi ng prompt na ang reaksyong ito ay nangangailangan ng init. Pakipaliwanag kung bakit kailangang may init ang reaksyong ito.",
+    "askObserved": "Naobserbahan ko ang reaksyon {equation}{phenomena}. Pakipaliwanag kung ano ang nangyari at ang prinsipyo nito.",
+    "phPrecipitate": "Nabuo ang Precipitate",
+    "phGas": "Naglabas ng Gas",
+    "phColor": "Nagbago ang Kulay",
+    "listJoin": "、",
+    "eqWrap": "({equation})",
+    "title": "AI Lab Tutor",
+    "empty": "Magtanong anumang oras, o magreaksyon sa canvas at magbibigay ako ng pahiwatig."
+  },
+  "workbench": {
+    "view2d": "2D Diagram",
+    "view3d": "3D Lab Table",
+    "view3dRefined": "3D Lab Table ★",
+    "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom"
+  }
+}

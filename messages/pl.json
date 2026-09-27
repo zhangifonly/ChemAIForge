@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Przejdź do głównej treści"
+  },
+  "catalog": {
+    "title": "Biblioteka eksperymentów",
+    "empty": "Brak eksperymentów spełniających kryteria.",
+    "searchPlaceholder": "Szukaj nazwy eksperymentu…",
+    "searchLabel": "Szukaj eksperymentu",
+    "filterCategory": "Filtruj według kategorii",
+    "allCategories": "Wszystkie kategorie",
+    "filterDifficulty": "Filtruj według trudności",
+    "allDifficulties": "Wszystkie poziomy trudności",
+    "objectives": "Cele eksperymentu",
+    "reagents": "Wymagane odczynniki",
+    "apparatus": "Wymagany sprzęt",
+    "subtitle": "Wybierz eksperyment, aby wejść do wirtualnego laboratorium.",
+    "estimatedMinutes": "Szacowany czas: {minutes} min",
+    "startLab": "Rozpocznij eksperyment →"
+  },
+  "category": {
+    "ACID_BASE": "Reakcje kwasowo-zasadowe",
+    "ORGANIC": "Chemia organiczna",
+    "THERMODYNAMICS": "Termodynamika",
+    "REDOX": "Reakcje redoks",
+    "PRECIPITATION": "Reakcje strącania",
+    "GAS": "Otrzymywanie gazów",
+    "ELECTROCHEM": "Elektrochemia",
+    "METAL": "Aktywność metali",
+    "ANALYSIS": "Analiza i wykrywanie",
+    "COORDINATION": "Kompleksy barwne"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Objętość",
+    "ariaLabel": "Wykres {label} w funkcji czasu, bieżąca wartość: {value}",
+    "measureAria": "Wykres liniowy odczytów pomiarowych w funkcji czasu, łącznie {count} odczytów, zakres pH 0–14, zakres temperatury 0–100 ℃",
+    "title": "Krzywa procesu",
+    "current": "Bieżąca",
+    "peak": "Szczyt",
+    "samples": "Próbkowanie: {count} pkt",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Objętość",
+    "empty": "Po rozpoczęciu operacji wyświetli się tutaj krzywa zmian w czasie"
+  },
+  "dataTable": {
+    "title": "Tabela danych",
+    "emptyHint": "Naciśnij „Odczyt”, aby zarejestrować pomiar",
+    "recorded": "W tej serii: {count} pomiarów",
+    "recordedNeedMore": "W tej serii: {count} pomiarów (równoległe oznaczenie wymaga min. 2)",
+    "emptyBody": "W eksperymentach ilościowych należy powtarzać pomiary i obliczać średnią; każde naciśnięcie „Odczyt” doda jeden wiersz.",
+    "colIndex": "Nr",
+    "colTime": "Czas / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Objętość / mL",
+    "rowMean": "Średnia serii",
+    "rowDeviation": "Odchylenie względne",
+    "worstDeviation": "Maks. odchylenie względne {value}%:",
+    "verdictGood": "Spójność danych jest dobra — można użyć do obliczeń.",
+    "verdictFair": "Odchylenie zbyt duże — sprawdź, czy linia wzroku była równoległa do podziałki i czy układ zdążył się ustabilizować.",
+    "verdictPoor": "Odchylenie nadmierne — należy ustalić przyczynę i powtórzyć oznaczenia równoległe; nie uśredniaj tych wyników."
+  },
+  "deck": {
+    "readings": "Odczyty przyrządów na stole laboratoryjnym",
+    "temperature": "Temperatura",
+    "volume": "Objętość",
+    "ph": "pH",
+    "operations": "Operacje laboratoryjne",
+    "needReagent": "Najpierw pobierz odczynnik",
+    "inOrder": "Wykonuj kroki w rzeczywistej kolejności"
+  },
+  "device": {
+    "glassware": "Szkło laboratoryjne",
+    "electrolysisCell": "Elektrolizer",
+    "galvanicCell": "Ogniwo galwaniczne",
+    "flameTest": "Próba płomieniowa",
+    "gasCollection": "Zbieranie gazu metodą wypierania wody",
+    "gasDelivery": "Układ odprowadzania i pochłaniania gazu",
+    "conductivity": "Porównanie przewodności roztworów",
+    "strongBright": "Mocna · jasno",
+    "weakDim": "Słaba · przyćmione",
+    "nonNone": "Brak · nie świeci"
+  },
+  "difficulty": {
+    "EASY": "Podstawowy",
+    "MEDIUM": "Zaawansowany",
+    "HARD": "Wyzwanie"
+  },
+  "electro": {
+    "conductivityDesc": "Porównanie przewodności roztworów o jednakowym stężeniu (jasność żarówki odzwierciedla stężenie jonów).",
+    "conductivityActive": "Trwa pomiar przewodności: im jaśniejsza żarówka, tym lepsza przewodność",
+    "conductivityIdle": "Kliknij „Pomiar przewodności”, aby porównać przewodność roztworów",
+    "conductivityOn": "💡 Pomiar przewodności",
+    "powerOff": "Wyłącz zasilanie",
+    "electrolyteInert": "Elektrolit: {name} ({formula}) · anoda inertna (węgiel)",
+    "electrolyteActive": "Elektrolit: {name} ({formula}) · anoda aktywna (miedź)",
+    "electrolysisActive": "Elektroliza w toku…",
+    "electrolysisIdle": "Kliknij „Włącz zasilanie”, aby rozpocząć elektrolizę i obserwować zjawiska na elektrodach",
+    "copperFading": "Roztwór: niebieskie zabarwienie stopniowo blednie (jony miedzi są zużywane)",
+    "powerOn": "⚡ Włącz zasilanie",
+    "brine": "Solanka",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Obwód zamknięty — galwanometr wychylony, ogniwo galwaniczne pracuje…",
+    "cellIdle": "Kliknij „Zamknij obwód”, aby obserwować wychylenie galwanometru i zjawiska na elektrodach",
+    "cellOn": "🔌 Zamknij obwód",
+    "cellOff": "Rozłącz obwód",
+    "cathode": "Katoda (−)",
+    "anode": "Anoda (+)",
+    "negative": "Biegun ujemny",
+    "positive": "Biegun dodatni"
+  },
+  "errors": {
+    "noActivity": "Brak zarejestrowanych operacji w tym eksperymencie. Wykonaj doświadczenie na stole laboratoryjnym, a następnie wygeneruj raport.",
+    "reportFailed": "Generowanie raportu nie powiodło się",
+    "tutorUnavailable": "Usługa tutora AI jest niedostępna",
+    "unknown": "Nieznany błąd"
+  },
+  "home": {
+    "labTitle": "Interaktywny stół laboratoryjny",
+    "labDesc": "Przeciągnij odczynniki do zlewki — silnik reakcji w czasie rzeczywistym wykrywa zmianę barwy, pęcherzyki, osad i zmiany temperatury. To, co widzisz, jest tym, co otrzymujesz.",
+    "tutorTitle": "Tutor AI",
+    "tutorDesc": "Zadawaj pytania o zasady i procedury w dowolnym momencie. Gdy na płótnie zajdzie kluczowa reakcja, tutor sam udzieli wyjaśnień i wskazówek bezpieczeństwa.",
+    "reportTitle": "Inteligentny raport laboratoryjny",
+    "reportDesc": "Zbiera krzywe odczytów z całego eksperymentu i automatycznie generuje wnioski, analizę błędów, sugestie ulepszeń oraz ocenę wiedzy.",
+    "badge": "Wirtualne laboratorium chemiczne napędzane przez AI",
+    "heroLine1": "W przeglądarce",
+    "heroLine2": "przeprowadzaj prawdziwe eksperymenty chemiczne",
+    "heroDesc": "Przeciągaj odczynniki, obserwuj zmianę barwy i pęcherzyki, pytaj tutora AI w dowolnym momencie — po zakończeniu eksperymentu raport generuje się automatycznie. {count} zweryfikowanych eksperymentów, bezpiecznych i powtarzalnych.",
+    "ctaCatalog": "Przeglądaj bibliotekę eksperymentów →",
+    "ctaSessions": "Moje sesje"
+  },
+  "lab": {
+    "mix": "Przeprowadź reakcję",
+    "reset": "Opróżnij pojemnik",
+    "clear": "Wyczyść",
+    "complete": "Zakończ eksperyment",
+    "completed": "Eksperyment zakończony",
+    "viewReport": "Zobacz raport →",
+    "removeItem": "Kliknij, aby usunąć",
+    "conditions": "Warunki układu",
+    "temperature": "Temperatura układu",
+    "reagentShelf": "Półka z odczynnikami",
+    "apparatusList": "Wyposażenie laboratorium",
+    "emptyContainer": "Wybierz ilość na lewej półce i pobierz odczynnik lub przeciągnij go tutaj",
+    "absorbent": "Ciecz pochłaniająca",
+    "apparatus": "Sprzęt",
+    "addReagent": "Dodaj {name}",
+    "removeReagent": "Usuń {name}",
+    "mixAction": "Mieszaj",
+    "backToDetail": "← Wróć do szczegółów doświadczenia",
+    "backToCatalog": "← Wróć do biblioteki doświadczeń",
+    "labSuffix": "Stanowisko laboratoryjne",
+    "labHint": "Kliknij lub przeciągnij odczynnik do zlewki i wybierz «Reakcja mieszania», aby obserwować zjawiska; możesz też użyć «Objaśnienia doświadczenia» do automatycznej prezentacji krok po kroku."
+  },
+  "lesson": {
+    "prev": "Poprzedni krok",
+    "pause": "Pauza",
+    "play": "Odtwórz",
+    "next": "Następny krok",
+    "voiceOn": "Włącz komentarz głosowy",
+    "voiceOff": "Wyłącz komentarz głosowy",
+    "muted": "🔇 Wyciszono",
+    "askTutor": "Objaśnienie kroku «{title}»: {narration} Na podstawie aktualnych zjawisk i odczytów w zlewce zwięźle wyjaśnij zasady chemiczne i równania reakcji.",
+    "phase": {
+      "theory": "Zasada",
+      "prep": "Przygotowanie",
+      "operate": "Wykonanie",
+      "observe": "Obserwacje",
+      "conclude": "Wnioski"
+    },
+    "voiceLabel": "🔊 Komentarz głosowy",
+    "vesselBeaker": "Zlewka",
+    "vesselTube": "Probówka",
+    "vesselFlask": "Kolba stożkowa",
+    "observeGeneric": "Uważnie obserwuj układ i zwracaj uwagę na wszelkie zmiany barwy, powstawanie pęcherzyków lub zmiany temperatury.",
+    "observeReacting": "Reakcja jest w toku — obserwuj zmiany wskazań pH i temperatury.",
+    "phenomenaList": "Można zaobserwować: {parts}.",
+    "partGas": "wydzielanie się pęcherzyków gazu",
+    "partPrecipitate": "zmętnienie roztworu i powstawanie osadu",
+    "partColor": "wyraźna zmiana barwy roztworu",
+    "partExo": "wydzielanie ciepła i wzrost temperatury",
+    "partEndo": "pochłanianie ciepła i spadek temperatury",
+    "titlePrinciple": "Podstawy teoretyczne",
+    "titleSummary": "Podsumowanie doświadczenia",
+    "titleConnect": "Montaż układu",
+    "titleConnectCircuit": "Podłączanie obwodu",
+    "titlePowerOn": "Włączanie zasilania",
+    "titleConnectOn": "Zamykanie obwodu",
+    "titleConductTest": "Test przewodnictwa",
+    "titleElectrodes": "Zjawiska na elektrodach",
+    "titleConductCompare": "Porównanie przewodnictwa",
+    "titleTake": "Pobieranie: {reagent}",
+    "titleHeat": "Zapalanie palnika spirytusowego",
+    "titleMix": "Mieszanie reagentów",
+    "titleObserve": "Obserwacja zjawisk",
+    "summary": "W toku tego doświadczenia {objectives}.",
+    "narrSetupElectrode": "Włóż elektrody do elektrolitu i podłącz je odpowiednio do bieguna dodatniego i ujemnego źródła prądu stałego.",
+    "narrPowerOn": "Włącz zasilanie prądem stałym, aby rozpocząć elektrolizę — obserwuj zmiany zachodzące na obu elektrodach.",
+    "narrSetupCircuit": "Połącz obie elektrody przewodami przez galwanometr i zanurz je w roztworze elektrolitu.",
+    "narrConnectOn": "Zamknij obwód i sprawdź, czy wskazówka galwanometru wychyla się.",
+    "narrSetupConduct": "Podłącz roztwory o jednakowym stężeniu kolejno do obwodu elektrodowego z żarówką.",
+    "narrConductTest": "Zamknij obwód i porównaj jasność żarówki w poszczególnych roztworach.",
+    "narrSetupGeneric": "Połącz elektrody ze źródłem zasilania i przyrządami pomiarowymi zgodnie ze schematem obwodu, a następnie wprowadź elektrolit.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Głos żeński ♀",
+    "voiceMale": "Głos męski ♂",
+    "narrRigOn": "{verb}，obserwuj uważnie zmiany na elektrodach i przyrządach.",
+    "verbElectrolysis": "Podłącz źródło prądu stałego i rozpocznij elektrolizę",
+    "verbCircuit": "Zamknij obwód",
+    "narrTake": "Odmierz {reagent} i dodaj do {vessel}.",
+    "narrHeat": "Zapal palnik spirytusowy i podgrzej {vessel} — reakcja przebiega wyłącznie w podwyższonej temperaturze.",
+    "narrMixHeated": "Po podgrzaniu dokładnie wymieszaj odczynniki — reakcja rozpoczyna się natychmiast.",
+    "narrMix": "Dokładnie wymieszaj odczynniki w {vessel} — reakcja rozpoczyna się natychmiast.",
+    "electrodesFading": "; niebieski kolor roztworu stopniowo blednie",
+    "brine": "roztwór soli kuchennej",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Plan objaśnienia eksperymentu",
+    "outlineHint": "Po wejściu na stanowisko kliknij „Objaśnienie eksperymentu ▶”, aby uruchomić automatyczną prezentację krok po kroku.",
+    "cardTitle": "Objaśnienie eksperymentu",
+    "askTutorButton": "Poproś tutora o wyjaśnienie tego kroku",
+    "sentenceEnd": ".",
+    "noVoice": "Dla tego języka nie ma jeszcze lektora — objaśnienia będą wyświetlane automatycznie jako napisy.",
+    "narrTake_beaker": "Pobierz {reagent} i dodaj do zlewki.",
+    "narrTake_tube": "Pobierz {reagent} i dodaj do probówki.",
+    "narrTake_flask": "Pobierz {reagent} i dodaj do kolby stożkowej.",
+    "narrHeat_beaker": "Zapal lampę spirytusową i podgrzej zlewkę — ta reakcja musi przebiegać w warunkach podgrzewania.",
+    "narrHeat_tube": "Zapal lampę spirytusową i podgrzej probówkę — ta reakcja musi przebiegać w warunkach podgrzewania.",
+    "narrHeat_flask": "Zapal lampę spirytusową i podgrzej kolbę stożkową — ta reakcja musi przebiegać w warunkach podgrzewania.",
+    "narrMix_beaker": "Dokładnie wymieszaj odczynniki w zlewce — reakcja natychmiast się rozpocznie.",
+    "narrMix_tube": "Dokładnie wymieszaj odczynniki w probówce — reakcja natychmiast się rozpocznie.",
+    "narrMix_flask": "Dokładnie wymieszaj odczynniki w kolbie stożkowej — reakcja natychmiast się rozpocznie."
+  },
+  "locale": {
+    "switchLabel": "Zmień język interfejsu",
+    "searchPlaceholder": "Szukaj języka…",
+    "noMatch": "Nie znaleziono pasującego języka",
+    "groupFull": "Języki główne",
+    "groupBasic": "Pozostałe języki",
+    "groupBasicHint": "Zawiera pełną treść eksperymentów i komentarz głosowy; tłumaczenie maszynowe"
+  },
+  "nav": {
+    "catalog": "Biblioteka eksperymentów",
+    "sessions": "Moje sesje",
+    "home": "Strona główna"
+  },
+  "op": {
+    "stir": {
+      "label": "Mieszanie",
+      "effect": "Mieszaj bagietką szklaną — substancja rozpuszcza się szybciej i miesza się równomierniej",
+      "hint": "Mieszanie przyspiesza rozpuszczanie i wymianę ciepła, wyrównując lokalne stężenia — odczyt reprezentuje wtedy cały układ"
+    },
+    "shake": {
+      "label": "Wstrząsanie",
+      "effect": "Wstrząsanie zapewnia równomierne wymieszanie reagentów",
+      "hint": "Przy małej objętości cieczy w probówce mieszanie zastępuje wstrząsanie (nie mieszadło) — trzymaj wylot z dala od innych osób"
+    },
+    "heat": {
+      "label": "Ogrzewanie",
+      "effect": "Zapalenie palnika spirytusowego podnosi temperaturę układu",
+      "hint": "Większość reakcji przyspiesza w wyższej temperaturze; reakcje endotermiczne wymagają ciągłego ogrzewania"
+    },
+    "cool": {
+      "label": "Chłodzenie",
+      "effect": "Usunięcie źródła ciepła powoduje naturalne obniżenie temperatury",
+      "hint": "Chłodzenie obniża rozpuszczalność — to standardowy krok przy krystalizacji i zbieraniu produktu"
+    },
+    "settle": {
+      "label": "Odstanie",
+      "effect": "Chwilowe odstanie pozwala osadom opaść, a warstwom cieczy — wyraźniej się rozdzielić",
+      "hint": "Sedymentacja i rozwarstwianie wymagają czasu; dopiero po odstaniu można ocenić, czy górna ciecz jest klarowna"
+    },
+    "read": {
+      "label": "Odczyt",
+      "effect": "Zapisuje bieżący odczyt",
+      "hint": "Czytaj skalę na poziomie oczu; wpisuj każdy odczyt do tabeli danych, by obliczyć średnią i odchylenie"
+    }
+  },
+  "quant": {
+    "verdictGood": "Spójność danych dobra — można użyć do obliczeń",
+    "verdictFair": "Odchylenie zbyt duże — sprawdź poziom oczu przy odczycie i stabilność układu",
+    "verdictPoor": "Odchylenie przekracza dopuszczalną wartość — wyjaśnij przyczyny i powtórz pomiary równoległe",
+    "meanPh": "Średnie pH",
+    "meanTemp": "Średnia temperatura",
+    "meanVolume": "Średnia objętość",
+    "group": "Seria {no}",
+    "readings": "{count} odczytów",
+    "finalGroup": "Wnioski opierają się na tej serii",
+    "singleReading": "Tylko 1 pomiar — nie można obliczyć względnego odchylenia (procedura wymaga co najmniej 2 pomiarów równoległych)",
+    "worstDeviation": "Maksymalne względne odchylenie średnie {value}%",
+    "groupNote": "Każde pobranie, zmieszanie lub ogrzanie układu rozpoczyna nową serię; odczyty z różnych serii nie stanowią pomiarów równoległych i są statystycznie odrębne.",
+    "noReadings": "W tym doświadczeniu nie wykonano żadnego odczytu operacją „Odczyt” — nie można obliczyć średniej ani względnego odchylenia. W pomiarach ilościowych należy powtórzyć odczyt co najmniej 2 razy w tym samym stanie układu."
+  },
+  "report": {
+    "conclusion": "Wnioski z doświadczenia",
+    "errorAnalysis": "Analiza błędów",
+    "improvements": "Zalecenia dotyczące usprawnień",
+    "noImprovements": "Brak zaleceń dotyczących usprawnień.",
+    "knowledge": "Ocena opanowania materiału",
+    "empty": "(brak treści)",
+    "measurements": "Odczyty pomiarów",
+    "quantData": "Dane ilościowe",
+    "noMeasurements": "W tym doświadczeniu nie zarejestrowano żadnych odczytów.",
+    "generating": "AI analizuje dane doświadczenia…",
+    "regenerate": "Wygeneruj raport ponownie",
+    "generate": "Generuj raport z doświadczenia",
+    "generateFailed": "Generowanie nieudane ({status})",
+    "notGenerated": "Raport nie został jeszcze wygenerowany. AI opracuje wnioski, analizę błędów, zalecenia dotyczące usprawnień oraz ocenę opanowania materiału na podstawie kroków i odczytów z tego doświadczenia.",
+    "noActivity": "W tym doświadczeniu nie zarejestrowano żadnych działań — wygenerowanie raportu jest na razie niemożliwe.",
+    "backToLab": "Wróć do stanowiska i przeprowadź doświadczenie →",
+    "title": "Raport z doświadczenia",
+    "generatedAt": "Wygenerowano: {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Włącz zasilanie",
+      "off": "Wyłącz zasilanie"
+    },
+    "cell": {
+      "on": "Zamknij obwód",
+      "off": "Otwórz obwód"
+    },
+    "flameTest": {
+      "on": "Zapal palnik spirytusowy",
+      "off": "Zgaś palnik spirytusowy"
+    },
+    "waterBath": {
+      "on": "Rozpocznij ogrzewanie w łaźni wodnej",
+      "off": "Zatrzymaj ogrzewanie w łaźni wodnej"
+    },
+    "distillation": {
+      "on": "Rozpocznij destylację",
+      "off": "Zatrzymaj destylację"
+    },
+    "filtration": {
+      "on": "Rozpocznij filtrację",
+      "off": "Zatrzymaj filtrację"
+    },
+    "calorimeter": {
+      "on": "Rozpocznij mieszanie i pomiar temperatury",
+      "off": "Zatrzymaj mieszanie"
+    },
+    "gasCollect": {
+      "on": "Rozpocznij zbieranie gazu",
+      "off": "Zatrzymaj zbieranie"
+    },
+    "titration": {
+      "on": "Otwórz kranik – dodaj kroplami",
+      "off": "Zamknij kranik"
+    },
+    "syringe": {
+      "on": "Wciśnij tłok – zwiększ ciśnienie",
+      "off": "Cofnij tłok – zmniejsz ciśnienie"
+    },
+    "phMeter": {
+      "on": "Włącz pH-metr",
+      "off": "Wyłącz pH-metr"
+    },
+    "evaporation": {
+      "on": "Zapal palnik spirytusowy – odparuj",
+      "off": "Zgaś palnik spirytusowy"
+    },
+    "pressureDrop": {
+      "on": "Zakręć korek i wstrząśnij",
+      "off": "Odkręć korek"
+    },
+    "heat": {
+      "on": "Zapal palnik spirytusowy – podgrzej",
+      "off": "Zatrzymaj ogrzewanie"
+    }
+  },
+  "sessions": {
+    "title": "Moje sesje",
+    "subtitle": "Przeglądaj historię eksperymentów i otwieraj raporty",
+    "unknownExperiment": "Nieznany eksperyment",
+    "completed": "Zakończono",
+    "inProgress": "W toku",
+    "startedAt": "Rozpoczęto {time}",
+    "viewReport": "Zobacz raport"
+  },
+  "shelf": {
+    "title": "Półka odczynników",
+    "taken": "Pobrano {dose} {unit}",
+    "takeSome": "Dodaj kroplami / pobierz odpowiednią ilość",
+    "take": "Pobierz {unit}",
+    "specIndicator": "Wskaźnik",
+    "specGas": "Gaz",
+    "specBulk": "Pobierz odpowiednią ilość",
+    "specSolution": "Roztwór",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Czysta ciecz ρ={density} g/mL",
+    "specLiquid": "Ciecz",
+    "specSolid": "Ciało stałe cz.d.a."
+  },
+  "site": {
+    "title": "ChemAIForge · Wirtualne laboratorium chemiczne AI",
+    "description": "Przeprowadzaj eksperymenty chemiczne w przeglądarce: przeciągaj odczynniki, obserwuj reakcje, korzystaj z pomocy tutora AI i automatycznie generuj raporty."
+  },
+  "titration": {
+    "stopcock": "Otwarcie zaworu",
+    "buretteReading": "Odczyt biurety",
+    "phMeter": "pH-metr",
+    "unfilled": "Brak roztworu",
+    "strongBase": "Silnie zasadowy",
+    "weakBase": "Słabo zasadowy · strefa zmiany barwy",
+    "nearNeutral": "Zbliżony do obojętnego",
+    "acidExcess": "Kwaśny · nadmiar kwasu",
+    "endpointOk": "Punkt końcowy prawidłowy",
+    "overshoot": "Przekroczono punkt końcowy",
+    "notYet": "Nie osiągnięto punktu końcowego (róż utrzymuje się)",
+    "justFaded": "Barwa właśnie znikła",
+    "keyPoints": "Wskazówki operacyjne",
+    "takeAnalyte": "Najpierw pobierz analit →",
+    "dragStopcock": "← Przeciągnij zawór, aby rozpocząć miareczkowanie",
+    "openness": "Otwarcie {pct}% · przytrzymaj i przeciągnij w lewo/prawo"
+  },
+  "tutor": {
+    "placeholder": "Wpisz swoje pytanie…",
+    "replying": "Odpowiadanie…",
+    "send": "Wyślij",
+    "unknownError": "Nieznany błąd",
+    "requestFailed": "Żądanie nie powiodło się ({status})",
+    "askHeat": "Po zmieszaniu odczynników nie zaobserwowałem żadnych zmian. Podpowiedź wskazuje, że reakcja wymaga ogrzewania. Wyjaśnij, dlaczego ta reakcja musi przebiegać w podwyższonej temperaturze.",
+    "askObserved": "Właśnie zaobserwowałem reakcję {equation}{phenomena}. Proszę wyjaśnij, co zaszło i jaki jest mechanizm tej reakcji.",
+    "phPrecipitate": "Powstaje osad",
+    "phGas": "wydziela się gaz",
+    "phColor": "następuje zmiana barwy",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "Tutor AI",
+    "empty": "Możesz zadać pytanie w dowolnym momencie — po wywołaniu reakcji na płótnie sam podpowiem co zaobserwować."
+  },
+  "workbench": {
+    "view2d": "Schemat 2D",
+    "view3d": "Stół laboratoryjny 3D",
+    "view3dRefined": "Stół laboratoryjny 3D ★",
+    "sceneHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć"
+  }
+}

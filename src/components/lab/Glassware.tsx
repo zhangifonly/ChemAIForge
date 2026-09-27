@@ -3,6 +3,7 @@
 // 立体器皿可视化：按 vesselGeom 渲染烧杯 / 锥形瓶 / 试管，液体颜色、气泡、沉淀、
 // 蒸汽等现象全部来自引擎返回的 ReactionResult 与几何参数，本组件不含任何反应规则。
 import type { ReactionResult } from "@/lib/chem/engine";
+import { useTranslations } from "next-intl";
 import { VESSELS, type VesselKind } from "./vesselGeom";
 
 // 液体上下渐变色，优先级：浑浊沉淀 > 指示剂变色 > 反应后绿 > 溶质特征色 > 清液
@@ -32,11 +33,17 @@ export function Glassware({
   tint?: { top: string; bottom: string };
   hot?: boolean;
 }) {
+  const t = useTranslations("device");
   const g = VESSELS[kind];
   const { top, bottom } = liquidColors(result, tint);
   const showBubbles = Boolean(result?.reacted && result.producesGas);
   const showPrecipitate = Boolean(result?.reacted && result.producesPrecipitate);
+  // 蒸汽与火焰必须分开判断：放热反应（中和热测定）体系确实在升温、该冒热气，
+  // 但热是反应自己放的 —— 在杯底画一盏酒精灯就凭空多出一件仪器，
+  // 而中和热测定恰恰要求绝热、不能外部加热，画了火焰等于把实验原理讲反了。
   const showSteam = hot || (result?.reacted && result.thermal === "exothermic");
+  // 只有外部加热（hot 由体系温度/酒精灯驱动）才画火焰
+  const showFlame = Boolean(hot);
   const hasLiquid = fill > 0.001;
 
   const { left, right, topY, bottomY } = g.liquid;
@@ -51,7 +58,7 @@ export function Glassware({
       height="244"
       viewBox="0 0 200 244"
       role="img"
-      aria-label="实验器皿"
+      aria-label={t("glassware")}
       className="drop-shadow-[0_18px_24px_rgba(15,57,52,0.18)]"
     >
       <defs>
@@ -75,8 +82,8 @@ export function Glassware({
         </radialGradient>
       </defs>
 
-      {/* 底部：加热时显示酒精灯火焰，否则显示桌面投影 */}
-      {showSteam ? (
+      {/* 底部：外部加热时显示酒精灯火焰，否则显示桌面投影 */}
+      {showFlame ? (
         <g transform={`translate(100 ${g.heatY})`}>
           {/* 暖光 */}
           <ellipse cx="0" cy="20" rx="30" ry="13" fill={`url(#${uid}-glow)`} />
@@ -173,7 +180,7 @@ export function Glassware({
           y2={y}
           stroke="currentColor"
           strokeWidth="1.4"
-          className="text-foreground/35"
+          className="text-foreground/65"
           strokeLinecap="round"
         />
       ))}
@@ -187,7 +194,7 @@ export function Glassware({
         fill="none"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-foreground/55"
+        className="text-foreground/65"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -199,7 +206,7 @@ export function Glassware({
         fill="none"
         stroke="currentColor"
         strokeWidth="3"
-        className="text-foreground/55"
+        className="text-foreground/65"
       />
       {g.spout && (
         <path
@@ -207,7 +214,7 @@ export function Glassware({
           fill="none"
           stroke="currentColor"
           strokeWidth="2.4"
-          className="text-foreground/55"
+          className="text-foreground/65"
           strokeLinecap="round"
           strokeLinejoin="round"
         />

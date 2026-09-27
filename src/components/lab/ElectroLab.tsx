@@ -4,6 +4,7 @@
 // 左侧仪器栏，右侧居中装置 + 说明 + 现象文字 + 「通电/断开」与「完成实验」按钮。
 // 仅负责排版与交互外壳，具体装置（device）与现象（notes）由各模式注入。
 import type { ReactNode } from "react";
+import { useTranslations } from "next-intl";
 
 export function ElectroLab({
   apparatus,
@@ -30,6 +31,7 @@ export function ElectroLab({
   onComplete: () => void;
   completed: boolean;
 }) {
+  const t = useTranslations("lab");
   return (
     <div className="grid gap-6 md:grid-cols-[240px_1fr]">
       <aside className="flex flex-col gap-3">
@@ -44,13 +46,13 @@ export function ElectroLab({
             </li>
           ))}
         </ul>
-        <p className="mt-1 text-xs text-foreground/45">{infoLine}</p>
+        <p className="mt-1 text-xs text-foreground/65">{infoLine}</p>
       </aside>
 
       <section className="flex flex-col gap-4">
         <div className="flex flex-col items-center gap-3 rounded-2xl border border-foreground/12 bg-gradient-to-b from-surface/30 to-brand-500/[0.04] p-6">
           {device}
-          <p className="text-xs text-foreground/50">{caption}</p>
+          <p className="text-xs text-foreground/65">{caption}</p>
         </div>
 
         {notes && (
@@ -77,7 +79,7 @@ export function ElectroLab({
             disabled={completed || !energized}
             className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
           >
-            {completed ? "实验已完成" : "完成实验"}
+            {completed ? t("completed") : t("complete")}
           </button>
         </div>
       </section>

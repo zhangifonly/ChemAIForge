@@ -6,6 +6,7 @@ import { Suspense, type ReactNode } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Lightformer, ContactShadows } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
+import { useTranslations } from "next-intl";
 
 export interface SceneShellProps {
   children: ReactNode;
@@ -34,9 +35,12 @@ export function SceneShell({
   minDistance = 3.5,
   maxDistance = 9,
   className = "h-[520px]",
-  hint = "拖拽旋转 · 滚轮缩放",
+  hint,
   fov = 40,
 }: SceneShellProps) {
+  const t = useTranslations("workbench");
+  // 默认提示语在函数体内取，参数默认值处拿不到 hook
+  const hintText = hint ?? t("sceneHint");
   return (
     <div
       className={`relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6] ${className}`}
@@ -87,7 +91,7 @@ export function SceneShell({
         />
       </Canvas>
       <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/30 px-3 py-1 text-xs text-white/70 backdrop-blur">
-        {hint}
+        {hintText}
       </span>
     </div>
   );

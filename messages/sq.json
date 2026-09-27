@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Kalo te përmbajtja kryesore"
+  },
+  "catalog": {
+    "title": "Biblioteka e eksperimenteve",
+    "empty": "Nuk u gjet asnjë eksperiment.",
+    "searchPlaceholder": "Kërko emrin e eksperimentit…",
+    "searchLabel": "Kërko eksperiment",
+    "filterCategory": "Filtro sipas kategorisë",
+    "allCategories": "Të gjitha kategoritë",
+    "filterDifficulty": "Filtro sipas vështirësisë",
+    "allDifficulties": "Të gjitha vështirësitë",
+    "objectives": "Objektivat e eksperimentit",
+    "reagents": "Reagentët e nevojshëm",
+    "apparatus": "Aparatura e nevojshme",
+    "subtitle": "Zgjidhni një eksperiment për të hyrë në laboratorin virtual.",
+    "estimatedMinutes": "Afërsisht {minutes} minuta",
+    "startLab": "Fillo eksperimentin →"
+  },
+  "category": {
+    "ACID_BASE": "Reaksion acid-bazë",
+    "ORGANIC": "Kimi organike",
+    "THERMODYNAMICS": "Termodinamikë",
+    "REDOX": "Oksido-reduktim",
+    "PRECIPITATION": "Reaksion precipitimi",
+    "GAS": "Prodhim gazi",
+    "ELECTROCHEM": "Elektrokimi",
+    "METAL": "Aktiviteti metalik",
+    "ANALYSIS": "Analizë dhe identifikim",
+    "COORDINATION": "Koordinim me ngjyrim"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Vëllimi",
+    "ariaLabel": "Kurba e {label} ndaj kohës, vlera aktuale {value}",
+    "measureAria": "Grafik linear i leximeve të matjes ndaj kohës, gjithsej {count} lexime, shkalla pH 0 deri 14, shkalla e temperaturës 0 deri 100 ℃",
+    "title": "Kurba e procesit",
+    "current": "Aktuale",
+    "peak": "Kulmi",
+    "samples": "Kampionim {count} pika",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Vëllimi",
+    "empty": "Kurba e ndryshimit në kohë do të shfaqet këtu pas fillimit të operacionit"
+  },
+  "dataTable": {
+    "title": "Tabela e të dhënave",
+    "emptyHint": "Klikoni «Lexim» për të regjistruar një matje",
+    "recorded": "Grupi ka regjistruar {count} herë",
+    "recordedNeedMore": "Grupi ka regjistruar {count} herë (të paktën 2 matje paralele)",
+    "emptyBody": "Eksperimentet sasiore kërkojnë matje të përsëritura për mesatare; çdo klikim i «Leximit» lë një rresht këtu.",
+    "colIndex": "Nr.",
+    "colTime": "Koha / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Vëllimi / mL",
+    "rowMean": "Mesatarja e grupit",
+    "rowDeviation": "Devijimi relativ",
+    "worstDeviation": "Devijimi maksimal relativ {value}%:",
+    "verdictGood": "Konsistenca e të dhënave është e mirë, e përdorshme për llogaritje.",
+    "verdictFair": "Devijimi është i lartë; kontrolloni nëse vija e shikimit është paralele me shkallën dhe nëse sistemi është stabilizuar.",
+    "verdictPoor": "Devijimi është shumë i lartë; gjeni shkakun dhe përsëritni matjet paralele pa marrë mesatare drejtpërdrejt."
+  },
+  "deck": {
+    "readings": "Leximet e instrumenteve të bankës",
+    "temperature": "Temperatura",
+    "volume": "Vëllimi",
+    "ph": "pH",
+    "operations": "Operacionet e eksperimentit",
+    "needReagent": "Merrni fillimisht reagentin",
+    "inOrder": "Ndiqni hapat sipas renditjes reale"
+  },
+  "device": {
+    "glassware": "Enë laboratori",
+    "electrolysisCell": "Qelizë elektrolize",
+    "galvanicCell": "Qelizë galvanike",
+    "flameTest": "Pajisje për testin e flakës",
+    "gasCollection": "Pajisje mbledhëse gazi me zhvendosje uji",
+    "gasDelivery": "Pajisje transporti dhe absorbimi gazi",
+    "conductivity": "Krahasim i përçueshmërisë së tretësirave",
+    "strongBright": "E fortë · E ndritshme",
+    "weakDim": "E dobët · Pak e ndritshme",
+    "nonNone": "Joelektrolitë · Nuk ndriçon"
+  },
+  "difficulty": {
+    "EASY": "Fillestar",
+    "MEDIUM": "Mesëm",
+    "HARD": "Sfidues"
+  },
+  "electro": {
+    "conductivityDesc": "Krahason përçueshmërinë e tretësirave me të njëjtën përqendrim (ndriçimi i llambës pasqyron përqendrimin e joneve).",
+    "conductivityActive": "Testim aktiv: sa më e ndritshme llamba, aq më e lartë përçueshmëria",
+    "conductivityIdle": "Klikoni «Testim me rrymë» për të krahasuar përçueshmërinë e tretësirave",
+    "conductivityOn": "💡 Testim me rrymë",
+    "powerOff": "Fikni rrymën",
+    "electrolyteInert": "Elektrolit: {name}（{formula}）· Anodë inerte (karbon)",
+    "electrolyteActive": "Elektrolit: {name}（{formula}）· Anodë aktive (bakër)",
+    "electrolysisActive": "Elektroliza në vazhdim…",
+    "electrolysisIdle": "Klikoni «Ndiz rrymën» për të filluar elektrolizën dhe vëzhgoni fenomenet në të dy elektroda",
+    "copperFading": "Tretësira: ngjyra blu zbëhet gradualisht (jonet e bakrit konsumohen)",
+    "powerOn": "⚡ Ndiz rrymën",
+    "brine": "Ujë i kripur",
+    "electrolyte": "Elektrolit: {name}",
+    "cellActive": "Qarkut i është dhënë rrymë, galvanometri devijon — qeliza galvanike është aktive…",
+    "cellIdle": "Klikoni «Mbyll qarkun» për të vëzhguar devijimin e galvanometrit dhe fenomenet në elektroda",
+    "cellOn": "🔌 Mbyll qarkun",
+    "cellOff": "Qark i shkëputur",
+    "cathode": "Katod (−)",
+    "anode": "Anod (＋)",
+    "negative": "Pol negativ",
+    "positive": "Pol pozitiv"
+  },
+  "errors": {
+    "noActivity": "Nuk ka asnjë veprim të regjistruar në këtë eksperiment. Kryeni së pari një veprim në bankën e laboratorit, pastaj gjeneroni raportin.",
+    "reportFailed": "Gjenerimi i raportit dështoi",
+    "tutorUnavailable": "Shërbimi i tutorit AI është i padisponueshëm",
+    "unknown": "Gabim i panjohur"
+  },
+  "home": {
+    "labTitle": "Bankë laboratori interaktive",
+    "labDesc": "Tërhiqni reagentët në gotë; motori i reaksionit vlerëson në kohë reale ndryshimin e ngjyrës, flluskat, precipitatin dhe variacionet e temperaturës — çfarë shihni është çfarë merrni.",
+    "tutorTitle": "Tutor AI i laboratorit",
+    "tutorDesc": "Pyesni për parime dhe procedura në çdo moment; kur kanavaca aktivizon reaksione kyçe, tutori jep automatikisht shpjegime dhe udhëzime sigurie.",
+    "reportTitle": "Raport inteligjent eksperimenti",
+    "reportDesc": "Grumbullon kurbat e leximeve të gjithë seancës dhe gjeneron automatikisht konkluzione, analiza gabimesh, sugjerime përmirësimi dhe vlerësim njohurish.",
+    "badge": "Laborator virtual kimie i drejtuar nga AI",
+    "heroLine1": "Drejtpërdrejt në shfletues",
+    "heroLine2": "kryeni eksperimente reale kimie",
+    "heroDesc": "Tërhiqni reagentët, vëzhgoni ndryshimet e ngjyrës dhe flluskat, pyesni tutorin AI në çdo moment — në fund të seancës gjenerohet automatikisht një raport i strukturuar. {count} eksperimente të verifikuara, të sigurta dhe të ripërsëritshme.",
+    "ctaCatalog": "Shfleto bibliotekën e eksperimenteve →",
+    "ctaSessions": "Seancat e mia"
+  },
+  "lab": {
+    "mix": "Reaksion përzierjeje",
+    "reset": "Zbraz enën",
+    "clear": "Pastro",
+    "complete": "Përfundo eksperimentin",
+    "completed": "Eksperimenti u përfundua",
+    "viewReport": "Shiko raportin e eksperimentit →",
+    "removeItem": "Klikoni për të hequr",
+    "conditions": "Kushtet e sistemit",
+    "temperature": "Temperatura e sistemit",
+    "reagentShelf": "Rafti i reagentëve",
+    "apparatusList": "Pajisjet e laboratorit",
+    "emptyContainer": "Zgjidhni sasinë nga rafti i reagentëve në të majtë, ose tërhiqni reagentin këtu",
+    "absorbent": "Lëng absorbues",
+    "apparatus": "Pajisje",
+    "addReagent": "Shto {name}",
+    "removeReagent": "Hiq {name}",
+    "mixAction": "Përziej",
+    "backToDetail": "← Kthehu te detajet e eksperimentit",
+    "backToCatalog": "← Kthehu te biblioteka e eksperimenteve",
+    "labSuffix": "Bankë laboratori",
+    "labHint": "Klikoni ose tërhiqni reagentët në gotë, «Reaksion përzierjeje» për të vëzhguar fenomenet; ose përdorni «Shpjegimin e eksperimentit» për demonstrim automatik hap pas hapi."
+  },
+  "lesson": {
+    "prev": "Hapi i mëparshëm",
+    "pause": "Pauzë",
+    "play": "Luaj",
+    "next": "Hapi tjetër",
+    "voiceOn": "Aktivizo shpjegimin me zë",
+    "voiceOff": "Çaktivizo shpjegimin me zë",
+    "muted": "🔇 Pa zë",
+    "askTutor": "Shpjego hapin «{title}»: {narration} Duke u bazuar në fenomenet dhe leximet aktuale të gotës, shpjego shkurtimisht parimet kimike dhe ekuacionet.",
+    "phase": {
+      "theory": "Parimi",
+      "prep": "Përgatitja",
+      "operate": "Operacioni",
+      "observe": "Fenomeni",
+      "conclude": "Përfundimi"
+    },
+    "voiceLabel": "🔊 Shpjegim me zë",
+    "vesselBeaker": "Gotë",
+    "vesselTube": "Epruvetë",
+    "vesselFlask": "Erlenmayer",
+    "observeGeneric": "Vëzhgoni sistemin me kujdes dhe vini re nëse shfaqen ndryshime në ngjyrë, flluska gazi ose temperaturë.",
+    "observeReacting": "Reagimi është në zhvillim — vëzhgoni ndryshimet në vlerat e pH dhe temperaturës.",
+    "phenomenaList": "Mund të vërehet {parts}.",
+    "partGas": "flluska gazi çlirohen vazhdimisht",
+    "partPrecipitate": "tretësira bëhet e turbullt dhe formohet precipitat",
+    "partColor": "ngjyra e tretësirës ndryshon dukshëm",
+    "partExo": "njëkohësisht lirohet nxehtësi dhe temperatura rritet",
+    "partEndo": "njëkohësisht absorbohet nxehtësi dhe temperatura ulet",
+    "titlePrinciple": "Parimi i eksperimentit",
+    "titleSummary": "Përmbledhje",
+    "titleConnect": "Lidhja e aparaturës",
+    "titleConnectCircuit": "Lidhja e qarkut elektrik",
+    "titlePowerOn": "Ndezja e burimit",
+    "titleConnectOn": "Mbyllja e qarkut",
+    "titleConductTest": "Testimi i përçueshmërisë",
+    "titleElectrodes": "Fenomenet te elektrodat",
+    "titleConductCompare": "Krahasimi i përçueshmërisë",
+    "titleTake": "Merr {reagent}",
+    "titleHeat": "Ndiz llambën me alkool",
+    "titleMix": "Përziej dhe reago",
+    "titleObserve": "Vëzhgo fenomenin",
+    "summary": "Nëpërmjet këtij eksperimenti, ju do të {objectives}.",
+    "narrSetupElectrode": "Futni elektrodat në elektrolitin e lëngët dhe lidhini ato përkatësisht me polin pozitiv dhe negativ të burimit të rrymës së vazhdueshme.",
+    "narrPowerOn": "Ndizni burimin e rrymës së vazhdueshme për të filluar elektrolizën dhe vëzhgoni ndryshimet te të dyja elektrodat.",
+    "narrSetupCircuit": "Lidhni të dyja elektrodat me tel nëpërmjet galvanometrit dhe zhytini në tretësirën elektrolite.",
+    "narrConnectOn": "Mbyllni qarkun dhe vëzhgoni nëse shifra e galvanometrit shmang.",
+    "narrSetupConduct": "Lidhni tretësira me përqendrim të njëjtë secilën veç e veç në qarkun me elektrodë dhe llambë.",
+    "narrConductTest": "Mbyllni qarkun dhe krahasoni ndriçimin e llambës në secilën tretësirë.",
+    "narrSetupGeneric": "Lidhni elektrodat dhe burimin/instrumentet matëse sipas diagramit të qarkut, pastaj zhytini elektrodat në elektrolitin.",
+    "narrRigOn": "{verb}，vëzhgoni me kujdes ndryshimet te elektrodat dhe instrumentet.",
+    "verbElectrolysis": "Lidhni burimin DC dhe filloni elektrolizën",
+    "verbCircuit": "Mbyllni qarkun",
+    "narrTake": "Merrni {reagent} dhe shtojeni në {vessel}.",
+    "narrHeat": "Ndizni llambën me alkool për të ngrohur {vessel} — ky reaksion kërkon ngrohje.",
+    "narrMixHeated": "Pas ngrohjes, përzieni mirë reagentët; reaksioni fillon menjëherë.",
+    "narrMix": "Përzieni mirë reagentët në {vessel}; reaksioni fillon menjëherë.",
+    "electrodesFading": "; ngjyra blu e tretësirës zbëhet gradualisht",
+    "brine": "ujë i kripur",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Skema e shpjegimit të eksperimentit",
+    "outlineHint": "Pasi të hyni në bankën e laboratorit, klikoni «Shpjegim ▶» për demonstrim automatik hap pas hapi.",
+    "cardTitle": "Shpjegim i eksperimentit",
+    "askTutorButton": "Kërkoji tutorit të shpjegojë këtë hap",
+    "sentenceJoin": " ",
+    "voiceFemale": "Zë femëror ♀",
+    "voiceMale": "Zë mashkullor ♂",
+    "sentenceEnd": ".",
+    "noVoice": "Nuk ka zë për këtë gjuhë; shpjegimi do të avancohet automatikisht sipas titrave.",
+    "narrTake_beaker": "Merr {reagent} dhe shto në gotë.",
+    "narrTake_tube": "Merr {reagent} dhe shto në epruvetë.",
+    "narrTake_flask": "Merr {reagent} dhe shto në kolb.",
+    "narrHeat_beaker": "Ndiz llambën e alkoolit për të ngrohur gotën — kjo reaksion mund të ndodhë vetëm në kushte ngrohjeje.",
+    "narrHeat_tube": "Ndiz llambën e alkoolit për të ngrohur epruvetën — kjo reaksion mund të ndodhë vetëm në kushte ngrohjeje.",
+    "narrHeat_flask": "Ndiz llambën e alkoolit për të ngrohur kolbin — kjo reaksion mund të ndodhë vetëm në kushte ngrohjeje.",
+    "narrMix_beaker": "Përziej mirë reagentët në gotë — reaksioni fillon menjëherë.",
+    "narrMix_tube": "Përziej mirë reagentët në epruvetë — reaksioni fillon menjëherë.",
+    "narrMix_flask": "Përziej mirë reagentët në kolb — reaksioni fillon menjëherë."
+  },
+  "locale": {
+    "switchLabel": "Ndrysho gjuhën e ndërfaqes",
+    "searchPlaceholder": "Kërko gjuhë…",
+    "noMatch": "Asnjë gjuhë nuk u gjet",
+    "groupFull": "Gjuhë kryesore",
+    "groupBasic": "Gjuhë të tjera",
+    "groupBasicHint": "Përmban përmbajtje të plotë laboratorike dhe komentim zanor; teksti është i përkthyer automatikisht"
+  },
+  "nav": {
+    "catalog": "Biblioteka e eksperimenteve",
+    "sessions": "Seancat e mia",
+    "home": "Kryefaqja"
+  },
+  "op": {
+    "stir": {
+      "label": "Trazim",
+      "effect": "Trazoni me shkopin qelqi; substanca tretet më shpejt dhe përzihet më njëtrajtësisht",
+      "hint": "Trazimi përshpejton tretshmërinë dhe transferimin e nxehtësisë, duke barazuar përqendrimin lokal për lexime përfaqësuese"
+    },
+    "shake": {
+      "label": "Tundja",
+      "effect": "Tundeni mirë; reagentët vijnë në kontakt të plotë",
+      "hint": "Lëngu në epruvetë është i paktë — përzieni duke tundur (jo duke trazuar); mbani kapakun larg njerëzve"
+    },
+    "heat": {
+      "label": "Ngrohje",
+      "effect": "Ndizet llamba me alkool për ngrohje, temperatura e sistemit rritet",
+      "hint": "Shumica e reakcioneve shpejtohen me rritjen e temperaturës; reakcionet endotermike kërkojnë ngrohje të vazhdueshme"
+    },
+    "cool": {
+      "label": "Ftohje",
+      "effect": "Hiqet burimi i nxehtësisë dhe sistemi ftohet natyrshëm, temperatura bie",
+      "hint": "Ftohja ul tretshmërinë dhe është hap standard për kristalizim dhe mbledhjen e produktit"
+    },
+    "settle": {
+      "label": "Qëndrim",
+      "effect": "Lihet të qëndrojë një moment; precipitati sedimenon dhe shtresat e lëngut bëhen më të qarta",
+      "hint": "Precipitimi dhe shtresëzimi kërkojnë kohë; vetëm pas qëndrimit mund të gjykohet nëse tretësira e sipërme është e pastër"
+    },
+    "read": {
+      "label": "Lexim",
+      "effect": "Regjistrohet leximi aktual",
+      "hint": "Lexohet me sy paralel me shkallën; çdo lexim duhet regjistruar në tabelën e të dhënave për të llogaritur mesataren dhe gabimin"
+    }
+  },
+  "quant": {
+    "verdictGood": "Konsistenca e të dhënave është e mirë, mund të përdoren për llogaritje",
+    "verdictFair": "Devijimi është i madh; kontrolloni këndvështrimin e leximit dhe stabilitetin e sistemit",
+    "verdictPoor": "Devijimi është shumë i madh; gjeni shkakun dhe përsëritni matjet paralele",
+    "meanPh": "pH mesatar",
+    "meanTemp": "Temperatura mesatare",
+    "meanVolume": "Volumi mesatar",
+    "group": "Grupi {no}",
+    "readings": "{count} lexime",
+    "finalGroup": "Përfundimi bazohet në këtë grup",
+    "singleReading": "Vetëm 1 matje; devijimi relativ nuk mund të llogaritet (standardet kërkojnë të paktën 2 matje paralele)",
+    "worstDeviation": "Devijimi maksimal relativ mesatar {value}%",
+    "groupNote": "Çdo herë që sistemi merret, përzihet ose ngrohet hapet një grup i ri; leximet nga grupe të ndryshme nuk përbëjnë matje paralele dhe llogariten veçmas.",
+    "noReadings": "Në këtë eksperiment nuk u regjistrua asnjë matje me operacionin «Lexim»; mesatarja dhe devijimi relativ nuk mund të llogariten. Eksperimentet sasiore kërkojnë të paktën 2 lexime të përsëritura në të njëjtin gjendje të sistemit."
+  },
+  "report": {
+    "conclusion": "Përfundimi i eksperimentit",
+    "errorAnalysis": "Analiza e gabimeve",
+    "improvements": "Sugjerime për përmirësim",
+    "noImprovements": "Nuk ka sugjerime për përmirësim.",
+    "knowledge": "Vlerësimi i njohurive",
+    "empty": "（Pa ka përmbajtje）",
+    "measurements": "Leximet e matjes",
+    "quantData": "Të dhëna sasiore",
+    "noMeasurements": "Nuk u regjistrua asnjë lexim gjatë këtij eksperimenti.",
+    "generating": "AI po analizon të dhënat e eksperimentit…",
+    "regenerate": "Rigjeneroni raportin",
+    "generate": "Gjenero raportin e eksperimentit",
+    "generateFailed": "Gjenerimi dështoi ({status})",
+    "notGenerated": "Raporti nuk është gjeneruar ende. AI do të japë përfundime, analizë gabimesh, sugjerime përmirësimi dhe vlerësim zotërimi bazuar në hapat dhe leximet e këtij eksperimenti.",
+    "noActivity": "Ky eksperiment nuk ka asnjë veprim të regjistruar; raporti nuk mund të gjenerohet për momentin.",
+    "backToLab": "Kthehu në bankë dhe provo vetë →",
+    "title": "Raport eksperimenti",
+    "generatedAt": "Gjeneruar në {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Ndiz energjinë",
+      "off": "Fik energjinë"
+    },
+    "cell": {
+      "on": "Mbyll qarkun",
+      "off": "Hap qarkun"
+    },
+    "flameTest": {
+      "on": "Ndiz llambën me alkool",
+      "off": "Fik llambën me alkool"
+    },
+    "waterBath": {
+      "on": "Fillo ngrohjen me banjë uji",
+      "off": "Ndalo ngrohjen me banjë uji"
+    },
+    "distillation": {
+      "on": "Fillo distilimin",
+      "off": "Ndalo distilimin"
+    },
+    "filtration": {
+      "on": "Fillo filtrimin",
+      "off": "Ndalo filtrimin"
+    },
+    "calorimeter": {
+      "on": "Fillo përzierjen dhe matjen e temperaturës",
+      "off": "Ndalo përzierjen"
+    },
+    "gasCollect": {
+      "on": "Fillo mbledhjen e gazit",
+      "off": "Ndalo mbledhjen"
+    },
+    "titration": {
+      "on": "Hap rubinetin për titrim",
+      "off": "Mbyll rubinetin"
+    },
+    "syringe": {
+      "on": "Shtyp pistonin për presion",
+      "off": "Tërhiq pistonin për të ulur presionin"
+    },
+    "phMeter": {
+      "on": "Hap pH-metrin",
+      "off": "Mbyll pH-metrin"
+    },
+    "evaporation": {
+      "on": "Ndiz llambën e alkoolit për avullim",
+      "off": "Fik llambën e alkoolit"
+    },
+    "pressureDrop": {
+      "on": "Shtrëngon kapakun dhe tund",
+      "off": "Lëshon kapakun"
+    },
+    "heat": {
+      "on": "Ndiz llambën e alkoolit për ngrohje",
+      "off": "Ndalo ngrohjen"
+    }
+  },
+  "sessions": {
+    "title": "Seancat e mia",
+    "subtitle": "Shiko historikun e eksperimenteve dhe hap raportet përkatëse",
+    "unknownExperiment": "Eksperiment i panjohur",
+    "completed": "Përfunduar",
+    "inProgress": "Në progres",
+    "startedAt": "Filluar më {time}",
+    "viewReport": "Shiko raportin"
+  },
+  "shelf": {
+    "title": "Rafti i reagentëve",
+    "taken": "Marrë {dose} {unit}",
+    "takeSome": "Piko / merr sasi të përshtatshme",
+    "take": "Merr {unit}",
+    "specIndicator": "Tregues",
+    "specGas": "Gaz",
+    "specBulk": "Merr sasi të përshtatshme",
+    "specSolution": "Tretësirë",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Lëng i pastër ρ={density} g/mL",
+    "specLiquid": "Lëng",
+    "specSolid": "Solid për analizë"
+  },
+  "site": {
+    "title": "ChemAIForge · Laboratori Virtual i Kimisë me AI",
+    "description": "Kryej eksperimente kimike në shfletues: tërhiq reagentë, vëzhgo reaksionet, merr udhëzime nga tutori AI dhe gjenero automatikisht raporte eksperimentesh."
+  },
+  "titration": {
+    "stopcock": "Hapja e rubinettit",
+    "buretteReading": "Leximi i buretës",
+    "phMeter": "pH-metri",
+    "unfilled": "Pa mbushur",
+    "strongBase": "Bazë e fortë",
+    "weakBase": "Bazë e dobët · zonë ndryshimi ngjyre",
+    "nearNeutral": "Afër neutrales",
+    "acidExcess": "Acid · tepricë",
+    "endpointOk": "Pikë ekuivalence e saktë",
+    "overshoot": "Sasi e shtuar tepër",
+    "notYet": "Ende pa arritur pikën (rozë e papërzier)",
+    "justFaded": "Sapo u zbeh",
+    "keyPoints": "Pikat kryesore të procedurës",
+    "takeAnalyte": "Merr fillimisht tretësirën analite →",
+    "dragStopcock": "← Tërhiq rubinetin për të filluar titrimin",
+    "openness": "Hapja {pct}% · mbaj dhe tërhiq majtas-djathtas"
+  },
+  "tutor": {
+    "placeholder": "Shkruaj pyetjen tënde…",
+    "replying": "Duke u përgjigjur…",
+    "send": "Dërgo",
+    "unknownError": "Gabim i panjohur",
+    "requestFailed": "Kërkesa dështoi ({status})",
+    "askHeat": "Pasi përziva reagentët, nuk vërejta asnjë dukuri. Udhëzimi thotë se ky reaksion kërkon ngrohje. Shpjego pse ky reaksion duhet të kryhet domosdoshmërisht në kushte ngrohjeje.",
+    "askObserved": "Sapo vërejta reaksionin {equation}{phenomena}. Mund të shpjegosh çfarë ndodhi dhe cili është parimi shkencor?",
+    "phPrecipitate": "formohet precipitat",
+    "phGas": "lirohet gaz",
+    "phColor": "ndodh ndryshim ngjyre",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "Tutori AI i Laboratorit",
+    "empty": "Më pyet në çdo moment, ose do të jap sugjerime automatikisht pasi të aktivizosh një reaksion në kanavacë."
+  },
+  "workbench": {
+    "view2d": "Skemë 2D",
+    "view3d": "Tryezë 3D",
+    "view3dRefined": "Tryezë 3D ★",
+    "sceneHint": "Tërhiq për të rrotulluar · Rrotë për të zmadhuar"
+  }
+}

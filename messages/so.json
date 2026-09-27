@@ -1,0 +1,442 @@
+{
+  "lesson": {
+    "sentenceJoin": " ",
+    "prev": "Talaabadii hore",
+    "pause": "Jooji",
+    "play": "Bilow",
+    "next": "Talaabada xigta",
+    "voiceOn": "Shid sharaxaada codka",
+    "voiceOff": "Damee sharaxaada codka",
+    "muted": "🔇 Cod la daminay",
+    "askTutor": "Sharax talaabada “{title}”: {narration} Iyada oo lagu tiirsan waxa hadda ku jira koobka iyo akhriska, si kooban u sharax mabaadi'da kiimikada iyo macaamiilada.",
+    "phase": {
+      "theory": "Mabda'a",
+      "prep": "Diyaarinta",
+      "operate": "Hawlgalka",
+      "observe": "Daahfurka",
+      "conclude": "Gabagabada"
+    },
+    "voiceLabel": "🔊 Sharaxaada Codka",
+    "vesselBeaker": "Koob shaybaarka",
+    "vesselTube": "Tuubada tijaabada",
+    "vesselFlask": "Dhalada Koonikal",
+    "observeGeneric": "Si taxadar leh u baadh nidaamka, oo u fiirso haddii ay jiraan wax is-beddelaya oo midab, xumbaaro, ama heer-kulka ah.",
+    "observeReacting": "Falcelinta ayaa socda — u fiirso isbedelada akhriska pH iyo heer-kulka.",
+    "phenomenaList": "Waxaa la arki karaa {parts}.",
+    "partGas": "xumbaaro si joogto ah uga baxaysa",
+    "partPrecipitate": "dareeraha ayaa daahnaanta galay oo rasaab soo baxay",
+    "partColor": "midabka dareeraha ayaa si cad u bedeladay",
+    "partExo": "xagga kale kulaylka ayaa la sii daayay oo heer-kulku kacay",
+    "partEndo": "xagga kale kulaylka ayaa la nuugay oo heer-kulku hoos u dhacay",
+    "titlePrinciple": "Mabda'a Tijaabada",
+    "titleSummary": "Kooban Tijaabada",
+    "titleConnect": "Xidid Qalabka",
+    "titleConnectCircuit": "Xidid Wareegga Korontada",
+    "titlePowerOn": "Fur Korontada",
+    "titleConnectOn": "Xidid Wareegga",
+    "titleConductTest": "Tijaabi Gudbinta",
+    "titleElectrodes": "Dhacdooyinka Laba-daraawiishta",
+    "titleConductCompare": "Barbardhig Gudbinta Korontada",
+    "titleTake": "Qaado {reagent}",
+    "titleHeat": "Shid Laambadda Kohol",
+    "titleMix": "Iskudar Falcelinta",
+    "titleObserve": "Baadh Dhacdooyinka",
+    "summary": "Tijaabadan iyada oo la adeegsanayo, waad {objectives}.",
+    "narrSetupElectrode": "Geli daraawiishta dareeraha korontada-kala-saarka, oo xid mid walba tallaabada positive iyo negative ee ilo-korontada tooska ah.",
+    "narrPowerOn": "Fur ilo-korontada tooska ah si aad u bilowdo elektrolisis-ka — u fiirso isbedelada laba-daraawiishta.",
+    "narrSetupCircuit": "Xidid laba daraawiishta adigoo galanometer-ka u isticmaalaya xadhig, ka dibna geli dareeraha elektrolite-ka.",
+    "narrConnectOn": "Xidid wareegga, oo eeg haddii tilmaamaha galanometer-ku uu qaloociyo.",
+    "narrSetupConduct": "Xidid xalal isku-dhegan oo xoogana leh mid walba wareeg korontada oo leh laambad.",
+    "narrConductTest": "Xidid wareegga, oo barbardhig iftiinka laambadaha ku jira xalalka kala duwan.",
+    "narrSetupGeneric": "Raac sawir-wareegga si aad u xidid daraawiishta iyo ilo-korontada / aaladaha cabbirka, ka dibna geli elektrolite-ka.",
+    "narrRigOn": "{verb}，fiiri si taxadar leh isbeddelka labada qudhac iyo qalabka cabbirka.",
+    "verbElectrolysis": "Xidh il-korontada toosan, bilow elektrolisiska",
+    "verbCircuit": "Xidh wareegga korontada",
+    "narrTake": "Qaado {reagent}, ku dar {vessel}.",
+    "narrHeat": "Shid laambada kohol si aad {vessel} u kulayso — falcelintani waxay u baahataa xaalad kuleyl.",
+    "narrMixHeated": "Kadib kuleylka, walaaq reagents-ka si buuxda; falcelinta ayaa isla markiiba bilaabata.",
+    "narrMix": "Walaaq reagents-ka ku jira {vessel} si buuxda; falcelinta ayaa isla markiiba bilaabata.",
+    "electrodesFading": "；midabka buluuga ah ee xalka ayaa si tartiib ah u baaba'aya",
+    "brine": "Biyo cusbo",
+    "joinComma": "،",
+    "joinSemicolon": "؛",
+    "outlineTitle": "Khulaasaha Sharraxaadda Tijaabada",
+    "outlineHint": "Marka aad gasho miiska tijaabada, guji “Sharraxaadda Tijaabada ▶” si aad u aragtid muujinta talaabo-tallaabo.",
+    "cardTitle": "Sharraxaadda Tijaabada",
+    "askTutorButton": "Macallinka ha sharxo talaabodan",
+    "sentenceEnd": ".",
+    "voiceFemale": "Codka Dumarka ♀",
+    "voiceMale": "Codka Ragga ♂",
+    "noVoice": "Luqaddani codla ma laha, sharaxaadda waxay si toos ah u socon doontaa qoraalka hoose.",
+    "narrTake_beaker": "Qaado {reagent}, ku dar koobka shaybaarka.",
+    "narrTake_tube": "Qaado {reagent}, ku dar tuubada tijaabada.",
+    "narrTake_flask": "Qaado {reagent}, ku dar flaskiga.",
+    "narrHeat_beaker": "Shid laambadda kohol si aad koobka shaybaarka u kululeyso — falcelinta waxay u baahan tahay kulaylka si ay u dhacdo.",
+    "narrHeat_tube": "Shid laambadda kohol si aad tuubada tijaabada u kululeyso — falcelinta waxay u baahan tahay kulaylka si ay u dhacdo.",
+    "narrHeat_flask": "Shid laambadda kohol si aad flaskiga u kululeyso — falcelinta waxay u baahan tahay kulaylka si ay u dhacdo.",
+    "narrMix_beaker": "Si fiican u walaaq maadooyinka ku jira koobka shaybaarka; falcelinta ayaa markiiba bilaabata.",
+    "narrMix_tube": "Si fiican u walaaq maadooyinka ku jira tuubada tijaabada; falcelinta ayaa markiiba bilaabata.",
+    "narrMix_flask": "Si fiican u walaaq maadooyinka ku jira flaskiga; falcelinta ayaa markiiba bilaabata."
+  },
+  "a11y": {
+    "skipToMain": "U bax qaybta ugu muhiimsan"
+  },
+  "catalog": {
+    "title": "Maktabadda Tijaabada",
+    "empty": "Tijaaboyin buuxiya shuruudaha lama helin.",
+    "searchPlaceholder": "Raadi magaca tijaabada…",
+    "searchLabel": "Raadi tijaabada",
+    "filterCategory": "Shaandee qaybta",
+    "allCategories": "Dhammaan qaybaha",
+    "filterDifficulty": "Shaandee heerka adkeysiga",
+    "allDifficulties": "Dhammaan heerarka",
+    "objectives": "Yoolalka tijaabada",
+    "reagents": "Maadooyinka loo baahan yahay",
+    "apparatus": "Qalabka loo baahan yahay",
+    "subtitle": "Dooro tijaaabo, ka dibna gal shaybaadka farsamada si aad u bilowdo.",
+    "estimatedMinutes": "Qiyaastii {minutes} daqiiqo",
+    "startLab": "Bilow tijaabada →"
+  },
+  "category": {
+    "ACID_BASE": "Falcelinta aashitada iyo xaaladda",
+    "ORGANIC": "Kiimikada dabiiciga ah",
+    "THERMODYNAMICS": "Thermodynamics",
+    "REDOX": "Oksidaynta iyo yaraynta",
+    "PRECIPITATION": "Kala-dhicidda falcelinta",
+    "GAS": "Diyaarinta gaaska",
+    "ELECTROCHEM": "Kiimikada korontada",
+    "METAL": "Firfircoonaanta biraha",
+    "ANALYSIS": "Falanqaynta iyo xaqiijinta",
+    "COORDINATION": "Midabaynta xiriirka"
+  },
+  "chart": {
+    "temperature": "Heerkulka",
+    "ph": "pH",
+    "volume": "Xajmiga",
+    "ariaLabel": "Jaantusta {label} oo isbedelaysa waqtiga, hadda {value}",
+    "measureAria": "Jaantusta khadadka wax-cabbirka ee isbedelaya waqtiga, wadarta {count} akhrinta, pH 0 ilaa 14, heerkulka 0 ilaa 100 ℃",
+    "title": "Jaantaha Habsocodka",
+    "current": "Hadda",
+    "peak": "Xadka Sarreeya",
+    "samples": "Muunad {count} dhibic",
+    "channelTemp": "Heerkulka",
+    "channelPh": "pH",
+    "channelVolume": "Xajmiga",
+    "empty": "Marka hawsha bilowdo, jaantaha isbeddelka wakhtiga ayaa halkan ka muuqan doona"
+  },
+  "dataTable": {
+    "title": "Jadwalka Diiwaangelinta Xogta",
+    "emptyHint": "Riix «Akhrinta» si aad u diiwaangeliso cabbirka",
+    "recorded": "Kooxdani waxay diiwaangelisay {count} jeer",
+    "recordedNeedMore": "Kooxdani waxay diiwaangelisay {count} jeer (kala-cabbiraadda parallel-ka ah waa in ay ahaataa ugu yaraan 2 jeer)",
+    "emptyBody": "Tijaabada miisaanka ah waxay u baahan tahay cabbirro dib-u-celceliyey; mar kasta oo aad riixdo «Akhrinta» waxaa halkan ku hadhaya hal saf.",
+    "colIndex": "Lambarka",
+    "colTime": "Waqtiga / s",
+    "colTemperature": "Heerkulka / ℃",
+    "colPh": "pH",
+    "colVolume": "Xajmiga / mL",
+    "rowMean": "Celceliska Kooxda",
+    "rowDeviation": "Kala-duwanaanshaha Xigmadeed",
+    "worstDeviation": "Kala-duwanaanshaha ugu weyn {value}%:",
+    "verdictGood": "Xogtu waa isku mid, waana loo isticmaali karaa xisaabinta.",
+    "verdictFair": "Kala-duwanaanshahu wuu weynaaday; hubi in aragga akhrinta uu la siman yahay calaamadda miisaanka iyo in nidaamku uu xasilloonaaday.",
+    "verdictPoor": "Kala-duwanaanshahu aad buu u weynaaday; u baahan tahay in sabab la ogaado ka hor inta aan dib loo samayn cabbiraadda parallel-ka ah — ha toos u qaadin celceliska."
+  },
+  "deck": {
+    "readings": "Akhrinta Qalabka Miiska Tijaabada",
+    "temperature": "Heerkulka",
+    "volume": "Xajmiga",
+    "ph": "pH",
+    "operations": "Hawlaha Tijaabada",
+    "needReagent": "Marka hore qaado daawada loo baahan yahay",
+    "inOrder": "Raac tillaabada hab-raacda ah"
+  },
+  "device": {
+    "glassware": "Qalabka birta ee shaybaarka",
+    "electrolysisCell": "Unugga elektrolaysis",
+    "galvanicCell": "Batarida galvaanic",
+    "flameTest": "Qalabka tijaabada olole",
+    "gasCollection": "Qalabka uruurinta gaaska (biyaha)",
+    "gasDelivery": "Qalabka gaarsiinta gaaska",
+    "conductivity": "Barbardhig awoodda maraynta xalka",
+    "strongBright": "Xoog · Iftiiman",
+    "weakDim": "Daciif · Xoogaa ifaya",
+    "nonNone": "Wax · Ma ifayo"
+  },
+  "difficulty": {
+    "EASY": "Bilowga",
+    "MEDIUM": "Horumarsan",
+    "HARD": "Caqabadda"
+  },
+  "electro": {
+    "conductivityDesc": "Barbardhig awoodda maraynta xalka hal xooggan (iftiinka nalka ayaa muujinaya cufnaanta ionka).",
+    "conductivityActive": "Baaritaan koronto ah: Nalka sii iftiimaaya, awoodda marayntu waa sii xoog badan",
+    "conductivityIdle": "Guji “Baaritaanka koronta” si aad u barbardhigto awoodda maraynta xalalkasta",
+    "conductivityOn": "💡 Baaritaanka koronta",
+    "powerOff": "Jooji koronta",
+    "electrolyteInert": "Dareeraha elektrolaysis: {name} ({formula}) · Anoodka dayacsan (kaarboon)",
+    "electrolyteActive": "Dareeraha elektrolaysis: {name} ({formula}) · Anoodka firfircoon (naxaas)",
+    "electrolysisActive": "Elektrolaysis socda…",
+    "electrolysisIdle": "Guji “Koronto” si aad u bilowdo elektrolaysis, eeg waxa dhacaya labada cirifba",
+    "copperFading": "Xalka: Midabka buluugga ah ayaa si tartiib ah u engegaya (ionka naxaasta waa la isticmaalayaa)",
+    "powerOn": "⚡ Koronto",
+    "brine": "Biyo cusbo ah",
+    "electrolyte": "Elektrolayit: {name}",
+    "cellActive": "Wareegga waa la xiday, meesha galvanometerka waa leexatay, batarida waxay bixinaysaa koronto…",
+    "cellIdle": "Guji “Xid wareegga” si aad u aragto leexashada galvanometerka iyo waxa dhacaya labada cirifba",
+    "cellOn": "🔌 Xid wareegga",
+    "cellOff": "Xidid wareegga",
+    "cathode": "Kaatood (−)",
+    "anode": "Aanood (＋)",
+    "negative": "Qudhunta taban",
+    "positive": "Qudhunta togan"
+  },
+  "errors": {
+    "noActivity": "Tijaabadan waxba lagu diiwaangelinin weli. Samee hawl shaybaarka ka hor inta aanad warbixinta soo saarin.",
+    "reportFailed": "Warbixinta soo saarka ayaa fashilantay",
+    "tutorUnavailable": "Adeegga macallinka AI wuu kacsanyahay",
+    "unknown": "Cilad aan la garanayn"
+  },
+  "home": {
+    "labTitle": "Shaybaarka Isdhexgalka",
+    "labDesc": "Geli daawooyin kujbaha, matoorka falcelinta wuxuu isla markiiba go'aamiyaa midabka, xumbaynta, ururinta iyo isbeddelka heerkulka — waxa aad aragto ayaad helaysaa.",
+    "tutorTitle": "Macallin AI ah oo Shaybaarka ah",
+    "tutorDesc": "Xilligan kasta su'aalo ka weydii mabaadiiga iyo hawlgalka. Markaad falcelin muhiim ah ku kiciso xariiqa, macallinka ayaa si firfircoon sharaxaad iyo ogeysiis ammaan ku siin doona.",
+    "reportTitle": "Warbixin Shaybaar oo Caqli-gal ah",
+    "reportDesc": "Waxay urursaa dhammaan xogta tijaabada oo dhan, si toos ah u abuurta gabagabada, falanqaynta cilladaha, talooyin horumar ah iyo qiimeynta xogta muhiimka ah.",
+    "badge": "Shaybaar Kiimikaa Xun oo AI u Waddo",
+    "heroLine1": "Browser-ka ku jira",
+    "heroLine2": "Samel tijaabooyin kiimikaa dhabta ah",
+    "heroDesc": "Jiid daawooyin, u dajiso midabka iyo xumbaynta, xilligan kasta macallinka AI weydii, oo tijaabada dhamaadkeedii warbixin dhisan si toos ah u soo saarto. {count} tijaabo xaqiijisan, amaan oo dib loo celin karo.",
+    "ctaCatalog": "Aad maktabadda tijaabada →",
+    "ctaSessions": "Kulanka Aniga"
+  },
+  "lab": {
+    "mix": "Falcelinta Isku-dhafka",
+    "reset": "Madaxi weelka",
+    "clear": "Nadiifi",
+    "complete": "Dhamee Tijaabada",
+    "completed": "Tijaabada waa la dhammeeyay",
+    "viewReport": "Arag Warbixinta Tijaabada →",
+    "removeItem": "Riix si aad u saarto",
+    "conditions": "Xaalada Nidaamka",
+    "temperature": "Heerkulka Nidaamka",
+    "reagentShelf": "Rafdaha Walxaha",
+    "apparatusList": "Qalabka Shaybaarka",
+    "emptyContainer": "Dooro tirada dhanka rafdaha bidix, ama jiid walxaha halkan",
+    "absorbent": "Dareeraha Nuugista",
+    "apparatus": "Qalabka",
+    "addReagent": "Kudar {name}",
+    "removeReagent": "Ka saar {name}",
+    "mixAction": "Isku dar",
+    "backToDetail": "← Ku laabo faahfaahinta tijaabada",
+    "backToCatalog": "← Ku laabo maktabadda tijaabada",
+    "labSuffix": "Miiska Shaybaarka",
+    "labHint": "Guji ama jiid walxaha koobka, “Isku-darida falcelinta” si aad u daagtid; ama isticmaal “Sharaxaada tijaabada” si talaabo-talaabow ah."
+  },
+  "locale": {
+    "switchLabel": "Beddel luqadda xaaladda",
+    "searchPlaceholder": "Raadi luqad…",
+    "noMatch": "Luqad la mid ah lama helin",
+    "groupFull": "Luuqadaha Ugu Muhiimsan",
+    "groupBasic": "Luuqadaha Kale",
+    "groupBasicHint": "Waxa ku jira waxyaabaha tijaabada oo dhamays tiran iyo sharaxaadda codka, tarjumaadda waa turjumaad mashiin"
+  },
+  "nav": {
+    "catalog": "Maktabadda Tijaabada",
+    "sessions": "Kulammadayda",
+    "home": "Bogga Hore"
+  },
+  "op": {
+    "stir": {
+      "label": "Walaaq",
+      "effect": "Ku walaaq ul dhalo ah; tuurka ayaa si dhakhso ah u milmaya oo khaladaadka si siman u kala baxa",
+      "hint": "Walaaqista waxay dedejisaa milmida iyo wareejinta kulaylka, sidoo kale waxay siman kartaa xoogga maxalliga ah si akhriska uu matalo dhamaan xalka"
+    },
+    "shake": {
+      "label": "Gaari",
+      "effect": "Gaari si aad u walaaqdo; reagents-ku waxay si buuxda isugu xidaan",
+      "hint": "Dareeraha tuubada yar ayaa lagu xoqaa (ma xoqin) si loo isku daro; hays afka tuubada meel aan qof ku jirin"
+    },
+    "heat": {
+      "label": "Kululee",
+      "effect": "Shid laambadda kaluunka si aad u kululeysid; heerkulka nidaamku wuu kororaa",
+      "hint": "Kululayntu waxay dheereysaa xawaaraha falcelinta badankeeda; falcelinta nuugta kulaylka waa in si joogto ah loo kululeeyo"
+    },
+    "cool": {
+      "label": "Qabooji",
+      "effect": "Ka saar isha kulaylka; nidaamku si dabiici ah ayuu u qaboojaa",
+      "hint": "Qaboojintu waxay hoos u dhigtaa xallinimada; tani waa tallaabada caadiga ah ee kiriistaalka ka bixi iyo ururinta badeecada"
+    },
+    "settle": {
+      "label": "Degsiimo",
+      "effect": "Deg muddo yar; waxyaabooyinka hoos u dhacaya way degan yahay, lakabyaduna si cad ayay u kala qaybsamaan",
+      "hint": "Hoos u dhaca iyo kala qaybsanaanta waxay u baahan yihiin waqti; ka dib degsiimodda keliya ayaa la xukumi karaa in dareeraha sare ee saafi u yahay"
+    },
+    "read": {
+      "label": "Akhri",
+      "effect": "Duubi akhrinta hadda",
+      "hint": "Indhaha la soo waajah calaamadaha; geli akhrinta kasta jadwalka xogta si loo xisaabiyo celceliska iyo khaladaadka"
+    }
+  },
+  "quant": {
+    "verdictGood": "Isku-xigxiga xogtu waa wanaagsan tahay, waxa loo isticmaali karaa xisaabinta",
+    "verdictFair": "Kala duwanaanshaha waa weyn yahay; hubi indhaha akhrinta iyo xaaladda nidaamka",
+    "verdictPoor": "Kala duwanaanshaha aad ayuu u weyn yahay; baadhi sababta ka dibna ku celi qiyaasaha la mid ah",
+    "meanPh": "Celceliska pH",
+    "meanTemp": "Celceliska heerkulka",
+    "meanVolume": "Celceliska cufnaanta",
+    "group": "Koox {no}",
+    "readings": "{count} akhrinto",
+    "finalGroup": "Gabagabadu waxay ku salaysan tahay kooxdan",
+    "singleReading": "1 qiyaas oo kaliya, kala duwanaanshaha xiriirka lama xisaabin karo (xeerka wuxuu u baahan yahay ugu yaraan 2 qiyaas oo la mid ah)",
+    "worstDeviation": "Ugu badan kala duwanaanshaha celceliska xiriirka {value}%",
+    "groupNote": "Mar kasta oo nidaamka laga qaato / lagu daro / loo kululeeyo, koox cusub ayaa la furaa; akhrinnada kooxaha kala duwan kuma aha qiyaasaha la mid ah, sidaas awgeed gaar ayay u xisaabsan yihiin.",
+    "noReadings": "Tijaabadan kuma jirto wax qiyaas ah oo lagu duubay hawlgalka “Akhri”, sidaas awgeed celceliska iyo kala duwanaanshaha xiriirka lama xisaabin karo. Tijaabada tirada ah waxay u baahan tahay in ugu yaraan 2 jeer la akhriyo xaaladda nidaamka oo isku mid ah."
+  },
+  "report": {
+    "conclusion": "Gabagabada Tijaabada",
+    "errorAnalysis": "Falanqaynta Khaladaadka",
+    "improvements": "Talooyinka Horumarinta",
+    "noImprovements": "Weligeed talo horumarineed ma jirto.",
+    "knowledge": "Qiimeynta Fahanka Maadada",
+    "empty": "（Wax la heli waayo）",
+    "measurements": "Akhriska Cabbirka",
+    "quantData": "Xogta Tirakoobka",
+    "noMeasurements": "Tijaabooyinkan ma lagu duwan akhriska.",
+    "generating": "AI waxay falanqeynaysaa xogta tijaabada…",
+    "regenerate": "Dib u soo saara Warbixinta",
+    "generate": "Soo saara Warbixinta Tijaabada",
+    "generateFailed": "Soo saarida waa ku guul-darreysatay ({status})",
+    "notGenerated": "Warbixinta weli lama soo saarin. AI waxay ku saleynaysaa tillaabooyinka hawlgalka iyo akhriska cabbirka ee tijaabadan si ay u bixiso gabagabada, falanqaynta khaladaadka, talooyinka horumarinta, iyo qiimeynta fahanka.",
+    "noActivity": "Tijaabadan ma laha wax diiwaangashan oo hawlgal ah; warbixinta weli lama samayn karo.",
+    "backToLab": "Ku noqo miiska shaybaarka oo tijaabi → ",
+    "title": "Warbixinta Tijaabada",
+    "generatedAt": "Lagu soo saaray {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Fur korontada",
+      "off": "Xidh korontada"
+    },
+    "cell": {
+      "on": "Fur wareegga korontada",
+      "off": "Xidh wareegga korontada"
+    },
+    "flameTest": {
+      "on": "Shid laambadda khamriga",
+      "off": "Dembi laambadda khamriga"
+    },
+    "waterBath": {
+      "on": "Bilow kuleylinta biyo-dhalada",
+      "off": "Jooji kuleylinta biyo-dhalada"
+    },
+    "distillation": {
+      "on": "Bilow cadaynta",
+      "off": "Jooji cadaynta"
+    },
+    "filtration": {
+      "on": "Bilow shaandhaynta",
+      "off": "Jooji shaandhaynta"
+    },
+    "calorimeter": {
+      "on": "Bilow wareejinta iyo cabbirka heerkulka",
+      "off": "Jooji wareejinta"
+    },
+    "gasCollect": {
+      "on": "Bilow uruurinta gaaska",
+      "off": "Jooji uruurinta gaaska"
+    },
+    "titration": {
+      "on": "Fur qulqulka si aad u dhibto",
+      "off": "Xidh qulqulka"
+    },
+    "syringe": {
+      "on": "Cadaadi biyuulaha si aad u kordhiso cadaadiska",
+      "off": "Jiid biyuulaha si aad u dhimiso cadaadiska"
+    },
+    "phMeter": {
+      "on": "Fur qiyaaska pH",
+      "off": "Xidh qiyaaska pH"
+    },
+    "evaporation": {
+      "on": "Shid laambadda kohol si aad u bakhaarisid",
+      "off": "Demi laambadda kohol"
+    },
+    "pressureDrop": {
+      "on": "Xidh xabadda dhagaxa oo gaari",
+      "off": "Fur xabadda dhagaxa"
+    },
+    "heat": {
+      "on": "Shid laambadda kohol si aad u kululeyso",
+      "off": "Jooji kulaylinta"
+    }
+  },
+  "sessions": {
+    "title": "Fadhiyadeeda",
+    "subtitle": "Arag diiwaanka tijaabadaha hore oo gal warbixinta u dhiganta",
+    "unknownExperiment": "Tijaabo aan la garanayn",
+    "completed": "La dhammaystiray",
+    "inProgress": "Socda",
+    "startedAt": "Bilaabay {time}",
+    "viewReport": "Arag warbixinta"
+  },
+  "shelf": {
+    "title": "Raafka daroogooyinka",
+    "taken": "La qaatay {dose} {unit}",
+    "takeSome": "Dhibi / qaado xaddi ku filan",
+    "take": "Qaado {unit}",
+    "specIndicator": "Tilmaamiye",
+    "specGas": "Gaas",
+    "specBulk": "Qaado xaddi ku filan",
+    "specSolution": "Xalaan",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Dareere saafi ah ρ={density} g/mL",
+    "specLiquid": "Dareere",
+    "specSolid": "Adag · Nadiif Falanqayn"
+  },
+  "site": {
+    "title": "ChemAIForge · Shaybaarka Kimistari ee Farsamada AI",
+    "description": "Samee tijaabooyin kimistari browser-ka: jiid reagents, daawo falcelinta, hel hanuuninta macallin AI, una abuuro warbixin tijaabo si otomaatig ah."
+  },
+  "titration": {
+    "stopcock": "Furitaanka Gacanka",
+    "buretteReading": "Akhriska Buret",
+    "phMeter": "Qiyaasaha pH",
+    "unfilled": "Sugaya Raashinka",
+    "strongBase": "Aas Xoog Badan",
+    "weakBase": "Aas Daciif · Gobolka Midab-beddelka",
+    "nearNeutral": "Ku dhow Dhexdhexaadnimada",
+    "acidExcess": "Aasiidig · Xad-dhaafay",
+    "endpointOk": "Dhamaadka Waa Saxsan Yahay",
+    "overshoot": "Xad-dhaafay Dhibcaha",
+    "notYet": "Dhamaadka Weli Lama Gaarin (Casaan-dhalaalayaa Weli)",
+    "justFaded": "Dhaw Ayuu Dhumay",
+    "keyPoints": "Tilmaamaha Hawsha",
+    "takeAnalyte": "Marka hore qaado xalka la tijaabinayo →",
+    "dragStopcock": "← Jiid gacanka si aad u bilawdo titration-ka",
+    "openness": "Furitaanka {pct}% · Riix oo jiid bidix/midig"
+  },
+  "tutor": {
+    "placeholder": "Geli su'aalartaada…",
+    "replying": "Waxaa la jawaabayaa…",
+    "send": "Dir",
+    "unknownError": "Khalad aan la garanayn",
+    "requestFailed": "Codsiga wuu guul-darraystay ({status})",
+    "askHeat": "Kadib markaan reagents-ka isku daray ma ayan arkin wax muuqaal ah; tilmaamaha ayaa leh falcelintani waxay u baahan tahay kuleyl. Fadlan sharax sababta falcelintani ay tahay inay si waajib ah u socoto xaaladaha kuleylka.",
+    "askObserved": "Waxaan hadda arkay falcelinta {equation}{phenomena}, fadlan ii sharax waxa dhacay iyo mabda'a ka dambeeya?",
+    "phPrecipitate": "La Sameeyay Raashin",
+    "phGas": "Gaas La Soo Saaray",
+    "phColor": "Midabka Wuu Beddelay",
+    "listJoin": "、",
+    "eqWrap": "({equation})",
+    "title": "Bare-baraha AI",
+    "empty": "Waxaad i weydiin kartaa wax kasta, ama marka falcelinta ka dhacdo xarunta sawirka ayaan kuu ogeysiinayaa."
+  },
+  "workbench": {
+    "view2d": "Muuqaal 2D",
+    "view3d": "Miiska Shaybaarka 3D",
+    "view3dRefined": "Miiska Shaybaarka 3D ★",
+    "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso"
+  }
+}

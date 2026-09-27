@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 // 导气 → 液体吸收 / 检验装置：左侧发生试管(可加热)经导管把气体通入右侧接收试管的
 // 吸收液中。导管口在液面上方防倒吸；产气时液面有气泡逸出。纯展示组件。
 // 适用：乙酸乙酯(导入饱和碳酸钠)、碳酸盐检验(石灰水)、乙烯/SO₂入溴水等。
@@ -7,7 +9,7 @@
 export function GasDelivery({
   delivering = false,
   hot = false,
-  absorbentLabel = "吸收液",
+  absorbentLabel,
 }: {
   // 是否正在导气（主容器产气时为 true）
   delivering?: boolean;
@@ -16,6 +18,9 @@ export function GasDelivery({
   // 接收瓶液体说明文字
   absorbentLabel?: string;
 }) {
+  const t = useTranslations("lab");
+  // 默认值不能写在参数上：那里取不到 hook
+  const absorbent = absorbentLabel ?? t("absorbent");
   return (
     <svg
       width="220"
@@ -41,8 +46,8 @@ export function GasDelivery({
 
       {/* —— 发生试管（左，倾斜加热）—— */}
       <g transform="rotate(18 70 120)">
-        <path d="M52 60 L52 150 A18 18 0 0 0 88 150 L88 60 Z" fill="rgba(214,238,236,0.18)" stroke="currentColor" strokeWidth="3" className="text-foreground/55" strokeLinejoin="round" />
-        <ellipse cx="70" cy="60" rx="18" ry="5" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
+        <path d="M52 60 L52 150 A18 18 0 0 0 88 150 L88 60 Z" fill="rgba(214,238,236,0.18)" stroke="currentColor" strokeWidth="3" className="text-foreground/65" strokeLinejoin="round" />
+        <ellipse cx="70" cy="60" rx="18" ry="5" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
         {/* 试管内少量液体 */}
         <path d="M54 120 L54 150 A16 16 0 0 0 86 150 L86 120 Z" fill="#e8dfa0" opacity="0.7" />
       </g>
@@ -60,15 +65,15 @@ export function GasDelivery({
       )}
 
       {/* 导管：发生试管口 → 弯折 → 伸入接收试管(导管口在液面上方防倒吸) */}
-      <path d="M92 56 L112 50 L172 50 L172 110" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M92 56 L112 50 L172 50 L172 110" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" strokeLinecap="round" strokeLinejoin="round" />
 
       {/* —— 接收试管（右，竖直，含吸收液）—— */}
       <g clipPath="url(#gd-recv)">
         <rect x="150" y="130" width="44" height="80" fill="url(#gd-absorb)" />
         <ellipse cx="172" cy="130" rx="22" ry="6" fill="#cfe7fb" />
       </g>
-      <path d="M150 96 L150 196 A22 22 0 0 0 194 196 L194 96 Z" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" strokeLinejoin="round" />
-      <ellipse cx="172" cy="96" rx="22" ry="6" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/55" />
+      <path d="M150 96 L150 196 A22 22 0 0 0 194 196 L194 96 Z" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" strokeLinejoin="round" />
+      <ellipse cx="172" cy="96" rx="22" ry="6" fill="none" stroke="currentColor" strokeWidth="3" className="text-foreground/65" />
 
       {/* 导气时：导管口下方液体冒泡 */}
       {delivering &&
@@ -85,7 +90,7 @@ export function GasDelivery({
 
       {/* 吸收液说明 */}
       <text x="172" y="226" textAnchor="middle" fontSize="11" className="fill-foreground/55">
-        {absorbentLabel}
+        {absorbent}
       </text>
     </svg>
   );

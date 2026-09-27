@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getExperimentBySlug } from "@/server/experiments/service";
 import { streamTutorReply, type TutorMessage } from "@/server/ai/tutor";
 import { tutorRequestSchema } from "@/server/ai/validation";
+import { isLocale, SOURCE_LOCALE } from "@/lib/i18n/locales";
+import { errorText } from "@/lib/i18n/errors";
 
 // 将画布状态快照折叠为一行上下文，附加到最后一条用户消息，供导师参考
 function withLabState(
@@ -34,7 +36,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const { experimentSlug, messages, labState } = parsed.data;
+  const { experimentSlug, messages, labState, locale} = parsed.data;
   const experiment = await getExperimentBySlug(experimentSlug);
   if (!experiment) {
     return NextResponse.json({ error: "实验不存在" }, { status: 404 });
@@ -43,6 +45,9 @@ export async function POST(request: Request) {
   // 先获取流式迭代器的首块，以便在正式开流前捕获上游错误并返回 502
   const iterator = streamTutorReply(experiment, {
     messages: withLabState(messages, labState),
+    // 未知语言代码交由 tutor 层按源语言兜底，不在这里 400 —— 
+    // 语言不对只该退化成"换种语言回答"，不该让提问直接失败
+    locale: isLocale(locale ?? "") ? locale : undefined,
   })[Symbol.asyncIterator]();
 
   let first: IteratorResult<string>;
@@ -51,7 +56,7 @@ export async function POST(request: Request) {
   } catch (err) {
     return NextResponse.json(
       {
-        error: "AI 导师服务异常",
+        error: await errorText("tutorUnavailable", isLocale(locale ?? "") ? (locale as string) : SOURCE_LOCALE),
         detail: err instanceof Error ? err.message : String(err),
       },
       { status: 502 },

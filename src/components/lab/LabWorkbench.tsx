@@ -7,12 +7,13 @@ import dynamic from "next/dynamic";
 import { LabCanvas } from "./LabCanvas";
 import { useLabStore } from "./labStore";
 import { has3D } from "./lab3d/registry";
+import { useTranslations } from "next-intl";
 
 // 3D 画布客户端动态加载，关闭 SSR
 const Lab3DCanvas = dynamic(() => import("./lab3d/Lab3DCanvas"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-[440px] items-center justify-center rounded-2xl bg-foreground/5 text-sm text-foreground/40">
+    <div className="flex h-[440px] items-center justify-center rounded-2xl bg-foreground/5 text-sm text-foreground/65">
       正在加载 3D 实验台…
     </div>
   ),
@@ -29,6 +30,7 @@ export function LabWorkbench({
   reagents: string[];
   apparatus: string[];
 }) {
+  const t = useTranslations("workbench");
   // 通用 3D 场景已能按反应引擎结果自动组装现象，故所有实验都提供 3D 视图；
   // registry 登记的是"有专用手写场景"的实验（表现更精细），非 3D 的开关。
   const refined3D = has3D(slug);
@@ -56,7 +58,7 @@ export function LabWorkbench({
                   : "text-foreground/60 hover:text-foreground/90"
               }`}
             >
-              {m === "2d" ? "2D 示意" : refined3D ? "3D 实验台 ★" : "3D 实验台"}
+              {m === "2d" ? t("view2d") : refined3D ? t("view3dRefined") : t("view3d")}
             </button>
           ))}
       </div>

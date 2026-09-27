@@ -79,7 +79,7 @@ function StopcockSlider({ ready, openness, finished, onOpennessChange }: Titrati
         aria-describedby="stopcock-hint"
         className="mt-1.5 w-full accent-brand-500 disabled:opacity-40"
       />
-      <p id="stopcock-hint" className="mt-1 text-[11px] text-foreground/45">
+      <p id="stopcock-hint" className="mt-1 text-[11px] text-foreground/65">
         与 3D 旋塞联动 · 开度越大滴速越快，逐滴控制用 10%～20%
       </p>
     </div>
@@ -99,14 +99,14 @@ function Readings({
   return (
     <div className="grid grid-cols-2 gap-2">
       <div className="rounded-xl border border-foreground/15 bg-surface/70 px-3 py-2">
-        <p className="text-[11px] text-foreground/50">滴定管读数</p>
+        <p className="text-[11px] text-foreground/65">滴定管读数</p>
         <p className="font-mono text-lg tabular-nums">{deliveredMl.toFixed(2)}</p>
-        <p className="text-[11px] text-foreground/40">mL / 共 {TITRATION.buretteCapacityMl}</p>
+        <p className="text-[11px] text-foreground/65">mL / 共 {TITRATION.buretteCapacityMl}</p>
       </div>
       <div className="rounded-xl border border-foreground/15 bg-surface/70 px-3 py-2">
-        <p className="text-[11px] text-foreground/50">pH 计</p>
+        <p className="text-[11px] text-foreground/65">pH 计</p>
         <p className="font-mono text-lg tabular-nums">{ready ? ph.toFixed(2) : "—"}</p>
-        <p className="text-[11px] text-foreground/40">{ready ? phLabel(ph) : "待装液"}</p>
+        <p className="text-[11px] text-foreground/65">{ready ? phLabel(ph) : "待装液"}</p>
       </div>
     </div>
   );
@@ -135,7 +135,7 @@ function Curve({ deliveredMl }: { deliveredMl: number }) {
   const cy = y(phAt(deliveredMl));
   return (
     <div className="rounded-xl border border-foreground/15 bg-surface/70 px-3 py-2">
-      <p className="mb-1 text-[11px] text-foreground/50">滴定曲线（pH — V盐酸）</p>
+      <p className="mb-1 text-[11px] text-foreground/65">滴定曲线（pH — V盐酸）</p>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="滴定曲线">
         <line x1={0} y1={y(7)} x2={W} y2={y(7)} stroke="currentColor" strokeOpacity={0.15} strokeDasharray="3 3" />
         <line x1={x(ve)} y1={0} x2={x(ve)} y2={H} stroke="#f59e0b" strokeOpacity={0.5} strokeDasharray="3 3" />
@@ -144,7 +144,7 @@ function Curve({ deliveredMl }: { deliveredMl: number }) {
         <path d={path} fill="none" stroke="#0ea5e9" strokeWidth={1.6} />
         <circle cx={cx} cy={cy} r={3.4} fill="#e11d48" />
       </svg>
-      <p className="text-[11px] text-foreground/40">粉带为酚酞变色区 · 橙线为等当点</p>
+      <p className="text-[11px] text-foreground/65">粉带为酚酞变色区 · 橙线为等当点</p>
     </div>
   );
 }
@@ -235,7 +235,7 @@ function Verdict({ deliveredMl }: { deliveredMl: number }) {
         {err.toFixed(2)}%
       </p>
       <p className="mt-1">{text}</p>
-      <p className="mt-1 text-foreground/50">
+      <p className="mt-1 text-foreground/65">
         计算式：c(NaOH) = c(HCl)·V(HCl) / V(NaOH) = {TITRATION.titrantConc} × {deliveredMl.toFixed(2)} /{" "}
         {TITRATION.analyteVolumeMl.toFixed(2)}
       </p>

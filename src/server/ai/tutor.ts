@@ -4,6 +4,7 @@
 // streamTutorReply：发起带超时的流式调用，逐块产出文本增量。
 import type { ExperimentDTO } from "@/types/experiment";
 import { getClaudeApiConfig } from "./config";
+import { localeMeta, SOURCE_LOCALE } from "@/lib/i18n/locales";
 
 // 单条对话消息
 export interface TutorMessage {
@@ -16,6 +17,8 @@ export interface TutorContext {
   messages: TutorMessage[];
   maxTokens?: number;
   timeoutMs?: number;
+  /** 回答语言，缺省为源语言（旧调用方行为不变） */
+  locale?: string;
 }
 
 // Claude Messages API 请求体（流式）
@@ -28,6 +31,54 @@ export interface TutorRequestBody {
 }
 
 const DEFAULT_MAX_TOKENS = 1024;
+
+/**
+ * 送往上游的历史消息条数上限。
+ *
+ * 客户端每次提问都把完整对话历史全量重发，而导师的每条回答最多 1024 token。
+ * 更要紧的是画布的「情境提示」会自动提问：学生每触发一次沉淀/气体/变色就多一轮
+ * 完整问答，做十几次混合就攒出十几轮上千字的历史 —— 每轮都全量重发，
+ * 越聊越慢越贵，撑到超过上游请求体上限时导师直接整个哑掉（报错而非降级）。
+ * 报告生成那条链早就做了同类截断（report.ts 的 MAX_PROMPT_ENTRIES），
+ * 导师这条一直漏着。
+ *
+ * 取 20 条（约 10 轮问答）：足够承载一次实验里的连续追问，又不会无界增长。
+ */
+export const MAX_HISTORY_MESSAGES = 20;
+
+/**
+ * 单条消息的字符上限。
+ *
+ * 条数管不住体积：labState 快照会拼到最后一条用户消息上，而恶意或异常的客户端
+ * 可以直接塞一条几 MB 的 content —— 校验只要求 min(1)，没有上限。
+ * 超长时保留头尾（问题的开头与最新的画布状态都在两端），中间用省略标记替代。
+ */
+export const MAX_MESSAGE_CHARS = 8000;
+
+/** 裁掉超长单条消息，保留首尾以免丢掉问题本身与末尾的实验台状态 */
+function truncateContent(content: string): string {
+  if (content.length <= MAX_MESSAGE_CHARS) return content;
+  const keep = Math.floor((MAX_MESSAGE_CHARS - 20) / 2);
+  return `${content.slice(0, keep)}\n…（已省略过长内容）…\n${content.slice(-keep)}`;
+}
+
+/**
+ * 裁剪对话历史：只留最近 MAX_HISTORY_MESSAGES 条，并逐条限制长度。
+ *
+ * Claude Messages API 要求首条必须是 user 角色，从尾部截取可能正好切出一条
+ * assistant 打头的历史 —— 那会被上游直接拒掉，比不截断更糟。故截断后再丢掉
+ * 开头多余的 assistant 条目。
+ */
+export function trimHistory(messages: TutorMessage[]): TutorMessage[] {
+  const tail = messages.slice(-MAX_HISTORY_MESSAGES);
+  let start = 0;
+  while (start < tail.length && tail[start].role !== "user") start += 1;
+  // 全是 assistant 的极端输入：退回原始末条（校验已保证至少一条），
+  // 空 messages 会被上游拒绝，宁可发一条也不发零条。
+  const kept = start < tail.length ? tail.slice(start) : messages.slice(-1);
+  return kept.map((m) => ({ ...m, content: truncateContent(m.content) }));
+}
+
 /**
  * 空闲超时：多久收不到新数据才算卡死，而不是"整段对话的总时长上限"。
  *
@@ -38,7 +89,9 @@ const DEFAULT_MAX_TOKENS = 1024;
 const DEFAULT_TIMEOUT_MS = 30000;
 
 // 构造资深化学导师 system prompt，注入实验标题/目标等上下文
-function buildSystemPrompt(experiment: ExperimentDTO): string {
+// 回答语言跟随界面语言，理由同 report.ts 的 buildSystemPrompt
+function buildSystemPrompt(experiment: ExperimentDTO, locale: string): string {
+  const language = localeMeta(locale).englishName;
   const objectives = experiment.objectives.length
     ? experiment.objectives.map((o, i) => `${i + 1}. ${o}`).join("\n")
     : "（暂无明确目标）";
@@ -46,7 +99,12 @@ function buildSystemPrompt(experiment: ExperimentDTO): string {
 
   return [
     "你是一位资深化学导师，擅长在虚拟实验中循循善诱地引导学生。",
-    "请用简体中文回答，语气专业而鼓励，重视实验安全与科学原理。",
+    // 语言指令要说清两件事，实测只写 "Answer in German" 时模型会先评论一句
+    // 「你用英语提问了，但我应该用德语回答……」再作答 —— 学生看到的第一句话是在议论他的语言。
+    //  1) 学生界面语言是什么；2) 学生可能用任何语言提问，一律用界面语言答、不要提及语言
+    `The student's interface language is ${language}. Always reply in ${language}, regardless of what language the student writes in.`,
+    "Never comment on or mention which language the student used; just answer the question directly.",
+    "语气专业而鼓励，重视实验安全与科学原理。",
     "回答应结合下方实验上下文，必要时提示风险，避免直接给出全部答案，鼓励学生思考。",
     "",
     "【输出格式】请使用 Markdown 组织回答，让内容清晰易读：",
@@ -74,10 +132,11 @@ export function buildTutorPrompt(
   const { model } = getClaudeApiConfig();
   return {
     model,
-    system: buildSystemPrompt(experiment),
+    system: buildSystemPrompt(experiment, context.locale ?? SOURCE_LOCALE),
     max_tokens: context.maxTokens ?? DEFAULT_MAX_TOKENS,
     stream: true,
-    messages: context.messages,
+    // 必须裁剪：客户端全量重发历史，不设上限最终会撑爆上游请求体
+    messages: trimHistory(context.messages),
   };
 }
 

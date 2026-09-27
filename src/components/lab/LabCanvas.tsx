@@ -5,10 +5,13 @@
 // 由 Glassware 按实验仪器以立体 SVG（烧杯/锥形瓶/试管）渲染变色/气泡/沉淀/蒸汽与读数。
 // 反应判定一律委托 src/lib/chem/engine，本组件不含任何反应规则。
 import { useState } from "react";
-import Link from "next/link";
-import type { SubstanceCategory } from "@/lib/chem/engine";
-import { useLabStore } from "./labStore";
+import { useTranslations } from "next-intl";
+import { Link } from "@/lib/i18n/navigation";
+import { totalVolume, useLabStore } from "./labStore";
 import { resolveSubstance } from "./reagents";
+import { ReagentShelf } from "./ReagentShelf";
+import { CATEGORY_COLOR, shelfEntries } from "./shelfEntries";
+import { InstrumentDeck, ReadingHud } from "./InstrumentDeck";
 import { Glassware } from "./Glassware";
 import { GasCollection } from "./GasCollection";
 import { GasDelivery } from "./GasDelivery";
@@ -23,51 +26,28 @@ import {
   usesGasDelivery,
   usesFlameTest,
   isInertAnode,
+  hasHeatSource,
 } from "./vesselGeom";
 // 器皿选型用 3D 与讲解共用的那一份，2D 不再自成一套（否则同一实验切视图会换器皿）
-import { chooseVessel, planRig } from "@/lib/chem/scenePlan";
+import { chooseVessel, planRig, pickFlameSample } from "@/lib/chem/scenePlan";
+// 溶质色表用 3D 共用的那一份（原本这里有个只 13 项的私有副本）
+import { SOLUTION_TINT } from "@/lib/chem/appearance";
 import { electrolyze, isElectrolyte } from "@/lib/chem/electrolysis";
 import { galvanicCell, isGalvanicMetal } from "@/lib/chem/galvanic";
 import { conductivity } from "@/lib/chem/conductivity";
 import { ControlPanel } from "./ControlPanel";
 import { safetyNotes, operationHint } from "./safety";
+import { usePhrase, useTerm, useTerms } from "@/lib/i18n/PhenomenaProvider";
 
 const DRAG_KEY = "application/x-reagent";
 
-// 试剂瓶液体配色：按物质类别给出直观的色彩提示（仅用于界面，与反应无关）
-const CATEGORY_COLOR: Record<SubstanceCategory, string> = {
-  acid: "#f29393",
-  base: "#94b8f0",
-  salt: "#c4d2e0",
-  carbonate: "#dcd4c2",
-  metal: "#b6bec9",
-  oxide: "#e0ad7e",
-  gas: "#d2e7ec",
-  water: "#a9d8f5",
-  indicator: "#e29bdb",
-  oxidizer: "#f1c25e",
-  reducer: "#a3d9aa",
-  organic: "#cadc97",
-  other: "#d3dae1",
-};
+// 试剂瓶类别配色与试剂架条目构造在 shelfEntries.ts，与 3D 视图共用。
 
-// 溶质特征色：常见有色离子 / 物质的真实溶液色泽（仅用于可视化）。
-// 键为化学式，按容器内试剂匹配，混合前即呈现真实色彩。
-const SOLUTION_TINT: Record<string, { top: string; bottom: string }> = {
-  CuSO4: { top: "#7cc0ea", bottom: "#2f7fc7" }, // 硫酸铜·蓝
-  CuCl2: { top: "#7fcadf", bottom: "#2f9bbf" }, // 氯化铜·蓝绿
-  "Cu(NO3)2": { top: "#7cc0ea", bottom: "#2f7fc7" }, // 硝酸铜·蓝
-  FeCl3: { top: "#e0b56a", bottom: "#b9772c" }, // 氯化铁·黄棕
-  "Fe(NO3)3": { top: "#e0b56a", bottom: "#b9772c" },
-  FeCl2: { top: "#bfe0b6", bottom: "#7fbf86" }, // 氯化亚铁·浅绿
-  FeSO4: { top: "#bfe0b6", bottom: "#7fbf86" },
-  KMnO4: { top: "#c08fe0", bottom: "#7a2fb0" }, // 高锰酸钾·紫
-  K2Cr2O7: { top: "#f0b06a", bottom: "#d9722c" }, // 重铬酸钾·橙
-  K2CrO4: { top: "#f5d96a", bottom: "#e0b62c" }, // 铬酸钾·黄
-  I2: { top: "#c9a06a", bottom: "#8a5a2c" }, // 碘·棕
-  CoCl2: { top: "#f0a0b8", bottom: "#d95a82" }, // 氯化钴·粉红
-  NiSO4: { top: "#9fd9a8", bottom: "#4fae5e" }, // 硫酸镍·绿
-};
+// 溶质特征色不在本文件维护：这里原有一份只 13 项的私有副本，
+// 而 appearance.ts 的共用表有 90 多项且 3D 用的就是它。差集里最扎眼的是溴水
+// （Br₂，涉及 12 个实验）—— 橙棕在 2D 里被画成无色澄清，而「溴水褪色」正是
+// 这些实验的全部看点：反应前后都无色，学生什么也看不出来，切到 3D 又是对的。
+// 共计 58 个实验因这份副本在两个视图里颜色不一致。
 
 export function LabCanvas({
   reagents,
@@ -91,14 +71,21 @@ export function LabCanvas({
     reset,
     complete,
   } = useLabStore();
+  const t = useTranslations("lab");
+  const tElectro = useTranslations("electro");
+  const tRig = useTranslations("rig");
+  const phrase = usePhrase();
+  const terms = useTerms();
+  const term = useTerm();
   // 拖拽悬停高亮容器
   const [dragOver, setDragOver] = useState(false);
 
   // 会话绑定已上移到 LabWorkbench（3D 视图下本组件不挂载，放这里会漏），
   // 本组件只负责 2D 画布的呈现与交互。
 
-  // 解析标签并入容器（点击 / 拖拽共用）
-  const pour = (label: string) => addReagent(resolveSubstance(label));
+  // 解析标签并入容器（试剂架 / 拖拽共用）；dose 省略时按规格默认量
+  const pour = (label: string, dose?: number) =>
+    addReagent(resolveSubstance(label), dose);
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     setDragOver(false);
@@ -106,17 +93,25 @@ export function LabCanvas({
     if (label) pour(label);
   };
 
-  // 液面比例：随容器内试剂数量增长，空杯为 0
-  const fill =
-    contents.length === 0 ? 0 : Math.min(0.82, 0.28 + contents.length * 0.16);
-
-  // 容器内首个具有特征色的溶质决定液体色泽（混合前即呈现真实色彩）
-  const tint = contents
-    .map((c) => SOLUTION_TINT[c.formula])
-    .find(Boolean);
+  // 容器内首个具有特征色的溶质决定液体色泽（混合前即呈现真实色彩）。
+  // 保持返回 undefined 而不用 mixedTint：Glassware 靠 tint 是否存在来区分
+  // 「有特征色」与「无色」，无色时它走自己的默认淡蓝，且 reacted && !tint
+  // 那条分支也依赖这个区分。mixedTint 无色时返回 CLEAR_TINT（真值）会把两者混为一谈。
+  const tint = contents.map((c) => SOLUTION_TINT[c.formula]).find(Boolean);
 
   // 按实验仪器与装置类型选择器皿造型（试管 / 锥形瓶 / 烧杯），与 3D 场景同源
   const vessel = chooseVessel(apparatus, planRig(apparatus).kind);
+
+  // 器皿容量（mL）：液面按「实际体积 / 容量」算，不再按试剂个数跳台阶。
+  // 原来 0.28 + 个数×0.16 意味着"加 2 mL 和加 25 mL 一样高"，
+  // 这正是定量做不真的地方 —— 学生看不出自己取多了还是取少了。
+  const capacity = vessel === "tube" ? 20 : vessel === "flask" ? 150 : 100;
+  const volume = totalVolume(contents);
+  // 固体不占体积，但只有固体时也要看得见：给个最低可见液面
+  const fill =
+    contents.length === 0
+      ? 0
+      : Math.max(0.12, Math.min(0.88, volume / capacity));
   // 产气类实验：显示排水法集气装置，反应产气时联动收集
   const gasSetup = usesGasCollection(apparatus);
   const collecting = Boolean(result?.reacted && result.producesGas);
@@ -124,15 +119,23 @@ export function LabCanvas({
   const deliverySetup = usesGasDelivery(apparatus, reagents);
   // 焰色反应：铂丝蘸金属盐灼烧，火焰随所选金属离子变色
   const flameSetup = usesFlameTest(apparatus);
-  // 焰色样品：取容器内首个含焰色金属的试剂（formula 优先，回退名称）
-  const flameSample = contents[0]
-    ? contents[0].formula + contents[0].name
-    : undefined;
+  // 「正在外部加热」= 配有热源 且 体系已到明显高温。只看温度会让中和热测定这类
+  // 无热源实验在拖动温度滑块时凭空冒出一盏酒精灯。
+  const heating = hasHeatSource(apparatus) && readings.temperature >= 55;
+  // 焰色样品必须挑「含焰色金属的那一个」，不能取 contents[0]。
+  // 焰色实验的试剂架里除金属盐外总还有盐酸（洗铂丝的标准操作）或蒸馏水，
+  // 取首个投入的试剂时，学生先点盐酸就永久看到酒精灯蓝色本色 ——
+  // 氯化锂焰色那个实验只有「氯化锂 + 蒸馏水」两味，先点水就全无看点。
+  // 用 3D 那边同一个 pickFlameSample，两个视图的焰色才不会各说一套。
+  const flameSample = pickFlameSample(contents) ?? undefined;
   // 接收瓶吸收液名称（从仪器/试剂里识别）
   const absorbentLabel =
     [...apparatus, ...reagents].find((s) =>
       /饱和碳酸钠|碳酸钠溶液|石灰水|氢氧化钙|溴水|硝酸银|高锰酸钾溶液|品红/.test(s),
-    ) ?? "吸收液";
+    ) ?? t("absorbent");
+
+  // 试剂架条目：中文标签 + 解析出的规格（浓度/密度/摩尔质量）+ 类别配色
+  const shelf = shelfEntries(reagents, terms);
 
   // 安全提醒与操作提示（教学反馈）
   const notes = safetyNotes(contents);
@@ -152,14 +155,14 @@ export function LabCanvas({
     return (
       <ElectroLab
         apparatus={apparatus}
-        infoLine="相同浓度下比较溶液的导电能力（灯泡亮度反映离子浓度）。"
+        infoLine={tElectro("conductivityDesc")}
         device={<ConductivityTester solutions={solutions} powered={energized} />}
-        caption={energized ? "通电检测中：灯泡越亮，导电能力越强" : "点击「通电检测」，比较各溶液的导电能力"}
+        caption={tElectro(energized ? "conductivityActive" : "conductivityIdle")}
         notes={solutions.map((s) => (
           <span key={s.formula}>{conductivity(s).note}</span>
         ))}
-        toggleIdleLabel="💡 通电检测"
-        toggleActiveLabel="断电"
+        toggleIdleLabel={tElectro("conductivityOn")}
+        toggleActiveLabel={tElectro("powerOff")}
         energized={energized}
         onToggle={() => setEnergized(!energized)}
         onComplete={complete}
@@ -182,21 +185,21 @@ export function LabCanvas({
     return (
       <ElectroLab
         apparatus={apparatus}
-        infoLine={`电解液：${elyteName}（${electrolyte}）·阳极${inert ? "惰性（碳）" : "活性（金属，会溶解）"}`}
+        infoLine={tElectro(inert ? "electrolyteInert" : "electrolyteActive", { name: elyteName, formula: electrolyte })}
         device={<ElectrolysisCell electrolyte={electrolyte} inertAnode={inert} powered={energized} />}
-        caption={energized ? "电解进行中…" : "点击「通电」开始电解，观察两极现象"}
+        caption={tElectro(energized ? "electrolysisActive" : "electrolysisIdle")}
         notes={
           er ? (
             <>
-              <span className="font-medium text-foreground/80">{er.overall}</span>
-              <span>阴极（−）：{er.cathode.observation}</span>
-              <span>阳极（＋）：{er.anode.observation}</span>
-              {er.colorFades && <span>溶液：蓝色逐渐变浅（铜离子被消耗）</span>}
+              <span className="font-medium text-foreground/80">{phrase(er.overall)}</span>
+              <span>{tElectro("cathode")}：{phrase(er.cathode.observation)}</span>
+              <span>{tElectro("anode")}：{phrase(er.anode.observation)}</span>
+              {er.colorFades && <span>{tElectro("copperFading")}</span>}
             </>
           ) : undefined
         }
-        toggleIdleLabel="⚡ 通电"
-        toggleActiveLabel="断电"
+        toggleIdleLabel={tElectro("powerOn")}
+        toggleActiveLabel={tElectro("powerOff")}
         energized={energized}
         onToggle={() => setEnergized(!energized)}
         onComplete={complete}
@@ -216,7 +219,7 @@ export function LabCanvas({
     const saltR = reagents
       .map((r) => resolveSubstance(r))
       .find((s) => /食盐|盐水/.test(s.name) || s.formula === "NaCl");
-    const electrolyte = acidR ?? saltR ?? { formula: "NaCl", name: "食盐水" };
+    const electrolyte = acidR ?? saltR ?? { formula: "NaCl", name: tElectro("brine") };
     const gr = galvanicCell(
       galvanicMetals.map((m) => m.formula),
       electrolyte,
@@ -224,7 +227,7 @@ export function LabCanvas({
     return (
       <ElectroLab
         apparatus={apparatus}
-        infoLine={`电解质：${electrolyte.name}`}
+        infoLine={tElectro("electrolyte", { name: electrolyte.name })}
         device={
           <GalvanicCell
             metals={galvanicMetals.map((m) => m.formula)}
@@ -232,18 +235,18 @@ export function LabCanvas({
             connected={energized}
           />
         }
-        caption={energized ? "电路接通，电流计偏转，原电池放电中…" : "点击「接通电路」，观察电流计偏转与两极现象"}
+        caption={tElectro(energized ? "cellActive" : "cellIdle")}
         notes={
           gr ? (
             <>
-              <span>负极（−）：{gr.negative.observation}</span>
-              <span>正极（＋）：{gr.positive.observation}</span>
-              <span>{gr.electronFlow}；{gr.current}</span>
+              <span>{tElectro("negative")}：{phrase(gr.negative.observation)}</span>
+              <span>{tElectro("positive")}：{phrase(gr.positive.observation)}</span>
+              <span>{phrase(gr.electronFlow)}；{gr.current}</span>
             </>
           ) : undefined
         }
-        toggleIdleLabel="🔌 接通电路"
-        toggleActiveLabel="断开电路"
+        toggleIdleLabel={tElectro("cellOn")}
+        toggleActiveLabel={tElectro("cellOff")}
         energized={energized}
         onToggle={() => setEnergized(!energized)}
         onComplete={complete}
@@ -253,55 +256,37 @@ export function LabCanvas({
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-[240px_1fr]">
+    <div className="grid gap-6 lg:grid-cols-[248px_minmax(0,1fr)]">
       {/* —— 试剂面板 —— */}
       <aside className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold text-foreground/70">试剂架</h2>
-        <ul className="flex flex-col gap-2">
-          {reagents.map((label) => {
-            const color = CATEGORY_COLOR[resolveSubstance(label).category];
-            const inUse = contents.some(
-              (c) => c.formula === resolveSubstance(label).formula,
-            );
-            return (
-              <li key={label}>
-                <button
-                  type="button"
-                  draggable
-                  onDragStart={(e) => e.dataTransfer.setData(DRAG_KEY, label)}
-                  onClick={() => pour(label)}
-                  className={`group flex w-full cursor-grab items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm shadow-soft transition-all active:scale-[0.98] active:cursor-grabbing ${
-                    inUse
-                      ? "border-brand-400/50 bg-brand-500/8"
-                      : "border-foreground/15 bg-surface/70 hover:border-brand-400/50 hover:bg-brand-500/5"
-                  }`}
-                >
-                  <BottleIcon color={color} />
-                  <span className="flex-1">{label}</span>
-                  <span className="text-xs text-brand-600 opacity-0 transition-opacity group-hover:opacity-100 dark:text-brand-300">
-                    {inUse ? "已加" : "+ 加入"}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+        <ReagentShelf
+          entries={shelf}
+          contents={contents}
+          onTake={(e, dose) => pour(e.label, dose)}
+        />
 
-        <h2 className="mt-2 text-sm font-semibold text-foreground/70">仪器</h2>
-        <ul className="flex flex-wrap gap-2">
+        {/* 仪器清单仍以标签呈现（它是实验配备的说明），但可做的动作已由它派生到
+            台面下方的「实验操作」栏 —— 标签本身不再假装可点。 */}
+        <h2 className="mt-2 text-sm font-semibold text-foreground/70">
+          {t("apparatusList")}
+        </h2>
+        <ul className="flex flex-wrap gap-1.5">
           {apparatus.map((label) => (
             <li
               key={label}
-              className="rounded-full border border-foreground/15 bg-surface/50 px-2.5 py-1 text-xs text-foreground/70"
+              className="rounded-md border border-foreground/12 bg-surface/40 px-2 py-0.5 text-[11px] text-foreground/60"
             >
-              {label}
+              {term(label)}
             </li>
           ))}
         </ul>
       </aside>
 
-      {/* —— 画布主区 —— */}
-      <section className="flex flex-col gap-4">
+      {/* —— 实验台主区 —— */}
+      <section className="flex min-w-0 flex-col gap-4">
+        {/* 台面是画面主角：原先器皿区只有约 390px 宽、器皿 200px 高，
+            挤在层层卡片里像个缩略图。现在台面占满主列、器皿放大到 340px，
+            仪表叠在台面一角，操作时视线不必离开器皿。 */}
         <div
           onDragOver={(e) => {
             e.preventDefault();
@@ -309,22 +294,25 @@ export function LabCanvas({
           }}
           onDragLeave={() => setDragOver(false)}
           onDrop={handleDrop}
-          className={`relative flex flex-col items-center gap-3 overflow-hidden rounded-2xl border p-6 transition-all ${
+          className={`relative flex min-h-[380px] flex-col items-center justify-end gap-3 overflow-hidden rounded-2xl border px-6 pb-5 pt-16 transition-colors lg:min-h-[480px] ${
             dragOver
-              ? "border-brand-400 bg-brand-500/8 scale-[1.01]"
-              : "border-foreground/12 bg-gradient-to-b from-surface/30 to-brand-500/[0.04]"
+              ? "border-brand-400 bg-brand-500/8"
+              : "border-foreground/12 bg-gradient-to-b from-slate-100 via-slate-50 to-surface dark:from-slate-900 dark:via-slate-900/70 dark:to-surface"
           }`}
         >
-          {/* 实验台台面投影 */}
-          <div className="pointer-events-none absolute bottom-9 h-4 w-44 rounded-[100%] bg-foreground/10 blur-md" />
-          <div className="flex items-end justify-center gap-1">
+          {/* 台面：一条带高光的实验桌面，器皿立在上面而不是悬浮在卡片里。
+              高度对齐器皿底座：SVG 底部留有 44/244 的火焰区，按 260 / 340px 两档
+              器皿高度折算，桌面线正好落在杯底投影处 */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[112px] lg:h-[130px] border-t border-foreground/10 bg-gradient-to-b from-foreground/[0.06] to-foreground/[0.02]" />
+          <ReadingHud className="absolute start-4 top-4 z-10" />
+          <div className="relative z-[1] flex items-end justify-center gap-2 [&_svg]:h-[260px] [&_svg]:w-auto lg:[&_svg]:h-[340px]">
             {!deliverySetup && !flameSetup && (
               <Glassware
                 kind={vessel}
                 result={result}
                 fill={fill}
                 tint={tint}
-                hot={readings.temperature >= 55}
+                hot={heating}
               />
             )}
             {flameSetup && <FlameTest sample={flameSample} />}
@@ -332,17 +320,16 @@ export function LabCanvas({
             {deliverySetup && (
               <GasDelivery
                 delivering={collecting}
-                hot={readings.temperature >= 55}
+                hot={heating}
                 absorbentLabel={absorbentLabel}
               />
             )}
           </div>
-
-          {/* 容器内试剂标签（可移除） */}
-          <div className="flex min-h-[2rem] flex-wrap items-center justify-center gap-2">
+          {/* 容器内试剂标签（可移除）：立在台面上，和器皿同处一个视野 */}
+          <div className="relative z-[1] flex min-h-[2rem] flex-wrap items-center justify-center gap-2">
             {contents.length === 0 ? (
-              <p className="text-xs text-foreground/45">
-                点击左侧试剂瓶或拖拽至此加入容器
+              <p className="text-xs text-foreground/65">
+                {t("emptyContainer")}
               </p>
             ) : (
               contents.map((c) => (
@@ -350,15 +337,23 @@ export function LabCanvas({
                   key={c.key}
                   type="button"
                   onClick={() => removeReagent(c.formula)}
-                  title="点击移除"
-                  className="group flex items-center gap-1.5 rounded-full border border-foreground/15 bg-surface/80 px-3 py-1 text-xs shadow-soft transition-colors hover:border-rose-400/50 hover:bg-rose-500/5"
+                  title={t("removeItem")}
+                  className="group flex items-center gap-1.5 rounded-full border border-foreground/15 bg-surface/90 px-3 py-1 text-xs shadow-soft transition-colors hover:border-rose-400/50 hover:bg-rose-500/5"
                 >
                   <span
                     className="h-2 w-2 rounded-full"
                     style={{ background: CATEGORY_COLOR[c.category] }}
                   />
-                  {c.name}
-                  <span className="text-foreground/30 transition-colors group-hover:text-rose-500">
+                  {term(c.name)}
+                  {/* 用量与物质的量随标签一起显示：容器里"有什么"和"有多少"
+                      在定量实验里是同一个信息，分开呈现学生就得来回对照 */}
+                  <span className="tabular-nums text-foreground/65">
+                    {c.dose} {c.spec.unit}
+                    {c.amount !== undefined
+                      ? ` · ${c.amount.toFixed(3)} mol`
+                      : ""}
+                  </span>
+                  <span className="text-foreground/65 transition-colors group-hover:text-rose-500">
                     ×
                   </span>
                 </button>
@@ -366,49 +361,42 @@ export function LabCanvas({
             )}
           </div>
         </div>
-
-        {/* 实时读数 */}
-        <div className="grid grid-cols-2 gap-3">
-          <Reading label="pH" value={readings.ph.toFixed(1)} />
-          <Reading label="温度" value={`${readings.temperature} ℃`} />
+        {/* 主操作紧贴台面：混合是这张台上最核心的一步，不该沉到曲线和表格之下 */}
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={mix}
+            disabled={contents.length < 2}
+            className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-soft"
+          >
+            {t("mix")}
+          </button>
+          <button
+            type="button"
+            onClick={reset}
+            className="rounded-xl border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:border-brand-400/50 hover:bg-brand-500/5 active:scale-[0.98]"
+          >
+            {t("reset")}
+          </button>
+          <button
+            type="button"
+            onClick={complete}
+            disabled={completed || !result}
+            className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
+          >
+            {completed ? t("completed") : t("complete")}
+          </button>
+          {/* 完成后给出去报告页的出口：否则用户点完「完成实验」只看到按钮变灰，
+              不知道 AI 报告在哪。会话未建立（记录接口失败）时不显示，避免死链。 */}
+          {completed && sessionId ? (
+            <Link
+              href={`/sessions/${sessionId}/report`}
+              className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98]"
+            >
+              {t("viewReport")}
+            </Link>
+          ) : null}
         </div>
-
-        {/* 操作参数：加热 / 冷却体系温度（借鉴 mathviz 参数面板） */}
-        <ControlPanel
-          title="操作参数"
-          params={[
-            {
-              key: "temperature",
-              label: "加热温度",
-              value: readings.temperature,
-              min: 0,
-              max: 100,
-              step: 1,
-              unit: "℃",
-            },
-          ]}
-          onChange={(_, v) => setTemperature(v)}
-        />
-
-        {/* 安全提醒：加入危险试剂时给出真实安全规范 */}
-        {notes.length > 0 && (
-          <ul className="flex flex-col gap-1.5 rounded-lg border border-amber-500/25 bg-amber-500/8 px-4 py-3 text-sm text-amber-700 dark:text-amber-300">
-            {notes.map((n) => (
-              <li key={n} className="flex gap-2">
-                <span aria-hidden>⚠️</span>
-                <span>{n}</span>
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {/* 操作提示：混合无反应时的引导 */}
-        {hint && (
-          <p className="flex gap-2 rounded-lg border border-sky-500/25 bg-sky-500/8 px-4 py-3 text-sm text-sky-700 dark:text-sky-300">
-            <span aria-hidden>💡</span>
-            <span>{hint}</span>
-          </p>
-        )}
 
         {/* 现象描述 */}
         {result && (
@@ -419,79 +407,51 @@ export function LabCanvas({
                 : "bg-foreground/5 text-foreground/60"
             }`}
           >
-            {result.equation ? `${result.equation}　` : ""}
-            {result.description}
+            {result.equation ? `${phrase(result.equation)}　` : ""}
+            {phrase(result.description)}
           </p>
         )}
 
-        {/* 操作按钮 */}
-        <div className="flex flex-wrap gap-3">
-          <button
-            type="button"
-            onClick={mix}
-            disabled={contents.length < 2}
-            className="rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:shadow-soft"
-          >
-            混合反应
-          </button>
-          <button
-            type="button"
-            onClick={reset}
-            className="rounded-xl border border-foreground/20 px-5 py-2.5 text-sm font-medium transition-colors hover:border-brand-400/50 hover:bg-brand-500/5 active:scale-[0.98]"
-          >
-            清空容器
-          </button>
-          <button
-            type="button"
-            onClick={complete}
-            disabled={completed || !result}
-            className="rounded-xl border border-emerald-500/40 px-5 py-2.5 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/10 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-40 dark:text-emerald-300"
-          >
-            {completed ? "实验已完成" : "完成实验"}
-          </button>
-          {/* 完成后给出去报告页的出口：否则用户点完「完成实验」只看到按钮变灰，
-              不知道 AI 报告在哪。会话未建立（记录接口失败）时不显示，避免死链。 */}
-          {completed && sessionId ? (
-            <Link
-              href={`/sessions/${sessionId}/report`}
-              className="rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-all hover:shadow-glow active:scale-[0.98]"
-            >
-              查看实验报告 →
-            </Link>
-          ) : null}
-        </div>
+        {/* 安全提醒：加入危险试剂时给出真实安全规范 */}
+        {notes.length > 0 && (
+          <ul className="flex flex-col gap-1.5 rounded-lg border border-amber-500/25 bg-amber-500/8 px-4 py-3 text-sm text-amber-700 dark:text-amber-300">
+            {notes.map((n) => (
+              <li key={n} className="flex gap-2">
+                <span aria-hidden>⚠️</span>
+                <span>{phrase(n)}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* 操作提示：混合无反应时的引导 */}
+        {hint && (
+          <p className="flex gap-2 rounded-lg border border-sky-500/25 bg-sky-500/8 px-4 py-3 text-sm text-sky-700 dark:text-sky-300">
+            <span aria-hidden>💡</span>
+            <span>{phrase(hint)}</span>
+          </p>
+        )}
+
+        {/* 实验操作 + 过程曲线 + 数据记录表（与 3D 视图共用） */}
+        <InstrumentDeck apparatus={apparatus} />
+
+        {/* 体系温度：阶梯式的加热/冷却交给操作按钮，这里保留精确设定能力 */}
+        <ControlPanel
+          title={t("conditions")}
+          params={[
+            {
+              key: "temperature",
+              label: t("temperature"),
+              value: readings.temperature,
+              min: 0,
+              max: 100,
+              step: 1,
+              unit: "℃",
+            },
+          ]}
+          onChange={(_, v) => setTemperature(v)}
+        />
       </section>
-    </div>
-  );
-}
-
-// 试剂瓶迷你图标：玻璃瓶内盛对应颜色液体
-function BottleIcon({ color }: { color: string }) {
-  return (
-    <svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true">
-      <path
-        d="M6 1 h6 v4 l3 6 v8 a2 2 0 0 1 -2 2 H5 a2 2 0 0 1 -2 -2 v-8 l3 -6 Z"
-        fill="rgba(255,255,255,0.5)"
-        stroke="currentColor"
-        strokeWidth="1"
-        className="text-foreground/40"
-      />
-      <path
-        d="M4 13 h10 v6 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 Z"
-        fill={color}
-      />
-    </svg>
-  );
-}
-
-// 单个读数卡片
-function Reading({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex flex-col gap-1 rounded-xl border border-foreground/15 bg-surface/60 px-4 py-3 shadow-soft">
-      <span className="text-xs text-foreground/50">{label}</span>
-      <span className="bg-gradient-to-r from-brand-500 to-brand-700 bg-clip-text text-2xl font-semibold tabular-nums text-transparent">
-        {value}
-      </span>
     </div>
   );
 }

@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "Vai al contenuto principale"
+  },
+  "catalog": {
+    "title": "Libreria esperimenti",
+    "empty": "Nessun esperimento corrisponde ai criteri.",
+    "searchPlaceholder": "Cerca nome esperimento…",
+    "searchLabel": "Cerca esperimento",
+    "filterCategory": "Filtra per categoria",
+    "allCategories": "Tutte le categorie",
+    "filterDifficulty": "Filtra per difficoltà",
+    "allDifficulties": "Tutte le difficoltà",
+    "objectives": "Obiettivi dell'esperimento",
+    "reagents": "Reagenti necessari",
+    "apparatus": "Strumenti necessari",
+    "subtitle": "Seleziona un esperimento per accedere al laboratorio virtuale.",
+    "estimatedMinutes": "Durata stimata: {minutes} min",
+    "startLab": "Avvia esperimento →"
+  },
+  "category": {
+    "ACID_BASE": "Reazioni acido-base",
+    "ORGANIC": "Chimica organica",
+    "THERMODYNAMICS": "Termodinamica",
+    "REDOX": "Ossidoriduzione",
+    "PRECIPITATION": "Precipitazione e doppio scambio",
+    "GAS": "Preparazione di gas",
+    "ELECTROCHEM": "Elettrochimica",
+    "METAL": "Reattività dei metalli",
+    "ANALYSIS": "Analisi e identificazione",
+    "COORDINATION": "Complessi colorati"
+  },
+  "chart": {
+    "temperature": "Temperatura",
+    "ph": "pH",
+    "volume": "Volume",
+    "ariaLabel": "Curva di {label} nel tempo, valore attuale {value}",
+    "measureAria": "Grafico a linee delle misurazioni nel tempo, {count} letture totali, scala pH da 0 a 14, scala temperatura da 0 a 100 ℃",
+    "title": "Curva di processo",
+    "current": "Corrente",
+    "peak": "Picco",
+    "samples": "{count} campioni",
+    "channelTemp": "Temperatura",
+    "channelPh": "pH",
+    "channelVolume": "Volume",
+    "empty": "Avvia l'operazione per visualizzare la curva nel tempo"
+  },
+  "dataTable": {
+    "title": "Registro dati",
+    "emptyHint": "Premi «Lettura» per registrare una misurazione",
+    "recorded": "{count} misurazioni registrate",
+    "recordedNeedMore": "{count} misurazioni registrate (minimo 2 misure parallele)",
+    "emptyBody": "Gli esperimenti quantitativi richiedono misurazioni ripetute per la media; ogni «Lettura» aggiunge una riga.",
+    "colIndex": "N°",
+    "colTime": "Tempo / s",
+    "colTemperature": "Temperatura / ℃",
+    "colPh": "pH",
+    "colVolume": "Volume / mL",
+    "rowMean": "Media del gruppo",
+    "rowDeviation": "Deviazione relativa",
+    "worstDeviation": "Deviazione relativa massima {value}%:",
+    "verdictGood": "Dati consistenti, utilizzabili per il calcolo.",
+    "verdictFair": "Deviazione elevata: verificare la lettura parallela alla scala e la stabilità del sistema.",
+    "verdictPoor": "Deviazione eccessiva: individuare la causa e ripetere le misure parallele senza calcolare la media."
+  },
+  "deck": {
+    "readings": "Letture strumenti del banco",
+    "temperature": "Temperatura",
+    "volume": "Volume",
+    "ph": "pH",
+    "operations": "Operazioni sperimentali",
+    "needReagent": "Prelevare prima il reagente",
+    "inOrder": "Eseguire i passaggi nell'ordine reale"
+  },
+  "device": {
+    "glassware": "Vetreria da laboratorio",
+    "electrolysisCell": "Cella elettrolitica",
+    "galvanicCell": "Pila galvanica",
+    "flameTest": "Dispositivo per il saggio alla fiamma",
+    "gasCollection": "Raccolta gas per spostamento d'acqua",
+    "gasDelivery": "Dispositivo di conduzione e assorbimento gas",
+    "conductivity": "Confronto della conducibilità delle soluzioni",
+    "strongBright": "Forte · luminoso",
+    "weakDim": "Debole · fioco",
+    "nonNone": "Non conduttore · spento"
+  },
+  "difficulty": {
+    "EASY": "Base",
+    "MEDIUM": "Intermedio",
+    "HARD": "Avanzato"
+  },
+  "electro": {
+    "conductivityDesc": "Confronta la conducibilità delle soluzioni a pari concentrazione (la luminosità della lampadina riflette la concentrazione ionica).",
+    "conductivityActive": "Rilevamento attivo: più la lampadina è luminosa, maggiore è la conducibilità",
+    "conductivityIdle": "Tocca «Rilevamento» per confrontare la conducibilità delle soluzioni",
+    "conductivityOn": "💡 Rilevamento",
+    "powerOff": "Spegni",
+    "electrolyteInert": "Elettrolita: {name} ({formula}) · anodo inerte (carbonio)",
+    "electrolyteActive": "Elettrolita: {name} ({formula}) · anodo attivo (rame)",
+    "electrolysisActive": "Elettrolisi in corso…",
+    "electrolysisIdle": "Tocca «Accendi» per avviare l'elettrolisi e osservare i fenomeni agli elettrodi",
+    "copperFading": "Soluzione: il colore blu si attenua progressivamente (ioni rame consumati)",
+    "powerOn": "⚡ Accendi",
+    "brine": "Acqua salata",
+    "electrolyte": "Elettrolita: {name}",
+    "cellActive": "Circuito chiuso: il galvanometro devia, la pila è in scarica…",
+    "cellIdle": "Tocca «Chiudi il circuito» per osservare la deviazione del galvanometro e i fenomeni agli elettrodi",
+    "cellOn": "🔌 Chiudi il circuito",
+    "cellOff": "Circuito aperto",
+    "cathode": "Catodo (−)",
+    "anode": "Anodo (+)",
+    "negative": "Polo negativo",
+    "positive": "Polo positivo"
+  },
+  "errors": {
+    "noActivity": "Nessuna operazione registrata per questo esperimento. Esegui almeno un'azione sul banco di lavoro prima di generare il report.",
+    "reportFailed": "Generazione del report non riuscita",
+    "tutorUnavailable": "Servizio tutor AI non disponibile",
+    "unknown": "Errore sconosciuto"
+  },
+  "home": {
+    "labTitle": "Banco di lavoro interattivo",
+    "labDesc": "Trascina i reagenti nel becher: il motore di reazione valuta in tempo reale variazioni di colore, bolle, precipitati e temperatura. Quello che vedi è quello che ottieni.",
+    "tutorTitle": "Tutor AI di laboratorio",
+    "tutorDesc": "Fai domande su principi e procedure in qualsiasi momento. Quando sulla tela si innesca una reazione chiave, il tutor fornisce spiegazioni e avvisi di sicurezza in modo proattivo.",
+    "reportTitle": "Report sperimentale intelligente",
+    "reportDesc": "Riepiloga le curve di lettura dell'intera sessione e genera automaticamente conclusioni, analisi degli errori, suggerimenti di miglioramento e valutazione delle conoscenze.",
+    "badge": "Laboratorio virtuale di chimica potenziato dall'AI",
+    "heroLine1": "Nel browser",
+    "heroLine2": "Esegui veri esperimenti di chimica",
+    "heroDesc": "Trascina i reagenti, osserva variazioni di colore e bolle, consulta il tutor AI in qualsiasi momento. Al termine, viene generato automaticamente un report strutturato. {count} esperimenti validati, sicuri e ripetibili.",
+    "ctaCatalog": "Sfoglia il catalogo →",
+    "ctaSessions": "Le mie sessioni"
+  },
+  "lab": {
+    "mix": "Avvia reazione",
+    "reset": "Svuota contenitore",
+    "clear": "Svuota",
+    "complete": "Termina esperimento",
+    "completed": "Esperimento completato",
+    "viewReport": "Visualizza report →",
+    "removeItem": "Clicca per rimuovere",
+    "conditions": "Condizioni del sistema",
+    "temperature": "Temperatura del sistema",
+    "reagentShelf": "Scaffale reagenti",
+    "apparatusList": "Strumentazione",
+    "emptyContainer": "Seleziona la quantità dallo scaffale reagenti a sinistra, oppure trascina il reagente qui",
+    "absorbent": "Liquido assorbente",
+    "apparatus": "Strumento",
+    "addReagent": "Aggiungi {name}",
+    "removeReagent": "Rimuovi {name}",
+    "mixAction": "Mescola",
+    "backToDetail": "← Torna ai dettagli dell'esperimento",
+    "backToCatalog": "← Torna al catalogo esperimenti",
+    "labSuffix": "Banco di laboratorio",
+    "labHint": "Fai clic o trascina i reagenti nel beaker, usa «Reazione di miscelazione» per osservare i fenomeni; oppure usa «Spiegazione guidata» per la dimostrazione automatica passo per passo."
+  },
+  "lesson": {
+    "prev": "Passo precedente",
+    "pause": "Pausa",
+    "play": "Riproduci",
+    "next": "Passo successivo",
+    "voiceOn": "Attiva commento vocale",
+    "voiceOff": "Disattiva commento vocale",
+    "muted": "🔇 Audio disattivato",
+    "askTutor": "Spiegazione al passo «{title}»: {narration} In base ai fenomeni e alle letture nel beaker in questo momento, illustra brevemente i principi chimici e le equazioni coinvolte.",
+    "phase": {
+      "theory": "Principio",
+      "prep": "Preparazione",
+      "operate": "Procedura",
+      "observe": "Osservazioni",
+      "conclude": "Conclusioni"
+    },
+    "voiceLabel": "🔊 Commento vocale",
+    "vesselBeaker": "Beaker",
+    "vesselTube": "Provetta",
+    "vesselFlask": "Becher conico (Erlenmeyer)",
+    "observeGeneric": "Osservare attentamente il sistema, verificando eventuali variazioni di colore, bolle o temperatura.",
+    "observeReacting": "La reazione è in corso; monitorare le variazioni di pH e temperatura.",
+    "phenomenaList": "Si osserva {parts}.",
+    "partGas": "sviluppo continuo di bolle gassose",
+    "partPrecipitate": "intorbidimento della soluzione con formazione di precipitato",
+    "partColor": "evidente variazione del colore della soluzione",
+    "partExo": "contestuale rilascio di calore e aumento della temperatura",
+    "partEndo": "contestuale assorbimento di calore e diminuzione della temperatura",
+    "titlePrinciple": "Principio dell'esperimento",
+    "titleSummary": "Riepilogo dell'esperimento",
+    "titleConnect": "Collegamento dell'apparato",
+    "titleConnectCircuit": "Collegamento del circuito",
+    "titlePowerOn": "Accensione dell'alimentazione",
+    "titleConnectOn": "Chiusura del circuito",
+    "titleConductTest": "Test di conducibilità",
+    "titleElectrodes": "Fenomeni agli elettrodi",
+    "titleConductCompare": "Confronto della conducibilità",
+    "titleTake": "Prelevare {reagent}",
+    "titleHeat": "Accendere la lampada ad alcol",
+    "titleMix": "Miscelazione e reazione",
+    "titleObserve": "Osservare i fenomeni",
+    "summary": "Attraverso questo esperimento, si {objectives}.",
+    "narrSetupElectrode": "Inserire gli elettrodi nell'elettrolita e collegarli rispettivamente al polo positivo e negativo dell'alimentatore in corrente continua.",
+    "narrPowerOn": "Attivare l'alimentatore in corrente continua per avviare l'elettrolisi; osservare attentamente le variazioni ai due elettrodi.",
+    "narrSetupCircuit": "Collegare i due elettrodi tramite fili conduttori al galvanometro e immergerli nella soluzione elettrolitica.",
+    "narrConnectOn": "Chiudere il circuito e verificare se l'ago del galvanometro subisce una deflessione.",
+    "narrSetupConduct": "Collegare soluzioni a uguale concentrazione a circuiti elettrodici separati, ciascuno dotato di lampadina.",
+    "narrConductTest": "Chiudere il circuito e confrontare la luminosità della lampadina nelle diverse soluzioni.",
+    "narrSetupGeneric": "Collegare elettrodi e alimentatore/strumenti di misura secondo lo schema del circuito, quindi inserire l'elettrolita.",
+    "sentenceJoin": " ",
+    "voiceFemale": "Voce femminile ♀",
+    "voiceMale": "Voce maschile ♂",
+    "narrRigOn": "{verb}，osservare attentamente i cambiamenti agli elettrodi e agli strumenti.",
+    "verbElectrolysis": "Collegare il generatore di corrente continua e avviare l'elettrolisi",
+    "verbCircuit": "Chiudere il circuito",
+    "narrTake": "Prelevare {reagent} e aggiungerlo in {vessel}.",
+    "narrHeat": "Accendere la lampada ad alcol per riscaldare {vessel} — questa reazione richiede il riscaldamento.",
+    "narrMixHeated": "Dopo il riscaldamento mescolare bene i reagenti; la reazione ha inizio immediatamente.",
+    "narrMix": "Mescolare bene i reagenti in {vessel}; la reazione ha inizio immediatamente.",
+    "electrodesFading": "; il colore blu della soluzione si affievolisce gradualmente",
+    "brine": "soluzione salina",
+    "joinComma": ", ",
+    "joinSemicolon": "; ",
+    "outlineTitle": "Schema della spiegazione dell'esperimento",
+    "outlineHint": "Dopo aver acceduto al banco di laboratorio, fare clic su «Spiegazione esperimento ▶» per la dimostrazione automatica passo-passo.",
+    "cardTitle": "Spiegazione dell'esperimento",
+    "askTutorButton": "Chiedi al tutor di spiegare questo passaggio",
+    "sentenceEnd": ".",
+    "noVoice": "Nessuna voce disponibile per questa lingua; la spiegazione avanzerà automaticamente tramite sottotitoli.",
+    "narrTake_beaker": "Prendi {reagent} e aggiungilo nel becher.",
+    "narrTake_tube": "Prendi {reagent} e aggiungilo nella provetta.",
+    "narrTake_flask": "Prendi {reagent} e aggiungilo nella beuta.",
+    "narrHeat_beaker": "Accendi la lampada a alcool per riscaldare il becher — questa reazione deve avvenire in condizioni di riscaldamento.",
+    "narrHeat_tube": "Accendi la lampada a alcool per riscaldare la provetta — questa reazione deve avvenire in condizioni di riscaldamento.",
+    "narrHeat_flask": "Accendi la lampada a alcool per riscaldare la beuta — questa reazione deve avvenire in condizioni di riscaldamento.",
+    "narrMix_beaker": "Mescola accuratamente i reagenti nel becher: la reazione inizierà immediatamente.",
+    "narrMix_tube": "Mescola accuratamente i reagenti nella provetta: la reazione inizierà immediatamente.",
+    "narrMix_flask": "Mescola accuratamente i reagenti nella beuta: la reazione inizierà immediatamente."
+  },
+  "locale": {
+    "switchLabel": "Cambia lingua dell'interfaccia",
+    "searchPlaceholder": "Cerca lingua…",
+    "noMatch": "Nessuna lingua corrispondente",
+    "groupFull": "Lingua principale",
+    "groupBasic": "Altre lingue",
+    "groupBasicHint": "Contenuto completo del laboratorio e commento vocale inclusi; traduzione automatica"
+  },
+  "nav": {
+    "catalog": "Libreria esperimenti",
+    "sessions": "Le mie sessioni",
+    "home": "Home"
+  },
+  "op": {
+    "stir": {
+      "label": "Agitare",
+      "effect": "Agitare con la bacchetta di vetro per accelerare la dissoluzione del soluto e ottenere una miscela più omogenea",
+      "hint": "L'agitazione accelera la dissoluzione e il trasferimento di calore, rendendo uniforme la concentrazione locale: solo così la lettura rappresenta il sistema nel suo insieme"
+    },
+    "shake": {
+      "label": "Agitazione",
+      "effect": "Agitare per omogenizzare; i reagenti entrano in contatto completo",
+      "hint": "Con poco liquido nella provetta, si omogenizza agitando (non mescolando); tenere il tappo lontano dalle persone"
+    },
+    "heat": {
+      "label": "Riscaldamento",
+      "effect": "Accendere la lampada ad alcol per riscaldare; la temperatura del sistema aumenta",
+      "hint": "La maggior parte delle reazioni accelera con il calore; le reazioni endotermiche richiedono riscaldamento continuo"
+    },
+    "cool": {
+      "label": "Raffreddamento",
+      "effect": "Rimuovere la fonte di calore e lasciare raffreddare naturalmente; la temperatura scende",
+      "hint": "Il raffreddamento riduce la solubilità: è il passaggio standard per la cristallizzazione e il recupero del prodotto"
+    },
+    "settle": {
+      "label": "Decantazione",
+      "effect": "Lasciare riposare un momento; il precipitato sedimenta e la separazione dei liquidi diventa più netta",
+      "hint": "La sedimentazione e la separazione degli strati richiedono tempo; solo dopo la decantazione si può valutare se il surnatante è limpido"
+    },
+    "read": {
+      "label": "Lettura",
+      "effect": "Registrare la lettura corrente",
+      "hint": "Leggere con la linea di vista allineata alla tacca; annotare ogni lettura nella tabella dati per calcolare media e deviazione"
+    }
+  },
+  "quant": {
+    "verdictGood": "Coerenza dei dati buona; utilizzabile per il calcolo",
+    "verdictFair": "Deviazione elevata; verificare l'allineamento della lettura e la stabilità del sistema",
+    "verdictPoor": "Deviazione eccessiva; individuare la causa e ripetere le misure in parallelo",
+    "meanPh": "pH medio",
+    "meanTemp": "Temperatura media",
+    "meanVolume": "Volume medio",
+    "group": "Gruppo {no}",
+    "readings": "{count} letture",
+    "finalGroup": "Le conclusioni si basano su questo gruppo",
+    "singleReading": "Una sola misura: impossibile calcolare la deviazione relativa (il protocollo richiede almeno 2 misure in parallelo)",
+    "worstDeviation": "Deviazione media relativa massima {value}%",
+    "groupNote": "Ogni prelievo, miscelazione o riscaldamento del sistema apre un nuovo gruppo; le letture di gruppi diversi non costituiscono misure in parallelo e vengono quindi elaborate separatamente.",
+    "noReadings": "Nessuna misura registrata con l'operazione «Lettura»: impossibile calcolare media e deviazione relativa. In un'analisi quantitativa occorre ripetere la lettura nello stesso stato del sistema almeno 2 volte."
+  },
+  "report": {
+    "conclusion": "Conclusioni dell'esperimento",
+    "errorAnalysis": "Analisi degli errori",
+    "improvements": "Suggerimenti di miglioramento",
+    "noImprovements": "Nessun suggerimento di miglioramento.",
+    "knowledge": "Valutazione della padronanza dei concetti",
+    "empty": "(Nessun contenuto)",
+    "measurements": "Letture delle misurazioni",
+    "quantData": "Dati quantitativi",
+    "noMeasurements": "Nessuna lettura registrata in questo esperimento.",
+    "generating": "L'IA sta analizzando i dati dell'esperimento…",
+    "regenerate": "Rigenera il rapporto",
+    "generate": "Genera il rapporto dell'esperimento",
+    "generateFailed": "Generazione fallita ({status})",
+    "notGenerated": "Il rapporto non è ancora stato generato. L'IA elaborerà conclusioni, analisi degli errori, suggerimenti di miglioramento e valutazione della padronanza sulla base delle operazioni e delle misurazioni di questo esperimento.",
+    "noActivity": "Nessuna operazione registrata in questo esperimento; impossibile generare il rapporto.",
+    "backToLab": "Torna al banco di laboratorio e prova →",
+    "title": "Rapporto dell'esperimento",
+    "generatedAt": "Generato il {time}"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "Attiva l'alimentazione",
+      "off": "Disattiva l'alimentazione"
+    },
+    "cell": {
+      "on": "Chiudi il circuito",
+      "off": "Apri il circuito"
+    },
+    "flameTest": {
+      "on": "Accendi la lampada ad alcol",
+      "off": "Spegni la lampada ad alcol"
+    },
+    "waterBath": {
+      "on": "Avvia il riscaldamento a bagnomaria",
+      "off": "Interrompi il riscaldamento a bagnomaria"
+    },
+    "distillation": {
+      "on": "Avvia la distillazione",
+      "off": "Interrompi la distillazione"
+    },
+    "filtration": {
+      "on": "Avvia la filtrazione",
+      "off": "Interrompi la filtrazione"
+    },
+    "calorimeter": {
+      "on": "Avvia l'agitazione e la misurazione della temperatura",
+      "off": "Interrompi agitazione"
+    },
+    "gasCollect": {
+      "on": "Inizia raccolta gas",
+      "off": "Interrompi raccolta"
+    },
+    "titration": {
+      "on": "Apri rubinetto per gocciolare",
+      "off": "Chiudi rubinetto"
+    },
+    "syringe": {
+      "on": "Comprimi pistone per pressurizzare",
+      "off": "Ritrai pistone per depressurizzare"
+    },
+    "phMeter": {
+      "on": "Accendi pH-metro",
+      "off": "Spegni pH-metro"
+    },
+    "evaporation": {
+      "on": "Accendi lampada ad alcol per evaporare",
+      "off": "Spegni lampada ad alcol"
+    },
+    "pressureDrop": {
+      "on": "Stringi il tappo e agita",
+      "off": "Allenta il tappo"
+    },
+    "heat": {
+      "on": "Accendi lampada ad alcol per riscaldare",
+      "off": "Interrompi riscaldamento"
+    }
+  },
+  "sessions": {
+    "title": "Le mie sessioni",
+    "subtitle": "Visualizza lo storico degli esperimenti e accedi ai relativi rapporti",
+    "unknownExperiment": "Esperimento sconosciuto",
+    "completed": "Completato",
+    "inProgress": "In corso",
+    "startedAt": "Iniziato il {time}",
+    "viewReport": "Visualizza rapporto"
+  },
+  "shelf": {
+    "title": "Scaffale reagenti",
+    "taken": "Prelevati {dose} {unit}",
+    "takeSome": "Gocciolare / prelevare q.b.",
+    "take": "Preleva {unit}",
+    "specIndicator": "Indicatore",
+    "specGas": "Gas",
+    "specBulk": "Prelevare q.b.",
+    "specSolution": "Soluzione",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "Liquido puro ρ={density} g/mL",
+    "specLiquid": "Liquido",
+    "specSolid": "Solido per analisi"
+  },
+  "site": {
+    "title": "ChemAIForge · Laboratorio di chimica virtuale con AI",
+    "description": "Esegui esperimenti di chimica nel browser: trascina i reagenti, osserva le reazioni, ricevi la guida di un tutor AI e genera automaticamente il rapporto di laboratorio."
+  },
+  "titration": {
+    "stopcock": "Apertura del rubinetto",
+    "buretteReading": "Lettura della buretta",
+    "phMeter": "pH-metro",
+    "unfilled": "Da riempire",
+    "strongBase": "Fortemente basico",
+    "weakBase": "Debolmente basico · zona di viraggio",
+    "nearNeutral": "Quasi neutro",
+    "acidExcess": "Acido · in eccesso",
+    "endpointOk": "Punto finale raggiunto",
+    "overshoot": "Titolazione in eccesso",
+    "notYet": "Punto finale non ancora raggiunto (rosa non scomparso)",
+    "justFaded": "Appena scomparso",
+    "keyPoints": "Punti operativi chiave",
+    "takeAnalyte": "Prelevare prima l'analita →",
+    "dragStopcock": "← Trascinare il rubinetto per avviare la titolazione",
+    "openness": "Apertura {pct}% · tenere premuto e trascinare a sinistra/destra"
+  },
+  "tutor": {
+    "placeholder": "Inserisci la tua domanda…",
+    "replying": "Risposta in corso…",
+    "send": "Invia",
+    "unknownError": "Errore sconosciuto",
+    "requestFailed": "Richiesta fallita ({status})",
+    "askHeat": "Dopo aver mescolato i reagenti non ho osservato alcun fenomeno; il sistema indica che questa reazione richiede riscaldamento. Spiega perché questa reazione può avvenire solo in condizioni di riscaldamento.",
+    "askObserved": "Ho appena osservato la reazione {equation}{phenomena}: puoi spiegarmi cosa è successo e qual è il principio alla base?",
+    "phPrecipitate": "Formazione di precipitato",
+    "phGas": "produzione di gas",
+    "phColor": "variazione di colore",
+    "listJoin": ", ",
+    "eqWrap": "({equation})",
+    "title": "Tutor AI da laboratorio",
+    "empty": "Puoi farmi una domanda in qualsiasi momento, oppure avvia una reazione sulla tela e ti darò suggerimenti."
+  },
+  "workbench": {
+    "view2d": "Schema 2D",
+    "view3d": "Banco 3D",
+    "view3dRefined": "Banco 3D ★",
+    "sceneHint": "Trascina per ruotare · Scorri per ingrandire"
+  }
+}

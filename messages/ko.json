@@ -1,0 +1,442 @@
+{
+  "a11y": {
+    "skipToMain": "주요 콘텐츠로 건너뛰기"
+  },
+  "dataTable": {
+    "title": "데이터 기록표",
+    "emptyHint": "「측정값 읽기」를 클릭하여 측정값을 기록하세요",
+    "recorded": "이 세트에서 {count}회 기록됨",
+    "recordedNeedMore": "이 세트에서 {count}회 기록됨 (병렬 측정 최소 2회 필요)",
+    "emptyBody": "정량 실험은 반복 측정 후 평균을 구합니다. 「측정값 읽기」를 클릭할 때마다 한 행이 추가됩니다.",
+    "colIndex": "번호",
+    "colTime": "시각 / s",
+    "colTemperature": "온도 / ℃",
+    "colPh": "pH",
+    "colVolume": "부피 / mL",
+    "rowMean": "세트 평균",
+    "rowDeviation": "상대 편차",
+    "worstDeviation": "최대 상대 편차 {value}%:",
+    "verdictGood": "데이터 일관성이 양호하여 계산에 사용할 수 있습니다.",
+    "verdictFair": "편차가 큽니다. 눈금을 읽을 때 시선이 눈금과 수평인지, 시스템이 안정되었는지 확인하세요.",
+    "verdictPoor": "편차가 너무 큽니다. 원인을 파악한 후 병렬 측정을 다시 수행하세요. 그대로 평균을 내지 마세요."
+  },
+  "site": {
+    "title": "ChemAIForge · AI 가상 화학 실험실",
+    "description": "브라우저에서 화학 실험을 수행하세요: 시약을 드래그하고, 반응을 관찰하고, AI 튜터의 지도를 받으며, 실험 보고서를 자동으로 생성합니다."
+  },
+  "catalog": {
+    "title": "실험 라이브러리",
+    "empty": "조건에 맞는 실험이 없습니다.",
+    "searchPlaceholder": "실험 이름 검색…",
+    "searchLabel": "실험 검색",
+    "filterCategory": "카테고리별 필터",
+    "allCategories": "전체 카테고리",
+    "filterDifficulty": "난이도별 필터",
+    "allDifficulties": "전체 난이도",
+    "objectives": "실험 목표",
+    "reagents": "필요 시약",
+    "apparatus": "필요 기구",
+    "subtitle": "실험을 선택하여 가상 실험실에서 조작을 시작하세요.",
+    "estimatedMinutes": "예상 {minutes}분",
+    "startLab": "실험대 입장 →"
+  },
+  "chart": {
+    "temperature": "온도",
+    "ph": "pH",
+    "volume": "부피",
+    "ariaLabel": "{label} 시간에 따른 변화 곡선, 현재 {value}",
+    "measureAria": "측정값 시간 변화 꺾은선 그래프, 총 {count}개 데이터, pH 범위 0~14, 온도 범위 0~100 ℃",
+    "title": "과정 곡선",
+    "current": "현재",
+    "peak": "최댓값",
+    "samples": "샘플링 {count} 포인트",
+    "channelTemp": "온도",
+    "channelPh": "pH",
+    "channelVolume": "부피",
+    "empty": "작업을 시작하면 시간에 따른 변화 곡선이 여기에 표시됩니다"
+  },
+  "deck": {
+    "readings": "실험대 계측 수치",
+    "temperature": "온도",
+    "volume": "부피",
+    "ph": "pH",
+    "operations": "실험 조작",
+    "needReagent": "먼저 시약을 가져오세요",
+    "inOrder": "실제 단계 순서대로 조작하세요"
+  },
+  "device": {
+    "glassware": "실험 유리 기구",
+    "electrolysisCell": "전해조",
+    "galvanicCell": "갈바니 전지",
+    "flameTest": "불꽃 반응 장치",
+    "gasCollection": "수상 치환 집기 장치",
+    "gasDelivery": "도기 흡수 장치",
+    "conductivity": "용액 전도성 비교",
+    "strongBright": "강·밝음",
+    "weakDim": "약·희미함",
+    "nonNone": "비·꺼짐"
+  },
+  "electro": {
+    "conductivityDesc": "동일 농도에서 용액의 전도 능력 비교（전구 밝기가 이온 농도를 반영）。",
+    "conductivityActive": "통전 검사 중：전구가 밝을수록 전도 능력이 강함",
+    "conductivityIdle": "「통전 검사」를 클릭하여 각 용액의 전도 능력을 비교하세요",
+    "conductivityOn": "💡 통전 검사",
+    "powerOff": "전원 차단",
+    "electrolyteInert": "전해액：{name}（{formula}）·양극 불활성（탄소）",
+    "electrolyteActive": "전해액：{name}（{formula}）·양극 활성（구리）",
+    "electrolysisActive": "전기분해 진행 중…",
+    "electrolysisIdle": "「통전」을 클릭하여 전기분해를 시작하고 양극의 현상을 관찰하세요",
+    "copperFading": "용액：파란색이 점차 옅어짐（구리 이온 소모）",
+    "powerOn": "⚡ 통전",
+    "brine": "소금물",
+    "electrolyte": "전해질：{name}",
+    "cellActive": "회로 연결됨，검류계 편향，갈바니 전지 방전 중…",
+    "cellIdle": "「회로 연결」을 클릭하여 검류계 편향과 양극 현상을 관찰하세요",
+    "cellOn": "🔌 회로 연결",
+    "cellOff": "회로 차단",
+    "cathode": "음극（−）",
+    "anode": "양극（＋）",
+    "negative": "부극",
+    "positive": "정극"
+  },
+  "home": {
+    "labTitle": "인터랙티브 실험대",
+    "labDesc": "시약을 비커에 드래그하면 반응 엔진이 실시간으로 색 변화、기포、침전 및 온도 변화를 판정합니다。보이는 그대로 결과가 나타납니다。",
+    "tutorTitle": "AI 실험 튜터",
+    "tutorDesc": "원리와 조작법을 언제든지 질문할 수 있으며，캔버스에서 주요 반응이 발생하면 튜터가 자동으로 해설과 안전 주의사항을 제공합니다。",
+    "reportTitle": "스마트 실험 보고서",
+    "reportDesc": "실험 전체의 수치 곡선을 집계하여 결론、오차 분석、개선 제안 및 학습 포인트 평가를 자동으로 생성합니다。",
+    "badge": "AI 기반 가상 화학 실험실",
+    "heroLine1": "브라우저에서",
+    "heroLine2": "실제 화학 실험을 수행하세요",
+    "heroDesc": "시약을 드래그하고, 변색과 기포를 관찰하며, 언제든지 AI 튜터에게 질문하세요. 실험 종료 후 구조화된 보고서가 자동으로 생성됩니다. {count}개의 검증된 실험, 안전하고 반복 가능합니다.",
+    "ctaCatalog": "실험 목록 보기 →",
+    "ctaSessions": "내 세션"
+  },
+  "lab": {
+    "mix": "혼합 반응",
+    "reset": "용기 비우기",
+    "clear": "비우기",
+    "complete": "실험 완료",
+    "completed": "실험이 완료되었습니다",
+    "viewReport": "실험 보고서 보기 →",
+    "removeItem": "클릭하여 제거",
+    "conditions": "시스템 조건",
+    "temperature": "시스템 온도",
+    "reagentShelf": "시약 선반",
+    "apparatusList": "기구 목록",
+    "emptyContainer": "왼쪽 시약 선반에서 용량을 선택한 후 가져오거나, 시약을 이곳으로 드래그하세요",
+    "absorbent": "흡수액",
+    "apparatus": "기구",
+    "addReagent": "{name} 추가",
+    "removeReagent": "{name} 제거",
+    "mixAction": "혼합",
+    "backToDetail": "← 실험 상세로 돌아가기",
+    "backToCatalog": "← 실험 목록으로 돌아가기",
+    "labSuffix": "실험대",
+    "labHint": "시약을 클릭하거나 컵에 드래그하여 “혼합 반응”으로 현상을 관찰하세요. “실험 해설”로 단계별 자동 시연도 가능합니다."
+  },
+  "lesson": {
+    "prev": "이전 단계",
+    "pause": "일시 정지",
+    "play": "재생",
+    "next": "다음 단계",
+    "voiceOn": "음성 해설 켜기",
+    "voiceOff": "음성 해설 끄기",
+    "muted": "🔇 음소거됨",
+    "askTutor": "“{title}” 단계에서: {narration} 지금 비커 안의 현상과 원리를 함께 설명해 주세요.",
+    "phase": {
+      "theory": "원리",
+      "prep": "준비",
+      "operate": "조작",
+      "observe": "현상",
+      "conclude": "결론"
+    },
+    "voiceLabel": "🔊 음성 해설",
+    "vesselBeaker": "비커",
+    "vesselTube": "시험관",
+    "vesselFlask": "삼각 플라스크",
+    "observeGeneric": "계를 주의 깊게 관찰하여 색, 기포 또는 온도 변화가 나타나는지 확인하세요.",
+    "observeReacting": "반응이 진행 중입니다. pH와 온도 수치의 변화를 주의 깊게 관찰하세요.",
+    "phenomenaList": "{parts}을(를) 확인할 수 있습니다.",
+    "partGas": "기포가 지속적으로 발생함",
+    "partPrecipitate": "용액이 뿌옇게 흐려지며 침전이 생성됨",
+    "partColor": "용액의 색이 뚜렷하게 변함",
+    "partExo": "동시에 열이 방출되며 온도가 상승함",
+    "partEndo": "동시에 열을 흡수하며 온도가 하강함",
+    "titlePrinciple": "실험 원리",
+    "titleSummary": "실험 정리",
+    "titleConnect": "장치 연결",
+    "titleConnectCircuit": "회로 연결",
+    "titlePowerOn": "전원 켜기",
+    "titleConnectOn": "회로 접속",
+    "titleConductTest": "통전 검사",
+    "titleElectrodes": "양극 현상",
+    "titleConductCompare": "전도성 비교",
+    "titleTake": "{reagent} 취하기",
+    "titleHeat": "알코올 램프 점화",
+    "titleMix": "혼합 반응",
+    "titleObserve": "현상 관찰",
+    "summary": "이 실험을 통해 {objectives}.",
+    "narrSetupElectrode": "전극을 전해액에 삽입하고 직류 전원의 양극과 음극에 각각 연결하세요.",
+    "narrPowerOn": "직류 전원을 켜고 전기 분해를 시작하여 양 전극의 변화를 주의 깊게 관찰하세요.",
+    "narrSetupCircuit": "도선으로 두 전극을 검류계를 통해 연결하고 전해질 용액에 삽입하세요.",
+    "narrConnectOn": "회로를 접속하고 검류계 바늘의 편향 여부를 관찰하세요.",
+    "narrSetupConduct": "같은 농도의 용액을 전구가 포함된 전극 회로에 각각 연결하세요.",
+    "narrConductTest": "회로를 연결하고 각 용액에서 전구의 밝기를 비교합니다.",
+    "narrSetupGeneric": "회로도에 따라 전극과 전원/측정 기기를 연결하고 전해질을 삽입합니다.",
+    "narrRigOn": "{verb}하고 양극과 기기의 변화를 주의 깊게 관찰합니다.",
+    "verbElectrolysis": "직류 전원을 연결하여 전기 분해 시작",
+    "verbCircuit": "회로 연결",
+    "narrTake": "{reagent}을(를) 취하여 {vessel}에 넣습니다.",
+    "narrHeat": "알코올 램프에 불을 붙여 {vessel}을(를) 가열합니다 — 이 반응은 가열 조건에서만 진행됩니다.",
+    "narrMixHeated": "가열 후 시약을 충분히 혼합하면 반응이 즉시 시작됩니다.",
+    "narrMix": "{vessel}의 시약을 충분히 혼합하면 반응이 즉시 시작됩니다.",
+    "electrodesFading": "；용액의 파란색이 점차 옅어집니다",
+    "brine": "소금물",
+    "joinComma": "，",
+    "joinSemicolon": "；",
+    "outlineTitle": "실험 해설 개요",
+    "outlineHint": "실험대에 입장한 후 “실험 해설 ▶”을 클릭하면 단계별로 자동 시연됩니다.",
+    "cardTitle": "실험 설명",
+    "askTutorButton": "튜터에게 이 단계 설명 요청",
+    "sentenceJoin": " ",
+    "voiceFemale": "여성 음성 ♀",
+    "voiceMale": "남성 음성 ♂",
+    "sentenceEnd": "。",
+    "noVoice": "이 언어는 음성을 지원하지 않습니다. 해설은 자막에 따라 자동으로 진행됩니다.",
+    "narrTake_beaker": "{reagent}을(를) 취하여 비커에 넣으세요.",
+    "narrTake_tube": "{reagent}을(를) 취하여 시험관에 넣으세요.",
+    "narrTake_flask": "{reagent}을(를) 취하여 삼각 플라스크에 넣으세요.",
+    "narrHeat_beaker": "알코올 램프에 불을 붙여 비커를 가열하세요 — 이 반응은 가열 조건에서만 진행됩니다.",
+    "narrHeat_tube": "알코올 램프에 불을 붙여 시험관을 가열하세요 — 이 반응은 가열 조건에서만 진행됩니다.",
+    "narrHeat_flask": "알코올 램프에 불을 붙여 삼각 플라스크를 가열하세요 — 이 반응은 가열 조건에서만 진행됩니다.",
+    "narrMix_beaker": "비커 안의 시약을 충분히 혼합하면 반응이 곧 시작됩니다.",
+    "narrMix_tube": "시험관 안의 시약을 충분히 혼합하면 반응이 곧 시작됩니다.",
+    "narrMix_flask": "삼각 플라스크 안의 시약을 충분히 혼합하면 반응이 곧 시작됩니다."
+  },
+  "quant": {
+    "verdictGood": "데이터 일관성 양호, 계산에 사용 가능",
+    "verdictFair": "편차가 큼, 눈금 읽기 시선 및 계의 안정성 확인",
+    "verdictPoor": "편차 과대, 원인 파악 후 병행 측정 재실시",
+    "meanPh": "평균 pH",
+    "meanTemp": "평균 온도",
+    "meanVolume": "평균 부피",
+    "group": "{no}번째 그룹",
+    "readings": "{count}회 측정",
+    "finalGroup": "최종 결론은 이 그룹 기준",
+    "singleReading": "측정 횟수 1회, 상대 편차 계산 불가 (규정상 병행 측정 최소 2회 필요)",
+    "worstDeviation": "최대 상대 평균 편차 {value}%",
+    "groupNote": "계를 채취·혼합·가열할 때마다 새 그룹이 시작되며, 그룹 간 측정값은 병행 측정으로 인정되지 않아 각각 집계됩니다.",
+    "noReadings": "이번 실험에서 “읽기” 조작으로 기록된 측정값이 없어 평균값 및 상대 편차를 계산할 수 없습니다. 정량 실험은 동일한 계 상태에서 최소 2회 이상 반복 측정해야 합니다."
+  },
+  "report": {
+    "conclusion": "실험 결론",
+    "errorAnalysis": "오차 분석",
+    "improvements": "개선 제안",
+    "noImprovements": "개선 제안 없음.",
+    "knowledge": "개념 이해도 평가",
+    "empty": "（내용 없음）",
+    "measurements": "측정 기록",
+    "quantData": "정량 데이터",
+    "noMeasurements": "이번 실험에서 기록된 측정값이 없습니다.",
+    "generating": "AI가 실험 데이터를 분석 중입니다…",
+    "regenerate": "보고서 재생성",
+    "generate": "실험 보고서 생성",
+    "generateFailed": "생성 실패 ({status})",
+    "notGenerated": "아직 보고서가 생성되지 않았습니다. AI가 이번 실험의 조작 단계와 측정값을 바탕으로 결론, 오차 분석, 개선 제안 및 이해도 평가를 제공합니다.",
+    "noActivity": "이번 실험에 아무런 조작 기록이 없어 보고서를 생성할 수 없습니다.",
+    "backToLab": "실험대로 돌아가서 직접 해보세요 →",
+    "title": "실험 보고서",
+    "generatedAt": "{time}에 생성됨"
+  },
+  "rig": {
+    "electrolysis": {
+      "on": "전원 연결",
+      "off": "전원 차단"
+    },
+    "cell": {
+      "on": "회로 연결",
+      "off": "회로 차단"
+    },
+    "flameTest": {
+      "on": "알코올 램프 점화",
+      "off": "알코올 램프 끄기"
+    },
+    "waterBath": {
+      "on": "수욕 가열 시작",
+      "off": "수욕 가열 정지"
+    },
+    "distillation": {
+      "on": "증류 시작",
+      "off": "증류 정지"
+    },
+    "filtration": {
+      "on": "여과 시작",
+      "off": "여과 정지"
+    },
+    "calorimeter": {
+      "on": "교반 및 온도 측정 시작",
+      "off": "교반 정지"
+    },
+    "gasCollect": {
+      "on": "기체 포집 시작",
+      "off": "포집 정지"
+    },
+    "titration": {
+      "on": "콕 열어 적가",
+      "off": "콕 닫기"
+    },
+    "syringe": {
+      "on": "피스톤 눌러 가압",
+      "off": "피스톤 당겨 감압"
+    },
+    "phMeter": {
+      "on": "pH 미터 켜기",
+      "off": "pH 미터 끄기"
+    },
+    "evaporation": {
+      "on": "알코올 램프 점화하여 증발",
+      "off": "알코올 램프 끄기"
+    },
+    "pressureDrop": {
+      "on": "병뚜껑 조여 진탕",
+      "off": "병뚜껑 열기"
+    },
+    "heat": {
+      "on": "알코올 램프 점화하여 가열",
+      "off": "가열 정지"
+    }
+  },
+  "sessions": {
+    "title": "내 세션",
+    "subtitle": "과거 실험 기록을 조회하고 해당 보고서로 이동",
+    "unknownExperiment": "알 수 없는 실험",
+    "completed": "완료됨",
+    "inProgress": "진행 중",
+    "startedAt": "{time}에 시작됨",
+    "viewReport": "보고서 보기"
+  },
+  "titration": {
+    "stopcock": "콕 개도",
+    "buretteReading": "뷰렛 눈금",
+    "phMeter": "pH 미터",
+    "unfilled": "시약 미충전",
+    "strongBase": "강염기성",
+    "weakBase": "약염기성 · 변색 구간",
+    "nearNeutral": "중성에 근접",
+    "acidExcess": "산성 · 과잉 첨가",
+    "endpointOk": "종말점 적정",
+    "overshoot": "과적정",
+    "notYet": "종말점 미도달 (분홍색 유지)",
+    "justFaded": "방금 탈색됨",
+    "keyPoints": "조작 요점",
+    "takeAnalyte": "먼저 분석액 취하기 →",
+    "dragStopcock": "← 콕을 드래그하여 적정 시작",
+    "openness": "개도 {pct}% · 좌우로 드래그"
+  },
+  "tutor": {
+    "placeholder": "질문을 입력하세요…",
+    "replying": "응답 중…",
+    "send": "전송",
+    "unknownError": "알 수 없는 오류",
+    "requestFailed": "요청 실패 ({status})",
+    "askHeat": "시약을 혼합한 후 아무 현상도 관찰되지 않았으며, 이 반응에는 가열이 필요하다고 표시되어 있습니다. 이 반응이 반드시 가열 조건에서만 진행되는 이유를 설명해 주세요.",
+    "askObserved": "방금 반응 {equation}{phenomena}을(를) 관찰했습니다. 어떤 일이 일어났는지, 그 원리는 무엇인지 설명해 주세요.",
+    "phPrecipitate": "침전 생성",
+    "phGas": "기체 발생",
+    "phColor": "색깔 변화 발생",
+    "listJoin": "、",
+    "eqWrap": "({equation})",
+    "title": "AI 실험 튜터",
+    "empty": "언제든지 질문하세요. 또는 캔버스에서 반응이 일어나면 제가 먼저 안내해 드립니다."
+  },
+  "workbench": {
+    "view2d": "2D 개요",
+    "view3d": "3D 실험대",
+    "view3dRefined": "3D 실험대 ★",
+    "sceneHint": "드래그로 회전 · 스크롤로 확대/축소"
+  },
+  "category": {
+    "ACID_BASE": "산염기 반응",
+    "ORGANIC": "유기화학",
+    "THERMODYNAMICS": "열역학",
+    "REDOX": "산화환원",
+    "PRECIPITATION": "침전 복분해",
+    "GAS": "기체 제조",
+    "ELECTROCHEM": "전기화학",
+    "METAL": "금속 활동성",
+    "ANALYSIS": "분석 검사",
+    "COORDINATION": "배위 발색"
+  },
+  "difficulty": {
+    "EASY": "입문",
+    "MEDIUM": "심화",
+    "HARD": "도전"
+  },
+  "locale": {
+    "switchLabel": "인터페이스 언어 전환",
+    "searchPlaceholder": "언어 검색…",
+    "noMatch": "일치하는 언어 없음",
+    "groupFull": "주요 언어",
+    "groupBasic": "기타 언어",
+    "groupBasicHint": "완전한 실험 내용과 음성 해설 포함, 번역은 기계 번역"
+  },
+  "nav": {
+    "catalog": "실험 라이브러리",
+    "sessions": "내 세션",
+    "home": "홈"
+  },
+  "errors": {
+    "noActivity": "이번 실험에 아직 조작 기록이 없습니다. 실험대에서 먼저 실험을 진행한 후 보고서를 생성하세요.",
+    "reportFailed": "보고서 생성 실패",
+    "tutorUnavailable": "AI 튜터 서비스 오류",
+    "unknown": "알 수 없는 오류"
+  },
+  "shelf": {
+    "title": "시약 선반",
+    "taken": "{dose} {unit} 취함",
+    "takeSome": "적가 / 적량 취하기",
+    "take": "{unit} 취하기",
+    "specIndicator": "지시약",
+    "specGas": "기체",
+    "specBulk": "적량 취하기",
+    "specSolution": "용액",
+    "specConc": "{conc} mol/L",
+    "specLiquidDensity": "순수 액체 ρ={density} g/mL",
+    "specLiquid": "액체",
+    "specSolid": "고체 분석순"
+  },
+  "op": {
+    "stir": {
+      "label": "교반",
+      "effect": "유리 막대로 교반하여 용질 용해 촉진 및 균일 혼합",
+      "hint": "교반은 용해와 열전달을 가속하고 국부 농도를 균일하게 하여 측정값이 전체를 대표하게 함"
+    },
+    "shake": {
+      "label": "진탕",
+      "effect": "진탕하여 시약이 충분히 접촉되도록 혼합",
+      "hint": "시험관 내 액체가 적을 때는 교반이 아닌 진탕으로 혼합; 관 입구를 사람 없는 방향으로 향한 채 손으로 잡을 것"
+    },
+    "heat": {
+      "label": "가열",
+      "effect": "알코올 램프를 점화하여 가열, 계 온도 상승",
+      "hint": "대부분의 반응은 온도 상승 시 속도 증가; 흡열 반응은 지속 가열이 필요"
+    },
+    "cool": {
+      "label": "냉각",
+      "effect": "열원 제거 후 자연 냉각, 온도 하강",
+      "hint": "냉각으로 용해도가 감소하며, 결정 석출 및 생성물 수집의 일반적 단계"
+    },
+    "settle": {
+      "label": "정치",
+      "effect": "잠시 정치하여 침전 침강 및 액체 층 분리 명확화",
+      "hint": "침전과 층 분리에는 시간이 필요; 정치 후 상층 맑은 액의 투명도를 확인"
+    },
+    "read": {
+      "label": "눈금 읽기",
+      "effect": "현재 값 기록",
+      "hint": "눈금과 시선을 수평으로 맞춰 읽기; 매 측정값을 데이터 표에 기록해야 평균값과 오차 계산 가능"
+    }
+  }
+}

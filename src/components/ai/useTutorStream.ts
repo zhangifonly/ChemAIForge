@@ -14,6 +14,8 @@ interface SendArgs {
   experimentSlug: string;
   messages: ChatMessage[];
   labState?: Record<string, unknown>;
+  /** 回答语言，由调用方传入当前界面语言 */
+  locale?: string;
   // 每次收到增量文本时回调（累计后的完整助手文本）
   onDelta: (full: string) => void;
 }
@@ -28,14 +30,19 @@ export function parseText(payload: string): string | null {
   }
 }
 
-// 解析 error 事件的 detail，缺失或非法时给出可读兜底
-export function parseDetail(payload: string | undefined): string {
-  if (!payload) return "未知错误";
+/**
+ * 解析 error 事件的 detail，缺失或非法时给出可读兜底。
+ *
+ * 兜底文案由调用方传入：本函数是纯函数、被测试直接调用，
+ * 不该为一句"未知错误"去依赖 React 上下文。
+ */
+export function parseDetail(payload: string | undefined, fallback = "未知错误"): string {
+  if (!payload) return fallback;
   try {
     const obj = JSON.parse(payload) as { detail?: unknown };
-    return typeof obj.detail === "string" ? obj.detail : "未知错误";
+    return typeof obj.detail === "string" ? obj.detail : fallback;
   } catch {
-    return "未知错误";
+    return fallback;
   }
 }
 
@@ -45,7 +52,7 @@ export function useTutorStream() {
   const abortRef = useRef<AbortController | null>(null);
 
   const send = useCallback(async (args: SendArgs) => {
-    const { experimentSlug, messages, labState, onDelta } = args;
+    const { experimentSlug, messages, labState, locale, onDelta } = args;
     setError(null);
     setStreaming(true);
     abortRef.current?.abort();
@@ -56,7 +63,7 @@ export function useTutorStream() {
       const res = await fetch("/api/ai/tutor", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ experimentSlug, messages, labState }),
+        body: JSON.stringify({ experimentSlug, messages, labState, locale }),
         signal: ac.signal,
       });
 
