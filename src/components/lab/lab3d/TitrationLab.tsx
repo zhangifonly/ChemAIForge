@@ -4,6 +4,7 @@
 // 左侧为定量操作面板，右侧为 3D 场景。滴定量的唯一来源是"落下的滴数"，
 // 因此界面读数与 3D 里看到的液滴严格一致。
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { SceneShell } from "./SceneShell";
 import { TitrationScene } from "./TitrationScene";
@@ -23,6 +24,7 @@ import {
 export function TitrationLab({ reagents = [] }: { reagents?: string[] }) {
   // 必须在组件顶层取：hook 不能写在 JSX 属性里
   const benchTerms = useTerms();
+  const tWb = useTranslations("workbench");
   // 本实验台不走"加试剂→混合"的通用流程，故手动把关键节点写进会话，
   // 否则滴定的会话里没有任何步骤与读数，报告页一片空白、状态永远"进行中"。
   const record = useLabStore((s) => s.record);
@@ -161,7 +163,8 @@ export function TitrationLab({ reagents = [] }: { reagents?: string[] }) {
         minDistance={4.5}
         maxDistance={15}
         className="h-[420px] sm:h-[520px] lg:h-[640px]"
-        hint="拖拽旋转 · 滚轮缩放 · 拖动旋塞控制滴速"
+        hint={tWb("titrationHint")}
+        hintTouch={tWb("titrationHintTouch")}
       >
         {/* 搁板瓶签：Provider 须在 Canvas 内部，Context 不跨两个 reconciler */}
         <BenchLabelsContext.Provider value={reagents}>

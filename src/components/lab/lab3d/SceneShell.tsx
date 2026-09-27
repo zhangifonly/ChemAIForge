@@ -22,8 +22,12 @@ export interface SceneShellProps {
   maxDistance?: number;
   className?: string;
   hint?: string;
+  /** 触屏设备上的提示；不传则用通用的「单指旋转 · 双指缩放」 */
+  hintTouch?: string;
   /** 视场角：竖高装置可增大以在有限画布内容纳全高 */
   fov?: number;
+  /** 外层容器附加类名（如网格排序），与控制高度的 className 分开 */
+  wrapperClassName?: string;
 }
 
 export function SceneShell({
@@ -36,14 +40,25 @@ export function SceneShell({
   maxDistance = 9,
   className = "h-[360px] sm:h-[440px] lg:h-[520px]",
   hint,
+  hintTouch,
   fov = 40,
+  wrapperClassName = "",
 }: SceneShellProps) {
   const t = useTranslations("workbench");
   // 默认提示语在函数体内取，参数默认值处拿不到 hook
-  const hintText = hint ?? t("sceneHint");
+  // 触屏设备没有滚轮：「滚轮缩放」在手机上是做不到的操作。
+  // 按 pointer:coarse 判断主输入是不是手指，而不是看屏幕宽度 —— 平板横屏很宽，同样没有滚轮
+  const mouseHint = hint ?? t("sceneHint");
+  const touchHint = hintTouch ?? (hint ? hint : t("sceneHintTouch"));
+  const hintText = (
+    <>
+      <span className="[@media(pointer:coarse)]:hidden">{mouseHint}</span>
+      <span className="hidden [@media(pointer:coarse)]:inline">{touchHint}</span>
+    </>
+  );
   return (
     <div
-      className={`relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6] ${className}`}
+      className={`relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6] ${className} ${wrapperClassName}`}
     >
       <Canvas
         shadows
