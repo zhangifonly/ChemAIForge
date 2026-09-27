@@ -75,7 +75,7 @@ export function ReadingHud({ className = "" }: { className?: string }) {
   const readings = useLabStore((s) => s.readings);
   return (
     <div
-      className={`pointer-events-none flex gap-2 ${className}`}
+      className={`pointer-events-none flex max-w-[calc(100%-2rem)] gap-1.5 sm:gap-2 ${className}`}
       aria-label="实验台仪表读数"
     >
       <Meter label="pH" value={readings.ph.toFixed(1)} tone={phTone(readings)} />
@@ -103,13 +103,15 @@ function Meter({
   tone?: string;
 }) {
   return (
-    <div className="flex min-w-[5.5rem] flex-col gap-0.5 rounded-lg border border-white/10 bg-slate-900/80 px-3 py-1.5 shadow-lg backdrop-blur">
+    // 窄屏可收缩：亚美尼亚语「Ծավալ」配「0.0 mL」读数时，三块定宽 5.5rem 的仪表在 360px 屏上
+    // 放不下，把整页撑出横向滚动；sm 起恢复定宽
+    <div className="flex min-w-0 flex-1 flex-col gap-0.5 rounded-lg border border-white/10 bg-slate-900/80 px-2.5 py-1.5 shadow-lg backdrop-blur sm:min-w-[5.5rem] sm:flex-none sm:px-3">
       {/* 不能加 uppercase：pH 的小写 p 表示负对数，写成 PH 是错的 */}
-      <span className="flex items-center gap-1.5 text-[11px] sm:text-[10px] tracking-wider text-slate-400">
-        <span className={`h-1.5 w-1.5 rounded-full ${tone}`} />
+      <span className="flex min-w-0 items-center gap-1.5 truncate text-[11px] tracking-wider text-slate-400 sm:text-[10px]">
+        <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${tone}`} />
         {label}
       </span>
-      <span className="font-mono text-base font-semibold tabular-nums text-emerald-300">
+      <span className="truncate font-mono text-sm font-semibold tabular-nums text-emerald-300 sm:text-base">
         {value}
       </span>
     </div>

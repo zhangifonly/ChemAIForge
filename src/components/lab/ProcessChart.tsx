@@ -66,7 +66,9 @@ export function ProcessChart({ trace }: { trace: TracePoint[] }) {
 
   return (
     <div className="flex flex-col gap-2 rounded-2xl border border-foreground/10 bg-surface/60 p-4 shadow-soft">
-      <div className="flex items-center justify-between gap-2">
+      {/* flex-wrap：亚美尼亚语「Գործընթացի կոր」与「Ջերմաստիճան / pH / Ծավալ」三个通道按钮
+          在 360px 屏上排不进一行，原先直接把卡片撑破 */}
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-foreground/75">
           <span className="h-4 w-1 rounded-full bg-gradient-to-b from-brand-400 to-brand-600" />
           {tChart("title")}
