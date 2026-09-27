@@ -445,6 +445,38 @@
     "view3d": "Meza ya Maabara ya 3D",
     "view3dRefined": "Meza ya Maabara ya 3D ★",
     "sceneHint": "Buruta kuzungusha · Gurudumu kukuza",
-    "sceneHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza"
+    "sceneHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza",
+    "titrationHint": "Buruta kuzungusha · Gurudumu kukuza · Buruta kofia kudhibiti kasi ya matone",
+    "titrationHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza · Buruta kofia kudhibiti kasi ya matone"
+  },
+  "electrolysisLab": {
+    "setup": "Vigezo vya Majaribio",
+    "anodeMaterial": "Nyenzo ya Anodi",
+    "anode": {
+      "graphite": "Grafiti (isiyotendea)",
+      "copper": "Shaba ghafi (usafishaji wa elektrolisisi)"
+    },
+    "current": "Mkondo",
+    "timeScale": "Kiwango cha Muda",
+    "powerOn": "Washa Umeme",
+    "powerOff": "Zima Umeme",
+    "microView": "Mtazamo wa Hadubuni",
+    "reset": "Weka Upya",
+    "readings": "Usomaji wa Wakati Halisi",
+    "charge": "Chaji Q",
+    "copperDeposited": "Shaba iliyosalia kathodini",
+    "oxygen": "O₂ iliyotolewa anodini",
+    "anodeDissolved": "Shaba iliyoyeyuka anodini",
+    "concentration": "Mkusanyiko wa Cu²⁺",
+    "cathodeLabel": "Kathodi:",
+    "anodeLabel": "Anodi:",
+    "depleted": "Cu²⁺ katika ufumbuzi imekaribia kuisha; elektrolisisi inayoendelea itabadilisha kathodi hadi kutoa gesi ya haidrojeni. Umeme umezimwa kiotomatiki.",
+    "weigh": "Toa kathodi na ipime",
+    "measured": "Kipimo halisi",
+    "theoretical": "Nadharia",
+    "efficiency": "Ufanisi wa Mkondo",
+    "complete": "Maliza Majaribio",
+    "viewReport": "Tazama Ripoti",
+    "scaleNote": "Kiwango cha muda {scale}×: skrini inasonga kwa muda uliofupishwa; usomaji daima unaonyesha chaji na muda halisi. Elektroliti: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

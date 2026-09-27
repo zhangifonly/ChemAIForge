@@ -445,6 +445,38 @@
     "view3d": "3D-työpöytä",
     "view3dRefined": "3D-työpöytä ★",
     "sceneHint": "Pyöritä vetämällä · Zoomaa vierittämällä",
-    "sceneHintTouch": "Yksi sormi: pyöritä · Kaksi sormea: zoomaa"
+    "sceneHintTouch": "Yksi sormi: pyöritä · Kaksi sormea: zoomaa",
+    "titrationHint": "Vedä pyörittääksesi · Rullaa zoomaamiseen · Vedä hanaa hallitaksesi tippanopeutta",
+    "titrationHintTouch": "Pyöritä yhdellä sormella · Zoomaa kahdella sormella · Vedä hanaa hallitaksesi tippanopeutta"
+  },
+  "electrolysisLab": {
+    "setup": "Kokeen parametrit",
+    "anodeMaterial": "Anodimateriaali",
+    "anode": {
+      "graphite": "Grafiitti (inertti)",
+      "copper": "Raakakupari (elektrolyyttinen puhdistus)"
+    },
+    "current": "Virta",
+    "timeScale": "Aikakeroin",
+    "powerOn": "Kytke virta",
+    "powerOff": "Katkaise virta",
+    "microView": "Mikronäkymä",
+    "reset": "Nollaa",
+    "readings": "Reaaliaikaiset lukemat",
+    "charge": "Varaus Q",
+    "copperDeposited": "Katodille saostunut kupari",
+    "oxygen": "Anodilta vapautunut O₂",
+    "anodeDissolved": "Anodilta liuennut kupari",
+    "concentration": "Cu²⁺-pitoisuus",
+    "cathodeLabel": "Katodi:",
+    "anodeLabel": "Anodi:",
+    "depleted": "Liuoksen Cu²⁺ on lähes loppunut. Jatkuva elektrolyysi tuottaisi katodilla vetykaasua. Virta on katkaistu automaattisesti.",
+    "weigh": "Ota katodi ja punnitse",
+    "measured": "Mitattu",
+    "theoretical": "Teoreettinen",
+    "efficiency": "Virran hyötysuhde",
+    "complete": "Lopeta koe",
+    "viewReport": "Näytä raportti",
+    "scaleNote": "Aikakeroin {scale}×: animaatio etenee tiivistetyssä ajassa, lukemat näyttävät aina todellisen varauksen ja todellisen keston. Elektrolyytti {conc} mol/L CuSO₄ {volume} mL."
   }
 }

@@ -20,6 +20,8 @@ export const EXPERIMENTS_WITH_3D = new Set<string>([
   "copper-zinc-cell", // 锌铜原电池：电流计偏转+铜片析氢
   // —— 定量分析（精细场景，独立实现） ——
   "acid-base-titration", // 酸碱中和滴定：可拖拽活塞控制滴速、终点半滴之差
+  "copper-electrolysis", // 电解硫酸铜：可调电流/时间，阴极镀铜、阳极放氧、溶液按 Beer–Lambert 褪色
+  "copper-refining-electrolysis", // 电解精炼铜：同一电解台换铜阳极，阳极溶解、溶液不褪色
 ]);
 
 export function has3D(slug: string): boolean {

@@ -445,6 +445,38 @@
     "view3d": "3D radni stol",
     "view3dRefined": "3D radni stol ★",
     "sceneHint": "Povucite za rotaciju · Kotačić za zum",
-    "sceneHintTouch": "Jedan prst za rotaciju · Dva prsta za zum"
+    "sceneHintTouch": "Jedan prst za rotaciju · Dva prsta za zum",
+    "titrationHint": "Povuci za rotaciju · Kotačić za zum · Povuci slavinu za kontrolu kapanja",
+    "titrationHintTouch": "Jedan prst za rotaciju · Dva prsta za zum · Povuci slavinu za kontrolu kapanja"
+  },
+  "electrolysisLab": {
+    "setup": "Parametri eksperimenta",
+    "anodeMaterial": "Materijal anode",
+    "anode": {
+      "graphite": "Grafit (inertni)",
+      "copper": "Sirovi bakar (elektrolitičko rafiniranje)"
+    },
+    "current": "Struja",
+    "timeScale": "Vremenski multiplikator",
+    "powerOn": "Uključi napajanje",
+    "powerOff": "Isključi napajanje",
+    "microView": "Mikroskopski prikaz",
+    "reset": "Resetuj",
+    "readings": "Očitavanja u realnom vremenu",
+    "charge": "Naboj Q",
+    "copperDeposited": "Bakar istaložen na katodi",
+    "oxygen": "O₂ oslobođen na anodi",
+    "anodeDissolved": "Bakar otopljen s anode",
+    "concentration": "Koncentracija Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Koncentracija Cu²⁺ u otopini je gotovo iscrpljena. Daljnjom elektrolizom na katodi bi se počeo izdvajati vodik. Napajanje je automatski isključeno.",
+    "weigh": "Izvadi katodu i izmjeri masu",
+    "measured": "Izmjereno",
+    "theoretical": "Teorijsko",
+    "efficiency": "Iskoristivost struje",
+    "complete": "Završi eksperiment",
+    "viewReport": "Prikaži izvještaj",
+    "scaleNote": "Vremenski multiplikator {scale}×: animacija napreduje komprimiranim vremenom, ali očitavanja uvijek odražavaju stvarni naboj i stvarno proteklo vrijeme. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
   }
 }

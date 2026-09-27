@@ -445,6 +445,38 @@
     "view3d": "Bancada 3D",
     "view3dRefined": "Bancada 3D ★",
     "sceneHint": "Arrastar para girar · Rolar para zoom",
-    "sceneHintTouch": "Um dedo para girar · Dois dedos para ampliar"
+    "sceneHintTouch": "Um dedo para girar · Dois dedos para ampliar",
+    "titrationHint": "Arrastar para girar · Rolar para ampliar · Arrastar a torneira para controlar o gotejamento",
+    "titrationHintTouch": "Um dedo para girar · Dois dedos para ampliar · Arrastar a torneira para controlar o gotejamento"
+  },
+  "electrolysisLab": {
+    "setup": "Parâmetros do Experimento",
+    "anodeMaterial": "Material do Ânodo",
+    "anode": {
+      "graphite": "Grafite (inerte)",
+      "copper": "Cobre bruto (refino eletrolítico)"
+    },
+    "current": "Corrente",
+    "timeScale": "Fator de Tempo",
+    "powerOn": "Ligar Alimentação",
+    "powerOff": "Desligar Alimentação",
+    "microView": "Visão Microscópica",
+    "reset": "Reiniciar",
+    "readings": "Leituras em Tempo Real",
+    "charge": "Carga Q",
+    "copperDeposited": "Cobre depositado no cátodo",
+    "oxygen": "O₂ liberado no ânodo",
+    "anodeDissolved": "Cobre dissolvido no ânodo",
+    "concentration": "Concentração de Cu²⁺",
+    "cathodeLabel": "Cátodo:",
+    "anodeLabel": "Ânodo:",
+    "depleted": "O Cu²⁺ na solução está quase esgotado. Continuar a eletrólise fará o cátodo passar a produzir gás hidrogênio. A alimentação foi desligada automaticamente.",
+    "weigh": "Retirar cátodo para pesagem",
+    "measured": "Medido",
+    "theoretical": "Teórico",
+    "efficiency": "Eficiência de corrente",
+    "complete": "Concluir Experimento",
+    "viewReport": "Ver Relatório",
+    "scaleNote": "Fator de tempo {scale}×: a animação avança no tempo comprimido, mas as leituras sempre refletem a carga e a duração reais. Eletrólito: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

@@ -445,6 +445,38 @@
     "view3d": "3D-labbstation",
     "view3dRefined": "3D-labbstation ★",
     "sceneHint": "Dra för att rotera · Scrolla för att zooma",
-    "sceneHintTouch": "Ett finger: rotera · Två fingrar: zooma"
+    "sceneHintTouch": "Ett finger: rotera · Två fingrar: zooma",
+    "titrationHint": "Dra för att rotera · Rulla för att zooma · Dra kranen för att styra dropphastigheten",
+    "titrationHintTouch": "Ett finger för att rotera · Två fingrar för att zooma · Dra kranen för att styra dropphastigheten"
+  },
+  "electrolysisLab": {
+    "setup": "Experimentparametrar",
+    "anodeMaterial": "Anodmaterial",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Råkoppar (elektrolytisk raffinering)"
+    },
+    "current": "Ström",
+    "timeScale": "Tidsfaktor",
+    "powerOn": "Koppla på strömmen",
+    "powerOff": "Koppla från strömmen",
+    "microView": "Mikroskopvy",
+    "reset": "Återställ",
+    "readings": "Realtidsavläsning",
+    "charge": "Laddning Q",
+    "copperDeposited": "Koppar utfälld vid katod",
+    "oxygen": "O₂ avgiven vid anod",
+    "anodeDissolved": "Koppar upplöst vid anod",
+    "concentration": "Cu²⁺-koncentration",
+    "cathodeLabel": "Katod:",
+    "anodeLabel": "Anod:",
+    "depleted": "Cu²⁺ i lösningen är nästan förbrukat. Fortsatt elektrolys skulle ge vätgasutveckling vid katoden. Strömmen har kopplats från automatiskt.",
+    "weigh": "Ta ut katoden och väg den",
+    "measured": "Uppmätt",
+    "theoretical": "Teoretiskt",
+    "efficiency": "Strömverkningsgrad",
+    "complete": "Avsluta experiment",
+    "viewReport": "Visa rapport",
+    "scaleNote": "Tidsfaktor {scale}×: animationen fortskrider med komprimerad tid, men avläsningarna visar alltid verklig laddning och verklig tid. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

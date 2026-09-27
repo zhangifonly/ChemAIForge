@@ -445,6 +445,38 @@
     "view3d": "Banco 3D",
     "view3dRefined": "Banco 3D ★",
     "sceneHint": "Trascina per ruotare · Scorri per ingrandire",
-    "sceneHintTouch": "Un dito per ruotare · Due dita per ingrandire"
+    "sceneHintTouch": "Un dito per ruotare · Due dita per ingrandire",
+    "titrationHint": "Trascina per ruotare · Rotella per zoom · Trascina il rubinetto per controllare il flusso",
+    "titrationHintTouch": "Un dito per ruotare · Due dita per zoom · Trascina il rubinetto per controllare il flusso"
+  },
+  "electrolysisLab": {
+    "setup": "Parametri sperimentali",
+    "anodeMaterial": "Materiale anodo",
+    "anode": {
+      "graphite": "Grafite (inerte)",
+      "copper": "Rame grezzo (raffinazione elettrolitica)"
+    },
+    "current": "Corrente",
+    "timeScale": "Fattore di scala temporale",
+    "powerOn": "Accendi alimentazione",
+    "powerOff": "Spegni alimentazione",
+    "microView": "Vista microscopica",
+    "reset": "Reimposta",
+    "readings": "Letture in tempo reale",
+    "charge": "Carica Q",
+    "copperDeposited": "Rame depositato al catodo",
+    "oxygen": "O₂ liberato all'anodo",
+    "anodeDissolved": "Rame disciolto all'anodo",
+    "concentration": "Concentrazione Cu²⁺",
+    "cathodeLabel": "Catodo:",
+    "anodeLabel": "Anodo:",
+    "depleted": "Il Cu²⁺ in soluzione è quasi esaurito. Continuando l'elettrolisi il catodo produrrebbe idrogeno. Alimentazione interrotta automaticamente.",
+    "weigh": "Rimuovi il catodo e pesalo",
+    "measured": "Misurato",
+    "theoretical": "Teorico",
+    "efficiency": "Efficienza di corrente",
+    "complete": "Termina esperimento",
+    "viewReport": "Visualizza rapporto",
+    "scaleNote": "Fattore di scala temporale {scale}×: la simulazione avanza a tempo compresso, mentre le letture mostrano sempre carica e durata reali. Elettrolita: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

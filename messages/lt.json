@@ -445,6 +445,38 @@
     "view3d": "3D laboratorija",
     "view3dRefined": "3D laboratorija ★",
     "sceneHint": "Vilkite norėdami pasukti · slinkite norėdami priartinti",
-    "sceneHintTouch": "Vienu pirštu – sukti · Dviem – keisti mastelį"
+    "sceneHintTouch": "Vienu pirštu – sukti · Dviem – keisti mastelį",
+    "titrationHint": "Vilkite sukimui · Slinkite priartinimui · Vilkite čiaupą lašėjimo greičiui",
+    "titrationHintTouch": "Vienu pirštu sukite · Dviem pirštais priartinkite · Vilkite čiaupą lašėjimo greičiui"
+  },
+  "electrolysisLab": {
+    "setup": "Eksperimento parametrai",
+    "anodeMaterial": "Anodo medžiaga",
+    "anode": {
+      "graphite": "Grafitas (inertiškas)",
+      "copper": "Nerafinuotas varis (elektrolitinis rafinavimas)"
+    },
+    "current": "Srovė",
+    "timeScale": "Laiko mastelis",
+    "powerOn": "Įjungti maitinimą",
+    "powerOff": "Išjungti maitinimą",
+    "microView": "Mikro vaizdas",
+    "reset": "Atstatyti",
+    "readings": "Rodmenys realiuoju laiku",
+    "charge": "Krūvis Q",
+    "copperDeposited": "Varis nusodinta ant katodo",
+    "oxygen": "O₂ išskirtas ant anodo",
+    "anodeDissolved": "Varis ištirpęs nuo anodo",
+    "concentration": "Cu²⁺ koncentracija",
+    "cathodeLabel": "Katodas:",
+    "anodeLabel": "Anodas:",
+    "depleted": "Tirpalo Cu²⁺ koncentracija artėja prie nulio. Toliau elektrolizuojant ant katodo pradės išsiskirti vandenilis. Maitinimas automatiškai išjungtas.",
+    "weigh": "Išimti katodą ir pasvėrti",
+    "measured": "Išmatuota",
+    "theoretical": "Teorinė",
+    "efficiency": "Srovės efektyvumas",
+    "complete": "Baigti eksperimentą",
+    "viewReport": "Peržiūrėti ataskaitą",
+    "scaleNote": "Laiko mastelis {scale}×: vaizdas juda suspaustu laiku, rodmenys visada atspindi tikrąjį krūvį ir tikrąją trukmę. Elektrolitas: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

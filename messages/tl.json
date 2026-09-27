@@ -445,6 +445,38 @@
     "view3d": "3D Lab Table",
     "view3dRefined": "3D Lab Table ★",
     "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom",
-    "sceneHintTouch": "Isang daliri para i-rotate · Dalawang daliri para i-zoom"
+    "sceneHintTouch": "Isang daliri para i-rotate · Dalawang daliri para i-zoom",
+    "titrationHint": "I-drag para i-rotate · Scroll wheel para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak",
+    "titrationHintTouch": "Isang daliri para i-rotate · Dalawang daliri para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak"
+  },
+  "electrolysisLab": {
+    "setup": "Mga Parameter ng Eksperimento",
+    "anodeMaterial": "Materyal ng Anod",
+    "anode": {
+      "graphite": "Grapayt (inert)",
+      "copper": "Magaspang na Tanso (electrolytic refining)"
+    },
+    "current": "Alon",
+    "timeScale": "Bilis ng Oras",
+    "powerOn": "I-on ang Kuryente",
+    "powerOff": "I-off ang Kuryente",
+    "microView": "Mikroskopikong Tingin",
+    "reset": "I-reset",
+    "readings": "Mga Tunay na Pagbabasa",
+    "charge": "Karga Q",
+    "copperDeposited": "Tanso sa Katod",
+    "oxygen": "O₂ mula sa Anod",
+    "anodeDissolved": "Natunaw na Tanso sa Anod",
+    "concentration": "Konsentrasyon ng Cu²⁺",
+    "cathodeLabel": "Katod:",
+    "anodeLabel": "Anod:",
+    "depleted": "Ang Cu²⁺ sa solusyon ay halos naubusan na. Kung magpapatuloy ang elektrolisis, ang katod ay maglalabas ng gasoling hydrogen. Awtomatikong pinutol ang kuryente.",
+    "weigh": "Ilabas ang Katod para Timbangin",
+    "measured": "Nasukat",
+    "theoretical": "Teoretikal",
+    "efficiency": "Kahusayan ng Alon",
+    "complete": "Tapusin ang Eksperimento",
+    "viewReport": "Tingnan ang Ulat",
+    "scaleNote": "Bilis ng oras {scale}×: ang display ay gumagalaw sa compressed na oras, ngunit ang mga pagbabasa ay palaging tunay na karga at tunay na tagal. Elektrolito: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

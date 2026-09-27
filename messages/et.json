@@ -445,6 +445,38 @@
     "view3d": "3D töölaud",
     "view3dRefined": "3D töölaud ★",
     "sceneHint": "Lohistage pööramiseks · Kerige suurendamiseks",
-    "sceneHintTouch": "Ühe sõrmega pööramine · kahe sõrmega suurendamine"
+    "sceneHintTouch": "Ühe sõrmega pööramine · kahe sõrmega suurendamine",
+    "titrationHint": "Lohistage pööramiseks · Kerige suurendamiseks · Lohistage kraan tilkade kiiruse reguleerimiseks",
+    "titrationHintTouch": "Ühe sõrmega pööramine · Kahe sõrmega suurendamine · Lohistage kraan tilkade kiiruse reguleerimiseks"
+  },
+  "electrolysisLab": {
+    "setup": "Katse parameetrid",
+    "anodeMaterial": "Anoodi materjal",
+    "anode": {
+      "graphite": "Grafiit (inertne)",
+      "copper": "Toорvas (elektrolüütiline rafineerimine)"
+    },
+    "current": "Voolutugevus",
+    "timeScale": "Ajakordaja",
+    "powerOn": "Lülita vool sisse",
+    "powerOff": "Lülita vool välja",
+    "microView": "Mikrovaade",
+    "reset": "Lähtesta",
+    "readings": "Reaalajanäidud",
+    "charge": "Laeng Q",
+    "copperDeposited": "Katoodil sadenenud vask",
+    "oxygen": "Anoodil eralduv O₂",
+    "anodeDissolved": "Anoodil lahustuv vask",
+    "concentration": "Cu²⁺ kontsentratsioon",
+    "cathodeLabel": "Katood:",
+    "anodeLabel": "Anood:",
+    "depleted": "Lahuses olev Cu²⁺ on peaaegu ammendunud. Elektrolüüsi jätkamisel hakkab katoodil eralduma vesinik. Vool on automaatselt katkestatud.",
+    "weigh": "Eemalda katood ja kaal",
+    "measured": "Mõõdetud",
+    "theoretical": "Teoreetiline",
+    "efficiency": "Voolu efektiivsus",
+    "complete": "Lõpeta katse",
+    "viewReport": "Vaata aruannet",
+    "scaleNote": "Ajakordaja {scale}×: animatsioon kulgeb kiirendatud ajaskaalal, näidud kajastavad alati tegelikku laengut ja tegelikku kestust. Elektrolüüt: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

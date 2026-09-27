@@ -363,7 +363,9 @@
     "view3d": "3D 実験台",
     "view3dRefined": "3D 実験台 ★",
     "sceneHint": "ドラッグで回転 · ホイールでズーム",
-    "sceneHintTouch": "1本指で回転 · 2本指でズーム"
+    "sceneHintTouch": "1本指で回転 · 2本指でズーム",
+    "titrationHint": "ドラッグで回転 · スクロールで拡縮 · コックをドラッグして滴下速度を調節",
+    "titrationHintTouch": "1本指で回転 · 2本指で拡縮 · コックをドラッグして滴下速度を調節"
   },
   "category": {
     "ACID_BASE": "酸塩基反応",
@@ -446,5 +448,35 @@
       "effect": "現在の読数を記録する",
       "hint": "目線を目盛りと水平にして読む。毎回の読数をデータ表に記録して初めて平均値と誤差を算出できる"
     }
+  },
+  "electrolysisLab": {
+    "setup": "実験パラメータ",
+    "anodeMaterial": "陽極材料",
+    "anode": {
+      "graphite": "黒鉛（不活性）",
+      "copper": "粗銅（電解精錬）"
+    },
+    "current": "電流",
+    "timeScale": "時間倍率",
+    "powerOn": "電源を入れる",
+    "powerOff": "電源を切る",
+    "microView": "ミクロ視点",
+    "reset": "リセット",
+    "readings": "リアルタイム読取",
+    "charge": "電気量 Q",
+    "copperDeposited": "陰極析出銅",
+    "oxygen": "陽極発生 O₂",
+    "anodeDissolved": "陽極溶解銅",
+    "concentration": "Cu²⁺ 濃度",
+    "cathodeLabel": "陰極：",
+    "anodeLabel": "陽極：",
+    "depleted": "溶液中の Cu²⁺ がほぼ枯渇しました。電解を続けると陰極で水素が発生するため、自動的に電源を切りました。",
+    "weigh": "陰極を取り出して秤量",
+    "measured": "実測値",
+    "theoretical": "理論値",
+    "efficiency": "電流効率",
+    "complete": "実験完了",
+    "viewReport": "レポートを見る",
+    "scaleNote": "時間倍率 {scale}×：画面は圧縮時間で進みますが、読数は常に実際の電気量と実際の経過時間を示します。電解液 {conc} mol/L CuSO₄ {volume} mL。"
   }
 }

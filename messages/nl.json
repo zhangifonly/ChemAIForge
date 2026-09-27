@@ -445,6 +445,38 @@
     "view3d": "3D-werkbank",
     "view3dRefined": "3D-werkbank ★",
     "sceneHint": "Sleep om te draaien · Scroll om te zoomen",
-    "sceneHintTouch": "Één vinger roteren · Twee vingers zoomen"
+    "sceneHintTouch": "Één vinger roteren · Twee vingers zoomen",
+    "titrationHint": "Slepen om te draaien · Scrollen om in te zoomen · Sleepkraan om druppelsnelheid te regelen",
+    "titrationHintTouch": "Één vinger om te draaien · Twee vingers om in te zoomen · Sleepkraan om druppelsnelheid te regelen"
+  },
+  "electrolysisLab": {
+    "setup": "Experimentparameters",
+    "anodeMaterial": "Anodemateriaal",
+    "anode": {
+      "graphite": "Grafiet (inert)",
+      "copper": "Ruw koper (elektrolytische raffinage)"
+    },
+    "current": "Stroomsterkte",
+    "timeScale": "Tijdschaalfactor",
+    "powerOn": "Stroom inschakelen",
+    "powerOff": "Stroom uitschakelen",
+    "microView": "Microscopisch perspectief",
+    "reset": "Opnieuw instellen",
+    "readings": "Actuele meetwaarden",
+    "charge": "Lading Q",
+    "copperDeposited": "Koper neergeslagen op kathode",
+    "oxygen": "O₂ vrijgegeven aan anode",
+    "anodeDissolved": "Koper opgelost aan anode",
+    "concentration": "Cu²⁺ concentratie",
+    "cathodeLabel": "Kathode:",
+    "anodeLabel": "Anode:",
+    "depleted": "De Cu²⁺ in de oplossing is vrijwel uitgeput. Bij voortzetting van de elektrolyse zal de kathode waterstofgas beginnen te ontwikkelen. De stroom is automatisch onderbroken.",
+    "weigh": "Kathode verwijderen en wegen",
+    "measured": "Gemeten",
+    "theoretical": "Theoretisch",
+    "efficiency": "Stroomefficiëntie",
+    "complete": "Experiment afronden",
+    "viewReport": "Rapport bekijken",
+    "scaleNote": "Tijdschaalfactor {scale}×: de animatie loopt op gecomprimeerde tijd, maar de meetwaarden tonen altijd de werkelijke lading en werkelijke tijdsduur. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

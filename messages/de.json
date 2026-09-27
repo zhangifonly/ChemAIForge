@@ -363,7 +363,9 @@
     "view3d": "3D-Experimentiertisch",
     "view3dRefined": "3D-Experimentiertisch ★",
     "sceneHint": "Ziehen zum Drehen · Scrollen zum Zoomen",
-    "sceneHintTouch": "Ein Finger: Drehen · Zwei Finger: Zoomen"
+    "sceneHintTouch": "Ein Finger: Drehen · Zwei Finger: Zoomen",
+    "titrationHint": "Ziehen zum Drehen · Scrollen zum Zoomen · Hahn ziehen zur Tropfenregulierung",
+    "titrationHintTouch": "Ein Finger zum Drehen · Zwei Finger zum Zoomen · Hahn ziehen zur Tropfenregulierung"
   },
   "category": {
     "ACID_BASE": "Säure-Base-Reaktionen",
@@ -446,5 +448,35 @@
       "effect": "Aktuellen Messwert ablesen",
       "hint": "Messwert auf Augenhöhe mit der Skala ablesen; jeden Wert in die Datentabelle eintragen, um Mittelwert und Fehler berechnen zu können"
     }
+  },
+  "electrolysisLab": {
+    "setup": "Versuchsparameter",
+    "anodeMaterial": "Anodenmaterial",
+    "anode": {
+      "graphite": "Graphit (inert)",
+      "copper": "Rohkupfer (elektrolytische Raffination)"
+    },
+    "current": "Stromstärke",
+    "timeScale": "Zeitfaktor",
+    "powerOn": "Strom einschalten",
+    "powerOff": "Strom ausschalten",
+    "microView": "Mikroansicht",
+    "reset": "Zurücksetzen",
+    "readings": "Echtzeitwerte",
+    "charge": "Ladung Q",
+    "copperDeposited": "Kupfer an Kathode abgeschieden",
+    "oxygen": "O₂ an Anode entwickelt",
+    "anodeDissolved": "Kupfer an Anode aufgelöst",
+    "concentration": "Cu²⁺-Konzentration",
+    "cathodeLabel": "Kathode:",
+    "anodeLabel": "Anode:",
+    "depleted": "Cu²⁺ in der Lösung nahezu erschöpft. Bei weiterer Elektrolyse würde an der Kathode Wasserstoff entstehen. Stromkreis wurde automatisch getrennt.",
+    "weigh": "Kathode entnehmen und wiegen",
+    "measured": "Gemessen",
+    "theoretical": "Theoretisch",
+    "efficiency": "Stromausbeute",
+    "complete": "Versuch abschließen",
+    "viewReport": "Bericht anzeigen",
+    "scaleNote": "Zeitfaktor {scale}×: Die Darstellung läuft in gestauchter Zeit; Messwerte zeigen stets reale Ladung und reale Dauer. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL."
   }
 }

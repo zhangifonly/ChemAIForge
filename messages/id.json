@@ -445,6 +445,38 @@
     "view3d": "Meja Lab 3D",
     "view3dRefined": "Meja Lab 3D ★",
     "sceneHint": "Seret untuk memutar · Gulir untuk memperbesar",
-    "sceneHintTouch": "Satu jari untuk memutar · Dua jari untuk memperbesar"
+    "sceneHintTouch": "Satu jari untuk memutar · Dua jari untuk memperbesar",
+    "titrationHint": "Seret untuk putar · Gulir untuk zoom · Seret keran untuk atur tetesan",
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zoom · Seret keran untuk atur tetesan"
+  },
+  "electrolysisLab": {
+    "setup": "Parameter Eksperimen",
+    "anodeMaterial": "Material Anoda",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Tembaga kasar (pemurnian elektrolisis)"
+    },
+    "current": "Arus",
+    "timeScale": "Skala Waktu",
+    "powerOn": "Hubungkan Daya",
+    "powerOff": "Putuskan Daya",
+    "microView": "Tampilan Mikro",
+    "reset": "Reset",
+    "readings": "Pembacaan Real-time",
+    "charge": "Muatan Q",
+    "copperDeposited": "Tembaga deposit di katoda",
+    "oxygen": "O₂ dilepas di anoda",
+    "anodeDissolved": "Tembaga terlarut di anoda",
+    "concentration": "Konsentrasi Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Cu²⁺ dalam larutan hampir habis. Jika elektrolisis dilanjutkan, katoda akan beralih menghasilkan gas hidrogen. Daya telah diputus secara otomatis.",
+    "weigh": "Keluarkan katoda untuk ditimbang",
+    "measured": "Terukur",
+    "theoretical": "Teoretis",
+    "efficiency": "Efisiensi Arus",
+    "complete": "Selesaikan Eksperimen",
+    "viewReport": "Lihat Laporan",
+    "scaleNote": "Skala waktu {scale}×: tampilan berjalan dalam waktu terkompresi, namun pembacaan selalu mencerminkan muatan dan durasi nyata. Larutan elektrolit {conc} mol/L CuSO₄ {volume} mL."
   }
 }

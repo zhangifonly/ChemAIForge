@@ -445,6 +445,38 @@
     "view3d": "Meja Lab 3D",
     "view3dRefined": "Meja Lab 3D ★",
     "sceneHint": "Seret untuk putar · Skrol untuk zum",
-    "sceneHintTouch": "Satu jari untuk putar · Dua jari untuk zum"
+    "sceneHintTouch": "Satu jari untuk putar · Dua jari untuk zum",
+    "titrationHint": "Seret untuk putar · Gulir untuk zum · Seret injap untuk kawal kadar titisan",
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zum · Seret injap untuk kawal kadar titisan"
+  },
+  "electrolysisLab": {
+    "setup": "Parameter Eksperimen",
+    "anodeMaterial": "Bahan Anod",
+    "anode": {
+      "graphite": "Grafit (lengai)",
+      "copper": "Kuprum kasar (penulenan elektrolisis)"
+    },
+    "current": "Arus",
+    "timeScale": "Gandaan Masa",
+    "powerOn": "Hidupkan Bekalan Kuasa",
+    "powerOff": "Matikan Bekalan Kuasa",
+    "microView": "Pandangan Mikroskopik",
+    "reset": "Tetapkan Semula",
+    "readings": "Bacaan Masa Nyata",
+    "charge": "Cas Q",
+    "copperDeposited": "Kuprum didepositkan di katod",
+    "oxygen": "O₂ dibebaskan di anod",
+    "anodeDissolved": "Kuprum terlarut di anod",
+    "concentration": "Kepekatan Cu²⁺",
+    "cathodeLabel": "Katod:",
+    "anodeLabel": "Anod:",
+    "depleted": "Cu²⁺ dalam larutan hampir habis. Jika elektrolisis diteruskan, katod akan mula membebaskan gas hidrogen. Bekalan kuasa telah diputuskan secara automatik.",
+    "weigh": "Keluarkan katod untuk ditimbang",
+    "measured": "Diukur",
+    "theoretical": "Teori",
+    "efficiency": "Kecekapan Arus",
+    "complete": "Tamatkan Eksperimen",
+    "viewReport": "Lihat Laporan",
+    "scaleNote": "Gandaan masa {scale}×: animasi maju mengikut masa termampat, bacaan sentiasa menunjukkan cas dan tempoh masa sebenar. Elektrolit {conc} mol/L CuSO₄ {volume} mL."
   }
 }

@@ -445,6 +445,38 @@
     "view3d": "3D Delovna Miza",
     "view3dRefined": "3D Delovna Miza ★",
     "sceneHint": "Povleci za vrtenje · Kolesce za povečavo",
-    "sceneHintTouch": "En prst: vrtenje · Dva prsta: povečava"
+    "sceneHintTouch": "En prst: vrtenje · Dva prsta: povečava",
+    "titrationHint": "Povleci za rotacijo · Kolesce za zoom · Povleci pipeto za nadzor hitrosti kapljanja",
+    "titrationHintTouch": "En prst za rotacijo · Dva prsta za zoom · Povleci pipeto za nadzor hitrosti kapljanja"
+  },
+  "electrolysisLab": {
+    "setup": "Parametri poskusa",
+    "anodeMaterial": "Material anode",
+    "anode": {
+      "graphite": "Grafit (inerten)",
+      "copper": "Surovi baker (elektrolitsko rafiniranje)"
+    },
+    "current": "Tok",
+    "timeScale": "Časovni faktor",
+    "powerOn": "Vklopi napajanje",
+    "powerOff": "Izklopi napajanje",
+    "microView": "Mikroskopski pogled",
+    "reset": "Ponastavi",
+    "readings": "Meritve v realnem času",
+    "charge": "Naboj Q",
+    "copperDeposited": "Baker izločen na katodi",
+    "oxygen": "O₂ sproščen na anodi",
+    "anodeDissolved": "Baker raztopljen z anode",
+    "concentration": "Koncentracija Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Koncentracija Cu²⁺ v raztopini je skoraj izčrpana. Nadaljnja elektroliza bi na katodi sprožila izločanje vodika. Napajanje je bilo samodejno izklopljeno.",
+    "weigh": "Odstrani katodo in stehtaj",
+    "measured": "Izmerjeno",
+    "theoretical": "Teoretično",
+    "efficiency": "Tokovna učinkovitost",
+    "complete": "Zaključi poskus",
+    "viewReport": "Prikaži poročilo",
+    "scaleNote": "Časovni faktor {scale}×: prikaz napreduje s stisnjenim časom, meritve pa vedno odražajo dejanski naboj in dejansko trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

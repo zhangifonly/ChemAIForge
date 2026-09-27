@@ -445,6 +445,38 @@
     "view3d": "3D tilraunaborð",
     "view3dRefined": "3D tilraunaborð ★",
     "sceneHint": "Dragðu til að snúa · skrunahjól til að þysja",
-    "sceneHintTouch": "Einn fingur til að snúa · Tveir fingrar til að þysja"
+    "sceneHintTouch": "Einn fingur til að snúa · Tveir fingrar til að þysja",
+    "titrationHint": "Draga til að snúa · skrúfa til að þysja · draga krana til að stjórna dreypiferð",
+    "titrationHintTouch": "Einn fingur til að snúa · tveir fingur til að þysja · draga krana til að stjórna dreypiferð"
+  },
+  "electrolysisLab": {
+    "setup": "Uppsetning tilrauna",
+    "anodeMaterial": "Anóðuefni",
+    "anode": {
+      "graphite": "Grafít (óvirkt)",
+      "copper": "Hrákopar (rafgreiningar-hreinsun)"
+    },
+    "current": "Straumur",
+    "timeScale": "Tímaþjöppun",
+    "powerOn": "Kveikja á straumi",
+    "powerOff": "Slökkva á straumi",
+    "microView": "Örsjónarhorn",
+    "reset": "Endurstilla",
+    "readings": "Rauntímalestur",
+    "charge": "Hleðsla Q",
+    "copperDeposited": "Kopar útfelltur á katóðu",
+    "oxygen": "O₂ losað frá anóðu",
+    "anodeDissolved": "Kopar leystur frá anóðu",
+    "concentration": "Cu²⁺ styrkur",
+    "cathodeLabel": "Katóða:",
+    "anodeLabel": "Anóða:",
+    "depleted": "Cu²⁺ í lausn er nærri uppurinn. Ef rafgreining heldur áfram mun katóðan fara að þróa vetni. Rafmagn hefur verið sjálfkrafa rofið.",
+    "weigh": "Fjarlægja katóðu til vigtunar",
+    "measured": "Mælt",
+    "theoretical": "Fræðilegt",
+    "efficiency": "Straumvirkni",
+    "complete": "Ljúka tilraun",
+    "viewReport": "Skoða skýrslu",
+    "scaleNote": "Tímaþjöppun {scale}×: myndin framþróast í þjöppuðum tíma, en lestur sýnir alltaf raunverulega hleðslu og raunverulegan tíma. Rafgreiningarlausn: {conc} mol/L CuSO₄ {volume} mL."
   }
 }
