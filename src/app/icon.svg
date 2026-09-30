@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 与导航栏徽标一致：品牌色 400→600 渐变圆角方块 + 烧瓶。用路径而非 ⚗ 字符，避免各系统字体渲染不一 -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2fb9a6"/>
+      <stop offset="1" stop-color="#0e7d72"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <path d="M26 12h12M28 12v14L16 46a4 4 0 0 0 3.5 6h25a4 4 0 0 0 3.5-6L36 26V12"
+        fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21.5 40h21l4.2 7.4a2 2 0 0 1-1.7 3H19a2 2 0 0 1-1.7-3z" fill="#fff" fill-opacity=".85"/>
+</svg>
