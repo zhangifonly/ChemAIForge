@@ -447,7 +447,9 @@
     "sceneHint": "Povleci za vrtenje · Kolesce za povečavo",
     "sceneHintTouch": "En prst: vrtenje · Dva prsta: povečava",
     "titrationHint": "Povleci za rotacijo · Kolesce za zoom · Povleci pipeto za nadzor hitrosti kapljanja",
-    "titrationHintTouch": "En prst za rotacijo · Dva prsta za zoom · Povleci pipeto za nadzor hitrosti kapljanja"
+    "titrationHintTouch": "En prst za rotacijo · Dva prsta za zoom · Povleci pipeto za nadzor hitrosti kapljanja",
+    "webglUnavailable": "Trenutni brskalnik ne more prikazati 3D grafike (WebGL ni na voljo).",
+    "webglUnavailableHint": "Druge operacije na strani niso prizadete. Preklopite na “{mode}” za nadaljevanje poskusa ali omogočite strojno pospeševanje v nastavitvah brskalnika in osvežite stran."
   },
   "electrolysisLab": {
     "setup": "Parametri poskusa",
@@ -477,6 +479,19 @@
     "efficiency": "Tokovna učinkovitost",
     "complete": "Zaključi poskus",
     "viewReport": "Prikaži poročilo",
-    "scaleNote": "Časovni faktor {scale}×: prikaz napreduje s stisnjenim časom, meritve pa vedno odražajo dejanski naboj in dejansko trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Časovni faktor {scale}×: prikaz napreduje s stisnjenim časom, meritve pa vedno odražajo dejanski naboj in dejansko trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Preveritev Faradayevega zakona: masa izločenega bakra glede na naboj",
+      "xAxis": "Naboj Q / C",
+      "yAxis": "Izločeni baker m / g",
+      "theory": "Teoretična premica m = QM / 2F",
+      "fitLine": "Prilagojena premica skozi izhodišče",
+      "colorNote": "Barva točk označuje tok: modra – majhen, rdeča – velik",
+      "live": "Elektroliza poteka (teoretična vrednost)",
+      "hint": "Spremenite tok, nato znova vklopite in izklopite napajanje ter stehtajte. Po dveh ali več tehtanjih lahko iz naklona premice izračunate Faradayevo konstanto.",
+      "fitted": "Iz podatkov izračunan F ≈ {value} C/mol",
+      "error": "Odstopanje od splošno sprejete vrednosti 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf mase izločenega bakra v odvisnosti od naboja, skupaj {count} točk tehtanja"
+    }
   }
 }

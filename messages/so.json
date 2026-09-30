@@ -447,7 +447,9 @@
     "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso",
     "sceneHintTouch": "Farta hal gelin si aad wax u wareejiso · Laba far si aad u weyneyso",
     "titrationHint": "Jiid si wareeji · Garaac si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda",
-    "titrationHintTouch": "Far keliya si wareeji · Laba far si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda"
+    "titrationHintTouch": "Far keliya si wareeji · Laba far si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda",
+    "webglUnavailable": "Browserka hadda lagu jiro kuma samayn karo muuqaal 3D (WebGL ma heli karo)",
+    "webglUnavailableHint": "Hawlaha kale ee bogga laguma saameyn. Waxaad u bedeli kartaa “{mode}” si aad u sii waddo tijaabada, ama dib u cusboonaysii bogga kadib markaad ku shubto xasilinta hardware ee dejinta browser-ka."
   },
   "electrolysisLab": {
     "setup": "Dejinta Tijaabada",
@@ -477,6 +479,19 @@
     "efficiency": "Hufnaanta Korontada",
     "complete": "Dhamee Tijaabada",
     "viewReport": "Arag Warbixinta",
-    "scaleNote": "Xawaaraha waqtiga {scale}×: shaashadu waxay u socotaa waqti la cadaadinayo; akhriska wuxuu muujinayaa shucaaca dhabta ah iyo mudada dhabta ah. Xalka electrolysis waa {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Xawaaraha waqtiga {scale}×: shaashadu waxay u socotaa waqti la cadaadinayo; akhriska wuxuu muujinayaa shucaaca dhabta ah iyo mudada dhabta ah. Xalka electrolysis waa {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Xaqiijinta Sharciga Faraday: Cufnaanta naxaas (Cu) la soo saaray iyo Xaddiga Korontada",
+      "xAxis": "Xaddiga Korontada Q / C",
+      "yAxis": "Naxaas (Cu) la soo saaray m / g",
+      "theory": "Xarriiqda Aragtida m = QM / 2F",
+      "fitLine": "Xarriiq la qaabeeyey oo ka bilaabanaysa asalka",
+      "colorNote": "Midabka dhibcaha wuxuu muujinayaa korontada: buluug = yar, cas = weyn",
+      "live": "Electrolysis socota (qiimaha aragtida)",
+      "hint": "Bedel korontada ka dibna mar kale bilow oo jooji si aad u miisaanto. Laba miisaan ama ka badan ayaa kuu oggolaanaysa inaad ka xisaabiso joogtada Faraday ee xagga feejignaanta.",
+      "fitted": "F ≈ {value} C/mol oo laga xisaabiyay xogta",
+      "error": "Farqiga qiimaha la aqoonsan yahay 96485 C/mol waa {pct}%",
+      "ariaLabel": "Sawirka isbeddelka cufnaanta naxaas (Cu) la soo saaray iyadoo ku xidantahay xaddiga korontada, oo leh {count} dhibic oo la miisaamay"
+    }
   }
 }

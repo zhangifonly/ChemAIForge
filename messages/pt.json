@@ -447,7 +447,9 @@
     "sceneHint": "Arrastar para girar · Rolar para zoom",
     "sceneHintTouch": "Um dedo para girar · Dois dedos para ampliar",
     "titrationHint": "Arrastar para girar · Rolar para ampliar · Arrastar a torneira para controlar o gotejamento",
-    "titrationHintTouch": "Um dedo para girar · Dois dedos para ampliar · Arrastar a torneira para controlar o gotejamento"
+    "titrationHintTouch": "Um dedo para girar · Dois dedos para ampliar · Arrastar a torneira para controlar o gotejamento",
+    "webglUnavailable": "O navegador atual não consegue exibir imagens 3D (WebGL indisponível)",
+    "webglUnavailableHint": "As outras operações da página não são afetadas. Pode mudar para «{mode}» para continuar o experimento ou ativar a aceleração de hardware nas configurações do navegador e recarregar a página."
   },
   "electrolysisLab": {
     "setup": "Parâmetros do Experimento",
@@ -477,6 +479,19 @@
     "efficiency": "Eficiência de corrente",
     "complete": "Concluir Experimento",
     "viewReport": "Ver Relatório",
-    "scaleNote": "Fator de tempo {scale}×: a animação avança no tempo comprimido, mas as leituras sempre refletem a carga e a duração reais. Eletrólito: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Fator de tempo {scale}×: a animação avança no tempo comprimido, mas as leituras sempre refletem a carga e a duração reais. Eletrólito: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verificação da Lei de Faraday: massa de cobre depositado vs. carga elétrica",
+      "xAxis": "Carga Q / C",
+      "yAxis": "Cobre depositado m / g",
+      "theory": "Linha teórica m = QM / 2F",
+      "fitLine": "Linha de ajuste pela origem",
+      "colorNote": "A cor dos pontos indica a corrente: azul = baixa, vermelho = alta",
+      "live": "Eletrólise em curso (valor teórico)",
+      "hint": "Altere a corrente, ligue e desligue novamente, depois pese. Com duas ou mais pesagens é possível calcular a constante de Faraday a partir do declive.",
+      "fitted": "F ≈ {value} C/mol obtido a partir dos dados",
+      "error": "Diferença em relação ao valor aceite de 96485 C/mol: {pct}%",
+      "ariaLabel": "Gráfico da massa de cobre depositado em função da carga elétrica, com {count} ponto(s) de pesagem"
+    }
   }
 }

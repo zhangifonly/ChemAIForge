@@ -447,7 +447,9 @@
     "sceneHint": "Dra for å rotere · Scroll for å zoome",
     "sceneHintTouch": "Én finger for å rotere · To fingre for å zoome",
     "titrationHint": "Dra for å rotere · Rull for å zoome · Dra kranen for å styre dråpehastighet",
-    "titrationHintTouch": "Én finger for å rotere · To fingre for å zoome · Dra kranen for å styre dråpehastighet"
+    "titrationHintTouch": "Én finger for å rotere · To fingre for å zoome · Dra kranen for å styre dråpehastighet",
+    "webglUnavailable": "Nettleseren din kan ikke vise 3D-grafikk (WebGL ikke tilgjengelig)",
+    "webglUnavailableHint": "Andre operasjoner på siden er upåvirket. Du kan bytte til «{mode}» for å fortsette eksperimentet, eller aktivere maskinvareakselerasjon i nettleserinnstillingene og deretter laste siden på nytt."
   },
   "electrolysisLab": {
     "setup": "Forsøksparametere",
@@ -477,6 +479,19 @@
     "efficiency": "Strømeffektivitet",
     "complete": "Avslutt forsøket",
     "viewReport": "Vis rapport",
-    "scaleNote": "Tidsfaktor {scale}×: animasjonen kjører i komprimert tid, mens avlesningene alltid viser faktisk ladning og faktisk tid. Elektrolytt: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Tidsfaktor {scale}×: animasjonen kjører i komprimert tid, mens avlesningene alltid viser faktisk ladning og faktisk tid. Elektrolytt: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifisering av Faradays lov: utfelt kobber vs. ladning",
+      "xAxis": "Ladning Q / C",
+      "yAxis": "Utfelt kobber m / g",
+      "theory": "Teoretisk linje m = QM / 2F",
+      "fitLine": "Tilpasset linje gjennom origo",
+      "colorNote": "Punktfarge angir strøm: blå = lav, rød = høy",
+      "live": "Elektrolyse pågår (teoretisk verdi)",
+      "hint": "Endre strømmen, koble til og fra igjen, og vei massen. Med to eller flere målinger kan Faraday-konstanten beregnes fra stigningstallet.",
+      "fitted": "Beregnet F ≈ {value} C/mol",
+      "error": "Avvik fra akseptert verdi 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf over utfelt kobber som funksjon av ladning, totalt {count} målepunkter"
+    }
   }
 }

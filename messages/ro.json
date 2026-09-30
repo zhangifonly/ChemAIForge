@@ -447,7 +447,9 @@
     "sceneHint": "Trageți pentru rotire · Scroll pentru zoom",
     "sceneHintTouch": "Un deget pentru rotire · Două degete pentru zoom",
     "titrationHint": "Trageți pentru rotire · Rotița mouse-ului pentru zoom · Trageți robinetul pentru a controla viteza de picurare",
-    "titrationHintTouch": "Un deget pentru rotire · Două degete pentru zoom · Trageți robinetul pentru a controla viteza de picurare"
+    "titrationHintTouch": "Un deget pentru rotire · Două degete pentru zoom · Trageți robinetul pentru a controla viteza de picurare",
+    "webglUnavailable": "Browserul curent nu poate afișa imagini 3D (WebGL indisponibil)",
+    "webglUnavailableHint": "Celelalte operațiuni de pe pagină nu sunt afectate. Puteți trece la «{mode}» pentru a continua experimentul sau puteți activa accelerarea hardware în setările browserului, apoi reîncărcați pagina."
   },
   "electrolysisLab": {
     "setup": "Parametri experiment",
@@ -477,6 +479,19 @@
     "efficiency": "Eficiență curent",
     "complete": "Finalizare experiment",
     "viewReport": "Vezi raport",
-    "scaleNote": "Multiplicator timp {scale}×: animația avansează în timp comprimat; citirile reflectă întotdeauna sarcina reală și durata reală. Electrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Multiplicator timp {scale}×: animația avansează în timp comprimat; citirile reflectă întotdeauna sarcina reală și durata reală. Electrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verificarea legii lui Faraday: masa cuprului depus față de sarcina electrică",
+      "xAxis": "Sarcină Q / C",
+      "yAxis": "Cupru depus m / g",
+      "theory": "Linie teoretică m = QM / 2F",
+      "fitLine": "Linie de regresie prin origine",
+      "colorNote": "Culoarea punctelor indică curentul: albastru — mic, roșu — mare",
+      "live": "Electroliză în curs (valoare teoretică)",
+      "hint": "Modificați curentul, apoi conectați și deconectați din nou circuitul și cântăriți. După cel puțin două cântăriri, puteți determina constanta Faraday din panta dreptei.",
+      "fitted": "F ≈ {value} C/mol calculat din date",
+      "error": "Diferență față de valoarea acceptată 96485 C/mol: {pct}%",
+      "ariaLabel": "Grafic masa cuprului depus în funcție de sarcina electrică, {count} puncte de cântărire"
+    }
   }
 }

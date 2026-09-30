@@ -447,7 +447,9 @@
     "sceneHint": "Seret untuk putar · Skrol untuk zum",
     "sceneHintTouch": "Satu jari untuk putar · Dua jari untuk zum",
     "titrationHint": "Seret untuk putar · Gulir untuk zum · Seret injap untuk kawal kadar titisan",
-    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zum · Seret injap untuk kawal kadar titisan"
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zum · Seret injap untuk kawal kadar titisan",
+    "webglUnavailable": "Pelayar semasa tidak dapat memaparkan paparan 3D (WebGL tidak tersedia)",
+    "webglUnavailableHint": "Operasi lain pada halaman tidak terjejas. Anda boleh beralih ke “{mode}” untuk meneruskan eksperimen, atau aktifkan pecutan perkakasan dalam tetapan pelayar kemudian muat semula halaman."
   },
   "electrolysisLab": {
     "setup": "Parameter Eksperimen",
@@ -477,6 +479,19 @@
     "efficiency": "Kecekapan Arus",
     "complete": "Tamatkan Eksperimen",
     "viewReport": "Lihat Laporan",
-    "scaleNote": "Gandaan masa {scale}×: animasi maju mengikut masa termampat, bacaan sentiasa menunjukkan cas dan tempoh masa sebenar. Elektrolit {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Gandaan masa {scale}×: animasi maju mengikut masa termampat, bacaan sentiasa menunjukkan cas dan tempoh masa sebenar. Elektrolit {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Pengesahan Hukum Faraday: Jisim Kuprum Terekstrak vs Cas Elektrik",
+      "xAxis": "Cas Q / C",
+      "yAxis": "Kuprum terekstrak m / g",
+      "theory": "Garis teori m = QM / 2F",
+      "fitLine": "Garis padanan melalui asalan",
+      "colorNote": "Warna titik menunjukkan arus: biru kecil, merah besar",
+      "live": "Elektrolisis sedang berlaku (nilai teori)",
+      "hint": "Ubah arus, kemudian hidupkan dan matikan semula untuk menimbang. Timbang dua kali atau lebih untuk mendapatkan pemalar Faraday daripada kecerunan.",
+      "fitted": "F ≈ {value} C/mol diperoleh daripada data",
+      "error": "Berbeza {pct}% daripada nilai diterima 96485 C/mol",
+      "ariaLabel": "Graf jisim kuprum terekstrak melawan cas elektrik, {count} titik penimbangan"
+    }
   }
 }

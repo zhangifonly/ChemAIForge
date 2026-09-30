@@ -7,6 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment, Lightformer, ContactShadows } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { useTranslations } from "next-intl";
+import { SceneErrorBoundary } from "./SceneErrorBoundary";
 
 export interface SceneShellProps {
   children: ReactNode;
@@ -60,6 +61,15 @@ export function SceneShell({
     <div
       className={`relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#dfe7ee] to-[#c2cdd6] ${className} ${wrapperClassName}`}
     >
+      <SceneErrorBoundary
+        fallback={
+          <div role="alert" className="flex h-full flex-col items-center justify-center gap-2 p-6 text-center text-slate-700">
+            <span className="text-3xl" aria-hidden>🧊</span>
+            <p className="text-sm font-medium">{t("webglUnavailable")}</p>
+            <p className="max-w-sm text-xs text-slate-600">{t("webglUnavailableHint", { mode: t("view2d") })}</p>
+          </div>
+        }
+      >
       <Canvas
         shadows
         camera={{ position: camera, fov: fov }}
@@ -105,9 +115,11 @@ export function SceneShell({
           maxPolarAngle={Math.PI / 2.2}
         />
       </Canvas>
+      {/* 手势提示放在边界内：画布不可用时一并被说明替换，免得提示去"拖拽旋转"一块不存在的画面 */}
       <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/30 px-3 py-1 text-xs text-white/70 backdrop-blur">
         {hintText}
       </span>
+      </SceneErrorBoundary>
     </div>
   );
 }

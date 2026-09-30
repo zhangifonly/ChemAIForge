@@ -447,7 +447,9 @@
     "sceneHint": "Sleep om te draaien · Scroll om te zoomen",
     "sceneHintTouch": "Één vinger roteren · Twee vingers zoomen",
     "titrationHint": "Slepen om te draaien · Scrollen om in te zoomen · Sleepkraan om druppelsnelheid te regelen",
-    "titrationHintTouch": "Één vinger om te draaien · Twee vingers om in te zoomen · Sleepkraan om druppelsnelheid te regelen"
+    "titrationHintTouch": "Één vinger om te draaien · Twee vingers om in te zoomen · Sleepkraan om druppelsnelheid te regelen",
+    "webglUnavailable": "De huidige browser kan geen 3D-weergave tonen (WebGL niet beschikbaar)",
+    "webglUnavailableHint": "Andere acties op de pagina worden niet beïnvloed. U kunt overschakelen naar “{mode}” om het experiment voort te zetten, of hardwareversnelling inschakelen in de browserinstellingen en de pagina vernieuwen."
   },
   "electrolysisLab": {
     "setup": "Experimentparameters",
@@ -477,6 +479,19 @@
     "efficiency": "Stroomefficiëntie",
     "complete": "Experiment afronden",
     "viewReport": "Rapport bekijken",
-    "scaleNote": "Tijdschaalfactor {scale}×: de animatie loopt op gecomprimeerde tijd, maar de meetwaarden tonen altijd de werkelijke lading en werkelijke tijdsduur. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Tijdschaalfactor {scale}×: de animatie loopt op gecomprimeerde tijd, maar de meetwaarden tonen altijd de werkelijke lading en werkelijke tijdsduur. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verificatie wet van Faraday: afgezet kopermassa vs. lading",
+      "xAxis": "Lading Q / C",
+      "yAxis": "Afgezet koper m / g",
+      "theory": "Theorielijn m = QM / 2F",
+      "fitLine": "Regressielijn door de oorsprong",
+      "colorNote": "Puntkleur geeft stroom aan: blauw = klein, rood = groot",
+      "live": "Elektrolyse actief (theoretische waarde)",
+      "hint": "Wijzig de stroom en schakel opnieuw in en uit om te wegen. Weeg twee of meer keer om de constante van Faraday uit de helling te bepalen.",
+      "fitted": "Uit de data: F ≈ {value} C/mol",
+      "error": "Afwijking van de geaccepteerde waarde 96485 C/mol: {pct}%",
+      "ariaLabel": "Grafiek van afgezette kopermassa als functie van lading, {count} meetpunten"
+    }
   }
 }

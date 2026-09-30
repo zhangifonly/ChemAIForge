@@ -365,7 +365,9 @@
     "sceneHint": "드래그로 회전 · 스크롤로 확대/축소",
     "sceneHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소",
     "titrationHint": "드래그로 회전 · 스크롤로 확대/축소 · 콕을 드래그하여 적하 속도 조절",
-    "titrationHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소 · 콕을 드래그하여 적하 속도 조절"
+    "titrationHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소 · 콕을 드래그하여 적하 속도 조절",
+    "webglUnavailable": "현재 브라우저에서 3D 화면을 표시할 수 없습니다(WebGL 사용 불가).",
+    "webglUnavailableHint": "페이지의 다른 기능은 영향을 받지 않습니다. “{mode}”으로 전환하여 실험을 계속하거나, 브라우저 설정에서 하드웨어 가속을 활성화한 후 페이지를 새로 고침하세요."
   },
   "category": {
     "ACID_BASE": "산염기 반응",
@@ -477,6 +479,19 @@
     "efficiency": "전류 효율",
     "complete": "실험 완료",
     "viewReport": "보고서 보기",
-    "scaleNote": "시간 배율 {scale}×：화면은 압축된 시간으로 진행되며, 측정값은 항상 실제 전하량 및 실제 경과 시간을 나타냅니다. 전해액 {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "시간 배율 {scale}×：화면은 압축된 시간으로 진행되며, 측정값은 항상 실제 전하량 및 실제 경과 시간을 나타냅니다. 전해액 {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "패러데이 법칙 검증: 석출 구리 질량 대 전하량",
+      "xAxis": "전하량 Q / C",
+      "yAxis": "석출 구리 m / g",
+      "theory": "이론선 m = QM / 2F",
+      "fitLine": "원점 통과 적합선",
+      "colorNote": "점의 색은 전류를 나타냄: 파란색은 작음, 빨간색은 큼",
+      "live": "전기분해 중 (이론값)",
+      "hint": "전류를 바꾼 뒤 통전·차단하며 무게를 측정하세요. 두 번 이상 측정하면 기울기로 패러데이 상수를 구할 수 있습니다.",
+      "fitted": "데이터로부터 구한 F ≈ {value} C/mol",
+      "error": "공인값 96485 C/mol과의 차이: {pct}%",
+      "ariaLabel": "전하량에 따른 석출 구리 질량 그래프, 총 {count}개의 측정점"
+    }
   }
 }

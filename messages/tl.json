@@ -447,7 +447,9 @@
     "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom",
     "sceneHintTouch": "Isang daliri para i-rotate · Dalawang daliri para i-zoom",
     "titrationHint": "I-drag para i-rotate · Scroll wheel para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak",
-    "titrationHintTouch": "Isang daliri para i-rotate · Dalawang daliri para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak"
+    "titrationHintTouch": "Isang daliri para i-rotate · Dalawang daliri para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak",
+    "webglUnavailable": "Hindi maaaring ipakita ng kasalukuyang browser ang 3D na larawan (WebGL ay hindi available)",
+    "webglUnavailableHint": "Ang ibang operasyon sa pahina ay hindi apektado. Maaari kang lumipat sa “{mode}” upang ituloy ang eksperimento, o i-refresh ang pahina pagkatapos i-enable ang hardware acceleration sa mga setting ng browser."
   },
   "electrolysisLab": {
     "setup": "Mga Parameter ng Eksperimento",
@@ -477,6 +479,19 @@
     "efficiency": "Kahusayan ng Alon",
     "complete": "Tapusin ang Eksperimento",
     "viewReport": "Tingnan ang Ulat",
-    "scaleNote": "Bilis ng oras {scale}×: ang display ay gumagalaw sa compressed na oras, ngunit ang mga pagbabasa ay palaging tunay na karga at tunay na tagal. Elektrolito: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Bilis ng oras {scale}×: ang display ay gumagalaw sa compressed na oras, ngunit ang mga pagbabasa ay palaging tunay na karga at tunay na tagal. Elektrolito: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Pagpapatunay ng Batas ni Faraday: Masa ng Nadepositong Tanso (Cu) kumpara sa Kargada",
+      "xAxis": "Kargada Q / C",
+      "yAxis": "Nadepositong Tanso m / g",
+      "theory": "Teoretikal na linya m = QM / 2F",
+      "fitLine": "Pinasyang linya mula sa pinagmulan",
+      "colorNote": "Kulay ng punto ay nagpapakita ng agos: asul = mababa, pula = mataas",
+      "live": "Nag-eelektrolisis (teoretikal na halaga)",
+      "hint": "Baguhin ang agos, pagkatapos ay i-on at i-off muli ang kuryente, tapos timbangin. Sa dalawa o higit pang timbang, maaaring makuha ang Constant ni Faraday mula sa slope.",
+      "fitted": "F ≈ {value} C/mol (mula sa datos)",
+      "error": "Pagkakaiba mula sa tinatanggap na halaga na 96485 C/mol: {pct}%",
+      "ariaLabel": "Grap ng masa ng nadepositong tanso (Cu) kumpara sa kargada, {count} punto ng timbang"
+    }
   }
 }

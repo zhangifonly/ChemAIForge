@@ -447,7 +447,9 @@
     "sceneHint": "Vilkt, lai rotētu · Ritenis, lai tuvinātu",
     "sceneHintTouch": "Viens pirksts — griešana · Divi pirksti — tālummaiņa",
     "titrationHint": "Velciet, lai rotētu · Ritiniet, lai tuvinātu · Velciet krānu, lai kontrolētu pilēšanas ātrumu",
-    "titrationHintTouch": "Rotējiet ar vienu pirkstu · Tuvināt ar diviem pirkstiem · Velciet krānu, lai kontrolētu pilēšanas ātrumu"
+    "titrationHintTouch": "Rotējiet ar vienu pirkstu · Tuvināt ar diviem pirkstiem · Velciet krānu, lai kontrolētu pilēšanas ātrumu",
+    "webglUnavailable": "Pašreizējā pārlūkprogramma nevar attēlot 3D skatu (WebGL nav pieejams)",
+    "webglUnavailableHint": "Pārējās lapas darbības nav ietekmētas. Varat pārslēgties uz «{mode}», lai turpinātu eksperimentu, vai iespējot aparatūras paātrinājumu pārlūka iestatījumos un pārlādēt lapu."
   },
   "electrolysisLab": {
     "setup": "Eksperimenta parametri",
@@ -477,6 +479,19 @@
     "efficiency": "Strāvas efektivitāte",
     "complete": "Pabeigt eksperimentu",
     "viewReport": "Skatīt atskaiti",
-    "scaleNote": "Laika mērogs {scale}×: attēls virzās saspiestā laikā, rādījumi vienmēr atspoguļo reālo lādiņu un reālo laiku. Elektrolīts {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Laika mērogs {scale}×: attēls virzās saspiestā laikā, rādījumi vienmēr atspoguļo reālo lādiņu un reālo laiku. Elektrolīts {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faradeja likuma pārbaude: nogulsnētā vara masa pret elektrisko lādiņu",
+      "xAxis": "Elektriskais lādiņš Q / C",
+      "yAxis": "Nogulsnētais varš m / g",
+      "theory": "Teorētiskā līnija m = QM / 2F",
+      "fitLine": "Aproksimācijas līnija caur koordinātu sākumu",
+      "colorNote": "Punktu krāsa norāda strāvu: zila — maza, sarkana — liela",
+      "live": "Elektrolīze norit (teorētiskā vērtība)",
+      "hint": "Mainiet strāvu, pēc tam ieslēdziet un izslēdziet strāvu, un nosveriet. Veicot divus vai vairākus svērumus, no slīpuma var aprēķināt Faradeja konstanti.",
+      "fitted": "No datiem iegūts F ≈ {value} C/mol",
+      "error": "Atšķirība no atzītās vērtības 96485 C/mol ir {pct}%",
+      "ariaLabel": "Nogulsnētā vara masas izmaiņu grafiks atkarībā no elektriskā lādiņa, kopā {count} svēršanas punkti"
+    }
   }
 }

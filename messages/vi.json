@@ -447,7 +447,9 @@
     "sceneHint": "Kéo để xoay · Cuộn để thu phóng",
     "sceneHintTouch": "Một ngón xoay · Hai ngón thu phóng",
     "titrationHint": "Kéo để xoay · Cuộn để thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt",
-    "titrationHintTouch": "Một ngón xoay · Hai ngón thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt"
+    "titrationHintTouch": "Một ngón xoay · Hai ngón thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt",
+    "webglUnavailable": "Trình duyệt hiện tại không thể hiển thị giao diện 3D (WebGL không khả dụng)",
+    "webglUnavailableHint": "Các thao tác khác trên trang không bị ảnh hưởng. Bạn có thể chuyển sang «{mode}» để tiếp tục thí nghiệm, hoặc bật tăng tốc phần cứng trong cài đặt trình duyệt rồi tải lại trang."
   },
   "electrolysisLab": {
     "setup": "Thông số thí nghiệm",
@@ -477,6 +479,19 @@
     "efficiency": "Hiệu suất dòng điện",
     "complete": "Hoàn thành thí nghiệm",
     "viewReport": "Xem báo cáo",
-    "scaleNote": "Hệ số thời gian {scale}×: màn hình tiến theo thời gian nén, số liệu luôn phản ánh điện lượng và thời gian thực. Dung dịch điện phân {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Hệ số thời gian {scale}×: màn hình tiến theo thời gian nén, số liệu luôn phản ánh điện lượng và thời gian thực. Dung dịch điện phân {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Xác minh định luật Faraday: khối lượng đồng bám catốt và điện lượng",
+      "xAxis": "Điện lượng Q / C",
+      "yAxis": "Đồng bám m / g",
+      "theory": "Đường lý thuyết m = QM / 2F",
+      "fitLine": "Đường khớp qua gốc tọa độ",
+      "colorNote": "Màu điểm biểu thị cường độ dòng điện: xanh lam nhỏ, đỏ lớn",
+      "live": "Đang điện phân (giá trị lý thuyết)",
+      "hint": "Thay đổi cường độ dòng điện rồi đóng/ngắt mạch và cân lại. Cân từ hai lần trở lên để tính hằng số Faraday từ độ dốc.",
+      "fitted": "F tính từ dữ liệu ≈ {value} C/mol",
+      "error": "Sai lệch so với giá trị chấp nhận 96485 C/mol là {pct}%",
+      "ariaLabel": "Biểu đồ khối lượng đồng bám catốt theo điện lượng, gồm {count} điểm cân"
+    }
   }
 }

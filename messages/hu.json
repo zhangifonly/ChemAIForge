@@ -447,7 +447,9 @@
     "sceneHint": "Húzással forgatható · Görgővel nagyítható",
     "sceneHintTouch": "Egy ujjal forgatás · két ujjal nagyítás",
     "titrationHint": "Húzással forgatás · Görgővel nagyítás · Csap húzásával csepp­sebesség szabályozása",
-    "titrationHintTouch": "Egy ujjal forgatás · Két ujjal nagyítás · Csap húzásával csepp­sebesség szabályozása"
+    "titrationHintTouch": "Egy ujjal forgatás · Két ujjal nagyítás · Csap húzásával csepp­sebesség szabályozása",
+    "webglUnavailable": "A böngésző nem tudja megjeleníteni a 3D nézetet (WebGL nem érhető el)",
+    "webglUnavailableHint": "Az oldal többi funkciója nem érintett. Váltson „{mode}” módra a kísérlet folytatásához, vagy engedélyezze a hardveres gyorsítást a böngésző beállításaiban, majd frissítse az oldalt."
   },
   "electrolysisLab": {
     "setup": "Kísérleti paraméterek",
@@ -477,6 +479,19 @@
     "efficiency": "Áramkihasználás",
     "complete": "Kísérlet befejezése",
     "viewReport": "Jelentés megtekintése",
-    "scaleNote": "Időgyorsítás {scale}×: a megjelenítés tömörített időben halad, az értékek mindig a valós töltést és valós időt mutatják. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Időgyorsítás {scale}×: a megjelenítés tömörített időben halad, az értékek mindig a valós töltést és valós időt mutatják. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faraday-törvény ellenőrzése: kiváló réz tömege és töltésmennyiség",
+      "xAxis": "Töltésmennyiség Q / C",
+      "yAxis": "Kivált réz m / g",
+      "theory": "Elméleti egyenes m = QM / 2F",
+      "fitLine": "Origón átmenő illesztett egyenes",
+      "colorNote": "A pontok színe az áramerősséget jelzi: kék = kis, piros = nagy",
+      "live": "Elektrolízis folyamatban (elméleti érték)",
+      "hint": "Változtassa meg az áramerősséget, majd kapcsolja be és ki az áramot, és mérje meg a tömeget. Két vagy több mérés után a Faraday-állandó a meredekségből meghatározható.",
+      "fitted": "Adatokból számított F ≈ {value} C/mol",
+      "error": "Az elfogadott 96485 C/mol értéktől való eltérés: {pct}%",
+      "ariaLabel": "A kivált réz tömegének változása a töltésmennyiség függvényében, összesen {count} mérési pont"
+    }
   }
 }

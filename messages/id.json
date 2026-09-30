@@ -447,7 +447,9 @@
     "sceneHint": "Seret untuk memutar · Gulir untuk memperbesar",
     "sceneHintTouch": "Satu jari untuk memutar · Dua jari untuk memperbesar",
     "titrationHint": "Seret untuk putar · Gulir untuk zoom · Seret keran untuk atur tetesan",
-    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zoom · Seret keran untuk atur tetesan"
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zoom · Seret keran untuk atur tetesan",
+    "webglUnavailable": "Browser ini tidak dapat menampilkan tampilan 3D (WebGL tidak tersedia)",
+    "webglUnavailableHint": "Operasi lain di halaman tidak terpengaruh. Anda dapat beralih ke “{mode}” untuk melanjutkan eksperimen, atau aktifkan akselerasi perangkat keras di pengaturan browser lalu muat ulang halaman."
   },
   "electrolysisLab": {
     "setup": "Parameter Eksperimen",
@@ -477,6 +479,19 @@
     "efficiency": "Efisiensi Arus",
     "complete": "Selesaikan Eksperimen",
     "viewReport": "Lihat Laporan",
-    "scaleNote": "Skala waktu {scale}×: tampilan berjalan dalam waktu terkompresi, namun pembacaan selalu mencerminkan muatan dan durasi nyata. Larutan elektrolit {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Skala waktu {scale}×: tampilan berjalan dalam waktu terkompresi, namun pembacaan selalu mencerminkan muatan dan durasi nyata. Larutan elektrolit {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifikasi Hukum Faraday: Massa Tembaga Tereduksi vs Muatan Listrik",
+      "xAxis": "Muatan Q / C",
+      "yAxis": "Tembaga tereduksi m / g",
+      "theory": "Garis teori m = QM / 2F",
+      "fitLine": "Garis regresi melalui titik asal",
+      "colorNote": "Warna titik menunjukkan arus: biru kecil, merah besar",
+      "live": "Sedang elektrolisis (nilai teori)",
+      "hint": "Ubah arus lalu alirkan dan putuskan kembali, kemudian timbang. Dua kali penimbangan atau lebih sudah cukup untuk menghitung konstanta Faraday dari kemiringan garis.",
+      "fitted": "F ≈ {value} C/mol diperoleh dari data",
+      "error": "Selisih {pct}% dari nilai yang diterima 96485 C/mol",
+      "ariaLabel": "Grafik massa tembaga tereduksi terhadap muatan listrik, total {count} titik penimbangan"
+    }
   }
 }
