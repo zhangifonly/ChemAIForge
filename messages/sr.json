@@ -447,7 +447,9 @@
     "sceneHint": "Prevucite za rotaciju · Skrolujte za zum",
     "sceneHintTouch": "Jedan prst: rotacija · Dva prsta: zum",
     "titrationHint": "Prevucite za rotaciju · Točkić za zum · Prevucite slavinu za kontrolu kapanja",
-    "titrationHintTouch": "Jedan prst za rotaciju · Dva prsta za zum · Prevucite slavinu za kontrolu kapanja"
+    "titrationHintTouch": "Jedan prst za rotaciju · Dva prsta za zum · Prevucite slavinu za kontrolu kapanja",
+    "webglUnavailable": "Trenutni pregledač ne može prikazati 3D prikaz (WebGL nije dostupan)",
+    "webglUnavailableHint": "Ostale operacije na stranici nisu pogođene. Možete preći na „{mode}“ i nastaviti eksperiment, ili osvežiti stranicu nakon što omogućite hardversko ubrzanje u podešavanjima pregledača."
   },
   "electrolysisLab": {
     "setup": "Parametri eksperimenta",

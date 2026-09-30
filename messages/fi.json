@@ -447,7 +447,9 @@
     "sceneHint": "Pyöritä vetämällä · Zoomaa vierittämällä",
     "sceneHintTouch": "Yksi sormi: pyöritä · Kaksi sormea: zoomaa",
     "titrationHint": "Vedä pyörittääksesi · Rullaa zoomaamiseen · Vedä hanaa hallitaksesi tippanopeutta",
-    "titrationHintTouch": "Pyöritä yhdellä sormella · Zoomaa kahdella sormella · Vedä hanaa hallitaksesi tippanopeutta"
+    "titrationHintTouch": "Pyöritä yhdellä sormella · Zoomaa kahdella sormella · Vedä hanaa hallitaksesi tippanopeutta",
+    "webglUnavailable": "Selain ei tue 3D-näkymää (WebGL ei ole käytettävissä)",
+    "webglUnavailableHint": "Muut sivun toiminnot eivät ole vaikuttuneet. Voit siirtyä tilaan “{mode}” jatkaaksesi koetta tai ottaa laitteistokiihdytyksen käyttöön selaimen asetuksissa ja päivittää sivun."
   },
   "electrolysisLab": {
     "setup": "Kokeen parametrit",

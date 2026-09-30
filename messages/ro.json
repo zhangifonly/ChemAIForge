@@ -447,7 +447,9 @@
     "sceneHint": "Trageți pentru rotire · Scroll pentru zoom",
     "sceneHintTouch": "Un deget pentru rotire · Două degete pentru zoom",
     "titrationHint": "Trageți pentru rotire · Rotița mouse-ului pentru zoom · Trageți robinetul pentru a controla viteza de picurare",
-    "titrationHintTouch": "Un deget pentru rotire · Două degete pentru zoom · Trageți robinetul pentru a controla viteza de picurare"
+    "titrationHintTouch": "Un deget pentru rotire · Două degete pentru zoom · Trageți robinetul pentru a controla viteza de picurare",
+    "webglUnavailable": "Browserul curent nu poate afișa imagini 3D (WebGL indisponibil)",
+    "webglUnavailableHint": "Celelalte operațiuni de pe pagină nu sunt afectate. Puteți trece la «{mode}» pentru a continua experimentul sau puteți activa accelerarea hardware în setările browserului, apoi reîncărcați pagina."
   },
   "electrolysisLab": {
     "setup": "Parametri experiment",

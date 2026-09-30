@@ -447,7 +447,9 @@
     "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso",
     "sceneHintTouch": "Farta hal gelin si aad wax u wareejiso · Laba far si aad u weyneyso",
     "titrationHint": "Jiid si wareeji · Garaac si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda",
-    "titrationHintTouch": "Far keliya si wareeji · Laba far si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda"
+    "titrationHintTouch": "Far keliya si wareeji · Laba far si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda",
+    "webglUnavailable": "Browserka hadda lagu jiro kuma samayn karo muuqaal 3D (WebGL ma heli karo)",
+    "webglUnavailableHint": "Hawlaha kale ee bogga laguma saameyn. Waxaad u bedeli kartaa “{mode}” si aad u sii waddo tijaabada, ama dib u cusboonaysii bogga kadib markaad ku shubto xasilinta hardware ee dejinta browser-ka."
   },
   "electrolysisLab": {
     "setup": "Dejinta Tijaabada",

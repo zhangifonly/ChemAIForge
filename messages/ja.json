@@ -365,7 +365,9 @@
     "sceneHint": "ドラッグで回転 · ホイールでズーム",
     "sceneHintTouch": "1本指で回転 · 2本指でズーム",
     "titrationHint": "ドラッグで回転 · スクロールで拡縮 · コックをドラッグして滴下速度を調節",
-    "titrationHintTouch": "1本指で回転 · 2本指で拡縮 · コックをドラッグして滴下速度を調節"
+    "titrationHintTouch": "1本指で回転 · 2本指で拡縮 · コックをドラッグして滴下速度を調節",
+    "webglUnavailable": "このブラウザでは 3D 表示ができません（WebGL 非対応）",
+    "webglUnavailableHint": "ページ上の他の操作は影響を受けません。「{mode}」に切り替えて実験を続けるか、ブラウザの設定でハードウェアアクセラレーションを有効にしてページを更新してください。"
   },
   "category": {
     "ACID_BASE": "酸塩基反応",

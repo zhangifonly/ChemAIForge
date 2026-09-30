@@ -447,7 +447,9 @@
     "sceneHint": "Arrossega per girar · Roda per zoom",
     "sceneHintTouch": "Un dit per girar · Dos dits per ampliar",
     "titrationHint": "Arrossega per rotar · Roda per fer zoom · Arrossega la clau per controlar el degoteig",
-    "titrationHintTouch": "Un dit per rotar · Dos dits per fer zoom · Arrossega la clau per controlar el degoteig"
+    "titrationHintTouch": "Un dit per rotar · Dos dits per fer zoom · Arrossega la clau per controlar el degoteig",
+    "webglUnavailable": "El navegador actual no pot mostrar imatges 3D (WebGL no disponible)",
+    "webglUnavailableHint": "La resta d'operacions de la pàgina no es veuen afectades. Podeu canviar a «{mode}» per continuar l'experiment, o bé activar l'acceleració per maquinari a la configuració del navegador i tornar a carregar la pàgina."
   },
   "electrolysisLab": {
     "setup": "Paràmetres de l'experiment",

@@ -447,7 +447,9 @@
     "sceneHint": "Vilkite norėdami pasukti · slinkite norėdami priartinti",
     "sceneHintTouch": "Vienu pirštu – sukti · Dviem – keisti mastelį",
     "titrationHint": "Vilkite sukimui · Slinkite priartinimui · Vilkite čiaupą lašėjimo greičiui",
-    "titrationHintTouch": "Vienu pirštu sukite · Dviem pirštais priartinkite · Vilkite čiaupą lašėjimo greičiui"
+    "titrationHintTouch": "Vienu pirštu sukite · Dviem pirštais priartinkite · Vilkite čiaupą lašėjimo greičiui",
+    "webglUnavailable": "Ši naršyklė negali rodyti 3D vaizdo (WebGL nepasiekiamas)",
+    "webglUnavailableHint": "Kiti puslapio veiksmai neįtakojami. Galite perjungti į „{mode}“ ir tęsti eksperimentą arba įjungti aparatinės įrangos spartinimą naršyklės nustatymuose ir perkrauti puslapį."
   },
   "electrolysisLab": {
     "setup": "Eksperimento parametrai",

@@ -447,7 +447,9 @@
     "sceneHint": "Seret untuk putar · Skrol untuk zum",
     "sceneHintTouch": "Satu jari untuk putar · Dua jari untuk zum",
     "titrationHint": "Seret untuk putar · Gulir untuk zum · Seret injap untuk kawal kadar titisan",
-    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zum · Seret injap untuk kawal kadar titisan"
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zum · Seret injap untuk kawal kadar titisan",
+    "webglUnavailable": "Pelayar semasa tidak dapat memaparkan paparan 3D (WebGL tidak tersedia)",
+    "webglUnavailableHint": "Operasi lain pada halaman tidak terjejas. Anda boleh beralih ke “{mode}” untuk meneruskan eksperimen, atau aktifkan pecutan perkakasan dalam tetapan pelayar kemudian muat semula halaman."
   },
   "electrolysisLab": {
     "setup": "Parameter Eksperimen",

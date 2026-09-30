@@ -365,7 +365,9 @@
     "sceneHint": "Glisser pour pivoter · molette pour zoomer",
     "sceneHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer",
     "titrationHint": "Glisser pour pivoter · Molette pour zoomer · Faire glisser le robinet pour régler le débit",
-    "titrationHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer · Faire glisser le robinet pour régler le débit"
+    "titrationHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer · Faire glisser le robinet pour régler le débit",
+    "webglUnavailable": "Ce navigateur ne peut pas afficher la vue 3D (WebGL indisponible)",
+    "webglUnavailableHint": "Les autres opérations de la page ne sont pas affectées. Vous pouvez passer au mode « {mode} » pour continuer l'expérience, ou actualiser la page après avoir activé l'accélération matérielle dans les paramètres du navigateur."
   },
   "category": {
     "ACID_BASE": "Réactions acido-basiques",

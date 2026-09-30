@@ -490,6 +490,8 @@
     "sceneHint": "拖拽旋转 · 滚轮缩放",
     "sceneHintTouch": "单指旋转 · 双指缩放",
     "titrationHint": "拖拽旋转 · 滚轮缩放 · 拖动旋塞控制滴速",
-    "titrationHintTouch": "单指旋转 · 双指缩放 · 拖动旋塞控制滴速"
+    "titrationHintTouch": "单指旋转 · 双指缩放 · 拖动旋塞控制滴速",
+    "webglUnavailable": "当前浏览器无法显示 3D 画面（WebGL 不可用）",
+    "webglUnavailableHint": "页面上的其他操作不受影响。可切换到「{mode}」继续实验，或在浏览器设置中开启硬件加速后刷新页面。"
   }
 }

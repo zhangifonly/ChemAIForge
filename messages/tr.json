@@ -447,7 +447,9 @@
     "sceneHint": "Döndürmek için sürükleyin · Yakınlaştırmak için kaydırın",
     "sceneHintTouch": "Tek parmak: döndür · İki parmak: yakınlaştır",
     "titrationHint": "Sürükleyerek döndür · Kaydırarak yakınlaştır · Musluğu sürükleyerek damla hızını ayarla",
-    "titrationHintTouch": "Tek parmakla döndür · İki parmakla yakınlaştır · Musluğu sürükleyerek damla hızını ayarla"
+    "titrationHintTouch": "Tek parmakla döndür · İki parmakla yakınlaştır · Musluğu sürükleyerek damla hızını ayarla",
+    "webglUnavailable": "Bu tarayıcıda 3D görüntü gösterilemiyor (WebGL kullanılamıyor)",
+    "webglUnavailableHint": "Sayfadaki diğer işlemler etkilenmez. Deneye devam etmek için «{mode}» moduna geçebilir veya tarayıcı ayarlarından donanım hızlandırmayı etkinleştirip sayfayı yenileyebilirsiniz."
   },
   "electrolysisLab": {
     "setup": "Deney Parametreleri",

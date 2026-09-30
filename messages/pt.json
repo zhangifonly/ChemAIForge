@@ -447,7 +447,9 @@
     "sceneHint": "Arrastar para girar · Rolar para zoom",
     "sceneHintTouch": "Um dedo para girar · Dois dedos para ampliar",
     "titrationHint": "Arrastar para girar · Rolar para ampliar · Arrastar a torneira para controlar o gotejamento",
-    "titrationHintTouch": "Um dedo para girar · Dois dedos para ampliar · Arrastar a torneira para controlar o gotejamento"
+    "titrationHintTouch": "Um dedo para girar · Dois dedos para ampliar · Arrastar a torneira para controlar o gotejamento",
+    "webglUnavailable": "O navegador atual não consegue exibir imagens 3D (WebGL indisponível)",
+    "webglUnavailableHint": "As outras operações da página não são afetadas. Pode mudar para «{mode}» para continuar o experimento ou ativar a aceleração de hardware nas configurações do navegador e recarregar a página."
   },
   "electrolysisLab": {
     "setup": "Parâmetros do Experimento",

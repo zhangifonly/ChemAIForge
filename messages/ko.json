@@ -365,7 +365,9 @@
     "sceneHint": "드래그로 회전 · 스크롤로 확대/축소",
     "sceneHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소",
     "titrationHint": "드래그로 회전 · 스크롤로 확대/축소 · 콕을 드래그하여 적하 속도 조절",
-    "titrationHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소 · 콕을 드래그하여 적하 속도 조절"
+    "titrationHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소 · 콕을 드래그하여 적하 속도 조절",
+    "webglUnavailable": "현재 브라우저에서 3D 화면을 표시할 수 없습니다(WebGL 사용 불가).",
+    "webglUnavailableHint": "페이지의 다른 기능은 영향을 받지 않습니다. “{mode}”으로 전환하여 실험을 계속하거나, 브라우저 설정에서 하드웨어 가속을 활성화한 후 페이지를 새로 고침하세요."
   },
   "category": {
     "ACID_BASE": "산염기 반응",

@@ -447,7 +447,9 @@
     "sceneHint": "Kéo để xoay · Cuộn để thu phóng",
     "sceneHintTouch": "Một ngón xoay · Hai ngón thu phóng",
     "titrationHint": "Kéo để xoay · Cuộn để thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt",
-    "titrationHintTouch": "Một ngón xoay · Hai ngón thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt"
+    "titrationHintTouch": "Một ngón xoay · Hai ngón thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt",
+    "webglUnavailable": "Trình duyệt hiện tại không thể hiển thị giao diện 3D (WebGL không khả dụng)",
+    "webglUnavailableHint": "Các thao tác khác trên trang không bị ảnh hưởng. Bạn có thể chuyển sang «{mode}» để tiếp tục thí nghiệm, hoặc bật tăng tốc phần cứng trong cài đặt trình duyệt rồi tải lại trang."
   },
   "electrolysisLab": {
     "setup": "Thông số thí nghiệm",

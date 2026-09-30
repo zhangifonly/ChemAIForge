@@ -447,7 +447,9 @@
     "sceneHint": "Træk for at rotere · Scroll for at zoome",
     "sceneHintTouch": "Én finger roterer · To fingre zoomer",
     "titrationHint": "Træk for at rotere · Scroll for at zoome · Træk hanen for at styre dråpehastighed",
-    "titrationHintTouch": "Én finger for at rotere · To fingre for at zoome · Træk hanen for at styre dråpehastighed"
+    "titrationHintTouch": "Én finger for at rotere · To fingre for at zoome · Træk hanen for at styre dråpehastighed",
+    "webglUnavailable": "Den aktuelle browser kan ikke vise 3D-grafik (WebGL er ikke tilgængelig)",
+    "webglUnavailableHint": "Andre handlinger på siden er ikke påvirket. Du kan skifte til “{mode}” for at fortsætte eksperimentet eller aktivere hardwareacceleration i browserindstillingerne og derefter genindlæse siden."
   },
   "electrolysisLab": {
     "setup": "Forsøgsparametre",

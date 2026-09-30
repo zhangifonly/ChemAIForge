@@ -447,7 +447,9 @@
     "sceneHint": "Tërhiq për të rrotulluar · Rrotë për të zmadhuar",
     "sceneHintTouch": "Një gisht për rrotullim · Dy gishta për zmadhim",
     "titrationHint": "Tërhiq për të rrotulluar · Rrotëza për zmadhim · Tërhiq rubinetin për të kontrolluar shpejtësinë e pikimit",
-    "titrationHintTouch": "Një gisht për të rrotulluar · Dy gishta për zmadhim · Tërhiq rubinetin për të kontrolluar shpejtësinë e pikimit"
+    "titrationHintTouch": "Një gisht për të rrotulluar · Dy gishta për zmadhim · Tërhiq rubinetin për të kontrolluar shpejtësinë e pikimit",
+    "webglUnavailable": "Shfletuesi aktual nuk mund të shfaqë pamjen 3D (WebGL i padisponueshëm)",
+    "webglUnavailableHint": "Operacionet e tjera në faqe nuk preken. Mund të kaloni në «{mode}» për të vazhduar eksperimentin, ose rifreskoni faqen pasi të aktivizoni përshpejtimin e harduerit në cilësimet e shfletuesit."
   },
   "electrolysisLab": {
     "setup": "Parametrat e eksperimentit",

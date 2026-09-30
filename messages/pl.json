@@ -447,7 +447,9 @@
     "sceneHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć",
     "sceneHintTouch": "Jeden palec: obrót · Dwa palce: zoom",
     "titrationHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć · Przeciągnij kurek, aby sterować przepływem",
-    "titrationHintTouch": "Jeden palec, aby obrócić · Dwa palce, aby powiększyć · Przeciągnij kurek, aby sterować przepływem"
+    "titrationHintTouch": "Jeden palec, aby obrócić · Dwa palce, aby powiększyć · Przeciągnij kurek, aby sterować przepływem",
+    "webglUnavailable": "Przeglądarka nie może wyświetlić widoku 3D (WebGL niedostępny)",
+    "webglUnavailableHint": "Pozostałe funkcje strony działają normalnie. Przełącz na „{mode}”, aby kontynuować doświadczenie, albo włącz akcelerację sprzętową w ustawieniach przeglądarki i odśwież stronę."
   },
   "electrolysisLab": {
     "setup": "Parametry eksperymentu",

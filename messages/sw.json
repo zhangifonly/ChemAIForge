@@ -447,7 +447,9 @@
     "sceneHint": "Buruta kuzungusha · Gurudumu kukuza",
     "sceneHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza",
     "titrationHint": "Buruta kuzungusha · Gurudumu kukuza · Buruta kofia kudhibiti kasi ya matone",
-    "titrationHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza · Buruta kofia kudhibiti kasi ya matone"
+    "titrationHintTouch": "Kidole kimoja kuzungusha · Vidole viwili kukuza · Buruta kofia kudhibiti kasi ya matone",
+    "webglUnavailable": "Kivinjari hiki hakiwezi kuonyesha picha za 3D (WebGL haipatikani)",
+    "webglUnavailableHint": "Shughuli nyingine kwenye ukurasa haziathiriwi. Unaweza kubadili hadi “{mode}” kuendelea na majaribio, au wezesha kuongeza kasi ya maunzi katika mipangilio ya kivinjari kisha uburudishe ukurasa."
   },
   "electrolysisLab": {
     "setup": "Vigezo vya Majaribio",

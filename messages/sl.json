@@ -447,7 +447,9 @@
     "sceneHint": "Povleci za vrtenje · Kolesce za povečavo",
     "sceneHintTouch": "En prst: vrtenje · Dva prsta: povečava",
     "titrationHint": "Povleci za rotacijo · Kolesce za zoom · Povleci pipeto za nadzor hitrosti kapljanja",
-    "titrationHintTouch": "En prst za rotacijo · Dva prsta za zoom · Povleci pipeto za nadzor hitrosti kapljanja"
+    "titrationHintTouch": "En prst za rotacijo · Dva prsta za zoom · Povleci pipeto za nadzor hitrosti kapljanja",
+    "webglUnavailable": "Trenutni brskalnik ne more prikazati 3D grafike (WebGL ni na voljo).",
+    "webglUnavailableHint": "Druge operacije na strani niso prizadete. Preklopite na “{mode}” za nadaljevanje poskusa ali omogočite strojno pospeševanje v nastavitvah brskalnika in osvežite stran."
   },
   "electrolysisLab": {
     "setup": "Parametri poskusa",

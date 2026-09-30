@@ -447,7 +447,9 @@
     "sceneHint": "Húzással forgatható · Görgővel nagyítható",
     "sceneHintTouch": "Egy ujjal forgatás · két ujjal nagyítás",
     "titrationHint": "Húzással forgatás · Görgővel nagyítás · Csap húzásával csepp­sebesség szabályozása",
-    "titrationHintTouch": "Egy ujjal forgatás · Két ujjal nagyítás · Csap húzásával csepp­sebesség szabályozása"
+    "titrationHintTouch": "Egy ujjal forgatás · Két ujjal nagyítás · Csap húzásával csepp­sebesség szabályozása",
+    "webglUnavailable": "A böngésző nem tudja megjeleníteni a 3D nézetet (WebGL nem érhető el)",
+    "webglUnavailableHint": "Az oldal többi funkciója nem érintett. Váltson „{mode}” módra a kísérlet folytatásához, vagy engedélyezze a hardveres gyorsítást a böngésző beállításaiban, majd frissítse az oldalt."
   },
   "electrolysisLab": {
     "setup": "Kísérleti paraméterek",

@@ -447,7 +447,9 @@
     "sceneHint": "Seret untuk memutar · Gulir untuk memperbesar",
     "sceneHintTouch": "Satu jari untuk memutar · Dua jari untuk memperbesar",
     "titrationHint": "Seret untuk putar · Gulir untuk zoom · Seret keran untuk atur tetesan",
-    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zoom · Seret keran untuk atur tetesan"
+    "titrationHintTouch": "Satu jari untuk putar · Dua jari untuk zoom · Seret keran untuk atur tetesan",
+    "webglUnavailable": "Browser ini tidak dapat menampilkan tampilan 3D (WebGL tidak tersedia)",
+    "webglUnavailableHint": "Operasi lain di halaman tidak terpengaruh. Anda dapat beralih ke “{mode}” untuk melanjutkan eksperimen, atau aktifkan akselerasi perangkat keras di pengaturan browser lalu muat ulang halaman."
   },
   "electrolysisLab": {
     "setup": "Parameter Eksperimen",

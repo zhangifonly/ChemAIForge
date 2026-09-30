@@ -447,7 +447,9 @@
     "sceneHint": "Ťahom otočte · kolieskom priblížte",
     "sceneHintTouch": "Otočenie jedným prstom · Priblíženie dvoma prstami",
     "titrationHint": "Ťahom otáčajte · kolieskom priblížte · ťahom kohúta regulujte rýchlosť kvapkania",
-    "titrationHintTouch": "Jedným prstom otáčajte · dvoma prstami priblížte · ťahom kohúta regulujte rýchlosť kvapkania"
+    "titrationHintTouch": "Jedným prstom otáčajte · dvoma prstami priblížte · ťahom kohúta regulujte rýchlosť kvapkania",
+    "webglUnavailable": "Aktuálny prehliadač nedokáže zobraziť 3D scénu (WebGL nie je k dispozícii)",
+    "webglUnavailableHint": "Ostatné operácie na stránke nie sú ovplyvnené. Môžete prepnúť na „{mode}“ a pokračovať v experimente, alebo obnoviť stránku po zapnutí hardvérovej akcelerácie v nastaveniach prehliadača."
   },
   "electrolysisLab": {
     "setup": "Parametre experimentu",

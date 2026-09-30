@@ -447,7 +447,9 @@
     "sceneHint": "I-drag para paikutin · Mag-scroll para mag-zoom",
     "sceneHintTouch": "Isang daliri para i-rotate · Dalawang daliri para i-zoom",
     "titrationHint": "I-drag para i-rotate · Scroll wheel para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak",
-    "titrationHintTouch": "Isang daliri para i-rotate · Dalawang daliri para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak"
+    "titrationHintTouch": "Isang daliri para i-rotate · Dalawang daliri para mag-zoom · I-drag ang stopcock para kontrolin ang bilis ng patak",
+    "webglUnavailable": "Hindi maaaring ipakita ng kasalukuyang browser ang 3D na larawan (WebGL ay hindi available)",
+    "webglUnavailableHint": "Ang ibang operasyon sa pahina ay hindi apektado. Maaari kang lumipat sa “{mode}” upang ituloy ang eksperimento, o i-refresh ang pahina pagkatapos i-enable ang hardware acceleration sa mga setting ng browser."
   },
   "electrolysisLab": {
     "setup": "Mga Parameter ng Eksperimento",

@@ -365,7 +365,9 @@
     "sceneHint": "Drag to rotate · Scroll to zoom",
     "sceneHintTouch": "One finger to rotate · Two fingers to zoom",
     "titrationHint": "Drag to rotate · Scroll to zoom · Drag stopcock to control drip rate",
-    "titrationHintTouch": "One finger to rotate · Two fingers to zoom · Drag stopcock to control drip rate"
+    "titrationHintTouch": "One finger to rotate · Two fingers to zoom · Drag stopcock to control drip rate",
+    "webglUnavailable": "3D rendering is unavailable in this browser (WebGL not supported)",
+    "webglUnavailableHint": "Other actions on the page are unaffected. You can switch to “{mode}” to continue the experiment, or enable hardware acceleration in your browser settings and refresh the page."
   },
   "category": {
     "ACID_BASE": "Acid-Base Reactions",

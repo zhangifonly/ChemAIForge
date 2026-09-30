@@ -447,7 +447,9 @@
     "sceneHint": "Lohistage pööramiseks · Kerige suurendamiseks",
     "sceneHintTouch": "Ühe sõrmega pööramine · kahe sõrmega suurendamine",
     "titrationHint": "Lohistage pööramiseks · Kerige suurendamiseks · Lohistage kraan tilkade kiiruse reguleerimiseks",
-    "titrationHintTouch": "Ühe sõrmega pööramine · Kahe sõrmega suurendamine · Lohistage kraan tilkade kiiruse reguleerimiseks"
+    "titrationHintTouch": "Ühe sõrmega pööramine · Kahe sõrmega suurendamine · Lohistage kraan tilkade kiiruse reguleerimiseks",
+    "webglUnavailable": "Praegune brauser ei suuda 3D-vaadet kuvada (WebGL pole saadaval)",
+    "webglUnavailableHint": "Muud toimingud lehel ei ole mõjutatud. Saad lülituda režiimile „{mode}“ ja jätkata katset või lubada brauseri seadetes riistvarakiirenduse ja värskendada lehte."
   },
   "electrolysisLab": {
     "setup": "Katse parameetrid",

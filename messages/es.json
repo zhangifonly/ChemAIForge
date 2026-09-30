@@ -365,7 +365,9 @@
     "sceneHint": "Arrastrar para rotar · rueda para zoom",
     "sceneHintTouch": "Un dedo para rotar · Dos dedos para hacer zoom",
     "titrationHint": "Arrastrar para rotar · Rueda para zoom · Arrastrar la llave para controlar el goteo",
-    "titrationHintTouch": "Un dedo para rotar · Dos dedos para zoom · Arrastrar la llave para controlar el goteo"
+    "titrationHintTouch": "Un dedo para rotar · Dos dedos para zoom · Arrastrar la llave para controlar el goteo",
+    "webglUnavailable": "El navegador actual no puede mostrar gráficos 3D (WebGL no disponible)",
+    "webglUnavailableHint": "El resto de la página no se ve afectado. Puedes cambiar al modo «{mode}» para continuar el experimento, o activar la aceleración por hardware en la configuración del navegador y recargar la página."
   },
   "category": {
     "ACID_BASE": "Reacciones ácido-base",

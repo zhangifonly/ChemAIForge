@@ -447,7 +447,9 @@
     "sceneHint": "Sleep om te draaien · Scroll om te zoomen",
     "sceneHintTouch": "Één vinger roteren · Twee vingers zoomen",
     "titrationHint": "Slepen om te draaien · Scrollen om in te zoomen · Sleepkraan om druppelsnelheid te regelen",
-    "titrationHintTouch": "Één vinger om te draaien · Twee vingers om in te zoomen · Sleepkraan om druppelsnelheid te regelen"
+    "titrationHintTouch": "Één vinger om te draaien · Twee vingers om in te zoomen · Sleepkraan om druppelsnelheid te regelen",
+    "webglUnavailable": "De huidige browser kan geen 3D-weergave tonen (WebGL niet beschikbaar)",
+    "webglUnavailableHint": "Andere acties op de pagina worden niet beïnvloed. U kunt overschakelen naar “{mode}” om het experiment voort te zetten, of hardwareversnelling inschakelen in de browserinstellingen en de pagina vernieuwen."
   },
   "electrolysisLab": {
     "setup": "Experimentparameters",

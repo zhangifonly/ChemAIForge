@@ -447,7 +447,9 @@
     "sceneHint": "Dragðu til að snúa · skrunahjól til að þysja",
     "sceneHintTouch": "Einn fingur til að snúa · Tveir fingrar til að þysja",
     "titrationHint": "Draga til að snúa · skrúfa til að þysja · draga krana til að stjórna dreypiferð",
-    "titrationHintTouch": "Einn fingur til að snúa · tveir fingur til að þysja · draga krana til að stjórna dreypiferð"
+    "titrationHintTouch": "Einn fingur til að snúa · tveir fingur til að þysja · draga krana til að stjórna dreypiferð",
+    "webglUnavailable": "Núverandi vafri getur ekki sýnt 3D myndir (WebGL er ekki tiltækt)",
+    "webglUnavailableHint": "Aðrar aðgerðir á síðunni eru ekki fyrir áhrifum. Þú getur skipt yfir í „{mode}“ til að halda áfram tilrauninni, eða kveikt á vélbúnaðarhröðun í vafrastillingum og endurhlaðið síðuna."
   },
   "electrolysisLab": {
     "setup": "Uppsetning tilrauna",

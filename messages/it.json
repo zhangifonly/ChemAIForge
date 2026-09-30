@@ -447,7 +447,9 @@
     "sceneHint": "Trascina per ruotare · Scorri per ingrandire",
     "sceneHintTouch": "Un dito per ruotare · Due dita per ingrandire",
     "titrationHint": "Trascina per ruotare · Rotella per zoom · Trascina il rubinetto per controllare il flusso",
-    "titrationHintTouch": "Un dito per ruotare · Due dita per zoom · Trascina il rubinetto per controllare il flusso"
+    "titrationHintTouch": "Un dito per ruotare · Due dita per zoom · Trascina il rubinetto per controllare il flusso",
+    "webglUnavailable": "Il browser corrente non può visualizzare la scena 3D (WebGL non disponibile)",
+    "webglUnavailableHint": "Le altre operazioni sulla pagina non sono interessate. Puoi passare a «{mode}» per continuare l'esperimento, oppure abilitare l'accelerazione hardware nelle impostazioni del browser e ricaricare la pagina."
   },
   "electrolysisLab": {
     "setup": "Parametri sperimentali",
