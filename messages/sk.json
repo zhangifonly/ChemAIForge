@@ -477,6 +477,19 @@
     "efficiency": "Prúdová účinnosť",
     "complete": "Dokončiť experiment",
     "viewReport": "Zobraziť správu",
-    "scaleNote": "Časový násobič {scale}×: animácia postupuje v skrátenom čase, zobrazené hodnoty zodpovedajú skutočnému náboju a skutočnej dobe. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Časový násobič {scale}×: animácia postupuje v skrátenom čase, zobrazené hodnoty zodpovedajú skutočnému náboju a skutočnej dobe. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Overenie Faradayovho zákona: hmotnosť vyloučenej medi vs. náboj",
+      "xAxis": "Náboj Q / C",
+      "yAxis": "Vylúčená meď m / g",
+      "theory": "Teoretická priamka m = QM / 2F",
+      "fitLine": "Priamka preložená cez počiatok",
+      "colorNote": "Farba bodu označuje prúd: modrá = malý, červená = veľký",
+      "live": "Prebieha elektrolýza (teoretická hodnota)",
+      "hint": "Po zmene prúdu znovu zapnite a vypnite, potom zvážte. Pri dvoch a viac váženiach možno zo smernice určiť Faradayovu konštantu.",
+      "fitted": "F ≈ {value} C/mol (z nameraných dát)",
+      "error": "Odchýlka od akceptovanej hodnoty 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf závislosti hmotnosti vylúčenej medi od náboja, celkový počet vážení: {count}"
+    }
   }
 }

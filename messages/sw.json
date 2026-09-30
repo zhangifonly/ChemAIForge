@@ -477,6 +477,19 @@
     "efficiency": "Ufanisi wa Mkondo",
     "complete": "Maliza Majaribio",
     "viewReport": "Tazama Ripoti",
-    "scaleNote": "Kiwango cha muda {scale}×: skrini inasonga kwa muda uliofupishwa; usomaji daima unaonyesha chaji na muda halisi. Elektroliti: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Kiwango cha muda {scale}×: skrini inasonga kwa muda uliofupishwa; usomaji daima unaonyesha chaji na muda halisi. Elektroliti: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Uthibitisho wa Sheria ya Faraday: Uzito wa Shaba Iliyotenganishwa dhidi ya Chaji",
+      "xAxis": "Chaji Q / C",
+      "yAxis": "Shaba iliyotenganishwa m / g",
+      "theory": "Mstari wa nadharia m = QM / 2F",
+      "fitLine": "Mstari unaopita asili",
+      "colorNote": "Rangi ya nukta inaonyesha mkondo: bluu ndogo, nyekundu kubwa",
+      "live": "Inafanya elektrolisisi (thamani ya nadharia)",
+      "hint": "Badilisha mkondo kisha washa na uzima tena, kisha pima uzito. Pima mara mbili au zaidi ili upate konstanta ya Faraday kutoka kwenye mteremko.",
+      "fitted": "F ≈ {value} C/mol imehesabiwa kutoka kwa data",
+      "error": "Tofauti na thamani inayokubalika 96485 C/mol ni {pct}%",
+      "ariaLabel": "Grafu ya uzito wa shaba iliyotenganishwa dhidi ya chaji, jumla ya nukta {count} za kupima"
+    }
   }
 }

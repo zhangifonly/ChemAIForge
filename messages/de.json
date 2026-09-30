@@ -477,6 +477,19 @@
     "efficiency": "Stromausbeute",
     "complete": "Versuch abschließen",
     "viewReport": "Bericht anzeigen",
-    "scaleNote": "Zeitfaktor {scale}×: Die Darstellung läuft in gestauchter Zeit; Messwerte zeigen stets reale Ladung und reale Dauer. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Zeitfaktor {scale}×: Die Darstellung läuft in gestauchter Zeit; Messwerte zeigen stets reale Ladung und reale Dauer. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Faradaysches Gesetz: Abgeschiedene Kupfermasse vs. Ladungsmenge",
+      "xAxis": "Ladungsmenge Q / C",
+      "yAxis": "Abgeschiedenes Kupfer m / g",
+      "theory": "Theoretische Linie m = QM / 2F",
+      "fitLine": "Regressionslinie durch den Ursprung",
+      "colorNote": "Punktfarbe zeigt Stromstärke: blau = klein, rot = groß",
+      "live": "Elektrolyse läuft (Theoriewert)",
+      "hint": "Stromstärke ändern, dann erneut ein- und ausschalten und wiegen. Ab zwei Wägungen lässt sich die Faraday-Konstante aus der Steigung bestimmen.",
+      "fitted": "Aus Messdaten: F ≈ {value} C/mol",
+      "error": "Abweichung vom Literaturwert 96485 C/mol: {pct}%",
+      "ariaLabel": "Diagramm: abgeschiedene Kupfermasse in Abhängigkeit der Ladungsmenge, {count} Messpunkte"
+    }
   }
 }

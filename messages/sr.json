@@ -477,6 +477,19 @@
     "efficiency": "Stepen iskorišćenja struje",
     "complete": "Završi eksperiment",
     "viewReport": "Prikaži izveštaj",
-    "scaleNote": "Faktor ubrzanja {scale}×: animacija se odvija u kompresovanom vremenu, ali očitavanja uvek prikazuju stvarni naboj i stvarno trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Faktor ubrzanja {scale}×: animacija se odvija u kompresovanom vremenu, ali očitavanja uvek prikazuju stvarni naboj i stvarno trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifikacija Faradejevog zakona: masa istaloženog bakra i količina naelektrisanja",
+      "xAxis": "Količina naelektrisanja Q / C",
+      "yAxis": "Istaloženi bakar m / g",
+      "theory": "Teorijska linija m = QM / 2F",
+      "fitLine": "Linija regresije kroz koordinatni početak",
+      "colorNote": "Boja tačke označava struju: plava — mala, crvena — velika",
+      "live": "Elektroliza u toku (teorijska vrednost)",
+      "hint": "Promenite struju, zatim ponovo uključite i isključite strujno kolo i izvršite merenje. Sa dva ili više merenja moguće je odrediti Faradejevu konstantu iz nagiba prave.",
+      "fitted": "F ≈ {value} C/mol (iz podataka)",
+      "error": "Odstupanje od opšteprihvaćene vrednosti 96485 C/mol: {pct}%",
+      "ariaLabel": "Grafik zavisnosti mase istaloženog bakra od količine naelektrisanja, ukupno {count} mernih tačaka"
+    }
   }
 }

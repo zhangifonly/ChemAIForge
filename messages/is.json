@@ -477,6 +477,19 @@
     "efficiency": "Straumvirkni",
     "complete": "Ljúka tilraun",
     "viewReport": "Skoða skýrslu",
-    "scaleNote": "Tímaþjöppun {scale}×: myndin framþróast í þjöppuðum tíma, en lestur sýnir alltaf raunverulega hleðslu og raunverulegan tíma. Rafgreiningarlausn: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Tímaþjöppun {scale}×: myndin framþróast í þjöppuðum tíma, en lestur sýnir alltaf raunverulega hleðslu og raunverulegan tíma. Rafgreiningarlausn: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Staðfesting Faraday-lögmálsins: útfellt kopar á móti hleðslu",
+      "xAxis": "Hleðsla Q / C",
+      "yAxis": "Útfellt kopar m / g",
+      "theory": "Fræðileg lína m = QM / 2F",
+      "fitLine": "Aðhvarfslína gegnum uppruna",
+      "colorNote": "Litur punkta táknar straum: blár = lítill, rauður = stór",
+      "live": "Rafgreining í gangi (fræðilegt gildi)",
+      "hint": "Breyttu straumnum og kveiktu/slökktu aftur, síðan vigtaðu. Með tvær eða fleiri vigtunarniðurstöður má reikna Faraday-fastann út frá hallatölunni.",
+      "fitted": "F ≈ {value} C/mol reiknað úr gögnum",
+      "error": "Frávik frá viðurkenndri gildi 96485 C/mol er {pct}%",
+      "ariaLabel": "Graf yfir útfellt kopar á móti hleðslu, alls {count} vigtunargildi"
+    }
   }
 }

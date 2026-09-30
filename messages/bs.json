@@ -477,6 +477,19 @@
     "efficiency": "Iskoristivost struje",
     "complete": "Završi eksperiment",
     "viewReport": "Prikaži izvještaj",
-    "scaleNote": "Vremenski multiplikator {scale}×: animacija napreduje komprimiranim vremenom, ali očitavanja uvijek odražavaju stvarni naboj i stvarno proteklo vrijeme. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Vremenski multiplikator {scale}×: animacija napreduje komprimiranim vremenom, ali očitavanja uvijek odražavaju stvarni naboj i stvarno proteklo vrijeme. Elektrolit: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Provjera Faradayevog zakona: masa istaloženог bakra i količina elektriciteta",
+      "xAxis": "Količina elektriciteta Q / C",
+      "yAxis": "Istaloženi bakar m / g",
+      "theory": "Teorijska linija m = QM / 2F",
+      "fitLine": "Linija prilagodbe kroz ishodište",
+      "colorNote": "Boja tačke označava struju: plava – mala, crvena – velika",
+      "live": "Elektroliza u toku (teorijska vrijednost)",
+      "hint": "Nakon promjene struje ponovo uključite i isključite struju te izvažite. Dva ili više mjerenja dovoljna su za određivanje Faradayeve konstante iz nagiba.",
+      "fitted": "Iz podataka dobiveno F ≈ {value} C/mol",
+      "error": "Odstupanje od prihvaćene vrijednosti 96485 C/mol iznosi {pct}%",
+      "ariaLabel": "Grafikon mase istaloženог bakra u ovisnosti o količini elektriciteta, ukupno {count} mjernih tačaka"
+    }
   }
 }

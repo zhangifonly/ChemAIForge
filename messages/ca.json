@@ -477,6 +477,19 @@
     "efficiency": "Eficiència de corrent",
     "complete": "Finalitza l'experiment",
     "viewReport": "Veure l'informe",
-    "scaleNote": "Factor de temps {scale}×: la simulació avança amb el temps comprimit; les lectures mostren sempre la càrrega real i la durada real. Electròlit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Factor de temps {scale}×: la simulació avança amb el temps comprimit; les lectures mostren sempre la càrrega real i la durada real. Electròlit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verificació de la llei de Faraday: massa de coure dipositat vs. càrrega",
+      "xAxis": "Càrrega Q / C",
+      "yAxis": "Coure dipositat m / g",
+      "theory": "Línia teòrica m = QM / 2F",
+      "fitLine": "Línia d'ajust per l'origen",
+      "colorNote": "El color dels punts indica el corrent: blau = baix, vermell = alt",
+      "live": "Electròlisi en curs (valor teòric)",
+      "hint": "Canvieu el corrent i torneu a connectar i desconnectar per pesar. Amb dues o més pesades podeu obtenir la constant de Faraday a partir del pendent.",
+      "fitted": "F ≈ {value} C/mol obtingut a partir de les dades",
+      "error": "Diferència respecte al valor acceptat 96485 C/mol: {pct}%",
+      "ariaLabel": "Gràfic de la massa de coure dipositat en funció de la càrrega, amb {count} punts de pesada"
+    }
   }
 }

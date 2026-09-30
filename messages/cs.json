@@ -477,6 +477,19 @@
     "efficiency": "Proudová účinnost",
     "complete": "Dokončit experiment",
     "viewReport": "Zobrazit protokol",
-    "scaleNote": "Násobitel času {scale}×: animace běží v komprimovaném čase, zobrazené hodnoty náboje a doby elektrolýzy jsou vždy skutečné. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Násobitel času {scale}×: animace běží v komprimovaném čase, zobrazené hodnoty náboje a doby elektrolýzy jsou vždy skutečné. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Ověření Faradayova zákona: hmotnost vyloučené mědi vs. elektrický náboj",
+      "xAxis": "Náboj Q / C",
+      "yAxis": "Vyloučená měď m / g",
+      "theory": "Teoretická přímka m = QM / 2F",
+      "fitLine": "Přímka procházející počátkem (fitovaná)",
+      "colorNote": "Barva bodu označuje proud: modrá = malý, červená = velký",
+      "live": "Probíhá elektrolýza (teoretická hodnota)",
+      "hint": "Po změně proudu znovu zapněte a vypněte napájení a odvažte elektrodu. Po dvou a více váženích lze ze směrnice přímky určit Faradayovu konstantu.",
+      "fitted": "Z dat vypočteno F ≈ {value} C/mol",
+      "error": "Odchylka od přijaté hodnoty 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf závislosti hmotnosti vyloučené mědi na elektrickém náboji, celkem {count} vážení"
+    }
   }
 }

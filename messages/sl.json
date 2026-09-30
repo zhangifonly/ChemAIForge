@@ -477,6 +477,19 @@
     "efficiency": "Tokovna učinkovitost",
     "complete": "Zaključi poskus",
     "viewReport": "Prikaži poročilo",
-    "scaleNote": "Časovni faktor {scale}×: prikaz napreduje s stisnjenim časom, meritve pa vedno odražajo dejanski naboj in dejansko trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Časovni faktor {scale}×: prikaz napreduje s stisnjenim časom, meritve pa vedno odražajo dejanski naboj in dejansko trajanje. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Preveritev Faradayevega zakona: masa izločenega bakra glede na naboj",
+      "xAxis": "Naboj Q / C",
+      "yAxis": "Izločeni baker m / g",
+      "theory": "Teoretična premica m = QM / 2F",
+      "fitLine": "Prilagojena premica skozi izhodišče",
+      "colorNote": "Barva točk označuje tok: modra – majhen, rdeča – velik",
+      "live": "Elektroliza poteka (teoretična vrednost)",
+      "hint": "Spremenite tok, nato znova vklopite in izklopite napajanje ter stehtajte. Po dveh ali več tehtanjih lahko iz naklona premice izračunate Faradayevo konstanto.",
+      "fitted": "Iz podatkov izračunan F ≈ {value} C/mol",
+      "error": "Odstopanje od splošno sprejete vrednosti 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf mase izločenega bakra v odvisnosti od naboja, skupaj {count} točk tehtanja"
+    }
   }
 }

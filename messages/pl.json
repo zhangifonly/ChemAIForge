@@ -477,6 +477,19 @@
     "efficiency": "Wydajność prądowa",
     "complete": "Zakończ eksperyment",
     "viewReport": "Zobacz raport",
-    "scaleNote": "Mnożnik czasu {scale}×: animacja przyspiesza upływ czasu, lecz odczyty zawsze odzwierciedlają rzeczywisty ładunek i rzeczywisty czas. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Mnożnik czasu {scale}×: animacja przyspiesza upływ czasu, lecz odczyty zawsze odzwierciedlają rzeczywisty ładunek i rzeczywisty czas. Elektrolit: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Weryfikacja prawa Faradaya: masa wydzielonej miedzi a ładunek",
+      "xAxis": "Ładunek Q / C",
+      "yAxis": "Wydzielona miedź m / g",
+      "theory": "Linia teoretyczna m = QM / 2F",
+      "fitLine": "Linia dopasowania przez początek układu",
+      "colorNote": "Kolor punktów oznacza natężenie prądu: niebieski – małe, czerwony – duże",
+      "live": "Elektroliza w toku (wartość teoretyczna)",
+      "hint": "Po zmianie natężenia prądu włącz i wyłącz zasilanie, a następnie zważ elektrodę. Po co najmniej dwóch pomiarach można wyznaczyć stałą Faradaya ze współczynnika kierunkowego.",
+      "fitted": "Stała Faradaya wyznaczona z danych: F ≈ {value} C/mol",
+      "error": "Odchylenie od wartości referencyjnej 96485 C/mol wynosi {pct}%",
+      "ariaLabel": "Wykres masy wydzielonej miedzi w funkcji ładunku, liczba punktów pomiarowych: {count}"
+    }
   }
 }

@@ -477,6 +477,19 @@
     "efficiency": "Current efficiency",
     "complete": "Finish Experiment",
     "viewReport": "View Report",
-    "scaleNote": "Time scale {scale}×: the animation advances at compressed time; readings always reflect actual charge and real elapsed time. Electrolyte: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Time scale {scale}×: the animation advances at compressed time; readings always reflect actual charge and real elapsed time. Electrolyte: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Faraday's Law Verification: Deposited Copper Mass vs. Charge",
+      "xAxis": "Charge Q / C",
+      "yAxis": "Deposited copper m / g",
+      "theory": "Theoretical line m = QM / 2F",
+      "fitLine": "Origin-constrained fit line",
+      "colorNote": "Point color indicates current: blue = low, red = high",
+      "live": "Electrolysis in progress (theoretical value)",
+      "hint": "Change the current, then switch power on and off again to weigh. With two or more measurements, the Faraday constant can be derived from the slope.",
+      "fitted": "F ≈ {value} C/mol derived from data",
+      "error": "{pct}% deviation from accepted value 96485 C/mol",
+      "ariaLabel": "Chart of deposited copper mass vs. charge, {count} weighing point(s) total"
+    }
   }
 }

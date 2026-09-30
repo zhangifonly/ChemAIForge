@@ -477,6 +477,19 @@
     "efficiency": "Efikasiteti i rrymës",
     "complete": "Përfundo eksperimentin",
     "viewReport": "Shiko raportin",
-    "scaleNote": "Shkalla kohore {scale}×: ekrani avancon me kohë të ngjeshur, por leximet pasqyrojnë gjithmonë ngarkesën dhe kohëzgjatjen reale. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Shkalla kohore {scale}×: ekrani avancon me kohë të ngjeshur, por leximet pasqyrojnë gjithmonë ngarkesën dhe kohëzgjatjen reale. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifikimi i ligjit të Faradeit: masa e bakrit të depozituar vs. ngarkesa",
+      "xAxis": "Ngarkesa Q / C",
+      "yAxis": "Bakër i depozituar m / g",
+      "theory": "Vija teorike m = QM / 2F",
+      "fitLine": "Vijë regresioni nëpër origjinë",
+      "colorNote": "Ngjyra e pikave tregon rrymën: blu = e vogël, kuqe = e madhe",
+      "live": "Elektrolizë në vazhdim (vlerë teorike)",
+      "hint": "Ndryshoni rrymën, pastaj ndizni dhe fikni qarkun dhe peshoni. Dy ose më shumë matje mjaftojnë për të llogaritur konstantën e Faradeit nga pjerrësia.",
+      "fitted": "F ≈ {value} C/mol (nga të dhënat)",
+      "error": "Diferenca me vlerën e pranuar 96485 C/mol: {pct}%",
+      "ariaLabel": "Grafik i masës së bakrit të depozituar në funksion të ngarkesës, me gjithsej {count} pika matjeje"
+    }
   }
 }

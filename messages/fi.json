@@ -477,6 +477,19 @@
     "efficiency": "Virran hyötysuhde",
     "complete": "Lopeta koe",
     "viewReport": "Näytä raportti",
-    "scaleNote": "Aikakeroin {scale}×: animaatio etenee tiivistetyssä ajassa, lukemat näyttävät aina todellisen varauksen ja todellisen keston. Elektrolyytti {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Aikakeroin {scale}×: animaatio etenee tiivistetyssä ajassa, lukemat näyttävät aina todellisen varauksen ja todellisen keston. Elektrolyytti {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faradayn lain verifiointi: erotetun kuparin massa ja varaus",
+      "xAxis": "Varaus Q / C",
+      "yAxis": "Erotettu kupari m / g",
+      "theory": "Teoreettinen viiva m = QM / 2F",
+      "fitLine": "Origon kautta sovitettu viiva",
+      "colorNote": "Pisteen väri kuvaa virtaa: sininen = pieni, punainen = suuri",
+      "live": "Elektrolyysi käynnissä (teoreettinen arvo)",
+      "hint": "Vaihda virtaa, kytke virta päälle ja pois, punnitse. Kahdella tai useammalla punnituksella voit laskea Faradayn vakion kulmakertoimesta.",
+      "fitted": "Datasta laskettu F ≈ {value} C/mol",
+      "error": "Ero hyväksyttyyn arvoon 96485 C/mol on {pct}%",
+      "ariaLabel": "Kuvaaja erotetun kuparin massasta varauksen funktiona, {count} punnituspistettä"
+    }
   }
 }

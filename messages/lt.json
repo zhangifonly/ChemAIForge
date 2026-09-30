@@ -477,6 +477,19 @@
     "efficiency": "Srovės efektyvumas",
     "complete": "Baigti eksperimentą",
     "viewReport": "Peržiūrėti ataskaitą",
-    "scaleNote": "Laiko mastelis {scale}×: vaizdas juda suspaustu laiku, rodmenys visada atspindi tikrąjį krūvį ir tikrąją trukmę. Elektrolitas: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Laiko mastelis {scale}×: vaizdas juda suspaustu laiku, rodmenys visada atspindi tikrąjį krūvį ir tikrąją trukmę. Elektrolitas: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faradėjaus dėsnio patikrinimas: išskirto vario masė ir krūvis",
+      "xAxis": "Krūvis Q / C",
+      "yAxis": "Išskirtas varis m / g",
+      "theory": "Teorinė tiesė m = QM / 2F",
+      "fitLine": "Tiesė per koordinačių pradžią",
+      "colorNote": "Taško spalva rodo srovę: mėlyna – maža, raudona – didelė",
+      "live": "Elektrolizė vyksta (teorinė reikšmė)",
+      "hint": "Pakeiskite srovę, vėl įjunkite ir išjunkite grandinę, tada pasverkite. Pasverkus du ar daugiau kartų, iš tiesės nuolydžio galima apskaičiuoti Faradėjaus konstantą.",
+      "fitted": "Iš duomenų gauta F ≈ {value} C/mol",
+      "error": "Skirtumas nuo pripažintos reikšmės 96485 C/mol: {pct}%",
+      "ariaLabel": "Išskirto vario masės priklausomybės nuo krūvio grafikas, iš viso {count} svėrimo taškai"
+    }
   }
 }

@@ -477,6 +477,19 @@
     "efficiency": "電流効率",
     "complete": "実験完了",
     "viewReport": "レポートを見る",
-    "scaleNote": "時間倍率 {scale}×：画面は圧縮時間で進みますが、読数は常に実際の電気量と実際の経過時間を示します。電解液 {conc} mol/L CuSO₄ {volume} mL。"
+    "scaleNote": "時間倍率 {scale}×：画面は圧縮時間で進みますが、読数は常に実際の電気量と実際の経過時間を示します。電解液 {conc} mol/L CuSO₄ {volume} mL。",
+    "faraday": {
+      "title": "ファラデーの法則検証：析出銅質量 と 電気量",
+      "xAxis": "電気量 Q / C",
+      "yAxis": "析出銅 m / g",
+      "theory": "理論線 m = QM / 2F",
+      "fitLine": "原点通過フィット線",
+      "colorNote": "点の色は電流を示す：青が小、赤が大",
+      "live": "電解中（理論値）",
+      "hint": "電流を変えて通電・断電し、都度秤量してください。2回以上秤量すると、傾きからファラデー定数を求められます。",
+      "fitted": "データより F ≈ {value} C/mol",
+      "error": "公認値 96485 C/mol との差：{pct}%",
+      "ariaLabel": "電気量に対する析出銅質量のグラフ、秤量点 {count} 個"
+    }
   }
 }

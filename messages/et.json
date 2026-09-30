@@ -477,6 +477,19 @@
     "efficiency": "Voolu efektiivsus",
     "complete": "Lõpeta katse",
     "viewReport": "Vaata aruannet",
-    "scaleNote": "Ajakordaja {scale}×: animatsioon kulgeb kiirendatud ajaskaalal, näidud kajastavad alati tegelikku laengut ja tegelikku kestust. Elektrolüüt: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Ajakordaja {scale}×: animatsioon kulgeb kiirendatud ajaskaalal, näidud kajastavad alati tegelikku laengut ja tegelikku kestust. Elektrolüüt: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faraday seaduse kinnitus: sadestunud vask mass vs laeng",
+      "xAxis": "Laeng Q / C",
+      "yAxis": "Sadestunud vask m / g",
+      "theory": "Teoreetiline sirge m = QM / 2F",
+      "fitLine": "Läbi algpunkti sobitusjoon",
+      "colorNote": "Punkti värv näitab voolutugevust: sinine – väike, punane – suur",
+      "live": "Elektrolüüs käimas (teoreetiline väärtus)",
+      "hint": "Muutke voolutugevust ja lülitage vool uuesti sisse ning välja, seejärel kaaluge. Kahe või enama kaalumisega saab kaldnurga järgi arvutada Faraday konstandi.",
+      "fitted": "Andmetest saadud F ≈ {value} C/mol",
+      "error": "Erinevus üldtunnustatud väärtusest 96485 C/mol on {pct}%",
+      "ariaLabel": "Sadestunud vaske massi muutus laengu järgi, kokku {count} kaalumispunkti"
+    }
   }
 }

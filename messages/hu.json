@@ -477,6 +477,19 @@
     "efficiency": "Áramkihasználás",
     "complete": "Kísérlet befejezése",
     "viewReport": "Jelentés megtekintése",
-    "scaleNote": "Időgyorsítás {scale}×: a megjelenítés tömörített időben halad, az értékek mindig a valós töltést és valós időt mutatják. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Időgyorsítás {scale}×: a megjelenítés tömörített időben halad, az értékek mindig a valós töltést és valós időt mutatják. Elektrolit: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Faraday-törvény ellenőrzése: kiváló réz tömege és töltésmennyiség",
+      "xAxis": "Töltésmennyiség Q / C",
+      "yAxis": "Kivált réz m / g",
+      "theory": "Elméleti egyenes m = QM / 2F",
+      "fitLine": "Origón átmenő illesztett egyenes",
+      "colorNote": "A pontok színe az áramerősséget jelzi: kék = kis, piros = nagy",
+      "live": "Elektrolízis folyamatban (elméleti érték)",
+      "hint": "Változtassa meg az áramerősséget, majd kapcsolja be és ki az áramot, és mérje meg a tömeget. Két vagy több mérés után a Faraday-állandó a meredekségből meghatározható.",
+      "fitted": "Adatokból számított F ≈ {value} C/mol",
+      "error": "Az elfogadott 96485 C/mol értéktől való eltérés: {pct}%",
+      "ariaLabel": "A kivált réz tömegének változása a töltésmennyiség függvényében, összesen {count} mérési pont"
+    }
   }
 }

@@ -477,6 +477,19 @@
     "efficiency": "Strömverkningsgrad",
     "complete": "Avsluta experiment",
     "viewReport": "Visa rapport",
-    "scaleNote": "Tidsfaktor {scale}×: animationen fortskrider med komprimerad tid, men avläsningarna visar alltid verklig laddning och verklig tid. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Tidsfaktor {scale}×: animationen fortskrider med komprimerad tid, men avläsningarna visar alltid verklig laddning och verklig tid. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifiering av Faradays lag: utfälld kopparmassa vs. laddning",
+      "xAxis": "Laddning Q / C",
+      "yAxis": "Utfällt koppar m / g",
+      "theory": "Teoretisk linje m = QM / 2F",
+      "fitLine": "Anpassad linje genom origo",
+      "colorNote": "Punktfärg anger ström: blå = låg, röd = hög",
+      "live": "Elektrolys pågår (teoretiskt värde)",
+      "hint": "Ändra strömmen och koppla till/från igen, väg sedan. Med minst två vägningar kan Faradays konstant beräknas från lutningen.",
+      "fitted": "F ≈ {value} C/mol (beräknat från data)",
+      "error": "Avvikelse från accepterat värde 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf över utfälld kopparmassa som funktion av laddning, totalt {count} vägningspunkter"
+    }
   }
 }

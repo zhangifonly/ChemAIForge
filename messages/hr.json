@@ -477,6 +477,19 @@
     "efficiency": "Strujni iskoristak",
     "complete": "Završi eksperiment",
     "viewReport": "Prikaži izvješće",
-    "scaleNote": "Faktor vremena {scale}×: prikaz napreduje po komprimiranom vremenu, no očitanja uvijek odražavaju stvarni naboj i stvarno trajanje. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Faktor vremena {scale}×: prikaz napreduje po komprimiranom vremenu, no očitanja uvijek odražavaju stvarni naboj i stvarno trajanje. Elektrolit: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Provjera Faradayevog zakona: masa istaloženog bakra i naboj",
+      "xAxis": "Naboj Q / C",
+      "yAxis": "Istaloženi bakar m / g",
+      "theory": "Teorijska linija m = QM / 2F",
+      "fitLine": "Pravac prilagodbe kroz ishodište",
+      "colorNote": "Boja točke označava struju: plava – mala, crvena – velika",
+      "live": "Elektroliza u tijeku (teorijska vrijednost)",
+      "hint": "Nakon promjene struje ponovo uključite i isključite napon te izvažite. Dva ili više vaganja dovoljna su za izračun Faradayeve konstante iz nagiba pravca.",
+      "fitted": "Iz podataka: F ≈ {value} C/mol",
+      "error": "Odstupanje od prihvaćene vrijednosti 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf mase istaloženog bakra u ovisnosti o naboju, ukupno {count} točaka vaganja"
+    }
   }
 }

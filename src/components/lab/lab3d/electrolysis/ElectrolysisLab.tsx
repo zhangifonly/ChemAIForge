@@ -8,6 +8,8 @@ import { useTranslations } from "next-intl";
 import { SceneShell } from "../SceneShell";
 import { ElectrolysisScene } from "./ElectrolysisScene";
 import { ElectrolysisPanel } from "./ElectrolysisPanel";
+import { FaradayChart } from "./FaradayChart";
+import { addPoint, fitFaraday, weighSeed, type WeighPoint } from "./faraday";
 import { useLabStore } from "../../labStore";
 import {
   advance,
@@ -31,6 +33,8 @@ export function ElectrolysisLab({ initialAnode = "graphite" }: { initialAnode?: 
   const [energized, setEnergized] = useState(false);
   const [microView, setMicroView] = useState(false);
   const [weighed, setWeighed] = useState<{ measuredG: number; efficiency: number } | null>(null);
+  // 本套实验（同一阳极、未重置）的全部称量点，用于法拉第定律验证图
+  const [points, setPoints] = useState<WeighPoint[]>([]);
   // 每次重置换一个种子：同一次实验反复称量读数一致，换一次实验误差不同
   const [seed, setSeed] = useState(() => Math.floor(Math.random() * 1e9));
 
@@ -78,8 +82,11 @@ export function ElectrolysisLab({ initialAnode = "graphite" }: { initialAnode?: 
   }, [energized, anode, current, timeScale, state.seconds, r, record]);
 
   const onWeigh = useCallback(() => {
-    const w = weighCathode(r.copperDepositedG, seed);
+    const w = weighCathode(r.copperDepositedG, weighSeed(seed, state.chargeC));
     setWeighed(w);
+    const next = addPoint(points, { chargeC: state.chargeC, measuredG: w.measuredG, currentA: current });
+    setPoints(next);
+    const fit = next.length >= 2 ? fitFaraday(next) : null;
     record(
       "electrolysis-weigh",
       {
@@ -87,15 +94,18 @@ export function ElectrolysisLab({ initialAnode = "graphite" }: { initialAnode?: 
         theoreticalG: round4(r.copperDepositedG),
         efficiency: Math.round(w.efficiency * 1000) / 10,
         chargeC: Math.round(state.chargeC),
+        currentA: current,
+        ...(fit ? { faradayExp: Math.round(fit.faradayExp), points: next.length } : {}),
       },
       snapshot(r),
     );
-  }, [r, seed, state.chargeC, record]);
+  }, [r, seed, state.chargeC, current, points, record]);
 
   const onReset = useCallback(() => {
     setEnergized(false);
     setState(ZERO);
     setWeighed(null);
+    setPoints([]);
     setSeed(Math.floor(Math.random() * 1e9));
     record("electrolysis-reset");
   }, [record]);
@@ -108,6 +118,7 @@ export function ElectrolysisLab({ initialAnode = "graphite" }: { initialAnode?: 
       setEnergized(false);
       setState(ZERO);
       setWeighed(null);
+      setPoints([]);
       record("electrolysis-anode", { anode: a });
     },
     [anode, record],
@@ -154,6 +165,9 @@ export function ElectrolysisLab({ initialAnode = "graphite" }: { initialAnode?: 
           cathodeLifted={weighed !== null}
         />
       </SceneShell>
+      <div className="lg:col-span-2">
+        <FaradayChart points={points} liveChargeC={energized || weighed === null ? state.chargeC : 0} />
+      </div>
       <p className="text-xs text-foreground/65 lg:col-span-2">{t("scaleNote", { scale: timeScale, conc: 0.5, volume: 100 })}</p>
     </div>
   );

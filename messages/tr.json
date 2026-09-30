@@ -477,6 +477,19 @@
     "efficiency": "Akım Verimi",
     "complete": "Deneyi Tamamla",
     "viewReport": "Raporu Görüntüle",
-    "scaleNote": "Zaman katsayısı {scale}×: Ekran sıkıştırılmış süre ile ilerler; okumalar her zaman gerçek yük ve gerçek süreyi gösterir. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
+    "scaleNote": "Zaman katsayısı {scale}×: Ekran sıkıştırılmış süre ile ilerler; okumalar her zaman gerçek yük ve gerçek süreyi gösterir. Elektrolit: {conc} mol/L CuSO₄, {volume} mL.",
+    "faraday": {
+      "title": "Faraday Yasası Doğrulaması: Çöken Bakır Kütlesi ve Elektrik Yükü",
+      "xAxis": "Elektrik Yükü Q / C",
+      "yAxis": "Çöken Bakır m / g",
+      "theory": "Teorik Doğru m = QM / 2F",
+      "fitLine": "Orijinden Geçen Uyum Doğrusu",
+      "colorNote": "Nokta rengi akımı gösterir: mavi küçük, kırmızı büyük",
+      "live": "Elektroliz Devam Ediyor (Teorik Değer)",
+      "hint": "Akımı değiştirip tekrar akım uygulayın ve keserek tartın. İki veya daha fazla tartım yapılırsa eğimden Faraday sabiti hesaplanabilir.",
+      "fitted": "Veriden hesaplanan F ≈ {value} C/mol",
+      "error": "Kabul görmüş 96485 C/mol değerinden sapma: {pct}%",
+      "ariaLabel": "Çöken bakır kütlesinin elektrik yüküne bağlı değişim grafiği, toplam {count} tartım noktası"
+    }
   }
 }

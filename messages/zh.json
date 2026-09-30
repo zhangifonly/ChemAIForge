@@ -140,7 +140,20 @@
     "efficiency": "电流效率",
     "complete": "完成实验",
     "viewReport": "查看报告",
-    "scaleNote": "时间倍率 {scale}×：画面按压缩时间推进，读数始终为真实电量与真实时长。电解液 {conc} mol/L CuSO₄ {volume} mL。"
+    "scaleNote": "时间倍率 {scale}×：画面按压缩时间推进，读数始终为真实电量与真实时长。电解液 {conc} mol/L CuSO₄ {volume} mL。",
+    "faraday": {
+      "title": "法拉第定律验证：析出铜质量 与 电量",
+      "xAxis": "电量 Q / C",
+      "yAxis": "析出铜 m / g",
+      "theory": "理论线 m = QM / 2F",
+      "fitLine": "过原点拟合线",
+      "colorNote": "点的颜色表示电流：蓝色小，红色大",
+      "live": "正在电解（理论值）",
+      "hint": "改变电流后再次通电、断电称量。称量两次以上，就能由斜率求出法拉第常数。",
+      "fitted": "由数据求得 F ≈ {value} C/mol",
+      "error": "与公认值 96485 C/mol 相差 {pct}%",
+      "ariaLabel": "析出铜质量随电量变化图，共 {count} 个称量点"
+    }
   },
   "errors": {
     "noActivity": "本次实验还没有任何操作记录，先在实验台上动手做一次再生成报告。",

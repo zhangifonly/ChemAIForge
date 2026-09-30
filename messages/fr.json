@@ -477,6 +477,19 @@
     "efficiency": "Rendement en courant",
     "complete": "Terminer l'expérience",
     "viewReport": "Voir le rapport",
-    "scaleNote": "Facteur de temps {scale}× : l'animation avance en temps compressé ; les lectures indiquent toujours la charge réelle et la durée réelle. Électrolyte : CuSO₄ {conc} mol/L, {volume} mL."
+    "scaleNote": "Facteur de temps {scale}× : l'animation avance en temps compressé ; les lectures indiquent toujours la charge réelle et la durée réelle. Électrolyte : CuSO₄ {conc} mol/L, {volume} mL.",
+    "faraday": {
+      "title": "Vérification de la loi de Faraday : masse de cuivre déposé en fonction de la charge",
+      "xAxis": "Charge Q / C",
+      "yAxis": "Cuivre déposé m / g",
+      "theory": "Droite théorique m = QM / 2F",
+      "fitLine": "Droite d'ajustement passant par l'origine",
+      "colorNote": "La couleur des points indique le courant : bleu = faible, rouge = élevé",
+      "live": "Électrolyse en cours (valeur théorique)",
+      "hint": "Modifiez le courant, puis appliquez et coupez le courant avant de peser. Deux pesées ou plus suffisent pour déduire la constante de Faraday à partir de la pente.",
+      "fitted": "F ≈ {value} C/mol déterminé à partir des données",
+      "error": "Écart par rapport à la valeur admise 96485 C/mol : {pct}%",
+      "ariaLabel": "Graphique de la masse de cuivre déposé en fonction de la charge, {count} point(s) de pesée"
+    }
   }
 }

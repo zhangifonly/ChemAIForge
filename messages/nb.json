@@ -477,6 +477,19 @@
     "efficiency": "Strømeffektivitet",
     "complete": "Avslutt forsøket",
     "viewReport": "Vis rapport",
-    "scaleNote": "Tidsfaktor {scale}×: animasjonen kjører i komprimert tid, mens avlesningene alltid viser faktisk ladning og faktisk tid. Elektrolytt: {conc} mol/L CuSO₄ {volume} mL."
+    "scaleNote": "Tidsfaktor {scale}×: animasjonen kjører i komprimert tid, mens avlesningene alltid viser faktisk ladning og faktisk tid. Elektrolytt: {conc} mol/L CuSO₄ {volume} mL.",
+    "faraday": {
+      "title": "Verifisering av Faradays lov: utfelt kobber vs. ladning",
+      "xAxis": "Ladning Q / C",
+      "yAxis": "Utfelt kobber m / g",
+      "theory": "Teoretisk linje m = QM / 2F",
+      "fitLine": "Tilpasset linje gjennom origo",
+      "colorNote": "Punktfarge angir strøm: blå = lav, rød = høy",
+      "live": "Elektrolyse pågår (teoretisk verdi)",
+      "hint": "Endre strømmen, koble til og fra igjen, og vei massen. Med to eller flere målinger kan Faraday-konstanten beregnes fra stigningstallet.",
+      "fitted": "Beregnet F ≈ {value} C/mol",
+      "error": "Avvik fra akseptert verdi 96485 C/mol: {pct}%",
+      "ariaLabel": "Graf over utfelt kobber som funksjon av ladning, totalt {count} målepunkter"
+    }
   }
 }
