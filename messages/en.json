@@ -363,7 +363,9 @@
     "view3d": "3D Workbench",
     "view3dRefined": "3D Workbench ★",
     "sceneHint": "Drag to rotate · Scroll to zoom",
-    "sceneHintTouch": "One finger to rotate · Two fingers to zoom"
+    "sceneHintTouch": "One finger to rotate · Two fingers to zoom",
+    "titrationHint": "Drag to rotate · Scroll to zoom · Drag stopcock to control drip rate",
+    "titrationHintTouch": "One finger to rotate · Two fingers to zoom · Drag stopcock to control drip rate"
   },
   "category": {
     "ACID_BASE": "Acid-Base Reactions",
@@ -446,5 +448,35 @@
       "effect": "Record the current reading",
       "hint": "Read with your eye level with the graduation mark; log each reading in the data table to calculate averages and errors"
     }
+  },
+  "electrolysisLab": {
+    "setup": "Experiment Parameters",
+    "anodeMaterial": "Anode Material",
+    "anode": {
+      "graphite": "Graphite (inert)",
+      "copper": "Crude copper (electrolytic refining)"
+    },
+    "current": "Current",
+    "timeScale": "Time Scale",
+    "powerOn": "Power On",
+    "powerOff": "Power Off",
+    "microView": "Micro View",
+    "reset": "Reset",
+    "readings": "Live Readings",
+    "charge": "Charge Q",
+    "copperDeposited": "Copper deposited at cathode",
+    "oxygen": "O₂ evolved at anode",
+    "anodeDissolved": "Copper dissolved at anode",
+    "concentration": "Cu²⁺ concentration",
+    "cathodeLabel": "Cathode:",
+    "anodeLabel": "Anode:",
+    "depleted": "Cu²⁺ in solution is nearly exhausted. Continued electrolysis would cause hydrogen gas evolution at the cathode. Power has been cut automatically.",
+    "weigh": "Remove cathode and weigh",
+    "measured": "Measured",
+    "theoretical": "Theoretical",
+    "efficiency": "Current efficiency",
+    "complete": "Finish Experiment",
+    "viewReport": "View Report",
+    "scaleNote": "Time scale {scale}×: the animation advances at compressed time; readings always reflect actual charge and real elapsed time. Electrolyte: {conc} mol/L CuSO₄, {volume} mL."
   }
 }

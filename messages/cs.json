@@ -445,6 +445,38 @@
     "view3d": "3D pracovní stůl",
     "view3dRefined": "3D pracovní stůl ★",
     "sceneHint": "Táhnutím otočte · kolečkem přibližte",
-    "sceneHintTouch": "Otočení jedním prstem · přiblížení dvěma prsty"
+    "sceneHintTouch": "Otočení jedním prstem · přiblížení dvěma prsty",
+    "titrationHint": "Táhněte pro otočení · Kolečko pro přiblížení · Táhněte kohoutek pro řízení kapání",
+    "titrationHintTouch": "Jeden prst pro otočení · Dva prsty pro přiblížení · Táhněte kohoutek pro řízení kapání"
+  },
+  "electrolysisLab": {
+    "setup": "Parametry experimentu",
+    "anodeMaterial": "Materiál anody",
+    "anode": {
+      "graphite": "Grafit (inertní)",
+      "copper": "Hrubá měď (elektrolytická rafinace)"
+    },
+    "current": "Proud",
+    "timeScale": "Násobitel času",
+    "powerOn": "Zapnout napájení",
+    "powerOff": "Vypnout napájení",
+    "microView": "Mikroskopický pohled",
+    "reset": "Resetovat",
+    "readings": "Aktuální hodnoty",
+    "charge": "Náboj Q",
+    "copperDeposited": "Měď vyloučená na katodě",
+    "oxygen": "O₂ uvolněný na anodě",
+    "anodeDissolved": "Měď rozpuštěná z anody",
+    "concentration": "Koncentrace Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Koncentrace Cu²⁺ v roztoku je téměř nulová. Při dalším průchodu proudu by se na katodě začal vylučovat vodík. Napájení bylo automaticky vypnuto.",
+    "weigh": "Vyjmout katodu a zvážit",
+    "measured": "Naměřená hodnota",
+    "theoretical": "Teoretická hodnota",
+    "efficiency": "Proudová účinnost",
+    "complete": "Dokončit experiment",
+    "viewReport": "Zobrazit protokol",
+    "scaleNote": "Násobitel času {scale}×: animace běží v komprimovaném čase, zobrazené hodnoty náboje a doby elektrolýzy jsou vždy skutečné. Elektrolyt: {conc} mol/L CuSO₄, {volume} mL."
   }
 }

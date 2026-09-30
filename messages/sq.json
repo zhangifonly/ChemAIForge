@@ -445,6 +445,38 @@
     "view3d": "Tryezë 3D",
     "view3dRefined": "Tryezë 3D ★",
     "sceneHint": "Tërhiq për të rrotulluar · Rrotë për të zmadhuar",
-    "sceneHintTouch": "Një gisht për rrotullim · Dy gishta për zmadhim"
+    "sceneHintTouch": "Një gisht për rrotullim · Dy gishta për zmadhim",
+    "titrationHint": "Tërhiq për të rrotulluar · Rrotëza për zmadhim · Tërhiq rubinetin për të kontrolluar shpejtësinë e pikimit",
+    "titrationHintTouch": "Një gisht për të rrotulluar · Dy gishta për zmadhim · Tërhiq rubinetin për të kontrolluar shpejtësinë e pikimit"
+  },
+  "electrolysisLab": {
+    "setup": "Parametrat e eksperimentit",
+    "anodeMaterial": "Materiali i anodës",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Bakër i papërpunuar (rafinim elektrolitik)"
+    },
+    "current": "Rryma",
+    "timeScale": "Shkalla kohore",
+    "powerOn": "Ndiz energjinë",
+    "powerOff": "Fik energjinë",
+    "microView": "Pamja mikroskopike",
+    "reset": "Rivendos",
+    "readings": "Leximet në kohë reale",
+    "charge": "Ngarkesa Q",
+    "copperDeposited": "Bakër i depozituar në katodë",
+    "oxygen": "O₂ i lëshuar nga anoda",
+    "anodeDissolved": "Bakër i tretur nga anoda",
+    "concentration": "Përqendrimi Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Cu²⁺ në tretësirë është pothuajse i shteruar. Nëse elektróliza vazhdon, katoda do të fillojë të lëshojë hidrogjen. Energjia është shkëputur automatikisht.",
+    "weigh": "Hiq katodën dhe peshoje",
+    "measured": "I matur",
+    "theoretical": "Teorik",
+    "efficiency": "Efikasiteti i rrymës",
+    "complete": "Përfundo eksperimentin",
+    "viewReport": "Shiko raportin",
+    "scaleNote": "Shkalla kohore {scale}×: ekrani avancon me kohë të ngjeshur, por leximet pasqyrojnë gjithmonë ngarkesën dhe kohëzgjatjen reale. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

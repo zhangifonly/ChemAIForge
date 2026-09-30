@@ -445,6 +445,38 @@
     "view3d": "3D darba galds",
     "view3dRefined": "3D darba galds ★",
     "sceneHint": "Vilkt, lai rotētu · Ritenis, lai tuvinātu",
-    "sceneHintTouch": "Viens pirksts — griešana · Divi pirksti — tālummaiņa"
+    "sceneHintTouch": "Viens pirksts — griešana · Divi pirksti — tālummaiņa",
+    "titrationHint": "Velciet, lai rotētu · Ritiniet, lai tuvinātu · Velciet krānu, lai kontrolētu pilēšanas ātrumu",
+    "titrationHintTouch": "Rotējiet ar vienu pirkstu · Tuvināt ar diviem pirkstiem · Velciet krānu, lai kontrolētu pilēšanas ātrumu"
+  },
+  "electrolysisLab": {
+    "setup": "Eksperimenta parametri",
+    "anodeMaterial": "Anoda materiāls",
+    "anode": {
+      "graphite": "Grafīts (inerts)",
+      "copper": "Raupjš varš (elektrolītiskā rafinēšana)"
+    },
+    "current": "Strāva",
+    "timeScale": "Laika mērogs",
+    "powerOn": "Ieslēgt strāvu",
+    "powerOff": "Izslēgt strāvu",
+    "microView": "Mikroskopiskais skats",
+    "reset": "Atiestatīt",
+    "readings": "Reāllaika rādījumi",
+    "charge": "Lādiņš Q",
+    "copperDeposited": "Katodā nosēdies varš",
+    "oxygen": "Anodā izdalītais O₂",
+    "anodeDissolved": "Anodā izšķīdušais varš",
+    "concentration": "Cu²⁺ koncentrācija",
+    "cathodeLabel": "Katods:",
+    "anodeLabel": "Anods:",
+    "depleted": "Šķīdumā Cu²⁺ gandrīz izsmelts. Turpinot elektrolīzi, katodā sāks izdalīties ūdeņradis. Strāva automātiski izslēgta.",
+    "weigh": "Izņemt katodu un nosvērt",
+    "measured": "Izmērīts",
+    "theoretical": "Teorētiskais",
+    "efficiency": "Strāvas efektivitāte",
+    "complete": "Pabeigt eksperimentu",
+    "viewReport": "Skatīt atskaiti",
+    "scaleNote": "Laika mērogs {scale}×: attēls virzās saspiestā laikā, rādījumi vienmēr atspoguļo reālo lādiņu un reālo laiku. Elektrolīts {conc} mol/L CuSO₄ {volume} mL."
   }
 }

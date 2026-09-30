@@ -445,6 +445,38 @@
     "view3d": "Taula 3D",
     "view3dRefined": "Taula 3D ★",
     "sceneHint": "Arrossega per girar · Roda per zoom",
-    "sceneHintTouch": "Un dit per girar · Dos dits per ampliar"
+    "sceneHintTouch": "Un dit per girar · Dos dits per ampliar",
+    "titrationHint": "Arrossega per rotar · Roda per fer zoom · Arrossega la clau per controlar el degoteig",
+    "titrationHintTouch": "Un dit per rotar · Dos dits per fer zoom · Arrossega la clau per controlar el degoteig"
+  },
+  "electrolysisLab": {
+    "setup": "Paràmetres de l'experiment",
+    "anodeMaterial": "Material de l'ànode",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Coure brut (refinació electrolítica)"
+    },
+    "current": "Intensitat",
+    "timeScale": "Factor de temps",
+    "powerOn": "Connecta l'alimentació",
+    "powerOff": "Desconnecta l'alimentació",
+    "microView": "Vista microscòpica",
+    "reset": "Reinicia",
+    "readings": "Lectures en temps real",
+    "charge": "Càrrega Q",
+    "copperDeposited": "Coure dipositat al càtode",
+    "oxygen": "O₂ alliberat a l'ànode",
+    "anodeDissolved": "Coure dissolt a l'ànode",
+    "concentration": "Concentració de Cu²⁺",
+    "cathodeLabel": "Càtode:",
+    "anodeLabel": "Ànode:",
+    "depleted": "El Cu²⁺ de la solució s'ha quasi esgotat. Si es continua l'electròlisi, el càtode passarà a desprendre hidrogen. S'ha tallat el corrent automàticament.",
+    "weigh": "Extreu el càtode i pesa'l",
+    "measured": "Mesurat",
+    "theoretical": "Teòric",
+    "efficiency": "Eficiència de corrent",
+    "complete": "Finalitza l'experiment",
+    "viewReport": "Veure l'informe",
+    "scaleNote": "Factor de temps {scale}×: la simulació avança amb el temps comprimit; les lectures mostren sempre la càrrega real i la durada real. Electròlit: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

@@ -445,6 +445,38 @@
     "view3d": "3D munkaasztal",
     "view3dRefined": "3D munkaasztal ★",
     "sceneHint": "Húzással forgatható · Görgővel nagyítható",
-    "sceneHintTouch": "Egy ujjal forgatás · két ujjal nagyítás"
+    "sceneHintTouch": "Egy ujjal forgatás · két ujjal nagyítás",
+    "titrationHint": "Húzással forgatás · Görgővel nagyítás · Csap húzásával csepp­sebesség szabályozása",
+    "titrationHintTouch": "Egy ujjal forgatás · Két ujjal nagyítás · Csap húzásával csepp­sebesség szabályozása"
+  },
+  "electrolysisLab": {
+    "setup": "Kísérleti paraméterek",
+    "anodeMaterial": "Anódanyag",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Nyers réz (elektrolitos finomítás)"
+    },
+    "current": "Áramerősség",
+    "timeScale": "Időgyorsítás",
+    "powerOn": "Áramkör zárása",
+    "powerOff": "Áramkör nyitása",
+    "microView": "Mikroszkopikus nézet",
+    "reset": "Visszaállítás",
+    "readings": "Valós idejű leolvasás",
+    "charge": "Töltés Q",
+    "copperDeposited": "Katódon kivált réz",
+    "oxygen": "Anódon fejlődő O₂",
+    "anodeDissolved": "Anódon oldódó réz",
+    "concentration": "Cu²⁺ koncentráció",
+    "cathodeLabel": "Katód:",
+    "anodeLabel": "Anód:",
+    "depleted": "Az oldat Cu²⁺ tartalma közel nulla; további elektrolízisnél a katódon hidrogéngáz fejlődne – az áramkör automatikusan megszakadt.",
+    "weigh": "Katód kivétele és lemérése",
+    "measured": "Mért",
+    "theoretical": "Elméleti",
+    "efficiency": "Áramkihasználás",
+    "complete": "Kísérlet befejezése",
+    "viewReport": "Jelentés megtekintése",
+    "scaleNote": "Időgyorsítás {scale}×: a megjelenítés tömörített időben halad, az értékek mindig a valós töltést és valós időt mutatják. Elektrolit: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

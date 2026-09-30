@@ -363,7 +363,9 @@
     "view3d": "Banco 3D",
     "view3dRefined": "Banco 3D ★",
     "sceneHint": "Arrastrar para rotar · rueda para zoom",
-    "sceneHintTouch": "Un dedo para rotar · Dos dedos para hacer zoom"
+    "sceneHintTouch": "Un dedo para rotar · Dos dedos para hacer zoom",
+    "titrationHint": "Arrastrar para rotar · Rueda para zoom · Arrastrar la llave para controlar el goteo",
+    "titrationHintTouch": "Un dedo para rotar · Dos dedos para zoom · Arrastrar la llave para controlar el goteo"
   },
   "category": {
     "ACID_BASE": "Reacciones ácido-base",
@@ -446,5 +448,35 @@
       "effect": "Registrar la lectura actual",
       "hint": "Leer con la vista a nivel de la escala; registra cada lectura en la tabla de datos para calcular la media y el error"
     }
+  },
+  "electrolysisLab": {
+    "setup": "Parámetros del experimento",
+    "anodeMaterial": "Material del ánodo",
+    "anode": {
+      "graphite": "Grafito (inerte)",
+      "copper": "Cobre bruto (refinación electrolítica)"
+    },
+    "current": "Corriente",
+    "timeScale": "Factor de tiempo",
+    "powerOn": "Conectar alimentación",
+    "powerOff": "Desconectar alimentación",
+    "microView": "Vista microscópica",
+    "reset": "Restablecer",
+    "readings": "Lecturas en tiempo real",
+    "charge": "Carga Q",
+    "copperDeposited": "Cobre depositado en el cátodo",
+    "oxygen": "O₂ liberado en el ánodo",
+    "anodeDissolved": "Cobre disuelto del ánodo",
+    "concentration": "Concentración de Cu²⁺",
+    "cathodeLabel": "Cátodo:",
+    "anodeLabel": "Ánodo:",
+    "depleted": "El Cu²⁺ en la solución está casi agotado. Si continúa la electrólisis, el cátodo comenzará a producir hidrógeno. La alimentación se ha desconectado automáticamente.",
+    "weigh": "Retirar el cátodo y pesar",
+    "measured": "Medido",
+    "theoretical": "Teórico",
+    "efficiency": "Eficiencia de corriente",
+    "complete": "Finalizar experimento",
+    "viewReport": "Ver informe",
+    "scaleNote": "Factor de tiempo {scale}×: la animación avanza en tiempo comprimido; las lecturas siempre reflejan la carga y el tiempo reales. Electrolito: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

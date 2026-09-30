@@ -445,6 +445,38 @@
     "view3d": "Miiska Shaybaarka 3D",
     "view3dRefined": "Miiska Shaybaarka 3D ★",
     "sceneHint": "Jiid si aad u wareejiso · Duruuf si aad u xoojiso",
-    "sceneHintTouch": "Farta hal gelin si aad wax u wareejiso · Laba far si aad u weyneyso"
+    "sceneHintTouch": "Farta hal gelin si aad wax u wareejiso · Laba far si aad u weyneyso",
+    "titrationHint": "Jiid si wareeji · Garaac si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda",
+    "titrationHintTouch": "Far keliya si wareeji · Laba far si dheer/gaabso · Jiid gacanta xukuma xawaaraha dhibicda"
+  },
+  "electrolysisLab": {
+    "setup": "Dejinta Tijaabada",
+    "anodeMaterial": "Walaxda Anoodka",
+    "anode": {
+      "graphite": "Grafiit (aan firfircoonayn)",
+      "copper": "Naxaas (Cu) xoogan (sifaynta korontada)"
+    },
+    "current": "Korontada",
+    "timeScale": "Xawaaraha Waqtiga",
+    "powerOn": "Fur Korontada",
+    "powerOff": "Xir Korontada",
+    "microView": "Aragtida Microskobiga",
+    "reset": "Dib u Deji",
+    "readings": "Akhriska Tooska ah",
+    "charge": "Shucaaca Q",
+    "copperDeposited": "Naxaas (Cu) ka soo baxa katoodka",
+    "oxygen": "O₂ ka soo baxa anoodka",
+    "anodeDissolved": "Naxaas (Cu) ku milma anoodka",
+    "concentration": "Xoogga Cu²⁺",
+    "cathodeLabel": "Katood:",
+    "anodeLabel": "Anood:",
+    "depleted": "Cu²⁺ xalku ku dhawaaqay dhammaadka; haddii la sii wato, katoodka wuxuu bilaabi doonaa soo saarka gaaska hydrogen. Korontada waa si toos ah loo xiray.",
+    "weigh": "Saar Katoodka oo Miis",
+    "measured": "La Qiisay",
+    "theoretical": "Tiyooriga",
+    "efficiency": "Hufnaanta Korontada",
+    "complete": "Dhamee Tijaabada",
+    "viewReport": "Arag Warbixinta",
+    "scaleNote": "Xawaaraha waqtiga {scale}×: shaashadu waxay u socotaa waqti la cadaadinayo; akhriska wuxuu muujinayaa shucaaca dhabta ah iyo mudada dhabta ah. Xalka electrolysis waa {conc} mol/L CuSO₄ {volume} mL."
   }
 }

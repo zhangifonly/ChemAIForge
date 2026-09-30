@@ -445,6 +445,38 @@
     "view3d": "Bancă de lucru 3D",
     "view3dRefined": "Bancă de lucru 3D ★",
     "sceneHint": "Trageți pentru rotire · Scroll pentru zoom",
-    "sceneHintTouch": "Un deget pentru rotire · Două degete pentru zoom"
+    "sceneHintTouch": "Un deget pentru rotire · Două degete pentru zoom",
+    "titrationHint": "Trageți pentru rotire · Rotița mouse-ului pentru zoom · Trageți robinetul pentru a controla viteza de picurare",
+    "titrationHintTouch": "Un deget pentru rotire · Două degete pentru zoom · Trageți robinetul pentru a controla viteza de picurare"
+  },
+  "electrolysisLab": {
+    "setup": "Parametri experiment",
+    "anodeMaterial": "Material anod",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Cupru brut (rafinare electrolitică)"
+    },
+    "current": "Curent",
+    "timeScale": "Multiplicator timp",
+    "powerOn": "Conectare sursă",
+    "powerOff": "Deconectare sursă",
+    "microView": "Vizualizare microscopică",
+    "reset": "Resetare",
+    "readings": "Citiri în timp real",
+    "charge": "Sarcină Q",
+    "copperDeposited": "Cupru depus la catod",
+    "oxygen": "O₂ degajat la anod",
+    "anodeDissolved": "Cupru dizolvat la anod",
+    "concentration": "Concentrație Cu²⁺",
+    "cathodeLabel": "Catod:",
+    "anodeLabel": "Anod:",
+    "depleted": "Cu²⁺ din soluție este aproape epuizat. Continuarea electrolizei va produce hidrogen la catod. Sursa a fost deconectată automat.",
+    "weigh": "Extrage catodul și cântărește",
+    "measured": "Măsurat",
+    "theoretical": "Teoretic",
+    "efficiency": "Eficiență curent",
+    "complete": "Finalizare experiment",
+    "viewReport": "Vezi raport",
+    "scaleNote": "Multiplicator timp {scale}×: animația avansează în timp comprimat; citirile reflectă întotdeauna sarcina reală și durata reală. Electrolit: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

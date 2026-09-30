@@ -363,7 +363,9 @@
     "view3d": "Paillasse 3D",
     "view3dRefined": "Paillasse 3D ★",
     "sceneHint": "Glisser pour pivoter · molette pour zoomer",
-    "sceneHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer"
+    "sceneHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer",
+    "titrationHint": "Glisser pour pivoter · Molette pour zoomer · Faire glisser le robinet pour régler le débit",
+    "titrationHintTouch": "Un doigt pour pivoter · Deux doigts pour zoomer · Faire glisser le robinet pour régler le débit"
   },
   "category": {
     "ACID_BASE": "Réactions acido-basiques",
@@ -446,5 +448,35 @@
       "effect": "Enregistrer la valeur actuelle",
       "hint": "Lire à l'horizontale, au niveau du ménisque ; noter chaque relevé dans le tableau de données pour calculer la moyenne et l'erreur"
     }
+  },
+  "electrolysisLab": {
+    "setup": "Paramètres expérimentaux",
+    "anodeMaterial": "Matériau d'anode",
+    "anode": {
+      "graphite": "Graphite (inerte)",
+      "copper": "Cuivre brut (affinage électrolytique)"
+    },
+    "current": "Intensité",
+    "timeScale": "Facteur de temps",
+    "powerOn": "Mettre sous tension",
+    "powerOff": "Couper l'alimentation",
+    "microView": "Vue microscopique",
+    "reset": "Réinitialiser",
+    "readings": "Lectures en temps réel",
+    "charge": "Charge Q",
+    "copperDeposited": "Cuivre déposé à la cathode",
+    "oxygen": "O₂ dégagé à l'anode",
+    "anodeDissolved": "Cuivre dissous à l'anode",
+    "concentration": "Concentration Cu²⁺",
+    "cathodeLabel": "Cathode :",
+    "anodeLabel": "Anode :",
+    "depleted": "La concentration en Cu²⁺ est quasi nulle. La poursuite de l'électrolyse produirait du dihydrogène à la cathode. L'alimentation a été coupée automatiquement.",
+    "weigh": "Retirer la cathode pour la peser",
+    "measured": "Mesuré",
+    "theoretical": "Théorique",
+    "efficiency": "Rendement en courant",
+    "complete": "Terminer l'expérience",
+    "viewReport": "Voir le rapport",
+    "scaleNote": "Facteur de temps {scale}× : l'animation avance en temps compressé ; les lectures indiquent toujours la charge réelle et la durée réelle. Électrolyte : CuSO₄ {conc} mol/L, {volume} mL."
   }
 }

@@ -445,6 +445,38 @@
     "view3d": "3D-laboratorium",
     "view3dRefined": "3D-laboratorium ★",
     "sceneHint": "Dra for å rotere · Scroll for å zoome",
-    "sceneHintTouch": "Én finger for å rotere · To fingre for å zoome"
+    "sceneHintTouch": "Én finger for å rotere · To fingre for å zoome",
+    "titrationHint": "Dra for å rotere · Rull for å zoome · Dra kranen for å styre dråpehastighet",
+    "titrationHintTouch": "Én finger for å rotere · To fingre for å zoome · Dra kranen for å styre dråpehastighet"
+  },
+  "electrolysisLab": {
+    "setup": "Forsøksparametere",
+    "anodeMaterial": "Anodemateriale",
+    "anode": {
+      "graphite": "Grafitt (inert)",
+      "copper": "Råkobber (elektrolytisk raffinering)"
+    },
+    "current": "Strøm",
+    "timeScale": "Tidsfaktor",
+    "powerOn": "Koble til strøm",
+    "powerOff": "Koble fra strøm",
+    "microView": "Mikroskopisk visning",
+    "reset": "Nullstill",
+    "readings": "Sanntidsavlesning",
+    "charge": "Ladning Q",
+    "copperDeposited": "Kobber avsatt på katode",
+    "oxygen": "O₂ utviklet ved anode",
+    "anodeDissolved": "Kobber oppløst fra anode",
+    "concentration": "Cu²⁺-konsentrasjon",
+    "cathodeLabel": "Katode:",
+    "anodeLabel": "Anode:",
+    "depleted": "Cu²⁺ i løsningen er nesten oppbrukt. Fortsatt elektrolyse vil føre til utvikling av hydrogengass ved katoden. Strømmen er brutt automatisk.",
+    "weigh": "Ta ut katoden og vei den",
+    "measured": "Målt",
+    "theoretical": "Teoretisk",
+    "efficiency": "Strømeffektivitet",
+    "complete": "Avslutt forsøket",
+    "viewReport": "Vis rapport",
+    "scaleNote": "Tidsfaktor {scale}×: animasjonen kjører i komprimert tid, mens avlesningene alltid viser faktisk ladning og faktisk tid. Elektrolytt: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

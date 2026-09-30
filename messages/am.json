@@ -445,6 +445,38 @@
     "view3d": "3D የሙከራ ጠረጴዛ",
     "view3dRefined": "3D የሙከራ ጠረጴዛ ★",
     "sceneHint": "ጎትቶ ለማሽከርከር · ጎማ ለማጉላት",
-    "sceneHintTouch": "በአንድ ጣት ያሽከርክሩ · በሁለት ጣት ያጉሉ"
+    "sceneHintTouch": "በአንድ ጣት ያሽከርክሩ · በሁለት ጣት ያጉሉ",
+    "titrationHint": "ጎትቶ ማዙሪያ · ሸብልሎ ማጉላት · መቆጣጠሪያ ጎትቶ የጠብታ ፍጥነት መቆጣጠር",
+    "titrationHintTouch": "በአንድ ጣት ማዙሪያ · በሁለት ጣት ማጉላት · መቆጣጠሪያ ጎትቶ የጠብታ ፍጥነት መቆጣጠር"
+  },
+  "electrolysisLab": {
+    "setup": "የሙከራ መለኪያዎች",
+    "anodeMaterial": "የአኖድ ቁስ",
+    "anode": {
+      "graphite": "ግራፋይት (ግዳጅ-አልባ)",
+      "copper": "ጥሬ መዳብ (የኤሌክትሮሊቲክ ማጣሪያ)"
+    },
+    "current": "ኤሌክትሪክ ፍሰት",
+    "timeScale": "የጊዜ ማባዣ",
+    "powerOn": "አብራ",
+    "powerOff": "አጥፋ",
+    "microView": "ረቂቅ እይታ",
+    "reset": "ዳግም አስጀምር",
+    "readings": "ቀጥታ ንባቦች",
+    "charge": "ኤሌክትሪክ መጠን Q",
+    "copperDeposited": "በካቶድ የተሰነጠቀ መዳብ",
+    "oxygen": "በአኖድ የተለቀቀ O₂",
+    "anodeDissolved": "የተቀለጠ የአኖድ መዳብ",
+    "concentration": "Cu²⁺ ትኩረት",
+    "cathodeLabel": "ካቶድ፦",
+    "anodeLabel": "አኖድ፦",
+    "depleted": "በመፍሰሻው ውስጥ ያለው Cu²⁺ ተሟጦ ነው፤ ኤሌክትሮሊሲስ ቀጥሎ ቢቆይ ካቶዱ ሃይድሮጂን ጋዝ ይለቃል። ኃይሉ በራስ-ሰር ተቋርጧል።",
+    "weigh": "ካቶዱን አውጥቶ ክብደት ለካ",
+    "measured": "የተለካ",
+    "theoretical": "ቲዎሬቲካዊ",
+    "efficiency": "የፍሰት ብቃት",
+    "complete": "ሙከራ ጨርስ",
+    "viewReport": "ሪፖርት ይመልከቱ",
+    "scaleNote": "የጊዜ ማባዣ {scale}×፦ ምስሉ በተጨመቀ ጊዜ ይሂዳል፤ ንባቦቹ ሁልጊዜ እውነተኛ ኤሌክትሪክ መጠንና እውነተኛ ጊዜን ያሳያሉ። ኤሌክትሮሊቲክ መፍሰሻ {conc} mol/L CuSO₄ {volume} mL።"
   }
 }

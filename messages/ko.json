@@ -363,7 +363,9 @@
     "view3d": "3D 실험대",
     "view3dRefined": "3D 실험대 ★",
     "sceneHint": "드래그로 회전 · 스크롤로 확대/축소",
-    "sceneHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소"
+    "sceneHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소",
+    "titrationHint": "드래그로 회전 · 스크롤로 확대/축소 · 콕을 드래그하여 적하 속도 조절",
+    "titrationHintTouch": "한 손가락으로 회전 · 두 손가락으로 확대/축소 · 콕을 드래그하여 적하 속도 조절"
   },
   "category": {
     "ACID_BASE": "산염기 반응",
@@ -446,5 +448,35 @@
       "effect": "현재 값 기록",
       "hint": "눈금과 시선을 수평으로 맞춰 읽기; 매 측정값을 데이터 표에 기록해야 평균값과 오차 계산 가능"
     }
+  },
+  "electrolysisLab": {
+    "setup": "실험 매개변수",
+    "anodeMaterial": "양극 재료",
+    "anode": {
+      "graphite": "흑연（불활성）",
+      "copper": "조동（전해 정련）"
+    },
+    "current": "전류",
+    "timeScale": "시간 배율",
+    "powerOn": "전원 연결",
+    "powerOff": "전원 차단",
+    "microView": "미시적 관점",
+    "reset": "초기화",
+    "readings": "실시간 측정값",
+    "charge": "전하량 Q",
+    "copperDeposited": "음극 석출 구리",
+    "oxygen": "양극 발생 O₂",
+    "anodeDissolved": "양극 용해 구리",
+    "concentration": "Cu²⁺ 농도",
+    "cathodeLabel": "음극：",
+    "anodeLabel": "양극：",
+    "depleted": "용액 내 Cu²⁺ 가 거의 소진되어 전해를 계속하면 음극에서 수소가 발생합니다. 전원이 자동으로 차단되었습니다.",
+    "weigh": "음극 꺼내어 무게 측정",
+    "measured": "실측값",
+    "theoretical": "이론값",
+    "efficiency": "전류 효율",
+    "complete": "실험 완료",
+    "viewReport": "보고서 보기",
+    "scaleNote": "시간 배율 {scale}×：화면은 압축된 시간으로 진행되며, 측정값은 항상 실제 전하량 및 실제 경과 시간을 나타냅니다. 전해액 {conc} mol/L CuSO₄ {volume} mL."
   }
 }

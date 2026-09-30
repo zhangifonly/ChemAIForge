@@ -445,6 +445,38 @@
     "view3d": "3B Deney Tezgâhı",
     "view3dRefined": "3B Deney Tezgâhı ★",
     "sceneHint": "Döndürmek için sürükleyin · Yakınlaştırmak için kaydırın",
-    "sceneHintTouch": "Tek parmak: döndür · İki parmak: yakınlaştır"
+    "sceneHintTouch": "Tek parmak: döndür · İki parmak: yakınlaştır",
+    "titrationHint": "Sürükleyerek döndür · Kaydırarak yakınlaştır · Musluğu sürükleyerek damla hızını ayarla",
+    "titrationHintTouch": "Tek parmakla döndür · İki parmakla yakınlaştır · Musluğu sürükleyerek damla hızını ayarla"
+  },
+  "electrolysisLab": {
+    "setup": "Deney Parametreleri",
+    "anodeMaterial": "Anot Malzemesi",
+    "anode": {
+      "graphite": "Grafit (İnert)",
+      "copper": "Ham Bakır (Elektrolit Rafinasyon)"
+    },
+    "current": "Akım",
+    "timeScale": "Zaman Katsayısı",
+    "powerOn": "Gücü Aç",
+    "powerOff": "Gücü Kapat",
+    "microView": "Mikroskobik Görünüm",
+    "reset": "Sıfırla",
+    "readings": "Anlık Okumalar",
+    "charge": "Yük Q",
+    "copperDeposited": "Katotta Çöken Bakır",
+    "oxygen": "Anotta Açığa Çıkan O₂",
+    "anodeDissolved": "Anotta Çözünen Bakır",
+    "concentration": "Cu²⁺ Derişimi",
+    "cathodeLabel": "Katot:",
+    "anodeLabel": "Anot:",
+    "depleted": "Çözeltideki Cu²⁺ tükenmek üzere; elektrolize devam edilirse katotta hidrojen gazı açığa çıkmaya başlar. Güç otomatik olarak kesildi.",
+    "weigh": "Katotu Çıkar ve Tartı",
+    "measured": "Ölçülen",
+    "theoretical": "Teorik",
+    "efficiency": "Akım Verimi",
+    "complete": "Deneyi Tamamla",
+    "viewReport": "Raporu Görüntüle",
+    "scaleNote": "Zaman katsayısı {scale}×: Ekran sıkıştırılmış süre ile ilerler; okumalar her zaman gerçek yük ve gerçek süreyi gösterir. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
   }
 }

@@ -112,6 +112,36 @@
     "negative": "负极",
     "positive": "正极"
   },
+  "electrolysisLab": {
+    "setup": "实验参数",
+    "anodeMaterial": "阳极材料",
+    "anode": {
+      "graphite": "石墨（惰性）",
+      "copper": "粗铜（电解精炼）"
+    },
+    "current": "电流",
+    "timeScale": "时间倍率",
+    "powerOn": "接通电源",
+    "powerOff": "断开电源",
+    "microView": "微观视角",
+    "reset": "重置",
+    "readings": "实时读数",
+    "charge": "电量 Q",
+    "copperDeposited": "阴极析出铜",
+    "oxygen": "阳极放出 O₂",
+    "anodeDissolved": "阳极溶解铜",
+    "concentration": "Cu²⁺ 浓度",
+    "cathodeLabel": "阴极：",
+    "anodeLabel": "阳极：",
+    "depleted": "溶液中 Cu²⁺ 已接近耗尽，继续电解阴极将转为析出氢气，已自动断电。",
+    "weigh": "取出阴极称量",
+    "measured": "实测",
+    "theoretical": "理论",
+    "efficiency": "电流效率",
+    "complete": "完成实验",
+    "viewReport": "查看报告",
+    "scaleNote": "时间倍率 {scale}×：画面按压缩时间推进，读数始终为真实电量与真实时长。电解液 {conc} mol/L CuSO₄ {volume} mL。"
+  },
   "errors": {
     "noActivity": "本次实验还没有任何操作记录，先在实验台上动手做一次再生成报告。",
     "reportFailed": "报告生成失败",
@@ -445,6 +475,8 @@
     "view3d": "3D 实验台",
     "view3dRefined": "3D 实验台 ★",
     "sceneHint": "拖拽旋转 · 滚轮缩放",
-    "sceneHintTouch": "单指旋转 · 双指缩放"
+    "sceneHintTouch": "单指旋转 · 双指缩放",
+    "titrationHint": "拖拽旋转 · 滚轮缩放 · 拖动旋塞控制滴速",
+    "titrationHintTouch": "单指旋转 · 双指缩放 · 拖动旋塞控制滴速"
   }
 }

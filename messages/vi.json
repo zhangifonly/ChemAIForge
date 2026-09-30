@@ -445,6 +445,38 @@
     "view3d": "Bàn thí nghiệm 3D",
     "view3dRefined": "Bàn thí nghiệm 3D ★",
     "sceneHint": "Kéo để xoay · Cuộn để thu phóng",
-    "sceneHintTouch": "Một ngón xoay · Hai ngón thu phóng"
+    "sceneHintTouch": "Một ngón xoay · Hai ngón thu phóng",
+    "titrationHint": "Kéo để xoay · Cuộn để thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt",
+    "titrationHintTouch": "Một ngón xoay · Hai ngón thu phóng · Kéo khóa để điều chỉnh tốc độ nhỏ giọt"
+  },
+  "electrolysisLab": {
+    "setup": "Thông số thí nghiệm",
+    "anodeMaterial": "Vật liệu anốt",
+    "anode": {
+      "graphite": "Than chì (trơ)",
+      "copper": "Đồng thô (tinh luyện điện phân)"
+    },
+    "current": "Cường độ dòng điện",
+    "timeScale": "Hệ số thời gian",
+    "powerOn": "Bật nguồn",
+    "powerOff": "Ngắt nguồn",
+    "microView": "Góc nhìn vi mô",
+    "reset": "Đặt lại",
+    "readings": "Số liệu thời gian thực",
+    "charge": "Điện lượng Q",
+    "copperDeposited": "Đồng tách ra ở catốt",
+    "oxygen": "O₂ thoát ra ở anốt",
+    "anodeDissolved": "Đồng hòa tan ở anốt",
+    "concentration": "Nồng độ Cu²⁺",
+    "cathodeLabel": "Catốt:",
+    "anodeLabel": "Anốt:",
+    "depleted": "Cu²⁺ trong dung dịch gần cạn kiệt; nếu tiếp tục điện phân, catốt sẽ chuyển sang thoát khí hiđro. Đã tự động ngắt điện.",
+    "weigh": "Lấy catốt ra cân",
+    "measured": "Thực đo",
+    "theoretical": "Lý thuyết",
+    "efficiency": "Hiệu suất dòng điện",
+    "complete": "Hoàn thành thí nghiệm",
+    "viewReport": "Xem báo cáo",
+    "scaleNote": "Hệ số thời gian {scale}×: màn hình tiến theo thời gian nén, số liệu luôn phản ánh điện lượng và thời gian thực. Dung dịch điện phân {conc} mol/L CuSO₄ {volume} mL."
   }
 }

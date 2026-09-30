@@ -445,6 +445,38 @@
     "view3d": "3D-arbejdsbord",
     "view3dRefined": "3D-arbejdsbord ★",
     "sceneHint": "Træk for at rotere · Scroll for at zoome",
-    "sceneHintTouch": "Én finger roterer · To fingre zoomer"
+    "sceneHintTouch": "Én finger roterer · To fingre zoomer",
+    "titrationHint": "Træk for at rotere · Scroll for at zoome · Træk hanen for at styre dråpehastighed",
+    "titrationHintTouch": "Én finger for at rotere · To fingre for at zoome · Træk hanen for at styre dråpehastighed"
+  },
+  "electrolysisLab": {
+    "setup": "Forsøgsparametre",
+    "anodeMaterial": "Anodemateriale",
+    "anode": {
+      "graphite": "Grafit (inert)",
+      "copper": "Råkobber (elektrolytisk raffinering)"
+    },
+    "current": "Strømstyrke",
+    "timeScale": "Tidsfaktor",
+    "powerOn": "Tænd strømmen",
+    "powerOff": "Sluk strømmen",
+    "microView": "Mikroskopisk visning",
+    "reset": "Nulstil",
+    "readings": "Realtidsaflæsning",
+    "charge": "Ladning Q",
+    "copperDeposited": "Kobber udskilt ved katode",
+    "oxygen": "O₂ frigivet ved anode",
+    "anodeDissolved": "Kobber opløst ved anode",
+    "concentration": "Cu²⁺ koncentration",
+    "cathodeLabel": "Katode:",
+    "anodeLabel": "Anode:",
+    "depleted": "Cu²⁺ i opløsningen er næsten opbrugt. Fortsat elektrolyse vil medføre brintudvikling ved katoden. Strømmen er afbrudt automatisk.",
+    "weigh": "Udtag katode til vejning",
+    "measured": "Målt",
+    "theoretical": "Teoretisk",
+    "efficiency": "Strømeffektivitet",
+    "complete": "Afslut forsøg",
+    "viewReport": "Vis rapport",
+    "scaleNote": "Tidsfaktor {scale}×: animationen kører i komprimeret tid, men aflæsninger viser altid reel ladning og reel tid. Elektrolyt: {conc} mol/L CuSO₄ {volume} mL."
   }
 }

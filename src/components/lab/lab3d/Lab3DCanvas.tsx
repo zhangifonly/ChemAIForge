@@ -21,6 +21,7 @@ import { IronCombustionScene } from "./IronCombustionScene";
 import { ElectrolysisWaterScene } from "./ElectrolysisWaterScene";
 import { CopperZincCellScene } from "./CopperZincCellScene";
 import { TitrationLab } from "./TitrationLab";
+import { ElectrolysisLab } from "./electrolysis/ElectrolysisLab";
 import { GenericScene, VESSEL_VIEW } from "./GenericScene";
 import { planScene } from "@/lib/chem/scenePlan";
 import { HEAT_THRESHOLD } from "@/lib/chem/engine";
@@ -45,6 +46,11 @@ export default function Lab3DCanvas({
 }) {
   // 酸碱中和滴定有独立的定量交互（旋塞开度/滴数/终点判定），单独成台
   if (slug === "acid-base-titration") return <TitrationLab reagents={reagents} />;
+  // 电解硫酸铜：定量电解台（电流 / 时间 / 阳极材料可调，法拉第定律实时计算），
+  // 同一套装置换铜阳极即电解精炼，故两个实验共用
+  if (slug === "copper-electrolysis" || slug === "copper-refining-electrolysis") {
+    return <ElectrolysisLab initialAnode={slug === "copper-refining-electrolysis" ? "copper" : "graphite"} />;
+  }
   return <Lab3DGeneric slug={slug} reagents={reagents} apparatus={apparatus} />;
 }
 

@@ -445,6 +445,38 @@
     "view3d": "Stół laboratoryjny 3D",
     "view3dRefined": "Stół laboratoryjny 3D ★",
     "sceneHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć",
-    "sceneHintTouch": "Jeden palec: obrót · Dwa palce: zoom"
+    "sceneHintTouch": "Jeden palec: obrót · Dwa palce: zoom",
+    "titrationHint": "Przeciągnij, aby obrócić · Kółko myszy, aby powiększyć · Przeciągnij kurek, aby sterować przepływem",
+    "titrationHintTouch": "Jeden palec, aby obrócić · Dwa palce, aby powiększyć · Przeciągnij kurek, aby sterować przepływem"
+  },
+  "electrolysisLab": {
+    "setup": "Parametry eksperymentu",
+    "anodeMaterial": "Materiał anody",
+    "anode": {
+      "graphite": "Grafit (obojętny)",
+      "copper": "Miedź surowa (rafinacja elektrolityczna)"
+    },
+    "current": "Natężenie prądu",
+    "timeScale": "Mnożnik czasu",
+    "powerOn": "Włącz zasilanie",
+    "powerOff": "Wyłącz zasilanie",
+    "microView": "Widok mikroskopowy",
+    "reset": "Resetuj",
+    "readings": "Odczyty na żywo",
+    "charge": "Ładunek Q",
+    "copperDeposited": "Miedź wydzielona na katodzie",
+    "oxygen": "O₂ wydzielony na anodzie",
+    "anodeDissolved": "Miedź rozpuszczona z anody",
+    "concentration": "Stężenie Cu²⁺",
+    "cathodeLabel": "Katoda:",
+    "anodeLabel": "Anoda:",
+    "depleted": "Stężenie Cu²⁺ w roztworze zbliżyło się do zera. Dalsza elektroliza spowodowałaby wydzielanie wodoru na katodzie. Zasilanie zostało automatycznie wyłączone.",
+    "weigh": "Wyjmij katodę i zważ",
+    "measured": "Zmierzone",
+    "theoretical": "Teoretyczne",
+    "efficiency": "Wydajność prądowa",
+    "complete": "Zakończ eksperyment",
+    "viewReport": "Zobacz raport",
+    "scaleNote": "Mnożnik czasu {scale}×: animacja przyspiesza upływ czasu, lecz odczyty zawsze odzwierciedlają rzeczywisty ładunek i rzeczywisty czas. Elektrolit: {conc} mol/L CuSO₄, {volume} mL."
   }
 }
