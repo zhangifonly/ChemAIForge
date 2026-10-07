@@ -493,5 +493,148 @@
       "error": "Odstupanje od prihvaćene vrijednosti 96485 C/mol: {pct}%",
       "ariaLabel": "Graf mase istaloženog bakra u ovisnosti o naboju, ukupno {count} točaka vaganja"
     }
+  },
+  "sodiumLab": {
+    "setup": "Koraci eksperimenta",
+    "pieceSize": "Veličina komada natrija",
+    "size": {
+      "small": "Veličina zrna graška",
+      "medium": "Veličina zrna soje",
+      "large": "Veliki komad"
+    },
+    "largeWarning": "Veliki komad natrija oslobađa veliku količinu topline — može zapaliti vodikov plin i izazvati detonaciju te prskanje lužine. U stvarnom eksperimentu uzima se isključivo komad veličine zrna graška; ovdje je prikazano samo u virtualnom okruženju.",
+    "cut": "Skalpelom odrežite oksidacijski sloj s površine",
+    "cutHint": "Na površini natrija nalazi se sivkasti oksidni sloj — najpre odrežite svježi presjek, pa tek onda uronite u vodu. Nakon rezanja pažljivo promatrajte promjenu sjaja na presjeku.",
+    "phenol": "U vodu dodajte 2 kapi fenolftaleina",
+    "drop": "Pincetom ubacite natrij u vodu",
+    "next": "Zamijenite čašu svježom vodom i uzmite novi komad",
+    "sound": "Zvuk",
+    "reset": "Resetiraj",
+    "readings": "Očitavanja u stvarnom vremenu",
+    "remaining": "Preostali natrij",
+    "hydrogen": "Nastali vodikov plin",
+    "waterTemp": "Temperatura vode",
+    "burning": "Oslobođena toplina pali nastali vodikov plin; natrij gori žutim plamenom",
+    "phenomenaTitle": "Pojave: pliva, topi se, klizi, šišti, crveni",
+    "phenomena": {
+      "float": {
+        "name": "Pliva na površini vode",
+        "why": "Gustoća natrija iznosi 0,97 g/cm³, što je manje od gustoće vode."
+      },
+      "melt": {
+        "name": "Topi se u sjajnu kuglicu",
+        "why": "Reakcija oslobađa toplinu; talište natrija je samo 97,8 ℃, pa se brzo topi. Površinska napetost oblikuje ga u kuglicu."
+      },
+      "swim": {
+        "name": "Klizi po površini vode",
+        "why": "Nastali vodikov plin neravnomjerno izlazi iz svih strana kuglice i gura je u različitim smjerovima."
+      },
+      "hiss": {
+        "name": "Čuje se šištanje",
+        "why": "Vodikov plin naglo izlazi, a oslobođena toplina isparava vodu na dodirnoj površini."
+      },
+      "pink": {
+        "name": "Otopina postaje crvena",
+        "why": "Nastaje jaka lužina NaOH; fenolftalein u lužini postaje crven. Crvena boja pojavljuje se najprije duž putanje kuglice natrija."
+      }
+    },
+    "pinkHint": "Bez fenolftaleina nastajanje lužine nije vidljivo. Možete ga dodati i sada — lužina je već u vodi.",
+    "chart": {
+      "title": "Volumen nastalog vodikovog plina u ovisnosti o vremenu",
+      "xAxis": "Vrijeme t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Krivulja nastajanja vodika, dovršeno {count} komada",
+      "mass": "Masa natrija",
+      "measuredT": "Izmjereno trajanje reakcije",
+      "predictedT": "Predviđeno prema m^(1/3)",
+      "volume": "Volumen vodikovog plina",
+      "hint": "Nakon svakog pokusa ovdje se crta krivulja nastajanja vodika. Isprobajte različite veličine natrija i usporedite trajanje reakcija.",
+      "insight": "Natrij reagira samo na površini kuglice, a polumjer se smanjuje jednolikim tempom, pa je trajanje reakcije proporcionalno polumjeru, tj. kubnom korijenu mase: ako masa poraste 8 puta, trajanje se povećava samo oko 2 puta."
+    }
+  },
+  "flameLab": {
+    "setup": "Postupak izvođenja pokusa",
+    "light": "Upaliti Bunsenov plamenik",
+    "extinguish": "Ugasiti Bunsenov plamenik",
+    "wire": "Platinska žica",
+    "dipAcid": "Umočiti u razrijeđenu klorovodičnu kiselinu",
+    "intoFlame": "Unijeti u vanjski plamen i žariti",
+    "outOfFlame": "Izvući iz plamena",
+    "dipSample": "Umočiti u otopinu uzorka",
+    "cobalt": "Promatrati kroz kobaltno staklo",
+    "reset": "Resetirati",
+    "readings": "Zapažanja",
+    "wireState": "Platinska žica",
+    "clean": "Čista",
+    "dirty": "S ostacima",
+    "seen": "Vidljivo u plamenu",
+    "none": "Ništa (plamen je prirodno blijedoplav)",
+    "cleanHint": "Platinska žica više ne boji plamen — može se umočiti u sljedeći uzorak.",
+    "dirtyHint": "Na platinskoj žici ima ostataka (nova žica često sadrži natrij). Umočite ju u razrijeđenu klorovodičnu kiselinu i žarite, ponovite nekoliko puta dok plamen prestane pokazivati boju; kloridi lako isparavaju, pa je taj postupak znatno brži od samog žarenja.",
+    "el": {
+      "Na": "Natrij",
+      "K": "Kalij",
+      "Li": "Li",
+      "Ca": "Ca",
+      "Sr": "Sr",
+      "Ba": "Ba",
+      "Cu": "Bakar"
+    },
+    "unknownTitle": "Identifikacija nepoznatog uzorka X",
+    "unknownHint": "Žarite uzorak X i odredite koji metalni element sadrži. Napomena: žuto svjetlo natrija može prikriti ljubičasto svjetlo kalija.",
+    "correct": "Odgovor je točan.",
+    "wrong": "Netočno. Provjerite je li platinska žica dobro oprana, a po potrebi pogledajte ponovo kroz kobaltno staklo.",
+    "spectro": {
+      "title": "Spektroskop: linijski spektar",
+      "throughCobalt": "Kroz kobaltno staklo",
+      "empty": "Stavite platinsku žicu s uzorkom u plamen — ovdje će se prikazati spektar plamena.",
+      "explain": "Svaki element emitira svjetlost samo na nekoliko fiksnih valnih duljina, poput otiska prsta. Natrij daje par žutih linija na 589 nm, a kalij ima glavne linije na 766 nm (duboka crvena) i 404 nm (ljubičasta), zbog čega plamen kalija izgleda blijedoljubičasto. Kobaltno staklo apsorbira žuto-zeleno svjetlo u sredini i propušta samo krajeve spektra."
+    },
+    "log": {
+      "title": "Dnevnik opažanja",
+      "empty": "Svaki put kada umočite žicu u uzorak i žarite, ovdje se automatski doda jedan redak.",
+      "sample": "Uzorak",
+      "cobalt": "Kobaltno staklo",
+      "color": "Boja plamena",
+      "seen": "Prepoznati elementi",
+      "nothing": "Ništa",
+      "contaminated": "Kontaminirano prethodnim uzorkom"
+    }
+  },
+  "clockLab": {
+    "setup": "Priprema otopina",
+    "ki": "Koncentracija KI / mol·L⁻¹ (otopina A)",
+    "thio": "Koncentracija Na₂S₂O₃ / mol·L⁻¹ (otopina A)",
+    "h2o2": "Koncentracija H₂O₂ / mol·L⁻¹ (otopina B)",
+    "temp": "Temperatura termostatiranja",
+    "starch": "Dodaj škrob kao indikator u otopinu A",
+    "speed": "Faktor ubrzanja vremena",
+    "pour": "Ulij otopinu B i pokreni mjerenje vremena",
+    "stop": "Zaustavi mjerenje vremena",
+    "again": "Ponovi s drugim uvjetima",
+    "reset": "Obriši podatke",
+    "readings": "Mjerenje vremena",
+    "stopwatch": "Štoperica",
+    "theory": "Teorijsko indukcijsko razdoblje",
+    "slow": "Sporo",
+    "fast": "Trenutačno",
+    "excessThio": "Na₂S₂O₃ najmanje dvostruko više od H₂O₂: nastali jod uvijek će biti reduciran, otopina se neće obojiti plavo.",
+    "overdue": "Prošlo je više od 5 minuta bez promjene boje. Provjeri recept; možeš pritisnuti „Zaustavi mjerenje“ za završetak.",
+    "noStarch": "Bez škroba krajnja se točka vidi tek kad se nakupi dovoljno joda za žutosmeđu boju — mjerenje će biti dulje.",
+    "chart": {
+      "title": "Obrada podataka: red reakcije i energija aktivacije",
+      "order": "Prilagođeni nagib ≈ {n}, tj. red po I⁻ je {n} (teorijski 1. red)",
+      "orderHint": "Drži temperaturu, H₂O₂ i Na₂S₂O₃ konstantnima; mijenjaj samo koncentraciju KI u najmanje dva pokusa za određivanje reda po I⁻.",
+      "ea": "Iz nagiba −Ea/R dobivena energija aktivacije Ea ≈ {ea} kJ/mol (literaturna vrijednost oko 56 kJ/mol)",
+      "eaHint": "Drži recept konstantnim; mijenjaj samo temperaturu u najmanje dva pokusa i primijeni Arrheniusovu jednadžbu za određivanje energije aktivacije.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Vrijeme do plave boje"
+      },
+      "withoutStarch": "Bez škroba"
+    }
   }
 }

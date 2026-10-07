@@ -493,5 +493,148 @@
       "error": "Odchylka od přijaté hodnoty 96485 C/mol: {pct}%",
       "ariaLabel": "Graf závislosti hmotnosti vyloučené mědi na elektrickém náboji, celkem {count} vážení"
     }
+  },
+  "sodiumLab": {
+    "setup": "Postup experimentu",
+    "pieceSize": "Velikost kousku sodíku",
+    "size": {
+      "small": "Velikost hrachu",
+      "medium": "Velikost fazole",
+      "large": "Velký kus"
+    },
+    "largeWarning": "Velký kus sodíku uvolňuje velké množství tepla, může zapálit vodík nebo dokonce způsobit výbuch a rozstřikování louhu. Ve skutečném experimentu používejte pouze kousek velikosti hrachu — zde je to ukázáno pouze ve virtuálním prostředí.",
+    "cut": "Skalpelem odřízněte oxidační vrstvu z povrchu",
+    "cutHint": "Povrch sodíku pokrývá šedavý oxid. Nejprve odkrojte čerstvý řez, pak teprve vložte sodík do vody. Po přeříznutí sledujte, jak se mění lesk řezu.",
+    "phenol": "Přidejte do vody 2 kapky fenolftaleinu",
+    "drop": "Pinzetou vložte sodík do vody",
+    "next": "Vyměňte vodu za čistou a vezměte nový kousek",
+    "sound": "Zvuk",
+    "reset": "Resetovat",
+    "readings": "Aktuální hodnoty",
+    "remaining": "Zbývající sodík",
+    "hydrogen": "Vzniklý vodík",
+    "waterTemp": "Teplota vody",
+    "burning": "Teplo zapálí unikající vodík — sodík hoří žlutým plamenem",
+    "phenomenaTitle": "Jevy: plave, taví se, klouže, syčí, červená",
+    "phenomena": {
+      "float": {
+        "name": "Plave na hladině",
+        "why": "Hustota sodíku je 0,97 g/cm³ — méně než voda."
+      },
+      "melt": {
+        "name": "Taví se v lesklou kuličku",
+        "why": "Reakce uvolňuje teplo; bod tání sodíku je pouhých 97,8 ℃, takže se rychle roztaví. Povrchové napětí ho stáhne do kuličky."
+      },
+      "swim": {
+        "name": "Pohybuje se chaoticky po hladině",
+        "why": "Vzniklý vodík uniká nerovnoměrně ze všech stran kuličky a odráží ji různými směry."
+      },
+      "hiss": {
+        "name": "Vydává syčivý zvuk",
+        "why": "Vodík rychle uniká a uvolněné teplo odpařuje vodu v místě kontaktu."
+      },
+      "pink": {
+        "name": "Roztok se zbarví červeně",
+        "why": "Vzniká silná zásada NaOH; fenolftalein v zásaditém prostředí zčervená. Červená barva se nejprve objevuje podél dráhy, po které kulička plula."
+      }
+    },
+    "pinkHint": "Bez fenolftaleinu vznik zásady není vidět. Můžete ho přidat i teď — zásada je již ve vodě.",
+    "chart": {
+      "title": "Objem vzniklého vodíku v závislosti na čase",
+      "xAxis": "Čas t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Křivka produkce vodíku, dokončeno {count} vzorků",
+      "mass": "Hmotnost sodíku",
+      "measuredT": "Naměřená doba reakce",
+      "predictedT": "Předpověď podle m^(1/3)",
+      "volume": "Objem vodíku",
+      "hint": "Po dokončení vzorku se zde vykreslí křivka produkce vodíku. Vyzkoušejte různě velké kusy sodíku a porovnejte doby reakce.",
+      "insight": "Sodík reaguje pouze na povrchu kuličky, poloměr se zmenšuje rovnoměrně, takže doba reakce je úměrná poloměru, tedy i třetí odmocnině hmotnosti: při osminásobné hmotnosti se doba reakce zvýší přibližně dvakrát."
+    }
+  },
+  "flameLab": {
+    "setup": "Postup experimentu",
+    "light": "Zapálit Bunsenův kahan",
+    "extinguish": "Zhasnout Bunsenův kahan",
+    "wire": "Platinový drát",
+    "dipAcid": "Namočit do zředěné kyseliny chlorovodíkové",
+    "intoFlame": "Vložit do vnějšího plamene a žíhat",
+    "outOfFlame": "Vyjmout z plamene",
+    "dipSample": "Namočit do vzorkového roztoku",
+    "cobalt": "Pozorovat přes kobaltové sklo",
+    "reset": "Resetovat",
+    "readings": "Pozorování",
+    "wireState": "Platinový drát",
+    "clean": "Čistý",
+    "dirty": "Se zbytky",
+    "seen": "V plameni rozeznatelné",
+    "none": "Žádné (plamen má přirozenou světle modrou barvu)",
+    "cleanHint": "Platinový drát se při žíhání v plameni již nezbarví — lze jej namočit do dalšího vzorku.",
+    "dirtyHint": "Na drátu jsou zbytky (i nový platinový drát často obsahuje sodík). Namočte do zředěné kyseliny chlorovodíkové a opakovaně žíhejte, dokud plamen nezůstane bezbarvý. Chloridy se snadno vypařují, takže tento postup je výrazně rychlejší než pouhé žíhání.",
+    "el": {
+      "Na": "Sodík",
+      "K": "Draslík",
+      "Li": "Lithium",
+      "Ca": "Vápník",
+      "Sr": "Stroncium",
+      "Ba": "Barium",
+      "Cu": "Měď"
+    },
+    "unknownTitle": "Identifikace neznámého vzorku X",
+    "unknownHint": "Spalte vzorek X a určete, který kovový prvek obsahuje. Pozor: žluté světlo sodíku může zakrýt fialové světlo draslíku.",
+    "correct": "Správně.",
+    "wrong": "Nesprávně. Zkontrolujte, zda je platinový drát čistý, a v případě potřeby se podívejte přes kobaltové sklo.",
+    "spectro": {
+      "title": "Spektroskop: čárové spektrum",
+      "throughCobalt": "Přes kobaltové sklo",
+      "empty": "Vložte platinový drát se vzorkem do plamene – zde se zobrazí spektrum plamene.",
+      "explain": "Každý prvek vyzařuje světlo pouze na několika pevných vlnových délkách, jako otisk prstu. Sodík má dvojici žlutých čar na 589 nm, hlavní čáry draslíku leží na 766 nm (tmavě červená) a 404 nm (fialová), proto plamen draslíku vypadá světle fialově. Kobaltové sklo pohlcuje středové žlutozelené světlo a propouští pouze krajní části spektra."
+    },
+    "log": {
+      "title": "Záznam pozorování",
+      "empty": "Po každém namočení vzorku a jeho spálení se zde automaticky přidá jeden řádek.",
+      "sample": "Vzorek",
+      "cobalt": "Kobaltové sklo",
+      "color": "Barva plamene",
+      "seen": "Rozpoznané prvky",
+      "nothing": "Žádné",
+      "contaminated": "Kontaminováno předchozím vzorkem"
+    }
+  },
+  "clockLab": {
+    "setup": "Příprava roztoků",
+    "ki": "Koncentrace KI / mol·L⁻¹ (roztok A)",
+    "thio": "Koncentrace Na₂S₂O₃ / mol·L⁻¹ (roztok A)",
+    "h2o2": "Koncentrace H₂O₂ / mol·L⁻¹ (roztok B)",
+    "temp": "Termostatická teplota",
+    "starch": "Přidat škrobový indikátor do roztoku A",
+    "speed": "Násobitel rychlosti",
+    "pour": "Přilít roztok B a spustit měření času",
+    "stop": "Zastavit měření času",
+    "again": "Zkusit s jinými podmínkami",
+    "reset": "Vymazat data",
+    "readings": "Měření času",
+    "stopwatch": "Stopky",
+    "theory": "Teoretická indukční doba",
+    "slow": "Pomalu",
+    "fast": "Okamžitě",
+    "excessThio": "Na₂S₂O₃ je alespoň dvakrát více než H₂O₂: vzniklý jod bude vždy redukován, roztok nezmodrá.",
+    "overdue": "Uplynulo 5 minut bez změny barvy. Zkontrolujte složení a ukončete měření tlačítkem „Zastavit stopky“.",
+    "noStarch": "Bez škrobu lze konec reakce rozpoznat až po zežloutnutí roztoku — stopky naměří delší čas.",
+    "chart": {
+      "title": "Zpracování dat: reakční řád a aktivační energie",
+      "order": "Fitovaná směrnice ≈ {n}, tj. řád reakce vůči I⁻ je {n} (teoreticky 1)",
+      "orderHint": "Udržujte teplotu, H₂O₂ a Na₂S₂O₃ konstantní, měňte pouze koncentraci KI — proveďte alespoň dvě měření pro určení řádu vůči I⁻.",
+      "ea": "Ze směrnice −Ea/R: aktivační energie Ea ≈ {ea} kJ/mol (literatura: cca 56 kJ/mol)",
+      "eaHint": "Zachovejte složení, měňte pouze teplotu — proveďte alespoň dvě měření a vypočítejte aktivační energii pomocí Arrheniovy rovnice.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Teplota",
+        "time": "Čas zmodrání"
+      },
+      "withoutStarch": "Bez škrobu"
+    }
   }
 }

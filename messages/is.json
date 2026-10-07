@@ -493,5 +493,148 @@
       "error": "Frávik frá viðurkenndri gildi 96485 C/mol er {pct}%",
       "ariaLabel": "Graf yfir útfellt kopar á móti hleðslu, alls {count} vigtunargildi"
     }
+  },
+  "sodiumLab": {
+    "setup": "Tilraunaskref",
+    "pieceSize": "Stærð natríumstykki",
+    "size": {
+      "small": "Erturstór",
+      "medium": "Baunastór",
+      "large": "Stórt stykki"
+    },
+    "largeWarning": "Stórt natríumstykki gefur frá sér mikinn hita, getur kveikt á vetni og jafnvel valdið sprengingu eða útskvettingu á basalausn. Í raunverulegar tilraunum má aðeins nota ertustórt stykki — hér er þetta eingöngu sýnt í sýndarumhverfi.",
+    "cut": "Skerðu oxlagið af yfirborðinu með smáhníf",
+    "cutHint": "Yfirborð natríums er þakið gráhvítum oxíð. Skerðu fram ferskt snið áður en þú setur það í vatnið. Eftir skurðinn skaltu fylgjast með hvernig gljáinn á sniðinu breytist.",
+    "phenol": "Droppaðu 2 dropa af fenóftalín í vatnið",
+    "drop": "Settu natríumið í vatnið með klemmum",
+    "next": "Skipaðu um hreinan bikar og taktu nýtt stykki",
+    "sound": "Hljóð",
+    "reset": "Endurstilla",
+    "readings": "Rauntímagildi",
+    "remaining": "Eftirstandandi natríum",
+    "hydrogen": "Vetni myndað",
+    "waterTemp": "Hitastig vatns",
+    "burning": "Hitinn kveikir á vetni sem losnar — natríum brennur með gullgulri loga",
+    "phenomenaTitle": "Fyrirbæri: flýtur, bráðnar, rennur, híssar, roðnar",
+    "phenomena": {
+      "float": {
+        "name": "Flýtur á yfirborði vatns",
+        "why": "Eðlisþyngd natríums er 0,97 g/cm³ — minni en vatns."
+      },
+      "melt": {
+        "name": "Bráðnar í glansandi kúlu",
+        "why": "Viðbrögðin gefa frá sér hita; bræðslumark natríums er aðeins 97,8 ℃ og það bráðnar fljótt. Yfirborðsspenna dregur það saman í kúlu."
+      },
+      "swim": {
+        "name": "Rennur um á yfirborðinu",
+        "why": "Vetni spýtist ójafnt út úr kúlunni í allar áttir og knýr hana áfram."
+      },
+      "hiss": {
+        "name": "Gefur frá sér hísshljóð",
+        "why": "Vetni losnar skyndisnöggt og hitinn gufar upp vatn við snertifletinn."
+      },
+      "pink": {
+        "name": "Lausnin roðnar",
+        "why": "NaOH sterkbasi myndast; fenóftalín roðnar við basa. Liturinn birtist fyrst meðfram slóð natríumkúlunnar."
+      }
+    },
+    "pinkHint": "Engin fenóftalín var bætt við, svo basinn sést ekki. Þú getur bætt honum við núna — basinn er þegar í vatninu.",
+    "chart": {
+      "title": "Rúmmál vetnis sem myndast í tímanum",
+      "xAxis": "Tími t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Vetnisvextiskúrva, {count} blokkur kláraðar",
+      "mass": "Massi natríums",
+      "measuredT": "Mæld viðbragðstími",
+      "predictedT": "Spáð eftir m^(1/3)",
+      "volume": "Rúmmál vetnis",
+      "hint": "Þegar einni blokk er lokið birtist vetnisvextiskúrvan hér. Prófaðu mismunandi stærðir af natríum og berðu saman viðbragðstíma.",
+      "insight": "Natríum hverfur aðeins á yfirborði kúlunnar; geislinn minnkar jafnt, þannig að viðbragðstími er í hlutfalli við geislann — þ.e. í hlutfalli við þriðja rót massans: ef massi 8-faldast lengist tíminn aðeins um u.þ.b. 2-falt."
+    }
+  },
+  "flameLab": {
+    "setup": "Tilraunaaðgerðir",
+    "light": "Kveikja Bunsen-brennara",
+    "extinguish": "Slökkva Bunsen-brennara",
+    "wire": "Platínuþráður",
+    "dipAcid": "Dýfa í þynnta saltsýru",
+    "intoFlame": "Setja í ytri loga til glóðar",
+    "outOfFlame": "Færa út úr loga",
+    "dipSample": "Dýfa í sýnislausn",
+    "cobalt": "Skoða gegnum kóbaltglas",
+    "reset": "Endurstilla",
+    "readings": "Athuganir",
+    "wireState": "Platínuþráður",
+    "clean": "Hreinn",
+    "dirty": "Með leifar",
+    "seen": "Greinanlegt í loga",
+    "none": "Ekkert (logi er náttúrulegur ljósblár)",
+    "cleanHint": "Platínuþráðurinn sýnir enga lit í loganum — tilbúinn til að dýfa í næsta sýni.",
+    "dirtyHint": "Leifar eru á platínuþráðinum (nýr þráður inniheldur oft natríum). Dýfðu í þynnta saltsýru og glóðaðu; endurtaktu þar til loginn sýnir engan lit. Klóríð gufar auðveldlega upp — þetta er mun hraðara en að glóða eingöngu.",
+    "el": {
+      "Na": "Natríum",
+      "K": "Kalíum",
+      "Li": "Litíum",
+      "Ca": "Kalsíum",
+      "Sr": "Strontín",
+      "Ba": "Baríum",
+      "Cu": "Kopar"
+    },
+    "unknownTitle": "Auðkenna óþekktan sýnishorn X",
+    "unknownHint": "Brenndu sýnishorn X og ákvarðaðu hvaða málmfrumefni er til staðar. Athugið: gult ljós natríums getur hulið fjólublátt ljós kalíums.",
+    "correct": "Rétt mat.",
+    "wrong": "Rangt. Athugaðu hvort platínuþráðurinn sé vel þveginn og skoðaðu aftur í gegnum kóbaltgler ef þörf krefur.",
+    "spectro": {
+      "title": "Litrófssjár: línuróf",
+      "throughCobalt": "Í gegnum kóbaltgler",
+      "empty": "Settu platínuþráðinn með sýnishorni í logann til að sjá litróf logsins hér.",
+      "explain": "Hvert frumefni gefur frá sér ljós á nokkrum föstum bylgjulengdum, eins og fingraför. Natríum sýnir gult línupar við 589 nm, kalíum hefur aðallínur við 766 nm (djúprautt) og 404 nm (fjólublátt), þess vegna lítur kalíumloginn ljósfjalublár út. Kóbaltglerið gleypir gult-grænt ljós að meðaltalinu og lætur aðeins endana í gegn."
+    },
+    "log": {
+      "title": "Mælingaskrá",
+      "empty": "Í hvert skipti sem sýnishorn er dýft og brennt skráist lína hér sjálfkrafa.",
+      "sample": "Sýnishorn",
+      "cobalt": "Kóbaltgler",
+      "color": "Loglitur",
+      "seen": "Þekkjanleg frumefni",
+      "nothing": "Ekkert",
+      "contaminated": "Mengað af fyrra sýnishorni"
+    }
+  },
+  "clockLab": {
+    "setup": "Undirbúa lausnir",
+    "ki": "KI styrkur / mol·L⁻¹ (lausn A)",
+    "thio": "Na₂S₂O₃ styrkur / mol·L⁻¹ (lausn A)",
+    "h2o2": "H₂O₂ styrkur / mol·L⁻¹ (lausn B)",
+    "temp": "Hitastig við stöðuga hitastjórnun",
+    "starch": "Bæta sterkjuvísi í lausn A",
+    "speed": "Tímamargfaldari",
+    "pour": "Hella lausn B út, hefja tímamælingu",
+    "stop": "Stöðva tímamælingu",
+    "again": "Prófa með aðrar stillingar",
+    "reset": "Hreinsa gögn",
+    "readings": "Tímamælingar",
+    "stopwatch": "Leiktímamælir",
+    "theory": "Fræðileg hvatarstund",
+    "slow": "Hægt",
+    "fast": "Samstundis",
+    "excessThio": "Na₂S₂O₃ er minnst tvöfalt H₂O₂: myndað joð verður alltaf fært aftur og lausnin verður aldrei blá.",
+    "overdue": "Liðnar eru 5 mínútur án litaskipta. Athugaðu uppskriftina — ýttu á „Stöðva tímamælingu“ til að ljúka þessum keyrslu.",
+    "noStarch": "Engin sterkja til staðar; aðeins er hægt að greina lokapunkt þegar joð safnast nóg til að gefa gulbrúnan lit — tímamæling verður of löng.",
+    "chart": {
+      "title": "Gagnavinnsla: hvarfastig og virkjunarorka",
+      "order": "Metin hallatala ≈ {n}, þ.e. stig {n} gagnvart I⁻ (fræðilegt gildi: 1. stig)",
+      "orderHint": "Haltu hitastigi, H₂O₂ og Na₂S₂O₃ föstum og breyttu aðeins styrk KI — gerðu að minnsta kosti tvær mælingar til að ákvarða hvarfastig gagnvart I⁻.",
+      "ea": "Virkjunarorka reiknuð úr hallatölu −Ea/R: Ea ≈ {ea} kJ/mol (bókgildi ca. 56 kJ/mol)",
+      "eaHint": "Haltu uppskrift fastri og breyttu aðeins hitastigi — gerðu að minnsta kosti tvær mælingar og notaðu Arrhenius-jöfnuna til að finna virkjunarorku.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Hitastig",
+        "time": "Tími að bláum lit"
+      },
+      "withoutStarch": "Engin sterkja"
+    }
   }
 }

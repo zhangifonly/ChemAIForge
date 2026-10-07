@@ -493,5 +493,148 @@
       "error": "Odstupanje od opšteprihvaćene vrednosti 96485 C/mol: {pct}%",
       "ariaLabel": "Grafik zavisnosti mase istaloženog bakra od količine naelektrisanja, ukupno {count} mernih tačaka"
     }
+  },
+  "sodiumLab": {
+    "setup": "Koraci eksperimenta",
+    "pieceSize": "Veličina komada natrijuma",
+    "size": {
+      "small": "Veličina zrna graška",
+      "medium": "Veličina zrna soje",
+      "large": "Veliki komad"
+    },
+    "largeWarning": "Veliki komad natrijuma oslobađa veliku količinu toplote — može zapaliti vodonik, izazvati eksploziju i rasprskati alkalnu otopinu. U stvarnom eksperimentu koristite samo komad veličine zrna graška; ovde je prikazano isključivo u virtuelnom okruženju.",
+    "cut": "Skalpelom uklonite oksidni sloj s površine",
+    "cutHint": "Površina natrijuma prekrivena je sivkastim oksidom — najpre odrežite svež presek, pa ga tek onda ubacite u vodu. Nakon rezanja pažljivo posmatrajte promenu sjaja na preseku.",
+    "phenol": "Dodajte 2 kapi fenolftaleina u vodu",
+    "drop": "Pincetom ubacite natrijum u vodu",
+    "next": "Zamenite čašu svežom vodom i uzmite novi komad",
+    "sound": "Zvuk",
+    "reset": "Resetuj",
+    "readings": "Vrednosti u realnom vremenu",
+    "remaining": "Preostali natrijum",
+    "hydrogen": "Nastali vodonik",
+    "waterTemp": "Temperatura vode",
+    "burning": "Oslobođena toplota pali ispareni vodonik; natrijum gori žutim plamenom",
+    "phenomenaTitle": "Pojave: pliva, topi se, klizi, šišti, porumeni",
+    "phenomena": {
+      "float": {
+        "name": "Pliva na površini vode",
+        "why": "Gustina natrijuma iznosi 0,97 g/cm³, što je manje od gustine vode."
+      },
+      "melt": {
+        "name": "Topi se u sjajnu kuglicu",
+        "why": "Reakcija oslobađa toplotu; tačka topljenja natrijuma je samo 97,8 ℃, pa se brzo topi. Površinski napon oblikuje ga u kuglu."
+      },
+      "swim": {
+        "name": "Klizi po površini vode",
+        "why": "Vodonik neravnomerno izbija iz kuglice sa svih strana i gura je u različitim pravcima."
+      },
+      "hiss": {
+        "name": "Čuje se šištanje",
+        "why": "Vodonik naglo izlazi, a oslobođena toplota isparava vodu na mestu kontakta."
+      },
+      "pink": {
+        "name": "Rastvor postaje crven",
+        "why": "Nastaje jaka baza NaOH; fenolftalein u prisustvu baze postaje crven. Boja se prvo javlja duž putanje kuglice natrijuma."
+      }
+    },
+    "pinkHint": "Bez fenolftaleina nastanak baze nije vidljiv. Možete ga dodati i sada — baza je već u vodi.",
+    "chart": {
+      "title": "Zapremina nastalog vodonika u zavisnosti od vremena",
+      "xAxis": "Vreme t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Kriva produkcije vodonika, završeno {count} pločica",
+      "mass": "Masa natrijuma",
+      "measuredT": "Izmereno trajanje reakcije",
+      "predictedT": "Predviđeno po m^(1/3)",
+      "volume": "Zapremina vodonika",
+      "hint": "Nakon svake pločice ovde se iscrtava kriva produkcije vodonika. Upotrebite natrijum različitih veličina i uporedite trajanje reakcija.",
+      "insight": "Natrijum reaguje samo na površini kuglice, a polupečnik se smanjuje jednakomerno, pa je trajanje reakcije proporcionalno polupečniku — a time i kubnom korenu mase: ako se masa poveća 8 puta, trajanje se povećava samo oko 2 puta."
+    }
+  },
+  "flameLab": {
+    "setup": "Postupak eksperimenta",
+    "light": "Upaliti Bunsenov plameník",
+    "extinguish": "Ugasiti Bunsenov plameník",
+    "wire": "Platinska žica",
+    "dipAcid": "Uroniti u razblaženu hlorovodničnu kiselinu",
+    "intoFlame": "Uneti u spoljašnji plamen i žariti",
+    "outOfFlame": "Izvući iz plamena",
+    "dipSample": "Uroniti u rastvor uzorka",
+    "cobalt": "Posmatrati kroz kobaltno staklo",
+    "reset": "Resetovati",
+    "readings": "Zapažanja",
+    "wireState": "Platinska žica",
+    "clean": "Čista",
+    "dirty": "Sa ostacima",
+    "seen": "Prepoznatljivo u plamenu",
+    "none": "Ništa (plamen svetloplav, prirodna boja)",
+    "cleanHint": "Platinska žica se žarenjem u plamenu više ne oboji — može se uroniti u sledeći uzorak.",
+    "dirtyHint": "Na platinskoj žici ima ostataka (nova žica često sadrži natrijum). Uroniti u razblaženu hlorovodničnu kiselinu i žariti, ponavljati dok plamen ne prestane da se boji; hloridi lako isparavaju, što je znatno brže od samog žarenja.",
+    "el": {
+      "Na": "Natrijum",
+      "K": "Kalijum",
+      "Li": "Litijum",
+      "Ca": "Kalcijum",
+      "Sr": "Stroncijum",
+      "Ba": "Barijum",
+      "Cu": "Bakar"
+    },
+    "unknownTitle": "Identifikacija nepoznatog uzorka X",
+    "unknownHint": "Spalite uzorak X i odredite koji metalni element sadrži. Napomena: žuta svetlost natrijuma može prikriti ljubičastu svetlost kalijuma.",
+    "correct": "Tačno.",
+    "wrong": "Netačno. Proverite da li je platinska žica dobro isprana; po potrebi posmatrajte kroz kobaltno staklo.",
+    "spectro": {
+      "title": "Spektroskop: linijski spektar",
+      "throughCobalt": "Kroz kobaltno staklo",
+      "empty": "Unesite platinsku žicu sa uzorkom u plamen — ovde će se prikazati spektar plamena.",
+      "explain": "Svaki element emituje svetlost samo na nekoliko fiksnih talasnih dužina, poput otiska prsta. Natrijum daje par žutih linija na 589 nm; glavne linije kalijuma nalaze se na 766 nm (tamnocrvena) i 404 nm (ljubičasta), pa plamen kalijuma izgleda svetloljubičasto. Kobaltno staklo apsorbuje žuto-zelenu svetlost u sredini i propušta samo krajeve spektra."
+    },
+    "log": {
+      "title": "Dnevnik posmatranja",
+      "empty": "Svako uranjanje žice u uzorak i paljenje automatski se beleži ovde.",
+      "sample": "Uzorak",
+      "cobalt": "Kobaltno staklo",
+      "color": "Boja plamena",
+      "seen": "Prepoznati elementi",
+      "nothing": "Ništa",
+      "contaminated": "Kontaminirano prethodnim uzorkom"
+    }
+  },
+  "clockLab": {
+    "setup": "Priprema rastvora",
+    "ki": "Koncentracija KI / mol·L⁻¹ (rastvor A)",
+    "thio": "Koncentracija Na₂S₂O₃ / mol·L⁻¹ (rastvor A)",
+    "h2o2": "Koncentracija H₂O₂ / mol·L⁻¹ (rastvor B)",
+    "temp": "Temperatura termostata",
+    "starch": "Dodaj skrob kao indikator u rastvor A",
+    "speed": "Faktor brzine vremena",
+    "pour": "Dodaj rastvor B i pokreni merenje vremena",
+    "stop": "Zaustavi merenje vremena",
+    "again": "Ponovi s drugim uslovima",
+    "reset": "Obriši podatke",
+    "readings": "Merenje vremena",
+    "stopwatch": "Štoperica",
+    "theory": "Teorijski indukcioni period",
+    "slow": "Sporo",
+    "fast": "Trenutno",
+    "excessThio": "Na₂S₂O₃ nije manji od duplo vrednosti H₂O₂: nastali jod uvek biva redukovan, rastvor neće poplавeti.",
+    "overdue": "Prošlo je 5 minuta bez promene boje. Proveri recepturu ili pritisni „Zaustavi merenje“ da završiš ovo merenje.",
+    "noStarch": "Bez skroba, kraj reakcije se prepoznaje tek kad joda bude dovoljno da rastvor požuti-posmeđi — merenje vremena biće duže.",
+    "chart": {
+      "title": "Obrada podataka: red reakcije i energija aktivacije",
+      "order": "Nagib fitovanja ≈ {n}, tj. red po I⁻ je {n} (teorijski 1. red)",
+      "orderHint": "Drži temperaturu, H₂O₂ i Na₂S₂O₃ konstantnim, menjaj samo koncentraciju KI u najmanje dva ogleda da odrediš red reakcije po I⁻.",
+      "ea": "Iz nagiba −Ea/R određena energija aktivacije Ea ≈ {ea} kJ/mol (literaturna vrednost ≈ 56 kJ/mol)",
+      "eaHint": "Drži recepturu konstantnom, menjaj samo temperaturu u najmanje dva ogleda i primeni Arenijusovu jednačinu za određivanje energije aktivacije.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Vreme plavljenja"
+      },
+      "withoutStarch": "Bez skroba"
+    }
   }
 }

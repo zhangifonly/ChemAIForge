@@ -493,5 +493,148 @@
       "error": "Diferència respecte al valor acceptat 96485 C/mol: {pct}%",
       "ariaLabel": "Gràfic de la massa de coure dipositat en funció de la càrrega, amb {count} punts de pesada"
     }
+  },
+  "sodiumLab": {
+    "setup": "Passos de l'experiment",
+    "pieceSize": "Mida del tros de sodi",
+    "size": {
+      "small": "Mida d'un gra de mongeta",
+      "medium": "Mida d'un gra de soia",
+      "large": "Tros gran"
+    },
+    "largeWarning": "Un tros gran de sodi allibera molta calor: pot encendre l'hidrogen i fins i tot provocar una detonació o esquitxar lleixiu. En un experiment real només es pot agafar un tros de la mida d'un gra de mongeta; aquí es mostra únicament en entorn virtual.",
+    "cut": "Talleu la capa d'òxid de la superfície amb el ganivet",
+    "cutHint": "La superfície del sodi té una capa d'òxid grisenc. Talleu-la per exposar una cara fresca abans d'introduir-lo a l'aigua. Un cop tallat, observeu com canvia la brillantor de la secció.",
+    "phenol": "Afegiu 2 gotes de fenolftaleïna a l'aigua",
+    "drop": "Introduïu el sodi a l'aigua amb les pinces de punta",
+    "next": "Canvieu l'aigua i agafeu-ne un altre tros",
+    "sound": "So",
+    "reset": "Reinicia",
+    "readings": "Lectures en temps real",
+    "remaining": "Sodi restant",
+    "hydrogen": "Hidrogen generat",
+    "waterTemp": "Temperatura de l'aigua",
+    "burning": "La calor alliberada encén l'hidrogen que s'escapa; el sodi crema amb una flama groga",
+    "phenomenaTitle": "Fenòmens: flota, fon, neda, xiula, vermelleja",
+    "phenomena": {
+      "float": {
+        "name": "Flota a la superfície de l'aigua",
+        "why": "La densitat del sodi és 0,97 g/cm³, inferior a la de l'aigua."
+      },
+      "melt": {
+        "name": "Es fon formant una boleta brillant",
+        "why": "La reacció és exotèrmica i el punt de fusió del sodi és només 97,8 ℃, de manera que es fon ràpidament; la tensió superficial el recull en forma de bola."
+      },
+      "swim": {
+        "name": "Es desplaça per la superfície de l'aigua",
+        "why": "L'hidrogen generat surt de manera irregular per tots els costats de la bola i la propulsa en diverses direccions."
+      },
+      "hiss": {
+        "name": "Emet un xiulet",
+        "why": "L'hidrogen s'escapa ràpidament i la calor alliberada vaporitza l'aigua en contacte amb el sodi."
+      },
+      "pink": {
+        "name": "La solució es torna vermella",
+        "why": "Es forma NaOH, una base forta; la fenolftaleïna es torna vermella en medi bàsic. El color apareix primer al rastre que deixa la boleta de sodi."
+      }
+    },
+    "pinkHint": "Sense fenolftaleïna no es pot apreciar la formació de la base. Podeu afegir-ne ara: la base ja és a l'aigua.",
+    "chart": {
+      "title": "Volum d'hidrogen produït en funció del temps",
+      "xAxis": "Temps t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Corba de producció d'hidrogen, {count} blocs completats",
+      "mass": "Massa de sodi",
+      "measuredT": "Temps de reacció mesurat",
+      "predictedT": "Predicció per m^(1/3)",
+      "volume": "Volum d'hidrogen",
+      "hint": "Quan acabeu un bloc, aquí apareixerà la corba de producció d'hidrogen. Proveu amb blocs de mides diferents i compareu els temps de reacció.",
+      "insight": "El sodi reacciona només a la superfície de l'esfera; el radi disminueix a velocitat constant, de manera que el temps de reacció és proporcional al radi i, per tant, a l'arrel cúbica de la massa: si la massa es multiplica per 8, el temps només es multiplica per uns 2."
+    }
+  },
+  "flameLab": {
+    "setup": "Procediment experimental",
+    "light": "Encendre el bec Bunsen",
+    "extinguish": "Apagar el bec Bunsen",
+    "wire": "Fil de platí",
+    "dipAcid": "Submergir en àcid clorhídric diluït",
+    "intoFlame": "Introduir a la flama exterior",
+    "outOfFlame": "Retirar de la flama",
+    "dipSample": "Submergir en la solució mostra",
+    "cobalt": "Observar a través del vidre de cobalt",
+    "reset": "Reiniciar",
+    "readings": "Observacions",
+    "wireState": "Fil de platí",
+    "clean": "Net",
+    "dirty": "Amb residus",
+    "seen": "Visible a la flama",
+    "none": "Cap (flama de color blau pàl·lid natural)",
+    "cleanHint": "El fil de platí ja no dóna color a la flama; podeu submergir-lo en la mostra següent.",
+    "dirtyHint": "El fil de platí té residus (els fils nous sovint contenen sodi). Submergiu-lo en àcid clorhídric diluït i cremeu-lo repetidament fins que la flama no mostri cap color; els clorurs s'evaporen fàcilment i acceleren la neteja.",
+    "el": {
+      "Na": "Sodi",
+      "K": "Potassi",
+      "Li": "Liti",
+      "Ca": "Calci",
+      "Sr": "Estronci",
+      "Ba": "Bari",
+      "Cu": "Coure"
+    },
+    "unknownTitle": "Identificació de la mostra desconeguda X",
+    "unknownHint": "Cremeu la mostra X per determinar quin element metàl·lic conté. Atenció: la llum groga del sodi pot emmascarar la llum violeta del potassi.",
+    "correct": "Identificació correcta.",
+    "wrong": "Incorrecte. Comproveu que el fil de platí estigui net i, si cal, observeu de nou a través del vidre de cobalt.",
+    "spectro": {
+      "title": "Espectroscopi: espectre de línies",
+      "throughCobalt": "A través del vidre de cobalt",
+      "empty": "Introduïu el fil de platí amb mostra a la flama per visualitzar-ne l'espectre aquí.",
+      "explain": "Cada element emet llum només a unes longituds d'ona fixes, com una empremta digital. El sodi presenta un parell de línies grogues a 589 nm; les línies principals del potassi són a 766 nm (vermell fosc) i 404 nm (violeta), per això la flama del potassi és de color violeta clar. El vidre de cobalt absorbeix la llum grogaverdosa central i només deixa passar els dos extrems."
+    },
+    "log": {
+      "title": "Registre d'observacions",
+      "empty": "Cada vegada que submergiu el fil i cremeu una mostra, s'afegeix automàticament una línia aquí.",
+      "sample": "Mostra",
+      "cobalt": "Vidre de cobalt",
+      "color": "Color de flama",
+      "seen": "Elements identificats",
+      "nothing": "Cap",
+      "contaminated": "Contaminat per la mostra anterior"
+    }
+  },
+  "clockLab": {
+    "setup": "Preparació de les solucions",
+    "ki": "Concentració de KI / mol·L⁻¹ (solució A)",
+    "thio": "Concentració de Na₂S₂O₃ / mol·L⁻¹ (solució A)",
+    "h2o2": "Concentració de H₂O₂ / mol·L⁻¹ (solució B)",
+    "temp": "Temperatura de termostatació",
+    "starch": "Afegir indicador de midó a la solució A",
+    "speed": "Factor de velocitat temporal",
+    "pour": "Aboqueu la solució B i inicieu el cronòmetre",
+    "stop": "Aturar el cronòmetre",
+    "again": "Repeteix amb unes altres condicions",
+    "reset": "Esborra les dades",
+    "readings": "Cronometratge",
+    "stopwatch": "Cronòmetre",
+    "theory": "Període d'inducció teòric",
+    "slow": "Lent",
+    "fast": "Instantani",
+    "excessThio": "Na₂S₂O₃ no és inferior al doble de H₂O₂: l'iode format es redueix contínuament i la solució no es torna blava.",
+    "overdue": "Han passat 5 minuts sense canvi de color. Reviseu la fórmula; podeu prémer «Atura el cronòmetre» per acabar aquesta mesura.",
+    "noStarch": "Sense midó, cal esperar que s'acumuli prou iode per veure el color groc-marronós; el temps mesurat serà lleugerament més llarg.",
+    "chart": {
+      "title": "Tractament de dades: ordre de reacció i energia d'activació",
+      "order": "Pendent ajustat ≈ {n}, és a dir, ordre {n} respecte a I⁻ (valor teòric: 1)",
+      "orderHint": "Manteniu constant la temperatura, H₂O₂ i Na₂S₂O₃; varieu només la concentració de KI en almenys dues mesures per determinar l'ordre respecte a I⁻.",
+      "ea": "A partir del pendent −Ea/R s'obté l'energia d'activació Ea ≈ {ea} kJ/mol (valor bibliogràfic: ~56 kJ/mol)",
+      "eaHint": "Manteniu la fórmula constant; varieu només la temperatura en almenys dues mesures i apliqueu l'equació d'Arrhenius per calcular l'energia d'activació.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Temps de viratge"
+      },
+      "withoutStarch": "Sense midó"
+    }
   }
 }

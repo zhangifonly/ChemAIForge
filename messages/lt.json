@@ -493,5 +493,148 @@
       "error": "Skirtumas nuo pripažintos reikšmės 96485 C/mol: {pct}%",
       "ariaLabel": "Išskirto vario masės priklausomybės nuo krūvio grafikas, iš viso {count} svėrimo taškai"
     }
+  },
+  "sodiumLab": {
+    "setup": "Eksperimento eiga",
+    "pieceSize": "Natrio gabalo dydis",
+    "size": {
+      "small": "Žirnelio dydžio",
+      "medium": "Pupelės dydžio",
+      "large": "Didelis gabalas"
+    },
+    "largeWarning": "Didelis natrio gabalas išskiria daug šilumos – gali užsidegti vandenilis ir net sprogti, taip pat išsipurškia šarminis tirpalas. Realiame eksperimente naudojamas tik žirnelio dydžio gabalas; čia tai rodoma tik virtualioje aplinkoje.",
+    "cut": "Peiliuku nupjauti paviršiaus oksido sluoksnį",
+    "cutHint": "Natrio paviršių dengia pilkšvas oksidas. Prieš dedant į vandenį, nupjaukite švarų pjūvį. Po pjūvio stebėkite, kaip keičiasi pjūvio paviršiaus blizgesys.",
+    "phenol": "Įlašinti 2 lašus fenolftaleino į vandenį",
+    "drop": "Pincetu įdėti natrį į vandenį",
+    "next": "Pakeisti šviežiu vandeniu ir paimti naują gabalą",
+    "sound": "Garsas",
+    "reset": "Atstatyti",
+    "readings": "Rodmenys realiuoju laiku",
+    "remaining": "Likęs natris",
+    "hydrogen": "Išsiskyręs vandenilis",
+    "waterTemp": "Vandens temperatūra",
+    "burning": "Išskiriama šiluma uždega išsiskyrusį vandenilį – natris dega geltonai",
+    "phenomenaTitle": "Reiškiniai: plūsta, tirpsta, juda, šnypščia, raudonuoja",
+    "phenomena": {
+      "float": {
+        "name": "Plūduriuoja vandens paviršiuje",
+        "why": "Natrio tankis – 0,97 g/cm³, mažesnis už vandens."
+      },
+      "melt": {
+        "name": "Išsilydo į blizgantį rutulėlį",
+        "why": "Reakcija išskiria šilumą; natrio lydymosi temperatūra tik 97,8 ℃, todėl jis greitai išsilydo. Paviršiaus įtempimas sutraukia jį į rutulėlį."
+      },
+      "swim": {
+        "name": "Juda chaotiškai vandens paviršiumi",
+        "why": "Vandenilis išsiveržia iš rutulėlio nevienodai visomis kryptimis, stumdamas jį į šalis."
+      },
+      "hiss": {
+        "name": "Girdimas šnypštimas",
+        "why": "Vandenilis sparčiai išsiveržia, o išskiriama šiluma verda kontaktinį vandenį."
+      },
+      "pink": {
+        "name": "Tirpalas paraudonuoja",
+        "why": "Susidaro stiprus šarmas NaOH; fenolftaleinas šarminiame tirpale raudonuoja. Spalva pirmiausia pasirodo natrio rutulėlio trajektorijoje."
+      }
+    },
+    "pinkHint": "Fenolftaleinas nebuvo įlašintas – susidariusio šarmo nematyti. Galima įlašinti dabar: šarmas jau yra vandenyje.",
+    "chart": {
+      "title": "Vandenilio tūrio kitimas laikui bėgant",
+      "xAxis": "Laikas t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Vandenilio gamybos kreivė, atlikta {count} gabalėliai",
+      "mass": "Natrio masė",
+      "measuredT": "Išmatuotas reakcijos laikas",
+      "predictedT": "Prognozė pagal m^(1/3)",
+      "volume": "Vandenilio tūris",
+      "hint": "Atlikus vieną bandymą, čia bus nubraižyta vandenilio gamybos kreivė. Pakeiskite natrio gabalėlio dydį ir palyginkite reakcijos trukmę.",
+      "insight": "Natris reaguoja tik paviršiuje, spindulys mažėja tolygiai, todėl reakcijos trukmė proporcinga spinduliui, t. y. masės kubinei šakniai: jei masė padidėja 8 kartus, trukmė padidėja tik apie 2 kartus."
+    }
+  },
+  "flameLab": {
+    "setup": "Eksperimento eiga",
+    "light": "Uždegti Bunseno degiklį",
+    "extinguish": "Išjungti Bunseno degiklį",
+    "wire": "Platinos viela",
+    "dipAcid": "Panardinti į praskiestą druskos rūgštį",
+    "intoFlame": "Įkišti į išorinę liepsną",
+    "outOfFlame": "Ištraukti iš liepsnos",
+    "dipSample": "Panardinti į tiriamąjį tirpalą",
+    "cobalt": "Stebėti pro kobaltinį stiklą",
+    "reset": "Atstatyti",
+    "readings": "Stebėjimai",
+    "wireState": "Platinos viela",
+    "clean": "Švari",
+    "dirty": "Yra likučių",
+    "seen": "Liepsnoje matoma spalva",
+    "none": "Nėra (liepsna natūraliai šviesiai mėlyna)",
+    "cleanHint": "Platinos viela kaitinama liepsnoje nebedažo – galima panardinti į kitą mėginį.",
+    "dirtyHint": "Ant platinos vielos yra likučių (net nauja viela dažnai turi natrio pėdsakų). Panardinkite į praskiestą druskos rūgštį ir pakaitinkite, kartokite kelis kartus, kol liepsna nustos dažytis; chloridai lengvai išgaruoja, todėl šis būdas greitesnis nei vien kaitinimas.",
+    "el": {
+      "Na": "Natris",
+      "K": "Kalis",
+      "Li": "Litis",
+      "Ca": "Kalcis",
+      "Sr": "Stroncis",
+      "Ba": "Baris",
+      "Cu": "Varis"
+    },
+    "unknownTitle": "Nežinomo mėginio X identifikavimas",
+    "unknownHint": "Sudeginkite mėginį X ir nustatykite, kuris metalas jame yra. Pastaba: natrio geltonoji šviesa gali užgožti kalio violetinę.",
+    "correct": "Atsakymas teisingas.",
+    "wrong": "Neteisingai. Patikrinkite, ar platinos viela gerai išplauta; jei reikia, pažiūrėkite per kobalto stiklą dar kartą.",
+    "spectro": {
+      "title": "Spektroskopas: linijinis spektras",
+      "throughCobalt": "Per kobalto stiklą",
+      "empty": "Įkiškite į liepsną platinos vielą su mėginiu – čia bus rodomas liepsnos spektras.",
+      "explain": "Kiekvienas elementas šviečia tik keliomis fiksuotomis bangos ilgių linijomis – tarsi piršto atspaudas. Natrio požymis – 589 nm geltonų linijų pora; kalio pagrindinės linijos – 766 nm (tamsiai raudona) ir 404 nm (violetinė), todėl kalio liepsna atrodo šviesiai violetinė. Kobalto stiklas sugeria vidurinę geltonai žalią šviesą ir praleidžia tik kraštines."
+    },
+    "log": {
+      "title": "Stebėjimų žurnalas",
+      "empty": "Kiekvieną kartą paėmus mėginį ir sudeginus, čia automatiškai pridedama eilutė.",
+      "sample": "Mėginys",
+      "cobalt": "Kobalto stiklas",
+      "color": "Liepsnos spalva",
+      "seen": "Atpažinti elementai",
+      "nothing": "Nėra",
+      "contaminated": "Užteršta ankstesniu mėginiu"
+    }
+  },
+  "clockLab": {
+    "setup": "Tirpalų paruošimas",
+    "ki": "KI koncentracija / mol·L⁻¹ (tirpalas A)",
+    "thio": "Na₂S₂O₃ koncentracija / mol·L⁻¹ (tirpalas A)",
+    "h2o2": "H₂O₂ koncentracija / mol·L⁻¹ (tirpalas B)",
+    "temp": "Termostatavimo temperatūra",
+    "starch": "Į tirpalą A pridėti krakmolo indikatorių",
+    "speed": "Laiko koeficientas",
+    "pour": "Įpilti tirpalą B ir pradėti laikmačio skaičiavimą",
+    "stop": "Sustabdyti laikmačio skaičiavimą",
+    "again": "Kartoti su kitomis sąlygomis",
+    "reset": "Išvalyti duomenis",
+    "readings": "Laiko matavimas",
+    "stopwatch": "Chronometras",
+    "theory": "Teorinis indukcijos periodas",
+    "slow": "Lėta",
+    "fast": "Momentinė",
+    "excessThio": "Na₂S₂O₃ ne mažiau kaip dvigubai viršija H₂O₂: susidaręs jodas visada redukuojamas, tirpalas nemėlynės.",
+    "overdue": "Praėjo 5 min., o spalva nepasikeitė. Patikrinkite receptūrą; galite paspausti „Sustabdyti laikmatį“ ir baigti šį bandymą.",
+    "noStarch": "Be krakmolo galutinį tašką matysite tik tada, kai jodo bus tiek, kad tirpalas pagels rudai – laikas bus ilgesnis.",
+    "chart": {
+      "title": "Duomenų apdorojimas: reakcijos eilė ir aktyvacijos energija",
+      "order": "Tiesės tiesinimo koeficientas ≈ {n}, t. y. I⁻ atžvilgiu reakcija yra {n} eilės (teorinė – 1 eilė)",
+      "orderHint": "Palaikykite pastovią temperatūrą, H₂O₂ ir Na₂S₂O₃ koncentracijas – keiskite tik KI koncentraciją bent dviem bandymais ir nustatykite I⁻ reakcijos eilę.",
+      "ea": "Iš tiesės koeficiento −Ea/R apskaičiuota aktyvacijos energija Ea ≈ {ea} kJ/mol (literatūros vertė ~56 kJ/mol)",
+      "eaHint": "Palikite receptūrą nepakitusią – keiskite tik temperatūrą bent dviem bandymais ir Areniuso lygtimi nustatykite aktyvacijos energiją.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatūra",
+        "time": "Mėlynėjimo laikas"
+      },
+      "withoutStarch": "Be krakmolo"
+    }
   }
 }

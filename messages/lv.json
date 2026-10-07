@@ -493,5 +493,148 @@
       "error": "Atšķirība no atzītās vērtības 96485 C/mol ir {pct}%",
       "ariaLabel": "Nogulsnētā vara masas izmaiņu grafiks atkarībā no elektriskā lādiņa, kopā {count} svēršanas punkti"
     }
+  },
+  "sodiumLab": {
+    "setup": "Eksperimenta soļi",
+    "pieceSize": "Nātrija gabala lielums",
+    "size": {
+      "small": "Zaļās pupiņas lielums",
+      "medium": "Sojas pupiņas lielums",
+      "large": "Liels gabals"
+    },
+    "largeWarning": "Liels nātrija gabals izdala daudz siltuma — var aizdedzināt ūdeņradi vai pat izraisīt sprādzienu un sārmaina šķidruma šļakatas. Īstā eksperimentā drīkst izmantot tikai zaļās pupiņas lieluma gabalu; šeit tas tiek demonstrēts tikai virtuālajā vidē.",
+    "cut": "Ar nazi nogriež virsmas oksīda kārtu",
+    "cutHint": "Nātrija virsmu klāj pelēcīgi balts oksīds — vispirms atklāj svaigu griezuma virsmu, tad iemet ūdenī. Pēc griešanas novēro, kā mainās griezuma virsmas spīdums.",
+    "phenol": "Pievieno ūdenim 2 pilienus fenolftaleīna",
+    "drop": "Ar pinceti iemet nātriju ūdenī",
+    "next": "Nomaina ūdeni un ņem jaunu gabalu",
+    "sound": "Skaņa",
+    "reset": "Atiestatīt",
+    "readings": "Rādījumi reāllaikā",
+    "remaining": "Atlikušais nātrijs",
+    "hydrogen": "Izveidojies ūdeņradis",
+    "waterTemp": "Ūdens temperatūra",
+    "burning": "Siltums aizdedzina izdalīto ūdeņradi — nātrijs deg dzeltenā liesmā",
+    "phenomenaTitle": "Parādības: peld, kūst, kustas, šņāc, sarkanē",
+    "phenomena": {
+      "float": {
+        "name": "Peld uz ūdens virsmas",
+        "why": "Nātrija blīvums ir 0,97 g/cm³ — mazāks nekā ūdenim."
+      },
+      "melt": {
+        "name": "Izkūst spīdīgā lodītē",
+        "why": "Reakcija izdala siltumu; nātrija kušanas temperatūra ir tikai 97,8 ℃, tāpēc tas ātri izkūst. Virsmas spraigums savelk to lodītē."
+      },
+      "swim": {
+        "name": "Pārvietojas pa ūdens virsmu",
+        "why": "Izveidotais ūdeņradis izplūst nevienmērīgi no dažādām lodītes pusēm un dzen to uz visām pusēm."
+      },
+      "hiss": {
+        "name": "Dzirdams šņākšanas troksnis",
+        "why": "Ūdeņradis strauji izplūst, un izdalītais siltums iztvaicē ūdeni kontaktpunktā."
+      },
+      "pink": {
+        "name": "Šķīdums kļūst sarkans",
+        "why": "Veidojas stiprā sārma NaOH; fenolftaleīns sārma vidē kļūst sarkans. Sarkana krāsa vispirms parādās nātrija lodītes atstātajā ceļā."
+      }
+    },
+    "pinkHint": "Bez fenolftaleīna nevar redzēt, ka veidojas sārms. Var pievienot to tagad — sārms jau atrodas ūdenī.",
+    "chart": {
+      "title": "Saražotā ūdeņraža tilpums laika gaitā",
+      "xAxis": "Laiks t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Ūdeņraža izdalīšanās līkne, pabeigti {count} gabali",
+      "mass": "Nātrija masa",
+      "measuredT": "Izmērītais reakcijas laiks",
+      "predictedT": "Prognozēts pēc m^(1/3)",
+      "volume": "Ūdeņraža tilpums",
+      "hint": "Pēc katra gabala šeit parādīsies ūdeņraža izdalīšanās līkne. Izmēģiniet dažāda izmēra nātriju un salīdziniet reakcijas laiku.",
+      "insight": "Nātrijs reaģē tikai virsmas slānī — rādiuss samazinās vienmērīgi, tāpēc reakcijas laiks ir proporcionāls rādiusam un arī masas kubsaknei: ja masa palielinās 8 reizes, laiks palielinās tikai aptuveni 2 reizes."
+    }
+  },
+  "flameLab": {
+    "setup": "Darbības",
+    "light": "Aizdedzināt Bunsena degļa",
+    "extinguish": "Izslēgt Bunsena degļa",
+    "wire": "Platīna stieple",
+    "dipAcid": "Iemērkt atšķaidītā sālsskābē",
+    "intoFlame": "Ievietot ārējā liesmā karsēšanai",
+    "outOfFlame": "Izņemt no liesmas",
+    "dipSample": "Iemērkt parauga šķīdumā",
+    "cobalt": "Novērot caur kobalta stiklu",
+    "reset": "Atiestatīt",
+    "readings": "Novērojumi",
+    "wireState": "Platīna stieple",
+    "clean": "Tīra",
+    "dirty": "Ar atliekām",
+    "seen": "Liesmā redzams",
+    "none": "Nav (liesma ir dabīgi gaiši zila)",
+    "cleanHint": "Platīna stieple karsēta liesmā vairs nedod krāsu — var iemērkt nākamajā paraugā.",
+    "dirtyHint": "Uz platīna stieples ir atliekas (jauna stieple bieži satur nātriju). Iemērciet atšķaidītā sālsskābē un karsējiet, atkārtojot vairākas reizes, līdz liesma vairs nekrāsojas; hlorīdi viegli iztvaikst, tāpēc šī metode ir daudz ātrāka nekā vienkārša karsēšana.",
+    "el": {
+      "Na": "Nātrijs",
+      "K": "Kālijs",
+      "Li": "Litijs",
+      "Ca": "Kalcijs",
+      "Sr": "Stroncijs",
+      "Ba": "Bārijs",
+      "Cu": "Varš"
+    },
+    "unknownTitle": "Identificēt nezināmo paraugu X",
+    "unknownHint": "Sadedziniet paraugu X un nosakiet, kurš metāla elements tajā ir. Piezīme: nātrija dzeltenā gaisma var maskēt kālija violeto gaismu.",
+    "correct": "Pareizi.",
+    "wrong": "Nepareizi. Pārbaudiet, vai platīna stieple ir labi nomazgāta, un ja nepieciešams, aplūkojiet liesmu caur kobalta stiklu.",
+    "spectro": {
+      "title": "Spektroskops: līnijspektrs",
+      "throughCobalt": "Caur kobalta stiklu",
+      "empty": "Ievietojiet paraugā iemērkto platīna stieple liesmā — šeit parādīsies liesmas spektrs.",
+      "explain": "Katrs elements izstaro gaismu tikai dažos fiksētos viļņu garumos — kā pirkstu nospiedums. Nātrijam raksturīgs dzeltenu līniju pāris pie 589 nm, kālijam — galvenās līnijas pie 766 nm (tumši sarkans) un 404 nm (violets), tāpēc kālija liesma izskatās gaiši violeta. Kobalta stikls absorbē vidējo dzeltenizaļo gaismu, caurlaidot tikai abus galus."
+    },
+    "log": {
+      "title": "Novērojumu žurnāls",
+      "empty": "Katru reizi, iemērcot paraugu un sadedzinot, šeit automātiski tiek pievienota jauna rinda.",
+      "sample": "Paraugs",
+      "cobalt": "Kobalta stikls",
+      "color": "Liesmas krāsa",
+      "seen": "Atpazīstamie elementi",
+      "nothing": "Nav",
+      "contaminated": "Piesārņots ar iepriekšējo paraugu"
+    }
+  },
+  "clockLab": {
+    "setup": "Sagatavot šķīdumus",
+    "ki": "KI koncentrācija / mol·L⁻¹ (šķīdums A)",
+    "thio": "Na₂S₂O₃ koncentrācija / mol·L⁻¹ (šķīdums A)",
+    "h2o2": "H₂O₂ koncentrācija / mol·L⁻¹ (šķīdums B)",
+    "temp": "Termostatēšanas temperatūra",
+    "starch": "Pievienot cietes indikatoru šķīdumam A",
+    "speed": "Laika reizinātājs",
+    "pour": "Ieliet šķīdumu B, sākt laika mērīšanu",
+    "stop": "Apturēt laika mērīšanu",
+    "again": "Mainīt nosacījumus un atkārtot",
+    "reset": "Notīrīt datus",
+    "readings": "Laika mērījumi",
+    "stopwatch": "Hronometrs",
+    "theory": "Teorētiskais indukcijas periods",
+    "slow": "Lēns",
+    "fast": "Tūlītējs",
+    "excessThio": "Na₂S₂O₃ vismaz divreiz vairāk nekā H₂O₂: radušais jods vienmēr tiks reducēts, šķīdums nekļūs zils.",
+    "overdue": "Pagājušas 5 minūtes bez krāsas maiņas. Pārbaudiet recepti; nospiediet «Apturēt mērījumu», lai beigtu šo reizi.",
+    "noStarch": "Bez cietes – gals redzams tikai tad, kad joda pietiek dzeltenbrūnai krāsai; mērījums var būt par garu.",
+    "chart": {
+      "title": "Datu apstrāde: reakcijas kārta un aktivācijas enerģija",
+      "order": "Aprēķinātais slīpums ≈ {n}, t.i., reakcijas kārta attiecībā pret I⁻ ir {n} (teorētiski 1. kārta)",
+      "orderHint": "Saglabājiet temperatūru, H₂O₂ un Na₂S₂O₃ nemainīgus; mainiet tikai KI koncentrāciju vismaz divos mērījumos, lai noteiktu reakcijas kārtu attiecībā pret I⁻.",
+      "ea": "No slīpuma −Ea/R iegūts: aktivācijas enerģija Ea ≈ {ea} kJ/mol (literatūras vērtība ~56 kJ/mol)",
+      "eaHint": "Saglabājiet recepti nemainīgu; mainiet tikai temperatūru vismaz divos mērījumos un aprēķiniet aktivācijas enerģiju pēc Arrēniusa formulas.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatūra",
+        "time": "Zilošanas laiks"
+      },
+      "withoutStarch": "Bez cietes"
+    }
   }
 }

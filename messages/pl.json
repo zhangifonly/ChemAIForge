@@ -493,5 +493,148 @@
       "error": "Odchylenie od wartości referencyjnej 96485 C/mol wynosi {pct}%",
       "ariaLabel": "Wykres masy wydzielonej miedzi w funkcji ładunku, liczba punktów pomiarowych: {count}"
     }
+  },
+  "sodiumLab": {
+    "setup": "Kroki eksperymentu",
+    "pieceSize": "Rozmiar kawałka sodu",
+    "size": {
+      "small": "Wielkość ziarna grochu",
+      "medium": "Wielkość ziarna soi",
+      "large": "Duży kawałek"
+    },
+    "largeWarning": "Duży kawałek sodu wydziela intensywne ciepło — może zapalić wodór, a nawet spowodować wybuch i rozbryzg ługu. W prawdziwym laboratorium używa się wyłącznie kawałków wielkości ziarna grochu. Tutaj opcja dostępna tylko w środowisku wirtualnym.",
+    "cut": "Nożykiem odciąć warstwę tlenków z powierzchni",
+    "cutHint": "Powierzchnia sodu pokryta jest szarawobiałym tlenkiem. Przed wrzuceniem do wody odciąć świeży przekrój. Po przecięciu obserwować zmiany połysku na powierzchni cięcia.",
+    "phenol": "Dodać 2 krople fenoloftaleiny do wody",
+    "drop": "Pincetą wrzucić sód do wody",
+    "next": "Wziąć świeżą szklankę wody i nowy kawałek sodu",
+    "sound": "Dźwięk",
+    "reset": "Resetuj",
+    "readings": "Odczyty w czasie rzeczywistym",
+    "remaining": "Pozostały sód",
+    "hydrogen": "Wytworzony wodór",
+    "waterTemp": "Temperatura wody",
+    "burning": "Ciepło reakcji zapala wydzielający się wodór — sód spala się żółtym płomieniem",
+    "phenomenaTitle": "Zjawiska: unosi się, topi, pływa, syczy, czerwienieje",
+    "phenomena": {
+      "float": {
+        "name": "Unosi się na powierzchni wody",
+        "why": "Gęstość sodu wynosi 0,97 g/cm³ — mniej niż wody."
+      },
+      "melt": {
+        "name": "Topi się w błyszczącą kulkę",
+        "why": "Reakcja wydziela ciepło; temperatura topnienia sodu wynosi tylko 97,8 ℃, więc szybko się topi. Napięcie powierzchniowe nadaje mu kulisty kształt."
+      },
+      "swim": {
+        "name": "Przemieszcza się po powierzchni wody",
+        "why": "Wytworzony wodór wydobywa się nierównomiernie ze wszystkich stron kulki, wprawiając ją w chaotyczny ruch."
+      },
+      "hiss": {
+        "name": "Wydaje syczący dźwięk",
+        "why": "Wodór gwałtownie się wydziela, a ciepło reakcji odparowuje wodę w miejscu kontaktu."
+      },
+      "pink": {
+        "name": "Roztwór zabarwia się na różowo",
+        "why": "Powstaje mocna zasada NaOH; fenoloftaleina czerwienieje w środowisku zasadowym. Zabarwienie pojawia się najpierw wzdłuż śladu, po którym przesuwała się kulka sodu."
+      }
+    },
+    "pinkHint": "Bez fenoloftaleiny nie widać, że powstała zasada. Można ją dodać teraz — zasada jest już w wodzie.",
+    "chart": {
+      "title": "Objętość wydzielonego wodoru w czasie",
+      "xAxis": "Czas t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Krzywa wydzielania wodoru, ukończono {count} próbek",
+      "mass": "Masa sodu",
+      "measuredT": "Zmierzony czas reakcji",
+      "predictedT": "Prognoza wg m^(1/3)",
+      "volume": "Objętość wodoru",
+      "hint": "Po każdej próbce pojawi się tu krzywa wydzielania wodoru. Zmieniaj rozmiar kawałka sodu i porównuj czasy reakcji.",
+      "insight": "Sód reaguje tylko na powierzchni kulki — promień maleje równomiernie, więc czas reakcji jest proporcjonalny do promienia, a tym samym do pierwiastka sześciennego z masy: gdy masa wzrośnie 8-krotnie, czas wydłuży się tylko około 2-krotnie."
+    }
+  },
+  "flameLab": {
+    "setup": "Instrukcja doświadczenia",
+    "light": "Zapal palnik Bunsena",
+    "extinguish": "Zgaś palnik Bunsena",
+    "wire": "Drut platynowy",
+    "dipAcid": "Zanurz w rozcieńczonym kwasie solnym",
+    "intoFlame": "Wprowadź w zewnętrzny płomień i żarz",
+    "outOfFlame": "Wysuń z płomienia",
+    "dipSample": "Zanurz w badanym roztworze",
+    "cobalt": "Obserwuj przez szkło kobaltowe",
+    "reset": "Resetuj",
+    "readings": "Obserwacje",
+    "wireState": "Drut platynowy",
+    "clean": "Czysty",
+    "dirty": "Z pozostałościami",
+    "seen": "Rozpoznawalne zabarwienie płomienia",
+    "none": "Brak (płomień ma naturalną bladoniebieską barwę)",
+    "cleanHint": "Drut platynowy żarzony w płomieniu nie wykazuje już zabarwienia — można zanurzyć go w kolejnej próbce.",
+    "dirtyHint": "Na drucie platynowym są pozostałości (nowe druty często zawierają ślady sodu). Zanurz w rozcieńczonym kwasie solnym i wyżarz; powtarzaj, aż płomień przestanie się barwić. Chlorki łatwo odparowują, więc ta metoda działa znacznie szybciej niż samo żarzenie.",
+    "el": {
+      "Na": "Sód",
+      "K": "Potas",
+      "Li": "Li",
+      "Ca": "Ca",
+      "Sr": "Sr",
+      "Ba": "Ba",
+      "Cu": "Cu"
+    },
+    "unknownTitle": "Identyfikacja nieznanej próbki X",
+    "unknownHint": "Spal próbkę X i określ, jaki metal zawiera. Uwaga: żółte światło sodu może maskować fioletowe światło potasu.",
+    "correct": "Odpowiedź prawidłowa.",
+    "wrong": "Nieprawidłowo. Sprawdź, czy drut platynowy jest czysty, i w razie potrzeby obserwuj przez szkło kobaltowe.",
+    "spectro": {
+      "title": "Spektroskop: widmo liniowe",
+      "throughCobalt": "Przez szkło kobaltowe",
+      "empty": "Wprowadź drut platynowy z próbką do płomienia, aby zobaczyć jego widmo.",
+      "explain": "Każdy pierwiastek emituje światło tylko na kilku określonych długościach fali — jak odcisk palca. Sód daje parę żółtych linii przy 589 nm, główne linie potasu leżą przy 766 nm (głęboka czerwień) i 404 nm (fiolet), dlatego płomień potasu ma barwę bladofioletową. Szkło kobaltowe pochłania żółtozieloną część widma, przepuszczając jedynie oba jego krańce."
+    },
+    "log": {
+      "title": "Dziennik obserwacji",
+      "empty": "Każde pobranie próbki i spalenie jest automatycznie rejestrowane jako nowy wpis.",
+      "sample": "Próbka",
+      "cobalt": "Szkło kobaltowe",
+      "color": "Barwa płomienia",
+      "seen": "Rozpoznane pierwiastki",
+      "nothing": "Brak",
+      "contaminated": "Zanieczyszczone poprzednią próbką"
+    }
+  },
+  "clockLab": {
+    "setup": "Przygotowanie roztworów",
+    "ki": "Stężenie KI / mol·L⁻¹ (roztwór A)",
+    "thio": "Stężenie Na₂S₂O₃ / mol·L⁻¹ (roztwór A)",
+    "h2o2": "Stężenie H₂O₂ / mol·L⁻¹ (roztwór B)",
+    "temp": "Temperatura termostatowania",
+    "starch": "Dodaj wskaźnik skrobiowy do roztworu A",
+    "speed": "Mnożnik czasu",
+    "pour": "Wlej roztwór B i rozpocznij pomiar czasu",
+    "stop": "Zatrzymaj pomiar czasu",
+    "again": "Zmień warunki i powtórz",
+    "reset": "Wyczyść dane",
+    "readings": "Pomiar czasu",
+    "stopwatch": "Stoper",
+    "theory": "Teoretyczny okres indukcji",
+    "slow": "Wolno",
+    "fast": "Natychmiast",
+    "excessThio": "Na₂S₂O₃ co najmniej dwukrotnie przekracza H₂O₂: powstający jod jest stale redukowany, roztwór nie zmieni barwy na niebieską.",
+    "overdue": "Minęło już 5 minut bez zmiany barwy. Sprawdź skład mieszaniny; możesz nacisnąć «Zatrzymaj stoper», aby zakończyć ten pomiar.",
+    "noStarch": "Bez skrobi koniec reakcji widoczny jest dopiero gdy jod nagromadzi się do żółtobrązowego zabarwienia — czas pomiaru będzie zawyżony.",
+    "chart": {
+      "title": "Analiza danych: rząd reakcji i energia aktywacji",
+      "order": "Dopasowany nachylenie ≈ {n}, tj. rząd względem I⁻ wynosi {n} (wartość teoretyczna: 1)",
+      "orderHint": "Przy stałej temperaturze, stężeniu H₂O₂ i Na₂S₂O₃ zmień tylko stężenie KI — wykonaj co najmniej dwa pomiary, aby wyznaczyć rząd reakcji względem I⁻.",
+      "ea": "Z nachylenia −Ea/R wyznaczono energię aktywacji Ea ≈ {ea} kJ/mol (wartość literaturowa ok. 56 kJ/mol)",
+      "eaHint": "Przy niezmienionej recepturze zmień tylko temperaturę — wykonaj co najmniej dwa pomiary i zastosuj równanie Arrheniusa, aby wyznaczyć energię aktywacji.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Czas zmiany barwy"
+      },
+      "withoutStarch": "Bez skrobi"
+    }
   }
 }

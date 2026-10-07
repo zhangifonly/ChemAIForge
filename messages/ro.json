@@ -493,5 +493,148 @@
       "error": "Diferență față de valoarea acceptată 96485 C/mol: {pct}%",
       "ariaLabel": "Grafic masa cuprului depus în funcție de sarcina electrică, {count} puncte de cântărire"
     }
+  },
+  "sodiumLab": {
+    "setup": "Pași experimentali",
+    "pieceSize": "Mărimea bucății de sodiu",
+    "size": {
+      "small": "Cât un bob de mazăre",
+      "medium": "Cât un bob de soia",
+      "large": "Bucată mare"
+    },
+    "largeWarning": "Bucățile mari de sodiu degajă căldură intensă, pot aprinde hidrogenul și chiar provoca o explozie sau stropi cu soluție alcalină. În experimentele reale se folosesc doar bucăți cât un bob de mazăre; această opțiune este disponibilă exclusiv în mediul virtual.",
+    "cut": "Tăiați stratul de oxid de pe suprafață cu cuțitul mic",
+    "cutHint": "Suprafața sodiului este acoperită cu un oxid cenușiu-albicios. Tăiați pentru a expune o secțiune proaspătă înainte de a o introduce în apă. După tăiere, observați cu atenție cum se schimbă luciul secțiunii.",
+    "phenol": "Adăugați 2 picături de fenolftaleină în apă",
+    "drop": "Introduceți sodiul în apă cu penseta",
+    "next": "Înlocuiți cu un pahar cu apă curată și luați o bucată nouă",
+    "sound": "Sunet",
+    "reset": "Resetare",
+    "readings": "Citiri în timp real",
+    "remaining": "Sodiu rămas",
+    "hydrogen": "Hidrogen generat",
+    "waterTemp": "Temperatura apei",
+    "burning": "Căldura degajată aprinde hidrogenul eliberat; sodiul arde cu flacără galbenă",
+    "phenomenaTitle": "Fenomene: plutire, topire, mișcare, șuierat, roșire",
+    "phenomena": {
+      "float": {
+        "name": "Plutește la suprafața apei",
+        "why": "Densitatea sodiului este 0,97 g/cm³, mai mică decât a apei."
+      },
+      "melt": {
+        "name": "Se topește într-o sferă strălucitoare",
+        "why": "Reacția este exotermă; punctul de topire al sodiului este doar 97,8 ℃, astfel că se topește rapid, iar tensiunea superficială îl strânge într-o sferă."
+      },
+      "swim": {
+        "name": "Se deplasează în toate direcțiile la suprafața apei",
+        "why": "Hidrogenul generat este expulzat neuniform din toate direcțiile sferei, împingând-o în mișcare haotică."
+      },
+      "hiss": {
+        "name": "Produce un șuierat",
+        "why": "Hidrogenul se degajă rapid, iar căldura vaporizează apa din zona de contact."
+      },
+      "pink": {
+        "name": "Soluția devine roșie",
+        "why": "Se formează baza tare NaOH; fenolftaleina virează în roșu în mediu alcalin. Culoarea apare mai întâi pe traseul parcurs de sfera de sodiu."
+      }
+    },
+    "pinkHint": "Fără fenolftaleină, formarea bazei nu este vizibilă. Puteți adăuga acum câteva picături — baza este deja în apă.",
+    "chart": {
+      "title": "Variația volumului de hidrogen produs în timp",
+      "xAxis": "Timp t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Curbă de producere a hidrogenului, {count} blocuri finalizate",
+      "mass": "Masa sodiului",
+      "measuredT": "Durată reacție măsurată",
+      "predictedT": "Predicție după m^(1/3)",
+      "volume": "Volumul hidrogenului",
+      "hint": "După fiecare bloc, aici va apărea curba de producere a hidrogenului. Folosiți bucăți de sodiu de mărimi diferite și comparați duratele de reacție.",
+      "insight": "Sodiul reacționează doar la suprafața sferei; raza scade uniform, deci durata reacției este proporțională cu raza, adică cu rădăcina cubică a masei: dacă masa crește de 8 ori, durata crește doar de aproximativ 2 ori."
+    }
+  },
+  "flameLab": {
+    "setup": "Procedură experimentală",
+    "light": "Aprindeți becul Bunsen",
+    "extinguish": "Stingeți becul Bunsen",
+    "wire": "Sârmă de platină",
+    "dipAcid": "Înmuiați în acid clorhidric diluat",
+    "intoFlame": "Introduceți în flacăra exterioară",
+    "outOfFlame": "Scoateți din flacără",
+    "dipSample": "Înmuiați în soluția de analizat",
+    "cobalt": "Observați prin sticla de cobalt",
+    "reset": "Resetare",
+    "readings": "Observații",
+    "wireState": "Sârmă de platină",
+    "clean": "Curată",
+    "dirty": "Cu reziduuri",
+    "seen": "Culoare identificabilă în flacără",
+    "none": "Niciuna (flacără albastru pal)",
+    "cleanHint": "Sârma de platină nu mai colorează flacăra; poate fi înmuiată în următoarea probă.",
+    "dirtyHint": "Sârma de platină are reziduuri (sârma nouă conține adesea urme de sodiu). Înmuiați în acid clorhidric diluat și calcinați; repetați până când flacăra nu mai apare colorată — clorurile sunt volatile și accelerează curățarea față de calcinare simplă.",
+    "el": {
+      "Na": "Sodiu",
+      "K": "Potasiu",
+      "Li": "Litiu",
+      "Ca": "Calciu",
+      "Sr": "Stronțiu",
+      "Ba": "Bariu",
+      "Cu": "Cupru"
+    },
+    "unknownTitle": "Identificarea probei necunoscute X",
+    "unknownHint": "Ardeți proba X pentru a determina ce element metalic conține. Atenție: lumina galbenă a sodiului poate masca lumina violetă a potasiului.",
+    "correct": "Identificare corectă.",
+    "wrong": "Incorect. Verificați dacă sârma de platină este curată și, dacă este necesar, priviți din nou prin sticla de cobalt.",
+    "spectro": {
+      "title": "Spectroscop: spectru de linii",
+      "throughCobalt": "Prin sticlă de cobalt",
+      "empty": "Introduceți sârma de platină cu probă în flacără pentru a afișa spectrul acesteia.",
+      "explain": "Fiecare element emite lumină doar la câteva lungimi de undă fixe, ca o amprentă. Sodiul are o pereche de linii galbene la 589 nm; liniile principale ale potasiului sunt la 766 nm (roșu închis) și 404 nm (violet), de aceea flacăra de potasiu apare violet deschis. Sticla de cobalt absoarbe lumina galben-verde din mijlocul spectrului, lăsând să treacă doar capetele."
+    },
+    "log": {
+      "title": "Jurnal de observații",
+      "empty": "La fiecare ardere a unei probe, se adaugă automat o linie aici.",
+      "sample": "Probă",
+      "cobalt": "Sticlă de cobalt",
+      "color": "Culoarea flăcării",
+      "seen": "Elemente identificate",
+      "nothing": "Niciunul",
+      "contaminated": "Contaminat de proba anterioară"
+    }
+  },
+  "clockLab": {
+    "setup": "Preparare soluții",
+    "ki": "Concentrație KI / mol·L⁻¹ (soluția A)",
+    "thio": "Concentrație Na₂S₂O₃ / mol·L⁻¹ (soluția A)",
+    "h2o2": "Concentrație H₂O₂ / mol·L⁻¹ (soluția B)",
+    "temp": "Temperatură termostat",
+    "starch": "Adăugați indicator de amidon în soluția A",
+    "speed": "Multiplicator de viteză",
+    "pour": "Turnați soluția B și porniți cronometrul",
+    "stop": "Opriți cronometrul",
+    "again": "Încearcă cu alte condiții",
+    "reset": "Șterge datele",
+    "readings": "Cronometrare",
+    "stopwatch": "Cronometru",
+    "theory": "Perioadă de inducție teoretică",
+    "slow": "Lent",
+    "fast": "Instantaneu",
+    "excessThio": "Na₂S₂O₃ cel puțin dublu față de H₂O₂: iodul format va fi mereu redus, soluția nu va deveni albastră.",
+    "overdue": "Au trecut 5 minute fără schimbare de culoare. Verificați rețeta; apăsați «Oprește cronometrul» pentru a încheia.",
+    "noStarch": "Fără amidon, punctul final apare abia când iodul acumulat dă culoarea galben-brună — cronometrarea va fi mai lungă.",
+    "chart": {
+      "title": "Prelucrarea datelor: ordinul de reacție și energia de activare",
+      "order": "Pantă ajustată ≈ {n}, adică ordinul față de I⁻ este {n} (teoretic 1)",
+      "orderHint": "Mențineți temperatura, H₂O₂ și Na₂S₂O₃ constante; variați doar concentrația KI în cel puțin două experimente pentru a determina ordinul față de I⁻.",
+      "ea": "Din panta −Ea/R se obține energia de activare Ea ≈ {ea} kJ/mol (valoare bibliografică aprox. 56 kJ/mol)",
+      "eaHint": "Mențineți rețeta constantă; variați doar temperatura în cel puțin două experimente și aplicați ecuația Arrhenius pentru a calcula energia de activare.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatură",
+        "time": "Timp până la albăstrire"
+      },
+      "withoutStarch": "Fără amidon"
+    }
   }
 }

@@ -29,6 +29,8 @@ export interface SceneShellProps {
   fov?: number;
   /** 外层容器附加类名（如网格排序），与控制高度的 className 分开 */
   wrapperClassName?: string;
+  /** dim：调暗室内灯光（焰色反应等需要暗环境才看得清的实验） */
+  mood?: "day" | "dim";
 }
 
 export function SceneShell({
@@ -44,7 +46,9 @@ export function SceneShell({
   hintTouch,
   fov = 40,
   wrapperClassName = "",
+  mood = "day",
 }: SceneShellProps) {
+  const dim = mood === "dim";
   const t = useTranslations("workbench");
   // 默认提示语在函数体内取，参数默认值处拿不到 hook
   // 触屏设备没有滚轮：「滚轮缩放」在手机上是做不到的操作。
@@ -77,11 +81,11 @@ export function SceneShell({
         // ACES 色调映射 + 略低曝光：避免浅色台面在强光下过曝成白块把玻璃器皿"吃掉"
         gl={{ antialias: true, alpha: false, toneMappingExposure: 0.92 }}
       >
-        <color attach="background" args={["#d3dce4"]} />
-        <ambientLight intensity={0.7} />
+        <color attach="background" args={[dim ? "#1a1f25" : "#d3dce4"]} />
+        <ambientLight intensity={dim ? 0.14 : 0.7} />
         <directionalLight
           position={[4, 7, 4]}
-          intensity={1.35}
+          intensity={dim ? 0.22 : 1.35}
           castShadow
           shadow-mapSize={[2048, 2048]}
           shadow-camera-near={0.5}
@@ -90,7 +94,7 @@ export function SceneShell({
         <Suspense fallback={null}>
           {children}
           {/* 程序化环境光：自发光面光源构成反射环境，无需外网 HDR */}
-          <Environment resolution={256}>
+          <Environment resolution={256} environmentIntensity={dim ? 0.18 : 1}>
             <Lightformer intensity={2} position={[0, 3, 2]} scale={[4, 4, 1]} color="#ffffff" />
             <Lightformer intensity={1.2} position={[-3, 1, 1]} scale={[3, 3, 1]} color="#bcd8ff" />
             <Lightformer intensity={1} position={[3, 1, -1]} scale={[3, 3, 1]} color="#ffe6c4" />

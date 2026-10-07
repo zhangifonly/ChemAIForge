@@ -493,5 +493,148 @@
       "error": "Sai lệch so với giá trị chấp nhận 96485 C/mol là {pct}%",
       "ariaLabel": "Biểu đồ khối lượng đồng bám catốt theo điện lượng, gồm {count} điểm cân"
     }
+  },
+  "sodiumLab": {
+    "setup": "Các bước thí nghiệm",
+    "pieceSize": "Kích thước miếng natri",
+    "size": {
+      "small": "Cỡ hạt đậu xanh",
+      "medium": "Cỡ hạt đậu nành",
+      "large": "Miếng lớn"
+    },
+    "largeWarning": "Miếng natri lớn tỏa nhiệt mạnh, có thể đốt cháy khí hiđro và gây nổ, bắn kiềm ra ngoài. Trong thực nghiệm thật chỉ được lấy cỡ hạt đậu xanh; ở đây chỉ minh họa trong môi trường ảo.",
+    "cut": "Dùng dao nhỏ cắt bỏ lớp oxit trên bề mặt",
+    "cutHint": "Bề mặt natri có một lớp oxit xám trắng; hãy cắt để lộ mặt cắt mới rồi mới thả vào nước. Sau khi cắt, chú ý quan sát sự thay đổi độ bóng của mặt cắt.",
+    "phenol": "Nhỏ 2 giọt phenolphtalein vào nước",
+    "drop": "Dùng kẹp thả natri vào nước",
+    "next": "Thay cốc nước mới, lấy thêm một miếng",
+    "sound": "Âm thanh",
+    "reset": "Đặt lại",
+    "readings": "Số liệu thời gian thực",
+    "remaining": "Natri còn lại",
+    "hydrogen": "Khí hiđro sinh ra",
+    "waterTemp": "Nhiệt độ nước",
+    "burning": "Nhiệt tỏa ra làm khí hiđro thoát ra bắt cháy, natri cháy với ngọn lửa màu vàng",
+    "phenomenaTitle": "Hiện tượng: nổi, tan chảy, chạy, kêu, đỏ",
+    "phenomena": {
+      "float": {
+        "name": "Nổi trên mặt nước",
+        "why": "Khối lượng riêng của natri là 0,97 g/cm³, nhỏ hơn nước."
+      },
+      "melt": {
+        "name": "Tan chảy thành viên cầu sáng bóng",
+        "why": "Phản ứng tỏa nhiệt; điểm nóng chảy của natri chỉ 97,8 ℃ nên tan chảy rất nhanh; sức căng bề mặt khiến nó co lại thành hình cầu."
+      },
+      "swim": {
+        "name": "Chạy tứ phía trên mặt nước",
+        "why": "Khí hiđro sinh ra phun không đều từ các phía của viên cầu, đẩy viên cầu chạy loạn."
+      },
+      "hiss": {
+        "name": "Phát ra tiếng xèo xèo",
+        "why": "Khí hiđro thoát ra nhanh; nhiệt tỏa ra làm nước tại chỗ tiếp xúc hóa hơi."
+      },
+      "pink": {
+        "name": "Dung dịch chuyển sang màu đỏ",
+        "why": "NaOH kiềm mạnh được tạo ra; phenolphtalein chuyển đỏ trong môi trường kiềm; màu đỏ xuất hiện trước tiên theo vệt đường đi của viên natri."
+      }
+    },
+    "pinkHint": "Chưa nhỏ phenolphtalein nên không thấy kiềm sinh ra. Nhỏ bổ sung bây giờ cũng được: kiềm đã có trong nước rồi.",
+    "chart": {
+      "title": "Thể tích khí hiđro sinh ra theo thời gian",
+      "xAxis": "Thời gian t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Đường cong sinh khí hiđro, đã hoàn thành {count} mẫu",
+      "mass": "Khối lượng natri",
+      "measuredT": "Thời gian phản ứng đo được",
+      "predictedT": "Dự đoán theo m^(1/3)",
+      "volume": "Thể tích khí hiđro",
+      "hint": "Hoàn thành một mẫu, đường cong sinh khí hiđro sẽ được vẽ ở đây. Thử các kích thước natri khác nhau để so sánh thời gian phản ứng.",
+      "insight": "Natri chỉ phản ứng trên bề mặt viên cầu, bán kính giảm đều, nên thời gian phản ứng tỉ lệ thuận với bán kính, tức là tỉ lệ thuận với căn bậc ba của khối lượng: khối lượng tăng 8 lần, thời gian chỉ tăng khoảng 2 lần."
+    }
+  },
+  "flameLab": {
+    "setup": "Thao tác thí nghiệm",
+    "light": "Thắp đèn Bunsen",
+    "extinguish": "Tắt đèn Bunsen",
+    "wire": "Dây platin",
+    "dipAcid": "Nhúng vào axit clohiđric loãng",
+    "intoFlame": "Đưa vào ngọn lửa ngoài để nung",
+    "outOfFlame": "Rút ra khỏi ngọn lửa",
+    "dipSample": "Nhúng vào dung dịch mẫu",
+    "cobalt": "Quan sát qua kính coban",
+    "reset": "Đặt lại",
+    "readings": "Quan sát",
+    "wireState": "Dây platin",
+    "clean": "Sạch",
+    "dirty": "Còn tạp chất",
+    "seen": "Nhận biết được trong ngọn lửa",
+    "none": "Không có (ngọn lửa xanh nhạt tự nhiên)",
+    "cleanHint": "Dây platin nung trong ngọn lửa không còn hiện màu, có thể nhúng vào mẫu tiếp theo.",
+    "dirtyHint": "Dây platin còn tạp chất (dây mới cũng thường nhiễm natri). Nhúng vào axit clohiđric loãng rồi nung, lặp lại vài lần cho đến khi ngọn lửa không còn hiện màu; clorua dễ bay hơi nên nhanh hơn nhiều so với chỉ nung không.",
+    "el": {
+      "Na": "Natri",
+      "K": "Kali",
+      "Li": "Liti",
+      "Ca": "Canxi",
+      "Sr": "Stronti",
+      "Ba": "Bari",
+      "Cu": "Đồng"
+    },
+    "unknownTitle": "Nhận biết mẫu chưa biết X",
+    "unknownHint": "Đốt mẫu X, xác định kim loại có trong mẫu. Lưu ý: ánh sáng vàng của natri có thể che khuất ánh sáng tím của kali.",
+    "correct": "Nhận định đúng.",
+    "wrong": "Chưa đúng. Kiểm tra xem dây platin đã rửa sạch chưa, nếu cần hãy quan sát lại qua kính coban.",
+    "spectro": {
+      "title": "Máy quang phổ: quang phổ vạch",
+      "throughCobalt": "Qua kính coban",
+      "empty": "Đưa dây platin đã nhúng mẫu vào ngọn lửa để hiển thị quang phổ ngọn lửa tại đây.",
+      "explain": "Mỗi nguyên tố chỉ phát sáng ở một vài bước sóng cố định, như dấu vân tay. Natri có cặp vạch vàng ở 589 nm; vạch chính của kali ở 766 nm (đỏ thẫm) và 404 nm (tím), nên ngọn lửa kali có màu tím nhạt. Kính coban hấp thụ ánh vàng lục ở giữa, chỉ cho hai đầu phổ truyền qua."
+    },
+    "log": {
+      "title": "Nhật ký quan sát",
+      "empty": "Mỗi lần nhúng mẫu và đốt, một dòng sẽ tự động được ghi lại tại đây.",
+      "sample": "Mẫu",
+      "cobalt": "Kính coban",
+      "color": "Màu ngọn lửa",
+      "seen": "Nguyên tố nhận biết được",
+      "nothing": "Không có",
+      "contaminated": "Bị nhiễm từ mẫu trước"
+    }
+  },
+  "clockLab": {
+    "setup": "Chuẩn bị dung dịch",
+    "ki": "Nồng độ KI / mol·L⁻¹ (dung dịch A)",
+    "thio": "Nồng độ Na₂S₂O₃ / mol·L⁻¹ (dung dịch A)",
+    "h2o2": "Nồng độ H₂O₂ / mol·L⁻¹ (dung dịch B)",
+    "temp": "Nhiệt độ hằng nhiệt",
+    "starch": "Thêm chỉ thị tinh bột vào dung dịch A",
+    "speed": "Hệ số tốc độ thời gian",
+    "pour": "Rót dung dịch B vào, bắt đầu tính giờ",
+    "stop": "Dừng tính giờ",
+    "again": "Thử lại với điều kiện khác",
+    "reset": "Xóa dữ liệu",
+    "readings": "Bấm giờ",
+    "stopwatch": "Đồng hồ bấm giây",
+    "theory": "Thời gian cảm ứng lý thuyết",
+    "slow": "Chậm",
+    "fast": "Tức thì",
+    "excessThio": "Na₂S₂O₃ gấp đôi H₂O₂ trở lên: iot sinh ra luôn bị khử, dung dịch không chuyển xanh.",
+    "overdue": "Đã hơn 5 phút mà chưa đổi màu. Kiểm tra lại công thức, có thể nhấn “Dừng bấm giờ” để kết thúc lần này.",
+    "noStarch": "Không có tinh bột — chỉ nhận ra điểm cuối khi iot đủ nhiều để hiện màu vàng nâu, thời gian đo sẽ bị dài hơn.",
+    "chart": {
+      "title": "Xử lý số liệu: Bậc phản ứng và năng lượng hoạt hóa",
+      "order": "Độ dốc hồi quy ≈ {n}, tức bậc theo I⁻ là {n} (lý thuyết: bậc 1)",
+      "orderHint": "Giữ nguyên nhiệt độ, H₂O₂, Na₂S₂O₃; chỉ thay đổi nồng độ KI ít nhất hai lần để xác định bậc theo I⁻.",
+      "ea": "Từ độ dốc −Ea/R suy ra năng lượng hoạt hóa Ea ≈ {ea} kJ/mol (tài liệu: ~56 kJ/mol)",
+      "eaHint": "Giữ nguyên công thức, chỉ thay đổi nhiệt độ ít nhất hai lần, dùng phương trình Arrhenius để tính năng lượng hoạt hóa.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Nhiệt độ",
+        "time": "Thời gian chuyển xanh"
+      },
+      "withoutStarch": "Không có tinh bột"
+    }
   }
 }

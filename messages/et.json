@@ -493,5 +493,148 @@
       "error": "Erinevus üldtunnustatud väärtusest 96485 C/mol on {pct}%",
       "ariaLabel": "Sadestunud vaske massi muutus laengu järgi, kokku {count} kaalumispunkti"
     }
+  },
+  "sodiumLab": {
+    "setup": "Katsejuhend",
+    "pieceSize": "Naatriumitüki suurus",
+    "size": {
+      "small": "Hernetera suurune",
+      "medium": "Oa suurune",
+      "large": "Suur tükk"
+    },
+    "largeWarning": "Suur naatriumitükk eraldab soojust intensiivselt, võib süüdata vesiniku ja põhjustada isegi plahvatuse ning leelisepritsmed. Päriselus võib kasutada ainult hernetera suurust tükki — siin näidatakse seda ainult virtuaalkeskkonnas.",
+    "cut": "Lõika nugaga pindmine oksiidikiht ära",
+    "cutHint": "Naatriumil on hallvalge oksiidikiht. Lõika värske pind paljaks, seejärel lisa vette. Pärast lõikamist jälgi, kuidas lõikepinna läige muutub.",
+    "phenol": "Lisa vette 2 tilka fenoolftaleiin",
+    "drop": "Lisa naatrium pintseti abil vette",
+    "next": "Vaheta vesi välja ja võta uus tükk",
+    "sound": "Heli",
+    "reset": "Lähtesta",
+    "readings": "Reaalajanäidud",
+    "remaining": "Naatriumi jääk",
+    "hydrogen": "Eraldunud vesinik",
+    "waterTemp": "Vee temperatuur",
+    "burning": "Eralduv soojus süütab vesiniku, naatrium põleb kollase leegiga",
+    "phenomenaTitle": "Nähtused: ujub, sulab, liigub, susiseb, punastub",
+    "phenomena": {
+      "float": {
+        "name": "Ujub veepinnal",
+        "why": "Naatriumit tihedus on 0,97 g/cm³, mis on väiksem kui veel."
+      },
+      "melt": {
+        "name": "Sulab läikivaks palliks",
+        "why": "Reaktsioon eraldab soojust; naatriumit sulamistemperatuur on vaid 97,8 ℃, mistõttu see sulab kiiresti. Pindpinevus muudab selle palliks."
+      },
+      "swim": {
+        "name": "Liigub veepinnal ringi",
+        "why": "Vesinik eraldub pallist ebaühtlaselt igast suunast ja lükkab palli edasi."
+      },
+      "hiss": {
+        "name": "Kostab susisev heli",
+        "why": "Vesinik eraldub kiiresti ning soojus aurustab kokkupuutekohta vee."
+      },
+      "pink": {
+        "name": "Lahus muutub roosaks",
+        "why": "Tekib tugev alus NaOH; fenoolftaleiin värvub alusega kokkupuutel roosaks. Värv ilmub esmalt naatriumipalli liikumisrajale."
+      }
+    },
+    "pinkHint": "Fenoolftaleiin polnud lisatud, mistõttu aluse teket pole näha. Võid selle nüüd lisada — alus on juba vees.",
+    "chart": {
+      "title": "Tekkinud vesiniku ruumala ajas",
+      "xAxis": "Aeg t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Vesiniku eraldumise kõver, {count} katset lõpetatud",
+      "mass": "Naatriumi mass",
+      "measuredT": "Mõõdetud reaktsiooniaeg",
+      "predictedT": "Ennustus m^(1/3) järgi",
+      "volume": "Vesiniku ruumala",
+      "hint": "Pärast iga katset ilmub siia vesiniku eraldumise kõver. Proovi erineva suurusega naatriumi ja võrdle reaktsiooniaegu.",
+      "insight": "Naatrium reageerib ainult kera pinnal ning raadius kahaneb ühtlaselt, seega reaktsiooniaeg on võrdeline raadiusega – st massi kuupjuurega: kui mass kasvab 8 korda, pikeneb reaktsiooniaeg vaid umbes 2 korda."
+    }
+  },
+  "flameLab": {
+    "setup": "Katse läbiviimine",
+    "light": "Süüta Bunseni põleti",
+    "extinguish": "Kustuta Bunseni põleti",
+    "wire": "Plaatinatraat",
+    "dipAcid": "Kasta lahjendatud vesinikkloriidhappesse",
+    "intoFlame": "Vii välisleeki põletama",
+    "outOfFlame": "Eemalda leegist",
+    "dipSample": "Kasta proovlahusesse",
+    "cobalt": "Vaata läbi kobaltsinise klaasi",
+    "reset": "Lähtesta",
+    "readings": "Vaatlused",
+    "wireState": "Plaatinatraat",
+    "clean": "Puhas",
+    "dirty": "Jääke on",
+    "seen": "Leegis tuvastatav",
+    "none": "Puudub (leek on loomuliku helesinine)",
+    "cleanHint": "Plaatinatraat ei anna leegis enam värvi – saab järgmise proovi sisse kasta.",
+    "dirtyHint": "Plaatinatraadil on jääke (uuel traadisel on sageli naatriumi). Kasta lahjendatud vesinikkloriidhappesse ja põleta leegis, korda mitu korda, kuni leek enam värvi ei anna; kloriidid aurustuvad kergesti, mis on palju kiirem kui pelk põletamine.",
+    "el": {
+      "Na": "Naatrium",
+      "K": "Kaalium",
+      "Li": "Liitium",
+      "Ca": "Kaltsium",
+      "Sr": "Strontsium",
+      "Ba": "Baarium",
+      "Cu": "Vask"
+    },
+    "unknownTitle": "Tundmatu proovi X tuvastamine",
+    "unknownHint": "Põletage proovi X ja määrake, milline metallielement see sisaldab. Märkus: naatriumi kollane valgus võib kaaliumile omase violetse valguse varjata.",
+    "correct": "Vastus on õige.",
+    "wrong": "Vale. Kontrollige, kas plaatinatraat on puhas, ja vaadake vajadusel uuesti läbi kobaltklaaside.",
+    "spectro": {
+      "title": "Spektroskoop: joonspekter",
+      "throughCobalt": "Läbi kobaltklaasi",
+      "empty": "Asetage proovist niisutatud plaatinatraat leeki – siin kuvatakse leegi spekter.",
+      "explain": "Iga element kiirgab valgust ainult teatud kindlatel lainepikkustel, nagu sõrmejälg. Naatriumile on iseloomulik kollaste joonte paar 589 nm juures, kaaliumil on põhijooned 766 nm (tumepunane) ja 404 nm (violetne) juures, mistõttu kaaliumi leek on helekollakasvioletne. Kobaltklaas neelab keskmise kollakasrohelise valguse ja laseb läbi ainult mõlemad äärealad."
+    },
+    "log": {
+      "title": "Vaatlusprotokoll",
+      "empty": "Iga kord, kui proovi niisutate ja põletate, lisatakse siia automaatselt kirje.",
+      "sample": "Proov",
+      "cobalt": "Kobaltklaas",
+      "color": "Leegi värvus",
+      "seen": "Tuvastatavad elemendid",
+      "nothing": "Puudub",
+      "contaminated": "Eelmise proobi saaste"
+    }
+  },
+  "clockLab": {
+    "setup": "Lahuste valmistamine",
+    "ki": "KI kontsentratsioon / mol·L⁻¹ (lahus A)",
+    "thio": "Na₂S₂O₃ kontsentratsioon / mol·L⁻¹ (lahus A)",
+    "h2o2": "H₂O₂ kontsentratsioon / mol·L⁻¹ (lahus B)",
+    "temp": "Termostaadi temperatuur",
+    "starch": "Lisa lahusele A tärklisindikaat",
+    "speed": "Ajamäär",
+    "pour": "Vala lahus B sisse ja käivita taimer",
+    "stop": "Peata taimer",
+    "again": "Proovi teiste tingimustega",
+    "reset": "Tühjenda andmed",
+    "readings": "Ajamõõtmine",
+    "stopwatch": "Stopper",
+    "theory": "Teoreetiline induktsiooniperiood",
+    "slow": "Aeglane",
+    "fast": "Kohene",
+    "excessThio": "Na₂S₂O₃ on vähemalt kaks korda rohkem kui H₂O₂: tekkiv jood redutseeritakse alati, lahus ei muutu siniseks.",
+    "overdue": "5 minutit on möödunud, kuid värvus ei ole muutunud. Kontrolli retsepti; ajamõõtmise saab lõpetada nupuga „Peata stopper“.",
+    "noStarch": "Tärklis puudub – lõpp-punkti näeb alles siis, kui joodi on piisavalt kollakaspruuni värvuse tekkimiseks; mõõdetud aeg on tegelikust pikem.",
+    "chart": {
+      "title": "Andmetöötlus: reaktsioonijärk ja aktivatsioonienergia",
+      "order": "Sobitatud kalle ≈ {n}, st I⁻ suhtes {n}. järku (teoreetiline 1. järk)",
+      "orderHint": "Hoia temperatuur, H₂O₂ ja Na₂S₂O₃ muutumatuna; muuda ainult KI kontsentratsiooni vähemalt kahes katses, et leida reaktsioonijärk I⁻ suhtes.",
+      "ea": "Kallest −Ea/R leitud aktivatsioonienergia Ea ≈ {ea} kJ/mol (kirjanduse väärtus ≈ 56 kJ/mol)",
+      "eaHint": "Hoia retsept muutumatuna; muuda ainult temperatuuri vähemalt kahes katses ja kasuta Arrheniuse valemit aktivatsiooniaenergia leidmiseks.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatuur",
+        "time": "Siniseks muutumise aeg"
+      },
+      "withoutStarch": "Tärklis puudub"
+    }
   }
 }

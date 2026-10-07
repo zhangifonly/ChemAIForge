@@ -493,5 +493,148 @@
       "error": "Avvikelse från accepterat värde 96485 C/mol: {pct}%",
       "ariaLabel": "Graf över utfälld kopparmassa som funktion av laddning, totalt {count} vägningspunkter"
     }
+  },
+  "sodiumLab": {
+    "setup": "Experimentsteg",
+    "pieceSize": "Natriumbitens storlek",
+    "size": {
+      "small": "Linsfröstor",
+      "medium": "Sojabönsstor",
+      "large": "Stor bit"
+    },
+    "largeWarning": "En stor natriumbit avger kraftig värme, vilket kan antända vätgas och orsaka knall eller stänk av lut. I verkliga experiment får man bara använda linsfröstor – detta visas här enbart i virtuell miljö.",
+    "cut": "Skär bort oxidskiktet på ytan med kniv",
+    "cutHint": "Natriumytan täcks av ett gråvitt oxidskikt – skär fram ett färskt snitt innan du lägger i biten. Observera hur ytans glans förändras efter snittet.",
+    "phenol": "Tillsätt 2 droppar fenolftalein i vattnet",
+    "drop": "Lägg i natriumbiten i vattnet med pincett",
+    "next": "Byt till ett nytt glas vatten och ta en ny bit",
+    "sound": "Ljud",
+    "reset": "Återställ",
+    "readings": "Realtidsavläsning",
+    "remaining": "Kvarvarande natrium",
+    "hydrogen": "Genererad vätgas",
+    "waterTemp": "Vattentemperatur",
+    "burning": "Värmen antänder den frigjorda vätgasen – natrium brinner med gul låga",
+    "phenomenaTitle": "Fenomen: flyter, smälter, rör sig, väser, rodnar",
+    "phenomena": {
+      "float": {
+        "name": "Flyter på vattenytan",
+        "why": "Natriums densitet är 0,97 g/cm³, lägre än vattnets."
+      },
+      "melt": {
+        "name": "Smälter till en glänsande liten kula",
+        "why": "Reaktionen avger värme; natriums smältpunkt är bara 97,8 ℃ så det smälter snabbt. Ytspänningen drar ihop det till en kula."
+      },
+      "swim": {
+        "name": "Rör sig åt olika håll på vattenytan",
+        "why": "Den bildade vätgasen strömmar ojämnt ut från kulans alla sidor och driver den kring ytan."
+      },
+      "hiss": {
+        "name": "Avger ett väsande ljud",
+        "why": "Vätgasen frigörs snabbt och värmen förångar vattnet vid kontaktytan."
+      },
+      "pink": {
+        "name": "Lösningen färgas röd",
+        "why": "Den starka basen NaOH bildas och fenolftalein blir rött i basisk miljö. Rödfärgningen uppträder först längs den bana natriumkulan rört sig."
+      }
+    },
+    "pinkHint": "Ingen fenolftalein tillsattes, så basbildningen syns inte. Det går bra att tillsätta det nu – basen finns redan i vattnet.",
+    "chart": {
+      "title": "Producerad vätgasvolym över tid",
+      "xAxis": "Tid t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Vätgaskurva, {count} prov genomförda",
+      "mass": "Natriummassa",
+      "measuredT": "Uppmätt reaktionstid",
+      "predictedT": "Förutsagt enligt m^(1/3)",
+      "volume": "Vätgasvolym",
+      "hint": "När ett prov är klart ritas kurvan här. Prova olika storlekar på natrium och jämför reaktionstiderna.",
+      "insight": "Natrium reagerar bara vid kulytan och radien minskar jämnt, så reaktionstiden är proportionell mot radien – och därmed mot massans kubikrot: åttadubbel massa ger bara ungefär dubbel tid."
+    }
+  },
+  "flameLab": {
+    "setup": "Försöksuppställning",
+    "light": "Tänd bunsenbrännaren",
+    "extinguish": "Stäng av bunsenbrännaren",
+    "wire": "Platintråd",
+    "dipAcid": "Doppa i utspädd saltsyra",
+    "intoFlame": "Håll in i ytterflamman",
+    "outOfFlame": "Ta ut ur flamman",
+    "dipSample": "Doppa i provlösningen",
+    "cobalt": "Observera genom koboltglas",
+    "reset": "Återställ",
+    "readings": "Observationer",
+    "wireState": "Platintråd",
+    "clean": "Ren",
+    "dirty": "Förorenad",
+    "seen": "Synlig färg i flamman",
+    "none": "Ingen (flamman är ljusblå)",
+    "cleanHint": "Platintråden ger ingen färg i flamman och är redo för nästa prov.",
+    "dirtyHint": "Det finns rester på platintråden (nya trådar innehåller ofta natrium). Doppa i utspädd saltsyra och glödga, upprepa tills flamman är färglös. Klorider är lättflyktiga och rensar tråden betydligt snabbare än glödgning ensamt.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Litium",
+      "Ca": "Kalcium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Koppar"
+    },
+    "unknownTitle": "Identifiera okänt prov X",
+    "unknownHint": "Glödga prov X och avgör vilket metallämne det innehåller. Obs: natriumets gula ljus kan maskera kaliumets violetta ljus.",
+    "correct": "Rätt bedömning.",
+    "wrong": "Fel. Kontrollera att platintråden är ren – titta vid behov igen genom koboltglas.",
+    "spectro": {
+      "title": "Spektroskop: linjespektrum",
+      "throughCobalt": "Genom koboltglas",
+      "empty": "Håll platintråden med provet i lågan så visas lågans spektrum här.",
+      "explain": "Varje grundämne sänder ut ljus vid ett fåtal fasta våglängder – likt ett fingeravtryck. Natrium ger ett par gula linjer vid 589 nm, kaliums huvudlinjer ligger vid 766 nm (mörkrött) och 404 nm (violett), vilket ger en svagt violett låga. Koboltglaset absorberar det mellersta gul-gröna ljuset och släpper bara igenom de två ytterändarna."
+    },
+    "log": {
+      "title": "Observationslogg",
+      "empty": "Varje gång ett prov doppas och glödgas läggs en rad till här automatiskt.",
+      "sample": "Prov",
+      "cobalt": "Koboltglas",
+      "color": "Lågfärg",
+      "seen": "Identifierbara ämnen",
+      "nothing": "Inget",
+      "contaminated": "Kontaminerat av föregående prov"
+    }
+  },
+  "clockLab": {
+    "setup": "Bered lösningar",
+    "ki": "KI-koncentration / mol·L⁻¹ (lösning A)",
+    "thio": "Na₂S₂O₃-koncentration / mol·L⁻¹ (lösning A)",
+    "h2o2": "H₂O₂-koncentration / mol·L⁻¹ (lösning B)",
+    "temp": "Termostattemperatur",
+    "starch": "Tillsätt stärkelseindikator i lösning A",
+    "speed": "Tidsfaktor",
+    "pour": "Häll i lösning B och starta tidtagningen",
+    "stop": "Stoppa tidtagningen",
+    "again": "Testa med nya villkor",
+    "reset": "Rensa data",
+    "readings": "Tidtagning",
+    "stopwatch": "Stoppur",
+    "theory": "Teoretisk induktionsperiod",
+    "slow": "Långsam",
+    "fast": "Omedelbar",
+    "excessThio": "Na₂S₂O₃ är minst dubbelt så mycket som H₂O₂: det bildade jodet reduceras alltid bort och lösningen blir aldrig blå.",
+    "overdue": "Mer än 5 minuter har gått utan färgändring. Kontrollera receptet — tryck på “Stoppa tidtagning” för att avsluta.",
+    "noStarch": "Utan stärkelse syns slutpunkten först när jodet blivit tillräckligt för en gul-brun färg, vilket ger en längre uppmätt tid.",
+    "chart": {
+      "title": "Dataanalys: reaktionsordning och aktiveringsenergi",
+      "order": "Anpassad lutning ≈ {n}, dvs. ordning {n} för I⁻ (teoretiskt 1)",
+      "orderHint": "Håll temperatur, H₂O₂ och Na₂S₂O₃ konstanta, variera endast KI-koncentrationen i minst två försök för att bestämma reaktionsordningen för I⁻.",
+      "ea": "Aktiveringsenergin från lutningen −Ea/R: Ea ≈ {ea} kJ/mol (litteraturvärde ca 56 kJ/mol)",
+      "eaHint": "Håll receptet konstant, variera endast temperaturen i minst två försök och beräkna aktiveringsenergin med Arrhenius formel.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatur",
+        "time": "Blåningstid"
+      },
+      "withoutStarch": "Ingen stärkelse"
+    }
   }
 }
