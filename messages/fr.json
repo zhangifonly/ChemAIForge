@@ -493,5 +493,148 @@
       "error": "Écart par rapport à la valeur admise 96485 C/mol : {pct}%",
       "ariaLabel": "Graphique de la masse de cuivre déposé en fonction de la charge, {count} point(s) de pesée"
     }
+  },
+  "sodiumLab": {
+    "setup": "Protocole expérimental",
+    "pieceSize": "Taille du morceau de sodium",
+    "size": {
+      "small": "Taille d'un grain de haricot mungo",
+      "medium": "Taille d'un grain de soja",
+      "large": "Grand morceau"
+    },
+    "largeWarning": "Un grand morceau de sodium dégage une chaleur intense, pouvant enflammer le dihydrogène et provoquer une détonation ou des projections de solution alcaline. En conditions réelles, on ne prélève qu'un fragment de la taille d'un grain de haricot mungo — ceci n'est démontré qu'en environnement virtuel.",
+    "cut": "Couper la couche d'oxyde en surface avec le couteau",
+    "cutHint": "La surface du sodium est recouverte d'une couche d'oxyde gris-blanc. Exposez une coupe fraîche avant d'immerger le morceau. Observez l'évolution de l'éclat métallique sur la section.",
+    "phenol": "Ajouter 2 gouttes de phénolphtaléine dans l'eau",
+    "drop": "Introduire le sodium dans l'eau à l'aide de la pince à épiler",
+    "next": "Changer d'eau et prendre un nouveau morceau",
+    "sound": "Son",
+    "reset": "Réinitialiser",
+    "readings": "Mesures en temps réel",
+    "remaining": "Sodium restant",
+    "hydrogen": "Dihydrogène produit",
+    "waterTemp": "Température de l'eau",
+    "burning": "La chaleur dégagée enflamme le dihydrogène qui s'échappe — le sodium brûle avec une flamme jaune",
+    "phenomenaTitle": "Phénomènes : flotte, fond, glisse, siffle, rosit",
+    "phenomena": {
+      "float": {
+        "name": "Flotte à la surface de l'eau",
+        "why": "La masse volumique du sodium est de 0,97 g/cm³, inférieure à celle de l'eau."
+      },
+      "melt": {
+        "name": "Fond en une bille brillante",
+        "why": "La réaction est exothermique ; le point de fusion du sodium n'est que de 97,8 ℃, il fond rapidement. La tension superficielle lui donne une forme sphérique."
+      },
+      "swim": {
+        "name": "Se déplace en tous sens à la surface",
+        "why": "Le dihydrogène produit s'échappe de façon irrégulière autour de la bille, la propulsant dans toutes les directions."
+      },
+      "hiss": {
+        "name": "Émet un sifflement",
+        "why": "Le dihydrogène s'échappe rapidement et la chaleur dégagée vaporise l'eau au contact."
+      },
+      "pink": {
+        "name": "La solution vire au rose",
+        "why": "La réaction produit NaOH, une base forte ; la phénolphtaléine vire au rose en milieu basique. La coloration apparaît d'abord dans le sillage de la bille de sodium."
+      }
+    },
+    "pinkHint": "Sans phénolphtaléine, la formation de la base reste invisible. Vous pouvez en ajouter maintenant : la base est déjà dans l'eau.",
+    "chart": {
+      "title": "Volume de dihydrogène produit en fonction du temps",
+      "xAxis": "Temps t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Courbe de production de H₂, {count} essai(s) effectué(s)",
+      "mass": "Masse de sodium",
+      "measuredT": "Durée de réaction mesurée",
+      "predictedT": "Prédit par m^(1/3)",
+      "volume": "Volume de dihydrogène",
+      "hint": "Après chaque essai, la courbe de production de H₂ s'affiche ici. Changez la taille du sodium et comparez les durées de réaction.",
+      "insight": "Le sodium ne réagit qu'en surface ; le rayon diminue à vitesse constante, donc la durée de réaction est proportionnelle au rayon, soit à la racine cubique de la masse : multiplier la masse par 8 ne multiplie la durée que par environ 2."
+    }
+  },
+  "flameLab": {
+    "setup": "Protocole expérimental",
+    "light": "Allumer le bec Bunsen",
+    "extinguish": "Éteindre le bec Bunsen",
+    "wire": "Fil de platine",
+    "dipAcid": "Tremper dans l'acide chlorhydrique dilué",
+    "intoFlame": "Introduire dans la flamme extérieure",
+    "outOfFlame": "Retirer de la flamme",
+    "dipSample": "Tremper dans la solution à analyser",
+    "cobalt": "Observer à travers le verre de cobalt",
+    "reset": "Réinitialiser",
+    "readings": "Observations",
+    "wireState": "Fil de platine",
+    "clean": "Propre",
+    "dirty": "Résidu présent",
+    "seen": "Couleur identifiable dans la flamme",
+    "none": "Aucune (flamme bleu pâle naturelle)",
+    "cleanHint": "Le fil de platine ne colore plus la flamme ; il est prêt pour le prochain échantillon.",
+    "dirtyHint": "Le fil de platine présente des résidus (un fil neuf peut aussi contenir des traces de sodium). Trempez-le dans l'acide chlorhydrique dilué puis calcinez-le, répétez jusqu'à ce que la flamme ne soit plus colorée ; les chlorures étant volatils, cette méthode est bien plus rapide qu'une simple calcination.",
+    "el": {
+      "Na": "Sodium",
+      "K": "Potassium",
+      "Li": "Lithium",
+      "Ca": "Calcium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Cuivre"
+    },
+    "unknownTitle": "Identifier l'échantillon inconnu X",
+    "unknownHint": "Brûlez l'échantillon X pour déterminer quel élément métallique il contient. Remarque : la lumière jaune du sodium peut masquer la lumière violette du potassium.",
+    "correct": "Identification correcte.",
+    "wrong": "Incorrect. Vérifiez que le fil de platine est bien rincé ; si nécessaire, observez à nouveau à travers le verre au cobalt.",
+    "spectro": {
+      "title": "Spectroscope : spectre de raies",
+      "throughCobalt": "À travers le verre au cobalt",
+      "empty": "Introduisez le fil de platine imprégné d'échantillon dans la flamme pour afficher son spectre ici.",
+      "explain": "Chaque élément émet uniquement à quelques longueurs d'onde fixes, comme une empreinte digitale. Le sodium présente une paire de raies jaunes à 589 nm ; les raies principales du potassium se trouvent à 766 nm (rouge profond) et 404 nm (violet), d'où une flamme légèrement violette. Le verre au cobalt absorbe la lumière jaune-verte centrale et ne laisse passer que les deux extrémités."
+    },
+    "log": {
+      "title": "Journal d'observations",
+      "empty": "Chaque prélèvement et combustion d'échantillon est automatiquement enregistré ici.",
+      "sample": "Échantillon",
+      "cobalt": "Verre au cobalt",
+      "color": "Couleur de flamme",
+      "seen": "Éléments identifiés",
+      "nothing": "Aucun",
+      "contaminated": "Contaminé par l'échantillon précédent"
+    }
+  },
+  "clockLab": {
+    "setup": "Préparer les solutions",
+    "ki": "Concentration en KI / mol·L⁻¹ (solution A)",
+    "thio": "Concentration en Na₂S₂O₃ / mol·L⁻¹ (solution A)",
+    "h2o2": "Concentration en H₂O₂ / mol·L⁻¹ (solution B)",
+    "temp": "Température thermostatée",
+    "starch": "Ajouter l'indicateur amidon à la solution A",
+    "speed": "Facteur de vitesse",
+    "pour": "Verser la solution B et démarrer le chronomètre",
+    "stop": "Arrêter le chronomètre",
+    "again": "Recommencer avec de nouvelles conditions",
+    "reset": "Effacer les données",
+    "readings": "Chronométrage",
+    "stopwatch": "Chronomètre",
+    "theory": "Période d'induction théorique",
+    "slow": "Lent",
+    "fast": "Instantané",
+    "excessThio": "Na₂S₂O₃ au moins deux fois plus que H₂O₂ : l'iode formé est immédiatement réduit, la solution ne bleuit pas.",
+    "overdue": "Plus de 5 minutes sans changement de couleur. Vérifiez la formulation ; vous pouvez cliquer sur «Arrêter le chronomètre» pour terminer cet essai.",
+    "noStarch": "Sans amidon, il faut attendre que l'iode soit suffisamment concentré pour virer au jaune-brun ; le temps mesuré sera surestimé.",
+    "chart": {
+      "title": "Traitement des données : ordre de réaction et énergie d'activation",
+      "order": "Pente ajustée ≈ {n}, soit un ordre {n} par rapport à I⁻ (ordre théorique : 1)",
+      "orderHint": "À température, H₂O₂ et Na₂S₂O₃ constants, faites varier uniquement la concentration en KI sur au moins deux essais pour déterminer l'ordre par rapport à I⁻.",
+      "ea": "La pente −Ea/R donne une énergie d'activation Ea ≈ {ea} kJ/mol (valeur de référence : environ 56 kJ/mol)",
+      "eaHint": "À formulation constante, faites varier uniquement la température sur au moins deux essais et appliquez la loi d'Arrhenius pour calculer l'énergie d'activation.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Température",
+        "time": "Temps de virage au bleu"
+      },
+      "withoutStarch": "Sans amidon"
+    }
   }
 }

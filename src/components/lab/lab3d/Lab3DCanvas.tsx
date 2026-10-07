@@ -22,6 +22,9 @@ import { ElectrolysisWaterScene } from "./ElectrolysisWaterScene";
 import { CopperZincCellScene } from "./CopperZincCellScene";
 import { TitrationLab } from "./TitrationLab";
 import { ElectrolysisLab } from "./electrolysis/ElectrolysisLab";
+import { SodiumLab } from "./sodium/SodiumLab";
+import { FlameLab } from "./flame/FlameLab";
+import { ClockLab } from "./clock/ClockLab";
 import { GenericScene, VESSEL_VIEW } from "./GenericScene";
 import { planScene } from "@/lib/chem/scenePlan";
 import { HEAT_THRESHOLD } from "@/lib/chem/engine";
@@ -51,6 +54,12 @@ export default function Lab3DCanvas({
   if (slug === "copper-electrolysis" || slug === "copper-refining-electrolysis") {
     return <ElectrolysisLab initialAnode={slug === "copper-refining-electrolysis" ? "copper" : "graphite"} />;
   }
+  // 钠与水：缩球动力学 + 动态水面 + 酚酞红迹，独立成台
+  if (slug === "sodium-water") return <SodiumLab />;
+  // 焰色反应：体积火焰 + 谱线合成焰色 + 钴玻璃 + 分光镜，独立成台
+  if (slug === "flame-test") return <FlameLab />;
+  // 碘钟：诱导期动力学 + 涡旋液面突变蓝，求反应级数与活化能
+  if (slug === "iodine-clock") return <ClockLab />;
   return <Lab3DGeneric slug={slug} reagents={reagents} apparatus={apparatus} />;
 }
 

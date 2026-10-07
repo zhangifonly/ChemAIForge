@@ -493,5 +493,148 @@
       "error": "Ero hyväksyttyyn arvoon 96485 C/mol on {pct}%",
       "ariaLabel": "Kuvaaja erotetun kuparin massasta varauksen funktiona, {count} punnituspistettä"
     }
+  },
+  "sodiumLab": {
+    "setup": "Koeohjeet",
+    "pieceSize": "Natrium-palan koko",
+    "size": {
+      "small": "Herneen kokoinen",
+      "medium": "Pavun kokoinen",
+      "large": "Iso pala"
+    },
+    "largeWarning": "Iso natrium-pala reagoi voimakkaasti: se voi sytyttää vetykaasuun tai jopa räjähtää ja roiskuttaa emäsliuosta. Oikeassa laboratoriossa käytetään vain herneen kokoista palaa – tässä demo tehdään vain virtuaaliympäristössä.",
+    "cut": "Leikkaa veitselllä oksidikerros pois pinnalta",
+    "cutHint": "Natriumin pinnalla on harmaanvalkoinen oksidikerros. Leikkaa ensin puhdas pinta esiin ennen veteen lisäämistä. Leikkauksen jälkeen tarkkaile leikkopinnan kiillon muutosta.",
+    "phenol": "Lisää veteen 2 tippaa fenolftaleiinia",
+    "drop": "Laita natrium veteen pinseteillä",
+    "next": "Vaihda puhdas vesimaljaan ja ota uusi pala",
+    "sound": "Ääni",
+    "reset": "Nollaa",
+    "readings": "Reaaliaikaiset mittaukset",
+    "remaining": "Natrium jäljellä",
+    "hydrogen": "Vetykaasua muodostunut",
+    "waterTemp": "Veden lämpötila",
+    "burning": "Reaktiolämpö sytyttää vapautuvan vetykaasun – natrium palaa keltaisella liekillä",
+    "phenomenaTitle": "Ilmiöt: kelluu, sulaa, liikkuu, sihistää, punertuu",
+    "phenomena": {
+      "float": {
+        "name": "Kelluu veden pinnalla",
+        "why": "Natriumin tiheys on 0,97 g/cm³, pienempi kuin vedellä."
+      },
+      "melt": {
+        "name": "Sulaa kiiltäväksi palloksi",
+        "why": "Reaktio vapauttaa lämpöä; natriumin sulamispiste on vain 97,8 ℃, joten se sulaa nopeasti. Pintajännitys pyöristää sen palloksi."
+      },
+      "swim": {
+        "name": "Liikkuu pitkin veden pintaa",
+        "why": "Muodostuva vetykaasu purkautuu epätasaisesti pallon eri puolilta ja työntää sitä eri suuntiin."
+      },
+      "hiss": {
+        "name": "Kuuluu sihinää",
+        "why": "Vetykaasu purkautuu nopeasti ja reaktiolämpö höyrystää veden kosketuskohdassa."
+      },
+      "pink": {
+        "name": "Liuos muuttuu punaiseksi",
+        "why": "Reaktiossa muodostuu vahva emäs NaOH; fenolftaleiini punertuu emäksessä. Punainen väri ilmestyy ensin natriumpallon kulkureitille."
+      }
+    },
+    "pinkHint": "Fenolftaleiinia ei lisätty – emäksen muodostuminen ei näy. Voit lisätä tipat nytkin: emäs on jo vedessä.",
+    "chart": {
+      "title": "Vetykaasun tilavuus ajan funktiona",
+      "xAxis": "Aika t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Vetykaasukäyrä, suoritettu {count} palaa",
+      "mass": "Natriumin massa",
+      "measuredT": "Mitattu reaktioaika",
+      "predictedT": "Ennustettu m^(1/3):n mukaan",
+      "volume": "Vetykaasun tilavuus",
+      "hint": "Kokeen jälkeen tähän piirretään vetykaasukäyrä. Kokeile eri kokoisia natriumpalooja ja vertaile reaktioaikoja.",
+      "insight": "Natrium reagoi vain pallon pinnalla ja säde pienenee tasaisesti, joten reaktioaika on verrannollinen säteeseen eli massan kuutiojuureen: kun massa kasvaa 8-kertaiseksi, reaktioaika kasvaa vain noin 2-kertaiseksi."
+    }
+  },
+  "flameLab": {
+    "setup": "Koejärjestely",
+    "light": "Sytytä Bunsen-poltin",
+    "extinguish": "Sammuta Bunsen-poltin",
+    "wire": "Platinalanka",
+    "dipAcid": "Kasta laihaaan suolahappoon",
+    "intoFlame": "Vie ulkoliekkiin hehkutettavaksi",
+    "outOfFlame": "Poista liekistä",
+    "dipSample": "Kasta näyteliuokseen",
+    "cobalt": "Tarkkaile kobolttilasın läpi",
+    "reset": "Nollaa",
+    "readings": "Havainnot",
+    "wireState": "Platinalanka",
+    "clean": "Puhdas",
+    "dirty": "Jäännöksiä",
+    "seen": "Tunnistettavissa liekissä",
+    "none": "Ei mitään (liekki luonnollisen vaaleansininen)",
+    "cleanHint": "Platinalanka ei enää väritä liekkiä — voit kastaa seuraavan näytteen.",
+    "dirtyHint": "Platinalangassa on jäännöksiä (uusillakin langoilla on usein natriumia). Kasta laihaaan suolahappoon ja hehkuta, toista useita kertoja kunnes liekki ei enää värjäydy; kloridiyhdisteet haihtuvat helposti, joten tämä on paljon nopeampaa kuin pelkkä hehkutus.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Litium",
+      "Ca": "Kalsium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Kupari"
+    },
+    "unknownTitle": "Tunnista tuntematon näyte X",
+    "unknownHint": "Polta näytettä X ja päättele, mitä metallielementtiä se sisältää. Huom.: natriumin keltainen valo peittää kaliumin violetin valon.",
+    "correct": "Oikein.",
+    "wrong": "Väärin. Tarkista, onko platinalanka pesty puhtaaksi, ja katso tarvittaessa kobolttilasien läpi uudelleen.",
+    "spectro": {
+      "title": "Spektroskooppi: viivaspektri",
+      "throughCobalt": "Kobolttilasien läpi",
+      "empty": "Aseta näytteeseen kastettu platinalanka liekkiin – tähän ilmestyy liekin spektri.",
+      "explain": "Jokainen alkuaine säteilee valoa vain muutamalla kiinteällä aallonpituudella, kuin sormenjälki. Natriumilla on keltainen viivapari 589 nm:ssä; kaliumin päälinjat ovat 766 nm:n syväpunaisella ja 404 nm:n violetilla alueella, minkä vuoksi kaliumliekki näyttää vaaleanvioletilta. Kobolttilas absorboi väliin jäävän keltavihreän valon ja päästää läpi vain reunat."
+    },
+    "log": {
+      "title": "Havaintopäiväkirja",
+      "empty": "Jokainen näytteen otto ja poltto kirjataan tähän automaattisesti riville.",
+      "sample": "Näyte",
+      "cobalt": "Kobolttilas",
+      "color": "Liekin väri",
+      "seen": "Tunnistettavat alkuaineet",
+      "nothing": "Ei mitään",
+      "contaminated": "Edellisen näytteen saastuttama"
+    }
+  },
+  "clockLab": {
+    "setup": "Valmista liuokset",
+    "ki": "KI-pitoisuus / mol·L⁻¹ (liuos A)",
+    "thio": "Na₂S₂O₃-pitoisuus / mol·L⁻¹ (liuos A)",
+    "h2o2": "H₂O₂-pitoisuus / mol·L⁻¹ (liuos B)",
+    "temp": "Termostaatin lämpötila",
+    "starch": "Lisää tärkkelysindikaattori liuokseen A",
+    "speed": "Aikakeroin",
+    "pour": "Kaada liuos B sekaan ja käynnistä ajastin",
+    "stop": "Pysäytä ajastin",
+    "again": "Kokeile eri olosuhteilla",
+    "reset": "Tyhjennä tiedot",
+    "readings": "Ajoitus",
+    "stopwatch": "Sekuntikello",
+    "theory": "Teoreettinen induktioaika",
+    "slow": "Hidas",
+    "fast": "Välitön",
+    "excessThio": "Na₂S₂O₃ vähintään kaksinkertainen H₂O₂:een nähden: muodostunut jodi pelkistyy välittömästi, liuos ei muutu siniseksi.",
+    "overdue": "Yli 5 minuuttia kulunut ilman värinmuutosta. Tarkista resepti — voit lopettaa painamalla “Pysäytä ajastin”.",
+    "noStarch": "Ilman tärkkelystä loppupiste näkyy vasta kun jodia on kertynyt keltaruskeaksi värjäytymiseen asti; ajoitus pitenee.",
+    "chart": {
+      "title": "Tietojen käsittely: reaktiojärjestys ja aktivointienergia",
+      "order": "Sovitettu kulmakerroin ≈ {n}, eli I⁻:n suhteen järjestys {n} (teoreettinen arvo 1)",
+      "orderHint": "Pidä lämpötila, H₂O₂ ja Na₂S₂O₃ vakioina; muuta vain KI-konsentraatiota vähintään kahdessa kokeessa I⁻:n reaktiojärjestyksen määrittämiseksi.",
+      "ea": "Kulmakertoimesta −Ea/R laskettu aktivointienergia Ea ≈ {ea} kJ/mol (kirjallisuusarvo n. 56 kJ/mol)",
+      "eaHint": "Pidä resepti vakiona; muuta vain lämpötilaa vähintään kahdessa kokeessa ja laske aktivointienergia Arrheniuksen yhtälöllä.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Lämpötila",
+        "time": "Sinistymisaika"
+      },
+      "withoutStarch": "Ei tärkkelystä"
+    }
   }
 }

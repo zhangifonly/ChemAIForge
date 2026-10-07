@@ -493,5 +493,148 @@
       "error": "Tofauti na thamani inayokubalika 96485 C/mol ni {pct}%",
       "ariaLabel": "Grafu ya uzito wa shaba iliyotenganishwa dhidi ya chaji, jumla ya nukta {count} za kupima"
     }
+  },
+  "sodiumLab": {
+    "setup": "Hatua za Majaribio",
+    "pieceSize": "Ukubwa wa kipande cha sodiamu",
+    "size": {
+      "small": "Ukubwa wa punje ya mbaazi",
+      "medium": "Ukubwa wa punje ya soya",
+      "large": "Kipande kikubwa"
+    },
+    "largeWarning": "Sodiamu kipande kikubwa hutoa joto kali, inaweza kuwasha gesi ya haidrojeni na hata kulipuka, na kunyunyiza alkali. Katika majaribio halisi ni lazima utumie ukubwa wa punje ya mbaazi tu — hapa inaonyeshwa katika mazingira ya kawaida tu.",
+    "cut": "Kata safu ya oksidi juu kwa kisu kidogo",
+    "cutHint": "Uso wa sodiamu una safu nyeupe ya oksidi — kata kwanza ili kupata uso mpya kabla ya kuutupa ndani ya maji. Baada ya kukata, angalia mabadiliko ya mwangaza kwenye uso uliokatwa.",
+    "phenol": "Dondosha matone 2 ya fenolftaleini kwenye maji",
+    "drop": "Tupa sodiamu ndani ya maji kwa koleo ndogo",
+    "next": "Badilisha kikombe kipya cha maji na chukua kipande kingine",
+    "sound": "Sauti",
+    "reset": "Weka upya",
+    "readings": "Usomaji wa wakati halisi",
+    "remaining": "Sodiamu iliyobaki",
+    "hydrogen": "Gesi ya haidrojeni inayozalishwa",
+    "waterTemp": "Joto la maji",
+    "burning": "Joto linalotolewa linawasha gesi ya haidrojeni inayotoka nje — sodiamu inawaka na mwali wa njano",
+    "phenomenaTitle": "Matukio: Elea, Yeyuka, Zunguka, Lia, Wekundu",
+    "phenomena": {
+      "float": {
+        "name": "Inaelea juu ya maji",
+        "why": "Msongamano wa sodiamu ni 0.97 g/cm³, ambao ni mdogo kuliko wa maji."
+      },
+      "melt": {
+        "name": "Inayeyuka na kuwa tufe inayong'aa",
+        "why": "Mmenyuko hutoa joto; kiwango cha kuyeyuka cha sodiamu ni 97.8 ℃ tu, hivyo inayeyuka haraka. Mvutano wa uso huifanya iwe umbo la tufe."
+      },
+      "swim": {
+        "name": "Inazunguka juu ya maji",
+        "why": "Gesi ya haidrojeni inayozalishwa inatoka kwa nguvu zisizo sawa pande zote za tufe, na kuisukuma izunguke."
+      },
+      "hiss": {
+        "name": "Inatoa sauti ya kufikia",
+        "why": "Gesi ya haidrojeni inatoka kwa kasi, na joto linalotolewa linabadilisha maji yanayogusana kuwa mvuke."
+      },
+      "pink": {
+        "name": "Uyumbo unageuka rangi nyekundu",
+        "why": "NaOH, alkali kali, inazalishwa — fenolftaleini inageuka nyekundu kwenye alkali. Rangi nyekundu huonekana kwanza kwenye mkondo ambao tufe ya sodiamu imepita."
+      }
+    },
+    "pinkHint": "Bila fenolftaleini, haiwezekani kuona kwamba alkali imezalishwa. Unaweza kuiongeza sasa — alkali ipo tayari ndani ya maji.",
+    "chart": {
+      "title": "Ujazo wa gesi ya haidrojeni inayozalishwa kwa wakati",
+      "xAxis": "Wakati t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Grafu ya uzalishaji wa haidrojeni, vipande {count} vilivhokamilika",
+      "mass": "Uzito wa sodiamu",
+      "measuredT": "Muda wa majibu uliopimwa",
+      "predictedT": "Utabiri kwa m^(1/3)",
+      "volume": "Ujazo wa gesi ya haidrojeni",
+      "hint": "Baada ya kukamilisha kipande kimoja, grafu ya uzalishaji wa haidrojeni itachorwa hapa. Jaribu vipande vya ukubwa tofauti vya sodiamu na ulinganishe muda wa majibu.",
+      "insight": "Sodiamu hujibu kwenye uso wa tufe tu; radius hupungua kwa kasi sawa, kwa hivyo muda wa majibu unafanana na radius, yaani unafanana na mzizi wa cubic wa uzito: uzito ukizidi mara 8, muda huongezeka mara 2 tu."
+    }
+  },
+  "flameLab": {
+    "setup": "Uendeshaji wa majaribio",
+    "light": "Washa taa ya Bunsen",
+    "extinguish": "Zima taa ya Bunsen",
+    "wire": "Waya wa platinamu",
+    "dipAcid": "Loweka katika asidi hidrokloriki iliyopunguzwa",
+    "intoFlame": "Weka kwenye mwali wa nje uunguze",
+    "outOfFlame": "Toa kutoka kwenye mwali",
+    "dipSample": "Loweka katika ufumbuzi wa sampuli",
+    "cobalt": "Angalia kupitia kioo cha kobalt",
+    "reset": "Weka upya",
+    "readings": "Uchunguzi",
+    "wireState": "Waya wa platinamu",
+    "clean": "Safi",
+    "dirty": "Kuna mabaki",
+    "seen": "Inatambuliwa kwenye mwali",
+    "none": "Hakuna (mwali una rangi yake ya kawaida ya buluu hafifu)",
+    "cleanHint": "Waya wa platinamu umeunguzwa kwenye mwali na hauna rangi tena; unaweza kuloweka sampuli inayofuata.",
+    "dirtyHint": "Waya wa platinamu una mabaki (waya mpya mara nyingi pia una sodiamu). Loweka katika asidi hidrokloriki iliyopunguzwa kisha uunguze, rudia mara kadhaa hadi mwali usiendelee kuonyesha rangi; kloridi huevuka kwa urahisi, hivyo ni haraka zaidi kuliko kuunguza tu.",
+    "el": {
+      "Na": "Sodiamu",
+      "K": "Potasiamu",
+      "Li": "Lithiamu",
+      "Ca": "Kalsiamu",
+      "Sr": "Strontiamu",
+      "Ba": "Bariamu",
+      "Cu": "Shaba"
+    },
+    "unknownTitle": "Tambua Sampuli Isiyojulikana X",
+    "unknownHint": "Choma sampuli X ili kubainisha ioni gani ya chuma ipo. Kumbuka: mwanga wa njano wa sodiamu unaweza kuficha mwanga wa zambarau wa potasiamu.",
+    "correct": "Utambuzi sahihi.",
+    "wrong": "Si sahihi. Angalia kama waya wa platinamu umesafishwa vizuri; ikiwa ni lazima, tazama tena kupitia kioo cha cobalt.",
+    "spectro": {
+      "title": "Spektrometa: Wigo wa Mistari",
+      "throughCobalt": "Kupitia kioo cha cobalt",
+      "empty": "Weka waya wa platinamu wenye sampuli ndani ya mwali; wigo wa mwali utaonekana hapa.",
+      "explain": "Kila elementi hutoa mwanga katika mawimbi machache maalum tu, kama alama ya vidole. Sodiamu ina jozi ya mistari ya njano kwa 589 nm; mistari mikuu ya potasiamu iko kwa 766 nm (nyekundu-giza) na 404 nm (zambarau), ndiyo maana mwali wake ni zambarau hafifu. Kioo cha cobalt huchuja mwanga wa njano-kijani katikati, hukuruhusu kupita ncha mbili tu."
+    },
+    "log": {
+      "title": "Kumbukumbu ya Uchunguzi",
+      "empty": "Kila unapotumbukiza sampuli na kuichoma, mstari mpya utaandikwa hapa kiotomatiki.",
+      "sample": "Sampuli",
+      "cobalt": "Kioo cha cobalt",
+      "color": "Rangi ya mwali",
+      "seen": "Elementi zinazotambuliwa",
+      "nothing": "Hakuna",
+      "contaminated": "Imechafuliwa na sampuli iliyotangulia"
+    }
+  },
+  "clockLab": {
+    "setup": "Andaa Ufumbuzi",
+    "ki": "Mkusanyiko wa KI / mol·L⁻¹ (Ufumbuzi A)",
+    "thio": "Mkusanyiko wa Na₂S₂O₃ / mol·L⁻¹ (Ufumbuzi A)",
+    "h2o2": "Mkusanyiko wa H₂O₂ / mol·L⁻¹ (Ufumbuzi B)",
+    "temp": "Joto la kudumu",
+    "starch": "Ongeza kiashiria cha wanga kwenye Ufumbuzo A",
+    "speed": "Kiwango cha muda",
+    "pour": "Mimina Ufumbuzi B, anza kupima muda",
+    "stop": "Simamisha kipima muda",
+    "again": "Jaribu tena kwa masharti tofauti",
+    "reset": "Futa data",
+    "readings": "Kupima muda",
+    "stopwatch": "Saa ya sekunde",
+    "theory": "Kipindi cha kuchelewa cha nadharia",
+    "slow": "Polepole",
+    "fast": "Papo hapo",
+    "excessThio": "Na₂S₂O₃ si chini ya mara mbili ya H₂O₂: ayodini inayozalishwa itarudishwa daima, suluhisho halitageuka buluu.",
+    "overdue": "Imepita dakika 5 bila mabadiliko ya rangi. Angalia fomula, kisha bonyeza “Simama Kupima” kumaliza kipindi hiki.",
+    "noStarch": "Bila wanga, mwisho wa mmenyuko unaonekana tu pale ayodini inapokusanyika hadi rangi ya njano-kahawia — muda wa kupima utakuwa mrefu zaidi.",
+    "chart": {
+      "title": "Uchakataji wa data: mpangilio wa mmenyuko na nishati ya uanzishaji",
+      "order": "Mteremko uliofaa ≈ {n}, yaani mpangilio wa {n} kwa I⁻ (nadharia: mpangilio 1)",
+      "orderHint": "Weka joto, H₂O₂ na Na₂S₂O₃ visibadilike; badilisha mkusanyiko wa KI tu kwa majaribio mawili au zaidi ili kupata mpangilio wa mmenyuko kwa I⁻.",
+      "ea": "Nishati ya uanzishaji kutoka mteremko −Ea/R: Ea ≈ {ea} kJ/mol (thamani ya maandiko ~56 kJ/mol)",
+      "eaHint": "Weka fomula isibadilike; badilisha joto tu kwa majaribio mawili au zaidi, kisha tumia mlingano wa Arrhenius kupata nishati ya uanzishaji.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Joto",
+        "time": "Muda hadi buluu"
+      },
+      "withoutStarch": "Bila wanga"
+    }
   }
 }

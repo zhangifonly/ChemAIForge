@@ -493,5 +493,148 @@
       "error": "Diferencia respecto al valor aceptado 96485 C/mol: {pct}%",
       "ariaLabel": "Gráfico de masa de cobre depositado en función de la carga, con {count} puntos de pesada"
     }
+  },
+  "sodiumLab": {
+    "setup": "Pasos del experimento",
+    "pieceSize": "Tamaño del trozo de sodio",
+    "size": {
+      "small": "Tamaño de lenteja",
+      "medium": "Tamaño de garbanzo",
+      "large": "Trozo grande"
+    },
+    "largeWarning": "Un trozo grande de sodio genera calor intenso, puede inflamar el hidrógeno e incluso provocar una detonación y salpicaduras de solución alcalina. En un experimento real solo se puede usar un trozo del tamaño de una lenteja; aquí se muestra únicamente en entorno virtual.",
+    "cut": "Cortar la capa de óxido superficial con el escalpelo",
+    "cutHint": "La superficie del sodio tiene una capa de óxido grisáceo. Primero realice un corte fresco antes de introducirlo. Tras el corte, observe cómo cambia el brillo de la sección.",
+    "phenol": "Añadir 2 gotas de fenolftaleína al agua",
+    "drop": "Introducir el sodio en el agua con las pinzas de laboratorio",
+    "next": "Cambiar el vaso de agua y tomar otro trozo",
+    "sound": "Sonido",
+    "reset": "Restablecer",
+    "readings": "Lecturas en tiempo real",
+    "remaining": "Sodio restante",
+    "hydrogen": "Hidrógeno generado",
+    "waterTemp": "Temperatura del agua",
+    "burning": "El calor desprendido inflama el hidrógeno liberado; el sodio arde con llama amarilla",
+    "phenomenaTitle": "Fenómenos: flota, funde, desliza, silba, enrojece",
+    "phenomena": {
+      "float": {
+        "name": "Flota en la superficie del agua",
+        "why": "La densidad del sodio es 0,97 g/cm³, menor que la del agua."
+      },
+      "melt": {
+        "name": "Se funde formando una esfera brillante",
+        "why": "La reacción es exotérmica y el punto de fusión del sodio es solo 97,8 ℃, por lo que se funde rápidamente; la tensión superficial lo contrae en una esfera."
+      },
+      "swim": {
+        "name": "Se desplaza en todas direcciones sobre la superficie",
+        "why": "El hidrógeno generado escapa de forma irregular por distintos lados de la esfera, empujándola en direcciones impredecibles."
+      },
+      "hiss": {
+        "name": "Emite un silbido",
+        "why": "El hidrógeno escapa rápidamente y el calor vaporiza el agua en la zona de contacto."
+      },
+      "pink": {
+        "name": "La solución se vuelve rosa",
+        "why": "Se forma NaOH, una base fuerte; la fenolftaleína vira a rosa en medio básico. El color aparece primero en el rastro dejado por la esfera de sodio."
+      }
+    },
+    "pinkHint": "Sin fenolftaleína no es posible observar la formación de la base. Puede añadirla ahora: la base ya está disuelta en el agua.",
+    "chart": {
+      "title": "Volumen de hidrógeno producido en función del tiempo",
+      "xAxis": "Tiempo t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Curva de producción de hidrógeno, {count} muestra(s) completada(s)",
+      "mass": "Masa de sodio",
+      "measuredT": "Tiempo de reacción medido",
+      "predictedT": "Predicción según m^(1/3)",
+      "volume": "Volumen de hidrógeno",
+      "hint": "Al terminar una muestra, aquí se trazará la curva de producción de hidrógeno. Prueba con distintos tamaños de sodio y compara los tiempos de reacción.",
+      "insight": "El sodio reacciona solo en la superficie de la esfera: el radio disminuye a velocidad constante, por lo que el tiempo de reacción es proporcional al radio y, por tanto, a la raíz cúbica de la masa. Si la masa se multiplica por 8, el tiempo solo se multiplica por 2 aproximadamente."
+    }
+  },
+  "flameLab": {
+    "setup": "Procedimiento experimental",
+    "light": "Encender el mechero Bunsen",
+    "extinguish": "Apagar el mechero Bunsen",
+    "wire": "Hilo de platino",
+    "dipAcid": "Sumergir en ácido clorhídrico diluido",
+    "intoFlame": "Introducir en la llama exterior para calcinar",
+    "outOfFlame": "Retirar de la llama",
+    "dipSample": "Sumergir en la solución muestra",
+    "cobalt": "Observar a través del vidrio de cobalto",
+    "reset": "Restablecer",
+    "readings": "Observaciones",
+    "wireState": "Hilo de platino",
+    "clean": "Limpio",
+    "dirty": "Con residuos",
+    "seen": "Color identificable en la llama",
+    "none": "Ninguno (llama azul pálido natural)",
+    "cleanHint": "El hilo de platino ya no imparte color al calcinarse en la llama; puede sumergirse en la siguiente muestra.",
+    "dirtyHint": "El hilo de platino tiene residuos (los hilos nuevos también suelen contener sodio). Sumérjalo en ácido clorhídrico diluido y calcínelo repetidamente hasta que la llama no muestre color; los cloruros son volátiles y el proceso es mucho más rápido que calcinar sin ácido.",
+    "el": {
+      "Na": "Sodio",
+      "K": "Potasio",
+      "Li": "Litio",
+      "Ca": "Calcio",
+      "Sr": "Estroncio",
+      "Ba": "Bario",
+      "Cu": "Cobre"
+    },
+    "unknownTitle": "Identificar muestra desconocida X",
+    "unknownHint": "Calcine la muestra X y determine qué elemento metálico contiene. Nota: la luz amarilla del sodio puede enmascarar la luz violeta del potasio.",
+    "correct": "Identificación correcta.",
+    "wrong": "Incorrecto. Compruebe que el hilo de platino esté limpio y, si es necesario, observe de nuevo a través del vidrio de cobalto.",
+    "spectro": {
+      "title": "Espectroscopio: espectro de líneas",
+      "throughCobalt": "A través del vidrio de cobalto",
+      "empty": "Introduzca el hilo de platino impregnado con la muestra en la llama para visualizar su espectro aquí.",
+      "explain": "Cada elemento emite luz solo en unas pocas longitudes de onda fijas, como una huella dactilar. El sodio presenta un par de líneas amarillas a 589 nm; las líneas principales del potasio están a 766 nm (rojo profundo) y 404 nm (violeta), por lo que su llama es violeta pálido. El vidrio de cobalto absorbe la luz amarillo-verdosa central y solo deja pasar los extremos del espectro."
+    },
+    "log": {
+      "title": "Registro de observaciones",
+      "empty": "Cada vez que tome una muestra y la calcine, se añadirá automáticamente una línea aquí.",
+      "sample": "Muestra",
+      "cobalt": "Vidrio de cobalto",
+      "color": "Color de llama",
+      "seen": "Elementos identificados",
+      "nothing": "Ninguno",
+      "contaminated": "Contaminado por la muestra anterior"
+    }
+  },
+  "clockLab": {
+    "setup": "Preparar soluciones",
+    "ki": "Concentración de KI / mol·L⁻¹ (solución A)",
+    "thio": "Concentración de Na₂S₂O₃ / mol·L⁻¹ (solución A)",
+    "h2o2": "Concentración de H₂O₂ / mol·L⁻¹ (solución B)",
+    "temp": "Temperatura de termostatización",
+    "starch": "Añadir indicador de almidón a la solución A",
+    "speed": "Factor de velocidad de tiempo",
+    "pour": "Verter la solución B e iniciar el cronómetro",
+    "stop": "Detener el cronómetro",
+    "again": "Repetir con otras condiciones",
+    "reset": "Borrar datos",
+    "readings": "Tiempos",
+    "stopwatch": "Cronómetro",
+    "theory": "Período de inducción teórico",
+    "slow": "Lento",
+    "fast": "Instantáneo",
+    "excessThio": "Na₂S₂O₃ no inferior al doble de H₂O₂: el yodo producido se reduce de inmediato y la solución no vira a azul.",
+    "overdue": "Han transcurrido 5 minutos sin cambio de color. Revisa la fórmula; puedes pulsar «Detener cronómetro» para terminar esta medida.",
+    "noStarch": "Sin almidón, el punto final solo es visible cuando el yodo acumulado muestra color amarillo-pardo, lo que alarga el tiempo registrado.",
+    "chart": {
+      "title": "Análisis de datos: orden de reacción y energía de activación",
+      "order": "Pendiente ajustada ≈ {n}, es decir, orden {n} respecto a I⁻ (valor teórico: 1)",
+      "orderHint": "Mantén constantes la temperatura, H₂O₂ y Na₂S₂O₃; varía solo la concentración de KI en al menos dos ensayos para determinar el orden respecto a I⁻.",
+      "ea": "De la pendiente −Ea/R se obtiene Ea ≈ {ea} kJ/mol (valor bibliográfico: ~56 kJ/mol)",
+      "eaHint": "Mantén la fórmula constante y varía solo la temperatura en al menos dos ensayos; aplica la ecuación de Arrhenius para calcular la energía de activación.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Tiempo de viraje a azul"
+      },
+      "withoutStarch": "Sin almidón"
+    }
   }
 }

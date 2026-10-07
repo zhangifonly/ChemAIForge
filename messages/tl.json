@@ -493,5 +493,148 @@
       "error": "Pagkakaiba mula sa tinatanggap na halaga na 96485 C/mol: {pct}%",
       "ariaLabel": "Grap ng masa ng nadepositong tanso (Cu) kumpara sa kargada, {count} punto ng timbang"
     }
+  },
+  "sodiumLab": {
+    "setup": "Mga Hakbang sa Eksperimento",
+    "pieceSize": "Laki ng Sodium",
+    "size": {
+      "small": "Sukat ng munggo",
+      "medium": "Sukat ng soybean",
+      "large": "Malaking piraso"
+    },
+    "largeWarning": "Ang malaking piraso ng sodium ay nagpapalabas ng matinding init, maaaring magsunog ng hydrogen at maging sanhi ng pagsabog o pagtalsik ng alkali. Sa totoong eksperimento, ang kinukuha ay sukat lamang ng munggo — ipinapakita ito dito sa virtual na kapaligiran lamang.",
+    "cut": "Gupitin ang oxidized na ibabaw gamit ang maliit na kutsilyo",
+    "cutHint": "May grayish-white na oxide layer ang ibabaw ng sodium. Gupitin muna upang malantad ang sariwang hiwa bago ihulog. Pagkatapos gupitin, obserbahan ang pagbabago ng kinang sa hiwa.",
+    "phenol": "Magpatak ng 2 patak ng phenolphthalein sa tubig",
+    "drop": "Ihulog ang sodium sa tubig gamit ang pang-kurot / forceps",
+    "next": "Palitan ng bagong baso ng tubig at kumuha ng bagong piraso",
+    "sound": "Tunog",
+    "reset": "I-reset",
+    "readings": "Real-time na Pagbabasa",
+    "remaining": "Natitirang Sodium",
+    "hydrogen": "Hydrogen na Nabuo",
+    "waterTemp": "Temperatura ng Tubig",
+    "burning": "Ang init na inilabas ay nagpapasunog ng hydrogen na lumalabas; ang sodium ay nasusunog na may dilaw na apoy",
+    "phenomenaTitle": "Mga Penomeno: Lutang, Natutunaw, Gumagalaw, Umuungol, Pumupula",
+    "phenomena": {
+      "float": {
+        "name": "Lumulutang sa ibabaw ng tubig",
+        "why": "Ang densidad ng sodium ay 0.97 g/cm³, mas magaan kaysa sa tubig."
+      },
+      "melt": {
+        "name": "Natutunaw at nagiging maliwanag na bola",
+        "why": "Nagpapalabas ng init ang reaksyon; ang melting point ng sodium ay 97.8 ℃ lamang kaya mabilis itong natutunaw. Ginagawa itong bilog ng surface tension."
+      },
+      "swim": {
+        "name": "Gumagalaw nang pabalik-balik sa ibabaw ng tubig",
+        "why": "Ang hydrogen na nabuo ay hindi pantay-pantay na lumalabas mula sa iba't ibang direksyon ng bola, na nagtutulak dito nang walang takdang direksyon."
+      },
+      "hiss": {
+        "name": "Gumagawa ng hissing na tunog",
+        "why": "Mabilis na lumalabas ang hydrogen; ang init na inilabas ay nagpapasingaw ng tubig sa lugar ng kontak."
+      },
+      "pink": {
+        "name": "Nagiging pula ang solusyon",
+        "why": "Nabuo ang malakas na alkali na NaOH; nagiging pula ang phenolphthalein sa alkali. Unang lumalabas ang pulang kulay sa landas na nilakad ng sodium na bola."
+      }
+    },
+    "pinkHint": "Kung walang phenolphthalein na idinagdag, hindi makikita na nabuo ang alkali. Maaari pa ring magdagdag ngayon — nandoon na ang alkali sa tubig.",
+    "chart": {
+      "title": "Pagbabago ng dami ng hydrogen gas na nagawa sa paglipas ng panahon",
+      "xAxis": "Oras t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Kurba ng produksyon ng hydrogen, {count} bloke na ang natapos",
+      "mass": "Masa ng sodium",
+      "measuredT": "Nasukat na tagal ng reaksyon",
+      "predictedT": "Hinula ayon sa m^(1/3)",
+      "volume": "Dami ng hydrogen gas",
+      "hint": "Pagkatapos ng isang bloke, makikita dito ang kurba ng produksyon ng hydrogen. Subukan ang iba't ibang sukat ng sodium at ihambing ang tagal ng reaksyon.",
+      "insight": "Nagaganap lamang ang reaksyon ng sodium sa ibabaw ng bola; pantay-pantay ang pagliit ng radius, kaya proporsyonal ang tagal ng reaksyon sa radius — at sa cube root ng masa: kung 8 beses na mas mabigat ang sodium, halos 2 beses lamang ang haba ng reaksyon."
+    }
+  },
+  "flameLab": {
+    "setup": "Pamamaraan ng eksperimento",
+    "light": "Sindihan ang Bunsen burner",
+    "extinguish": "Patayin ang Bunsen burner",
+    "wire": "Platinum na kawad",
+    "dipAcid": "Isawsaw sa diluwidong hydrochloric acid",
+    "intoFlame": "Ilagay sa outer flame para susunin",
+    "outOfFlame": "Ilabas sa apoy",
+    "dipSample": "Isawsaw sa sampol na solusyon",
+    "cobalt": "Obserbahan sa pamamagitan ng cobalt glass",
+    "reset": "I-reset",
+    "readings": "Mga obserbasyon",
+    "wireState": "Platinum na kawad",
+    "clean": "Malinis",
+    "dirty": "May natirang dumi",
+    "seen": "Nakikilala sa apoy",
+    "none": "Wala (natural na maputlang asul ang apoy)",
+    "cleanHint": "Walang kulay na ipinapakita ang platinum na kawad sa apoy — handa na itong isawsaw sa susunod na sampol.",
+    "dirtyHint": "May natirang dumi sa platinum na kawad (madalas may sodium pati ang bagong kawad). Isawsaw sa diluwidong hydrochloric acid (HCl) at susunin nang paulit-ulit hanggang hindi na magpakita ng kulay ang apoy; mas mabilis ito kaysa simpleng pagsusunog dahil madaling sumingaw ang mga chloride.",
+    "el": {
+      "Na": "Sodium",
+      "K": "Potassium",
+      "Li": "Litium",
+      "Ca": "Kaltsyum",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Tanso (copper, Cu)"
+    },
+    "unknownTitle": "Tukuyin ang Hindi Kilalang Sampol X",
+    "unknownHint": "Sunugin ang sampol X upang matukoy kung anong metal na elemento ang nilalaman nito. Tandaan: ang dilaw na liwanag ng sodium ay maaaring magtakip sa lilang liwanag ng potassium.",
+    "correct": "Tama ang pagkakilala.",
+    "wrong": "Hindi tama. Suriin kung malinis ang platinum na kawad; kung kinakailangan, tingnan muli sa pamamagitan ng cobalt na salamin.",
+    "spectro": {
+      "title": "Spectroscope: Line Spectrum",
+      "throughCobalt": "Sa pamamagitan ng cobalt na salamin",
+      "empty": "Ilagay ang platinum na kawad na may sampol sa apoy upang makita ang spectrum ng apoy dito.",
+      "explain": "Ang bawat elemento ay nagbibigay-liwanag sa ilang tiyak na wavelength lamang, tulad ng fingerprint. Ang sodium ay may pares ng dilaw na linya sa 589 nm; ang pangunahing linya ng potassium ay nasa 766 nm (malalim na pula) at 404 nm (lila), kaya ang apoy ng potassium ay mukhang maliwanag na lila. Ang cobalt na salamin ay sumasorbo ng dilaw-berdeng liwanag sa gitna, na nagpapalampas lamang sa magkabilang dulo."
+    },
+    "log": {
+      "title": "Talaan ng Obserbasyon",
+      "empty": "Sa bawat pagkuha ng sampol at pagsusunog, awtomatikong nagdadagdag ng isang linya dito.",
+      "sample": "Sampol",
+      "cobalt": "Cobalt na salamin",
+      "color": "Kulay ng apoy",
+      "seen": "Natukoy na elemento",
+      "nothing": "Wala",
+      "contaminated": "Kontaminado ng nakaraang sampol"
+    }
+  },
+  "clockLab": {
+    "setup": "Ihanda ang solusyon",
+    "ki": "Konsentrasyon ng KI / mol·L⁻¹ (Solusyon A)",
+    "thio": "Konsentrasyon ng Na₂S₂O₃ / mol·L⁻¹ (Solusyon A)",
+    "h2o2": "Konsentrasyon ng H₂O₂ / mol·L⁻¹ (Solusyon B)",
+    "temp": "Temperatura ng incubation",
+    "starch": "Magdagdag ng almirol na indicator sa Solusyon A",
+    "speed": "Bilis ng oras",
+    "pour": "Ibuhos ang Solusyon B, simulan ang pagbibilang ng oras",
+    "stop": "Ihinto ang pagbibilang ng oras",
+    "again": "Subukan ang ibang kondisyon",
+    "reset": "I-clear ang data",
+    "readings": "Pag-time",
+    "stopwatch": "Stopwatch",
+    "theory": "Teoretikal na induction period",
+    "slow": "Mabagal",
+    "fast": "Agaran",
+    "excessThio": "Ang Na₂S₂O₃ ay hindi bababa sa doble ng H₂O₂: ang nagawang yodo ay palaging mababawasan, hindi magiging asul ang solusyon.",
+    "overdue": "Lumipas na ang 5 minuto, hindi pa nagbabago ang kulay. Suriin ang pormula, o pindutin ang “Ihinto ang Timer” para tapusin ang pagsubok na ito.",
+    "noStarch": "Walang almirol — kailangang mag-ipon ng sapat na yodo para makita ang dilaw-kayumanggi bago maabot ang endpoint; magiging mas matagal ang oras.",
+    "chart": {
+      "title": "Pagsusuri ng Data: Order ng Reaksyon at Activation Energy",
+      "order": "Fitted slope ≈ {n}, ibig sabihin {n} na order para sa I⁻ (teoretikal: 1st order)",
+      "orderHint": "Panatilihing pare-pareho ang temperatura, H₂O₂, at Na₂S₂O₃; baguhin lamang ang konsentrasyon ng KI sa hindi bababa sa dalawang pagsubok para makuha ang order ng reaksyon para sa I⁻.",
+      "ea": "Mula sa slope na −Ea/R, ang activation energy na Ea ≈ {ea} kJ/mol (literatura: ~56 kJ/mol)",
+      "eaHint": "Panatilihing pare-pareho ang pormula; baguhin lamang ang temperatura sa hindi bababa sa dalawang pagsubok, at gamitin ang Arrhenius equation para makuha ang activation energy.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Oras hanggang maging asul"
+      },
+      "withoutStarch": "Walang almirol"
+    }
   }
 }

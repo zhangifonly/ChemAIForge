@@ -493,5 +493,148 @@
       "error": "Diferença em relação ao valor aceite de 96485 C/mol: {pct}%",
       "ariaLabel": "Gráfico da massa de cobre depositado em função da carga elétrica, com {count} ponto(s) de pesagem"
     }
+  },
+  "sodiumLab": {
+    "setup": "Etapas do experimento",
+    "pieceSize": "Tamanho do pedaço de sódio",
+    "size": {
+      "small": "Tamanho de grão de ervilha",
+      "medium": "Tamanho de grão de soja",
+      "large": "Pedaço grande"
+    },
+    "largeWarning": "Um pedaço grande de sódio libera calor intensamente, podendo inflamar o gás hidrogênio e até causar detonação e respingos de solução alcalina. Em experimentos reais, use apenas pedaços do tamanho de um grão de ervilha; aqui a demonstração é feita apenas em ambiente virtual.",
+    "cut": "Corte a camada de óxido da superfície com uma faca",
+    "cutHint": "A superfície do sódio tem uma camada de óxido cinza-esbranquiçado. Exponha uma face fresca antes de mergulhá-lo. Após o corte, observe a mudança no brilho da superfície cortada.",
+    "phenol": "Adicione 2 gotas de fenolftaleína à água",
+    "drop": "Use a pinça para mergulhar o sódio na água",
+    "next": "Troque por um copo de água limpa e pegue outro pedaço",
+    "sound": "Som",
+    "reset": "Reiniciar",
+    "readings": "Leituras em tempo real",
+    "remaining": "Sódio restante",
+    "hydrogen": "Gás hidrogênio gerado",
+    "waterTemp": "Temperatura da água",
+    "burning": "O calor liberado inflama o gás hidrogênio que escapa; o sódio queima com chama amarela",
+    "phenomenaTitle": "Fenômenos: flutua, funde, desliza, sibila, avermelha",
+    "phenomena": {
+      "float": {
+        "name": "Flutua na superfície da água",
+        "why": "A densidade do sódio é 0,97 g/cm³, menor que a da água."
+      },
+      "melt": {
+        "name": "Funde-se em uma esfera brilhante",
+        "why": "A reação libera calor; o ponto de fusão do sódio é apenas 97,8 ℃, então ele funde rapidamente. A tensão superficial o contrai em uma esfera."
+      },
+      "swim": {
+        "name": "Desliza pela superfície da água",
+        "why": "O gás hidrogênio gerado é expelido de forma irregular em todas as direções da esfera, empurrando-a de um lado para o outro."
+      },
+      "hiss": {
+        "name": "Emite um sibilo",
+        "why": "O gás hidrogênio escapa rapidamente e o calor liberado vaporiza a água no ponto de contato."
+      },
+      "pink": {
+        "name": "A solução fica vermelha",
+        "why": "É formado NaOH, uma base forte; a fenolftaleína fica vermelha em meio alcalino. A cor aparece primeiro no rastro deixado pela esfera de sódio."
+      }
+    },
+    "pinkHint": "Sem fenolftaleína, não é possível observar a formação da base. Você pode adicioná-la agora: a base já está na água.",
+    "chart": {
+      "title": "Volume de gás hidrogênio produzido ao longo do tempo",
+      "xAxis": "Tempo t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Curva de produção de H₂, {count} bloco(s) concluído(s)",
+      "mass": "Massa de sódio",
+      "measuredT": "Tempo de reação medido",
+      "predictedT": "Previsto por m^(1/3)",
+      "volume": "Volume de gás hidrogênio",
+      "hint": "Após cada ensaio, a curva de produção de H₂ será traçada aqui. Use pedaços de sódio de tamanhos diferentes e compare os tempos de reação.",
+      "insight": "O sódio reage apenas na superfície do glóbulo; o raio diminui a velocidade constante, de modo que o tempo de reação é proporcional ao raio e, portanto, à raiz cúbica da massa: se a massa for multiplicada por 8, o tempo é multiplicado por apenas ~2."
+    }
+  },
+  "flameLab": {
+    "setup": "Procedimento experimental",
+    "light": "Acender o bico de Bunsen",
+    "extinguish": "Apagar o bico de Bunsen",
+    "wire": "Fio de platina",
+    "dipAcid": "Mergulhar em ácido clorídrico diluído",
+    "intoFlame": "Introduzir na chama externa para incandescência",
+    "outOfFlame": "Retirar da chama",
+    "dipSample": "Mergulhar na solução da amostra",
+    "cobalt": "Observar através do vidro de cobalto",
+    "reset": "Redefinir",
+    "readings": "Observações",
+    "wireState": "Fio de platina",
+    "clean": "Limpo",
+    "dirty": "Com resíduos",
+    "seen": "Cor visível na chama",
+    "none": "Nenhuma (chama na cor natural azul-pálida)",
+    "cleanHint": "O fio de platina já não confere coloração à chama; pode ser mergulhado na próxima amostra.",
+    "dirtyHint": "O fio de platina contém resíduos (fios novos frequentemente trazem sódio). Mergulhe em ácido clorídrico diluído e incandesça repetidamente até a chama não mostrar mais cor; os cloretos são voláteis e limpam muito mais rápido do que a simples incandescência.",
+    "el": {
+      "Na": "Sódio",
+      "K": "Potássio",
+      "Li": "Lítio",
+      "Ca": "Cálcio",
+      "Sr": "Estrôncio",
+      "Ba": "Bário",
+      "Cu": "Cobre"
+    },
+    "unknownTitle": "Identificar amostra desconhecida X",
+    "unknownHint": "Calcine a amostra X e determine qual elemento metálico ela contém. Atenção: a luz amarela do sódio pode mascarar a luz violeta do potássio.",
+    "correct": "Identificação correta.",
+    "wrong": "Incorreto. Verifique se o fio de platina está limpo e, se necessário, observe novamente através do vidro de cobalto.",
+    "spectro": {
+      "title": "Espectroscópio: espectro de linhas",
+      "throughCobalt": "Através do vidro de cobalto",
+      "empty": "Introduza o fio de platina com amostra na chama para visualizar o espectro aqui.",
+      "explain": "Cada elemento emite luz apenas em comprimentos de onda fixos, como uma impressão digital. O sódio apresenta um par de linhas amarelas a 589 nm; as linhas principais do potássio estão a 766 nm (vermelho escuro) e 404 nm (violeta), por isso a chama do potássio é violeta claro. O vidro de cobalto absorve a luz amarelo-esverdeada central, deixando passar apenas as extremidades."
+    },
+    "log": {
+      "title": "Registro de observações",
+      "empty": "A cada amostra retirada e calcinada, uma linha é registrada automaticamente aqui.",
+      "sample": "Amostra",
+      "cobalt": "Vidro de cobalto",
+      "color": "Cor da chama",
+      "seen": "Elementos identificados",
+      "nothing": "Nenhum",
+      "contaminated": "Contaminado pela amostra anterior"
+    }
+  },
+  "clockLab": {
+    "setup": "Preparar soluções",
+    "ki": "Concentração de KI / mol·L⁻¹ (solução A)",
+    "thio": "Concentração de Na₂S₂O₃ / mol·L⁻¹ (solução A)",
+    "h2o2": "Concentração de H₂O₂ / mol·L⁻¹ (solução B)",
+    "temp": "Temperatura controlada",
+    "starch": "Adicionar indicador de amido à solução A",
+    "speed": "Multiplicador de velocidade",
+    "pour": "Adicionar solução B e iniciar cronômetro",
+    "stop": "Parar cronômetro",
+    "again": "Tentar com outra condição",
+    "reset": "Limpar dados",
+    "readings": "Cronometragem",
+    "stopwatch": "Cronômetro",
+    "theory": "Período de indução teórico",
+    "slow": "Lento",
+    "fast": "Instantâneo",
+    "excessThio": "Na₂S₂O₃ pelo menos o dobro de H₂O₂: o iodo formado será sempre reduzido e a solução não ficará azul.",
+    "overdue": "Já passaram 5 minutos sem mudança de cor. Verifique a fórmula; clique em «Parar cronômetro» para encerrar esta tentativa.",
+    "noStarch": "Sem amido, o ponto final só é visível quando o iodo acumula o suficiente para exibir a cor amarelo-castanha — o tempo medido ficará mais longo.",
+    "chart": {
+      "title": "Análise de dados: ordem de reação e energia de ativação",
+      "order": "Inclinação ajustada ≈ {n}, ou seja, ordem {n} em relação a I⁻ (valor teórico: 1ª ordem)",
+      "orderHint": "Mantenha temperatura, H₂O₂ e Na₂S₂O₃ constantes; varie apenas a concentração de KI em pelo menos duas corridas para determinar a ordem em I⁻.",
+      "ea": "Da inclinação −Ea/R obtém-se Ea ≈ {ea} kJ/mol (valor bibliográfico: ~56 kJ/mol)",
+      "eaHint": "Mantenha a fórmula constante; varie apenas a temperatura em pelo menos duas corridas e aplique a equação de Arrhenius para calcular a energia de ativação.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Tempo de viragem azul"
+      },
+      "withoutStarch": "Sem amido"
+    }
   }
 }

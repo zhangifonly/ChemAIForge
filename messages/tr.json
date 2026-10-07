@@ -493,5 +493,148 @@
       "error": "Kabul görmüş 96485 C/mol değerinden sapma: {pct}%",
       "ariaLabel": "Çöken bakır kütlesinin elektrik yüküne bağlı değişim grafiği, toplam {count} tartım noktası"
     }
+  },
+  "sodiumLab": {
+    "setup": "Deney Adımları",
+    "pieceSize": "Sodyum Parçası Boyutu",
+    "size": {
+      "small": "Mercimek büyüklüğünde",
+      "medium": "Nohut büyüklüğünde",
+      "large": "Büyük parça"
+    },
+    "largeWarning": "Büyük sodyum parçası şiddetli ısı açığa çıkarır; hidrojen gazını tutuşturabilir, hatta patlama sesi oluşturabilir ve alkali sıvı sıçratabilir. Gerçek deneyde yalnızca mercimek büyüklüğünde parça kullanılmalıdır; bu boyut yalnızca sanal ortamda gösterim amaçlıdır.",
+    "cut": "Neşter bıçağıyla yüzey oksit tabakasını kesin",
+    "cutHint": "Sodyumun yüzeyinde gri-beyaz bir oksit tabakası bulunur; suya atmadan önce taze bir kesit yüzeyi ortaya çıkarın. Kestikten sonra kesit yüzeyindeki parlaklığın değişimini gözlemleyin.",
+    "phenol": "Suya 2 damla fenolftalein ekleyin",
+    "drop": "Pensi kullanarak sodyumu suya bırakın",
+    "next": "Temiz bir bardak su alın ve yeni bir parça kullanın",
+    "sound": "Ses",
+    "reset": "Sıfırla",
+    "readings": "Anlık Okumalar",
+    "remaining": "Kalan Sodyum",
+    "hydrogen": "Oluşan Hidrojen Gazı",
+    "waterTemp": "Su Sıcaklığı",
+    "burning": "Açığa çıkan ısı kaçan hidrojen gazını tutuşturur; sodyum sarı alevle yanar",
+    "phenomenaTitle": "Gözlemler: Yüzme, Erime, Hareket, Ses, Kızarma",
+    "phenomena": {
+      "float": {
+        "name": "Su yüzeyinde yüzer",
+        "why": "Sodyumun yoğunluğu 0,97 g/cm³ olup sudan düşüktür."
+      },
+      "melt": {
+        "name": "Parlak küçük bir küreye erir",
+        "why": "Reaksiyon ısı açığa çıkarır; sodyumun erime noktası yalnızca 97,8 ℃ olduğundan çabucak erir. Yüzey gerilimi onu küre şekline getirir."
+      },
+      "swim": {
+        "name": "Su yüzeyinde her yöne hareket eder",
+        "why": "Oluşan hidrojen gazı kürenin her yönünden düzensiz biçimde fışkırarak küreyi sürükler."
+      },
+      "hiss": {
+        "name": "Tıslama sesi çıkarır",
+        "why": "Hidrojen gazı hızla kaçar; açığa çıkan ısı temas noktasındaki suyu buharlaştırır."
+      },
+      "pink": {
+        "name": "Çözelti kırmızıya döner",
+        "why": "Güçlü bir baz olan NaOH oluşur; fenolftalein baz ortamında kırmızıya döner. Kırmızı renk önce sodyum küresinin izlediği yolda belirir."
+      }
+    },
+    "pinkHint": "Fenolftalein eklenmediğinde baz oluşumu görülmez. Şimdi eklenebilir: baz zaten suda mevcut.",
+    "chart": {
+      "title": "Üretilen hidrojen gazı hacminin zamana göre değişimi",
+      "xAxis": "Zaman t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Hidrojen üretim eğrisi, tamamlanan parça sayısı: {count}",
+      "mass": "Sodyum kütlesi",
+      "measuredT": "Ölçülen tepkime süresi",
+      "predictedT": "m^(1/3) ile tahmin",
+      "volume": "Hidrojen gazı hacmi",
+      "hint": "Bir parça tamamlandığında hidrojen üretim eğrisi burada çizilir. Farklı boyutlarda sodyum kullanarak tepkime sürelerini karşılaştırın.",
+      "insight": "Sodyum yalnızca kürenin yüzeyinde tepkimeye girer; yarıçap sabit hızla küçülür. Bu nedenle tepkime süresi yarıçapla, dolayısıyla kütlenin küpkökü ile orantılıdır: kütle 8 katına çıktığında süre yalnızca yaklaşık 2 katına çıkar."
+    }
+  },
+  "flameLab": {
+    "setup": "Deney işlemleri",
+    "light": "Bunzen brülörünü yak",
+    "extinguish": "Bunzen brülörünü kapat",
+    "wire": "Platin tel",
+    "dipAcid": "Seyreltik hidroklorik aside daldır",
+    "intoFlame": "Dış aleve tutarak ısıt",
+    "outOfFlame": "Alevden çıkar",
+    "dipSample": "Örnek çözeltiye daldır",
+    "cobalt": "Kobalt camından gözlemle",
+    "reset": "Sıfırla",
+    "readings": "Gözlemler",
+    "wireState": "Platin tel",
+    "clean": "Temiz",
+    "dirty": "Kalıntı var",
+    "seen": "Alevde seçilebilir",
+    "none": "Yok (alev soluk mavi renkte)",
+    "cleanHint": "Platin tel alevde ısıtıldığında artık renk vermiyor; bir sonraki örneği daldırabilirsiniz.",
+    "dirtyHint": "Platin telde kalıntı var (yeni platin teller de genellikle sodyum içerir). Seyreltik hidroklorik aside daldırıp ısıtmayı, alev renk vermeyene kadar birkaç kez tekrarlayın; klorürler uçucu olduğundan yalnızca ısıtmaktan çok daha hızlı sonuç verir.",
+    "el": {
+      "Na": "Sodyum",
+      "K": "Potasyum",
+      "Li": "Lityum",
+      "Ca": "Kalsiyum",
+      "Sr": "Stronsiyum",
+      "Ba": "Baryum",
+      "Cu": "Bakır"
+    },
+    "unknownTitle": "Bilinmeyen X Örneğini Tanımla",
+    "unknownHint": "X örneğini yakarak hangi metal elementini içerdiğini belirleyin. Not: Sodyumun sarı ışığı potasyumun mor ışığını maskeleyebilir.",
+    "correct": "Doğru tanımlama.",
+    "wrong": "Yanlış. Platin telin temiz olup olmadığını kontrol edin; gerekirse kobalt camından tekrar bakın.",
+    "spectro": {
+      "title": "Spektroskop: Çizgi Spektrumu",
+      "throughCobalt": "Kobalt Camından",
+      "empty": "Örnek sürülmüş platin teli aleve tutun; alev spektrumu burada görüntülenir.",
+      "explain": "Her element yalnızca birkaç sabit dalga boyunda ışık yayar; bu, parmak izi gibi özgündür. Sodyumun 589 nm'de bir çift sarı çizgisi vardır. Potasyumun ana çizgileri 766 nm'de koyu kırmızıda ve 404 nm'de mordadır; bu yüzden potasyum alevi açık mor görünür. Kobalt camı ortadaki sarı-yeşil ışığı absorbe eder, yalnızca uç bölgeleri geçirir."
+    },
+    "log": {
+      "title": "Gözlem Kaydı",
+      "empty": "Her örnek alıp yakışınızda buraya otomatik olarak bir satır eklenir.",
+      "sample": "Örnek",
+      "cobalt": "Kobalt Camı",
+      "color": "Alev Rengi",
+      "seen": "Tanınan Element",
+      "nothing": "Yok",
+      "contaminated": "Önceki örnekten kontamine"
+    }
+  },
+  "clockLab": {
+    "setup": "Çözelti Hazırlama",
+    "ki": "KI derişimi / mol·L⁻¹ (A çözeltisi)",
+    "thio": "Na₂S₂O₃ derişimi / mol·L⁻¹ (A çözeltisi)",
+    "h2o2": "H₂O₂ derişimi / mol·L⁻¹ (B çözeltisi)",
+    "temp": "Sabit Sıcaklık",
+    "starch": "A çözeltisine nişasta indikatörü ekle",
+    "speed": "Zaman Hızı",
+    "pour": "B çözeltisini dökün, zamanlayıcıyı başlatın",
+    "stop": "Zamanlayıcıyı Durdur",
+    "again": "Farklı koşullarla tekrar dene",
+    "reset": "Verileri temizle",
+    "readings": "Zamanlama",
+    "stopwatch": "Kronometre",
+    "theory": "Teorik indüksiyon süresi",
+    "slow": "Yavaş",
+    "fast": "Anlık",
+    "excessThio": "Na₂S₂O₃, H₂O₂'nin iki katından az değil: oluşan iyot sürekli indirgenir, çözelti maviye dönmez.",
+    "overdue": "5 dakika geçti, henüz renk değişmedi. Tarifi kontrol et; bu denemeyi bitirmek için «Zamanlamayı durdur» düğmesine bas.",
+    "noStarch": "Nişasta yok; bitiş noktasını ancak iyot sarı-kahverengi rengi görünecek kadar birikince fark edebilirsin, bu da zamanlamayı uzatır.",
+    "chart": {
+      "title": "Veri işleme: Reaksiyon mertebesi ve aktivasyon enerjisi",
+      "order": "Uyum eğimi ≈ {n}, yani I⁻ için {n}. mertebe (teorik: 1. mertebe)",
+      "orderHint": "Sıcaklığı, H₂O₂ ve Na₂S₂O₃ konsantrasyonlarını sabit tutarak yalnızca KI konsantrasyonunu değiştir; en az iki deney yaparak I⁻ için reaksiyon mertebesini bul.",
+      "ea": "−Ea/R eğiminden aktivasyon enerjisi Ea ≈ {ea} kJ/mol (literatür değeri ≈ 56 kJ/mol)",
+      "eaHint": "Tarifi sabit tutarak yalnızca sıcaklığı değiştir; en az iki deney yaparak Arrhenius formülüyle aktivasyon enerjisini hesapla.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Sıcaklık",
+        "time": "Maviye dönme süresi"
+      },
+      "withoutStarch": "Nişastasız"
+    }
   }
 }

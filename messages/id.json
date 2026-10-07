@@ -493,5 +493,148 @@
       "error": "Selisih {pct}% dari nilai yang diterima 96485 C/mol",
       "ariaLabel": "Grafik massa tembaga tereduksi terhadap muatan listrik, total {count} titik penimbangan"
     }
+  },
+  "sodiumLab": {
+    "setup": "Langkah Percobaan",
+    "pieceSize": "Ukuran Potongan Natrium",
+    "size": {
+      "small": "Sebesar biji kacang hijau",
+      "medium": "Sebesar biji kedelai",
+      "large": "Potongan besar"
+    },
+    "largeWarning": "Natrium dalam potongan besar melepas panas dengan sangat hebat, dapat membakar gas hidrogen bahkan menimbulkan ledakan dan percikan larutan basa. Pada percobaan nyata hanya boleh mengambil seukuran biji kacang hijau; ini hanya didemonstrasikan di lingkungan virtual.",
+    "cut": "Potong lapisan oksida di permukaan dengan pisau kecil",
+    "cutHint": "Permukaan natrium dilapisi oksida abu-abu keputihan. Potong terlebih dahulu untuk mendapatkan bidang potong yang segar sebelum dimasukkan. Setelah dipotong, amati perubahan kilap pada bidang potong.",
+    "phenol": "Teteskan 2 tetes fenolftalein ke dalam air",
+    "drop": "Masukkan natrium ke dalam air menggunakan pinset",
+    "next": "Ganti dengan segelas air bersih, ambil potongan baru",
+    "sound": "Suara",
+    "reset": "Atur Ulang",
+    "readings": "Pembacaan Real-time",
+    "remaining": "Natrium Tersisa",
+    "hydrogen": "Gas Hidrogen Dihasilkan",
+    "waterTemp": "Suhu Air",
+    "burning": "Panas yang dilepas membakar gas hidrogen yang keluar; natrium terbakar dengan nyala api berwarna kuning",
+    "phenomenaTitle": "Fenomena: Mengapung, Melebur, Bergerak, Berbunyi, Memerah",
+    "phenomena": {
+      "float": {
+        "name": "Mengapung di permukaan air",
+        "why": "Densitas natrium 0,97 g/cm³, lebih kecil dari air."
+      },
+      "melt": {
+        "name": "Melebur menjadi bola kecil yang berkilau",
+        "why": "Reaksi melepas panas; titik lebur natrium hanya 97,8 ℃ sehingga cepat melebur. Tegangan permukaan membuatnya menyusut menjadi bola."
+      },
+      "swim": {
+        "name": "Bergerak ke sana-sini di permukaan air",
+        "why": "Gas hidrogen yang dihasilkan menyembur secara tidak merata dari berbagai sisi bola, mendorong bola bergerak tak beraturan."
+      },
+      "hiss": {
+        "name": "Mengeluarkan suara mendesis",
+        "why": "Gas hidrogen keluar dengan cepat; panas yang dilepas menguapkan air di titik kontak."
+      },
+      "pink": {
+        "name": "Larutan berubah menjadi merah muda",
+        "why": "NaOH basa kuat terbentuk; fenolftalein berubah merah dalam suasana basa. Warna merah mula-mula muncul di sepanjang lintasan bola natrium."
+      }
+    },
+    "pinkHint": "Tanpa tetesan fenolftalein, terbentuknya basa tidak terlihat. Menambahkannya sekarang pun bisa: basa sudah ada di dalam air.",
+    "chart": {
+      "title": "Volume gas hidrogen yang dihasilkan terhadap waktu",
+      "xAxis": "Waktu t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Kurva produksi gas hidrogen, {count} percobaan selesai",
+      "mass": "Massa natrium",
+      "measuredT": "Durasi reaksi terukur",
+      "predictedT": "Prediksi berdasarkan m^(1/3)",
+      "volume": "Volume gas hidrogen",
+      "hint": "Setelah satu percobaan selesai, kurva produksi gas hidrogen akan ditampilkan di sini. Coba natrium dengan ukuran berbeda dan bandingkan durasi reaksinya.",
+      "insight": "Natrium hanya bereaksi di permukaan bola; jari-jari menyusut dengan laju konstan, sehingga durasi reaksi berbanding lurus dengan jari-jari, yaitu berbanding lurus dengan akar pangkat tiga massa: jika massa menjadi 8 kali lipat, durasi hanya menjadi sekitar 2 kali lipat."
+    }
+  },
+  "flameLab": {
+    "setup": "Prosedur percobaan",
+    "light": "Nyalakan pembakar Bunsen",
+    "extinguish": "Matikan pembakar Bunsen",
+    "wire": "Kawat platina",
+    "dipAcid": "Celupkan ke asam klorida encer",
+    "intoFlame": "Masukkan ke nyala luar untuk dipijarkan",
+    "outOfFlame": "Tarik dari nyala api",
+    "dipSample": "Celupkan ke larutan sampel",
+    "cobalt": "Amati melalui kaca kobalt",
+    "reset": "Atur ulang",
+    "readings": "Pengamatan",
+    "wireState": "Kawat platina",
+    "clean": "Bersih",
+    "dirty": "Ada residu",
+    "seen": "Teridentifikasi dalam nyala api",
+    "none": "Tidak ada (nyala api biru pucat alami)",
+    "cleanHint": "Kawat platina tidak lagi menunjukkan warna saat dipijarkan dalam nyala api; siap untuk mencelupkan sampel berikutnya.",
+    "dirtyHint": "Terdapat residu pada kawat platina (kawat baru pun sering mengandung natrium). Celupkan ke asam klorida encer lalu pijarkan, ulangi beberapa kali hingga nyala api tidak lagi berwarna; klorida mudah menguap sehingga proses ini jauh lebih cepat daripada sekadar mempijarkan.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Litium",
+      "Ca": "Kalsium",
+      "Sr": "Stronsium",
+      "Ba": "Barium",
+      "Cu": "Tembaga"
+    },
+    "unknownTitle": "Identifikasi Sampel Tak Dikenal X",
+    "unknownHint": "Bakar sampel X dan tentukan unsur logam yang terkandung di dalamnya. Perhatian: cahaya kuning natrium dapat menutupi cahaya ungu kalium.",
+    "correct": "Identifikasi benar.",
+    "wrong": "Kurang tepat. Periksa apakah kawat platina sudah bersih; jika perlu, amati kembali melalui kaca kobalt.",
+    "spectro": {
+      "title": "Spektroskop: Spektrum Garis",
+      "throughCobalt": "Melalui kaca kobalt",
+      "empty": "Masukkan kawat platina yang telah dicelupkan ke sampel ke dalam nyala api untuk menampilkan spektrum nyala di sini.",
+      "explain": "Setiap unsur memancarkan cahaya hanya pada beberapa panjang gelombang tetap, seperti sidik jari. Natrium menunjukkan sepasang garis kuning pada 589 nm; garis utama kalium berada pada merah tua 766 nm dan ungu 404 nm, sehingga nyala kalium tampak ungu muda. Kaca kobalt menyerap cahaya kuning-hijau di tengah dan hanya meneruskan cahaya di kedua ujungnya."
+    },
+    "log": {
+      "title": "Catatan Pengamatan",
+      "empty": "Setiap kali sampel dicelupkan dan dibakar, satu baris catatan akan ditambahkan secara otomatis di sini.",
+      "sample": "Sampel",
+      "cobalt": "Kaca kobalt",
+      "color": "Warna nyala",
+      "seen": "Unsur teridentifikasi",
+      "nothing": "Tidak ada",
+      "contaminated": "Terkontaminasi sampel sebelumnya"
+    }
+  },
+  "clockLab": {
+    "setup": "Persiapan Larutan",
+    "ki": "Konsentrasi KI / mol·L⁻¹ (Larutan A)",
+    "thio": "Konsentrasi Na₂S₂O₃ / mol·L⁻¹ (Larutan A)",
+    "h2o2": "Konsentrasi H₂O₂ / mol·L⁻¹ (Larutan B)",
+    "temp": "Suhu termostat",
+    "starch": "Tambahkan indikator amilum ke larutan A",
+    "speed": "Pengali waktu",
+    "pour": "Tuangkan larutan B, mulai pencatatan waktu",
+    "stop": "Hentikan pencatatan waktu",
+    "again": "Coba dengan kondisi berbeda",
+    "reset": "Hapus data",
+    "readings": "Pencatatan waktu",
+    "stopwatch": "Stopwatch",
+    "theory": "Waktu induksi teoritis",
+    "slow": "Lambat",
+    "fast": "Seketika",
+    "excessThio": "Na₂S₂O₃ tidak kurang dari dua kali H₂O₂: iodin yang terbentuk akan selalu direduksi, larutan tidak akan berubah biru.",
+    "overdue": "Sudah lebih dari 5 menit belum berubah warna. Periksa formulasi, atau tekan “Hentikan Pencatatan” untuk mengakhiri sesi ini.",
+    "noStarch": "Tanpa amilum, titik akhir baru terlihat saat iodin cukup banyak untuk menampakkan warna kuning-coklat, sehingga pencatatan waktu cenderung lebih panjang.",
+    "chart": {
+      "title": "Pengolahan Data: Orde Reaksi dan Energi Aktivasi",
+      "order": "Kemiringan hasil fitting ≈ {n}, yaitu orde {n} terhadap I⁻ (teori: orde 1)",
+      "orderHint": "Pertahankan suhu, H₂O₂, dan Na₂S₂O₃ tetap; ubah hanya konsentrasi KI minimal dua kali untuk menentukan orde reaksi terhadap I⁻.",
+      "ea": "Dari kemiringan −Ea/R diperoleh energi aktivasi Ea ≈ {ea} kJ/mol (nilai literatur ≈ 56 kJ/mol)",
+      "eaHint": "Pertahankan formulasi tetap; ubah hanya suhu minimal dua kali, lalu gunakan persamaan Arrhenius untuk menghitung energi aktivasi.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Suhu",
+        "time": "Waktu perubahan biru"
+      },
+      "withoutStarch": "Tanpa amilum"
+    }
   }
 }

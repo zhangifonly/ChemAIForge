@@ -493,5 +493,148 @@
       "error": "Az elfogadott 96485 C/mol értéktől való eltérés: {pct}%",
       "ariaLabel": "A kivált réz tömegének változása a töltésmennyiség függvényében, összesen {count} mérési pont"
     }
+  },
+  "sodiumLab": {
+    "setup": "Kísérleti lépések",
+    "pieceSize": "Nátrium-darab mérete",
+    "size": {
+      "small": "Zöldborsó-méretű",
+      "medium": "Szójabab-méretű",
+      "large": "Nagy darab"
+    },
+    "largeWarning": "A nagy nátrium-darab heves hőt fejleszt, meggyújthatja a hidrogéngázt, sőt robbanásszerű pattanást okozhat, és lúgos folyadékot fröcskölhet ki. Valódi kísérletben csak zöldborsónyi darabot szabad használni – ez itt csak virtuális környezetben kerül bemutatásra.",
+    "cut": "Vágja le a felszíni oxidréteget kiskéssel",
+    "cutHint": "A nátrium felszínét szürkésfehér oxid borítja; vágjon friss felületet, mielőtt a vízbe dobja. Vágás után figyelje meg a vágási felület fényességének változását.",
+    "phenol": "Cseppentsen 2 csepp fenolftaleint a vízbe",
+    "drop": "Csipesszel dobja a nátriumot a vízbe",
+    "next": "Cserélje ki a vizet, és vegyen egy új darabot",
+    "sound": "Hang",
+    "reset": "Visszaállítás",
+    "readings": "Valós idejű mérések",
+    "remaining": "Maradék nátrium",
+    "hydrogen": "Keletkező hidrogéngáz",
+    "waterTemp": "Vízhőmérséklet",
+    "burning": "A hő meggyújtja a felszabaduló hidrogéngázt, a nátrium sárga lánggal ég",
+    "phenomenaTitle": "Jelenségek: úszik, olvad, mozog, sziszeg, vörösödik",
+    "phenomena": {
+      "float": {
+        "name": "A vízfelszínen úszik",
+        "why": "A nátrium sűrűsége 0,97 g/cm³, kisebb, mint a vízé."
+      },
+      "melt": {
+        "name": "Fényes kis golyóvá olvad",
+        "why": "A reakció hőt fejleszt; a nátrium olvadáspontja mindössze 97,8 ℃, így gyorsan megolvad. A felületi feszültség golyó alakúvá húzza össze."
+      },
+      "swim": {
+        "name": "Ide-oda mozog a vízfelszínen",
+        "why": "A keletkező hidrogéngáz egyenetlenül lövell ki a golyó különböző irányaiból, és ide-oda tolja azt."
+      },
+      "hiss": {
+        "name": "Sziszegő hangot ad",
+        "why": "A hidrogéngáz gyorsan szabadul fel, a fejlődő hő elpárologtatja az érintkezési felületen lévő vizet."
+      },
+      "pink": {
+        "name": "Az oldat vörösre színeződik",
+        "why": "NaOH erős lúg keletkezik; a fenolftalein lúgos közegben vörös lesz. A vörös szín először a nátriumgolyó útvonalán jelenik meg."
+      }
+    },
+    "pinkHint": "Fenolftalein nélkül nem látható, hogy lúg keletkezett. Most is hozzáadhat néhány cseppet – a lúg már benne van a vízben.",
+    "chart": {
+      "title": "A termelt hidrogéngáz térfogata az idő függvényében",
+      "xAxis": "Idő t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Hidrogéntermelési görbe, {count} darab elvégezve",
+      "mass": "A nátrium tömege",
+      "measuredT": "Mért reakcióidő",
+      "predictedT": "m^(1/3) alapján becsült",
+      "volume": "Hidrogéngáz térfogata",
+      "hint": "Egy darab elvégzése után itt megjelenik a hidrogéntermelési görbe. Próbáljon különböző méretű nátiumdarabokat, és hasonlítsa össze a reakcióidőket.",
+      "insight": "A nátrium csak a gömb felszínén reagál, a sugara egyenletesen csökken, ezért a reakcióidő arányos a sugárral, vagyis a tömeg köbgyökével: ha a tömeg 8-szorosára nő, a reakcióidő csak kb. 2-szeresére nő."
+    }
+  },
+  "flameLab": {
+    "setup": "Kísérleti műveletek",
+    "light": "Bunsen-égő meggyújtása",
+    "extinguish": "Bunsen-égő eloltása",
+    "wire": "Platinaszál",
+    "dipAcid": "Mártás hígított sósavba",
+    "intoFlame": "Behelyezés a külső lángba izzításhoz",
+    "outOfFlame": "Kivétel a lángból",
+    "dipSample": "Mártás a mintaoldatba",
+    "cobalt": "Megfigyelés kobaltüvegen át",
+    "reset": "Visszaállítás",
+    "readings": "Megfigyelések",
+    "wireState": "Platinaszál",
+    "clean": "Tiszta",
+    "dirty": "Szennyezett",
+    "seen": "Lángban azonosítható",
+    "none": "Nincs (a láng halvány kék alapszínű)",
+    "cleanHint": "A platinaszál a lángban izzítva már nem mutat színt, mártható a következő mintába.",
+    "dirtyHint": "A platinaszálon maradvány van (az új platinaszál is gyakran tartalmaz nátriumot). Mártsa hígított sósavba, majd izzítsa meg, ismételje néhányszor, amíg a láng már nem mutat színt; a kloridok könnyen illékonnyak, így ez sokkal gyorsabb a puszta izzításnál.",
+    "el": {
+      "Na": "Nátrium",
+      "K": "Kálium",
+      "Li": "Lítium",
+      "Ca": "Kalcium",
+      "Sr": "Stroncium",
+      "Ba": "Bárium",
+      "Cu": "Réz"
+    },
+    "unknownTitle": "Ismeretlen X minta azonosítása",
+    "unknownHint": "Égesse el az X mintát, és állapítsa meg, melyik fémelemet tartalmazza. Figyelem: a nátrium sárga fénye elfedheti a kálium lila fényét.",
+    "correct": "Helyes azonosítás.",
+    "wrong": "Helytelen. Ellenőrizze, hogy a platinaszál tiszta-e, szükség esetén nézze meg kobaltüvegen át.",
+    "spectro": {
+      "title": "Spektroszkóp: vonalas színkép",
+      "throughCobalt": "Kobaltüvegen át",
+      "empty": "Helyezze a mintával bevont platinaszálat a lángba – itt jelenik meg a láng színképe.",
+      "explain": "Minden elem csak néhány rögzített hullámhosszon bocsát ki fényt, akárcsak az ujjlenyomat. A nátrium 589 nm-en egy sárga vonalpárt ad, a kálium fővonalai 766 nm-en (mélyvörös) és 404 nm-en (ibolya) találhatók, ezért a káliumláng halványlila. A kobaltüveg elnyeli a középső sárga-zöld fényt, csak a két szélső sávot engedi át."
+    },
+    "log": {
+      "title": "Megfigyelési napló",
+      "empty": "Minden mintavétel és égetés után a rendszer automatikusan rögzít egy sort.",
+      "sample": "Minta",
+      "cobalt": "Kobaltüveg",
+      "color": "Lángszín",
+      "seen": "Azonosítható elem",
+      "nothing": "Nincs",
+      "contaminated": "Az előző mintával szennyezett"
+    }
+  },
+  "clockLab": {
+    "setup": "Oldatkészítés",
+    "ki": "KI-koncentráció / mol·L⁻¹ (A oldat)",
+    "thio": "Na₂S₂O₃-koncentráció / mol·L⁻¹ (A oldat)",
+    "h2o2": "H₂O₂-koncentráció / mol·L⁻¹ (B oldat)",
+    "temp": "Termosztát hőmérséklete",
+    "starch": "Keményítő indikátor hozzáadása az A oldathoz",
+    "speed": "Időgyorsítás",
+    "pour": "B oldat hozzáöntése – időmérés indítása",
+    "stop": "Időmérés leállítása",
+    "again": "Új feltételekkel újra",
+    "reset": "Adatok törlése",
+    "readings": "Időmérés",
+    "stopwatch": "Stopper",
+    "theory": "Elméleti indukciós idő",
+    "slow": "Lassú",
+    "fast": "Azonnali",
+    "excessThio": "A Na₂S₂O₃ legalább kétszerese a H₂O₂-nek: a keletkező jód mindig visszaredukálódik, az oldat nem kékül meg.",
+    "overdue": "5 perc elteltével még nem változott szín. Ellenőrizze a receptet; az „Időmérés leállítása” gombbal befejezheti a mérést.",
+    "noStarch": "Keményítő nélkül csak a jód sárgásbarna elszíneződésekor érzékelhető a végpont, az időmérés így hosszabbnak adódhat.",
+    "chart": {
+      "title": "Adatfeldolgozás: reakciórendűség és aktiválási energia",
+      "order": "Illesztett meredekség ≈ {n}, azaz I⁻-ra nézve {n}. rendű reakció (elméleti: 1. rendű)",
+      "orderHint": "Tartsa állandón a hőmérsékletet, a H₂O₂- és Na₂S₂O₃-koncentrációt, csak a KI-koncentrációt változtassa – legalább két méréssel határozza meg az I⁻-ra vonatkozó reakciórendűséget.",
+      "ea": "A −Ea/R meredekségből számított aktiválási energia: Ea ≈ {ea} kJ/mol (irodalmi érték: ~56 kJ/mol)",
+      "eaHint": "Tartsa állandón a receptet, csak a hőmérsékletet változtassa – legalább két méréssel határozza meg az aktiválási energiát Arrhenius-egyenlettel.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Hőmérséklet",
+        "time": "Kékülési idő"
+      },
+      "withoutStarch": "Keményítő nélkül"
+    }
   }
 }

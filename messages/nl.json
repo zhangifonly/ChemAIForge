@@ -493,5 +493,148 @@
       "error": "Afwijking van de geaccepteerde waarde 96485 C/mol: {pct}%",
       "ariaLabel": "Grafiek van afgezette kopermassa als functie van lading, {count} meetpunten"
     }
+  },
+  "sodiumLab": {
+    "setup": "Experimentstappen",
+    "pieceSize": "Grootte natriumstuk",
+    "size": {
+      "small": "Zo groot als een erwt",
+      "medium": "Zo groot als een sojaboon",
+      "large": "Groot stuk"
+    },
+    "largeWarning": "Een groot stuk natrium geeft heftige warmteontwikkeling, waardoor het waterstofgas kan ontbranden of zelfs een knal kan veroorzaken en loogdruppels kunnen spatten. In een echt experiment mag je alleen een stuk ter grootte van een erwt gebruiken; dit wordt hier uitsluitend in de virtuele omgeving gedemonstreerd.",
+    "cut": "Snijd de geoxideerde buitenlaag weg met een mesje",
+    "cutHint": "Het oppervlak van natrium is bedekt met een grijswit oxide. Snijd eerst een vers snijvlak bloot voordat je het in het water laat vallen. Let na het snijden op de verandering in glans van het snijvlak.",
+    "phenol": "Voeg 2 druppels fenolftaleïne toe aan het water",
+    "drop": "Laat het natrium met een pincet in het water vallen",
+    "next": "Vervang het water door een schoon glas en neem een nieuw stuk",
+    "sound": "Geluid",
+    "reset": "Opnieuw instellen",
+    "readings": "Actuele meetwaarden",
+    "remaining": "Resterend natrium",
+    "hydrogen": "Gevormd waterstofgas",
+    "waterTemp": "Watertemperatuur",
+    "burning": "De warmteontwikkeling ontsteekt het vrijkomende waterstofgas; natrium verbrandt met een gele vlam",
+    "phenomenaTitle": "Verschijnselen: drijft, smelt, beweegt, sist, kleurt rood",
+    "phenomena": {
+      "float": {
+        "name": "Drijft op het wateroppervlak",
+        "why": "De dichtheid van natrium is 0,97 g/cm³, kleiner dan die van water."
+      },
+      "melt": {
+        "name": "Smelt tot een glanzend bolletje",
+        "why": "De reactie ontwikkelt warmte; het smeltpunt van natrium is slechts 97,8 ℃, zodat het snel smelt. Oppervlaktespanning trekt het samen tot een bol."
+      },
+      "swim": {
+        "name": "Beweegt alle kanten op over het wateroppervlak",
+        "why": "Het gevormde waterstofgas ontsnapt ongelijkmatig vanuit alle richtingen van de bol en stuwt het bolletje voort."
+      },
+      "hiss": {
+        "name": "Maakt een ssissend geluid",
+        "why": "Waterstofgas ontsnapt snel en de warmteontwikkeling laat het water op het contactpunt verdampen."
+      },
+      "pink": {
+        "name": "Oplossing kleurt rood",
+        "why": "Er wordt sterk base NaOH gevormd; fenolftaleïne kleurt rood in contact met base. De rode kleur verschijnt eerst langs het spoor dat het natriumbolletje heeft afgelegd."
+      }
+    },
+    "pinkHint": "Er is geen fenolftaleïne toegevoegd, waardoor de vorming van base niet zichtbaar is. Je kunt het alsnog toevoegen: de base zit al in het water.",
+    "chart": {
+      "title": "Volume waterstofgas geproduceerd als functie van de tijd",
+      "xAxis": "Tijd t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Waterstofgascurve, {count} blokje(s) voltooid",
+      "mass": "Massa natrium",
+      "measuredT": "Gemeten reactieduur",
+      "predictedT": "Voorspeld via m^(1/3)",
+      "volume": "Volume waterstofgas",
+      "hint": "Na elk blokje wordt hier de waterstofgascurve getekend. Gebruik verschillende groottes natrium en vergelijk de reactieduur.",
+      "insight": "Natrium reageert alleen aan het oppervlak van de bol; de straal neemt gelijkmatig af. De reactieduur is daarom evenredig met de straal, en dus met de derdemachtswortel van de massa: als de massa 8× groter wordt, neemt de duur slechts ongeveer 2× toe."
+    }
+  },
+  "flameLab": {
+    "setup": "Uitvoering",
+    "light": "Steek de bunsenbrander aan",
+    "extinguish": "Zet de bunsenbrander uit",
+    "wire": "Platinumdraadje",
+    "dipAcid": "Dompel in verdund zoutzuur",
+    "intoFlame": "Houd in de buitenvlam",
+    "outOfFlame": "Verwijder uit de vlam",
+    "dipSample": "Dompel in de oplossing",
+    "cobalt": "Bekijk door kobaltglas",
+    "reset": "Opnieuw instellen",
+    "readings": "Waarnemingen",
+    "wireState": "Platinumdraadje",
+    "clean": "Schoon",
+    "dirty": "Verontreinigd",
+    "seen": "Kleur zichtbaar in vlam",
+    "none": "Geen (vlam vertoont natuurlijke lichtblauwe kleur)",
+    "cleanHint": "Het platinumdraadje geeft geen kleur meer af in de vlam en is gereed voor het volgende monster.",
+    "dirtyHint": "Het platinumdraadje is verontreinigd (nieuw draad bevat vaak nog natrium). Dompel in verdund zoutzuur en gloei daarna uit; herhaal dit tot de vlam kleurloos blijft. Chloriden verdampen gemakkelijk, wat sneller werkt dan uitgloeien alleen.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Lithium",
+      "Ca": "Calcium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Koper"
+    },
+    "unknownTitle": "Onbekend monster X identificeren",
+    "unknownHint": "Verbrand monster X en bepaal welk metaalelement het bevat. Let op: het gele licht van natrium kan het violette licht van kalium maskeren.",
+    "correct": "Correct.",
+    "wrong": "Onjuist. Controleer of het platinumdraadje schoon is en bekijk de vlam indien nodig nogmaals door kobaltglas.",
+    "spectro": {
+      "title": "Spectroscoop: lijnspectrum",
+      "throughCobalt": "Door kobaltglas",
+      "empty": "Houd het platinumdraadje met monster in de vlam om hier het vlamspectrum te zien.",
+      "explain": "Elk element straalt licht uit op slechts enkele vaste golflengten, als een vingerafdruk. Natrium geeft een paar gele lijnen op 589 nm; de hoofdlijnen van kalium liggen op 766 nm (diep rood) en 404 nm (violet), waardoor kaliumvlammen lichtviolet zijn. Kobaltglas absorbeert het geel-groene licht ertussenin en laat alleen de uiteinden door."
+    },
+    "log": {
+      "title": "Waarnemingslog",
+      "empty": "Bij elke monstername en verbranding wordt hier automatisch een regel toegevoegd.",
+      "sample": "Monster",
+      "cobalt": "Kobaltglas",
+      "color": "Vlamkleur",
+      "seen": "Herkenbare elementen",
+      "nothing": "Geen",
+      "contaminated": "Verontreinigd door vorig monster"
+    }
+  },
+  "clockLab": {
+    "setup": "Oplossingen bereiden",
+    "ki": "KI-concentratie / mol·L⁻¹ (oplossing A)",
+    "thio": "Na₂S₂O₃-concentratie / mol·L⁻¹ (oplossing A)",
+    "h2o2": "H₂O₂-concentratie / mol·L⁻¹ (oplossing B)",
+    "temp": "Constante temperatuur",
+    "starch": "Zetmeelindicator toevoegen aan oplossing A",
+    "speed": "Tijdversnelling",
+    "pour": "Oplossing B toevoegen en timer starten",
+    "stop": "Timer stoppen",
+    "again": "Nieuwe conditie uitproberen",
+    "reset": "Gegevens wissen",
+    "readings": "Tijdmeting",
+    "stopwatch": "Stopwatch",
+    "theory": "Theoretische inductietijd",
+    "slow": "Langzaam",
+    "fast": "Ogenblikkelijk",
+    "excessThio": "Na₂S₂O₃ minstens tweemaal zo veel als H₂O₂: gevormd jood wordt steeds gereduceerd en de oplossing kleurt niet blauw.",
+    "overdue": "Na 5 minuten nog geen kleurverandering. Controleer de samenstelling; druk op “Stop meting” om deze meting te beëindigen.",
+    "noStarch": "Zonder zetmeel is het eindpunt pas zichtbaar als er genoeg jood is voor een geel-bruine kleur; de gemeten tijd zal te lang uitvallen.",
+    "chart": {
+      "title": "Gegevensverwerking: reactieorde en activeringsenergie",
+      "order": "Aanpassingshelling ≈ {n}, d.w.z. orde {n} voor I⁻ (theoretisch 1)",
+      "orderHint": "Houd temperatuur, H₂O₂ en Na₂S₂O₃ constant; varieer alleen de KI-concentratie in minstens twee metingen om de reactieorde voor I⁻ te bepalen.",
+      "ea": "Uit helling −Ea/R volgt activeringsenergie Ea ≈ {ea} kJ/mol (literatuurwaarde ca. 56 kJ/mol)",
+      "eaHint": "Houd de samenstelling constant; varieer alleen de temperatuur in minstens twee metingen en gebruik de vergelijking van Arrhenius om de activeringsenergie te berekenen.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatuur",
+        "time": "Verkleuring tijd"
+      },
+      "withoutStarch": "Geen zetmeel"
+    }
   }
 }

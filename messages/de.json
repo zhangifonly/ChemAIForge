@@ -493,5 +493,148 @@
       "error": "Abweichung vom Literaturwert 96485 C/mol: {pct}%",
       "ariaLabel": "Diagramm: abgeschiedene Kupfermasse in Abhängigkeit der Ladungsmenge, {count} Messpunkte"
     }
+  },
+  "sodiumLab": {
+    "setup": "Versuchsablauf",
+    "pieceSize": "Natrium-Stückgröße",
+    "size": {
+      "small": "Erbsengross",
+      "medium": "Bohnengross",
+      "large": "Grosses Stück"
+    },
+    "largeWarning": "Ein grosses Natrium-Stück entwickelt starke Wärme, kann den entweichenden Wasserstoff entzünden und sogar eine Knallgasreaktion sowie Laugenspritzer verursachen. Im echten Experiment darf nur ein erbsengrosses Stück verwendet werden – hier nur zur Demonstration in der virtuellen Umgebung.",
+    "cut": "Oxidschicht mit dem Messer abschneiden",
+    "cutHint": "Die Natrium-Oberfläche ist mit einer grauweissen Oxidschicht bedeckt. Erst eine frische Schnittfläche freilegen, dann ins Wasser geben. Nach dem Schneiden den Glanz der Schnittfläche genau beobachten.",
+    "phenol": "2 Tropfen Phenolphthalein ins Wasser geben",
+    "drop": "Natrium mit der Pinzette ins Wasser geben",
+    "next": "Frisches Wasser nehmen und ein neues Stück verwenden",
+    "sound": "Geräusch",
+    "reset": "Zurücksetzen",
+    "readings": "Echtzeitanzeige",
+    "remaining": "Verbleibendes Natrium",
+    "hydrogen": "Erzeugter Wasserstoff",
+    "waterTemp": "Wassertemperatur",
+    "burning": "Die Wärmeentwicklung entzündet den entweichenden Wasserstoff – Natrium brennt mit gelber Flamme",
+    "phenomenaTitle": "Phänomene: Schwimmen, Schmelzen, Gleiten, Zischen, Röten",
+    "phenomena": {
+      "float": {
+        "name": "Schwimmt auf der Wasseroberfläche",
+        "why": "Die Dichte von Natrium beträgt 0,97 g/cm³ – kleiner als die von Wasser."
+      },
+      "melt": {
+        "name": "Schmilzt zu einer glänzenden Kugel",
+        "why": "Die Reaktion setzt Wärme frei; der Schmelzpunkt von Natrium liegt bei nur 97,8 ℃, sodass es schnell schmilzt. Die Oberflächenspannung zieht es zu einer Kugel zusammen."
+      },
+      "swim": {
+        "name": "Gleitet auf der Wasseroberfläche umher",
+        "why": "Der entstehende Wasserstoff tritt ungleichmässig aus allen Seiten der Kugel aus und treibt sie in verschiedene Richtungen."
+      },
+      "hiss": {
+        "name": "Erzeugt ein Zischgeräusch",
+        "why": "Wasserstoff entweicht schlagartig; die Wärmeentwicklung bringt das Wasser an der Kontaktstelle zum Verdampfen."
+      },
+      "pink": {
+        "name": "Lösung färbt sich rot",
+        "why": "Es entsteht die starke Base NaOH; Phenolphthalein färbt sich in der Base rot. Die Rotfärbung erscheint zuerst entlang der Bahn, die die Natriumkugel gezogen hat."
+      }
+    },
+    "pinkHint": "Ohne Phenolphthalein ist die Basenbildung nicht sichtbar. Nachträglich hinzutropfen ist möglich – die Base ist bereits im Wasser.",
+    "chart": {
+      "title": "Volumen des erzeugten Wasserstoffs in Abhängigkeit von der Zeit",
+      "xAxis": "Zeit t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Wasserstoffkurve, {count} Durchgang(Durchgänge) abgeschlossen",
+      "mass": "Masse des Natriums",
+      "measuredT": "Gemessene Reaktionsdauer",
+      "predictedT": "Vorhersage nach m^(1/3)",
+      "volume": "Wasserstoffvolumen",
+      "hint": "Nach jedem Durchgang wird hier die Wasserstoffkurve gezeichnet. Wiederholen Sie den Versuch mit verschieden großen Natriumstücken und vergleichen Sie die Reaktionsdauern.",
+      "insight": "Natrium reagiert nur an der Kugeloberfläche; der Radius nimmt gleichmäßig ab. Daher ist die Reaktionsdauer proportional zum Radius und damit zur Kubikwurzel der Masse: Bei achtfacher Masse verdoppelt sich die Dauer nur etwa."
+    }
+  },
+  "flameLab": {
+    "setup": "Versuchsdurchführung",
+    "light": "Bunsenbrenner anzünden",
+    "extinguish": "Bunsenbrenner ausschalten",
+    "wire": "Platindraht",
+    "dipAcid": "In verdünnte Salzsäure tauchen",
+    "intoFlame": "In die äußere Flamme halten",
+    "outOfFlame": "Aus der Flamme nehmen",
+    "dipSample": "Probenlösung aufnehmen",
+    "cobalt": "Durch Kobaltglas beobachten",
+    "reset": "Zurücksetzen",
+    "readings": "Beobachtungen",
+    "wireState": "Platindraht",
+    "clean": "Sauber",
+    "dirty": "Verunreinigt",
+    "seen": "In der Flamme erkennbar",
+    "none": "Keine (Flamme zeigt natürliches Hellblau)",
+    "cleanHint": "Der Platindraht zeigt beim Glühen keine Färbung mehr und ist bereit für die nächste Probe.",
+    "dirtyHint": "Der Platindraht ist verunreinigt (auch neue Drähte enthalten oft Natrium). In verdünnte Salzsäure tauchen und glühen, mehrfach wiederholen, bis die Flamme farblos bleibt. Chloride flüchten leicht — dies geht deutlich schneller als reines Glühen.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Lithium",
+      "Ca": "Calcium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Kupfer"
+    },
+    "unknownTitle": "Unbekannte Probe X identifizieren",
+    "unknownHint": "Probe X glühen und bestimmen, welches Metallelement enthalten ist. Hinweis: Das Gelblight des Natriums kann das Violettlicht des Kaliums überdecken.",
+    "correct": "Richtig bestimmt.",
+    "wrong": "Falsch. Prüfen Sie, ob der Platindraht sauber ist, und beobachten Sie ggf. erneut durch das Kobaltglas.",
+    "spectro": {
+      "title": "Spektroskop: Linienspektrum",
+      "throughCobalt": "Durch Kobaltglas",
+      "empty": "Tauchen Sie den Platindraht mit der Probe in die Flamme – hier wird das Flammenspektrum angezeigt.",
+      "explain": "Jedes Element emittiert Licht nur bei wenigen festen Wellenlängen – wie ein Fingerabdruck. Natrium zeigt ein Linienpaar bei 589 nm (gelb); Kalium hat Hauptlinien bei 766 nm (tiefrot) und 404 nm (violett), weshalb die Kaliumflamme hellviolett erscheint. Kobaltglas absorbiert das mittlere Gelb-Grün und lässt nur die beiden Randbereiche durch."
+    },
+    "log": {
+      "title": "Beobachtungsprotokoll",
+      "empty": "Bei jeder Probennahme und Glühung wird hier automatisch eine Zeile eingetragen.",
+      "sample": "Probe",
+      "cobalt": "Kobaltglas",
+      "color": "Flammenfarbe",
+      "seen": "Erkennbare Elemente",
+      "nothing": "Keine",
+      "contaminated": "Durch vorherige Probe verunreinigt"
+    }
+  },
+  "clockLab": {
+    "setup": "Lösungen vorbereiten",
+    "ki": "KI-Konzentration / mol·L⁻¹ (Lösung A)",
+    "thio": "Na₂S₂O₃-Konzentration / mol·L⁻¹ (Lösung A)",
+    "h2o2": "H₂O₂-Konzentration / mol·L⁻¹ (Lösung B)",
+    "temp": "Thermostattemperatur",
+    "starch": "Stärkeindikator zu Lösung A hinzufügen",
+    "speed": "Zeitfaktor",
+    "pour": "Lösung B eingießen und Zeitmessung starten",
+    "stop": "Zeitmessung stoppen",
+    "again": "Neue Bedingungen wählen",
+    "reset": "Daten löschen",
+    "readings": "Zeitmessung",
+    "stopwatch": "Stoppuhr",
+    "theory": "Theoretische Induktionszeit",
+    "slow": "Langsam",
+    "fast": "Sofort",
+    "excessThio": "Na₂S₂O₃ mindestens doppelt so viel wie H₂O₂: gebildetes Iod wird stets reduziert – die Lösung bleibt farblos.",
+    "overdue": "Nach 5 Minuten noch kein Farbumschlag. Rezeptur prüfen; mit „Zeitmessung stoppen“ diesen Versuch beenden.",
+    "noStarch": "Ohne Stärke ist der Endpunkt erst bei deutlicher Gelbfärbung erkennbar – die gemessene Zeit fällt zu lang aus.",
+    "chart": {
+      "title": "Auswertung: Reaktionsordnung und Aktivierungsenergie",
+      "order": "Angepasste Steigung ≈ {n}, d. h. Ordnung bezüglich I⁻: {n} (Theorie: 1. Ordnung)",
+      "orderHint": "Temperatur, H₂O₂ und Na₂S₂O₃ konstant halten, nur KI-Konzentration variieren (mind. 2 Versuche) – Reaktionsordnung bezüglich I⁻ bestimmen.",
+      "ea": "Aus der Steigung −Ea/R ergibt sich Ea ≈ {ea} kJ/mol (Literaturwert ca. 56 kJ/mol)",
+      "eaHint": "Rezeptur konstant halten, nur Temperatur variieren (mind. 2 Versuche) – Aktivierungsenergie nach Arrhenius berechnen.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatur",
+        "time": "Blaufärbezeit"
+      },
+      "withoutStarch": "Ohne Stärke"
+    }
   }
 }

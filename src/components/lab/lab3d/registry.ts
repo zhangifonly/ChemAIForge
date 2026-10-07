@@ -22,6 +22,10 @@ export const EXPERIMENTS_WITH_3D = new Set<string>([
   "acid-base-titration", // 酸碱中和滴定：可拖拽活塞控制滴速、终点半滴之差
   "copper-electrolysis", // 电解硫酸铜：可调电流/时间，阴极镀铜、阳极放氧、溶液按 Beer–Lambert 褪色
   "copper-refining-electrolysis", // 电解精炼铜：同一电解台换铜阳极，阳极溶解、溶液不褪色
+  // —— 精品实验台（全新场景） ——
+  "sodium-water", // 钠与水：浮熔游响红，产氢曲线验证 t ∝ m^(1/3)
+  "iodine-clock", // 碘钟：倒入即计时、突然变蓝，ln(1/t) 作图求反应级数与活化能
+  "flame-test", // 焰色反应：由真实谱线合成焰色，钴玻璃滤钠黄，分光镜看线状光谱
 ]);
 
 export function has3D(slug: string): boolean {

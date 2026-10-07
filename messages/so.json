@@ -493,5 +493,148 @@
       "error": "Farqiga qiimaha la aqoonsan yahay 96485 C/mol waa {pct}%",
       "ariaLabel": "Sawirka isbeddelka cufnaanta naxaas (Cu) la soo saaray iyadoo ku xidantahay xaddiga korontada, oo leh {count} dhibic oo la miisaamay"
     }
+  },
+  "sodiumLab": {
+    "setup": "Tillaabooyinka Tijaabada",
+    "pieceSize": "Cabbirka Cutubka Sodium",
+    "size": {
+      "small": "Cabbir Digirta Cagaaran",
+      "medium": "Cabbir Digirta Huruudda",
+      "large": "Cutub Weyn"
+    },
+    "largeWarning": "Cutubka sodium weyn wuxuu soo saari karaa kulaylka xoog badan, taas oo dab ku shidi karta gaaska hydrogen ama ay keeni karto qarax iyo biyo-qaarkiis oo alaabtu soo baxdo. Tijaabada dhabta ah, waa in la isticmaalaa cabbir digirta cagaaran kaliya — halkan waxaa lagu muujiyaa deegaanka virtual kaliya.",
+    "cut": "Isticmaal mindi yar si aad u xidho lakabka oksiidka ee dusha",
+    "cutHint": "Dusha sodium waxaa ku jira lakab cad-caaney ah oo oksiid ah. Jar cid cusub ka hor inta aadan ku turin. Goosidda ka dib, fiiri isbeddelka iftiinka ee dusha jarista.",
+    "phenol": "Ku rid 2 dhibic phenolphthalein biyaha",
+    "drop": "Isticmaal birta qabasho si aad sodium ugu tusto biyaha",
+    "next": "Badal koob biyo cusub oo qaado cutub kale",
+    "sound": "Cod",
+    "reset": "Dib u Deji",
+    "readings": "Akhriska Waqtiga Dhabta ah",
+    "remaining": "Sodium Hadhay",
+    "hydrogen": "Gaaska Hydrogen ee La Soo Saaray",
+    "waterTemp": "Heerkulka Biyaha",
+    "burning": "Kulaylku wuxuu dab ku shidaa gaaska hydrogen ee baxaya, sodium wuxuu ku guban dab huruud ah",
+    "phenomenaTitle": "Muuqaalada: Duuduub, Bixin, Socodsiin, Cod, Cas",
+    "phenomena": {
+      "float": {
+        "name": "Dul-dhex-joogista Biyaha",
+        "why": "Cufnaanta sodium waa 0.97 g/cm³, kaas oo ka yar biyaha."
+      },
+      "melt": {
+        "name": "Dhalaalaysa oo ku rogmata Kubad Dhalaalaysa",
+        "why": "Falcelinta waxay soo saartaa kulaylka; dhibcaha kululaanshaha sodium waa 97.8 ℃ kaliya, sidaas awgeed wuu si dhakhso ah u baxaa; xoogga sare ee dusha wuxuu u qaabeeyaa qaabka kubadda."
+      },
+      "swim": {
+        "name": "Wareegaysa Dusha Biyaha",
+        "why": "Gaaska hydrogen ee la soo saaraa wuxuu si fiid-fiid ah uga baxaa dhinacyada kala duwan ee kubadda, isagoo u riixaya kubadda si aan caadi ahayn."
+      },
+      "hiss": {
+        "name": "Cod Sisis ah Soo Saara",
+        "why": "Gaaska hydrogen wuxuu si degdeg ah u baxaa, kulaylkuna wuxuu biyaha xiriirka ah ku kiciyaa uumi."
+      },
+      "pink": {
+        "name": "Xalku Wuxuu Noqdaa Casaan",
+        "why": "Waxaa la soo saaraa NaOH oo ah aasaas xoog badan; phenolphthalein wuxuu aasaaska ku noqdaa casaan; midabka casaanka wuxuu marka hore ka muuqdaa wadada kubadda sodium."
+      }
+    },
+    "pinkHint": "Phenolphthalein lama ridin, sidaas awgeed ma arag in aasaas la soo saaray. Haddada waxaad ku dari kartaa — aasaasku horeba biyaha ayuu ku jiraa.",
+    "chart": {
+      "title": "Cabbiraanka korontada H₂ ee la soo saaro marka la barbardhigo waqtiga",
+      "xAxis": "Waqtiga t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Graafka soo saarka H₂, {count} gabal ayaa dhammaystiran",
+      "mass": "Culayska sodium-ka",
+      "measuredT": "Muddada falcelinta la cabiray",
+      "predictedT": "Saadaasha ku salaysan m^(1/3)",
+      "volume": "Cabbiraanka gaaska hydrogen",
+      "hint": "Marka gabal la dhamaysto, graafka soo saarka H₂ halkan ayuu ka muuqanayaa. Isticmaal cabbirro kala duwan oo sodium ah oo barbar dhig muddada falcelinta.",
+      "insight": "Sodium-ku wuxuu ku falcelaa oo keliya dusha korontada, radius-kuna si toosan ayuu u yareeyaa, sidaas darteed muddada falcelinta waxay la siman tahay radius-ka, taas oo micnaheedu yahay waxay la siman tahay xiddigta joogtada ee culus-ka: haddii culaysku 8 jeer kordhо, muddadu waxay noqotaa oo keliya qiyaastii 2 jeer."
+    }
+  },
+  "flameLab": {
+    "setup": "Hawlgalka tijaabada",
+    "light": "Shid lampleha Bunsen",
+    "extinguish": "Xir lampleha Bunsen",
+    "wire": "Xarig balaatiin ah",
+    "dipAcid": "Ku dhex qub aashitada hidroklorikada oo la wasakheeyay",
+    "intoFlame": "Geli dab-weynta dibadda si loo gubto",
+    "outOfFlame": "Ka bax dabka",
+    "dipSample": "Ku dhex qub xalka muunada",
+    "cobalt": "Arag iyada oo loo marayo muraayadda cobalt",
+    "reset": "Dib u deji",
+    "readings": "Kormeerka",
+    "wireState": "Xarig balaatiin ah",
+    "clean": "Nadiif",
+    "dirty": "Waxaa ku haray",
+    "seen": "Lagu garan karo dabka",
+    "none": "Midna ma jirto (dabku wuxuu leeyahay midabkiisa caadiga ah oo buluug-cad ah)",
+    "cleanHint": "Xariga balaatiin-ku wuu gubmay dabka oo midab ma muujinayo, waxaad u diyaar tahay inaad ku dhejiso muunada xigta.",
+    "dirtyHint": "Xariga balaatiin-ku waxaa ku haray (xarig balaatiin oo cusub sidoo kale badanaa wuxuu leeyahay sodium). Ku dhex qub aashitada hidroklorikada oo la wasakheeyay ka dibna gub, dhowr jeer ku celi ilaa dabku midab muujin waayo; chlorides-ku waa ku kala baxa si fudud, taas oo ku dhaqso badan oo keliya gubasho.",
+    "el": {
+      "Na": "Sodium",
+      "K": "Botasiyam",
+      "Li": "Liithiyam",
+      "Ca": "Kaalsiyam",
+      "Sr": "Strontiyam",
+      "Ba": "Baariyam",
+      "Cu": "naxaas (Cu)"
+    },
+    "unknownTitle": "Aqoonsiga Muunada Aan La Garanin X",
+    "unknownHint": "Gubi muunada X, kuna go'aami nooca birta ku jirta. Fiiro gaar ah: iftiinka jaallaha ee sodium ayaa qarin kara iftiinka guduudka-jaallaha ee potassium.",
+    "correct": "Go'aanku waa sax.",
+    "wrong": "Khalad. Hubi in xarig balaatiin ah si fiican loo maydhay; haddii loo baahdo, dib uga eeg iyada oo dhex marta muraayadda cobalt.",
+    "spectro": {
+      "title": "Spectroscope: Xariiqyada Spectrum",
+      "throughCobalt": "Dhex marta muraayadda cobalt",
+      "empty": "Xarig balaatiin ah oo muunada lagu dhuftay geli olol; spectrum ollaha ayaa halkan muuqan doona.",
+      "explain": "Walba elementiga ayaa iftiin ka soo saara qaar ka mid ah dhererka mowjadaha go'an oo kaliya, sida farsamada farta. Sodium waxay leedahay labada xariiq jaallo ah ee 589 nm, potassium waxay leedahay xariiqda koowaad ee 766 nm (guduud-qoto dheer) iyo 404 nm (buluug-jaalle), sidaas darteed ollaha potassium waa jaalle-cad. Muraayadda cobalt waxay nuugsataa iftiinka jaallo-cagaarka dhexe, waxayna kaliya dhaaftaa labada dhinac."
+    },
+    "log": {
+      "title": "Diiwaanka Daraasadda",
+      "empty": "Markasta oo muunada lagu dhuftay lana gubo, xariiq ayaa halkan si otomaatig ah loogu daro.",
+      "sample": "Muunada",
+      "cobalt": "Muraayadda cobalt",
+      "color": "Midabka ollaha",
+      "seen": "Elementiga la garan karo",
+      "nothing": "Midna",
+      "contaminated": "Waxa wasakhaysan muunada hore"
+    }
+  },
+  "clockLab": {
+    "setup": "Diyaarinta Xalka",
+    "ki": "Xoogga KI / mol·L⁻¹ (Xalka A)",
+    "thio": "Xoogga Na₂S₂O₃ / mol·L⁻¹ (Xalka A)",
+    "h2o2": "Xoogga H₂O₂ / mol·L⁻¹ (Xalka B)",
+    "temp": "Heerkulka joogtada ah",
+    "starch": "Ku dar muujiyaha xabag Xalka A",
+    "speed": "Xawliga waqtiga",
+    "pour": "Shub Xalka B, bilow tirinta waqtiga",
+    "stop": "Jooji tirinta waqtiga",
+    "again": "Ku celi xaaladdo kale",
+    "reset": "Tirtir xogta",
+    "readings": "Waqti-qeybinta",
+    "stopwatch": "Saacadda ilbiriqsiga",
+    "theory": "Muddada koritaanka aragtida",
+    "slow": "Gaabis",
+    "fast": "Degdeg",
+    "excessThio": "Na₂S₂O₃ kuma yar labanlaabka H₂O₂: iodine (I₂) la soo saaro markasta ayaa la soo celceliyaa, xalalka kama gaari doono buluug.",
+    "overdue": "5 daqiiqo ayaa dhaaftay balse midabku kama beddelin. Hubi qaabka, oo taabo «Jooji Waqtiga» si aad u dhamayso wareeggan.",
+    "noStarch": "Xabag la'aan, koritaanka kaliya ayaa muuqda marka iodine (I₂) ku filan uu muujiyo midabka jaalle-boodha; taasi waxay dheereyneysaa waqtiga la qiyaaso.",
+    "chart": {
+      "title": "Xogta: Heerka falcelinta iyo tamarta firfircoonida",
+      "order": "Janjeeraha ku habboon ≈ {n}, taas oo muujinaysa heer {n} ee I⁻ (aragtida: heer 1)",
+      "orderHint": "Heerkulka, H₂O₂, iyo Na₂S₂O₃ la mid ah, isbeddel kaliya KI xoogga; samee ugu yaraan laba tijaabo si aad u hesho heerka falcelinta ee I⁻.",
+      "ea": "Janjeeraha −Ea/R ayaa laga helaa tamarta firfircoonida Ea ≈ {ea} kJ/mol (qiimaha tixraaca ≈ 56 kJ/mol)",
+      "eaHint": "Qaabka isku mid ah, isbeddel kaliya heerkulka; samee ugu yaraan laba tijaabo oo isticmaal hab-raacga Arrhenius si aad u xisaabiso tamarta firfircoonida.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Heerkul",
+        "time": "Waqtiga buluugeynta"
+      },
+      "withoutStarch": "Xabag la'aan"
+    }
   }
 }

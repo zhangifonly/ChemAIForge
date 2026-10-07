@@ -493,5 +493,148 @@
       "error": "Avvik fra akseptert verdi 96485 C/mol: {pct}%",
       "ariaLabel": "Graf over utfelt kobber som funksjon av ladning, totalt {count} målepunkter"
     }
+  },
+  "sodiumLab": {
+    "setup": "Forsøkstrinn",
+    "pieceSize": "Natriumstørrelse",
+    "size": {
+      "small": "Ertestor",
+      "medium": "Bønnestor",
+      "large": "Stor bit"
+    },
+    "largeWarning": "En stor bit natrium avgir varme voldsomt, kan antenne hydrogengass og til og med føre til knall og sprut av lut. I virkelige forsøk brukes bare en ertestor bit – her vises det kun i virtuelt miljø.",
+    "cut": "Skjær bort oksidlaget med kniv",
+    "cutHint": "Natriums overflate dekkes av et gråhvitt oksid. Skjær frem et ferskt snittflate før du legger det i vann. Legg merke til hvordan glanssen på snittflaten endrer seg.",
+    "phenol": "Tilsett 2 dråper fenolftalein i vannet",
+    "drop": "Legg natriumet i vannet med pinsett",
+    "next": "Skift til et nytt glass vann og ta en ny bit",
+    "sound": "Lyd",
+    "reset": "Tilbakestill",
+    "readings": "Sanntidsavlesninger",
+    "remaining": "Gjenværende natrium",
+    "hydrogen": "Hydrogengass dannet",
+    "waterTemp": "Vanntemperatur",
+    "burning": "Varmen antennes den frigjorte hydrogengassen – natriumet brenner med gul flamme",
+    "phenomenaTitle": "Fenomener: flyter, smelter, svømmer, suser, rødfärges",
+    "phenomena": {
+      "float": {
+        "name": "Flyter på vannoverflaten",
+        "why": "Natriums tetthet er 0,97 g/cm³, lavere enn vann."
+      },
+      "melt": {
+        "name": "Smelter til en blankt kule",
+        "why": "Reaksjonen avgir varme; natriums smeltepunkt er bare 97,8 ℃, så det smelter raskt. Overflatespenningen trekker det sammen til en kule."
+      },
+      "swim": {
+        "name": "Beveger seg rundt på vannoverflaten",
+        "why": "Hydrogengassen spruter ujevnt ut fra alle sider av kulen og driver den rundt."
+      },
+      "hiss": {
+        "name": "Gir fra seg en susende lyd",
+        "why": "Hydrogengassen slipper raskt ut, og varmen fordamper vannet i kontaktpunktet."
+      },
+      "pink": {
+        "name": "Løsningen farges rød",
+        "why": "Det dannes sterk base NaOH; fenolftalein blir rødt i base. Den røde fargen vises først langs sporet natriumkulen har fulgt."
+      }
+    },
+    "pinkHint": "Uten fenolftalein er det ikke synlig at det dannes base. Du kan tilsette det nå – basen er allerede i vannet.",
+    "chart": {
+      "title": "Produsert hydrogengassvolum over tid",
+      "xAxis": "Tid t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Hydrogenkurve, {count} blokk(er) fullført",
+      "mass": "Natriumets masse",
+      "measuredT": "Målt reaksjonstid",
+      "predictedT": "Beregnet etter m^(1/3)",
+      "volume": "Hydrogengassvolum",
+      "hint": "Etter hver blokk tegnes hydrogenkurven her. Prøv ulike størrelser av natrium og sammenlign reaksjonstidene.",
+      "insight": "Natrium reagerer bare på overflaten av kulen, og radiusen avtar jevnt. Reaksjonstiden er derfor proporsjonal med radiusen – og dermed med kubiktroten av massen: 8 ganger så stor masse gir bare ca. 2 ganger så lang reaksjonstid."
+    }
+  },
+  "flameLab": {
+    "setup": "Fremgangsmåte",
+    "light": "Tenn bunsenbrenneren",
+    "extinguish": "Slukk bunsenbrenneren",
+    "wire": "Platinatråd",
+    "dipAcid": "Dypp i fortynnet saltsyre",
+    "intoFlame": "Hold i ytterflammmen for gløding",
+    "outOfFlame": "Ta ut av flammen",
+    "dipSample": "Dypp i prøveløsningen",
+    "cobalt": "Observér gjennom koboltblått glass",
+    "reset": "Tilbakestill",
+    "readings": "Observasjoner",
+    "wireState": "Platinatråd",
+    "clean": "Ren",
+    "dirty": "Har rester",
+    "seen": "Gjenkjennelig farge i flammen",
+    "none": "Ingen (flammen er naturlig lysblå)",
+    "cleanHint": "Platinatråden viser ingen farge lenger – den er klar til neste prøve.",
+    "dirtyHint": "Det er rester på platinatråden (ny tråd inneholder ofte natrium). Dypp i fortynnet saltsyre og glødd gjentatte ganger til flammen ikke lenger viser farge. Klorider er flyktige og gjør rensingen mye raskere enn gløding alene.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Litium",
+      "Ca": "Kalsium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Kobber"
+    },
+    "unknownTitle": "Identifiser ukjent prøve X",
+    "unknownHint": "Gløde prøve X og avgjør hvilket metallgrunnstoff den inneholder. Merk: natriumets gule lys kan maskere kaliumets violette lys.",
+    "correct": "Riktig vurdering.",
+    "wrong": "Feil. Kontroller at platinatråden er rengjort, og se eventuelt gjennom koboltglass på nytt.",
+    "spectro": {
+      "title": "Spektroskop: linjespekter",
+      "throughCobalt": "Gjennom koboltglass",
+      "empty": "Plasser platinatråden med prøve i flammen – flammens spekter vises her.",
+      "explain": "Hvert grunnstoff sender bare ut lys ved noen få faste bølgelengder, som et fingeravtrykk. Natrium gir et par gule linjer ved 589 nm; kaliums hovedlinjer ligger ved 766 nm (mørkerød) og 404 nm (fiolett), og kaliumflammen fremstår derfor lyst lilla. Koboltglasset absorberer det gule og grønne lyset i midten og slipper bare gjennom de to endene av spekteret."
+    },
+    "log": {
+      "title": "Observasjonslogg",
+      "empty": "For hver prøve som dyppes og glødes, registreres en linje automatisk her.",
+      "sample": "Prøve",
+      "cobalt": "Koboltglass",
+      "color": "Flamme­farge",
+      "seen": "Gjenkjente grunnstoffer",
+      "nothing": "Ingen",
+      "contaminated": "Forurenset av forrige prøve"
+    }
+  },
+  "clockLab": {
+    "setup": "Klargjør løsninger",
+    "ki": "KI-konsentrasjon / mol·L⁻¹ (løsning A)",
+    "thio": "Na₂S₂O₃-konsentrasjon / mol·L⁻¹ (løsning A)",
+    "h2o2": "H₂O₂-konsentrasjon / mol·L⁻¹ (løsning B)",
+    "temp": "Termostattemperatur",
+    "starch": "Tilsett stivelsesindikator i løsning A",
+    "speed": "Tidsfaktor",
+    "pour": "Hell i løsning B og start tidtaking",
+    "stop": "Stopp tidtaking",
+    "again": "Prøv med nye betingelser",
+    "reset": "Tøm data",
+    "readings": "Tidtaking",
+    "stopwatch": "Stoppeklokke",
+    "theory": "Teoretisk induksjonstid",
+    "slow": "Sakte",
+    "fast": "Øyeblikkelig",
+    "excessThio": "Na₂S₂O₃ er minst dobbelt så mye som H₂O₂: jod som dannes vil alltid reduseres tilbake, og løsningen blir ikke blå.",
+    "overdue": "Mer enn 5 minutter har gått uten fargeendring. Kontroller oppskriften — trykk «Stopp tidtaking» for å avslutte.",
+    "noStarch": "Uten stivelse må man vente til det er nok jod til å vise gulbrun farge, noe som gir lengre tidtaking.",
+    "chart": {
+      "title": "Databehandling: reaksjonsorden og aktiveringsenergi",
+      "order": "Tilpasset stigningstall ≈ {n}, dvs. orden {n} med hensyn på I⁻ (teoretisk 1. orden)",
+      "orderHint": "Hold temperatur, H₂O₂ og Na₂S₂O₃ konstant, og varier kun KI-konsentrasjonen i minst to forsøk for å bestemme reaksjonsorden med hensyn på I⁻.",
+      "ea": "Fra stigningstallet −Ea/R: aktiveringsenergi Ea ≈ {ea} kJ/mol (litteraturverdi ca. 56 kJ/mol)",
+      "eaHint": "Hold oppskriften konstant, varier kun temperaturen i minst to forsøk, og bruk Arrhenius-ligningen til å beregne aktiveringsenergi.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatur",
+        "time": "Blåningstid"
+      },
+      "withoutStarch": "Uten stivelse"
+    }
   }
 }

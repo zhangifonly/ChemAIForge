@@ -493,5 +493,148 @@
       "error": "{pct}% deviation from accepted value 96485 C/mol",
       "ariaLabel": "Chart of deposited copper mass vs. charge, {count} weighing point(s) total"
     }
+  },
+  "sodiumLab": {
+    "setup": "Procedure",
+    "pieceSize": "Sodium piece size",
+    "size": {
+      "small": "Mung bean–sized",
+      "medium": "Soybean-sized",
+      "large": "Large piece"
+    },
+    "largeWarning": "A large piece of sodium releases heat violently, which can ignite the hydrogen gas and even cause an explosive pop or splatter of alkali solution. In a real lab, only a mung bean–sized piece may be used. This size is shown here for virtual demonstration only.",
+    "cut": "Use a scalpel to cut away the oxidized surface layer",
+    "cutHint": "Sodium has a grey-white oxide layer on its surface. Cut a fresh face before placing it in water. After cutting, observe how the sheen of the fresh surface changes.",
+    "phenol": "Add 2 drops of phenolphthalein to the water",
+    "drop": "Use tweezers to place the sodium into the water",
+    "next": "Replace with a fresh cup of water and take a new piece",
+    "sound": "Sound",
+    "reset": "Reset",
+    "readings": "Live readings",
+    "remaining": "Sodium remaining",
+    "hydrogen": "Hydrogen gas generated",
+    "waterTemp": "Water temperature",
+    "burning": "The heat ignites the escaping hydrogen gas; sodium burns with a yellow flame",
+    "phenomenaTitle": "Phenomena: floats, melts, darts, hisses, turns pink",
+    "phenomena": {
+      "float": {
+        "name": "Floats on the water surface",
+        "why": "Sodium has a density of 0.97 g/cm³, which is less than water."
+      },
+      "melt": {
+        "name": "Melts into a bright, shiny ball",
+        "why": "The reaction releases heat; sodium's melting point is only 97.8 ℃, so it melts quickly. Surface tension draws it into a sphere."
+      },
+      "swim": {
+        "name": "Darts around on the water surface",
+        "why": "Hydrogen gas jets unevenly from all sides of the ball, propelling it in random directions."
+      },
+      "hiss": {
+        "name": "Produces a hissing sound",
+        "why": "Hydrogen gas escapes rapidly, and the heat vaporizes the water at the contact point."
+      },
+      "pink": {
+        "name": "Solution turns pink",
+        "why": "The reaction produces the strong base NaOH; phenolphthalein turns pink in the presence of a base. The pink color first appears along the trail left by the sodium ball."
+      }
+    },
+    "pinkHint": "No phenolphthalein was added, so the alkali produced is not visible. You can add drops now — the base is already in the water.",
+    "chart": {
+      "title": "Hydrogen gas volume produced over time",
+      "xAxis": "Time t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Hydrogen production curve, {count} run(s) completed",
+      "mass": "Mass of sodium",
+      "measuredT": "Measured reaction time",
+      "predictedT": "Predicted by m^(1/3)",
+      "volume": "Hydrogen gas volume",
+      "hint": "Complete a run to plot the hydrogen production curve here. Try different sodium sizes and compare reaction times.",
+      "insight": "Sodium reacts only at the surface of the sphere. As the radius shrinks at a constant rate, reaction time is proportional to radius — and therefore to the cube root of mass: an 8× increase in mass yields only ~2× the reaction time."
+    }
+  },
+  "flameLab": {
+    "setup": "Procedure",
+    "light": "Light Bunsen burner",
+    "extinguish": "Turn off Bunsen burner",
+    "wire": "Platinum wire",
+    "dipAcid": "Dip in dilute hydrochloric acid",
+    "intoFlame": "Hold in outer flame",
+    "outOfFlame": "Remove from flame",
+    "dipSample": "Dip in sample solution",
+    "cobalt": "Observe through cobalt glass",
+    "reset": "Reset",
+    "readings": "Observations",
+    "wireState": "Platinum wire",
+    "clean": "Clean",
+    "dirty": "Contaminated",
+    "seen": "Visible color in flame",
+    "none": "None (flame shows natural pale blue)",
+    "cleanHint": "The platinum wire no longer imparts color to the flame and is ready for the next sample.",
+    "dirtyHint": "Residue remains on the platinum wire (new wire often carries sodium). Dip in dilute hydrochloric acid and heat in the flame; repeat until the flame shows no color. The chloride formed volatilizes readily, making this much faster than heating alone.",
+    "el": {
+      "Na": "Sodium",
+      "K": "Potassium",
+      "Li": "Lithium",
+      "Ca": "Calcium",
+      "Sr": "Strontium",
+      "Ba": "Barium",
+      "Cu": "Copper"
+    },
+    "unknownTitle": "Identify Unknown Sample X",
+    "unknownHint": "Burn sample X and determine which metal element it contains. Note: the yellow light of sodium can mask the violet light of potassium.",
+    "correct": "Correct.",
+    "wrong": "Incorrect. Check whether the platinum wire has been cleaned; if necessary, observe again through cobalt glass.",
+    "spectro": {
+      "title": "Spectroscope: Line Spectrum",
+      "throughCobalt": "Through Cobalt Glass",
+      "empty": "Insert the platinum wire dipped in a sample into the flame to display its spectrum here.",
+      "explain": "Each element emits light at only a few fixed wavelengths, like a fingerprint. Sodium produces a pair of yellow lines at 589 nm; potassium's main lines are at 766 nm (deep red) and 404 nm (violet), giving potassium flames a pale violet color. Cobalt glass absorbs the yellow-green light in between, transmitting only the two ends."
+    },
+    "log": {
+      "title": "Observation Log",
+      "empty": "Each time a sample is dipped and burned, one entry is automatically added here.",
+      "sample": "Sample",
+      "cobalt": "Cobalt Glass",
+      "color": "Flame Color",
+      "seen": "Identifiable Elements",
+      "nothing": "None",
+      "contaminated": "Contaminated by previous sample"
+    }
+  },
+  "clockLab": {
+    "setup": "Prepare Solutions",
+    "ki": "KI concentration / mol·L⁻¹ (Solution A)",
+    "thio": "Na₂S₂O₃ concentration / mol·L⁻¹ (Solution A)",
+    "h2o2": "H₂O₂ concentration / mol·L⁻¹ (Solution B)",
+    "temp": "Thermostat Temperature",
+    "starch": "Add starch indicator to Solution A",
+    "speed": "Time Scale Factor",
+    "pour": "Pour in Solution B and start timer",
+    "stop": "Stop Timer",
+    "again": "Try another set of conditions",
+    "reset": "Clear data",
+    "readings": "Timing",
+    "stopwatch": "Stopwatch",
+    "theory": "Theoretical induction period",
+    "slow": "Slow",
+    "fast": "Instantaneous",
+    "excessThio": "Na₂S₂O₃ is at least twice H₂O₂: any iodine formed is immediately reduced back — the solution will never turn blue.",
+    "overdue": "No color change after 5 minutes. Check the recipe, or press “Stop timing” to end this run.",
+    "noStarch": "No starch present — the endpoint can only be detected when enough iodine accumulates to show a yellow-brown color, so the recorded time will be longer than expected.",
+    "chart": {
+      "title": "Data analysis: reaction order and activation energy",
+      "order": "Fitted slope ≈ {n}, giving a reaction order of {n} with respect to I⁻ (theoretical: 1st order)",
+      "orderHint": "Keep temperature, H₂O₂, and Na₂S₂O₃ constant; vary only the KI concentration across at least two runs to determine the reaction order with respect to I⁻.",
+      "ea": "Activation energy derived from slope −Ea/R: Ea ≈ {ea} kJ/mol (literature value ≈ 56 kJ/mol)",
+      "eaHint": "Keep the recipe constant; vary only the temperature across at least two runs and apply the Arrhenius equation to determine the activation energy.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperature",
+        "time": "Time to blue"
+      },
+      "withoutStarch": "No starch"
+    }
   }
 }

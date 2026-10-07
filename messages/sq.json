@@ -493,5 +493,148 @@
       "error": "Diferenca me vlerën e pranuar 96485 C/mol: {pct}%",
       "ariaLabel": "Grafik i masës së bakrit të depozituar në funksion të ngarkesës, me gjithsej {count} pika matjeje"
     }
+  },
+  "sodiumLab": {
+    "setup": "Hapat e eksperimentit",
+    "pieceSize": "Madhësia e copës së natriumit",
+    "size": {
+      "small": "Sa një kokërr fasuleje të vogël",
+      "medium": "Sa një kokërr soje",
+      "large": "Copë e madhe"
+    },
+    "largeWarning": "Copët e mëdha të natriumit lëshojnë nxehtësi intensive dhe mund të ndezin hidrogjenit, madje të shkaktojnë shpërthim dhe spërkatje me lëng alkalik. Në eksperimentet reale merret vetëm sasi sa një kokërr fasuleje të vogël; këtu tregohet vetëm në mjedis virtual.",
+    "cut": "Priti shtresën oksiduese të sipërfaqes me thikë",
+    "cutHint": "Sipërfaqja e natriumit ka një shtresë oksidi gri-e bardhë; prit për të ekspozuar prerjen e freskët para se ta hidhësh në ujë. Pasi e pret, vëzhgo ndryshimin e shkëlqimit të prerjes.",
+    "phenol": "Shto 2 pika fenolftaleinë në ujë",
+    "drop": "Hidhe natriumin në ujë me pincetë",
+    "next": "Zëvendëso me një gotë ujë të pastër dhe merr një copë tjetër",
+    "sound": "Zëri",
+    "reset": "Rivendos",
+    "readings": "Lexime në kohë reale",
+    "remaining": "Natrium i mbetur",
+    "hydrogen": "Hidrogjen i gjeneruar",
+    "waterTemp": "Temperatura e ujit",
+    "burning": "Nxehtësia e lëshuar ndez hidrogjenit e liruar; natriumi digjet me flakë të verdhë",
+    "phenomenaTitle": "Fenomenet: noton, shkrihet, lëviz, gurgullon, skuqet",
+    "phenomena": {
+      "float": {
+        "name": "Noton në sipërfaqen e ujit",
+        "why": "Densiteti i natriumit është 0.97 g/cm³, më i vogël se i ujit."
+      },
+      "melt": {
+        "name": "Shkrihet në një sferë të ndritur",
+        "why": "Reaksioni lëshon nxehtësi; pika e shkrirjes së natriumit është vetëm 97.8 ℃, kështu që shkrihet shpejt; tensioni sipërfaqësor e mbledh në sferë."
+      },
+      "swim": {
+        "name": "Lëviz në të gjitha drejtimet mbi sipërfaqen e ujit",
+        "why": "Hidrogjeni i gjeneruar del në mënyrë jo të njëtrajtshme nga të gjitha anët e sferës, duke e shtyrë atë rrëmujshëm."
+      },
+      "hiss": {
+        "name": "Lëshon zë gurgullues",
+        "why": "Hidrogjeni del me shpejtësi; nxehtësia e lëshuar avullon ujin në sipërfaqen e kontaktit."
+      },
+      "pink": {
+        "name": "Tretësira skuqet",
+        "why": "Formohet NaOH, bazë e fortë; fenolftaleinë skuqet në prani të bazës. Ngjyra e kuqe shfaqet fillimisht përgjatë rrugës ku ka kaluar sfera e natriumit."
+      }
+    },
+    "pinkHint": "Pa shtuar fenolftaleinë nuk mund të shihet formimi i bazës. Mund ta shtosh tani: baza është tashmë në ujë.",
+    "chart": {
+      "title": "Vëllimi i hidrogjenit të prodhuar në funksion të kohës",
+      "xAxis": "Koha t / s",
+      "yAxis": "V(H₂) / mL",
+      "ariaLabel": "Kurbë e prodhimit të hidrogjenit, {count} copë të përfunduara",
+      "mass": "Masa e natriumit",
+      "measuredT": "Kohëzgjatja e matur e reakcionit",
+      "predictedT": "Parashikuar sipas m^(1/3)",
+      "volume": "Vëllimi i hidrogjenit",
+      "hint": "Pas çdo cope, këtu do të vizatohet kurba e prodhimit të hidrogjenit. Provoni cope me madhësi të ndryshme natriumi dhe krahasoni kohëzgjatjen e reakcionit.",
+      "insight": "Natriumi reagon vetëm në sipërfaqen e sferës; rrezja zvogëlohet me shpejtësi konstante, prandaj kohëzgjatja e reakcionit është proporcionale me rrezen, domethënë me rrënjën kubike të masës: kur masa rritet 8 herë, kohëzgjatja rritet vetëm rreth 2 herë."
+    }
+  },
+  "flameLab": {
+    "setup": "Procedura e eksperimentit",
+    "light": "Ndiz flakën e Bunsen-it",
+    "extinguish": "Fik flakën e Bunsen-it",
+    "wire": "Tel platini",
+    "dipAcid": "Zhyt në acid klorhidrik të holluar",
+    "intoFlame": "Fut në flakën e jashtme për kalcinim",
+    "outOfFlame": "Hiq nga flaka",
+    "dipSample": "Zhyt në tretësirën e mostrës",
+    "cobalt": "Vëzhgo nëpërmjet xhamit me kobalt",
+    "reset": "Rivendos",
+    "readings": "Vëzhgime",
+    "wireState": "Tel platini",
+    "clean": "I pastër",
+    "dirty": "Me mbetje",
+    "seen": "E dalluar në flakë",
+    "none": "Asnjë (flaka ka ngjyrën natyrale blu të zbehtë)",
+    "cleanHint": "Teli i platinit është kalcinuar në flakë dhe nuk shfaq më ngjyrë; mund të zhytet në mostrën tjetër.",
+    "dirtyHint": "Teli i platinit ka mbetje (edhe teli i ri shpesh përmban natrium). Zhyteni në acid klorhidrik të holluar dhe kalcinojeni, duke e përsëritur disa herë derisa flaka të mos shfaqë më ngjyrë; kloritet avullohen lehtë, ndaj kjo metodë është shumë më e shpejtë se kalcinimi i thjeshtë.",
+    "el": {
+      "Na": "Natrium",
+      "K": "Kalium",
+      "Li": "Litium",
+      "Ca": "Kalcium",
+      "Sr": "Stroncium",
+      "Ba": "Barium",
+      "Cu": "Bakër"
+    },
+    "unknownTitle": "Identifikimi i kampionit të panjohur X",
+    "unknownHint": "Digjni kampionin X dhe përcaktoni cilin element metalik përmban. Kujdes: drita e verdhë e natriumit mund të maskojë dritën vjollcë të kaliumit.",
+    "correct": "Identifikim i saktë.",
+    "wrong": "Gabim. Kontrolloni nëse teli platini është larë mirë; nëse nevojitet, shikoni përsëri përmes qelqit të kobaltit.",
+    "spectro": {
+      "title": "Spektroskop: spektri i vijave",
+      "throughCobalt": "Përmes qelqit të kobaltit",
+      "empty": "Vendosni telin platini me kampion në flakë; këtu do të shfaqet spektri i flakës.",
+      "explain": "Çdo element emetron dritë vetëm në disa gjatësi vale fikse, si një gjurmë gishtash. Natriumi shfaq një çift vijash të verdha në 589 nm; vijat kryesore të kaliumit janë në 766 nm (kuq i thellë) dhe 404 nm (vjollcë), prandaj flaka e kaliumit duket vjollcë e lehtë. Qelqi i kobaltit absorbon dritën e verdhë-gjelbër në mes dhe lejon vetëm skajet të kalojnë."
+    },
+    "log": {
+      "title": "Regjistri i vëzhgimeve",
+      "empty": "Çdo herë që zhytni dhe digjni një kampion, këtu shtohet automatikisht një rresht.",
+      "sample": "Kampioni",
+      "cobalt": "Qelqi i kobaltit",
+      "color": "Ngjyra e flakës",
+      "seen": "Elementet e identifikuara",
+      "nothing": "Asnjë",
+      "contaminated": "I ndotur nga kampioni i mëparshëm"
+    }
+  },
+  "clockLab": {
+    "setup": "Përgatitja e tretësirave",
+    "ki": "Përqendrimi i KI / mol·L⁻¹ (tretësira A)",
+    "thio": "Përqendrimi i Na₂S₂O₃ / mol·L⁻¹ (tretësira A)",
+    "h2o2": "Përqendrimi i H₂O₂ / mol·L⁻¹ (tretësira B)",
+    "temp": "Temperatura konstante",
+    "starch": "Shtoni tregues nishesteje në tretësinën A",
+    "speed": "Faktori i kohës",
+    "pour": "Derdhni tretësinën B dhe nisni matjen e kohës",
+    "stop": "Ndaloni matjen e kohës",
+    "again": "Provo me kushte të tjera",
+    "reset": "Fshi të dhënat",
+    "readings": "Kohëmatje",
+    "stopwatch": "Kronometër",
+    "theory": "Periudha induktive teorike",
+    "slow": "Ngadalë",
+    "fast": "Çast",
+    "excessThio": "Na₂S₂O₃ të paktën dyfishi i H₂O₂: jodi i formuar reduktohet vazhdimisht — tretësira nuk do të bëhet kurrë blu.",
+    "overdue": "Kanë kaluar 5 minuta pa ndryshim ngjyre. Kontrolloni formulën; mund të shtypni «Ndalo kohëmatjen» për të përfunduar.",
+    "noStarch": "Pa nisheste, fundi i reaksionit vërehet vetëm kur jodi grumbullohet sa të shfaqë ngjyrë kafe-verdhe — kohëmatja do të jetë më e gjatë.",
+    "chart": {
+      "title": "Përpunimi i të dhënave: rendi i reaksionit dhe energjia e aktivizimit",
+      "order": "Pjerrësia e përshtatur ≈ {n}, pra rendi ndaj I⁻ është {n} (teorikisht 1)",
+      "orderHint": "Mbajini konstante temperaturën, H₂O₂ dhe Na₂S₂O₃; ndryshoni vetëm përqendrimin e KI në të paktën dy prova për të gjetur rendin ndaj I⁻.",
+      "ea": "Nga pjerrësia −Ea/R llogaritet energjia e aktivizimit Ea ≈ {ea} kJ/mol (vlera letrare ≈ 56 kJ/mol)",
+      "eaHint": "Mbajeni formulën konstante; ndryshoni vetëm temperaturën në të paktën dy prova dhe zbatoni ekuacionin e Arrhenius-it për të gjetur energjinë e aktivizimit.",
+      "col": {
+        "ki": "KI",
+        "thio": "Na₂S₂O₃",
+        "h2o2": "H₂O₂",
+        "temp": "Temperatura",
+        "time": "Koha deri në ngjyrosje blu"
+      },
+      "withoutStarch": "Pa nisheste"
+    }
   }
 }
